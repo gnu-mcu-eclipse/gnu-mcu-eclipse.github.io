@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+
+  <title>FAQ</title>
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+
+  <meta property="og:title" content="FAQ" />
+  <meta property="og:site_name" content="GNU MCU Eclipse" />
+
+
+  <meta property="article:published_time" content="2015-09-11">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201702222107" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201702222107" media="print">
+
+  <link rel="canonical" href="/support/faq/">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/manifest.json">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-16', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<header>
+  <div class="inner">
+    <h1><a href="/">GNU MCU Eclipse</a></h1>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <div id="buttons">
+      <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
+    </div>
+  </div>
+</header>
+
+
+<div id="content-wrapper">
+<div class="inner clearfix">
+
+<div id="site-body">
+<section id="main-content">
+
+
+<h1 class="page-title">FAQ</h1>
+
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#receive-fatal-alert-handshake_failure"><span class="tocnumber">1</span> <span class="toctext">Receive fatal alert: handshake_failure</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#initial-gdb-712-fails-on-macos"><span class="tocnumber">2</span> <span class="toctext">Initial GDB 7.12 fails on macOS</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#gdb-712-is-not-compatible-with-neon2"><span class="tocnumber">3</span> <span class="toctext">GDB 7.12 is not compatible with Neon.2</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#unable-to-read-repository"><span class="tocnumber">4</span> <span class="toctext">Unable to read repository</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#i-cannot-install-the-plug-ins-on-eclipse-neon"><span class="tocnumber">5</span> <span class="toctext">I cannot install the plug-ins on Eclipse Neon</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#i-cannot-install-the-plug-ins"><span class="tocnumber">6</span> <span class="toctext">I cannot install the plug-ins</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#i-cannot-connect-via-j-link-to-my-st-discovery-or-nucleo-board"><span class="tocnumber">7</span> <span class="toctext">I cannot connect via J-Link to my ST DISCOVERY or NUCLEO board</span></a>
+</li>
+<li class="toc_level-1 toc_section-8">
+<a href="#i-installed-eclipse-with-synaptics-and-i-have-problems-to-install-the-plug-ins"><span class="tocnumber">8</span> <span class="toctext">I installed Eclipse with Synaptics and I have problems to install the plug-ins</span></a>
+</li>
+<li class="toc_level-1 toc_section-9">
+<a href="#openocd-fails-to-start-with--c-echo-started-by-gnu-arm-eclipse"><span class="tocnumber">9</span> <span class="toctext">OpenOCD fails to start with -c echo "Started by GNU ARM Eclipse"</span></a>
+</li>
+<li class="toc_level-1 toc_section-10">
+<a href="#how-to-compile-files-excluded-from-build"><span class="tocnumber">10</span> <span class="toctext">How to compile files excluded from build?</span></a>
+</li>
+<li class="toc_level-1 toc_section-11">
+<a href="#the-devices-tab-is-not-visible"><span class="tocnumber">11</span> <span class="toctext">The Devices tab is not visible.</span></a>
+</li>
+<li class="toc_level-1 toc_section-12">
+<a href="#error-undefined-reference-to-function"><span class="tocnumber">12</span> <span class="toctext">Error: undefined reference to function</span></a>
+</li>
+<li class="toc_level-1 toc_section-13">
+<a href="#how-can-i-debug-projects-compiled-with-arm-cc"><span class="tocnumber">13</span> <span class="toctext">How can I debug projects compiled with ARM CC?</span></a>
+</li>
+<li class="toc_level-1 toc_section-14">
+<a href="#how-do-i-create-a-c-only-not-c-cortex-m-projects"><span class="tocnumber">14</span> <span class="toctext">How do I create a C-only (not C++) Cortex-M projects?</span></a>
+</li>
+<li class="toc_level-1 toc_section-15">
+<a href="#why-my-breakpoints-arenot-effective-and-execution-stops-somewhere-else"><span class="tocnumber">15</span> <span class="toctext">Why my breakpoints are not effective and execution stops somewhere else?</span></a>
+</li>
+<li class="toc_level-1 toc_section-16">
+<a href="#how-to-single-step-empty-loops"><span class="tocnumber">16</span> <span class="toctext">How to single-step empty loops?</span></a>
+</li>
+<li class="toc_level-1 toc_section-17">
+<a href="#why-thedebugging-flow-with--og-is-sometimesjumpy"><span class="tocnumber">17</span> <span class="toctext">Why the debugging flow with -Og is sometimes jumpy?</span></a>
+</li>
+<li class="toc_level-1 toc_section-18">
+<a href="#how-can-i-add-new-sourceforge-tickets-if-no-create-ticket-button-is-available"><span class="tocnumber">18</span> <span class="toctext">How can I add new SourceForge tickets if no Create Ticket button is available?</span></a>
+</li>
+<li class="toc_level-1 toc_section-19">
+<a href="#plug-ins-update-from-05x-running-on-junoto-current-version-fails"><span class="tocnumber">19</span> <span class="toctext">Plug-ins update from 0.5.x running on Juno to current version fails</span></a>
+</li>
+<li class="toc_level-1 toc_section-20">
+<a href="#semihosting-enabled-application-hangs"><span class="tocnumber">20</span> <span class="toctext">Semihosting enabled application hangs</span></a>
+</li>
+<li class="toc_level-1 toc_section-21">
+<a href="#unrecognized-command-line-option--stdgnu11-or--stdc11"><span class="tocnumber">21</span> <span class="toctext">Unrecognized command line option “-std=gnu11” (or “-std=c++11”)</span></a>
+</li>
+<li class="toc_level-1 toc_section-22">
+<a href="#program-echo-not-found-in-path"><span class="tocnumber">22</span> <span class="toctext">Program “echo” not found in PATH</span></a>
+</li>
+<li class="toc_level-1 toc_section-23">
+<a href="#installation-problems-on-eclipse-38"><span class="tocnumber">23</span> <span class="toctext">Installation problems on Eclipse 3.8</span></a>
+</li>
+<li class="toc_level-1 toc_section-24">
+<a href="#the-plug-in-seems-to-ignore-assembly-s-files-how-can-i-add-them-to-the-project"><span class="tocnumber">24</span> <span class="toctext">The plug-in seems to ignore assembly .s files. How can I add them to the project?</span></a>
+</li>
+<li class="toc_level-1 toc_section-25">
+<a href="#the-generated-makefile-seems-to-be-broken-how-can-i-fix-it"><span class="tocnumber">25</span> <span class="toctext">The generated Makefile seems to be broken. How can I fix it?</span></a>
+</li>
+<li class="toc_level-1 toc_section-26">
+<a href="#i-want-to-see-the-source-code-how-can-i-access-the-repository"><span class="tocnumber">26</span> <span class="toctext">I want to see the source code. How can I access the repository?</span></a>
+</li>
+<li class="toc_level-1 toc_section-27">
+<a href="#the-build-generates-a-long-console-listing-instead-of-creating-the-secondary-targets"><span class="tocnumber">27</span> <span class="toctext">The build generates a long console listing instead of creating the secondary targets</span></a>
+</li>
+<li class="toc_level-1 toc_section-28">
+<a href="#cannot-run-program-make-launching-failed"><span class="tocnumber">28</span> <span class="toctext">Cannot run program “make”: Launching failed</span></a>
+</li>
+<li class="toc_level-1 toc_section-29">
+<a href="#program-arm-none-eabi-gcc-not-found-in-path"><span class="tocnumber">29</span> <span class="toctext">Program “arm-none-eabi-gcc” not found in PATH</span></a>
+</li>
+<li class="toc_level-1 toc_section-30">
+<a href="#program-gcc-not-found-in-path"><span class="tocnumber">30</span> <span class="toctext">Program “gcc” not found in PATH</span></a>
+</li>
+<li class="toc_level-1 toc_section-31">
+<a href="#the-toolchains-tab-does-not-appear-on-old-projects"><span class="tocnumber">31</span> <span class="toctext">The Toolchains tab does not appear on old projects</span></a>
+</li>
+<li class="toc_level-1 toc_section-32">
+<a href="#how-to-migrate-projects-created-with-the-old-version-of-the-plugin"><span class="tocnumber">32</span> <span class="toctext">How to migrate projects created with the old version of the plugin?</span></a>
+</li>
+<li class="toc_level-1 toc_section-33">
+<a href="#cannot-use--c-together-with--o--for-multiple-files"><span class="tocnumber">33</span> <span class="toctext">Cannot use -c together with -o … for multiple files</span></a>
+</li>
+<li class="toc_level-1 toc_section-34">
+<a href="#i-tried-to-use-float-abi-hard-on-cortex-m4-but-the-linker-fails"><span class="tocnumber">34</span> <span class="toctext">I tried to use Float ABI: hard on Cortex-M4, but the linker fails</span></a>
+</li>
+<li class="toc_level-1 toc_section-35">
+<a href="#launching-the-debugger-fails-with-error-in-final-launch-sequence"><span class="tocnumber">35</span> <span class="toctext">Launching the debugger fails with “Error in final launch sequence”</span></a>
+</li>
+<li class="toc_level-1 toc_section-36">
+<a href="#what-do-the-template-configurations-standalone-retargetting-or-semihosting-mean"><span class="tocnumber">36</span> <span class="toctext">What do the template configurations (standalone, retargetting or semihosting) mean?</span></a>
+</li>
+<li class="toc_level-1 toc_section-37">
+<a href="#problems-related-to-old-bugs-that-should-no-longer-occur"><span class="tocnumber">37</span> <span class="toctext">Problems, related to old bugs, that should no longer occur</span></a>
+<ul>
+<li class="toc_level-2 toc_section-38">
+<a href="#i-changed-the-remove-command-but-the-value-is-not-effective"><span class="tocnumber">37.1</span> <span class="toctext">I changed the “Remove command”, but the value is not effective</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><div style="clear: both;"></div>
+
+<h2 id="receive-fatal-alert-handshake_failure">Receive fatal alert: handshake_failure</h2>
+
+<p>
+<img src="/assets/images/2017/handshake-failure.png" alt="Handshake failure" />
+</p>
+
+<p>If you use the Oracle JDK, starting with mid January 2017, attempts to install from SourceForge <a href="/blog/2017/01/29/plugins-install-issue/">fail with handshake_error</a>. Install the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html">Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files</a> and retry to install the plug-ins.</p>
+
+<h2 id="initial-gdb-712-fails-on-macos">Initial GDB 7.12 fails on macOS</h2>
+
+<p>When using <code class="highlighter-rouge">arm-none-eabi-gdb</code> 7.12 from the initial <code class="highlighter-rouge">6_2-2016q4-20161216</code>, the debug session fails to start on macOS; the reason is a bug in <code class="highlighter-rouge">arm-none-eabi-gdb</code> affecting the MI2 interface; the solution is to use a more recent version, <code class="highlighter-rouge">6-2017-q1-update</code> or later.</p>
+
+<h2 id="gdb-712-is-not-compatible-with-neon2">GDB 7.12 is not compatible with Neon.2</h2>
+
+<p>Due to some CDT bugs, Neon.2 fails to suspend or to terminate a debug session when using GDB 7.12; the solution is to use Neon.3 or later.</p>
+
+<h2 id="unable-to-read-repository">Unable to read repository</h2>
+
+<p>If you are behind a firewall, older Java virtual machines <a href="/blog/2016/12/02/plugins-install-issue/">fail to connect to SourceForge</a>. Install the latest JDK and retry to install the plug-ins.</p>
+
+<h2 id="i-cannot-install-the-plug-ins-on-eclipse-neon">I cannot install the plug-ins on Eclipse Neon</h2>
+
+<p>Eclipse Neon uses CDT 9.x, which introduced some incompatible API changes. To accommodate these changes, a new major version was released (3.1.1), providing a solution that works on both the new API and the previous 8.x API (version 8.6 or higher).</p>
+
+<p>This change also raised the minimum supported version to Eclipse Luna SR2 and JavaSE-1.7. Eclipse Kepler and previous are no longer supported.</p>
+
+<h2 id="i-cannot-install-the-plug-ins">I cannot install the plug-ins</h2>
+
+<blockquote>
+  <p>I get the following when trying to install Cross Compiler</p>
+</blockquote>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Cannot <span class="nb">complete </span>the install because one or more required items could not be found.
+Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 <span class="o">(</span>ilg.gnuarmeclipse.managedbuild.cross.feature.group 1.15.2.201511061603<span class="o">)</span>
+</code></pre>
+</div>
+
+<p>Your Eclipse does not include CDT. You need to install <strong>Eclipse IDE for C/C++ Developers</strong> or to manually add CDT to an existing Eclipse.</p>
+
+<h2 id="i-cannot-connect-via-j-link-to-my-st-discovery-or-nucleo-board">I cannot connect via J-Link to my ST DISCOVERY or NUCLEO board</h2>
+
+<p>If you try to connect via the SEGGER J-Link debug plug-in to a stock ST DISCOVERY or NUCLEO board and the JLinkGDBServer keeps refuses to connect (<em>‘Connecting to J-Link failed. Connected correctly?’</em>), please note that the on-board programmer firmware on the ST boards is compatible with ST-LINK/v2, not J-Link. However, SEGGER provides an upgrade path, and most of the ST bemo boards can be converted to J-Link; please follow the SEGGER <a href="https://www.segger.com/jlink-st-link.html">Converting ST-LINK on-board into a J-Link</a> page.</p>
+
+<h2 id="i-installed-eclipse-with-synaptics-and-i-have-problems-to-install-the-plug-ins">I installed Eclipse with Synaptics and I have problems to install the plug-ins</h2>
+
+<p>On GNU/Linux, <strong>DO NOT</strong> install Eclipse with the system package manager, because usually it installs an older version, and CDT is not include.</p>
+
+<p>Instead, go to the <a href="http://www.eclipse.org/downloads/">Eclipse download site</a> and get the proper <strong>Eclipse IDE for C/C++ Developers</strong>, preferably the 64-bits version.</p>
+
+<h2 id="openocd-fails-to-start-with--c-echo-started-by-gnu-arm-eclipse">OpenOCD fails to start with <code class="highlighter-rouge">-c echo "Started by GNU ARM Eclipse"</code></h2>
+
+<blockquote>
+  <p>I’m trying to start OpenOCD in a terminal and it fails to execute the <code class="highlighter-rouge">echo</code> command…</p>
+</blockquote>
+
+<p>The syntax required by the OpenOCD <code class="highlighter-rouge">echo</code> command is a single string, in other words both echo and the message must be in the same string. To achieve this in a shell, the string must be quoted:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>-c <span class="s1">'echo "Started by GNU ARM Eclipse"'</span>
+</code></pre>
+</div>
+
+<p>Please note that this command is used by the plug-in to detect when the GDB server is initialised and ready to receive commands; it is not necessary when starting OpenCOD manually.</p>
+
+<h2 id="how-to-compile-files-excluded-from-build">How to compile files excluded from build?</h2>
+
+<blockquote>
+  <p>Why the default state for <code class="highlighter-rouge">system/src/.../xxx.c</code> is not enabled?</p>
+</blockquote>
+
+<p>Because during project creation the wizard was configured with <strong>Exclude unused</strong>.</p>
+
+<blockquote>
+  <p>How to enable them?</p>
+</blockquote>
+
+<p>Right click → <strong>Resource Configurations</strong> → <strong>Exclude from build</strong> → uncheck</p>
+
+<h2 id="the-devices-tab-is-not-visible">The <strong>Devices</strong> tab is not visible.</h2>
+
+<blockquote>
+  <p>I installed GNU ARM Eclipse plug-ins in LPCXpresso. … I can’t see Devices tab in the Settings window of project Properties.</p>
+</blockquote>
+
+<p>Unfortunately it is not possible to assign devices/boards to projects created by other plug-ins, because they lack the mechanisms to handle such additional data. The <strong>Devices</strong> tab is  visible only for projects created by the GNU ARM Eclipse plug-ins.</p>
+
+<h2 id="error-undefined-reference-to-function">Error: undefined reference to <em>function</em></h2>
+
+<blockquote>
+  <p>I created a simple STM32x project… I can call the functions in RCC and GPIO header files, but while calling functions in TIM header the linker reports an undefined reference.</p>
+</blockquote>
+
+<p>By default, the template wizard enables the <strong>Exclude unused</strong> option. The result is that unused device drivers source files, although copied in the project, are excluded from build, mainly to save some build time.</p>
+
+<p>If you need to re-include some of the source files you need to right click on the file, select <strong>Resource Configurations</strong> → <strong>Exclude from Build…</strong> and deselect the build configuration you want to include the file.</p>
+
+<h2 id="how-can-i-debug-projects-compiled-with-arm-cc">How can I debug projects compiled with ARM CC?</h2>
+
+<p>Generally debugging is done using the GDB client program, which reads only GNU debugging info, preferably from .ELF files. If you can manage to configure non-GNU toolchains to generate .ELF files and to include dwarf debugging info, you are free to experiment with GDB, but please be aware that non-GNU toolchains are not supported by the GNU ARM Eclipse plug-ins.</p>
+
+<h2 id="how-do-i-create-a-c-only-not-c-cortex-m-projects">How do I create a C-only (not C++) Cortex-M projects?</h2>
+
+<p>Well, easily, with <strong>New C Project</strong>. However if the question is related to the projects generated by the templates, they always use G++ as linker.</p>
+
+<blockquote>
+  <p>I want to make sure the G++ compiler is not putting any object code in that I do not want.</p>
+</blockquote>
+
+<p>No need to worry, if you have no C++ source files in your project, the g++ compiler is never used.</p>
+
+<p>The advantage of using g++ as linker is that, even for C projects, you can link a library that has a C interface but internally uses C++ (this is perfectly possible).</p>
+
+<p>If you have no C++ object files in the project, there is no difference.</p>
+
+<h2 id="why-my-breakpoints-arenot-effective-and-execution-stops-somewhere-else">Why my breakpoints are not effective and execution stops somewhere else?</h2>
+
+<blockquote>
+  <p>My breakpoints behave erratic, the program does not stop in the desired function but in the function immediately following.</p>
+</blockquote>
+
+<p>This is usually the effect of optimisations, if your function was not referred in your program, the linker removed it completely. Eclipse does not know this, and any breakpoint placed in the removed function is in fact placed at the beginning of the next function.</p>
+
+<h2 id="how-to-single-step-empty-loops">How to single-step empty loops?</h2>
+
+<blockquote>
+  <p>I’m trying to single-step a simple loop, but execution does not stop after a single iteration, the target runs continuously, with permanent interactions with the debugger.</p>
+</blockquote>
+
+<p>The current GDB has a problem with placing breakpoints <strong>in simple loops</strong>, and <strong>single-stepping fails</strong>. The problem was already reported (<a href="https://bugs.launchpad.net/gcc-arm-embedded/+bug/1401565">bug 1401565</a>). If you really need this, switch to assembly view and single-stepping is again functional.</p>
+
+<h2 id="why-thedebugging-flow-with--og-is-sometimesjumpy">Why the debugging flow with -Og is sometimes jumpy?</h2>
+
+<blockquote>
+  <p>The manual suggests to use -Og for optimising programs for Debug, but when stepping loops the execution flow is sometimes quite jumpy, moving outside the loop and back.</p>
+</blockquote>
+
+<p>In GCC prior 4.9, the definition of <strong>-Og</strong> needs a small adjustment, also add the <strong>-fno-move-loop-invariants</strong> option to the Debug configuration; this will prevent the compiler to move some constant parts of the loop outside it and the execution flow will be more easy to follow. The problem was already reported (<a href="https://bugs.launchpad.net/gcc-arm-embedded/+bug/1395077">bug 1395077</a>). Starting with 4.9, the -fno-move-loop-invariants is added automatically to -Og.</p>
+
+<h2 id="how-can-i-add-new-sourceforge-tickets-if-no-create-ticket-button-is-available">How can I add new SourceForge tickets if no Create Ticket button is available?</h2>
+
+<blockquote>
+  <p>Please excuse me for not using the support ticket tool you provided on sourceforge but I seem to be too incompetent to even spot some type of “add request” button.</p>
+</blockquote>
+
+<p>Following the migration to GitHub, the SourceForge ticketing system was configured as read-only, and new tickets can no longer be added.</p>
+
+<p>Please login to GitHub and use the GitHub Issues trackers.</p>
+
+<h2 id="plug-ins-update-from-05x-running-on-junoto-current-version-fails">Plug-ins update from 0.5.x running on Juno to current version fails</h2>
+
+<blockquote>
+  <p>Cannot complete the install because one or more required items could not be found.</p>
+</blockquote>
+
+<p>Attempts to update the plug-ins when running on Eclipse Juno are expected to fail, since versions starting with 1.x up require Eclipse 4.3 Kepler.</p>
+
+<p>The recommended solution is to first upgrade your Eclipse to Kepler 4.3 and then retry to update the plug-ins.</p>
+
+<h2 id="semihosting-enabled-application-hangs">Semihosting enabled application hangs</h2>
+
+<blockquote>
+  <p>After usb disconected and reconected program do not run (the example flashing led is not blinking).</p>
+</blockquote>
+
+<p>This is absolutely normal for any application build with semihosting support. The semihosting channel is using resources from the debugger. Without the debugger active, the instructions used for the communication channel generate run-time faults.</p>
+
+<p>Update: M3/M4 projects generated with version 2.2.1-201404120702 or later check when not running under debugger and skip the trace call, so it is possible to run the application standalone.</p>
+
+<h2 id="unrecognized-command-line-option--stdgnu11-or--stdc11">Unrecognized command line option “-std=gnu11” (or “-std=c++11”)</h2>
+
+<p>You are using an old toolchain, pre GCC 4.7. In older versions, the C11 and the C++11 standards were not available, and compilers did not allow to set this option.</p>
+
+<p>Update your toolchain to a modern one, or, if this is not possible, change the <strong>-std=</strong> option to something supported by your toolchain (probably -std=gnu1x, or -std=gnu99; -std=c++0x for C++).</p>
+
+<h2 id="program-echo-not-found-in-path">Program “echo” not found in PATH</h2>
+
+<p>You are running on Windows, and did not install the full content of the archive described in the <a href="/windows-build-tools/" title="Build tools (make &amp; rm) on Windows">Build Tools</a> page. The <em>echo</em> program is not used per se, it is only a workaround for a known CDT bug. On macOS and GNU/Linux the <em>echo</em> program is always present, being part of the standard configuration. On Windows it should be installed separately and, for convenience, it is provided in the Build Tools package.</p>
+
+<h2 id="installation-problems-on-eclipse-38">Installation problems on Eclipse 3.8</h2>
+
+<blockquote>
+  <p>I was trying to install the plugin in my eclipse 3.8 but I got: Cannot complete the install because one or more required items could not be found.</p>
+</blockquote>
+
+<p>Version 1.x or later of the GNU ARM Eclipse plug-ins cannot run on Eclipses older than 4.3 Kepler. Please update Eclipse to the latest version and reinstall the plug-ins.</p>
+
+<h2 id="the-plug-in-seems-to-ignore-assembly-s-files-how-can-i-add-them-to-the-project">The plug-in seems to ignore assembly .s files. How can I add them to the project?</h2>
+
+<p>Due to a very complicated portability reason, Eclipse is not able to distinguish, and thus separately process, <strong>.s</strong> and <strong>.S</strong> files. The current CDT configuration associates assembly files only with .asm and .S files, and completely ignores .s files. Although it might be possible to change the Eclipse file associations, I would not recommend this. Better change the assembly file extensions to .S and use the default settings.</p>
+
+<p>Please note that .S assembly files will be processed by <strong>gcc</strong>, not by <strong>as</strong>; this also means that the file will be first preprocessed like all C/C++ files, allowing conditional compilation and macro expansion.</p>
+
+<h2 id="the-generated-makefile-seems-to-be-broken-how-can-i-fix-it">The generated Makefile seems to be broken. How can I fix it?</h2>
+
+<p>If you notice something wrong in the Makefiles, like macro names not substituted, missing sections, labels, etc, the project file might be broken. To fix it, create a new project. Do not copy/paste the damaged one, be sure you create it from scratch. However, you can copy/paste the source files.</p>
+
+<p>As mentioned in the <a href="/support/known-issues/" title="Known problems">Known issues</a>, avoid changing settings for individual files/folders or changing the toolchain for a project, since these are known problems in some CDT version and might damage your project.</p>
+
+<h2 id="i-want-to-see-the-source-code-how-can-i-access-the-repository">I want to see the source code. How can I access the repository?</h2>
+
+<p>Go to <a href="https://github.com/gnuarmeclipse/plug-ins">GitHub</a>.</p>
+
+<h2 id="the-build-generates-a-long-console-listing-instead-of-creating-the-secondary-targets">The build generates a long console listing instead of creating the secondary targets</h2>
+
+<p>You enabled the Internal builder, which does not work properly. Switch back to the External builder and the build will succeed.</p>
+
+<h2 id="cannot-run-program-make-launching-failed">Cannot run program “make”: Launching failed</h2>
+
+<p>Most probably you are running on Windows, and forgot to add the builder tools or to add the path to them. See the <a href="/windows-build-tools/" title="Build tools (make &amp; rm) on Windows">Build Tools</a> page.</p>
+
+<h2 id="program-arm-none-eabi-gcc-not-found-in-path">Program “arm-none-eabi-gcc” not found in PATH</h2>
+
+<p>You most probably did not configure properly the toolchain path, and CDT cannot start the discovery process. Check the path in the project <strong>Properties</strong> → <strong>C/C++ Build</strong> → <strong>Settings</strong> → <strong>Toolchains</strong> → <strong>Path</strong>.</p>
+
+<p>
+<img src="/assets/images/2013/10/SettingsPathPrefix.png" alt="Setting the toolchain path and preffx" />
+</p>
+
+<h2 id="program-gcc-not-found-in-path">Program “gcc” not found in PATH</h2>
+
+<p>Although it looks like the above, it is worse, since it shows that the prefix is not prepended to the compiler command. Check the prefix in the project <strong>Properties</strong> → <strong>C/C++ Build</strong> → <strong>Settings</strong> → <strong>Toolchains</strong> → <strong>Prefix</strong>.</p>
+
+<h2 id="the-toolchains-tab-does-not-appear-on-old-projects">The Toolchains tab does not appear on old projects</h2>
+
+<p>The <strong>Toolchains</strong> tab is specific to the new version of the plug-in. If you have projects created with the old version (0.5.x), the Toolchains tab does not appear.</p>
+
+<p>You can identify old project by checking the Settings page; if the tool names do not start with “Cross ARM”, or the Target Processor page does not show in the second half options specific to the AArch64 family, then you are not in the case of the new plug-in.</p>
+
+<h2 id="how-to-migrate-projects-created-with-the-old-version-of-the-plugin">How to migrate projects created with the old version of the plugin?</h2>
+
+<p>Unfortunately projects created with the old version of the plug-in cannot be migrated by a simple change of the toolchain settings in Eclipse, since CDT has some problems with changing toolchains.</p>
+
+<p>The recommended method is to create a new project, add the source files and update the project options.</p>
+
+<h2 id="cannot-use--c-together-with--o--for-multiple-files">Cannot use -c together with -o … for multiple files</h2>
+
+<p>If the compiler complains something like this, then it might be possible that projects created with versions pre-1.1.3 need an update. First check the list of include folders, for each compiler tool, if the list is there, you’re done; otherwise, adding the folders again usually fixes the problem.</p>
+
+<p>If you have lots of folders and re-entereing them is tedious, you can try to manually edit the <code class="highlighter-rouge">.cproject</code> file. For this, first close Eclipse, and edit <code class="highlighter-rouge">.cproject</code> with a separate editor. Search for the lines with “.include.files”; if below them you see the list of folders, you don’t have to re-enter them again; check if the <code class="highlighter-rouge">&lt;option&gt;</code> element has an <code class="highlighter-rouge">name=</code> attribute; if not, add it before the superClass attribute, with the following content:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;option id="...include.paths.NNN" name="Include paths (-I)" superClass="..."&gt;
+</code></pre>
+</div>
+
+<h2 id="i-tried-to-use-float-abi-hard-on-cortex-m4-but-the-linker-fails">I tried to use Float ABI: hard on Cortex-M4, but the linker fails</h2>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Building target: test1.elf
+Invoking: Cross ARM C++ Linker
+/usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/bin/ld: error: test1.elf uses VFP register arguments
+/usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/libg.a<span class="o">(</span>lib_a-impure.o<span class="o">)</span> does not
+/usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/bin/ld: failed to merge target specific data of file
+/usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/libg.a<span class="o">(</span>lib_a-impure.o<span class="o">)</span>
+...
+</code></pre>
+</div>
+
+<p>Although on Cortex-M4 the only available FPU hardware is fpv4-sp-d16, the compiler does not have a default defined for this, and it is necessary to explicitly select <strong>FPU Type: fpv4-sp-d16</strong> in the C/C++ Settings page.</p>
+
+<h2 id="launching-the-debugger-fails-with-error-in-final-launch-sequence">Launching the debugger fails with “Error in final launch sequence”</h2>
+
+<p>The GDB client 7.4.1.20130913-cvs, packed in gcc-arm-none-eabi-4_7-2013q3 has some problems to decode DWARF debug information generated by -g3 option and sometimes crashes during launch, generating an obscure Eclipse error message box.</p>
+
+<p>
+<img src="/assets/images/2013/10/final-launch-sequence-error.png" alt="Final launch sequence error" />
+</p>
+
+<p>The problem is known and the 4_7-2014q1 update should fix it. For the time being, please recompile your project with -g or -g2 to work around this issue.</p>
+
+<h2 id="what-do-the-template-configurations-standalone-retargetting-or-semihosting-mean">What do the template configurations (standalone, retargetting or semihosting) mean?</h2>
+
+<ul>
+  <li><strong>Standalone</strong> means a typical embedded configuration, that does not use the POSIX system calls (open, close, read, write, etc).</li>
+  <li><strong>Retargetting</strong> is a more elaborate embedded configuration where the application makes use of these calls, but redirects the file descriptors to local devices or files, by providing custom implementations for the system calls (like _open, _close, _read, _write, etc). This configuration allows to port POSIX programs easier.</li>
+  <li><strong>Semihosting</strong> is a special testing configuration, that bridges <strong>all</strong> system calls to the host operating system where the GDB server runs. This configurations is particularly interesting for running test programs that can leave the test results in a file stored on the host, for automated integration in a test suite.</li>
+</ul>
+
+<h2 id="problems-related-to-old-bugs-that-should-no-longer-occur">Problems, related to old bugs, that should no longer occur</h2>
+
+<h3 id="i-changed-the-remove-command-but-the-value-is-not-effective">I changed the <em>“Remove command”</em>, but the value is not effective</h3>
+
+<p>In most usual managed build plug-ins, the <strong>rm</strong> command is hard-wired and it cannot be reconfigured. So its value is assumed to be constant, and, when the makefile is generated, CDT writes it inside the makefile. The GNU ARM Eclipse Plug-in takes a step further, and allows this definition to be reconfigured, but currently cannot trigger the recreation of the makefile.</p>
+
+<p>Given that updating the Remove command is not done very often, the easiest workaround is to manually remove the makefile, or the entire build folder, and so the makefile will be created from scratch.</p>
+
+<p>Fixed in 1.1.5.</p>
+
+<p>-/-</p>
+
+
+
+<hr class="page-footer"/>
+<p class="page-footer">Last modified on Sat Mar 25 19:55:45 2017 UTC.</p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/support/faq/" data-layout="button"></div>
+
+
+</section>
+
+<aside id="sidebar">
+
+<h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
+
+<ul>
+  <li><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></li>
+  <li><a href="/blog/2017/04/25/plugins-v3.4.1-201704251808-released/">GNU ARM Eclipse plug-ins v3.4.1-201704251808 released</a></li>
+  <li><a href="/blog/2017/04/19/openocd-v0-10-0-20170418-released/">GNU ARM Eclipse OpenOCD v0.10.0-20170418* released</a></li>
+  <li><a href="/blog/2017/02/25/plugins-v3.3.1-201702251311-released/">GNU ARM Eclipse plug-ins v3.3.1-201702251311 released</a></li>
+  <li><a href="/blog/2017/01/29/plugins-install-issue/">GNU ARM Eclipse plug-ins: Received fatal alert: handshake_failure</a></li>
+</ul>
+
+
+<hr />
+
+<h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
+
+<h4 id="features"><a href="/plugins/features/">Features</a></h4>
+
+<h4 id="downloads"><a href="/downloads/">Downloads</a></h4>
+
+<ul>
+  <li><a href="/downloads/">Overview</a></li>
+  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+</ul>
+
+<h4 id="install"><a href="/install/">Install</a></h4>
+
+<ul>
+  <li><a href="/install/">Overview</a></li>
+  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
+  <li><a href="/debug/install/">Debugging binaries</a>
+    <ul>
+      <li><a href="/debug/install/">Overview</a></li>
+      <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
+      <li><a href="/openocd/install/">OpenOCD install</a></li>
+      <li><a href="/qemu/install/">QEMU install</a></li>
+    </ul>
+  </li>
+  <li><a href="/plugins/install/">Eclipse plug-ins install</a></li>
+</ul>
+
+<h4 id="important">Important</h4>
+
+<ul>
+  <li><a href="/install/">Install order</a></li>
+  <li><a href="/eclipse/workspace/preferences/">Workspace preferences</a></li>
+  <li><a href="/toolchain/path/">Toolchain path</a></li>
+  <li><a href="/eclipse/project/portability/">Project portability</a></li>
+</ul>
+
+<h4 id="tutorials">Tutorials</h4>
+
+<ul>
+  <li><a href="/tutorials/blinky-arm/">Create a Blinky ARM test project</a></li>
+  <li><a href="/tutorials/hello-arm/">Create a Hello ARM test project</a></li>
+</ul>
+
+<h4 id="how-to-use">How to use</h4>
+
+<ul>
+  <li><a href="/plugins/mbs/">The managed build plug-in</a></li>
+  <li><a href="/plugins/packs-manager/">The packs manager (CMSIS)</a></li>
+  <li><a href="/eclipse/project/assign-device/">Assign a device</a></li>
+</ul>
+
+<h4 id="templates"><a href="/templates/">Templates</a></h4>
+
+<ul>
+  <li><a href="/templates/">Overview</a></li>
+  <li><a href="/templates/cortexm/">Cortex-M template</a></li>
+  <li><a href="/templates/stm32f/">STM32Fxx template</a></li>
+  <li><a href="/templates/klxx/">Freescale KLxx templates</a></li>
+</ul>
+
+<h4 id="debugging"><a href="/debug/">Debugging</a></h4>
+
+<ul>
+  <li><a href="/debug/">Overview</a></li>
+  <li><a href="/debug/jlink/">The SEGGER J-Link plug-in</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/qemu/">The QEMU plug-in</a></li>
+  <li><a href="/debug/peripheral-registers/">The peripheral registers view (CMSIS)</a></li>
+</ul>
+
+<h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
+
+<ul>
+  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li><a href="/qemu/install/">QEMU Install</a></li>
+  <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
+  <li><a href="/qemu/options/">Command line options</a></li>
+  <li><a href="/qemu/build-procedure/">How to build</a></li>
+  <li><a href="/qemu/publish-procedure/">How to publish</a></li>
+  <li><a href="/qemu/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
+
+<ul>
+  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li><a href="/openocd/install/">OpenOCD Install</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/openocd/build-procedure/">How to build</a></li>
+  <li><a href="/openocd/publish-procedure/">How to publish</a></li>
+  <li><a href="/openocd/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+</ul>
+
+<h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
+
+<ul>
+  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
+  <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
+  <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
+  <li><a href="/windows-build-tools/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="advanced">Advanced</h4>
+
+<ul>
+  <li><a href="/advanced/headless-builds/">Headless builds</a></li>
+</ul>
+
+<h4 id="support"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+</ul>
+
+<h4 id="developer"><a href="/developer/">Developer</a></h4>
+
+<ul>
+  <li><a href="/developer/">Overview</a></li>
+  <li><a href="/developer/build-procedure/">How to build</a></li>
+  <li><a href="/developer/publish-procedure/">How to publish</a></li>
+  <li><a href="/developer/change-log">Change log</a></li>
+  <li><a href="/developer/contribute/">Contribute</a></li>
+</ul>
+
+<h4 id="hardware">Hardware</h4>
+
+<ul>
+  <li><a href="/developer/j-link-stm32-boards/">J-Link and STM32 boards</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+</ul>
+
+<h4 id="licenses">Licenses</h4>
+
+<ul>
+  <li><a href="/licenses/plug-ins/">Eclipse plug-ins</a></li>
+  <li><a href="/licenses/tools/">Tools</a></li>
+</ul>
+
+<h4 id="finance">Finance</h4>
+
+<ul>
+  <li><a href="/finance/sponsorship/">Sponsorship &amp; donations</a></li>
+</ul>
+
+<h4 id="about"><a href="/about/">About</a></h4>
+
+<hr />
+<p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NXKFN7DJH8DJ6">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="Pay Pal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</aside>
+
+
+</div>
+</div>
+
+<div class="inner clearfix">
+<div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2017 Liviu Ionescu</li>
+  <li>Hosted on GitHub Pages</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>
+    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  </li>
+</ul>
+
+  </div>
+  <a href="http://github.com/gnu-mcu-eclipse" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/support/">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

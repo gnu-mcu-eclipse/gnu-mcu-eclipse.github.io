@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+
+  <title>How to install the OpenOCD binaries?</title>
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+
+  <meta property="og:title" content="How to install the OpenOCD binaries?" />
+  <meta property="og:site_name" content="GNU MCU Eclipse" />
+
+
+  <meta property="article:published_time" content="2015-09-09">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201702222107" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201702222107" media="print">
+
+  <link rel="canonical" href="/openocd/install/">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/manifest.json">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-16', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<header>
+  <div class="inner">
+    <h1><a href="/">GNU MCU Eclipse</a></h1>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <div id="buttons">
+      <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
+    </div>
+  </div>
+</header>
+
+
+<div id="content-wrapper">
+<div class="inner clearfix">
+
+<div id="site-body">
+<section id="main-content">
+
+
+<h1 class="page-title">How to install the OpenOCD binaries?</h1>
+
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#j-link-conversion"><span class="tocnumber">2</span> <span class="toctext">J-Link conversion</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#documentation"><span class="tocnumber">3</span> <span class="toctext">Documentation</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#windows"><span class="tocnumber">4</span> <span class="toctext">Windows</span></a>
+<ul>
+<li class="toc_level-2 toc_section-5">
+<a href="#drivers"><span class="tocnumber">4.1</span> <span class="toctext">Drivers</span></a>
+</li>
+</ul>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#macos"><span class="tocnumber">5</span> <span class="toctext">macOS</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#gnulinux"><span class="tocnumber">6</span> <span class="toctext">GNU/Linux</span></a>
+<ul>
+<li class="toc_level-2 toc_section-8">
+<a href="#udev"><span class="tocnumber">6.1</span> <span class="toctext">UDEV</span></a>
+</li>
+<li class="toc_level-2 toc_section-9">
+<a href="#usb-access-rights"><span class="tocnumber">6.2</span> <span class="toctext">USB access rights</span></a>
+</li>
+</ul>
+</li>
+<li class="toc_level-1 toc_section-10">
+<a href="#testing"><span class="tocnumber">7</span> <span class="toctext">Testing</span></a>
+</li>
+<li class="toc_level-1 toc_section-11">
+<a href="#openocd-debugging-plug-ins"><span class="tocnumber">8</span> <span class="toctext">OpenOCD Debugging plug-ins</span></a>
+</li>
+<li class="toc_level-1 toc_section-12">
+<a href="#update-openocd-path"><span class="tocnumber">9</span> <span class="toctext">Update OpenOCD path</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><h2 id="overview">Overview</h2>
+
+<p><a href="http://openocd.org">OpenOCD</a> is an open source project hosted on <a href="https://sourceforge.net/projects/openocd/">SourceForge</a>, and project maintainers insist that all end-users should compile it from the latest version of the source code available from their repository. There are no special stable branches or tags and there are no clear release dates for future versions. On Windows you need to install MSYS2 and use the appropriate package build procedure.</p>
+
+<p>If you are like us and consider that professional solutions should include stable, hassle free binary distributions, you might be interested to know that a custom packed version of OpenOCD, based on the latest public version (0.9.0) was added to GNU ARM Eclipse, as <strong>GNU ARM Eclipse OpenOCD</strong>. It can be downloaded from the <a href="https://github.com/gnuarmeclipse/openocd/releases">GitHub Releases</a> page.</p>
+
+<p>So, if you are not interested in building from sources, and appreciate a better integration with the Eclipse plug-in, please feel free to use the GNU ARM Eclipse OpenOCD binaries, and preferably install them in the default locations.</p>
+
+<p><strong>Warning:</strong> OpenOCD is a very complex project, capable of working with many JTAG probes, but support for them must be explicitly included at build time, so be sure that support for your JTAG probe was included in the binaries you plan to use. The <strong>GNU ARM Eclipse OpenOCD</strong> includes support for most existing probes.</p>
+
+<h2 id="j-link-conversion">J-Link conversion</h2>
+
+<p>If the only reason to run OpenOCD is to use the ST-LINK on-board programmer on STM Discovery or Nucleo boards, then, thanks to SEGGER, a better solution exists: it is possible to <strong>upgrade the on-board programmer firmware to behave like a J-Link</strong> lite, and then use the GNU ARM Eclipse J-Link plug-in. The conversion is reversible, you can return the board to ST-LINK at any time.</p>
+
+<p>Please follow the instructions on <a href="https://www.segger.com/jlink-st-link.html">Converting ST-LINK on-board into a J-Link</a>.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>If you are using the GNU ARM Eclipse OpenOCD, the documentation is part of the installed package.</p>
+
+<p>Slightly older version are also available in the <a href="https://sourceforge.net/projects/openocd/files/openocd/">Files</a> section of the SourceForge project. For version 0.9.0, the manual is <a href="http://sourceforge.net/projects/openocd/files/openocd/0.9.0/openocd.pdf/download">openocd.pdf</a>.</p>
+
+<h2 id="windows">Windows</h2>
+
+<p>For user convenience, the Windows versions of <strong>GNU ARM Eclipse OpenOCD</strong> are packed as Windows setup wizards. Go to the <a href="https://github.com/gnuarmeclipse/openocd/releases">GitHub Releases</a> page and download the latest version named like:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">gnuarmeclipse-openocd-win64-0.10.0-*-setup.exe</code></li>
+  <li><code class="highlighter-rouge">gnuarmeclipse-openocd-win32-0.10.0-*-setup.exe</code></li>
+</ul>
+
+<p>Select the <code class="highlighter-rouge">-win64-</code> file for Windows x64 machines and the <code class="highlighter-rouge">-win32-</code> file for Windows x32 machines.</p>
+
+<p>Run the setup as usual.</p>
+
+<p>
+<img src="/assets/images/2015/openocd-setup-wizard.png" alt="The OpenOCD Setup" />
+</p>
+
+<p>It is recommended to keep the default install location:</p>
+
+<p>
+<img src="/assets/images/2015/openocd-setup-destination.png" alt="Accept the default OpenOCD destination folder" />
+</p>
+
+<p>The default install location is:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">C:\Program Files\GNU ARM Eclipse\OpenOCD\*</code></li>
+</ul>
+
+<p>The result is a structure like:</p>
+
+<p>
+<img src="/assets/images/2015/windows-folders-openocd.png" alt="The OpenOCD folders structure" />
+</p>
+
+<p>To check if OpenOCD starts, use the following command:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>C:&gt;"C:\Program Files\GNU ARM Eclipse\OpenOCD\0.8.0-201503201840\bin\openocd" --version
+GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-03-20-18:40)
+</code></pre>
+</div>
+
+<h3 id="drivers">Drivers</h3>
+
+<p>As usual on Windows, mastering drivers is a challenge and OpenOCD is no exceptions, so don’t be surprised to encounter many incompatible drivers for various JTAG probes. The OpenOCD distribution includes some libusb drivers, and recommends to run the <code class="highlighter-rouge">zadig.exe</code> tool to activate them. Although this manoeuvre will make OpenOCD happy, it will most probably ruin other USB drivers you might have installed. Our strong recommendation is to <strong>NOT</strong> do this, and instead use the manufacturer drivers, when compatible with OpenOCD.</p>
+
+<h4 id="st-linkv2">ST-LINK/V2</h4>
+
+<p>One example of compatible drivers are the ST-LINK/V2 USB drivers, from ST, available as part number <a href="http://www.st.com/web/en/catalog/tools/FM147/SC1887/PF260219">STSW-LINK009</a>. Download the <code class="highlighter-rouge">stsw-link009.zip</code> archive, extract its content to a separate folder, and run the <code class="highlighter-rouge">dpinst_amd64.exe</code> (or <code class="highlighter-rouge">dpinst_x86.exe</code>) with administrative privileges.</p>
+
+<p>As for most Windows drivers, to complete the installation, a restart usually helps.</p>
+
+<p>Connect the ST-LINK/v2 or the DISCOVERY board and check in <strong>Control Panel</strong> → <strong>System</strong> → <strong>Device Manager</strong> if the JTAG is operational.</p>
+
+<p>
+<img src="/assets/images/2015/windows-devices-stlink.png" alt="ST-LINK Windows device" />
+</p>
+
+<p>For other probes follow the manufacturer instructions.</p>
+
+<p>Note 1: All Windows tests were performed on Windows 7. If, for any reasons, you still use the venerable Windows XP, some differences may be observed in the USB subsystem; to stay on the safe side, try to always use original manufacturer drivers.</p>
+
+<p>Note 2: OpenOCD v0.7.0 does not work with the current J-Link drivers, so on Windows it is not possible to use OpenOCD with J-Link; use the SEGGER supplied software instead.</p>
+
+<h4 id="zadig">Zadig</h4>
+
+<p>For some devices, for example <a href="https://www.olimex.com/Products/ARM/JTAG/">ARM-USB-OCD</a> from <a href="https://www.olimex.com/">Olimex</a>, after installing the vendor drivers, you must also install <a href="http://zadig.akeo.ie">Zadig</a> and convert the vendor drivers to WinUSB drivers.</p>
+
+<h2 id="macos">macOS</h2>
+
+<p>For user convenience, the macOS version of <strong>GNU ARM Eclipse OpenOCD</strong> is packed as an macOS install package. Go to the <a href="https://github.com/gnuarmeclipse/openocd/releases">GitHub Releases</a> page and download the latest version named like:</p>
+
+<ul>
+  <li> <code class="highlighter-rouge">gnuarmeclipse-openocd-osx-0.10.0-*.pkg</code></li>
+</ul>
+
+<p>As the name implies, this is an macOS package, that can be installed on any recent 64-bits macOS.</p>
+
+<p>Run the install as usual.</p>
+
+<p>
+<img src="/assets/images/2015/openocd-mac-installer.png" alt="Install the macOS package" />
+</p>
+
+<p>The package is installed in:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">/Applications/GNU ARM Eclipse/OpenOCD/*</code></li>
+</ul>
+
+<p>To check if OpenOCD starts, use:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ /Applications/GNU\ ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd --version
+GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-01-18-12:57)
+</code></pre>
+</div>
+
+<h2 id="gnulinux">GNU/Linux</h2>
+
+<p>The GNU/Linux versions of <strong>GNU ARM Eclipse OpenOCD</strong> are packed as TGZ archives. Go to the <a href="https://github.com/gnuarmeclipse/openocd/releases">GitHub Releases</a> page and download the latest version named like:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">gnuarmeclipse-openocd-debian64-0.10.0-201501181055.tgz</code></li>
+  <li><code class="highlighter-rouge">gnuarmeclipse-openocd-debian32-0.10.0-201501181055.tgz</code></li>
+</ul>
+
+<p>As the name implies, these are Debian <code class="highlighter-rouge">tar.gz</code> archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-debian64-</code> file for 64-bits machines and the <code class="highlighter-rouge">-debian32-</code> file for 32-bits machines.</p>
+
+<p>In case you use an older distribution and encounter difficulties to run <strong>GNU ARM Eclipse OpenOCD</strong>, you can also try to build it from sources on your machine. As a last resort, if your distribution includes an OpenOCD package, you can install it using the specific tools.</p>
+
+<p>To install this package, unpack the archive and copy it to  <code class="highlighter-rouge">/opt/gnuarmeclipse/openocd/${version}</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo mkdir -p /opt/gnuarmeclipse
+$ cd /opt/gnuarmeclipse
+$ sudo tar xvf ~/Downloads/gnuarmeclipse-openocd-debian64-0.10.0-201510281129-dev.tgz
+</code></pre>
+</div>
+
+<p>Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.</p>
+
+<p>To check if OpenOCD starts and is recent, use:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ /opt/gnuarmeclipse/openocd/0.10.0-201510281129-dev/bin/openocd --version
+GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.10.0-dev-00141-g09aeb96-dirty (2015-10-28-11:56)
+</code></pre>
+</div>
+
+<h3 id="udev">UDEV</h3>
+
+<p>For the JTAG probes implemented as USB devices (actually most of them), the last installation step on GNU/Linux is to configure the <strong>UDEV</strong> subsystem. OpenOCD provides an UDEV rules file defining all the supported IDs; to install it, just copy the file to <code class="highlighter-rouge">/etc/udev/rules.d</code> and eventually notify the daemon:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo cp /opt/gnuarmeclipse/openocd/0.10.0-201510281129-dev/contrib/99-openocd.rules \
+  /etc/udev/rules.d/
+$ sudo udevadm control --reload-rules
+</code></pre>
+</div>
+
+<p>Note: If you previously installed the J-Link binaries, the USB IDs were already added to UDEV. The above OpenOCD rules file also defines the J-Link ID. Apparently UDEV does not complain; if you encounter problems, just comment out the definition in the OpenOCD file.</p>
+
+<h3 id="usb-access-rights">USB access rights</h3>
+
+<p>On some GNU/Linux distributions, the UDEV definitions are not enough,
+or are not effective, and when trying to access the JTAG probe,
+an error is issued:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>libusb_open failed: LIBUSB_ERROR_ACCESS
+</code></pre>
+</div>
+
+<p>If this happens, first try to start openocd with sudo; if this works,
+for regular work you also need to grant your user permission to use the USB.</p>
+
+<p>For example, on Ubuntu 15.10 you need to issue something like:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo usermod -aG plugdev $USER
+</code></pre>
+</div>
+
+<p>Then relogin or restart.</p>
+
+<p>If you still have problems, check your distribution documentation and
+when you have a functional solution post it on the project forum.</p>
+
+<h2 id="testing">Testing</h2>
+
+<p>To test if OpenOCD is able to connect to a specific board, you generally need to select the interface and the processor. As a shortcut, for some well known boards, there are ready made configuration files to set both the interface and the processor. For example, on macOS, to test a connection via ST/LINK v2 to the STM32F4DISCOERY board, you can use the sample below:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ /Applications/GNU\ ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd \
+  -f board/stm32f4discovery.cfg
+GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
+Licensed under GNU GPL v2
+For bug reports, read
+
+http://openocd.sourceforge.net/doc/doxygen/bugs.html
+
+srst_only separate srst_nogate 	srst_open_drain connect_deassert_srst
+Info : This adapter doesn't support configurable speed
+Info : STLINK v2 JTAG v14 API v2 SWIM v0 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 2.905638
+Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
+^C
+</code></pre>
+</div>
+
+<h2 id="openocd-debugging-plug-ins">OpenOCD Debugging plug-ins</h2>
+
+<p>The OpenOCD debugging <strong>plug-ins are not included</strong> in these packages, and need to be installed <a href="/plugins/install/">as usual</a>. Just be sure that the <strong>GNU ARM C/C++ OpenOCD Debugging</strong> plug-ins are selected.</p>
+
+<p>
+<img src="/assets/images/2015/install-new-software-updates-openocd.png" alt="Install the OpenOCD plug-ins" />
+</p>
+
+<h2 id="update-openocd-path">Update OpenOCD path</h2>
+
+<p>Right after installing OpenOCD, or updating to a new version, it is necessary to inform Eclipse where the binaries were installed. If OpenOCD was installed in the default location, Eclipse has a mechanism to autodetect the most recent version, but this mechanism sometimes fails, and manual path setting is necessary.</p>
+
+<p>To set the path, first exit Eclipse, and start it again, to allow the autodetect mechanism to give it a try:</p>
+
+<ul>
+  <li>
+    <p>in the <em>Eclipse</em> menu, go to <strong>(Window →) Preferences</strong> → <strong>Run/Debug</strong> → <strong>OpenOCD</strong></p>
+
+    <p><img src="/assets/images/2015/preferences-run-openocd.png" alt="OpenOCD preferences page" /></p>
+  </li>
+  <li>
+    <p>click the <strong>Restore Defaults</strong> button</p>
+  </li>
+</ul>
+
+<p>For more details please refer to the <a href="/debug/openocd/#define-the-openocd-folder-location">OpenOCD plug-in</a> page, where the entire procedure is explained.</p>
+
+
+
+<hr class="page-footer"/>
+<p class="page-footer">Last modified on Sat Feb  4 13:44:35 2017 UTC.</p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/install/" data-layout="button"></div>
+
+
+</section>
+
+<aside id="sidebar">
+
+<h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
+
+<ul>
+  <li><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></li>
+  <li><a href="/blog/2017/04/25/plugins-v3.4.1-201704251808-released/">GNU ARM Eclipse plug-ins v3.4.1-201704251808 released</a></li>
+  <li><a href="/blog/2017/04/19/openocd-v0-10-0-20170418-released/">GNU ARM Eclipse OpenOCD v0.10.0-20170418* released</a></li>
+  <li><a href="/blog/2017/02/25/plugins-v3.3.1-201702251311-released/">GNU ARM Eclipse plug-ins v3.3.1-201702251311 released</a></li>
+  <li><a href="/blog/2017/01/29/plugins-install-issue/">GNU ARM Eclipse plug-ins: Received fatal alert: handshake_failure</a></li>
+</ul>
+
+
+<hr />
+
+<h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
+
+<h4 id="features"><a href="/plugins/features/">Features</a></h4>
+
+<h4 id="downloads"><a href="/downloads/">Downloads</a></h4>
+
+<ul>
+  <li><a href="/downloads/">Overview</a></li>
+  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+</ul>
+
+<h4 id="install"><a href="/install/">Install</a></h4>
+
+<ul>
+  <li><a href="/install/">Overview</a></li>
+  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
+  <li><a href="/debug/install/">Debugging binaries</a>
+    <ul>
+      <li><a href="/debug/install/">Overview</a></li>
+      <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
+      <li><a href="/openocd/install/">OpenOCD install</a></li>
+      <li><a href="/qemu/install/">QEMU install</a></li>
+    </ul>
+  </li>
+  <li><a href="/plugins/install/">Eclipse plug-ins install</a></li>
+</ul>
+
+<h4 id="important">Important</h4>
+
+<ul>
+  <li><a href="/install/">Install order</a></li>
+  <li><a href="/eclipse/workspace/preferences/">Workspace preferences</a></li>
+  <li><a href="/toolchain/path/">Toolchain path</a></li>
+  <li><a href="/eclipse/project/portability/">Project portability</a></li>
+</ul>
+
+<h4 id="tutorials">Tutorials</h4>
+
+<ul>
+  <li><a href="/tutorials/blinky-arm/">Create a Blinky ARM test project</a></li>
+  <li><a href="/tutorials/hello-arm/">Create a Hello ARM test project</a></li>
+</ul>
+
+<h4 id="how-to-use">How to use</h4>
+
+<ul>
+  <li><a href="/plugins/mbs/">The managed build plug-in</a></li>
+  <li><a href="/plugins/packs-manager/">The packs manager (CMSIS)</a></li>
+  <li><a href="/eclipse/project/assign-device/">Assign a device</a></li>
+</ul>
+
+<h4 id="templates"><a href="/templates/">Templates</a></h4>
+
+<ul>
+  <li><a href="/templates/">Overview</a></li>
+  <li><a href="/templates/cortexm/">Cortex-M template</a></li>
+  <li><a href="/templates/stm32f/">STM32Fxx template</a></li>
+  <li><a href="/templates/klxx/">Freescale KLxx templates</a></li>
+</ul>
+
+<h4 id="debugging"><a href="/debug/">Debugging</a></h4>
+
+<ul>
+  <li><a href="/debug/">Overview</a></li>
+  <li><a href="/debug/jlink/">The SEGGER J-Link plug-in</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/qemu/">The QEMU plug-in</a></li>
+  <li><a href="/debug/peripheral-registers/">The peripheral registers view (CMSIS)</a></li>
+</ul>
+
+<h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
+
+<ul>
+  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li><a href="/qemu/install/">QEMU Install</a></li>
+  <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
+  <li><a href="/qemu/options/">Command line options</a></li>
+  <li><a href="/qemu/build-procedure/">How to build</a></li>
+  <li><a href="/qemu/publish-procedure/">How to publish</a></li>
+  <li><a href="/qemu/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
+
+<ul>
+  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li><a href="/openocd/install/">OpenOCD Install</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/openocd/build-procedure/">How to build</a></li>
+  <li><a href="/openocd/publish-procedure/">How to publish</a></li>
+  <li><a href="/openocd/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+</ul>
+
+<h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
+
+<ul>
+  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
+  <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
+  <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
+  <li><a href="/windows-build-tools/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="advanced">Advanced</h4>
+
+<ul>
+  <li><a href="/advanced/headless-builds/">Headless builds</a></li>
+</ul>
+
+<h4 id="support"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+</ul>
+
+<h4 id="developer"><a href="/developer/">Developer</a></h4>
+
+<ul>
+  <li><a href="/developer/">Overview</a></li>
+  <li><a href="/developer/build-procedure/">How to build</a></li>
+  <li><a href="/developer/publish-procedure/">How to publish</a></li>
+  <li><a href="/developer/change-log">Change log</a></li>
+  <li><a href="/developer/contribute/">Contribute</a></li>
+</ul>
+
+<h4 id="hardware">Hardware</h4>
+
+<ul>
+  <li><a href="/developer/j-link-stm32-boards/">J-Link and STM32 boards</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+</ul>
+
+<h4 id="licenses">Licenses</h4>
+
+<ul>
+  <li><a href="/licenses/plug-ins/">Eclipse plug-ins</a></li>
+  <li><a href="/licenses/tools/">Tools</a></li>
+</ul>
+
+<h4 id="finance">Finance</h4>
+
+<ul>
+  <li><a href="/finance/sponsorship/">Sponsorship &amp; donations</a></li>
+</ul>
+
+<h4 id="about"><a href="/about/">About</a></h4>
+
+<hr />
+<p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NXKFN7DJH8DJ6">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="Pay Pal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</aside>
+
+
+</div>
+</div>
+
+<div class="inner clearfix">
+<div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2017 Liviu Ionescu</li>
+  <li>Hosted on GitHub Pages</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>
+    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  </li>
+</ul>
+
+  </div>
+  <a href="http://github.com/gnu-mcu-eclipse" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/support/">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

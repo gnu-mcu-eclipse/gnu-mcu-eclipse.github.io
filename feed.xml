@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GNU MCU Eclipse</title>
+    <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
+    <link>http://gnu-mcu-eclipse.github.io/</link>
+    <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 29 Jun 2017 11:07:20 +0000</pubDate>
+    <lastBuildDate>Thu, 29 Jun 2017 11:07:20 +0000</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>GNU ARM Eclipse plug-ins update sites migrated to Bintray</title>
+        <description>&lt;p&gt;After serving almost 6 million downloaded files, the &lt;strong&gt;Eclipse update sites&lt;/strong&gt; were &lt;strong&gt;migrated&lt;/strong&gt; from the venerable SourceForge &lt;strong&gt;to the new Bintray site&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 02 May 2017 08:15:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/05/02/sourceforge-to-bintray-migration/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/05/02/sourceforge-to-bintray-migration/</guid>
+        
+        <category>featured</category>
+        
+        <category>SourceForge</category>
+        
+        <category>Bintray</category>
+        
+        <category>downloads</category>
+        
+        <category>update</category>
+        
+        
+        <category>news</category>
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU ARM Eclipse plug-ins v3.4.1-201704251808 released</title>
+        <description>&lt;p&gt;Version 3.4.1-201704251808 is a maintenance release, intended to update the plugins to the new CMSIS Packs specs and to also fix some bugs.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 25 Apr 2017 19:08:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/04/25/plugins-v3.4.1-201704251808-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/04/25/plugins-v3.4.1-201704251808-released/</guid>
+        
+        <category>GNU</category>
+        
+        <category>ARM</category>
+        
+        <category>Eclipse</category>
+        
+        <category>CMSIS</category>
+        
+        <category>Packs</category>
+        
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU ARM Eclipse OpenOCD v0.10.0-20170418* released</title>
+        <description>&lt;p&gt;Version v0.10.0-201704182147 is a maintenance release. It updates &lt;code class=&quot;highlighter-rouge&quot;&gt;libhid.a&lt;/code&gt; to the latest available version, 0.8.0-rc1. It includes binaries for Windows, macOS and GNU/Linux.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 19 Apr 2017 04:41:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/04/19/openocd-v0-10-0-20170418-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/04/19/openocd-v0-10-0-20170418-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>openocd</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU ARM Eclipse plug-ins v3.3.1-201702251311 released</title>
+        <description>&lt;p&gt;Version 3.3.1-201702251311 is a new release; the main change is adding support for &lt;strong&gt;GCC 6.x&lt;/strong&gt;, including new &lt;strong&gt;Cortex-M23/M33&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 25 Feb 2017 12:20:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/02/25/plugins-v3.3.1-201702251311-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/02/25/plugins-v3.3.1-201702251311-released/</guid>
+        
+        <category>GNU</category>
+        
+        <category>ARM</category>
+        
+        <category>Eclipse</category>
+        
+        <category>Neon</category>
+        
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU ARM Eclipse plug-ins: Received fatal alert: handshake_failure</title>
+        <description>&lt;p&gt;For historical reasons, the GNU ARM Eclipse update sites for installing new software are hosted by SourceForge, and, up to now, they successfuly handled more than 5.000.000 downloaded files for this project, but in the last months SourceForge experienced several security issues affecting GNU ARM Eclipse plug-ins users.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 29 Jan 2017 08:33:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/01/29/plugins-install-issue/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/01/29/plugins-install-issue/</guid>
+        
+        <category>GNU</category>
+        
+        <category>ARM</category>
+        
+        <category>Eclipse</category>
+        
+        <category>SourceForge</category>
+        
+        <category>Oracle</category>
+        
+        <category>JDK</category>
+        
+        
+        <category>support</category>
+        
+        <category>plugins</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU ARM Eclipse: 5.000.000 SourceForge downloads, January 2017</title>
+        <description>&lt;p&gt;January 2017 came with a nice surprise, the SourceForge statistics for the GNU ARM Eclipse project show &lt;strong&gt;more than 5.000.000 downloads&lt;/strong&gt; in the last 4 years:&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 26 Jan 2017 10:15:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/01/26/sourceforge-5m-downloads/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/01/26/sourceforge-5m-downloads/</guid>
+        
+        <category>featured</category>
+        
+        <category>SourceForge</category>
+        
+        <category>downloads</category>
+        
+        
+        <category>news</category>
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU ARM Eclipse OpenOCD v0.10.0-20170124* released</title>
+        <description>&lt;p&gt;Version v0.10.0-201701241841 is a major stable release. It includes binaries for Windows, macOS and GNU/Linux.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 24 Jan 2017 18:43:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/01/24/openocd-v0-10-0-20170124-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/01/24/openocd-v0-10-0-20170124-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>openocd</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU ARM Eclipse plug-ins v3.2.1-201701141320 released</title>
+        <description>&lt;p&gt;Version 3.2.1-201701141320 is a new release; the main change is adding support for &lt;strong&gt;Eclipse Neon.2&lt;/strong&gt; (CDT 9.2).&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 14 Jan 2017 12:49:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/01/14/plugins-v3.2.1-201701141320-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/01/14/plugins-v3.2.1-201701141320-released/</guid>
+        
+        <category>GNU</category>
+        
+        <category>ARM</category>
+        
+        <category>Eclipse</category>
+        
+        <category>Neon</category>
+        
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU ARM Eclipse QEMU v2.8.0-20161227* released</title>
+        <description>&lt;p&gt;Version 2.8.0-201612271623 is a new release, adding support for active graphical buttons to all supported boards.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 27 Dec 2016 15:29:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2016/12/27/qemu-v2-8-0-20161227-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2016/12/27/qemu-v2-8-0-20161227-released/</guid>
+        
+        <category>emulator</category>
+        
+        <category>macos</category>
+        
+        <category>linux</category>
+        
+        <category>windos</category>
+        
+        <category>graphic</category>
+        
+        <category>button</category>
+        
+        <category>led</category>
+        
+        
+        <category>releases</category>
+        
+        <category>qemu</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU ARM Eclipse plug-ins: sun.security.validator.ValidatorException</title>
+        <description>&lt;p&gt;For historical reasons, the GNU ARM Eclipse update sites for installing new software are hosted by SourceForge, and up to now they successfuly handled more than 4.500.000 downloaded files for this project.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 02 Dec 2016 08:33:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2016/12/02/plugins-install-issue/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2016/12/02/plugins-install-issue/</guid>
+        
+        <category>GNU</category>
+        
+        <category>ARM</category>
+        
+        <category>Eclipse</category>
+        
+        <category>SourceForge</category>
+        
+        <category>Oracle</category>
+        
+        <category>JDK</category>
+        
+        
+        <category>support</category>
+        
+        <category>plugins</category>
+        
+      </item>
+    
+  </channel>
+</rss>
