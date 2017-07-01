@@ -161,7 +161,7 @@
 
 <h2 id="overview">Overview</h2>
 
-<p>In addition to cross build and debugging support, GNU ARM Eclipse plug-ins also provide several C/C++ project templates, that generate ready to run projects.</p>
+<p>In addition to cross build and debugging support, GNU MCU Eclipse plug-ins also provide several C/C++ project templates, that generate ready to run projects.</p>
 
 <p>These projects obviously are not full fledged applications, but provide a good starting point for writing such applications.</p>
 
@@ -173,7 +173,7 @@
 
 <ul>
   <li>in the <em>Eclipse</em> menu, go to <strong>Help</strong> → <strong>Install New Software</strong></li>
-  <li>select <em>Work with:</em> <strong>GNU ARM Eclipse Plug-ins</strong></li>
+  <li>select <em>Work with:</em> <strong>GNU MCU Eclipse Plug-ins</strong></li>
   <li>extend the <strong>GNU ARM C/C++ Cross Development Tools</strong></li>
   <li>be sure the desired <strong>… Project Template</strong> are selected</li>
 </ul>
@@ -184,7 +184,7 @@
 
 <h2 id="c-vs-c">C vs C++</h2>
 
-<p>Most of the GNU ARM Eclipse templates are available for both C and C++ projects. The first difference between the two is the extension of the main source file: it is <strong>main.c</strong> for C projects and <strong>main.cpp</strong> for C++ projects. The content is usually the same, but more elaborate versions are planned to better exemplify the use of C++.</p>
+<p>Most of the GNU MCU Eclipse templates are available for both C and C++ projects. The first difference between the two is the extension of the main source file: it is <strong>main.c</strong> for C projects and <strong>main.cpp</strong> for C++ projects. The content is usually the same, but more elaborate versions are planned to better exemplify the use of C++.</p>
 
 <p>
 <strong>CMSIS</strong>
@@ -192,7 +192,7 @@
 
 <p>After defining a minimum common hardware implementation in the Cortex-M core, to be implemented by all vendors, ARM also defined CMSIS (pronounced sim-sys) as a common software interface, to be used with all Cortex-M implementations. CMSIS stands for <a href="http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php">Cortex Microcontroller Software Interface Standard</a> and consists of several components (CORE, DSP, RTOS, SVD).</p>
 
-<p>The GNU ARM Eclipse plug-in uses the CMSIS-CORE code in all templates, as jointly provided by ARM and each vendor.</p>
+<p>The GNU MCU Eclipse plug-in uses the CMSIS-CORE code in all templates, as jointly provided by ARM and each vendor.</p>
 
 <h2 id="blinky-vs-empty">Blinky vs Empty</h2>
 
@@ -266,7 +266,7 @@
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Tue Apr 19 15:02:54 2016 UTC.</p>
+<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/templates/" data-layout="button"></div>
 
 
@@ -305,7 +305,8 @@
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li><a href="/debug/install/">Debugging binaries</a>
     <ul>
@@ -371,7 +372,7 @@
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -383,7 +384,7 @@
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -394,7 +395,7 @@
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -411,7 +412,7 @@
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -433,10 +434,10 @@
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -478,7 +479,7 @@
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 

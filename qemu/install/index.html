@@ -134,11 +134,11 @@
 </table>
 </div><h2 id="overview">Overview</h2>
 
-<p>The <strong>GNU ARM Eclipse QEMU</strong> is a fork of the public open-source <a href="http://wiki.qemu.org/Main_Page">QEMU</a> project, customised for more support of Cortex-M cores, and a better integration with the <strong>GNU ARM QEMU Debugging</strong> plug-in.</p>
+<p>The <strong>GNU MCU Eclipse QEMU</strong> is a fork of the public open-source <a href="http://wiki.qemu.org/Main_Page">QEMU</a> project, customised for more support of Cortex-M cores, and a better integration with the <strong>GNU ARM QEMU Debugging</strong> plug-in.</p>
 
 <h2 id="download">Download</h2>
 
-<p>All <strong>GNU ARM Eclipse QEMU</strong> versions are available from the <a href="https://github.com/gnuarmeclipse/qemu/releases">GitHub Releases</a> page.</p>
+<p>All <strong>GNU MCU Eclipse QEMU</strong> versions are available from the <a href="https://github.com/gnu-mcu-eclipse/qemu/releases">GitHub Releases</a> page.</p>
 
 <p>
 <img src="/assets/images/2015/github-gae-qemu-release-2-3.png" alt="The QEMU Releases page" />
@@ -146,11 +146,11 @@
 
 <h2 id="install">Install</h2>
 
-<p>The details of installing the <strong>GNU ARM Eclipse QEMU</strong> on various platforms are presented below, for each platform.</p>
+<p>The details of installing the <strong>GNU MCU Eclipse QEMU</strong> on various platforms are presented below, for each platform.</p>
 
 <h3 id="windows">Windows</h3>
 
-<p>For user convenience, the Windows versions of <strong>GNU ARM Eclipse QEMU</strong> are packed as Windows setup wizards. Go to the <a href="https://github.com/gnuarmeclipse/qemu/releases">GitHub Releases</a> page and download the latest version named like:</p>
+<p>For user convenience, the Windows versions of <strong>GNU MCU Eclipse QEMU</strong> are packed as Windows setup wizards. Go to the <a href="https://github.com/gnu-mcu-eclipse/qemu/releases">GitHub Releases</a> page and download the latest version named like:</p>
 
 <ul>
   <li><code class="highlighter-rouge">gnuarmeclipse-qemu-win32-2.2.92-201504041652-dev-setup.exe</code></li>
@@ -174,7 +174,7 @@
 <p>The default install location is:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">C:\Program Files\GNU ARM Eclipse\QEMU\${version}</code></li>
+  <li><code class="highlighter-rouge">C:\Program Files\GNU MCU Eclipse\QEMU\${version}</code></li>
 </ul>
 
 <p>The result is a structure like:</p>
@@ -185,8 +185,8 @@
 
 <p>To check if QEMU starts, use the following command:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>C:<span class="se">\&gt;</span><span class="s2">"</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\G</span><span class="s2">NU ARM Eclipse</span><span class="se">\Q</span><span class="s2">EMU</span><span class="se">\2</span><span class="s2">.2.92-201504041652-dev</span><span class="se">\b</span><span class="s2">in</span><span class="se">\q</span><span class="s2">emu-system-gnuarmeclipse.exe"</span> --version
-GNU ARM Eclipse 32-bits QEMU emulator version 2.2.92
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>C:<span class="se">\&gt;</span><span class="s2">"</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\G</span><span class="s2">NU MCU Eclipse</span><span class="se">\Q</span><span class="s2">EMU</span><span class="se">\2</span><span class="s2">.2.92-201504041652-dev</span><span class="se">\b</span><span class="s2">in</span><span class="se">\q</span><span class="s2">emu-system-gnuarmeclipse.exe"</span> --version
+GNU MCU Eclipse 32-bits QEMU emulator version 2.2.92
 Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Bellard
 </code></pre>
 </div>
@@ -197,7 +197,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
 
 <h3 id="macos">macOS</h3>
 
-<p>For user convenience, the macOS version of GNU ARM Eclipse QEMU is packed in two variants: a simple .tgz archive and a macOS install package. Go to the <a href="https://github.com/gnuarmeclipse/qemu/releases">GitHub Releases</a> page and download the latest version named like:</p>
+<p>For user convenience, the macOS version of GNU MCU Eclipse QEMU is packed in two variants: a simple .tgz archive and a macOS install package. Go to the <a href="https://github.com/gnu-mcu-eclipse/qemu/releases">GitHub Releases</a> page and download the latest version named like:</p>
 
 <ul>
   <li><code class="highlighter-rouge">gnuarmeclipse-qemu-osx-2.8.0-201703012029.tgz</code></li>
@@ -216,7 +216,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
 <p>To check if QEMU starts, use:</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnuarmeclipse/qemu/2.8.0-201703012029-head/bin/qemu-system-gnuarmeclipse --version
-GNU ARM Eclipse 64-bits QEMU emulator version 2.8.0 <span class="o">(</span>v2.8.0-644-ge45e0e1<span class="o">)</span>
+GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0 <span class="o">(</span>v2.8.0-644-ge45e0e1<span class="o">)</span>
 Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2016 Fabrice Bellard and the QEMU Project developers
 </code></pre>
 </div>
@@ -232,7 +232,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2016 Fabrice Be
 <p>The package is installed in:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">/Applications/GNU ARM Eclipse/QEMU/${version}</code></li>
+  <li><code class="highlighter-rouge">/Applications/GNU MCU Eclipse/QEMU/${version}</code></li>
 </ul>
 
 <p>and the result is a folder structure similar to:</p>
@@ -244,14 +244,14 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2016 Fabrice Be
 <p>To check if QEMU starts, use:</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>/Applications/GNU<span class="se">\ </span>ARM<span class="se">\ </span>Eclipse/QEMU/2.2.92-201504041609-dev/bin/qemu-system-gnuarmeclipse --version
-GNU ARM Eclipse 64-bits QEMU emulator version 2.2.92
+GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
 Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Bellard
 </code></pre>
 </div>
 
 <h3 id="gnulinux">GNU/Linux</h3>
 
-<p>The GNU/Linux versions of GNU ARM Eclipse QEMU are packed as TGZ archives. Go to the <a href="https://github.com/gnuarmeclipse/qemu/releases">GitHub Releases</a> page and download the latest version named like:</p>
+<p>The GNU/Linux versions of GNU MCU Eclipse QEMU are packed as TGZ archives. Go to the <a href="https://github.com/gnu-mcu-eclipse/qemu/releases">GitHub Releases</a> page and download the latest version named like:</p>
 
 <ul>
   <li><code class="highlighter-rouge">gnuarmeclipse-qemu-debian64-2.2.92-201504041716-dev.tgz</code></li>
@@ -260,7 +260,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
 
 <p>As the name implies, these are Debian <code class="highlighter-rouge">tar.gz</code> archives, but can be executed on most recent GNU/Linux distributions (they were built on Debian 8 and were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-debian64-</code> file for 64-bits machines and the <code class="highlighter-rouge">-debian32-</code> file for 32-bits machines.</p>
 
-<p>Note: if your distribution already provides ready to run QEMU binaries, they currently cannot be used with the GNU ARM Eclipse plug-ins, because they lack the Cortex-M support; you need to install the <strong>GNU ARM Eclipse QEMU</strong>.</p>
+<p>Note: if your distribution already provides ready to run QEMU binaries, they currently cannot be used with the GNU MCU Eclipse plug-ins, because they lack the Cortex-M support; you need to install the <strong>GNU MCU Eclipse QEMU</strong>.</p>
 
 <p>To install this package, unpack the distribution archive and copy it to <code class="highlighter-rouge">/opt/gnuarmeclipse/qemu/${version}</code></p>
 
@@ -276,7 +276,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
 <p>To check if QEMU starts and is recent, use:</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnuarmeclipse/qemu/2.2.92-201504041716-dev/bin/qemu-system-gnuarmeclipse --version
-GNU ARM Eclipse 64-bits QEMU emulator version 2.2.92
+GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
 Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Bellard
 </code></pre>
 </div>
@@ -315,7 +315,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Mar 24 20:55:41 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/qemu/install/" data-layout="button"></div>
 
 
@@ -354,7 +354,8 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li><a href="/debug/install/">Debugging binaries</a>
     <ul>
@@ -420,7 +421,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -432,7 +433,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -443,7 +444,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -460,7 +461,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -482,10 +483,10 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -527,7 +528,7 @@ Copyright <span class="o">(</span>c<span class="o">)</span> 2003-2008 Fabrice Be
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 

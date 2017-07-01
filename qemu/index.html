@@ -9,10 +9,10 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
 
-  <title>The GNU ARM Eclipse QEMU</title>
+  <title>The GNU MCU Eclipse QEMU</title>
   <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
 
-  <meta property="og:title" content="The GNU ARM Eclipse QEMU" />
+  <meta property="og:title" content="The GNU MCU Eclipse QEMU" />
   <meta property="og:site_name" content="GNU MCU Eclipse" />
 
 
@@ -89,7 +89,7 @@
 <section id="main-content">
 
 
-<h1 class="page-title">The GNU ARM Eclipse QEMU</h1>
+<h1 class="page-title">The GNU MCU Eclipse QEMU</h1>
 
 
 <div id="toc-container">
@@ -108,7 +108,7 @@
 <a href="#why-qemu"><span class="tocnumber">2</span> <span class="toctext">Why QEMU?</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#why-gnu-arm-eclipse-qemu"><span class="tocnumber">3</span> <span class="toctext">Why GNU ARM Eclipse QEMU?</span></a>
+<a href="#why-gnu-mcu-eclipse-qemu"><span class="tocnumber">3</span> <span class="toctext">Why GNU MCU Eclipse QEMU?</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
 <a href="#overview"><span class="tocnumber">4</span> <span class="toctext">Overview</span></a>
@@ -172,7 +172,7 @@
 <ul>
   <li><a href="/qemu/install">QEMU Install</a></li>
   <li><a href="/debug/qemu">Eclipse plug-in</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1">Support</a> (using the GitHub Issues)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1">Support</a> (using the GitHub Issues)</li>
   <li><a href="/qemu/build-procedure">How to build</a> (using Docker containers)</li>
   <li><a href="/qemu/change-log">Change log</a> (<a href="/qemu/change-log/2014">2014</a>)</li>
   <li><a href="/qemu/releases">Releases</a></li>
@@ -180,30 +180,30 @@
 
 <h2 id="why-qemu">Why QEMU?</h2>
 
-<p>Adding emulator support to GNU ARM Eclipse took quite some time to materialise. By the end of 2014 the decision was made to use <a href="http://wiki.qemu.org/Main_Page">QEMU</a>, the long-standing open-source multi-platform emulator. It is mature, it provides a good framework for emulation, it implements a GDB server, it provides support for semihosting, and although it does not intend to accurately simulate processor time behaviour, it does keep a quite accurate track of time when emulating timer interrupts, so it can also be used to emulate applications using RTOS-es.</p>
+<p>Adding emulator support to GNU MCU Eclipse took quite some time to materialise. By the end of 2014 the decision was made to use <a href="http://wiki.qemu.org/Main_Page">QEMU</a>, the long-standing open-source multi-platform emulator. It is mature, it provides a good framework for emulation, it implements a GDB server, it provides support for semihosting, and although it does not intend to accurately simulate processor time behaviour, it does keep a quite accurate track of time when emulating timer interrupts, so it can also be used to emulate applications using RTOS-es.</p>
 
-<h2 id="why-gnu-arm-eclipse-qemu">Why GNU ARM Eclipse QEMU?</h2>
+<h2 id="why-gnu-mcu-eclipse-qemu">Why GNU MCU Eclipse QEMU?</h2>
 
-<p>QEMU is a great project, but its original focus was to emulate boards with large cores, usually application class, able to run Unix/Linux kernels. Support for bare metal Cortex-M based boards was available only for a very limited range of Cortex-M3 cores, so of little use in GNU ARM Eclipse.</p>
+<p>QEMU is a great project, but its original focus was to emulate boards with large cores, usually application class, able to run Unix/Linux kernels. Support for bare metal Cortex-M based boards was available only for a very limited range of Cortex-M3 cores, so of little use in GNU MCU Eclipse.</p>
 
-<p>Even more, support for semihosting in the public QEMU version was broken, and the verbosity required for integration with the QEMU plug-in was missing, so it could not be used with the GNU ARM Eclipse plug-ins.</p>
+<p>Even more, support for semihosting in the public QEMU version was broken, and the verbosity required for integration with the QEMU plug-in was missing, so it could not be used with the GNU MCU Eclipse plug-ins.</p>
 
 <h2 id="overview">Overview</h2>
 
-<p>The <strong>GNU ARM Eclipse QEMU</strong> is a fork of the public open-source <a href="http://wiki.qemu.org/Main_Page">QEMU</a> project, customised for more support of Cortex-M cores, and a better integration with the <strong>GNU ARM QEMU Debugging</strong> plug-in.</p>
+<p>The <strong>GNU MCU Eclipse QEMU</strong> is a fork of the public open-source <a href="http://wiki.qemu.org/Main_Page">QEMU</a> project, customised for more support of Cortex-M cores, and a better integration with the <strong>GNU ARM QEMU Debugging</strong> plug-in.</p>
 
 <h2 id="benefits">Benefits</h2>
 
-<p>The main benefits of using the <strong>GNU ARM Eclipse QEMU</strong> are:</p>
+<p>The main benefits of using the <strong>GNU MCU Eclipse QEMU</strong> are:</p>
 
 <ul>
-  <li>users can run the <strong>blinky</strong> projects generated by the GNU ARM Eclipse templates immediately, without any specific hardware, neither development board nor JTAG programmer; all debugging features, like single stepping, inspecting variables, registers, etc. are supported.</li>
+  <li>users can run the <strong>blinky</strong> projects generated by the GNU MCU Eclipse templates immediately, without any specific hardware, neither development board nor JTAG programmer; all debugging features, like single stepping, inspecting variables, registers, etc. are supported.</li>
   <li>the emulator provides a very convenient platform for running <strong>unit tests</strong>, fully supporting the <strong>semihosting</strong> features required for this.</li>
 </ul>
 
 <h2 id="supported-boards-and-mcus">Supported boards and MCUs</h2>
 
-<p>The boards currently supported by the GNU ARM Eclipse QEMU are:</p>
+<p>The boards currently supported by the GNU MCU Eclipse QEMU are:</p>
 
 <ul>
   <li><strong>Maple</strong> – LeafLab Arduino-style STM32 microcontroller board</li>
@@ -265,7 +265,7 @@
 
 <h3 id="compatibility--peripherals">Compatibility &amp; peripherals</h3>
 
-<p>The GNU ARM Eclipse QEMU maintains a certain degree of compatibility with the original <strong>qemu-system-arm</strong>, but it does not include the large ARM cores, being focused only on Cortex-M cores.</p>
+<p>The GNU MCU Eclipse QEMU maintains a certain degree of compatibility with the original <strong>qemu-system-arm</strong>, but it does not include the large ARM cores, being focused only on Cortex-M cores.</p>
 
 <p>The main compatibility requirement for the emulator was to support all devices addressed during the standard CMSIS initialisations, which generally refer to PLL &amp; clock settings.</p>
 
@@ -273,7 +273,7 @@
 
 <h3 id="systick">SysTick</h3>
 
-<p>The <strong>blinky</strong> projects generated by the GNU ARM Eclipse templates (and all STM32 HAL projects) use the SysTick to measure time, so any realistic emulation should support SysTick. GNU ARM Eclipse QEMU not only does this, but also provides relatively accurate time intervals, and the SysTick exception can be used from simple time measuring to driving a real-time scheduler with a reasonable number of task switches per second (1000 Hz is OK).</p>
+<p>The <strong>blinky</strong> projects generated by the GNU MCU Eclipse templates (and all STM32 HAL projects) use the SysTick to measure time, so any realistic emulation should support SysTick. GNU MCU Eclipse QEMU not only does this, but also provides relatively accurate time intervals, and the SysTick exception can be used from simple time measuring to driving a real-time scheduler with a reasonable number of task switches per second (1000 Hz is OK).</p>
 
 <h2 id="limitations">Limitations</h2>
 
@@ -296,7 +296,7 @@ both located in the doc folder in the install location. The official QEMU site a
 
 <h2 id="download">Download</h2>
 
-<p>All <strong>GNU ARM Eclipse QEMU</strong> versions are available from the GitHub <a href="https://github.com/gnuarmeclipse/qemu/releases">QEMU Releases</a> page. Identify the <strong>Latest release</strong> entry and carefully read the release page.</p>
+<p>All <strong>GNU MCU Eclipse QEMU</strong> versions are available from the GitHub <a href="https://github.com/gnu-mcu-eclipse/qemu/releases">QEMU Releases</a> page. Identify the <strong>Latest release</strong> entry and carefully read the release page.</p>
 
 <p>
 <img src="/assets/images/2015/github-gae-qemu-releases.png" alt="The QEMU Download section" />
@@ -304,7 +304,7 @@ both located in the doc folder in the install location. The official QEMU site a
 
 <h2 id="install">Install</h2>
 
-<p>The details of installing the <strong>GNU ARM Eclipse QEMU</strong> on various platforms are presented in a dedicated <a href="/qemu/install">Install</a> page.</p>
+<p>The details of installing the <strong>GNU MCU Eclipse QEMU</strong> on various platforms are presented in a dedicated <a href="/qemu/install">Install</a> page.</p>
 
 <h2 id="testing">Testing</h2>
 
@@ -318,7 +318,7 @@ both located in the doc folder in the install location. The official QEMU site a
 
 <h2 id="updates">Updates</h2>
 
-<p>As a fork of the public open source project QEMU, it is planned that the <strong>GNU ARM Eclipse QEMU</strong> will follow the releases of QEMU and also follow the GNU ARM Eclipse release schedule, for the specific features.</p>
+<p>As a fork of the public open source project QEMU, it is planned that the <strong>GNU MCU Eclipse QEMU</strong> will follow the releases of QEMU and also follow the GNU MCU Eclipse release schedule, for the specific features.</p>
 
 <h2 id="change-log">Change log</h2>
 
@@ -326,7 +326,7 @@ both located in the doc folder in the install location. The official QEMU site a
 
 <h2 id="build-details">Build details</h2>
 
-<p>For those interested on the procedure used to build these packages, please read the <a href="/qemu/build-procedure">How to build</a> page. However, the ultimate source for details are the build scripts themselves, all available from the <a href="https://github.com/gnuarmeclipse/build-scripts/tree/master/scripts">build-scripts Git</a>.</p>
+<p>For those interested on the procedure used to build these packages, please read the <a href="/qemu/build-procedure">How to build</a> page. However, the ultimate source for details are the build scripts themselves, all available from the <a href="https://github.com/gnu-mcu-eclipse/build-scripts/tree/master/scripts">build-scripts Git</a>.</p>
 
 <h2 id="releases">Releases</h2>
 
@@ -341,7 +341,7 @@ both located in the doc folder in the install location. The official QEMU site a
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Mar 24 21:25:27 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/qemu/" data-layout="button"></div>
 
 
@@ -380,7 +380,8 @@ both located in the doc folder in the install location. The official QEMU site a
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li><a href="/debug/install/">Debugging binaries</a>
     <ul>
@@ -446,7 +447,7 @@ both located in the doc folder in the install location. The official QEMU site a
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -458,7 +459,7 @@ both located in the doc folder in the install location. The official QEMU site a
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -469,7 +470,7 @@ both located in the doc folder in the install location. The official QEMU site a
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -486,7 +487,7 @@ both located in the doc folder in the install location. The official QEMU site a
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -508,10 +509,10 @@ both located in the doc folder in the install location. The official QEMU site a
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -553,7 +554,7 @@ both located in the doc folder in the install location. The official QEMU site a
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 

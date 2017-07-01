@@ -137,7 +137,7 @@
 </table>
 </div><h2 id="overview">Overview</h2>
 
-<p>The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you preffer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm"><strong>GCC ARM Embedded Toolchain</strong></a> (formerly GNU Tools for ARM Embedded Processors); for <strong>GNU/Linux</strong> target applications, the <strong><a href="http://www.linaro.org/downloads/">Linaro</a></strong> family of toolchains provides a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).</p>
+<p>The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm"><strong>GCC ARM Embedded Toolchain</strong></a> (formerly GNU Tools for ARM Embedded Processors); for <strong>GNU/Linux</strong> target applications, the <strong><a href="http://www.linaro.org/downloads/">Linaro</a></strong> family of toolchains provides a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).</p>
 
 <blockquote>
   <p>Important notes: 
@@ -149,8 +149,8 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 <p>Please note the distinction between the <strong>target platform</strong> and the <strong>host/development platform</strong>.</p>
 
 <ul>
-  <li>the target platform defines the environment where the application will be executed, and in general can be either a bare metal (the application sits directly on the hardware and has intimate control of it, usually including a form of scheduler to allow multiple threads to execute pseudo-simultaneously on the same processor), and applications that sit on top of an operating system, usually a distribution of GNU/Linux optimised for embedded environments</li>
-  <li>the host/development platform is the platform where the development tools are executed, usually as cross compilers, and can be, in our case, any platform that supports Eclipse, for example Windows, macOS, GNU/Linux, BSD, etc.</li>
+  <li>the target platform defines the environment where the application will be executed, and in general can be either a bare metal (the application sits directly on the hardware and has intimate control of it), and applications that sit on top of an operating system, usually a distribution of GNU/Linux optimised for embedded environments</li>
+  <li>the host/development platform is the platform where the development tools are executed, usually as cross compilers, and can be, in our case, any platform that supports Eclipse, for example Windows, macOS, GNU/Linux, etc.</li>
 </ul>
 
 <blockquote>
@@ -161,7 +161,7 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 
 <h2 id="download">Download</h2>
 
-<p>Due to portability reasons, the GNU ARM Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded either from the <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads">GNU ARM Embedded Toolchain</a>.</p>
+<p>Due to portability reasons, the GNU MCU Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded from the <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads">GNU ARM Embedded Toolchain</a>.</p>
 
 <p>Versions from <code class="highlighter-rouge">4_7</code> up to <code class="highlighter-rouge">6-2017-q1-update</code> were tested and are known to work properly.</p>
 
@@ -255,7 +255,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 
 <p>The complete toolchain documentation is available in the <code class="highlighter-rouge">.../share/doc/pdf/</code> folder.</p>
 
-<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update</code>, there are no other components stored in system folders.</p>
+<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update</code>, there are no other components stored in any system folders.</p>
 
 <h3 id="macports">MacPorts</h3>
 
@@ -330,7 +330,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 
 <p>The complete toolchain documentation is available in the <code class="highlighter-rouge">.../share/doc/pdf/</code> folder.</p>
 
-<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-6-2017-q1-update</code>, there are no other components stored in system folders.</p>
+<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-6-2017-q1-update</code>, there are no other components stored in any system folders.</p>
 
 <h2 id="toolchain-path">Toolchain path</h2>
 
@@ -342,7 +342,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 
 <p>If there would be only one single version of one single toolchain in existence, then it wouldn’t be a problem, but as soon as you start real world applications, you will face at least the need to keep multiple versions of the same toolchain installed, if not multiple toolchains, and this is when your trouble starts.</p>
 
-<p>The GNU ARM Eclipse plug-in has an advanced <a href="/toolchain/path/">toolchain path management</a> (presented in more detail in the separate page). Use it!</p>
+<p>The GNU MCU Eclipse plug-in has an advanced <a href="/toolchain/path/">toolchain path management</a> (presented in more detail in the separate page). Use it!</p>
 
 <h2 id="gdb-712">GDB 7.12</h2>
 
@@ -353,7 +353,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sun Apr  9 15:45:16 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/install/" data-layout="button"></div>
 
 
@@ -392,7 +392,8 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li><a href="/debug/install/">Debugging binaries</a>
     <ul>
@@ -458,7 +459,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -470,7 +471,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -481,7 +482,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -498,7 +499,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -520,10 +521,10 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -565,7 +566,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 

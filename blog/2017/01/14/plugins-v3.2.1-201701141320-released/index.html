@@ -144,7 +144,7 @@ Posted on January 14, 2017 by Liviu Ionescu.
 </div><p>Version 3.2.1-201701141320 is a new release; the main change is adding support for <strong>Eclipse Neon.2</strong> (CDT 9.2).</p>
 
 <p>
-<a href="https://github.com/gnuarmeclipse/plug-ins/releases/tag/v3.2.1-201701141320">Binary files »</a>
+<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/tag/v3.2.1-201701141320">Binary files »</a>
 </p>
 
 <h2 id="new-features">New features</h2>
@@ -160,11 +160,11 @@ Posted on January 14, 2017 by Liviu Ionescu.
 <h2 id="addressed-bugs">Addressed bugs</h2>
 
 <ul>
-  <li>[<a href="https://github.com/gnuarmeclipse/plug-ins/issues/156">#156</a>] the second update of <strong>Neon (4.6.2)</strong> introduced a new implementation for the GDB consoles, slightly incompatible with previous versions, which prevented the debug sessions to start on Windows; with a little help from the CDT developpers, a solution to create the GDB server consoles was found, such that the debug plug-ins start properly an Neon.2 too;</li>
-  <li>[<a href="https://github.com/gnuarmeclipse/plug-ins/issues/145">#145</a>] in certain conditions, installing an older version of a CMSIS Pack failed; the problem was identified to be related to cache management; fixed;</li>
-  <li>[<a href="https://github.com/gnuarmeclipse/plug-ins/issues/126">#126</a>] in certain conditions, the folders entered in the Eclipse preferences pages <strong>Global Tools Paths</strong> and <strong>Workspace Tools Paths</strong> were not validated; thanks to a patch provided by John Moule, this problem was fixed;</li>
-  <li>[<a href="https://github.com/gnuarmeclipse/plug-ins/issues/125">#125</a>] in certain conditions, the folders entered in the project properties page <strong>Tools Paths</strong> were not validated; thanks to a patch provided by John Moule, this problem was fixed;</li>
-  <li>[<a href="https://github.com/gnuarmeclipse/plug-ins/issues/108">#108</a>] in certain conditions, the <strong>Enable flash breakpoints</strong> button did not function properly; thanks to a patch provided by John Cortell, this problem was fixed;</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/156">#156</a>] the second update of <strong>Neon (4.6.2)</strong> introduced a new implementation for the GDB consoles, slightly incompatible with previous versions, which prevented the debug sessions to start on Windows; with a little help from the CDT developpers, a solution to create the GDB server consoles was found, such that the debug plug-ins start properly an Neon.2 too;</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/145">#145</a>] in certain conditions, installing an older version of a CMSIS Pack failed; the problem was identified to be related to cache management; fixed;</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/126">#126</a>] in certain conditions, the folders entered in the Eclipse preferences pages <strong>Global Tools Paths</strong> and <strong>Workspace Tools Paths</strong> were not validated; thanks to a patch provided by John Moule, this problem was fixed;</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/125">#125</a>] in certain conditions, the folders entered in the project properties page <strong>Tools Paths</strong> were not validated; thanks to a patch provided by John Moule, this problem was fixed;</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/108">#108</a>] in certain conditions, the <strong>Enable flash breakpoints</strong> button did not function properly; thanks to a patch provided by John Cortell, this problem was fixed;</li>
   <li>in certain conditions, refreshing packs with bad PDSC files terminated the refresh process and subsequent packs were not refreshed; a more elaborate error processing was implemented, errors are logged and all packs are now refreshed;</li>
   <li>in certain conditions, the J-Link/OpenOCD,QEMU debugging plug-ins  validated the server fields even when the server was not started; fixed;</li>
 </ul>
@@ -198,7 +198,7 @@ Posted in
 <strong>releases</strong>, <strong>plugins</strong> and tagged
 
 <strong>gnu</strong>, <strong>arm</strong>, <strong>eclipse</strong>, <strong>neon</strong>.
-</br>Last modified on Wed Apr 26 08:26:05 2017 UTC.
+</br>Last modified on Sat Jul  1 21:06:50 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/01/14/plugins-v3.2.1-201701141320-released/" data-layout="button"></div>
 </p>
 
@@ -238,7 +238,8 @@ Posted in
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li><a href="/debug/install/">Debugging binaries</a>
     <ul>
@@ -304,7 +305,7 @@ Posted in
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -316,7 +317,7 @@ Posted in
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -327,7 +328,7 @@ Posted in
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -344,7 +345,7 @@ Posted in
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -366,10 +367,10 @@ Posted in
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -411,7 +412,7 @@ Posted in
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 

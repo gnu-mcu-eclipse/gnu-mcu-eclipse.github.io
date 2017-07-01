@@ -9,10 +9,10 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
 
-  <title>How to install the GNU ARM Eclipse plug-ins?</title>
+  <title>How to install the GNU MCU Eclipse plug-ins?</title>
   <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
 
-  <meta property="og:title" content="How to install the GNU ARM Eclipse plug-ins?" />
+  <meta property="og:title" content="How to install the GNU MCU Eclipse plug-ins?" />
   <meta property="og:site_name" content="GNU MCU Eclipse" />
 
 
@@ -89,7 +89,7 @@
 <section id="main-content">
 
 
-<h1 class="page-title">How to install the GNU ARM Eclipse plug-ins?</h1>
+<h1 class="page-title">How to install the GNU MCU Eclipse plug-ins?</h1>
 
 
 <div id="toc-container">
@@ -203,7 +203,7 @@
 <p>If you want to do it manually, you only need the update site details:</p>
 
 <ul>
-  <li>name: <strong>GNU ARM Eclipse Plug-ins</strong></li>
+  <li>name: <strong>GNU MCU Eclipse Plug-ins</strong></li>
   <li>URL: <code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates</code></li>
 </ul>
 
@@ -313,9 +313,9 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <h3 id="compatibility-issues">Compatibility issues</h3>
 
-<p>Please note that starting with 3.1.x, compatibility with Eclipses previous than 4.4 Luna was no longer possible. If, for any reason, you need a solution for Eclipse Kepler, you can try the GNU ARM Eclipse Plug-in version 2.12, but please keep in mind that this version is no longer maintained.</p>
+<p>Please note that starting with 3.1.x, compatibility with Eclipses previous than 4.4 Luna was no longer possible. If, for any reason, you need a solution for Eclipse Kepler, you can try the GNU MCU Eclipse Plug-in version 2.12, but please keep in mind that this version is no longer maintained.</p>
 
-<p>Similarly, starting with 1.1.x, compatibility with Eclipses previous than 4.3 Kepler was no longer possible. If, for any reasons, you need a solution for older Eclipse versions, you can try the GNU ARM Eclipse Plug-in version 0.5.5, but please keep in mind that this old version is no longer maintained.</p>
+<p>Similarly, starting with 1.1.x, compatibility with Eclipses previous than 4.3 Kepler was no longer possible. If, for any reasons, you need a solution for older Eclipse versions, you can try the GNU MCU Eclipse Plug-in version 0.5.5, but please keep in mind that this old version is no longer maintained.</p>
 
 <h2 id="plug-ins-installupdate">Plug-ins install/update</h2>
 
@@ -333,7 +333,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 </a>
 </p>
 
-<p>This should make Eclipse automatically contact the Marketplace and present a window with all GNU ARM Eclipse features:</p>
+<p>This should make Eclipse automatically contact the Marketplace and present a window with all GNU MCU Eclipse features:</p>
 
 <p>
 <img src="/assets/images/2015/eclipse-marketplace-features.png" alt="Eclipse Marketplace Features" />
@@ -343,11 +343,11 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <ul>
   <li>go to the <em>Eclipse</em> menu → <strong>Help</strong> → <strong>Eclipse Marketplace…</strong></li>
-  <li>in the Find field, enter GNU ARM Eclipse</li>
+  <li>in the Find field, enter GNU MCU Eclipse</li>
   <li>click the Go button</li>
 </ul>
 
-<p>This should identify GNU ARM Eclipse and offer to Install/Update/Uninstall.</p>
+<p>This should identify GNU MCU Eclipse and offer to Install/Update/Uninstall.</p>
 
 <p>
 <img src="/assets/images/2015/eclipse-marketplace-search.png" alt="Eclipse Marketplace Search" />
@@ -355,11 +355,11 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <h3 id="the-eclipse-update-site-way">The Eclipse update site way</h3>
 
-<p>The classical way to install the GNU ARM Eclipse plug-ins is to use the Eclipse standard install/update mechanism: In the <em>Eclipse</em> menu → <strong>Help</strong> → <strong>Install New Software…</strong></p>
+<p>The classical way to install the GNU MCU Eclipse plug-ins is to use the Eclipse standard install/update mechanism: In the <em>Eclipse</em> menu → <strong>Help</strong> → <strong>Install New Software…</strong></p>
 
 <ul>
   <li>in the <em>Install</em> window, click the <strong>Add…</strong> button (on future updates, select the URL in the <strong>Work with:</strong> combo)</li>
-  <li>fill in <em>Name:</em> with <strong>GNU ARM Eclipse Plug-ins</strong></li>
+  <li>fill in <em>Name:</em> with <strong>GNU MCU Eclipse Plug-ins</strong></li>
   <li>fill in <em>Location:</em> with <strong>http://gnuarmeclipse.sourceforge.net/updates</strong></li>
   <li>click the <strong>OK</strong> button</li>
 </ul>
@@ -400,13 +400,13 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <h2 id="off-line-install">Off-line install</h2>
 
-<p>If, for any reasons, you need to install the GNU ARM Eclipse plug-ins on a system without permanent Internet connection, and decide for the alternate way presented above, please be aware that the debug plug-ins require the presence of the <strong>C/C++ GDB Hardware Debugging</strong> plug-in. Usually this plug-in is not included in the standard package, but is present in the <strong>CDT Optional Features</strong> category, packed with the CDT archives available from the <a href="https://www.eclipse.org/cdt/downloads.php">CDT download site</a>. Download the desired archive, add it to your update sites, select the <strong>C/C++ GDB Hardware Debugging</strong> plug-in, restart as usual, and then install the GNU ARM Eclipse plug-ins from the local archive, as above.</p>
+<p>If, for any reasons, you need to install the GNU MCU Eclipse plug-ins on a system without permanent Internet connection, and decide for the alternate way presented above, please be aware that the debug plug-ins require the presence of the <strong>C/C++ GDB Hardware Debugging</strong> plug-in. Usually this plug-in is not included in the standard package, but is present in the <strong>CDT Optional Features</strong> category, packed with the CDT archives available from the <a href="https://www.eclipse.org/cdt/downloads.php">CDT download site</a>. Download the desired archive, add it to your update sites, select the <strong>C/C++ GDB Hardware Debugging</strong> plug-in, restart as usual, and then install the GNU MCU Eclipse plug-ins from the local archive, as above.</p>
 
 <p>
 <img src="/assets/images/2013/10/GDB_Hardware_Install.png" alt="Install the GDB Hardware" />
 </p>
 
-<p>Note: Attempts to install the GNU ARM Eclipse plug-ins off-line without having the <strong>C/C++ GDB Hardware Debugging</strong> installed fails with an error related to installing the <code class="highlighter-rouge">ilg.gnuarmeclipse.debug.gdbjtag.jlink.feature.group</code> and other debugging features.</p>
+<p>Note: Attempts to install the GNU MCU Eclipse plug-ins off-line without having the <strong>C/C++ GDB Hardware Debugging</strong> installed fails with an error related to installing the <code class="highlighter-rouge">ilg.gnuarmeclipse.debug.gdbjtag.jlink.feature.group</code> and other debugging features.</p>
 
 <p>On-line install do not have this problem since the Eclipse automatically downloads the C/C++ GDB Hardware Debugging plug-in from the CDT update site.</p>
 
@@ -447,7 +447,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <p>If this happens, Eclipse remains in a confused state and rarely can recover itself.</p>
 
-<p>The workaround is to remove the GNU ARM Eclipse update site from the available sites, restart Eclipse and add it again.</p>
+<p>The workaround is to remove the GNU MCU Eclipse update site from the available sites, restart Eclipse and add it again.</p>
 
 <p>For this go to <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Install/Update</strong> → <strong>Available Software Sites</strong>:</p>
 
@@ -485,7 +485,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <h2 id="plug-ins-versions">Plug-ins versions</h2>
 
-<p>One of the confusing details of the GNU ARM Eclipse plug-ins versioning system is matching the version from the release announcement (for example <strong>Version 2.6.1-201502281154 released</strong>) with existing plug-ins/features.</p>
+<p>One of the confusing details of the GNU MCU Eclipse plug-ins versioning system is matching the version from the release announcement (for example <strong>Version 2.6.1-201502281154 released</strong>) with existing plug-ins/features.</p>
 
 <p>The short answer is that the announced version refers to the update site, also packed as an archive, and available from SourceForge. The same version is also used for the <code class="highlighter-rouge">ilg.gnuarmeclipse.core</code> plug-in:</p>
 
@@ -536,7 +536,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Mar 25 19:53:50 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/install/" data-layout="button"></div>
 
 
@@ -575,7 +575,8 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li><a href="/debug/install/">Debugging binaries</a>
     <ul>
@@ -641,7 +642,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -653,7 +654,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -664,7 +665,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -681,7 +682,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -703,10 +704,10 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -748,7 +749,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 

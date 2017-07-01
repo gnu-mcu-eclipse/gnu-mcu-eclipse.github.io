@@ -150,27 +150,27 @@
 
 <p><a href="http://openocd.org">OpenOCD</a> is an open source project hosted on <a href="https://sourceforge.net/projects/openocd/">SourceForge</a>, and project maintainers insist that all end-users should compile it from the latest version of the source code available from their repository. There are no special stable branches or tags and there are no clear release dates for future versions. On Windows you need to install MSYS2 and use the appropriate package build procedure.</p>
 
-<p>If you are like us and consider that professional solutions should include stable, hassle free binary distributions, you might be interested to know that a custom packed version of OpenOCD, based on the latest public version (0.9.0) was added to GNU ARM Eclipse, as <strong>GNU ARM Eclipse OpenOCD</strong>. It can be downloaded from the <a href="https://github.com/gnuarmeclipse/openocd/releases">GitHub Releases</a> page.</p>
+<p>If you are like us and consider that professional solutions should include stable, hassle free binary distributions, you might be interested to know that a custom packed version of OpenOCD, based on the latest public version (0.9.0) was added to GNU MCU Eclipse, as <strong>GNU MCU Eclipse OpenOCD</strong>. It can be downloaded from the <a href="https://github.com/gnu-mcu-eclipse/openocd/releases">GitHub Releases</a> page.</p>
 
-<p>So, if you are not interested in building from sources, and appreciate a better integration with the Eclipse plug-in, please feel free to use the GNU ARM Eclipse OpenOCD binaries, and preferably install them in the default locations.</p>
+<p>So, if you are not interested in building from sources, and appreciate a better integration with the Eclipse plug-in, please feel free to use the GNU MCU Eclipse OpenOCD binaries, and preferably install them in the default locations.</p>
 
-<p><strong>Warning:</strong> OpenOCD is a very complex project, capable of working with many JTAG probes, but support for them must be explicitly included at build time, so be sure that support for your JTAG probe was included in the binaries you plan to use. The <strong>GNU ARM Eclipse OpenOCD</strong> includes support for most existing probes.</p>
+<p><strong>Warning:</strong> OpenOCD is a very complex project, capable of working with many JTAG probes, but support for them must be explicitly included at build time, so be sure that support for your JTAG probe was included in the binaries you plan to use. The <strong>GNU MCU Eclipse OpenOCD</strong> includes support for most existing probes.</p>
 
 <h2 id="j-link-conversion">J-Link conversion</h2>
 
-<p>If the only reason to run OpenOCD is to use the ST-LINK on-board programmer on STM Discovery or Nucleo boards, then, thanks to SEGGER, a better solution exists: it is possible to <strong>upgrade the on-board programmer firmware to behave like a J-Link</strong> lite, and then use the GNU ARM Eclipse J-Link plug-in. The conversion is reversible, you can return the board to ST-LINK at any time.</p>
+<p>If the only reason to run OpenOCD is to use the ST-LINK on-board programmer on STM Discovery or Nucleo boards, then, thanks to SEGGER, a better solution exists: it is possible to <strong>upgrade the on-board programmer firmware to behave like a J-Link</strong> lite, and then use the GNU MCU Eclipse J-Link plug-in. The conversion is reversible, you can return the board to ST-LINK at any time.</p>
 
 <p>Please follow the instructions on <a href="https://www.segger.com/jlink-st-link.html">Converting ST-LINK on-board into a J-Link</a>.</p>
 
 <h2 id="documentation">Documentation</h2>
 
-<p>If you are using the GNU ARM Eclipse OpenOCD, the documentation is part of the installed package.</p>
+<p>If you are using the GNU MCU Eclipse OpenOCD, the documentation is part of the installed package.</p>
 
 <p>Slightly older version are also available in the <a href="https://sourceforge.net/projects/openocd/files/openocd/">Files</a> section of the SourceForge project. For version 0.9.0, the manual is <a href="http://sourceforge.net/projects/openocd/files/openocd/0.9.0/openocd.pdf/download">openocd.pdf</a>.</p>
 
 <h2 id="windows">Windows</h2>
 
-<p>For user convenience, the Windows versions of <strong>GNU ARM Eclipse OpenOCD</strong> are packed as Windows setup wizards. Go to the <a href="https://github.com/gnuarmeclipse/openocd/releases">GitHub Releases</a> page and download the latest version named like:</p>
+<p>For user convenience, the Windows versions of <strong>GNU MCU Eclipse OpenOCD</strong> are packed as Windows setup wizards. Go to the <a href="https://github.com/gnu-mcu-eclipse/openocd/releases">GitHub Releases</a> page and download the latest version named like:</p>
 
 <ul>
   <li><code class="highlighter-rouge">gnuarmeclipse-openocd-win64-0.10.0-*-setup.exe</code></li>
@@ -194,7 +194,7 @@
 <p>The default install location is:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">C:\Program Files\GNU ARM Eclipse\OpenOCD\*</code></li>
+  <li><code class="highlighter-rouge">C:\Program Files\GNU MCU Eclipse\OpenOCD\*</code></li>
 </ul>
 
 <p>The result is a structure like:</p>
@@ -205,8 +205,8 @@
 
 <p>To check if OpenOCD starts, use the following command:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>C:&gt;"C:\Program Files\GNU ARM Eclipse\OpenOCD\0.8.0-201503201840\bin\openocd" --version
-GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-03-20-18:40)
+<div class="highlighter-rouge"><pre class="highlight"><code>C:&gt;"C:\Program Files\GNU MCU Eclipse\OpenOCD\0.8.0-201503201840\bin\openocd" --version
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-03-20-18:40)
 </code></pre>
 </div>
 
@@ -238,7 +238,7 @@ GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-03-20-18:40)
 
 <h2 id="macos">macOS</h2>
 
-<p>For user convenience, the macOS version of <strong>GNU ARM Eclipse OpenOCD</strong> is packed as an macOS install package. Go to the <a href="https://github.com/gnuarmeclipse/openocd/releases">GitHub Releases</a> page and download the latest version named like:</p>
+<p>For user convenience, the macOS version of <strong>GNU MCU Eclipse OpenOCD</strong> is packed as an macOS install package. Go to the <a href="https://github.com/gnu-mcu-eclipse/openocd/releases">GitHub Releases</a> page and download the latest version named like:</p>
 
 <ul>
   <li> <code class="highlighter-rouge">gnuarmeclipse-openocd-osx-0.10.0-*.pkg</code></li>
@@ -255,19 +255,19 @@ GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-03-20-18:40)
 <p>The package is installed in:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">/Applications/GNU ARM Eclipse/OpenOCD/*</code></li>
+  <li><code class="highlighter-rouge">/Applications/GNU MCU Eclipse/OpenOCD/*</code></li>
 </ul>
 
 <p>To check if OpenOCD starts, use:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ /Applications/GNU\ ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd --version
-GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-01-18-12:57)
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-01-18-12:57)
 </code></pre>
 </div>
 
 <h2 id="gnulinux">GNU/Linux</h2>
 
-<p>The GNU/Linux versions of <strong>GNU ARM Eclipse OpenOCD</strong> are packed as TGZ archives. Go to the <a href="https://github.com/gnuarmeclipse/openocd/releases">GitHub Releases</a> page and download the latest version named like:</p>
+<p>The GNU/Linux versions of <strong>GNU MCU Eclipse OpenOCD</strong> are packed as TGZ archives. Go to the <a href="https://github.com/gnu-mcu-eclipse/openocd/releases">GitHub Releases</a> page and download the latest version named like:</p>
 
 <ul>
   <li><code class="highlighter-rouge">gnuarmeclipse-openocd-debian64-0.10.0-201501181055.tgz</code></li>
@@ -276,7 +276,7 @@ GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-01-18-12:57)
 
 <p>As the name implies, these are Debian <code class="highlighter-rouge">tar.gz</code> archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-debian64-</code> file for 64-bits machines and the <code class="highlighter-rouge">-debian32-</code> file for 32-bits machines.</p>
 
-<p>In case you use an older distribution and encounter difficulties to run <strong>GNU ARM Eclipse OpenOCD</strong>, you can also try to build it from sources on your machine. As a last resort, if your distribution includes an OpenOCD package, you can install it using the specific tools.</p>
+<p>In case you use an older distribution and encounter difficulties to run <strong>GNU MCU Eclipse OpenOCD</strong>, you can also try to build it from sources on your machine. As a last resort, if your distribution includes an OpenOCD package, you can install it using the specific tools.</p>
 
 <p>To install this package, unpack the archive and copy it to  <code class="highlighter-rouge">/opt/gnuarmeclipse/openocd/${version}</code></p>
 
@@ -291,7 +291,7 @@ $ sudo tar xvf ~/Downloads/gnuarmeclipse-openocd-debian64-0.10.0-201510281129-de
 <p>To check if OpenOCD starts and is recent, use:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ /opt/gnuarmeclipse/openocd/0.10.0-201510281129-dev/bin/openocd --version
-GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.10.0-dev-00141-g09aeb96-dirty (2015-10-28-11:56)
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0-dev-00141-g09aeb96-dirty (2015-10-28-11:56)
 </code></pre>
 </div>
 
@@ -337,7 +337,7 @@ when you have a functional solution post it on the project forum.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ /Applications/GNU\ ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd \
   -f board/stm32f4discovery.cfg
-GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
 Licensed under GNU GPL v2
 For bug reports, read
 
@@ -383,7 +383,7 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Feb  4 13:44:35 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/install/" data-layout="button"></div>
 
 
@@ -422,7 +422,8 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li><a href="/debug/install/">Debugging binaries</a>
     <ul>
@@ -488,7 +489,7 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -500,7 +501,7 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -511,7 +512,7 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -528,7 +529,7 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -550,10 +551,10 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -595,7 +596,7 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 

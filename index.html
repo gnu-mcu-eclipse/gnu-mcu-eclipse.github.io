@@ -96,9 +96,9 @@
 
 <h2 id="the-gnu-mcu-eclipse-plug-ins">The GNU MCU Eclipse plug-ins</h2>
 
-<p>These plug-ins provide Eclipse CDT (C/C++ Development Tooling) extensions for GNU ARM toolchains like <strong>GNU Tools for ARM Embedded Processors</strong>, <strong>Linaro</strong>, etc.</p>
+<p>These plug-ins provide Eclipse CDT (C/C++ Development Tooling) extensions for GNU embedded toolchains like <strong>GNU Tools for ARM Embedded Processors</strong>, <strong>Linaro</strong>, <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> etc.</p>
 
-<p>In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in general to <strong>manage ARM and AArch64 projects</strong> (executables and static/shared libraries, in both 32 and 64-bits versions) with the Eclipse framework (currently tested up to Eclipse 4.6 Neon.3). The plug-ins run on Windows, GNU/Linux and macOS. For more details please visit the <a href="/plugins/features/">Features</a> page.</p>
+<p>In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in general to <strong>manage ARM, AArch64 &amp; RISC-V projects</strong> (executables and static/shared libraries, in both 32 and 64-bits versions) with the Eclipse framework (currently tested up to Eclipse 4.6 Neon.3). The plug-ins run on Windows, GNU/Linux and macOS. For more details please visit the <a href="/plugins/features/">Features</a> page.</p>
 
 <p><img src="/assets/images/2015/intro-new-f4-project.png" alt="Create new STM32F4 C++ project" /></p>
 
@@ -108,14 +108,19 @@
 
 <ul>
   <li>
+    <p><strong>GNU MCU Eclipse RISC-V Embedded GCC</strong></p>
+
+    <p>The <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> subproject is a new distribution of the bare metal version of <a href="https://github.com/riscv/riscv-gcc">RISC-V GCC</a>, maintained by <a href="https://www.sifive.com">SiFive</a>. Binaries for Windows, GNU/Linux and macOS are available.</p>
+  </li>
+  <li>
     <p><strong>GNU MCU Eclipse Windows Build Tools</strong></p>
 
-    <p>The <strong>GNU MCU Eclipse Windows Build Tools</strong> subproject includes the additional tools required on Windows (<strong>make</strong> &amp; <strong>rm</strong>).</p>
+    <p>The <strong>GNU MCU Eclipse Windows Build Tools</strong> subproject includes the additional tools required to perform builds on Windows (<strong>make</strong> &amp; <strong>rm</strong>).</p>
   </li>
   <li>
     <p><strong>GNU MCU Eclipse OpenOCD</strong></p>
 
-    <p>The <strong>GNU MCU Eclipse OpenOCD</strong> subproject is a new distribution of <a href="http://openocd.org/">OpenOCD</a>, customised for a better/more convenient integration with the <strong>GNU ARM OpenOCD Debugging</strong> plug-in. Binaries for Windows, GNU/Linux and macOS are available.</p>
+    <p>The <strong>GNU MCU Eclipse OpenOCD</strong> subproject is a new distribution of <a href="http://openocd.org/">OpenOCD</a>, customised for a better/more convenient integration with the <strong>GNU ARM OpenOCD Debugging</strong> plug-in. It also includes the code from the <a href="https://github.com/riscv/riscv-openocd">RISC-V OpenCOD</a> project, required to support debugging for the RISC-V devices. Binaries for Windows, GNU/Linux and macOS are available.</p>
   </li>
   <li>
     <p><strong>GNU MCU Eclipse QEMU</strong></p>
@@ -132,8 +137,8 @@
 
 <ul>
   <li>the best way to praise us would be to <strong>donate</strong> - if you want to speed up development and future versions to include more and more great features, please consider donnating; any contribution, small or generous, will be highly appreciated;</li>
-  <li>go to the project <a href="https://www.facebook.com/gnuarmeclipse">Facebook page</a> and click the <strong>Like</strong> button, write your opinion on the visitor posts wall, or share any of the web posts and pages with your friends;</li>
-  <li>star the project using the <a href="https://github.com/gnuarmeclipse/plug-ins/stargazers">GitHub Stars</a>;</li>
+  <li>go to the project <a href="https://www.facebook.com/gnu-mcu-eclipse">Facebook page</a> and click the <strong>Like</strong> button, write your opinion on the visitor posts wall, or share any of the web posts and pages with your friends;</li>
+  <li>star the project using the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/stargazers">GitHub Stars</a>;</li>
   <li>write a short review in the main <a href="http://sourceforge.net/projects/gnuarmeclipse">SourceForge Project</a> page.</li>
 </ul>
 
@@ -144,7 +149,7 @@
 
 <hr class="page-footer"/>
 <p class="page-footer">
-Last modified on Thu Jun 29 11:30:14 2017 UTC.
+Last modified on Sat Jul  1 21:24:40 2017 UTC.
 </p>
 
 
@@ -183,7 +188,8 @@ Last modified on Thu Jun 29 11:30:14 2017 UTC.
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li><a href="/debug/install/">Debugging binaries</a>
     <ul>
@@ -249,7 +255,7 @@ Last modified on Thu Jun 29 11:30:14 2017 UTC.
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -261,7 +267,7 @@ Last modified on Thu Jun 29 11:30:14 2017 UTC.
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -272,7 +278,7 @@ Last modified on Thu Jun 29 11:30:14 2017 UTC.
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -289,7 +295,7 @@ Last modified on Thu Jun 29 11:30:14 2017 UTC.
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -311,10 +317,10 @@ Last modified on Thu Jun 29 11:30:14 2017 UTC.
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -356,7 +362,7 @@ Last modified on Thu Jun 29 11:30:14 2017 UTC.
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 

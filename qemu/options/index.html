@@ -10,10 +10,10 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>The GNU ARM Eclipse QEMU command line options</title>
+  <title>The GNU MCU Eclipse QEMU command line options</title>
   <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="The GNU ARM Eclipse QEMU command line options">
+  <meta property="og:title" content="The GNU MCU Eclipse QEMU command line options">
   <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
@@ -90,7 +90,7 @@
 <section id="main-content">
 
 
-<h1 class="page-title">The GNU ARM Eclipse QEMU command line options</h1>
+<h1 class="page-title">The GNU MCU Eclipse QEMU command line options</h1>
 
 
 <div id="toc-container">
@@ -178,7 +178,7 @@
 
 <p>Unfortunately most of these options were designed for the larger versions of QEMU, intended to emulate Linux systems, and are of little use for Cortex-M emulation.</p>
 
-<p>GNU ARM Eclipse QEMU redefines some of these general options, or adds new ones, and generally uses only a small subset of the available options.</p>
+<p>GNU MCU Eclipse QEMU redefines some of these general options, or adds new ones, and generally uses only a small subset of the available options.</p>
 
 <p>The common ones are presented below.</p>
 
@@ -252,7 +252,7 @@
 <code class="highlighter-rouge">nographic</code>
 </h3>
 
-<p>By default, the GNU ARM Eclipse QEMU will try to start in graphical mode, by displaying an image of the emulated board and one or more animated LEDs.</p>
+<p>By default, the GNU MCU Eclipse QEMU will try to start in graphical mode, by displaying an image of the emulated board and one or more animated LEDs.</p>
 
 <p>For running unit tests this is generally not needed, and QEMU can be started with graphics support disabled:</p>
 
@@ -270,7 +270,7 @@
 <p>To make it minimally social, add one <code class="highlighter-rouge">--verbose</code>, and it’ll tell what is going on:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>GNU ARM Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
+<pre class="highlight"><code>GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.
 Command line: 'blinky' (6 bytes).
@@ -289,7 +289,7 @@ Cortex-M4 r0p0 core reset.
 <p>Adding one more <code class="highlighter-rouge">--verbose</code>  will make QEMU extra verbose and it’ll display details about the board hardware configuration and the memory sections loaded by GDB:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>GNU ARM Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
+<pre class="highlight"><code>GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.
 Command line: 'blinky' (6 bytes).
@@ -371,11 +371,11 @@ Cortex-M4 r0p0 core reset.
 
 <h2 id="fully-semihosted-applications">Fully semihosted applications</h2>
 
-<p>When using QEMU for running unit tests, and expecting the exit code to reflect the test result, it is mandatory for the application to be compiled and linked as a <strong>fully semihosted application</strong>, in other words all system calls to be implemented using the semihosting interface. For the projects created by the GNU ARM Eclipse wizards, this is achieved by defining <code class="highlighter-rouge">OS_USE_SEMIHOSTING</code>; outside GNU ARM Eclipse it depends on the libraries used, for example newlib can be configured for semihosting by adding <code class="highlighter-rouge">--specs=rdimon.specs</code> to the linker options.</p>
+<p>When using QEMU for running unit tests, and expecting the exit code to reflect the test result, it is mandatory for the application to be compiled and linked as a <strong>fully semihosted application</strong>, in other words all system calls to be implemented using the semihosting interface. For the projects created by the GNU MCU Eclipse wizards, this is achieved by defining <code class="highlighter-rouge">OS_USE_SEMIHOSTING</code>; outside GNU MCU Eclipse it depends on the libraries used, for example newlib can be configured for semihosting by adding <code class="highlighter-rouge">--specs=rdimon.specs</code> to the linker options.</p>
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Thu Jun 30 15:18:35 2016 UTC.</p>
+<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/qemu/options/" data-layout="button"></div>
 
 
@@ -418,7 +418,8 @@ Cortex-M4 r0p0 core reset.
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li>
 <a href="/debug/install/">Debugging binaries</a>
@@ -487,7 +488,7 @@ Cortex-M4 r0p0 core reset.
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -501,7 +502,7 @@ Cortex-M4 r0p0 core reset.
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -514,7 +515,7 @@ Cortex-M4 r0p0 core reset.
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -531,7 +532,7 @@ Cortex-M4 r0p0 core reset.
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -553,10 +554,10 @@ Cortex-M4 r0p0 core reset.
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -598,7 +599,7 @@ Cortex-M4 r0p0 core reset.
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 

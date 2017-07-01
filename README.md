@@ -1,6 +1,6 @@
-# The GNU ARM Eclipse web site
+# The GNU MCU Eclipse web site
 
-This repository stores the actual, live, GNU ARM Eclipse project web.
+This repository stores the actual, live, GNU MCU Eclipse project web.
 
 ## URL
 

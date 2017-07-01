@@ -242,11 +242,11 @@ $ sudo service docker restart
 
 <h2 id="download-the-build-scripts-repo">Download the build scripts repo</h2>
 
-<p>The build script is available from GitHub and can be <a href="https://github.com/gnuarmeclipse/build-scripts/blob/master/scripts/build-openocd.sh">viewed online</a>.</p>
+<p>The build script is available from GitHub and can be <a href="https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-openocd.sh">viewed online</a>.</p>
 
-<p>To download it, clone the <a href="https://github.com/gnuarmeclipse/build-scripts">gnuarmeclipse/build-scripts</a> Git repo.</p>
+<p>To download it, clone the <a href="https://github.com/gnu-mcu-eclipse/build-scripts">gnuarmeclipse/build-scripts</a> Git repo.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone https://github.com/gnuarmeclipse/build-scripts.git \
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
   ~/Downloads/build-scripts.git
 </code></pre>
 </div>
@@ -352,7 +352,7 @@ drwxr-xr-x  8 ilg  staff      272 May 11 15:13 win64
 
 <h2 id="install-hierarchy">Install hierarchy</h2>
 
-<p>The procedure to install GNU ARM Eclipse OpenOCD is platform specific, but relatively straight forward (a Windows setup, an macOS install or a TGZ archive on GNU/Linux). The setup/install asks no special questions, and the defaults are generally ok for most installations.</p>
+<p>The procedure to install GNU MCU Eclipse OpenOCD is platform specific, but relatively straight forward (a Windows setup, an macOS install or a TGZ archive on GNU/Linux). The setup/install asks no special questions, and the defaults are generally ok for most installations.</p>
 
 <p>After install, this package should create structure like this (only the first two depth levels are shown):</p>
 
@@ -394,7 +394,7 @@ drwxr-xr-x  8 ilg  staff      272 May 11 15:13 win64
 
 <p>To uninstall OpenOCD from a Windows machine, use the <code class="highlighter-rouge">openocd-uninstall.exe</code> program.</p>
 
-<p>On macOS and GNU/Linux, the GNU ARM Eclipse OpenOCD install folder is self-contained and removing it is enough for completely removing the application.</p>
+<p>On macOS and GNU/Linux, the GNU MCU Eclipse OpenOCD install folder is self-contained and removing it is enough for completely removing the application.</p>
 
 <h2 id="test">Test</h2>
 
@@ -403,7 +403,7 @@ drwxr-xr-x  8 ilg  staff      272 May 11 15:13 win64
 <p>For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ /Applications/GNU\ ARM\ Eclipse/OpenOCD/bin/openocd --version
-GNU ARM Eclipse 64-bits Open On-Chip Debugger 0.8.0-00022-g2628c74 (2015-01-15-20:44)
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00022-g2628c74 (2015-01-15-20:44)
 Licensed under GNU GPL v2
 For bug reports, read
     http://openocd.sourceforge.net/doc/doxygen/bugs.html
@@ -412,11 +412,11 @@ For bug reports, read
 
 <h2 id="more-build-details">More build details</h2>
 
-<p>The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the <a href="https://github.com/gnuarmeclipse/build-scripts/blob/master/scripts/build-openocd.sh">script</a>.</p>
+<p>The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the <a href="https://github.com/gnu-mcu-eclipse/build-scripts/blob/master/scripts/build-openocd.sh">script</a>.</p>
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Mar 24 20:57:48 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/build-procedure/" data-layout="button"></div>
 
 
@@ -455,7 +455,8 @@ For bug reports, read
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li><a href="/debug/install/">Debugging binaries</a>
     <ul>
@@ -521,7 +522,7 @@ For bug reports, read
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -533,7 +534,7 @@ For bug reports, read
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -544,7 +545,7 @@ For bug reports, read
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -561,7 +562,7 @@ For bug reports, read
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -583,10 +584,10 @@ For bug reports, read
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -628,7 +629,7 @@ For bug reports, read
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 

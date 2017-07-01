@@ -158,7 +158,7 @@
 <h3 id="prepare-folders">Prepare folders</h3>
 
 <ul>
-  <li>in a place of you choice, create a folder <code class="highlighter-rouge">GNU ARM Eclipse</code>
+  <li>in a place of you choice, create a folder <code class="highlighter-rouge">GNU MCU Eclipse</code>
 </li>
   <li>inside it create two more folders, <code class="highlighter-rouge">Eclipses</code> and <code class="highlighter-rouge">Eclipse Workspaces</code>
 </li>
@@ -174,7 +174,7 @@
   <li>unpack the archive</li>
   <li>rename <code class="highlighter-rouge">Eclipse.app</code> to <code class="highlighter-rouge">Eclipse-com-cdt-46.app</code>
 </li>
-  <li>move it to <code class="highlighter-rouge">.../GNU ARM Eclipse/Eclipses</code>
+  <li>move it to <code class="highlighter-rouge">.../GNU MCU Eclipse/Eclipses</code>
 </li>
   <li>create shortcut to desktop:
     <ul>
@@ -375,8 +375,8 @@
 <p>On Unix systems, the recommended method is using a command line:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ cd .../GNU ARM Eclipse
-$ git clone https://github.com/gnuarmeclipse/plug-ins.git plug-ins.git
+<pre class="highlight"><code>$ cd .../GNU MCU Eclipse
+$ git clone https://github.com/gnu-mcu-eclipse/eclipse-plugins.git plug-ins.git
 </code></pre>
 </div>
 
@@ -400,10 +400,10 @@ $ git clone https://github.com/gnuarmeclipse/plug-ins.git plug-ins.git
   </li>
   <li>Maven Projects
     <ul>
-      <li>Root Directory: <code class="highlighter-rouge">.../GNU ARM Eclipse/plug-ins.git</code>
+      <li>Root Directory: <code class="highlighter-rouge">.../GNU MCU Eclipse/plug-ins.git</code>
 </li>
       <li>keep all selected</li>
-      <li>Add project(s) to working set: GNU ARM Eclipse</li>
+      <li>Add project(s) to working set: GNU MCU Eclipse</li>
       <li>click <strong>Finish</strong>
 If doing this on a fresh Eclipse</li>
       <li>accept m23 settings</li>
@@ -423,7 +423,7 @@ If doing this on a fresh Eclipse</li>
 <ul>
   <li>click the down pointing triangle icon and select <strong>Configure Working Sets</strong>.
     <ul>
-      <li>select GNU ARM Eclipse and click the <strong>Edit…</strong> button</li>
+      <li>select GNU MCU Eclipse and click the <strong>Edit…</strong> button</li>
       <li>click the <strong>Select All</strong> button</li>
       <li>click the <strong>Finish</strong> button</li>
     </ul>
@@ -443,13 +443,13 @@ If doing this on a fresh Eclipse</li>
 <p>Without this option, Maven will issue many warnings, like:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>[INFO] Resolving dependencies of MavenProject: ilg.gnuarmeclipse:ilg.gnuarmeclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU ARM Eclipse/plug-ins.git/ilg.gnuarmeclipse.core/pom.xml
+<pre class="highlight"><code>[INFO] Resolving dependencies of MavenProject: ilg.gnuarmeclipse:ilg.gnuarmeclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnuarmeclipse.core/pom.xml
 [WARNING] The following locally built units have been used to resolve project dependencies:
 [WARNING]   org.eclipse.cdt.make.core/7.3.0.201702180936
 [WARNING]   org.eclipse.cdt/9.2.0.201702180936
 [WARNING]   org.eclipse.cdt.core.native/5.10.0.201702180936
 [WARNING]   org.eclipse.cdt.managedbuilder.core/8.4.0.201702180936
-[INFO] Resolving class path of MavenProject: ilg.gnuarmeclipse:ilg.gnuarmeclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU ARM Eclipse/plug-ins.git/ilg.gnuarmeclipse.core/pom.xml
+[INFO] Resolving class path of MavenProject: ilg.gnuarmeclipse:ilg.gnuarmeclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnuarmeclipse.core/pom.xml
 </code></pre>
 </div>
 
@@ -482,7 +482,7 @@ If doing this on a fresh Eclipse</li>
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Sat Feb 25 15:15:44 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/build-prerequisites/" data-layout="button"></div>
 
 
@@ -525,7 +525,8 @@ If doing this on a fresh Eclipse</li>
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/install/">Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/install-riscv/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li>
 <a href="/debug/install/">Debugging binaries</a>
@@ -594,7 +595,7 @@ If doing this on a fresh Eclipse</li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnuarmeclipse/qemu/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
@@ -608,7 +609,7 @@ If doing this on a fresh Eclipse</li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnuarmeclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
@@ -621,7 +622,7 @@ If doing this on a fresh Eclipse</li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnuarmeclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="advanced">Advanced</h4>
@@ -638,7 +639,7 @@ If doing this on a fresh Eclipse</li>
   <li><a href="/support/faq/">FAQ</a></li>
   <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
   <li><a href="/support/forum/">Forum</a></li>
-  <li><a href="https://github.com/gnuarmeclipse/plug-ins/issues/1/">Report plug-ins issue</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
 </ul>
 
 <h4 id="developer"><a href="/developer/">Developer</a></h4>
@@ -660,10 +661,10 @@ If doing this on a fresh Eclipse</li>
 <h4 id="latest-articles">Latest Articles</h4>
 
 <ul>
-  <li><a href="/articles/arm-com-2015-12-09/">GNU MCU Eclipse now available from Eclipse Marketplace</a></li>
-  <li><a href="/articles/arm-com-2015-11/">GNU MCU Eclipse: Cortex-M7 support added</a></li>
-  <li><a href="/articles/arm-com-2015-09/">GNU MCU Eclipse has a new look and a new home</a></li>
-  <li><a href="/articles/arm-com-2014-07/">GNU MCU Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
 </ul>
 
 <h4 id="licenses">Licenses</h4>
@@ -705,7 +706,7 @@ If doing this on a fresh Eclipse</li>
   <li>Hosted on GitHub Pages</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
-    <div class="fb-like" data-href="https://facebook.com/gnuarmeclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
 </ul>
 
