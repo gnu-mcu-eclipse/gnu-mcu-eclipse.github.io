@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+
+  <title>GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</title>
+  <meta name="description" content="Version v7.1.1-1-20170702-0625 is the first GNU MCU Eclipse RISC-V Embedded GCC release. It includes binaries for Windows, macOS and GNU/Linux.">
+
+  <meta property="og:title" content="GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released" />
+  <meta property="og:site_name" content="GNU MCU Eclipse" />
+
+
+  <meta property="article:published_time" content="2017-07-06">
+
+
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="riscv-none-gcc" />
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201702222107" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201702222107" media="print">
+
+  <link rel="canonical" href="/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/manifest.json">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-16', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<header>
+  <div class="inner">
+    <h1><a href="/">GNU MCU Eclipse</a></h1>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <div id="buttons">
+      <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
+    </div>
+  </div>
+</header>
+
+
+<div id="content-wrapper">
+<div class="inner clearfix">
+
+<div id="site-body">
+<section id="main-content">
+
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">←</a></td>
+    <td><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+
+<h1 class="post-title">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</h1>
+
+
+<p class="post-meta">
+Posted on July 6, 2017 by Liviu Ionescu.
+</p>
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#compliance"><span class="tocnumber">1</span> <span class="toctext">Compliance</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#changes"><span class="tocnumber">2</span> <span class="toctext">Changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#newlib-nano"><span class="tocnumber">3</span> <span class="toctext">newlib-nano</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#documentation"><span class="tocnumber">4</span> <span class="toctext">Documentation</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#binaries"><span class="tocnumber">5</span> <span class="toctext">Binaries</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#checksums"><span class="tocnumber">6</span> <span class="toctext">Checksums</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><p>Version v7.1.1-1-20170702-0625 is the first <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> release. It includes binaries for Windows, macOS and GNU/Linux.</p>
+
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702-0625">Binary files »</a>
+</p>
+
+<h2 id="compliance">Compliance</h2>
+
+<p>This release closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
+
+<p>The current version is based on project <a href="https://github.com/riscv/riscv-gnu-toolchain">riscv/riscv-gnu-toolchain</a>, tag v20170612 (commit <a href="https://github.com/riscv/riscv-gnu-toolchain/tree/f5fae1c27b2365da773816ddcd92f533867f28ec">f5fae1c</a>) from June 12th, which depends on the following:</p>
+
+<ul>
+  <li>the <a href="https://github.com/riscv/riscv-gcc">riscv/riscv-gcc</a> project, commit <a href="https://github.com/riscv/riscv-gcc/commit/16210e6270e200cd4892a90ecef608906be3a130">16210e6</a> from from May 15th, 2017</li>
+  <li>the <a href="https://github.com/riscv/riscv-binutils-gdb">riscv/riscv-binutils-gdb</a> project, commit <a href="https://github.com/riscv/riscv-binutils-gdb/commit/3f21b5c9675db61ef5462442b6a068d4a3da8aaf">3f21b5c</a> from May 5th, 2017</li>
+  <li>the <a href="https://github.com/riscv/riscv-newlib">riscv/riscv-newlib</a> project, commit <a href="https://github.com/riscv/riscv-newlib/commit/ccd8a0a4ffbbc00400892334eaf64a1616302b35">ccd8a0a</a> from May 2nd, 2017</li>
+</ul>
+
+<h2 id="changes">Changes</h2>
+
+<p>Compared to the original RISC-V version, there are no functional changes; the <strong>same architecture and API options</strong> are supported, and the <strong>same combinations of libraries</strong> (derived from newlib) are provided.</p>
+
+<h2 id="newlib-nano">newlib-nano</h2>
+
+<p>The only notable addition is support for <strong>newlib-nano</strong>, using the <code class="highlighter-rouge">--specs=nano.specs</code> option. For better results, this option must be added to both compile and link time (the next release of the GNU MCU Eclipse plug-ins will add support for this).</p>
+
+<p>If no syscalls are needed, <code class="highlighter-rouge">--specs=nosys.specs</code> can be used at link time to provide empty implementations for the POSIX system calls.</p>
+
+<p>The <em>nano</em> versions of the libraries are compiled with <code class="highlighter-rouge">-Os -mcmodel=medlow</code>, while the regular versions are compiled with <code class="highlighter-rouge">-O2 -mcmodel=medany</code>.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>Another addition compared to the SiFive distribution is the presence of the documentation, including the PDF manuals for all tools.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided. For Windows and macOS, separate installable and plain archives are provided. For Windows and GNU/Linux, both 32/64-bits binaries are provided.</p>
+
+<p>Instructions on how to install them are available in the <a href="https://gnu-mcu-eclipse.github.io/toolchain/install-riscv/">How to install the RISC-V toolchain?</a> page.</p>
+
+<p>For better control and repetability, the build scripts use Docker containers; all files required during builds are available as a separate <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> project.</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>a723d8c6870d1808882ea2eaa630a8c60c5cb6bd25dc238091d2f9738298c44a ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
+
+1d36d44221cde15572673019f76727883ce543a7d76d2e10f07ae1a901c07bbb ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian64.tgz
+
+75e71fd37c3749cd892e020a4562c0c10535719e4bb573371d957fb8f16f790e ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.pkg
+
+7940417bc4fbd537b38866914b20375f89417ac0ba90399a2d2c510d0c802497 ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.tgz
+
+b082bedc09af08ca56e218dba87e8e69b3d100042bdbbe3821fd2ef72f33e9f0 ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win32-setup.exe
+
+7fbecec74060be8b4075bed6d2b0f201421614f53dd134ce7ffdd18df79dfce9 ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win32.zip
+
+ ba8fd7b53e2cad2092f39c105c3d4a734546c89f807df8e804dd6db40c23f7fc ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win64-setup.exe
+
+30a37efe5c5bfaf9def8d06249ff471c8d81d37e01d33caf4fff928c8cfe7670 ?
+gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win64.zip
+</code></pre>
+</div>
+
+
+<hr class="post-footer"/>
+<p class="post-footer">
+Posted in
+
+<strong>releases</strong>, <strong>riscv-none-gcc</strong>.
+</br>Last modified on Thu Jul  6 21:53:38 2017 UTC.
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/" data-layout="button"></div>
+</p>
+
+
+</section>
+
+<aside id="sidebar">
+
+<h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
+
+<ul>
+  <li><a href="/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></li>
+  <li><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></li>
+  <li><a href="/blog/2017/04/25/plugins-v3.4.1-201704251808-released/">GNU ARM Eclipse plug-ins v3.4.1-201704251808 released</a></li>
+  <li><a href="/blog/2017/04/19/openocd-v0-10-0-20170418-released/">GNU ARM Eclipse OpenOCD v0.10.0-20170418* released</a></li>
+  <li><a href="/blog/2017/02/25/plugins-v3.3.1-201702251311-released/">GNU ARM Eclipse plug-ins v3.3.1-201702251311 released</a></li>
+</ul>
+
+
+<hr />
+
+<h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
+
+<h4 id="features"><a href="/plugins/features/">Features</a></h4>
+
+<h4 id="downloads"><a href="/downloads/">Downloads</a></h4>
+
+<ul>
+  <li><a href="/downloads/">Overview</a></li>
+  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+</ul>
+
+<h4 id="install"><a href="/install/">Install</a></h4>
+
+<ul>
+  <li><a href="/install/">Overview</a></li>
+  <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
+  <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
+  <li><a href="/debug/install/">Debugging binaries</a>
+    <ul>
+      <li><a href="/debug/install/">Overview</a></li>
+      <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
+      <li><a href="/openocd/install/">OpenOCD install</a></li>
+      <li><a href="/qemu/install/">QEMU install</a></li>
+    </ul>
+  </li>
+  <li><a href="/plugins/install/">Eclipse plug-ins install</a></li>
+</ul>
+
+<h4 id="important">Important</h4>
+
+<ul>
+  <li><a href="/install/">Install order</a></li>
+  <li><a href="/eclipse/workspace/preferences/">Workspace preferences</a></li>
+  <li><a href="/toolchain/path/">Toolchain path</a></li>
+  <li><a href="/eclipse/project/portability/">Project portability</a></li>
+</ul>
+
+<h4 id="tutorials">Tutorials</h4>
+
+<ul>
+  <li><a href="/tutorials/blinky-arm/">Create a Blinky ARM test project</a></li>
+  <li><a href="/tutorials/hello-arm/">Create a Hello ARM test project</a></li>
+</ul>
+
+<h4 id="how-to-use">How to use</h4>
+
+<ul>
+  <li><a href="/plugins/mbs/">The managed build plug-in</a></li>
+  <li><a href="/plugins/packs-manager/">The packs manager (CMSIS)</a></li>
+  <li><a href="/eclipse/project/assign-device/">Assign a device</a></li>
+</ul>
+
+<h4 id="templates"><a href="/templates/">Templates</a></h4>
+
+<ul>
+  <li><a href="/templates/">Overview</a></li>
+  <li><a href="/templates/cortexm/">Cortex-M template</a></li>
+  <li><a href="/templates/stm32f/">STM32Fxx template</a></li>
+  <li><a href="/templates/klxx/">Freescale KLxx templates</a></li>
+</ul>
+
+<h4 id="debugging"><a href="/debug/">Debugging</a></h4>
+
+<ul>
+  <li><a href="/debug/">Overview</a></li>
+  <li><a href="/debug/jlink/">The SEGGER J-Link plug-in</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/qemu/">The QEMU plug-in</a></li>
+  <li><a href="/debug/peripheral-registers/">The peripheral registers view (CMSIS)</a></li>
+</ul>
+
+<h4 id="gnu-mcu-risc-v-gcc"><a href="/toolchain/riscv/">GNU MCU RISC-V GCC</a></h4>
+
+<ul>
+  <li><a href="/toolchain/riscv/">Overview</a></li>
+  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
+  <li><a href="/toolchain/riscv/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/riscv/releases/">Releases</a></li>
+  <li><a href="/toolchain/riscv/support/">Support</a></li>
+</ul>
+
+<h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
+
+<ul>
+  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li><a href="/qemu/install/">QEMU Install</a></li>
+  <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
+  <li><a href="/qemu/options/">Command line options</a></li>
+  <li><a href="/qemu/build-procedure/">How to build</a></li>
+  <li><a href="/qemu/publish-procedure/">How to publish</a></li>
+  <li><a href="/qemu/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
+
+<ul>
+  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li><a href="/openocd/install/">OpenOCD Install</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/openocd/build-procedure/">How to build</a></li>
+  <li><a href="/openocd/publish-procedure/">How to publish</a></li>
+  <li><a href="/openocd/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+</ul>
+
+<h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
+
+<ul>
+  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
+  <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
+  <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
+  <li><a href="/windows-build-tools/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="advanced">Advanced</h4>
+
+<ul>
+  <li><a href="/advanced/headless-builds/">Headless builds</a></li>
+</ul>
+
+<h4 id="support"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
+</ul>
+
+<h4 id="developer"><a href="/developer/">Developer</a></h4>
+
+<ul>
+  <li><a href="/developer/">Overview</a></li>
+  <li><a href="/developer/build-procedure/">How to build</a></li>
+  <li><a href="/developer/publish-procedure/">How to publish</a></li>
+  <li><a href="/developer/change-log">Change log</a></li>
+  <li><a href="/developer/contribute/">Contribute</a></li>
+</ul>
+
+<h4 id="hardware">Hardware</h4>
+
+<ul>
+  <li><a href="/developer/j-link-stm32-boards/">J-Link and STM32 boards</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+</ul>
+
+<h4 id="licenses">Licenses</h4>
+
+<ul>
+  <li><a href="/licenses/plug-ins/">Eclipse plug-ins</a></li>
+  <li><a href="/licenses/tools/">Tools</a></li>
+</ul>
+
+<h4 id="finance">Finance</h4>
+
+<ul>
+  <li><a href="/finance/sponsorship/">Sponsorship &amp; donations</a></li>
+</ul>
+
+<h4 id="about"><a href="/about/">About</a></h4>
+
+<hr />
+<p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NXKFN7DJH8DJ6">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="Pay Pal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</aside>
+
+
+</div>
+</div>
+
+<div class="inner clearfix">
+<div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2017 Liviu Ionescu</li>
+  <li>Hosted on GitHub Pages</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  </li>
+</ul>
+
+  </div>
+  <a href="http://github.com/gnu-mcu-eclipse" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/support/">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

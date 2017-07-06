@@ -5,9 +5,25 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Jul 2017 21:42:33 +0000</pubDate>
-    <lastBuildDate>Mon, 03 Jul 2017 21:42:33 +0000</lastBuildDate>
+    <pubDate>Thu, 06 Jul 2017 22:02:02 +0000</pubDate>
+    <lastBuildDate>Thu, 06 Jul 2017 22:02:02 +0000</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</title>
+        <description>&lt;p&gt;Version v7.1.1-1-20170702-0625 is the first &lt;strong&gt;GNU MCU Eclipse RISC-V Embedded GCC&lt;/strong&gt; release. It includes binaries for Windows, macOS and GNU/Linux.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 06 Jul 2017 19:38:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>riscv-none-gcc</category>
+        
+      </item>
     
       <item>
         <title>GNU ARM Eclipse plug-ins update sites migrated to Bintray</title>
@@ -218,34 +234,6 @@
         <category>releases</category>
         
         <category>qemu</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU ARM Eclipse plug-ins: sun.security.validator.ValidatorException</title>
-        <description>&lt;p&gt;For historical reasons, the GNU ARM Eclipse update sites for installing new software are hosted by SourceForge, and up to now they successfuly handled more than 4.500.000 downloaded files for this project.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 02 Dec 2016 08:33:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2016/12/02/plugins-install-issue/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2016/12/02/plugins-install-issue/</guid>
-        
-        <category>GNU</category>
-        
-        <category>ARM</category>
-        
-        <category>Eclipse</category>
-        
-        <category>SourceForge</category>
-        
-        <category>Oracle</category>
-        
-        <category>JDK</category>
-        
-        
-        <category>support</category>
-        
-        <category>plugins</category>
         
       </item>
     
