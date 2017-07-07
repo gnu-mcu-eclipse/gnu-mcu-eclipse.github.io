@@ -369,6 +369,10 @@
 <lastmod>2016-06-25T14:35:23+00:00</lastmod>
 </url>
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/arch/riscv/arty-reflash/</loc>
+<lastmod>2017-07-07T20:35:04+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/eclipse/project/assign-device/</loc>
 <lastmod>2017-07-01T21:06:50+00:00</lastmod>
 </url>
@@ -525,6 +529,10 @@
 <lastmod>2017-07-01T21:06:50+00:00</lastmod>
 </url>
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/arch/riscv/ftdi-jtag-drivers/</loc>
+<lastmod>2017-07-07T20:35:04+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/advanced/headless-builds/</loc>
 <lastmod>2017-07-01T21:06:50+00:00</lastmod>
 </url>
@@ -599,6 +607,10 @@
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/options/</loc>
 <lastmod>2017-07-01T21:06:50+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/arch/riscv/</loc>
+<lastmod>2017-07-07T20:35:04+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/debug/</loc>
