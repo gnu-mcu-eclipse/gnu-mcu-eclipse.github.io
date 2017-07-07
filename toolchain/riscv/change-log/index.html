@@ -9,18 +9,16 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
 
-  <title>GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</title>
-  <meta name="description" content="Version v7.1.1-1-20170702-0625 is the first GNU MCU Eclipse RISC-V Embedded GCC release. It includes binaries for Windows, macOS and GNU/Linux.">
+  <title>The 2017 RISC-V GCC Change Log</title>
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
 
-  <meta property="og:title" content="GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released" />
+  <meta property="og:title" content="The 2017 RISC-V GCC Change Log" />
   <meta property="og:site_name" content="GNU MCU Eclipse" />
 
 
-  <meta property="article:published_time" content="2017-07-06">
+  <meta property="article:published_time" content="2017-07-07">
 
 
-  <meta property="article:section" content="releases" />
-  <meta property="article:section" content="riscv-none-gcc" />
 
 
 
@@ -31,7 +29,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201702222107" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201702222107" media="print">
 
-  <link rel="canonical" href="/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/">
+  <link rel="canonical" href="/toolchain/riscv/change-log/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
@@ -90,137 +88,30 @@
 <div id="site-body">
 <section id="main-content">
 
-<table id="post-navigation">
-  <tr>
-    <td><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">←</a></td>
-    <td><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+
+<h1 class="page-title">The 2017 RISC-V GCC Change Log</h1>
 
 
-<h1 class="post-title">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</h1>
+<p>Entries in this file are in reverse chronological order.</p>
 
+<h2 id="2017">2017</h2>
 
-<p class="post-meta">
-Posted on July 6, 2017 by Liviu Ionescu.
-</p>
-
-<div id="toc-container">
-<table class="toc" id="toc">
-<tbody>
-<tr>
-<td>
-<div id="toctitle">
-<h2>Contents</h2>
-</div>
-<ul>
-<li class="toc_level-1 toc_section-1">
-<a href="#compliance"><span class="tocnumber">1</span> <span class="toctext">Compliance</span></a>
-</li>
-<li class="toc_level-1 toc_section-2">
-<a href="#changes"><span class="tocnumber">2</span> <span class="toctext">Changes</span></a>
-</li>
-<li class="toc_level-1 toc_section-3">
-<a href="#newlib-nano"><span class="tocnumber">3</span> <span class="toctext">newlib-nano</span></a>
-</li>
-<li class="toc_level-1 toc_section-4">
-<a href="#documentation"><span class="tocnumber">4</span> <span class="toctext">Documentation</span></a>
-</li>
-<li class="toc_level-1 toc_section-5">
-<a href="#binaries"><span class="tocnumber">5</span> <span class="toctext">Binaries</span></a>
-</li>
-<li class="toc_level-1 toc_section-6">
-<a href="#checksums"><span class="tocnumber">6</span> <span class="toctext">Checksums</span></a>
-</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</div><p>Version v7.1.1-1-20170702-0625 is the first <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> release. It includes binaries for Windows, macOS and GNU/Linux.</p>
-
-<p>
-<a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702-0625">Binary files »</a>
-</p>
-
-<h2 id="compliance">Compliance</h2>
-
-<p>This release closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
-
-<p>The current version is based on project <a href="https://github.com/riscv/riscv-gnu-toolchain">riscv/riscv-gnu-toolchain</a>, tag v20170612 (commit <a href="https://github.com/riscv/riscv-gnu-toolchain/tree/f5fae1c27b2365da773816ddcd92f533867f28ec">f5fae1c</a>) from June 12th, which depends on the following:</p>
+<h3 id="2017-07-02">2017-07-02</h3>
 
 <ul>
-  <li>the <a href="https://github.com/riscv/riscv-gcc">riscv/riscv-gcc</a> project, commit <a href="https://github.com/riscv/riscv-gcc/commit/16210e6270e200cd4892a90ecef608906be3a130">16210e6</a> from from May 15th, 2017</li>
-  <li>the <a href="https://github.com/riscv/riscv-binutils-gdb">riscv/riscv-binutils-gdb</a> project, commit <a href="https://github.com/riscv/riscv-binutils-gdb/commit/3f21b5c9675db61ef5462442b6a068d4a3da8aaf">3f21b5c</a> from May 5th, 2017</li>
-  <li>the <a href="https://github.com/riscv/riscv-newlib">riscv/riscv-newlib</a> project, commit <a href="https://github.com/riscv/riscv-newlib/commit/ccd8a0a4ffbbc00400892334eaf64a1616302b35">ccd8a0a</a> from May 2nd, 2017</li>
+  <li>v7.1.1-1-20170702-0625 released</li>
 </ul>
 
-<h2 id="changes">Changes</h2>
+<h3 id="2017-06-27">2017-06-27</h3>
 
-<p>Compared to the original RISC-V version, there are no functional changes; the <strong>same architecture and API options</strong> are supported, and the <strong>same combinations of libraries</strong> (derived from newlib) are provided.</p>
-
-<h2 id="newlib-nano">newlib-nano</h2>
-
-<p>The only notable addition is support for <strong>newlib-nano</strong>, using the <code class="highlighter-rouge">--specs=nano.specs</code> option. For better results, this option must be added to both compile and link time (the next release of the GNU MCU Eclipse plug-ins will add support for this).</p>
-
-<p>If no syscalls are needed, <code class="highlighter-rouge">--specs=nosys.specs</code> can be used at link time to provide empty implementations for the POSIX system calls.</p>
-
-<p>The <em>nano</em> versions of the libraries are compiled with <code class="highlighter-rouge">-Os -mcmodel=medlow</code>, while the regular versions are compiled with <code class="highlighter-rouge">-O2 -mcmodel=medany</code>.</p>
-
-<h2 id="documentation">Documentation</h2>
-
-<p>Another addition compared to the SiFive distribution is the presence of the documentation, including the PDF manuals for all tools.</p>
-
-<h2 id="binaries">Binaries</h2>
-
-<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided. For Windows and macOS, separate installable and plain archives are provided. For Windows and GNU/Linux, both 32/64-bits binaries are provided.</p>
-
-<p>Instructions on how to install them are available in the <a href="https://gnu-mcu-eclipse.github.io/toolchain/install-riscv/">How to install the RISC-V toolchain?</a> page.</p>
-
-<p>For better control and repetability, the build scripts use Docker containers; all files required during builds are available as a separate <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> project.</p>
-
-<h2 id="checksums">Checksums</h2>
-
-<p>The SHA-256 hashes for the files are:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>a723d8c6870d1808882ea2eaa630a8c60c5cb6bd25dc238091d2f9738298c44a ?
-gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
-
-1d36d44221cde15572673019f76727883ce543a7d76d2e10f07ae1a901c07bbb ?
-gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian64.tgz
-
-75e71fd37c3749cd892e020a4562c0c10535719e4bb573371d957fb8f16f790e ?
-gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.pkg
-
-7940417bc4fbd537b38866914b20375f89417ac0ba90399a2d2c510d0c802497 ?
-gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.tgz
-
-b082bedc09af08ca56e218dba87e8e69b3d100042bdbbe3821fd2ef72f33e9f0 ?
-gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win32-setup.exe
-
-7fbecec74060be8b4075bed6d2b0f201421614f53dd134ce7ffdd18df79dfce9 ?
-gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win32.zip
-
- ba8fd7b53e2cad2092f39c105c3d4a734546c89f807df8e804dd6db40c23f7fc ?
-gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win64-setup.exe
-
-30a37efe5c5bfaf9def8d06249ff471c8d81d37e01d33caf4fff928c8cfe7670 ?
-gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win64.zip
-</code></pre>
-</div>
+<ul>
+  <li>add support for <code class="highlighter-rouge">--specs=nano.specs</code>; this translates into a separate build for <code class="highlighter-rouge">newlib</code> with specific configuration options and a separate build of the C++ standard libraries with <code class="highlighter-rouge">-Os</code>.</li>
+</ul>
 
 
-<hr class="post-footer"/>
-<p class="post-footer">
-Posted in
-
-<strong>releases</strong>, <strong>riscv-none-gcc</strong>.
-</br>Last modified on Thu Jul  6 21:53:38 2017 UTC.
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/" data-layout="button"></div>
-</p>
+<hr class="page-footer"/>
+<p class="page-footer">Last modified on Fri Jul  7 15:36:00 2017 UTC.</p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/change-log/" data-layout="button"></div>
 
 
 </section>
@@ -230,7 +121,7 @@ Posted in
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
-  <li><a href="/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></li>
+  <li><a href="/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></li>
   <li><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></li>
   <li><a href="/blog/2017/04/25/plugins-v3.4.1-201704251808-released/">GNU ARM Eclipse plug-ins v3.4.1-201704251808 released</a></li>
   <li><a href="/blog/2017/04/19/openocd-v0-10-0-20170418-released/">GNU ARM Eclipse OpenOCD v0.10.0-20170418* released</a></li>
@@ -321,6 +212,7 @@ Posted in
   <li><a href="/toolchain/riscv/">Overview</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/riscv/publish-procedure/">How to publish</a></li>
   <li><a href="/toolchain/riscv/releases/">Releases</a></li>
   <li><a href="/toolchain/riscv/support/">Support</a></li>
 </ul>

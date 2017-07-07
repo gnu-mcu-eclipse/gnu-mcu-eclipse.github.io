@@ -112,22 +112,30 @@
 </li>
 <li class="toc_level-1 toc_section-4">
 <a href="#windows"><span class="tocnumber">4</span> <span class="toctext">Windows</span></a>
-</li>
-<li class="toc_level-1 toc_section-5">
-<a href="#macos"><span class="tocnumber">5</span> <span class="toctext">macOS</span></a>
 <ul>
+<li class="toc_level-2 toc_section-5">
+<a href="#portable-archive"><span class="tocnumber">4.1</span> <span class="toctext">Portable archive</span></a>
+</li>
 <li class="toc_level-2 toc_section-6">
-<a href="#macports"><span class="tocnumber">5.1</span> <span class="toctext">MacPorts</span></a>
+<a href="#setup"><span class="tocnumber">4.2</span> <span class="toctext">Setup</span></a>
 </li>
 </ul>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#gnulinux"><span class="tocnumber">6</span> <span class="toctext">GNU/Linux</span></a>
+<a href="#macos"><span class="tocnumber">5</span> <span class="toctext">macOS</span></a>
+<ul>
+<li class="toc_level-2 toc_section-8">
+<a href="#macports"><span class="tocnumber">5.1</span> <span class="toctext">MacPorts</span></a>
 </li>
-<li class="toc_level-1 toc_section-8">
-<a href="#toolchain-path"><span class="tocnumber">7</span> <span class="toctext">Toolchain path</span></a>
+</ul>
 </li>
 <li class="toc_level-1 toc_section-9">
+<a href="#gnulinux"><span class="tocnumber">6</span> <span class="toctext">GNU/Linux</span></a>
+</li>
+<li class="toc_level-1 toc_section-10">
+<a href="#toolchain-path"><span class="tocnumber">7</span> <span class="toctext">Toolchain path</span></a>
+</li>
+<li class="toc_level-1 toc_section-11">
 <a href="#gdb-712"><span class="tocnumber">8</span> <span class="toctext">GDB 7.12</span></a>
 </li>
 </ul>
@@ -171,7 +179,48 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 
 <h2 id="windows">Windows</h2>
 
-<p>The following steps can be performed on Windows:</p>
+<p>For Windows, the GNU ARM Embedded Toolchain is released in two versions:</p>
+
+<ul>
+  <li>a portable archive that can be installed in any location</li>
+  <li>a Windows setup that can install the binaries in the standard system location</li>
+</ul>
+
+<p>Our prefered method is to install the binaries in the user home folder, but your mileage may vary.</p>
+
+<h3 id="portable-archive">Portable archive</h3>
+
+<p>To install the archive, the steps are:</p>
+
+<ul>
+  <li>download the latest <code class="highlighter-rouge">gcc-arm-none-eabi-6-2017-q1-update-*-win*.zip</code> file</li>
+  <li>open the archive in the file explorer</li>
+  <li>extract the <code class="highlighter-rouge">GNU MCU Eclipse</code> folder in <code class="highlighter-rouge">%userprofile%\AppData\Local</code></li>
+</ul>
+
+<p>According to Microsoft, this is the recommended location for installing user specific packages, and the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.</p>
+
+<p>In addition, the GNU MCU Eclipse plug-ins also check the following locations (POSIX paths):</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>${user.home}/AppData/Local/GNU Tools ARM Embedded;\
+${user.home}/opt/GNU Tools ARM Embedded;\
+${user.home}/opt/gnu-tools-arm-embedded;\
+${user.home}/local/GNU Tools ARM Embedded;\
+${user.home}/local/gnu-tools-arm-embedded;\
+C:/opt/GNU Tools ARM Embedded;\
+C:/opt/gnu-tools-arm-embedded;\
+C:/Program Files/GNU Tools ARM Embedded;\
+C:/Program Files (x86)/GNU Tools ARM Embedded;\
+D:/Program Files/GNU Tools ARM Embedded;\
+D:/Program Files (x86)/GNU Tools ARM Embedded
+</code></pre>
+</div>
+
+<p>It is recommended to use one of these locations, since the plug-ins will automatically set the default toolchain path to the most recently installed toolchain found in these folders.</p>
+
+<h3 id="setup">Setup</h3>
+
+<p>If you decide to install the toolchain in a system location, you can use the common setup procedure:</p>
 
 <ul>
   <li>download the latest Windows installer <strong>.exe</strong> file (currently <code class="highlighter-rouge">gcc-arm-none-eabi-6-2017-q1-update-win32.exe</code>, about 84 MB)</li>
@@ -188,7 +237,7 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
     <p>accept the destination folder, usually a version specific sub-folder of <code class="highlighter-rouge">C:\Program Files\</code></p>
 
     <blockquote>
-      <p>Note: It is highly recommended to <strong>do not to change the install path</strong>, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (<code class="highlighter-rouge">${user.home}/AppData/Local/Programs/GNU Tools ARM Embedded</code>, <code class="highlighter-rouge">${user.home}/local/GNU Tools ARM Embedded</code>, <code class="highlighter-rouge">${user.home}/local</code>, <code class="highlighter-rouge">C:/Program Files/GNU Tools ARM Embedded</code>, <code class="highlighter-rouge">C:/Program Files (x86)/GNU Tools ARM Embedded</code>, <code class="highlighter-rouge">D:/Program Files/GNU Tools ARM Embedded</code>, <code class="highlighter-rouge">D:/Program Files (x86)/GNU Tools ARM Embedded</code>)</p>
+      <p>Note: It is highly recommended to <strong>do not change the install path</strong></p>
     </blockquote>
 
     <p><img src="/assets/images/2014/01/MS_destination_location.png" alt="The destination folder" /></p>
@@ -203,33 +252,45 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>C:<span class="se">\U</span>sers<span class="se">\L</span>iviu Ionescu<span class="se">\&gt;</span><span class="s2">"C:</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\G</span><span class="s2">NU Tools ARM Embedded</span><span class="se">\4</span><span class="s2">.8 2014q2</span><span class="se">\b</span><span class="s2">in</span><span class="se">\a</span><span class="s2">rm-none-eabi-gcc.exe"</span> --version
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>C:<span class="se">\&gt;</span><span class="s2">"C:</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\G</span><span class="s2">NU Tools ARM Embedded</span><span class="se">\4</span><span class="s2">.8 2014q2</span><span class="se">\b</span><span class="s2">in</span><span class="se">\a</span><span class="s2">rm-none-eabi-gcc.exe"</span> --version
 arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>ARM Embedded Processors<span class="o">)</span> 4.8.4 20140526 <span class="o">(</span>release<span class="o">)</span> <span class="o">[</span>ARM/embedded-4_8-branch revision 211358]
 </code></pre>
     </div>
   </li>
 </ul>
 
-<p>For Windows, the next step would be to install the <a href="/windows-build-tools/">build tools (make &amp; rm)</a>.</p>
-
 <p>The complete toolchain documentation is available in the <code class="highlighter-rouge">...\share\doc\pdf\</code> folder.</p>
 
 <p>If you’ll ever need to remove the toolchain, there is an <strong>uninstall.exe</strong> program available in the toolchain root folder.</p>
 
+<p>For Windows, the next step would be to install the <a href="/windows-build-tools/">build tools (make &amp; rm)</a>.</p>
+
 <h2 id="macos">macOS</h2>
 
-<p>The following steps can be performed on macOS:</p>
+<p>For macOS, the GNU ARM Embedded Toolchain is released as a portable archive, that can be installed in any location.</p>
 
 <ul>
   <li>download the latest macOS install tarball file (currently <code class="highlighter-rouge">gcc-arm-none-eabi-6-2017-q1-update-mac.tar.bz2</code>, about 99 MB)</li>
   <li>locate the file (usually in the <code class="highlighter-rouge">${HOME}/Downloads</code> folder)</li>
-  <li>decide on a location to install the toolchain; the recommended folder is <code class="highlighter-rouge">${HOME}/opt/</code></li>
   <li>
-    <p>unpack the archive in the destination folder</p>
+    <p>decide on a location to install the toolchain; the recommended folder is <code class="highlighter-rouge">${HOME}/opt/</code></p>
 
     <blockquote>
-      <p>Note: It is highly recommended to <strong>do not to change the install path</strong>, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (<code class="highlighter-rouge">${HOME}/Applications/GNU Tools ARM Embedded</code>, <code class="highlighter-rouge">${HOME}/local/GNU Tools ARM Embedded</code>, <code class="highlighter-rouge">${HOME}/local</code>, <code class="highlighter-rouge">${HOME}/opt</code>, <code class="highlighter-rouge">/usr/local</code>).</p>
+      <p>Note: It is highly recommended to use this path, since the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.</p>
     </blockquote>
+
+    <p>In addition, the GNU MCU Eclipse plug-ins also check the following locations:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>${user.home}/opt:\
+${user.home}/local:\
+/usr/local:\
+/opt
+</code></pre>
+    </div>
+  </li>
+  <li>unpack the archive in the destination folder</li>
+  <li>
+    <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update</code></p>
 
     <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>mkdir -p <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
 <span class="gp">$ </span><span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
@@ -238,7 +299,6 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 </code></pre>
     </div>
   </li>
-  <li>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update</code></li>
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
@@ -262,6 +322,8 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 <p>In case you have MacPorts installed, be sure you remove the MacPorts path from the user path (edit the <strong>.profile</strong> in your home folder and comment out the line where <code class="highlighter-rouge">/opt/local/</code> is added in front of the PATH), especially if you installed any toolchain inside MacPorts, since this will be a serious source of confusion.</p>
 
 <h2 id="gnulinux">GNU/Linux</h2>
+
+<p>For GNU/Linux, the GNU ARM Embedded Toolchain is released as a portable archive, that can be installed in any location.</p>
 
 <p>The following steps were performed on <strong>Ubuntu 14.04 LTSx64</strong> (please adjust them accordingly for other distributions):</p>
 
@@ -303,7 +365,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
     <p>unpack the archive in the destination folder</p>
 
     <blockquote>
-      <p>Note: It is highly recommended to <strong>do not to change the install path</strong>, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (<code class="highlighter-rouge">${HOME}/local</code>, <code class="highlighter-rouge">${HOME}/opt</code>, <code class="highlighter-rouge">/usr/local</code>).</p>
+      <p>Note: It is highly recommended to <strong>do not change the install path</strong>, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (<code class="highlighter-rouge">${HOME}/local</code>, <code class="highlighter-rouge">${HOME}/opt</code>, <code class="highlighter-rouge">/usr/local</code>).</p>
     </blockquote>
 
     <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>mkdir -p <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
@@ -348,12 +410,12 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 
 <p>GDB 7.12 distributed with the initial GCC 6.2 (<code class="highlighter-rouge">gcc-arm-none-eabi-6_2-2016q4-20161216</code>) has several issues (crashes on macOS and is incompatible with Neon.2).</p>
 
-<p>The recommendation is to use the update version <code class="highlighter-rouge">gcc-arm-none-eabi-6-2017-q1-update</code>, or later. If you prefer a safer setup, use GCC 5.4 from <code class="highlighter-rouge">gcc-arm-none-eabi-5_4-2016q3-20160926</code>.</p>
+<p>The recommendation is to use the update version <code class="highlighter-rouge">gcc-arm-none-eabi-6-2017-q1-update</code>, or later.</p>
 
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Thu Jul  6 21:53:38 2017 UTC.</p>
+<p class="page-footer">Last modified on Fri Jul  7 16:31:50 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/arm/install/" data-layout="button"></div>
 
 
@@ -364,7 +426,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
-  <li><a href="/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></li>
+  <li><a href="/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></li>
   <li><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></li>
   <li><a href="/blog/2017/04/25/plugins-v3.4.1-201704251808-released/">GNU ARM Eclipse plug-ins v3.4.1-201704251808 released</a></li>
   <li><a href="/blog/2017/04/19/openocd-v0-10-0-20170418-released/">GNU ARM Eclipse OpenOCD v0.10.0-20170418* released</a></li>
@@ -455,6 +517,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
   <li><a href="/toolchain/riscv/">Overview</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/riscv/publish-procedure/">How to publish</a></li>
   <li><a href="/toolchain/riscv/releases/">Releases</a></li>
   <li><a href="/toolchain/riscv/support/">Support</a></li>
 </ul>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/</loc>
-<lastmod>2017-07-06T21:53:38+00:00</lastmod>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/</loc>
+<lastmod>2017-07-07T16:39:59+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/05/02/sourceforge-to-bintray-migration/</loc>
@@ -406,7 +406,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/build-procedure/</loc>
-<lastmod>2017-07-06T22:00:35+00:00</lastmod>
+<lastmod>2017-07-07T16:15:13+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/build-procedure/</loc>
@@ -447,6 +447,10 @@
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/change-log/</loc>
 <lastmod>2016-12-27T16:43:46+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/change-log/</loc>
+<lastmod>2017-07-07T15:36:00+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/change-log/</loc>
@@ -554,11 +558,11 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/arm/install/</loc>
-<lastmod>2017-07-06T21:53:38+00:00</lastmod>
+<lastmod>2017-07-07T16:31:50+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/install/</loc>
-<lastmod>2017-07-06T21:53:38+00:00</lastmod>
+<lastmod>2017-07-07T15:56:26+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/install/</loc>
@@ -618,7 +622,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/</loc>
-<lastmod>2017-07-06T21:53:38+00:00</lastmod>
+<lastmod>2017-07-07T15:36:00+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/</loc>
@@ -699,6 +703,10 @@
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/publish-procedure/</loc>
 <lastmod>2017-07-01T21:24:40+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/publish-procedure/</loc>
+<lastmod>2017-07-07T16:39:59+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/publish-procedure/</loc>

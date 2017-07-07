@@ -153,7 +153,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>The prerequisites are common to all binary builds. Please follow the instructions in the separate <a href="/developer/build-binaries-prerequisites">Prerequisites for building binaries</a> page and return when ready.</p>
+<p>The prerequisites are common to all binary builds. Please follow the instructions in the separate <a href="/developer/build-binaries-prerequisites/">Prerequisites for building binaries</a> page and return when ready.</p>
 
 <h2 id="download-the-build-scripts-repo">Download the build scripts repo</h2>
 
@@ -214,10 +214,26 @@ $ exec bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 </code></pre>
 </div>
 
-<p>Many, many hours later, the output of the build script is a set of 5 files in the <code class="highlighter-rouge">deploy</code> folder:</p>
+<p>Many, many hours later, the output of the build script is a set of 8 files and their SHA signatures in the <code class="highlighter-rouge">deploy</code> folder:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ ls -l deploy
-...
+total 784400
+-rw-r--r--  1 ilg  staff  75678450 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg
+-rw-r--r--  1 ilg  staff       127 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg.sha
+-rw-r--r--  1 ilg  staff  75726500 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.tgz
+-rw-r--r--  1 ilg  staff       127 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.tgz.sha
+-rw-r--r--  1 ilg  staff  52436506 Jul  5 21:39 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-debian64.tgz
+-rw-r--r--  1 ilg  staff       132 Jul  5 21:39 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-debian64.tgz.sha
+-rw-r--r--  1 ilg  staff  27642907 Jul  6 01:25 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64-setup.exe
+-rw-r--r--  1 ilg  staff       135 Jul  6 01:25 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64-setup.exe.sha
+-rw-r--r--  1 ilg  staff  53128553 Jul  6 01:23 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64.zip
+-rw-r--r--  1 ilg  staff       129 Jul  6 01:23 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64.zip.sha
+-rw-r--r--  1 ilg  staff  51726488 Jul  7 04:52 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-debian32.tgz
+-rw-r--r--  1 ilg  staff       132 Jul  7 04:52 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-debian32.tgz.sha
+-rw-r--r--  1 ilg  staff  21844885 Jul  7 06:46 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32-setup.exe
+-rw-r--r--  1 ilg  staff       135 Jul  7 06:46 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32-setup.exe.sha
+-rw-r--r--  1 ilg  staff  43378400 Jul  7 06:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32.zip
+-rw-r--r--  1 ilg  staff       129 Jul  7 06:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32.zip.sha
 </code></pre>
 </div>
 
@@ -230,6 +246,8 @@ $ exec bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 <div class="highlighter-rouge"><pre class="highlight"><code>--win32 --win64 --debian32 --debian64 --osx
 </code></pre>
 </div>
+
+<p>Please note that, due to the specifics of the GCC build process, the Windows build requires the corresponding Debian build, so <code class="highlighter-rouge">--win32</code> alone is equivalent to <code class="highlighter-rouge">--debian32 --win32</code> and <code class="highlighter-rouge">--win64</code> alone is equivalent to <code class="highlighter-rouge">--debian64 --win64</code>.</p>
 
 <h3 id="clean">clean</h3>
 
@@ -348,7 +366,7 @@ riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 201
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Thu Jul  6 22:00:35 2017 UTC.</p>
+<p class="page-footer">Last modified on Fri Jul  7 16:15:13 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/build-procedure/" data-layout="button"></div>
 
 
@@ -359,7 +377,7 @@ riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 201
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
-  <li><a href="/blog/2017/07/06/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></li>
+  <li><a href="/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></li>
   <li><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></li>
   <li><a href="/blog/2017/04/25/plugins-v3.4.1-201704251808-released/">GNU ARM Eclipse plug-ins v3.4.1-201704251808 released</a></li>
   <li><a href="/blog/2017/04/19/openocd-v0-10-0-20170418-released/">GNU ARM Eclipse OpenOCD v0.10.0-20170418* released</a></li>
@@ -450,6 +468,7 @@ riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 201
   <li><a href="/toolchain/riscv/">Overview</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/riscv/publish-procedure/">How to publish</a></li>
   <li><a href="/toolchain/riscv/releases/">Releases</a></li>
   <li><a href="/toolchain/riscv/support/">Support</a></li>
 </ul>
