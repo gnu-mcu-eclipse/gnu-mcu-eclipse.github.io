@@ -151,7 +151,7 @@
 </table>
 </div><h2 id="overview">Overview</h2>
 
-<p>The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://github.com/gnu-mcu-eclipse/riscv-gcc-build"><strong>GNU MCU Eclipse RISC-V Embdedded GCC</strong></a>. This toolchain closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
+<p>The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><strong>GNU MCU Eclipse RISC-V Embdedded GCC</strong></a>. This toolchain closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
 
 <h2 id="target-vs-host-platform">Target vs host platform</h2>
 
@@ -170,7 +170,9 @@
 
 <h2 id="riscv64-unknown-elf-gcc">riscv64-unknown-elf-gcc</h2>
 
-<p>After installing the toolchain, you’ll end up with lots of programs prefixed by <code class="highlighter-rouge">riscv64-unknown-elf-</code>. Don’t be confused by this unfortunate name, the executables are not as <em>unknown</em> as they pretend to be, and the <strong>64</strong> does not mean it runs only on 64-bits platforms, or that it produces 64-bits only executables. Actually, the toolchain produces both 32/64-bits executables, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>, and you <strong>do</strong> have to carefully select the proper file to  match the 32/64-bits platform you are using. (A more apropriate name would have been <code class="highlighter-rouge">riscv-none-gcc</code>, but his is another story.)</p>
+<p>After installing the toolchain, you’ll end up with lots of programs prefixed by <code class="highlighter-rouge">riscv64-unknown-elf-</code>. Don’t be confused by this unfortunate name, the executables are not as <em>unknown</em> as they pretend to be, and the <strong>64</strong> does not mean it runs only on 64-bits platforms, or that it produces 64-bits only binaries. Actually, the toolchain produces both 32/64-bits binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>.</p>
+
+<p>Be sure you <strong>do</strong> select carefully the proper release file to  match the 32/64-bits platform you are using.</p>
 
 <h2 id="download">Download</h2>
 
@@ -453,7 +455,7 @@ share/doc/pdf
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Jul  7 15:56:26 2017 UTC.</p>
+<p class="page-footer">Last modified on Sun Jul  9 15:26:01 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/install/" data-layout="button"></div>
 
 

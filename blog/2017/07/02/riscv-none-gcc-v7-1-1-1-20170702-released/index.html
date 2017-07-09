@@ -158,6 +158,38 @@ Posted on July 2, 2017 by Liviu Ionescu.
   <li>the <a href="https://github.com/riscv/riscv-newlib">riscv/riscv-newlib</a> project, commit <a href="https://github.com/riscv/riscv-newlib/commit/ccd8a0a4ffbbc00400892334eaf64a1616302b35">ccd8a0a</a> from May 2nd, 2017</li>
 </ul>
 
+<p>The supported architectures are:</p>
+
+<ul>
+  <li>rv32i[m][a][f[d]]</li>
+  <li>rv32g</li>
+  <li>rv64i[m][a][f[d]]</li>
+  <li>rv64g</li>
+</ul>
+
+<p>The supported ABIs are:</p>
+
+<ul>
+  <li>ilp32 (32-bits, soft-float)</li>
+  <li>ilp32f (32-bits with single-precision in registers and double in memory, niche use only)</li>
+  <li>ilp32d (32-bits, hard-float)</li>
+  <li>lp64 (64-bits long and pointers, soft-float)</li>
+  <li>lp64f (64-bits long and pointers, with single-precision in registers and double in memory, niche use only)</li>
+  <li>lp64d (64-bits long and pointers, hard-float).</li>
+</ul>
+
+<p>The supported libraries are:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>march=rv32i/mabi=ilp32
+march=rv32im/mabi=ilp32
+march=rv32iac/mabi=ilp32
+march=rv32imac/mabi=ilp32
+march=rv32imafc/mabi=ilp32f
+march=rv64imac/mabi=lp64
+march=rv64imafdc/mabi=lp64d
+</code></pre>
+</div>
+
 <h2 id="changes">Changes</h2>
 
 <p>Compared to the original RISC-V version, there are no functional changes; the <strong>same architecture and API options</strong> are supported, and the <strong>same combinations of libraries</strong> (derived from newlib) are provided.</p>
@@ -218,7 +250,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>riscv-none-gcc</strong>.
-</br>Last modified on Fri Jul  7 16:39:59 2017 UTC.
+</br>Last modified on Sun Jul  9 15:23:45 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/" data-layout="button"></div>
 </p>
 

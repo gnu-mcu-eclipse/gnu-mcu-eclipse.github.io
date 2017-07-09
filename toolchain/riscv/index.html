@@ -92,20 +92,168 @@
 <h1 class="page-title">The RISC-V Embedded GCC</h1>
 
 
-<p>TBD</p>
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#riscv64-unknown-elf-gcc"><span class="tocnumber">2</span> <span class="toctext">riscv64-unknown-elf-gcc</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#-march-and--mabi"><span class="tocnumber">3</span> <span class="toctext">-march and -mabi</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#multiple-libraries"><span class="tocnumber">4</span> <span class="toctext">Multiple libraries</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#more-user-pages"><span class="tocnumber">5</span> <span class="toctext">More user pages</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#more-developer-pages"><span class="tocnumber">6</span> <span class="toctext">More developer pages</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><h2 id="overview">Overview</h2>
+
+<p>The <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><strong>GNU MCU Eclipse RISC-V Embdedded GCC</strong></a> is an elaborated binary distribution that closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
+
+<h2 id="riscv64-unknown-elf-gcc">riscv64-unknown-elf-gcc</h2>
+
+<p>With lots of architectures and systems supported, GCC recommends prefixing the binaries with a unique tuple:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;arch&gt;-&lt;vendor&gt;-&lt;os&gt;-&lt;libc/abi&gt;-
+</code></pre>
+</div>
+
+<p>The current RISC-V prefix for the bare metal toolchain is <code class="highlighter-rouge">riscv64-unknown-elf-</code>.</p>
+
+<p>Well, don’t be confused by this unfortunate name. The <strong>64</strong> attached to the architecture does not mean that the toolchain runs  on 64-bits platforms only. It does not mean either that the compiler produces 64-bits RISC-V binaries. Actually, the compiler produces both 32/64-bits binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>.</p>
+
+<p>The <strong>unknown</strong> part of the tuple also does not bring any useful information. If it referes to the vendor, it could have been easily skipped. If it refers to the OS, or to the lack of it, being a bare metal toolchain, <strong>none</strong> would have been a shorter and more usual name.</p>
+
+<p>So, giving away the confusing parts, a more apropriate prefix would have been:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>riscv-none-newlib-
+</code></pre>
+</div>
+
+<p>or even the shorter:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>risc-none-
+</code></pre>
+</div>
+
+<p>Hopefully, someday RISC-V will revise the toolchain naming scheme, and correct this confusion.</p>
+
+<h2 id="-march-and--mabi"><code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code></h2>
+
+<p>The RISC-V design is not a single architecture, but a family of architectures, with optional components, identified by letters.</p>
+
+<p>RISC-V ISA strings begin with either RV32I, RV32E, RV64I, or RV128I indicating the supported address space size in bits for the base integer ISA.</p>
+
+<p>Standard General-Purpose ISA</p>
+
+<ul>
+  <li>I - Integer</li>
+  <li>M - Integer Multiplication and Division</li>
+  <li>A - Atomics</li>
+  <li>F - Single-Precision Floating-Point</li>
+  <li>D - Double-Precision Floating-Point</li>
+  <li>G - General, a shortcut to IMAFD</li>
+</ul>
+
+<p>Standard User-Level Extensions</p>
+
+<ul>
+  <li>Q - Quad-Precision Floating-Point</li>
+  <li>L - Decimal Floating-Point</li>
+  <li>C - 16-bit Compressed Instructions</li>
+  <li>B - Bit Manipulation</li>
+  <li>J - Dynamic Languages</li>
+  <li>T - Transactional Memory</li>
+  <li>P - Packed-SIMD Extensions</li>
+  <li>V - Vector Extensions</li>
+  <li>N - User-Level Interrupts</li>
+</ul>
+
+<p>For more details, please see <a href="https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf">The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document Version 2.2</a>.</p>
+
+<p>Not all these extendsions are yet defined or implemented by the compiler; the <code class="highlighter-rouge">-march</code> supports only:</p>
+
+<ul>
+  <li>rv32i[m][a][f[d]]</li>
+  <li>rv32g</li>
+  <li>rv64i[m][a][f[d]]</li>
+  <li>rv64g</li>
+</ul>
+
+<p>The RISC-V supported application binary interfaces (<code class="highlighter-rouge">-mabi</code>) are:</p>
+
+<ul>
+  <li>ilp32 (32-bits, soft-float)</li>
+  <li>ilp32f (32-bits with single-precision in registers and double in memory, niche use only)</li>
+  <li>ilp32d (32-bits, hard-float)</li>
+  <li>lp64 (64-bits long and pointers, soft-float)</li>
+  <li>lp64f (64-bits long and pointers, with single-precision in registers and double in memory, niche use only)</li>
+  <li>lp64d (64-bits long and pointers, hard-float).</li>
+</ul>
+
+<p>The GNU MCU Eclipse RISC-V plug-in supports all current options, and reserves some for near future use.</p>
+
+<p>
+<img src="/assets/images/2017/riscv-tool-settings.png" alt="RISC-V plug-in tool settings" />
+</p>
+
+<p>However, please be aware that not all possible combinations have libraries available.</p>
+
+<h2 id="multiple-libraries">Multiple libraries</h2>
+
+<p>Due to the large number of architectures and ABIs defined for RISC-V, not all possible combinations are actually available.</p>
+
+<p>The current list is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>march=rv32i/mabi=ilp32
+march=rv32im/mabi=ilp32
+march=rv32iac/mabi=ilp32
+march=rv32imac/mabi=ilp32
+march=rv32imafc/mabi=ilp32f
+march=rv64imac/mabi=lp64
+march=rv64imafdc/mabi=lp64d
+</code></pre>
+</div>
+
+<p>(the actual list is defined in this <a href="https://github.com/riscv/riscv-gcc/blob/riscv-next/gcc/config/riscv/t-elf-multilib">file</a>).</p>
+
+<h2 id="more-user-pages">More user pages</h2>
 
 <ul>
   <li><a href="/toolchain/riscv/install/">How to install?</a></li>
+  <li><a href="/toolchain/riscv/support/">Support</a></li>
+</ul>
+
+<h2 id="more-developer-pages">More developer pages</h2>
+
+<ul>
   <li><a href="/toolchain/riscv/build-procedure/">How to build?</a></li>
   <li><a href="/toolchain/riscv/publish-procedure/">How to publish?</a></li>
   <li><a href="/toolchain/riscv/releases/">Releases</a></li>
   <li><a href="/toolchain/riscv/change-log/">Change log</a></li>
-  <li><a href="/toolchain/riscv/support/">Support</a></li>
 </ul>
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Jul  7 15:36:00 2017 UTC.</p>
+<p class="page-footer">Last modified on Sun Jul  9 15:25:06 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/" data-layout="button"></div>
 
 
