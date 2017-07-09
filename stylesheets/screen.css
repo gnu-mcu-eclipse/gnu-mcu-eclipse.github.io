@@ -1249,6 +1249,10 @@ table#post-navigation td:nth-child(4){
   padding-right: 5px;
 }
 
+.right-align-image {
+  float: right;
+}
+
 .site-footer {
   position: relative;
   margin-top: 25px;
