@@ -2,38 +2,44 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
 
-  <title>About</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
+  <title>GNU MCU Eclipse plug-ins v4.x update sites URLs migrated to Netlify</title>
+  <meta name="description" content="Starting with Eclipse plug-ins v4.x, the Eclipse update sites URLs were migrated from the venerable SourceForge to the new Netlify site.">
 
-  <meta property="og:title" content="About">
-  <meta property="og:site_name" content="GNU MCU Eclipse">
-
-
-  <meta property="article:published_time" content="2015-09-10">
+  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.x update sites URLs migrated to Netlify" />
+  <meta property="og:site_name" content="GNU MCU Eclipse" />
 
 
+  <meta property="article:published_time" content="2017-07-09">
 
 
+  <meta property="article:section" content="news" />
+  <meta property="article:section" content="project" />
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta property="article:tag" content="featured" />
+  <meta property="article:tag" content="sourceforge" />
+  <meta property="article:tag" content="netlify" />
+  <meta property="article:tag" content="downloads" />
+  <meta property="article:tag" content="update" />
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201702222107" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201702222107" media="print">
 
-  <link rel="canonical" href="/about/">
+  <link rel="canonical" href="/blog/2017/07/09/sourceforge-to-netlify-migration/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -75,7 +81,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -89,9 +95,23 @@
 <div id="site-body">
 <section id="main-content">
 
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/">←</a></td>
+    <td><a href="/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-<h1 class="page-title">About</h1>
 
+<h1 class="post-title">GNU MCU Eclipse plug-ins v4.x update sites URLs migrated to Netlify</h1>
+
+
+<p class="post-meta">
+Posted on July 9, 2017 by Liviu Ionescu.
+</p>
 
 <div id="toc-container">
 <table class="toc" id="toc">
@@ -103,102 +123,86 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#the-project"><span class="tocnumber">1</span> <span class="toctext">The project</span></a>
-<ul>
-<li class="toc_level-2 toc_section-2">
-<a href="#first-edition"><span class="tocnumber">1.1</span> <span class="toctext">First edition</span></a>
+<a href="#rationale"><span class="tocnumber">1</span> <span class="toctext">Rationale</span></a>
 </li>
-<li class="toc_level-2 toc_section-3">
-<a href="#second-edition"><span class="tocnumber">1.2</span> <span class="toctext">Second Edition</span></a>
+<li class="toc_level-1 toc_section-2">
+<a href="#github"><span class="tocnumber">2</span> <span class="toctext">GitHub</span></a>
 </li>
-<li class="toc_level-2 toc_section-4">
-<a href="#migration-to-github"><span class="tocnumber">1.3</span> <span class="toctext">Migration to GitHub</span></a>
+<li class="toc_level-1 toc_section-3">
+<a href="#bintray-servers"><span class="tocnumber">3</span> <span class="toctext">Bintray servers</span></a>
 </li>
-</ul>
+<li class="toc_level-1 toc_section-4">
+<a href="#netlify-redirects"><span class="tocnumber">4</span> <span class="toctext">Netlify redirects</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#pad-file"><span class="tocnumber">2</span> <span class="toctext">PAD file</span></a>
-</li>
-<li class="toc_level-1 toc_section-6">
-<a href="#credits"><span class="tocnumber">3</span> <span class="toctext">Credits</span></a>
-</li>
-<li class="toc_level-1 toc_section-7">
-<a href="#this-site"><span class="tocnumber">4</span> <span class="toctext">This site</span></a>
-</li>
-<li class="toc_level-1 toc_section-8">
-<a href="#the-author"><span class="tocnumber">5</span> <span class="toctext">The author</span></a>
+<a href="#expected-issues"><span class="tocnumber">5</span> <span class="toctext">Expected issues</span></a>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="the-project">The project</h2>
+</div><p>Starting with Eclipse plug-ins v4.x, the <strong>Eclipse update sites URLs</strong> were <strong>migrated</strong> from the venerable SourceForge <strong>to the new Netlify site</strong>.</p>
 
-<p>The <strong>GNU ARM Eclipse plug-in</strong> project was registered on <a href="http://sourceforge.net/projects/gnuarmeclipse/">SourceForge</a> in November 2006, and initially included an XML only plug-in definition; although functional, it was somehow limited.</p>
+<p>The project currently has no more operational dependencies on SourceForge.</p>
 
-<h3 id="first-edition">First edition</h3>
+<p><a href="https://www.netlify.com">Netlify</a> is a new (open source friendly) web hosting profider, with a very convenient way of managing and updating sites.</p>
 
-<p>The first fully functional edition of the plug-in (version 0.5.3) was announced in March 2009, when the plug-in was practically recreated, functionality was extended and more toolchains were supported. The Eclipse specifics, like adding a feature project and an update site project were also added.</p>
+<h2 id="rationale">Rationale</h2>
 
-<h3 id="second-edition">Second Edition</h3>
+<p>After several security incidents, by the end of 2016, SourceForge decided to change the security certificates and to mandate the use of HTTPS. This resulted in a large number of complains from users behind firewalls, who were no longer able to access the Eclipse update sites, and had to manually download archives and install locally. Although not at all the fault of GNU MCU Eclipse (the root of the problem seems to be in the Oracle Java libraries), the SourceForge desire to use stronger encryption was in the end perceived as a bad user experience by GNU MCU Eclipse users, a situation that we cannot accept.</p>
 
-<p>In September 2013, based on the Eclipse CDT and the new developments in ARM Toolchains, work on the second edition of the plug-in started, involving a major rewrite, inspired by the CDT Cross Compile plug-in.</p>
+<h2 id="github">GitHub</h2>
 
-<p>In December 2013, new plug-ins were added to the project: the <strong>STM32Fx templates</strong> and an experimental version of the SEGGER J-Link hardware debugging plug-in.</p>
+<p>The main development site used by the project is and will remain GitHub, but since GitHub Releases currently do not support subfolders, publishing the Eclipse update sites on GitHub Releases is not an option. Publishing on GitHub Pages or even directly as a Git project might have been technically possible, but neither are intended for high volume downloads and do not provide any analytics.</p>
 
-<p>At the same time, since the project is no longer about a single plug-in, but a family of plug-ins, the SourceForge project name was changed to plural: <strong>GNU ARM Eclipse plug-ins</strong>.</p>
+<h2 id="bintray-servers">Bintray servers</h2>
 
-<p>In February 2014, the version 2.x of the plug-ins family was published, bringing official debugging support, via <strong>SEGGER J-Link</strong> and <strong>OpenOCD</strong>. Templates for Freescale were also added.</p>
+<p><a href="https://bintray.com/">Bintray</a> is a modern solution for software distribution, with many new features compared to the traditional SourceForge <code class="highlighter-rouge">rsync</code> approach.</p>
 
-<p>In July 2014, the experimental version of the Packs plug-in was published, providing management support (list/install/uninstall/outline) for CMSIS Packs.</p>
+<p>The Bintray page to manage the downloads is <a href="https://bintray.com/gnu-mcu-eclipse">https://bintray.com/gnu-mcu-eclipse</a>, with several separate repositories, each with its own statistics.</p>
 
-<h3 id="migration-to-github">Migration to GitHub</h3>
-
-<p>In August 2015 the project was migrated to <a href="https://github.com/gnuarmeclipse">GitHub</a> and restructured as separate sub-projects. For a more stability over time, the blog and wiki sites hosted on the private livius.net server were migrate to the public GitHub Pages.</p>
-
-<p>With this migration also the name was reduced to <strong>GNU ARM Eclipse</strong>.</p>
-
-<h2 id="pad-file">PAD file</h2>
-
-<p>The project <a href="http://en.wikipedia.org/wiki/Portable_Application_Description">PAD file</a> is publically available <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/blob/develop/info/GNU_ARM_Eclipse_pad.xml">here</a>.</p>
-
-<p>Note: the current limitation of 120 characters for URLs prevents the GitHub release URLs to be published in PAD files.</p>
-
-<h2 id="credits">Credits</h2>
-
-<p>Many thanks to:</p>
+<p>The new internal URL addresses used for for the Eclipse plug-ins v4.x downloads are:</p>
 
 <ul>
-  <li>Wilfried Holzke who created this project and maintained versions prior to 0.5.3;</li>
-  <li>my good friend Dan Maiorescu, for his invaluable support during the design, development and testing of the plug-ins.</li>
+  <li><a href="https://dl.bintray.com/gnu-mcu-eclipse/v4-neon-updates">https://dl.bintray.com/gnu-mcu-eclipse/v4-neon-updates</a></li>
+  <li><a href="https://dl.bintray.com/gnu-mcu-eclipse/v4-neon-updates-test">https://dl.bintray.com/gnu-mcu-eclipse/v4-neon-updates-test</a></li>
+  <li><a href="https://dl.bintray.com/gnu-mcu-eclipse/v4-neon-updates-experimental">https://dl.bintray.com/gnu-mcu-eclipse/v4-neon-updates-experimental</a></li>
 </ul>
 
-<h2 id="this-site">This site</h2>
+<h2 id="netlify-redirects">Netlify redirects</h2>
 
-<p>The first project wiki was created in August 2008 using the SourceForge hosted apps.</p>
+<p>The physical files may be stored on Bintray, but the official URL addresses to be used for installs/updates are on Nelify:</p>
 
-<p>In early 2012, the Project Web was redesigned and the developer pages were moved from the SourceForge hosted apps to the Project web, as a MediaWiki site.</p>
+<ul>
+  <li><a href="http://gnu-mcu-eclipse.netlify.com/v4-neon-updates">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates</a></li>
+  <li><a href="http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test</a></li>
+  <li><a href="http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-experimental">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-experimental</a></li>
+</ul>
 
-<p>Unfortunately SourceForge introduced the policy of blocking outgoing traffic from the Project web pages, and managing WordPress and MediaWiki sites on SourceForge servers became unpractical.</p>
+<h2 id="expected-issues">Expected issues</h2>
 
-<p>In October 2013, the project documentation was moved to an external <a href="http://wordpress.org/">WordPress</a> site, and was intended to improve communication with users by keeping them informed about current issues and releases. The original URL was http://gnuarmeclipse.livius.net/blog.</p>
+<p>This change is expected to have no negative consequences on existing Eclipse installations. Enterprise networks with absurd security limitations which prevented direct access to the update site and required manual downloads of the release archives may (or may not…) have a better chance for normal Eclipse install/update.</p>
 
-<p>The developer specific pages were also moved to an external MediaWiki site. The original URL was http://gnuarmeclipse.livius.net/wiki.</p>
+<p>The change in the public URL should be seamless, with all future plug-ins versions to automatically point to the new URLs.</p>
 
-<p>In Aug 2015 those two sites were first migrated to GitHub Wiki, with content split between multiple projects. Then the entire project pages was migrated to a GitHub Pages site, located at <a href="http://gnuarmeclipse.github.io/">http://gnuarmeclipse.github.io/</a>.</p>
-
-<h2 id="the-author">The author</h2>
-
-<p>This plug-in is currently maintained by <strong>Liviu Ionescu</strong>, a senior IT engineer, with expertise in operating systems, compilers, embedded systems and Internet technologies.</p>
-
-<p>He can be reached at <a href="mailto:ilg@livius.net">ilg@livius.net</a> (this email address is given for courtesy, for all correspondence related to this plug-in please use the project <a href="/support/">Support</a> pages).</p>
+<p>
+<em>
+<strong>Many thanks to all those who use this project!</strong>
+</em>
+</p>
 
 
-<hr class="page-footer">
-<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/about/" data-layout="button"></div>
+<hr class="post-footer"/>
+<p class="post-footer">
+Posted in
+
+<strong>news</strong>, <strong>project</strong> and tagged
+
+<strong>featured</strong>, <strong>sourceforge</strong>, <strong>netlify</strong>, <strong>downloads</strong>, <strong>update</strong>.
+</br>Last modified on Sun Jul  9 09:35:28 2017 UTC.
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/07/09/sourceforge-to-netlify-migration/" data-layout="button"></div>
+</p>
 
 
 </section>
@@ -216,7 +220,7 @@
 </ul>
 
 
-<hr>
+<hr />
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -226,14 +230,10 @@
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li>
-<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li>
-<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li>
-<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li>
-<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -243,8 +243,7 @@
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li>
-<a href="/debug/install/">Debugging binaries</a>
+  <li><a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -312,43 +311,37 @@
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li>
-<a href="/qemu/">Overview</a> (read me first!)</li>
+  <li><a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li>
-<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
 
 <ul>
-  <li>
-<a href="/openocd/">Overview</a> (read me first!)</li>
+  <li><a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li>
-<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li>
-<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -416,7 +409,7 @@
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr>
+<hr />
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -438,7 +431,7 @@
     <ul>
   <li>© 2017 Liviu Ionescu</li>
   <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>

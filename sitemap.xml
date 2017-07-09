@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/09/sourceforge-to-netlify-migration/</loc>
+<lastmod>2017-07-09T09:35:28+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/</loc>
 <lastmod>2017-07-07T16:39:59+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/05/02/sourceforge-to-bintray-migration/</loc>
-<lastmod>2017-05-02T11:22:52+00:00</lastmod>
+<lastmod>2017-07-09T09:35:28+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/04/25/plugins-v3.4.1-201704251808-released/</loc>
@@ -542,7 +546,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/</loc>
-<lastmod>2017-07-01T21:24:40+00:00</lastmod>
+<lastmod>2017-07-09T09:35:09+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/</loc>
