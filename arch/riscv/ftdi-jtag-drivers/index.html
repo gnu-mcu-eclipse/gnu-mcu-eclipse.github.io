@@ -150,21 +150,21 @@
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>system_profiler SPUSBDataType
 ...
-            Dual RS232-HS:
+    Dual RS232-HS:
 
-              Product ID: 0x6010
-              Vendor ID: 0x0403  <span class="o">(</span>Future Technology Devices International Limited<span class="o">)</span>
-              Version: 7.00
-              Speed: Up to 480 Mb/sec
-              Manufacturer: FTDI
-              Location ID: 0xfa130000 / 5
-              Current Available <span class="o">(</span>mA<span class="o">)</span>: 500
-              Current Required <span class="o">(</span>mA<span class="o">)</span>: 500
-              Extra Operating Current <span class="o">(</span>mA<span class="o">)</span>: 0
+      Product ID: 0x6010
+      Vendor ID: 0x0403  <span class="o">(</span>Future Technology Devices International Limited<span class="o">)</span>
+      Version: 7.00
+      Speed: Up to 480 Mb/sec
+      Manufacturer: FTDI
+      Location ID: 0xfa130000 / 5
+      Current Available <span class="o">(</span>mA<span class="o">)</span>: 500
+      Current Required <span class="o">(</span>mA<span class="o">)</span>: 500
+      Extra Operating Current <span class="o">(</span>mA<span class="o">)</span>: 0
 </code></pre>
 </div>
 
-<p>By default, macOS identifies the board as a <strong>Dual RS232-HS</strong> device, and offers to configure it as a network interface. Since the board does not have an EEPROM to store an unique ID, the devices are baned using a stringcontaining the address in the HUB hierarchy, so the <code class="highlighter-rouge">a13</code> letters in the name are different when connecting the board to a different USB port.</p>
+<p>By default, macOS identifies the board as a <strong>Dual RS232-HS</strong> device, and offers to configure it as a network interface. Since the board does not have an EEPROM to store an unique ID, the devices are named using a string containing the address in the HUB hierarchy, so the <code class="highlighter-rouge">a13</code> letters in the name are different when connecting the board to a different USB port.</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ls -l /dev/tty.usbserial<span class="k">*</span>
 crw-rw-rw-  1 root  wheel   19,  28 Jul 10 12:09 /dev/tty.usbserial-fa13A
@@ -220,7 +220,7 @@ Error: unable to open ftdi device with vid 0403, pid 6010, description 'Dual RS2
 </code></pre>
 </div>
 
-<p>The workaround it to disable all personalities of the AppleUSBFTDI kernel module and to enable only the one related to the PID 0x6010, the second interface (<code class="highlighter-rouge">AppleUSBEFTDI-6010-1</code>):</p>
+<p>The workaround it to disable all personalities of the AppleUSBFTDI kernel module and to enable only the one related to PID 0x6010, the second interface (<code class="highlighter-rouge">AppleUSBEFTDI-6010-1</code>):</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
 <span class="gp">$ </span>sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
@@ -314,7 +314,7 @@ International, Ltd FT2232C Dual USB-UART/FIFO IC
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Mon Jul 10 11:46:05 2017 UTC.</p>
+<p class="page-footer">Last modified on Mon Jul 10 16:48:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/arch/riscv/ftdi-jtag-drivers/" data-layout="button"></div>
 
 
