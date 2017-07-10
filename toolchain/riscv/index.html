@@ -136,7 +136,7 @@
 </code></pre>
 </div>
 
-<p>The current RISC-V prefixes for the bare metal toolchain are <code class="highlighter-rouge">riscv64-unknown-elf-</code> and <code class="highlighter-rouge">riscv32-unknown-elf-</code>.</p>
+<p>The current RISC-V prefixes for the bare metal toolchains are <code class="highlighter-rouge">riscv64-unknown-elf-</code> and <code class="highlighter-rouge">riscv32-unknown-elf-</code>.</p>
 
 <p>Well, don’t be confused by this unfortunate names. The <strong>64</strong> or <strong>32</strong> attached to the architecture does not mean that the toolchain runs on 64-bits or 32-bits platforms only. It does not mean either that the compiler produces 64-bits or 32-bits RISC-V binaries. Actually, the compilers produce both 32/64-bits binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>. The only difference are defaults, when the compiler are invoked without the <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code> explicitly set on the command line.</p>
 
@@ -239,6 +239,8 @@ march=rv64imafdc/mabi=lp64d
 
 <ul>
   <li><a href="/toolchain/riscv/install/">How to install?</a></li>
+  <li><a href="/toolchain/riscv/releases/">Releases</a></li>
+  <li><a href="/toolchain/riscv/change-log/">Change log</a></li>
   <li><a href="/toolchain/riscv/support/">Support</a></li>
 </ul>
 
@@ -247,13 +249,11 @@ march=rv64imafdc/mabi=lp64d
 <ul>
   <li><a href="/toolchain/riscv/build-procedure/">How to build?</a></li>
   <li><a href="/toolchain/riscv/publish-procedure/">How to publish?</a></li>
-  <li><a href="/toolchain/riscv/releases/">Releases</a></li>
-  <li><a href="/toolchain/riscv/change-log/">Change log</a></li>
 </ul>
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Mon Jul 10 07:56:16 2017 UTC.</p>
+<p class="page-footer">Last modified on Mon Jul 10 08:18:42 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/" data-layout="button"></div>
 
 
