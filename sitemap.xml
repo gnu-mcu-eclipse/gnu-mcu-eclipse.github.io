@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/</loc>
-<lastmod>2017-07-11T13:36:44+00:00</lastmod>
+<lastmod>2017-07-11T21:50:40+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/09/sourceforge-to-netlify-migration/</loc>
@@ -462,7 +462,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/contribute/</loc>
-<lastmod>2017-07-01T21:06:50+00:00</lastmod>
+<lastmod>2017-07-11T21:50:40+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/templates/cortexm/</loc>
@@ -482,7 +482,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/plugins/download/</loc>
-<lastmod>2017-07-01T21:06:50+00:00</lastmod>
+<lastmod>2017-07-11T21:50:40+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/download/</loc>
@@ -494,7 +494,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/downloads/</loc>
-<lastmod>2017-07-01T21:06:50+00:00</lastmod>
+<lastmod>2017-07-11T21:50:40+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/eclipse/debugging-options/</loc>
@@ -558,7 +558,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/plugins/install/</loc>
-<lastmod>2017-07-11T13:54:02+00:00</lastmod>
+<lastmod>2017-07-11T21:50:40+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/install/</loc>
@@ -642,7 +642,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/plugins/packs-manager/</loc>
-<lastmod>2017-07-01T21:06:50+00:00</lastmod>
+<lastmod>2017-07-11T21:50:40+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/pad-file/</loc>
@@ -706,7 +706,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/publish-procedure/</loc>
-<lastmod>2017-07-11T13:54:46+00:00</lastmod>
+<lastmod>2017-07-11T21:50:40+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/openocd/publish-procedure/</loc>

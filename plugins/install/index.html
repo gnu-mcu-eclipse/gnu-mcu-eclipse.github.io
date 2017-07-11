@@ -192,7 +192,12 @@
 </table>
 </div><h2 id="quicklinks">Quicklinks</h2>
 
-<p>If you know what this is all about, drag-and-drop the <strong>Install</strong> button available below to your running Eclipse workspace and follow the <strong>Eclipse Marketplace</strong> install/update steps.</p>
+<p>If you know what this is all about, you can do the following:</p>
+
+<ul>
+  <li>use the <strong>GNU MCU Eclipse IDE for C/C++ Developers</strong> packages, which packs Eclipse with the plug-ins; for this go to <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/">GitHub Releases</a> and download the binary for your platform;</li>
+  <li>drag-and-drop the <strong>Install</strong> button available below to your running Eclipse workspace and follow the <strong>Eclipse Marketplace</strong> install/update steps.</li>
+</ul>
 
 <p>
 <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2593184" class="drag" title="Drag to your running Eclipse workspace.">
@@ -207,7 +212,7 @@
   <li>URL: <code class="highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/</code></li>
 </ul>
 
-<p>Note: the old URL <code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates/</code> is now deprecated, and its content will point to v3.x, that can be installed to install the older versions of the plug-ins.</p>
+<p>Note: the old URL <code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates/</code> is now deprecated, and its content will point to v3.x, that can be used to install the older versions of the plug-ins.</p>
 
 <p>It is recommended that you install the plug-ins after installing the <a href="/toolchain/arm/install">ARM toolchain</a> and/or the <a href="/toolchain/riscv/install">RISC-V toolchain</a>, the <a href="/windows-build-tools/install/">build tools</a> (on Windows), and the <a href="/debug/install/">debugging binaries</a>.</p>
 
@@ -268,7 +273,13 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <p><strong>Neon</strong> initially had several problems, but starting with <strong>Neon.3</strong> it finally seems fully functional. Avoid previous Neon versions, since they do not work properly. If you want to use GCC 6.x, you <strong>need</strong> Neon.3 (the compiler itself has no problems working with Mar, but GDB 7.12 is not supported on versions before Neon.3).</p>
 
-<p>Go to the <a href="http://www.eclipse.org/downloads/eclipse-packages">Eclipse packages</a> and get the <strong>Eclipse IDE for C/C++ Developers</strong> archive appropriate for your platform, preferably the 64-bits version.</p>
+<h4 id="the-package-way">The package way</h4>
+
+<p>The simple way is to download <strong>GNU MCU Eclipse IDE for C/C++ Developers</strong> from <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/">GitHub Releases</a> and you get at once both Eclipse CDT and the MCU plug-ins.</p>
+
+<h4 id="the-plug-ins-install-way">The plug-ins install way</h4>
+
+<p>If you prefer to do this in more steps, go to the <a href="http://www.eclipse.org/downloads/eclipse-packages">Eclipse packages</a> and get the <strong>Eclipse IDE for C/C++ Developers</strong> archive appropriate for your platform, preferably the 64-bits version.</p>
 
 <p>Links to older versions are available in the <strong>More Downloads</strong> section, at the bottom.</p>
 
@@ -362,7 +373,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 <ul>
   <li>in the <em>Install</em> window, click the <strong>Add…</strong> button (on future updates, select the URL in the <strong>Work with:</strong> combo)</li>
   <li>fill in <em>Name:</em> with <strong>GNU MCU Eclipse Plug-ins</strong></li>
-  <li>fill in <em>Location:</em> with <strong>http://gnuarmeclipse.sourceforge.net/updates</strong></li>
+  <li>fill in <em>Location:</em> with <strong>http://gnu-mcu-eclipse.netlify.com/v4-neon-updates</strong></li>
   <li>click the <strong>OK</strong> button</li>
 </ul>
 
@@ -385,7 +396,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <h3 id="the-local-archive-way">The local archive way</h3>
 
-<p>If, for any reason, you need to install a specific version of the plug-in, the solution is to download the archive from <a href="http://sourceforge.net/projects/gnuarmeclipse/files/Current%20Releases/">SourceForge Files</a> and to point the Eclipse update mechanism to the local archive: In the* Eclipse* menu → <strong>Help</strong> → <strong>Install New Software…</strong></p>
+<p>If, for any reason, you need to install a specific version of the plug-in, the solution is to download the archive from <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a>, or, for older releases, from <a href="http://sourceforge.net/projects/gnuarmeclipse/files/Current%20Releases/">SourceForge Files</a> and to point the Eclipse update mechanism to the local archive: In the* Eclipse* menu → <strong>Help</strong> → <strong>Install New Software…</strong></p>
 
 <ul>
   <li>in the <em>Install</em> window, click the <strong>Add…</strong> button</li>
@@ -440,6 +451,8 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 </ul>
 
 <h3 id="sourceforge-problems">SourceForge problems</h3>
+
+<p>Note: starting with version v4.1.1, the SourceForge server is no longer actively used, so this problem should no longer be actual.</p>
 
 <p>There are cases when the on-line access to the SourceForge mirror servers might not be reliable. In these cases the Eclipse update system may fail. For example:</p>
 
@@ -538,7 +551,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Tue Jul 11 13:54:02 2017 UTC.</p>
+<p class="page-footer">Last modified on Tue Jul 11 21:50:40 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/install/" data-layout="button"></div>
 
 
