@@ -5,9 +5,37 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Jul 2017 16:50:31 +0000</pubDate>
-    <lastBuildDate>Mon, 10 Jul 2017 16:50:31 +0000</lastBuildDate>
+    <pubDate>Tue, 11 Jul 2017 12:45:56 +0000</pubDate>
+    <lastBuildDate>Tue, 11 Jul 2017 12:45:56 +0000</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse plug-ins v4.1.1-201707111115 released</title>
+        <description>&lt;p&gt;Version 4.1.1-201707111115 is a major release; thanks to a contribution from &lt;a href=&quot;https://www.sifive.com&quot;&gt;SiFive&lt;/a&gt;, the project was enhanced with support for &lt;a href=&quot;https://riscv.org&quot;&gt;RISC-V&lt;/a&gt; devices and, to better reflect the multi-platform nature, was rebranded as &lt;strong&gt;GNU MCU Eclipse&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 11 Jul 2017 11:29:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/</guid>
+        
+        <category>GNU</category>
+        
+        <category>ARM</category>
+        
+        <category>RISC-V</category>
+        
+        <category>MCU</category>
+        
+        <category>Eclipse</category>
+        
+        <category>Packs</category>
+        
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse plug-ins v4.x update sites URLs migrated to Netlify</title>
@@ -206,30 +234,6 @@
         <category>releases</category>
         
         <category>openocd</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU ARM Eclipse plug-ins v3.2.1-201701141320 released</title>
-        <description>&lt;p&gt;Version 3.2.1-201701141320 is a new release; the main change is adding support for &lt;strong&gt;Eclipse Neon.2&lt;/strong&gt; (CDT 9.2).&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 14 Jan 2017 12:49:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/01/14/plugins-v3.2.1-201701141320-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/01/14/plugins-v3.2.1-201701141320-released/</guid>
-        
-        <category>GNU</category>
-        
-        <category>ARM</category>
-        
-        <category>Eclipse</category>
-        
-        <category>Neon</category>
-        
-        
-        <category>releases</category>
-        
-        <category>plugins</category>
         
       </item>
     

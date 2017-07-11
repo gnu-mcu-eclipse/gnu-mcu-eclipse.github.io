@@ -109,8 +109,13 @@
 </li>
 <li class="toc_level-1 toc_section-3">
 <a href="#macos"><span class="tocnumber">3</span> <span class="toctext">macOS</span></a>
+<ul>
+<li class="toc_level-2 toc_section-4">
+<a href="#use-case"><span class="tocnumber">3.1</span> <span class="toctext">Use case</span></a>
 </li>
-<li class="toc_level-1 toc_section-4">
+</ul>
+</li>
+<li class="toc_level-1 toc_section-5">
 <a href="#gnulinux"><span class="tocnumber">4</span> <span class="toctext">GNU/Linux</span></a>
 </li>
 </ul>
@@ -144,9 +149,9 @@
 
 <h2 id="macos">macOS</h2>
 
-<p>When dealing with USB drivers, Apple is even stricter; if the USB device has the FTDI VID:PID, it assumes it should be associated with a virtual UART device, and there is no simple way to reconfigure this.</p>
+<p>When dealing with USB drivers, Apple is even stricter; if the USB device has any of the FTDI VID:PID pairs, macOS assumes it should be associated with a virtual UART device, and there is no simple way to reconfigure this.</p>
 
-<p>To view the attached USB devices on macOS, use <code class="highlighter-rouge">system_profiler</code>. For example, the HiFive1 board is seen as PID:VID 6010:0403:</p>
+<p>To view the attached USB devices on macOS, use <code class="highlighter-rouge">system_profiler</code>. For example, the HiFive1 board is seen as Dual RS232-HS, PID:VID 6010:0403:</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>system_profiler SPUSBDataType
 ...
@@ -164,7 +169,9 @@
 </code></pre>
 </div>
 
-<p>By default, macOS identifies the board as a <strong>Dual RS232-HS</strong> device, and offers to configure it as a network interface. Since the board does not have an EEPROM to store an unique ID, the devices are named using a string containing the address in the HUB hierarchy, so the <code class="highlighter-rouge">a13</code> letters in the name are different when connecting the board to a different USB port.</p>
+<p>If you already use FTDI based USB/UART adapters, remember the Product ID, since you need to manually enable it in a later step.</p>
+
+<p>By default, macOS identifies the board as a <strong>Dual RS232-HS</strong> device, and offers to configure it as a network interface. Since the HiFive1 board does not have an EEPROM to store an unique ID, the devices are named using a string containing the address in the HUB hierarchy, so the <code class="highlighter-rouge">a13</code> letters in the name are different when connecting the board to a different USB port.</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ls -l /dev/tty.usbserial<span class="k">*</span>
 crw-rw-rw-  1 root  wheel   19,  28 Jul 10 12:09 /dev/tty.usbserial-fa13A
@@ -220,23 +227,15 @@ Error: unable to open ftdi device with vid 0403, pid 6010, description 'Dual RS2
 </code></pre>
 </div>
 
-<p>The workaround it to disable all personalities of the AppleUSBFTDI kernel module and to enable only the one related to PID 0x6010, the second interface (<code class="highlighter-rouge">AppleUSBEFTDI-6010-1</code>):</p>
+<p>The workaround it to disable all <em>personalities</em> of the AppleUSBFTDI kernel:</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
-<span class="gp">$ </span>sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
 </code></pre>
 </div>
 
-<p>The first interface should no longer be available as a tty device, but as JTAG:</p>
+<p>This command will remove the UART associations for all FTDI based devices. All devices will be available for user space drivers, like <code class="highlighter-rouge">libusb</code>.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ls -l /dev/tty.usbserial<span class="k">*</span>
-crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
-</code></pre>
-</div>
-
-<p>The second interface should be available to <code class="highlighter-rouge">screen</code>, as before.</p>
-
-<p>In addition, OpenOCD should also be able to connect to the JTAG interface:</p>
+<p>In the HiFive1 case, the first interface should no longer be available as a tty device, but as JTAG, and OpenOCD should be able to connect to the JTAG interface:</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>openocd -f board/sifive-freedom-e300-hifive1.cfg 
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00135-g80299198 <span class="o">(</span>2017-06-22-18:37<span class="o">)</span>
@@ -260,16 +259,19 @@ cleared protection <span class="k">for </span>sectors 64 through 255 on flash ba
 </code></pre>
 </div>
 
-<p>To bring back only the interface 0 as a tty:</p>
+<p>This next command will redo the UART association only for the given personality, in this case the second interface of PID 0x6010 (<code class="highlighter-rouge">AppleUSBEFTDI-6010-1</code>).</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-0
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
 <span class="gp">$ </span>ls -l /dev/tty.usbserial<span class="k">*</span>
-crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13A
 crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 </code></pre>
 </div>
 
-<p>The AppleUSBFTDI module has many <em>personalities</em>, to bring them back start <code class="highlighter-rouge">kextutil</code> in interractive mode, or reboot:</p>
+<p>The second interface should be available again to <code class="highlighter-rouge">screen</code>, as before.</p>
+
+<p>If you have other FTDI devices that you need to remain associated to UART, issue similar commands, for each one.</p>
+
+<p>The AppleUSBFTDI module has many <em>personalities</em>; to bring them back, start <code class="highlighter-rouge">kextutil</code> in interractive mode, or reboot:</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -interactive
 Defaulting to kernel file <span class="s1">'/System/Library/Kernels/kernel'</span>
@@ -298,6 +300,27 @@ Send personality AppleUSBEFTDI-6014 <span class="o">[</span>Y/n/a]?
 </code></pre>
 </div>
 
+<h3 id="use-case">Use case</h3>
+
+<p>I personaly have two USB/UART DB-9 adapters and the RISC-V HiFive1 and Arty boards.</p>
+
+<p>To make them work, I use a file</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># Disable all FTDI devices
+kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
+# Enable the second interface on the HiFive1 board
+kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
+# Enable the DIGITUS USB/UART DB-9 adapters
+kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6001
+</code></pre>
+</div>
+
+<p>that I start with:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo bash ${HOME}/opt/scripts/ftdi.sh
+</code></pre>
+</div>
+
 <h2 id="gnulinux">GNU/Linux</h2>
 
 <p>GNU/Linux systems do not need suplimentary drivers to access the FTDI devices, but only some configuration tweaks.</p>
@@ -314,7 +337,7 @@ International, Ltd FT2232C Dual USB-UART/FIFO IC
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Mon Jul 10 16:48:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Tue Jul 11 06:59:16 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/arch/riscv/ftdi-jtag-drivers/" data-layout="button"></div>
 
 
@@ -325,11 +348,11 @@ International, Ltd FT2232C Dual USB-UART/FIFO IC
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2017/07/11/plugins-v4.1.1-201707111115-released/">GNU MCU Eclipse plug-ins v4.1.1-201707111115 released</a></li>
   <li><a href="/blog/2017/07/09/sourceforge-to-netlify-migration/">GNU MCU Eclipse plug-ins v4.x update sites URLs migrated to Netlify</a></li>
   <li><a href="/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></li>
   <li><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></li>
   <li><a href="/blog/2017/04/25/plugins-v3.4.1-201704251808-released/">GNU ARM Eclipse plug-ins v3.4.1-201704251808 released</a></li>
-  <li><a href="/blog/2017/04/19/openocd-v0-10-0-20170418-released/">GNU ARM Eclipse OpenOCD v0.10.0-20170418* released</a></li>
 </ul>
 
 

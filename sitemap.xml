@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/</loc>
+<lastmod>2017-07-11T12:43:46+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/09/sourceforge-to-netlify-migration/</loc>
-<lastmod>2017-07-09T09:35:28+00:00</lastmod>
+<lastmod>2017-07-11T12:37:33+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/</loc>
@@ -446,7 +450,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/change-log/</loc>
-<lastmod>2017-07-01T21:06:50+00:00</lastmod>
+<lastmod>2017-07-11T12:36:51+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/openocd/change-log/</loc>
@@ -534,7 +538,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/arch/riscv/ftdi-jtag-drivers/</loc>
-<lastmod>2017-07-10T16:48:19+00:00</lastmod>
+<lastmod>2017-07-11T06:59:16+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/advanced/headless-builds/</loc>
@@ -710,7 +714,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/publish-procedure/</loc>
-<lastmod>2017-07-01T21:24:40+00:00</lastmod>
+<lastmod>2017-07-11T12:37:33+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/openocd/publish-procedure/</loc>
