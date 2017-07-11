@@ -126,16 +126,15 @@
 <h2 id="build">Build</h2>
 
 <ul>
-  <li>select the <strong>ilg.gnuarmeclipse.parent</strong> project</li>
-  <li>right click, select <strong>Run As</strong> → <strong>Maven install</strong>
-</li>
+  <li>select the <strong>gnumcueclipse-plugins</strong> parent project</li>
+  <li>right click, select <strong>Run As</strong> → <strong>Run configurations…</strong> → <strong>GME clean verify</strong> (be sure you do not run the <strong>install</strong> goal, it’ll pollute the cache)</li>
   <li>wait a while for Maven to load all required modules</li>
 </ul>
 
 <p>The result of a successful build looks like this:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>[INFO] --- tycho-p2-plugin:0.25.0:update-local-index (default-update-local-index) @ ilg.gnuarmeclipse.repository ---
+<pre class="highlight"><code>[INFO] --- tycho-p2-plugin:0.25.0:update-local-index (default-update-local-index) @ ilg.gnumcueclipse.repository ---
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary:
 [INFO] 
@@ -186,68 +185,44 @@
 </code></pre>
 </div>
 
-<p>The build result is in the <code class="highlighter-rouge">ilg.gnuarmeclipse.repository</code> project</p>
+<p>The build result is in the <code class="highlighter-rouge">ilg.gnumcueclipse.repository</code> project</p>
 <ul>
-  <li>the <code class="highlighter-rouge">target/ilg.gnuarmeclipse.repository-3.3.1-SNAPSHOT.zip</code> file</li>
+  <li>the <code class="highlighter-rouge">target/ilg.gnumcueclipse.repository-3.3.1-SNAPSHOT.zip</code> file</li>
   <li>the <code class="highlighter-rouge">target/repository</code> folder, with the p2 update site</li>
 </ul>
 
 <h2 id="debug">Debug</h2>
 
-<p>Create a file <code class="highlighter-rouge">Eclipse Workspaces/debug.options</code> with the following content:</p>
-
-<div class="highlighter-rouge">
-<pre class="highlight"><code>ilg.gnuarmeclipse.core/debug=true
-
-ilg.gnuarmeclipse.managedbuild.cross/debug=true
-#ilg.gnuarmeclipse.managedbuild.packs/debug=true
-
-ilg.gnuarmeclipse.debug.core/debug=true
-ilg.gnuarmeclipse.debug.gdbjtag/debug=true
-
-ilg.gnuarmeclipse.debug.gdbjtag.jlink/debug=true
-ilg.gnuarmeclipse.debug.gdbjtag.openocd/debug=true
-ilg.gnuarmeclipse.debug.gdbjtag.qemu/debug=true
-
-#ilg.gnuarmeclipse.packs/debug=true
-#ilg.gnuarmeclipse.packs.core/debug=true
-#ilg.gnuarmeclipse.packs.data/debug=true
-#ilg.gnuarmeclipse.packs.ui/debug=true
-
-ilg.gnuarmeclipse.codered/debug=true
-</code></pre>
-</div>
+<p>Download the <code class="highlighter-rouge">debug.options</code> file from https://github.com/gnu-mcu-eclipse/eclipse-plugins/blob/develop/debug.options into a local <code class="highlighter-rouge">Eclipse Workspaces/debug.options</code> and, if needed, edit it.</p>
 
 <p>To run a debug session using the GNU MCU Eclipse plug-ins:</p>
 
 <ul>
   <li>
-<strong>Run</strong> → <strong>Debug Configurations</strong>
+<strong>Run</strong> → <strong>Debug Configurations…</strong>
 </li>
-  <li>select <strong>Eclipse Application</strong>
+  <li>double-click <strong>Eclipse Application</strong>
 </li>
-  <li>click <strong>New</strong>
-    <ul>
-      <li>Name: <strong>Eclipse GNU ARM Plug-ins</strong>
+  <li>
+<strong>Name:</strong> <code class="highlighter-rouge">Eclipse GNU MCU Plug-ins</code>
 </li>
-      <li>Location: <code class="highlighter-rouge">${workspace_loc}/../runtime-Eclipse46</code>
+  <li>Location: <code class="highlighter-rouge">${workspace_loc}/../runtime-e46</code>
 </li>
-    </ul>
-  </li>
   <li>Tab: <strong>Plug-ins</strong>
     <ul>
-      <li>Launch with: <strong>plug-ins selected below</strong>; the Workspace list should include all <code class="highlighter-rouge">ilg.gnuarmeclipse.*</code> plug-ins; the Target Platform list should include all Eclipse, not only CDT, plug-ins; if the Eclipse plug-ins are not in the list, then the Preferences → Plug-in Development -&gt; Target Platform is not Running Platform, and must be changed. The alternative to use <strong>all workspace and enabled plug-ins</strong> might work in some configurations, and can also be used, but if dependencies are not met, manual selection is required.</li>
-      <li>click the <strong>Validate Plug-ins</strong> button; most probably the <code class="highlighter-rouge">org.apache.xmlrpc</code> plug-in will complain about <code class="highlighter-rouge">javax.xml.bind</code>; either install it, or disable the plug-in; validate again and disable a few more plug-ins (<code class="highlighter-rouge">org.eclipse.mylyn.bugzilla.core</code>, <code class="highlighter-rouge">org.eclipse.mylyn.bugzilla.ui</code> and <code class="highlighter-rouge">org.eclipse.mylyn.commons.xmlrpc</code>).</li>
+      <li>Launch with: <strong>plug-ins selected below</strong>; the Workspace list should include all <code class="highlighter-rouge">ilg.gnumcueclipse.*</code> plug-ins; the Target Platform list should include all Eclipse, not only CDT, plug-ins; if the Eclipse plug-ins are not in the list, then the Preferences → Plug-in Development -&gt; Target Platform is not Running Platform, and must be changed. The alternative to use <strong>all workspace and enabled plug-ins</strong> might work in some configurations, and can also be used, but if dependencies are not met, manual selection is required.</li>
+      <li>click the <strong>Validate Plug-ins</strong> button; most probably the <code class="highlighter-rouge">org.apache.xmlrpc</code> plug-in will complain about <code class="highlighter-rouge">javax.xml.bind</code>; either install it, or disable the plug-in; validate again and disable a few more plug-ins (<code class="highlighter-rouge">org.eclipse.mylyn.bugzilla.core</code>, <code class="highlighter-rouge">org.eclipse.mylyn.bugzilla.ui</code>, <code class="highlighter-rouge">org.eclipse.mylyn.builds.ui</code>, <code class="highlighter-rouge">org.eclipse.mylyn.commons.xmlrpc</code>, <code class="highlighter-rouge">org.eclipse.mylyn.hudson.ui</code>).</li>
     </ul>
   </li>
+  <li>click <strong>Apply</strong>
+</li>
   <li>Tab: <strong>Arguments</strong>
     <ul>
       <li>Program arguments:
         <ul>
           <li><code class="highlighter-rouge">-consoleLog</code></li>
           <li>
-<code class="highlighter-rouge">-debug</code> <code class="highlighter-rouge">.../GNU\ ARM\ Eclipse/Eclipse\ Workspaces/debug.options</code>
-</li>
+<code class="highlighter-rouge">../</code> <code class="highlighter-rouge">../../Eclipse\ Workspaces/debug.options</code> (<code class="highlighter-rouge">"..\..\Eclipse Workspaces\debug.options"</code> on Windows)</li>
         </ul>
       </li>
       <li>VM arguments:
@@ -256,7 +231,8 @@ ilg.gnuarmeclipse.codered/debug=true
 <code class="highlighter-rouge">-ea</code> (to enable assertions)</li>
           <li>
 <code class="highlighter-rouge">-Dorg.eclipse.swt.internal.carbon.smallFonts</code> (only on macOS)</li>
-          <li><code class="highlighter-rouge">-Xdock:icon=../Resources/Eclipse.icns</code></li>
+          <li>
+<code class="highlighter-rouge">-Xdock:icon=../Resources/Eclipse.icns</code> (only on macOS)</li>
         </ul>
       </li>
       <li>enable <strong>Use the -XstartOnFirstThread argument when launching with SWT</strong>
@@ -278,7 +254,7 @@ ilg.gnuarmeclipse.codered/debug=true
 <p>When starting debug sessions from within Eclipse, a copy of the run-time is kept under</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Eclipse GNU ARM Plug-ins
+<pre class="highlight"><code>${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Eclipse GNU MCU Plug-ins
 </code></pre>
 </div>
 
@@ -304,8 +280,10 @@ ilg.gnuarmeclipse.codered/debug=true
   <li>select <strong>Configure Working Sets…</strong>
     <ul>
       <li>click the <strong>New…</strong> button</li>
+      <li>select the Resource category</li>
       <li>fill in the <strong>Working set name:</strong> with CDT</li>
       <li>click the <strong>Finish</strong> button</li>
+      <li>click the <strong>OK</strong> button</li>
     </ul>
   </li>
 </ul>
@@ -313,14 +291,13 @@ ilg.gnuarmeclipse.codered/debug=true
 <p>Import all CDT projects</p>
 
 <ul>
-  <li>in the <em>Eclipse</em> menu → <strong>File</strong> → <strong>Import…</strong> → <strong>Existing Maven Projects</strong>
+  <li>in the <em>Eclipse</em> menu → <strong>File</strong> → <strong>Import…</strong> → General → <strong>Existing Projects into Workspace</strong>
 </li>
   <li>click the <strong>Next &gt;</strong> button</li>
   <li>browse for the <code class="highlighter-rouge">org.eclipse.cdt.git</code> folder</li>
-  <li>keep all projects selected</li>
+  <li>deselect some projects selected</li>
   <li>enable <strong>Add projects(s) to working set</strong> and enter CDT</li>
   <li>click the <strong>Finish</strong> button</li>
-  <li>accept the <strong>Discover m2e connectors</strong> dependency to <code class="highlighter-rouge">tycho-eclipserun-plugin</code> and click the <strong>Finish</strong> button</li>
 </ul>
 
 <p>Create a new debug configuration</p>
@@ -328,16 +305,21 @@ ilg.gnuarmeclipse.codered/debug=true
 <ul>
   <li>in the <em>Eclipse</em> menu → <strong>Run</strong> → <strong>Debug Configurations…</strong>
 </li>
-  <li>duplicate ‘Eclipse GNU ARM Plug-ins’ into ‘Eclipse GNU ARM Plug-ins CDT’</li>
+  <li>duplicate ‘Eclipse GNU MCU Plug-ins’ into ‘Eclipse GNU MCU Plug-ins with CDT’</li>
+  <li>click the <strong>Add Working Sets..</strong>
+    <ul>
+      <li>select the CDT set</li>
+      <li>click the <strong>OK</strong> button</li>
+    </ul>
+  </li>
   <li>using the <strong>Validate Plug-ins</strong> button, disable unwanted plug-ins until the validation passes</li>
   <li>click the <strong>Apply</strong> button</li>
   <li>click the <strong>Debug</strong> buton to start a debug session</li>
 </ul>
 
 
-
 <hr class="page-footer">
-<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
+<p class="page-footer">Last modified on Tue Jul 11 15:43:37 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/build-procedure/" data-layout="button"></div>
 
 

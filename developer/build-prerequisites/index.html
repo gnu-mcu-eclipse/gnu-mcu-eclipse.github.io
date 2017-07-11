@@ -106,41 +106,47 @@
 <a href="#install--configure-eclipse"><span class="tocnumber">1</span> <span class="toctext">Install &amp; Configure Eclipse</span></a>
 <ul>
 <li class="toc_level-2 toc_section-2">
-<a href="#install-java"><span class="tocnumber">1.1</span> <span class="toctext">Install Java</span></a>
+<a href="#install-git-for-windows"><span class="tocnumber">1.1</span> <span class="toctext">Install Git for Windows</span></a>
 </li>
 <li class="toc_level-2 toc_section-3">
-<a href="#prepare-folders"><span class="tocnumber">1.2</span> <span class="toctext">Prepare folders</span></a>
+<a href="#install-sourcetree"><span class="tocnumber">1.2</span> <span class="toctext">Install SourceTree</span></a>
 </li>
 <li class="toc_level-2 toc_section-4">
-<a href="#install-eclipse-ide-for-eclipse-commiters"><span class="tocnumber">1.3</span> <span class="toctext">Install Eclipse IDE for Eclipse Commiters</span></a>
+<a href="#install-java"><span class="tocnumber">1.3</span> <span class="toctext">Install Java</span></a>
 </li>
 <li class="toc_level-2 toc_section-5">
-<a href="#start-the-new-eclipse"><span class="tocnumber">1.4</span> <span class="toctext">Start the new Eclipse</span></a>
+<a href="#prepare-folders"><span class="tocnumber">1.4</span> <span class="toctext">Prepare folders</span></a>
 </li>
 <li class="toc_level-2 toc_section-6">
-<a href="#install-base-api"><span class="tocnumber">1.5</span> <span class="toctext">Install base API</span></a>
+<a href="#install-eclipse-ide-for-eclipse-commiters"><span class="tocnumber">1.5</span> <span class="toctext">Install Eclipse IDE for Eclipse Commiters</span></a>
 </li>
 <li class="toc_level-2 toc_section-7">
-<a href="#create-and-configure-the-workspace"><span class="tocnumber">1.6</span> <span class="toctext">Create and configure the workspace</span></a>
+<a href="#start-the-new-eclipse"><span class="tocnumber">1.6</span> <span class="toctext">Start the new Eclipse</span></a>
 </li>
 <li class="toc_level-2 toc_section-8">
-<a href="#install-several-eclipse-cdt-instances"><span class="tocnumber">1.7</span> <span class="toctext">Install several Eclipse CDT instances</span></a>
+<a href="#install-base-api"><span class="tocnumber">1.7</span> <span class="toctext">Install base API</span></a>
+</li>
+<li class="toc_level-2 toc_section-9">
+<a href="#create-and-configure-the-workspace"><span class="tocnumber">1.8</span> <span class="toctext">Create and configure the workspace</span></a>
+</li>
+<li class="toc_level-2 toc_section-10">
+<a href="#install-several-eclipse-cdt-instances"><span class="tocnumber">1.9</span> <span class="toctext">Install several Eclipse CDT instances</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-9">
+<li class="toc_level-1 toc_section-11">
 <a href="#clone-the-repository"><span class="tocnumber">2</span> <span class="toctext">Clone the repository</span></a>
 </li>
-<li class="toc_level-1 toc_section-10">
+<li class="toc_level-1 toc_section-12">
 <a href="#import-the-projects"><span class="tocnumber">3</span> <span class="toctext">Import the projects</span></a>
 </li>
-<li class="toc_level-1 toc_section-11">
+<li class="toc_level-1 toc_section-13">
 <a href="#configure-the-working-sets"><span class="tocnumber">4</span> <span class="toctext">Configure the working sets</span></a>
 </li>
-<li class="toc_level-1 toc_section-12">
+<li class="toc_level-1 toc_section-14">
 <a href="#create-the-maven-run-configuration"><span class="tocnumber">5</span> <span class="toctext">Create the Maven run configuration</span></a>
 </li>
-<li class="toc_level-1 toc_section-13">
+<li class="toc_level-1 toc_section-15">
 <a href="#cdt-wiki"><span class="tocnumber">6</span> <span class="toctext">CDT Wiki</span></a>
 </li>
 </ul>
@@ -150,6 +156,16 @@
 </table>
 </div>
 <h2 id="install--configure-eclipse">Install &amp; Configure Eclipse</h2>
+
+<h3 id="install-git-for-windows">Install Git for Windows</h3>
+
+<p>On Windows, the <code class="highlighter-rouge">git</code> command is available in the <a href="https://git-scm.com/download/win">Git for Windows</a> package.</p>
+
+<p>It also comes with a minimal POSIX environment. To access it, start the <code class="highlighter-rouge">bash.exe</code> program.</p>
+
+<h3 id="install-sourcetree">Install SourceTree</h3>
+
+<p>For a convenient access to Git, it is recommended to install <a href="https://www.sourcetreeapp.com/">SourceTree</a>, available for macOS and Windows.</p>
 
 <h3 id="install-java">Install Java</h3>
 
@@ -170,17 +186,16 @@
 
 <ul>
   <li>go to <a href="http://www.eclipse.org/downloads/">Eclipse download site</a> and follow the <a href="https://www.eclipse.org/downloads/eclipse-packages/">download packages</a> link</li>
-  <li>download <strong>Eclipse IDE for Eclipse Committers</strong>, preferably the 64-bits version (for example eclipse-committers-neon-2-macosx-cocoa-x86_64.tar.gz)</li>
+  <li>download <strong>Eclipse IDE for Eclipse Committers</strong>, preferably the 64-bits version (for example eclipse-committers-neon-3-macosx-cocoa-x86_64.tar.gz)</li>
   <li>unpack the archive</li>
-  <li>rename <code class="highlighter-rouge">Eclipse.app</code> to <code class="highlighter-rouge">Eclipse-com-cdt-46.app</code>
-</li>
+  <li>rename <code class="highlighter-rouge">Eclipse.app</code> to <code class="highlighter-rouge">Eclipse-com-cdt-46.app</code> (<code class="highlighter-rouge">eclipse</code> to <code class="highlighter-rouge">eclipse-com-cdt-46</code> on Windows)</li>
   <li>move it to <code class="highlighter-rouge">.../GNU MCU Eclipse/Eclipses</code>
 </li>
   <li>create shortcut to desktop:
     <ul>
-      <li>on Windows, create a shortcut for <code class="highlighter-rouge">eclipse.exe</code>, rename it <code class="highlighter-rouge">E46 GAE.lnk</code> and copy it to the desktop or a place of your choice</li>
-      <li>on macOS, create a Finder alias for <code class="highlighter-rouge">Eclipse.app</code>, rename it <code class="highlighter-rouge">E46 GAE</code> and move it to a place of your choice</li>
-      <li>on GNU/Linux, create a link for <code class="highlighter-rouge">eclipse</code>, rename it <code class="highlighter-rouge">E46 GAE</code> and move it to a place of your choice</li>
+      <li>on Windows, create a shortcut for <code class="highlighter-rouge">eclipse.exe</code>, rename it <code class="highlighter-rouge">e46-gme.lnk</code> and copy it to the desktop or a place of your choice</li>
+      <li>on macOS, create a Finder alias for <code class="highlighter-rouge">Eclipse.app</code>, rename it <code class="highlighter-rouge">E46 GME</code> and move it to a place of your choice</li>
+      <li>on GNU/Linux, create a link for <code class="highlighter-rouge">eclipse</code>, rename it <code class="highlighter-rouge">E46 GME</code> and move it to a place of your choice</li>
     </ul>
   </li>
 </ul>
@@ -188,7 +203,7 @@
 <h3 id="start-the-new-eclipse">Start the new Eclipse</h3>
 
 <ul>
-  <li>create a new workspace, preferably in a separate folder, like <code class="highlighter-rouge">Eclipse Workspaces/w-gae-46</code> (note: be sure you create the workspace where you need it to be, since moving later is generally not supported by Eclipse; if you need this, preferably create a new workspace)</li>
+  <li>create a new workspace, preferably in a separate folder, like <code class="highlighter-rouge">Eclipse Workspaces/w-gme-46</code> (note: be sure you create the workspace where you need it to be, since moving later is generally not supported by Eclipse; if you need this, preferably create a new workspace)</li>
   <li>check if you installed the right Eclipse; go to the <em>Eclipse</em> menu → <strong>Help</strong> (<em>_Eclipse_</em> on macOS) → <strong>About Eclipse</strong> and the first line should read <strong>Eclipse IDE for Eclipse Committers</strong>
 </li>
   <li>
@@ -235,7 +250,7 @@
 <h3 id="install-base-api">Install base API</h3>
 
 <ul>
-  <li>go to <a href="http://www.eclipse.org/cdt/downloads.php">http://www.eclipse.org/cdt/downloads.php</a>, and download <code class="highlighter-rouge">cdt-8.6.0.zip</code> (required to keep compatibility with Eclipse 4.4 Luna SR2)</li>
+  <li>go to <a href="http://www.eclipse.org/cdt/downloads.php">http://www.eclipse.org/cdt/downloads.php</a>, and download <code class="highlighter-rouge">cdt-9.2.1.zip</code> (for compatibility with Ecipse 4.6 Neon.3)</li>
   <li>unpack the archive</li>
   <li>move the new folder to in the Eclipses folder</li>
   <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Plug-in Development</strong> → <strong>Target Platform</strong>
@@ -245,11 +260,11 @@
 </li>
       <li>Next
         <ul>
-          <li>Enter name: <strong>8.6.0 Luna</strong>
+          <li>Enter name: <strong>9.2.1 Neon</strong>
 </li>
           <li>click <strong>Add</strong> → <strong>Directory</strong>
 </li>
-          <li>click <strong>Browse</strong> → <code class="highlighter-rouge">cdt-8.6.0</code>
+          <li>click <strong>Browse</strong> → <code class="highlighter-rouge">cdt-9.2.1</code>
 </li>
           <li>click the <strong>Finish</strong> button</li>
         </ul>
@@ -271,8 +286,8 @@
       <li>click the <strong>Add Baseline…</strong> button</li>
       <li>select <strong>A target platform</strong>
         <ul>
-          <li>Enter name: 8.6.0 Luna</li>
-          <li>select 8.6.0 Luna</li>
+          <li>Enter name: 9.2.1 Neon</li>
+          <li>select 9.2.1 Neon</li>
           <li>click the <strong>Refresh</strong> button</li>
           <li>click the <strong>Finish</strong> button</li>
         </ul>
@@ -310,8 +325,15 @@
       <li>enable <strong>Show Line Numbers</strong>
 </li>
       <li>click the <strong>Apply</strong> button</li>
+    </ul>
+  </li>
+  <li>
+<strong>General</strong> → <strong>Editors</strong> → <strong>File Associations</strong>
+    <ul>
+      <li>click <strong>Add</strong> and add *.inf, *.sh, *.command, *.ini</li>
+      <li>for each, click the <strong>Add</strong> button in the Associate editors area</li>
+      <li>associate with the Text Editor</li>
       <li>click the <strong>OK</strong> button</li>
-      <li>click the <strong>Apply</strong> button</li>
     </ul>
   </li>
   <li>
@@ -331,6 +353,27 @@
       <li>click the <strong>Apply</strong> button</li>
     </ul>
   </li>
+  <li>
+<strong>XML</strong> → <strong>XML Files</strong> → <strong>Editor</strong>
+    <ul>
+      <li>Line width 72</li>
+      <li>enable <strong>Split multiple attributes…</strong>
+</li>
+      <li>disable <strong>Align final bracket…</strong>
+</li>
+      <li>enable <strong>Preserve whitespace..</strong>
+</li>
+      <li>enable <strong>Clear all blank lines</strong>
+</li>
+      <li>disable <strong>Format comments</strong>
+</li>
+      <li>enable <strong>Insert whitespace before closing…</strong>
+</li>
+      <li>enable <strong>Indent using tabs</strong>
+</li>
+      <li>click the <strong>Apply</strong> button</li>
+    </ul>
+  </li>
   <li>click the <strong>OK</strong> button</li>
 </ul>
 
@@ -340,34 +383,14 @@
 
 <p>Go to <a href="http://www.eclipse.org/downloads/">Eclipse download site</a> and follow the <a href="https://www.eclipse.org/downloads/eclipse-packages/">download packages</a> link</p>
 
-<h4 id="eclipse-46-neon">Eclipse 4.6 Neon</h4>
+<h4 id="eclipse-46-neon3">Eclipse 4.6 Neon.3</h4>
 
 <ul>
-  <li>download <strong>Eclipse IDE for C/C++ Developers</strong> (<code class="highlighter-rouge">eclipse-cpp-neon-2-macosx-cocoa-x86_64.tar.gz</code>)</li>
+  <li>download <strong>Eclipse IDE for C/C++ Developers</strong> (<code class="highlighter-rouge">eclipse-cpp-neon-3-macosx-cocoa-x86_64.tar.gz</code>)</li>
   <li>unpack the archive</li>
   <li>rename <em>_Eclipse_</em> to <strong>eclipse-cdt-test-46</strong>
 </li>
   <li>on macOS, make a Finder alias of the <strong>Eclipse.app</strong>, rename it <strong>E46 CDT test</strong> and move it to a place of your choice (the Desktop, for example)</li>
-</ul>
-
-<h4 id="eclipse-45-mars">Eclipse 4.5 Mars</h4>
-
-<ul>
-  <li>download <strong>Eclipse IDE for C/C++ Developers</strong> (<code class="highlighter-rouge">eclipse-cpp-mars-2-macosx-cocoa-x86_64.tar.gz</code>)</li>
-  <li>unpack the archive</li>
-  <li>rename <em>_Eclipse_</em> to <strong>eclipse-cdt-test-45</strong>
-</li>
-  <li>on macOS, make a Finder alias of the <strong>Eclipse.app</strong>, rename it <strong>E45 CDT test</strong> and move it to a place of your choice (the Desktop, for example)</li>
-</ul>
-
-<h4 id="eclipse-44-luna">Eclipse 4.4 Luna</h4>
-
-<ul>
-  <li>download <strong>Eclipse IDE for C/C++ Developers</strong> (<code class="highlighter-rouge">eclipse-cpp-luna-SR2-macosx-cocoa-x86_64.tar.gz</code>)</li>
-  <li>unpack the archive</li>
-  <li>rename <em>_Eclipse_</em> to <strong>eclipse-cdt-test-44</strong>
-</li>
-  <li>on macOS, make a Finder alias of the <strong>Eclipse.app</strong>, rename it <strong>E44 CDT test</strong> and move it to a place of your choice (the Desktop, for example)</li>
 </ul>
 
 <h2 id="clone-the-repository">Clone the repository</h2>
@@ -375,8 +398,8 @@
 <p>On Unix systems, the recommended method is using a command line:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>$ cd .../GNU MCU Eclipse
-$ git clone https://github.com/gnu-mcu-eclipse/eclipse-plugins.git plug-ins.git
+<pre class="highlight"><code>$ cd .../GNU\ MCU\ Eclipse
+$ git clone https://github.com/gnu-mcu-eclipse/eclipse-plugins.git eclipse-plugins.git
 </code></pre>
 </div>
 
@@ -392,40 +415,41 @@ $ git clone https://github.com/gnu-mcu-eclipse/eclipse-plugins.git plug-ins.git
 </li>
   <li>Select
     <ul>
-      <li>Maven → <strong>Existing Maven Projects</strong>
+      <li>General → <strong>Existing Projects into Workspace</strong>
 </li>
       <li>click <strong>Next</strong>
 </li>
     </ul>
   </li>
-  <li>Maven Projects
+  <li>Import Projects
     <ul>
-      <li>Root Directory: <code class="highlighter-rouge">.../GNU MCU Eclipse/plug-ins.git</code>
+      <li>Root Directory: <code class="highlighter-rouge">.../GNU MCU Eclipse/eclipse-plugins.git</code>
 </li>
-      <li>keep all selected</li>
-      <li>Add project(s) to working set: GNU MCU Eclipse</li>
-      <li>click <strong>Finish</strong>
-If doing this on a fresh Eclipse</li>
-      <li>accept m23 settings</li>
-      <li>accept to install <strong>Tycho Project Configurators</strong>
+      <li>enable <strong>Search for nested projects</strong>
+</li>
+      <li>disable <strong>Add project(s) to working set</strong>
 </li>
       <li>click <strong>Finish</strong>
 </li>
     </ul>
   </li>
-  <li>Restart</li>
 </ul>
 
 <h2 id="configure-the-working-sets">Configure the working sets</h2>
+
+<p>Create Workspace Sets (for example one for plug-ins, one for features, one for repositories and one for the parent project).</p>
 
 <p>In the Package Explorer:</p>
 
 <ul>
   <li>click the down pointing triangle icon and select <strong>Configure Working Sets</strong>.
     <ul>
-      <li>select GNU MCU Eclipse and click the <strong>Edit…</strong> button</li>
-      <li>click the <strong>Select All</strong> button</li>
+      <li>click the <strong>New</strong> button</li>
+      <li>click the <strong>Resource</strong> category</li>
+      <li>Give the set a name (for example GNU MCU Eclipse plug-ins)</li>
+      <li>select the desired projects</li>
       <li>click the <strong>Finish</strong> button</li>
+      <li>repeat for all desires sets</li>
     </ul>
   </li>
   <li>click the <strong>OK</strong> button</li>
@@ -440,16 +464,16 @@ If doing this on a fresh Eclipse</li>
 </code></pre>
 </div>
 
-<p>Without this option, Maven will issue many warnings, like:</p>
+<p>Without this option, Maven might issue many warnings, like:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>[INFO] Resolving dependencies of MavenProject: ilg.gnuarmeclipse:ilg.gnuarmeclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnuarmeclipse.core/pom.xml
+<pre class="highlight"><code>[INFO] Resolving dependencies of MavenProject: ilg.gnumcueclipse:ilg.gnumcueclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnumcueclipse.core/pom.xml
 [WARNING] The following locally built units have been used to resolve project dependencies:
 [WARNING]   org.eclipse.cdt.make.core/7.3.0.201702180936
 [WARNING]   org.eclipse.cdt/9.2.0.201702180936
 [WARNING]   org.eclipse.cdt.core.native/5.10.0.201702180936
 [WARNING]   org.eclipse.cdt.managedbuilder.core/8.4.0.201702180936
-[INFO] Resolving class path of MavenProject: ilg.gnuarmeclipse:ilg.gnuarmeclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnuarmeclipse.core/pom.xml
+[INFO] Resolving class path of MavenProject: ilg.gnumcueclipse:ilg.gnumcueclipse.core:3.3.1-SNAPSHOT @ /Users/ilg/My Files/MacBookPro Projects/GNU MCU Eclipse/plug-ins.git/ilg.gnumcueclipse.core/pom.xml
 </code></pre>
 </div>
 
@@ -458,21 +482,29 @@ If doing this on a fresh Eclipse</li>
 <p>To start the Maven build from Eclipse</p>
 
 <ul>
-  <li>select the <strong>gnuarmeclipse-parent</strong> project</li>
+  <li>select the <strong>gnumcueclipse-plugins</strong> project</li>
   <li>
 <em>Eclipse</em> menu → <strong>Run</strong> → <strong>Run Configurations…</strong>
 </li>
   <li>double click the <strong>Maven Build</strong> enty</li>
+  <li>
+<strong>Name:</strong> <code class="highlighter-rouge">GME clean verify</code>
+</li>
   <li>in the Main tab
     <ul>
-      <li>Goals: <code class="highlighter-rouge">clean install</code>
+      <li>Goals: <code class="highlighter-rouge">clean verify</code>
 </li>
       <li>add a new parameter, name <code class="highlighter-rouge">tycho.localArtifacts</code>, value <code class="highlighter-rouge">ignore</code>
 </li>
     </ul>
   </li>
   <li>click the <strong>Apply</strong> button</li>
-  <li>click the <strong>Run</strong> button</li>
+  <li>in the JRE tab
+    <ul>
+      <li>Execution environment JavaSE-1.8</li>
+    </ul>
+  </li>
+  <li>click the <strong>Apply</strong> button</li>
 </ul>
 
 <h2 id="cdt-wiki">CDT Wiki</h2>
@@ -482,7 +514,7 @@ If doing this on a fresh Eclipse</li>
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
+<p class="page-footer">Last modified on Tue Jul 11 15:43:37 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/build-prerequisites/" data-layout="button"></div>
 
 
