@@ -153,13 +153,10 @@
 <a href="#close-issues"><span class="tocnumber">17</span> <span class="toctext">Close issues</span></a>
 </li>
 <li class="toc_level-1 toc_section-18">
-<a href="#publish-on-sourceforge-"><span class="tocnumber">18</span> <span class="toctext">Publish on SourceForge ()</span></a>
+<a href="#share-on-facebook"><span class="tocnumber">18</span> <span class="toctext">Share on Facebook</span></a>
 </li>
 <li class="toc_level-1 toc_section-19">
-<a href="#share-on-facebook"><span class="tocnumber">19</span> <span class="toctext">Share on Facebook</span></a>
-</li>
-<li class="toc_level-1 toc_section-20">
-<a href="#update-the-eclipse-marketplace-records"><span class="tocnumber">20</span> <span class="toctext">Update the Eclipse Marketplace records</span></a>
+<a href="#update-the-eclipse-marketplace-records"><span class="tocnumber">19</span> <span class="toctext">Update the Eclipse Marketplace records</span></a>
 </li>
 </ul>
 </td>
@@ -463,11 +460,11 @@ logout
 <h2 id="publish-the-web">Publish the Web</h2>
 
 <ul>
-  <li>Git Push &amp; Sync the <strong>gnuarmeclipse.github.io-source</strong> project; use something like <code class="highlighter-rouge">v3.2.1-201701141320 released</code> as message</li>
+  <li>Git Push &amp; Sync the <strong>gnu-mcu-eclipse.github.io-source</strong> project; use something like <code class="highlighter-rouge">v3.2.1-201701141320 released</code> as message</li>
   <li>wait for the Travis build to complete; occasionally links to not work, and might need to restart the build</li>
 </ul>
 
-<p>Note: the release must exist, otherwise Travis will complain and do not publish the site to <strong>gnuarmeclipse.github.io</strong>.</p>
+<p>Note: the release must exist, otherwise Travis will complain and do not publish the site to <strong>gnu-mcu-eclipse.github.io</strong>.</p>
 
 <h2 id="update-the-release-link">Update the release link</h2>
 
@@ -482,26 +479,15 @@ logout
 
 <p>The code looks like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnuarmeclipse/plug-ins/v3.4.1-201704251808/total.svg)](http://gnuarmeclipse.github.io/blog/2017/02/25/plugins-v3.4.1-201704251808-released/)
+<div class="highlighter-rouge"><pre class="highlight"><code>[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/plug-ins/v4.1.1-201707111115/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/)
 </code></pre>
 </div>
+
+<p>Copy/paste it after <em>Continue reading…</em> and update the URLs.</p>
 
 <h2 id="close-issues">Close issues</h2>
 
 <p>For all <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues">GitHub issues</a> marked with the current version, close them with a message like <em>fixed since v3.2.1-201701141320</em>.</p>
-
-<h2 id="publish-on-sourceforge-">Publish on SourceForge ()</h2>
-
-<ul>
-  <li>go to <a href="http://sourceforge.net/projects/gnuarmeclipse/files/Current%20Releases/">SourceForge Files</a></li>
-  <li>select the folder corresponding to the latest version (currently <strong>3.x</strong>); create a new one if necessary</li>
-  <li>click the <strong>Add File</strong> button</li>
-  <li>drag and drop the file (for example ilg.gnuarmeclipse.repository-3.1.1-201606210758.zip) in the upload window and click the <strong>Upload</strong> button</li>
-  <li>click the <strong>Done</strong> button</li>
-  <li>check it the new file was published; click the info icon</li>
-  <li>enable the <strong>Windows</strong>, <strong>macOS</strong> and <strong>Linux</strong> buttons</li>
-  <li>after a while the new upload will be marked as latest version</li>
-</ul>
 
 <h2 id="share-on-facebook">Share on Facebook</h2>
 
@@ -509,7 +495,7 @@ logout
   <li>go to the new post and follow the Share link.</li>
   <li>DO NOT select <strong>On your own Timeline</strong>, but <strong>On a Page you manage</strong></li>
   <li>select GNU MCU Eclipse</li>
-  <li>posting as GNU ARM Eclipse</li>
+  <li>posting as GNU MCU Eclipse</li>
   <li>click <strong>Share link</strong></li>
   <li>check the post in the <a href="https://www.facebook.com/gnu-mcu-eclipse">Facebook page</a></li>
 </ul>
@@ -517,7 +503,7 @@ logout
 <h2 id="update-the-eclipse-marketplace-records">Update the Eclipse Marketplace records</h2>
 
 <ul>
-  <li>go to <a href="https://marketplace.eclipse.org/content/gnu-arm-eclipse">Eclipse Marketplace</a></li>
+  <li>go to <a href="https://marketplace.eclipse.org/content/gnu-mcu-eclipse">Eclipse Marketplace</a></li>
   <li>log in</li>
   <li>click <strong>Edit</strong></li>
   <li>update version number, minimum Eclipse versions.</li>
@@ -526,7 +512,7 @@ logout
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Tue Jul 11 12:37:33 2017 UTC.</p>
+<p class="page-footer">Last modified on Tue Jul 11 13:54:46 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/publish-procedure/" data-layout="button"></div>
 
 
