@@ -27,7 +27,6 @@
   <meta property="article:tag" content="risc-v" />
   <meta property="article:tag" content="mcu" />
   <meta property="article:tag" content="eclipse" />
-  <meta property="article:tag" content="packs" />
 
 
   <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
@@ -143,7 +142,7 @@ Posted on July 11, 2017 by Liviu Ionescu.
 </tr>
 </tbody>
 </table>
-</div><p>Version 4.1.1-201707111115 is a major release; thanks to a contribution from <a href="https://www.sifive.com">SiFive</a>, the project was enhanced with support for <a href="https://riscv.org">RISC-V</a> devices and, to better reflect the multi-platform nature, was rebranded as <strong>GNU MCU Eclipse</strong>.</p>
+</div><p>Version 4.1.1-201707111115 is a major release; thanks to a contribution from <a href="https://www.sifive.com">SiFive</a>, the project was enhanced with support for <a href="https://riscv.org">RISC-V</a> devices and, to better reflect the multi-platform nature, was rebranded <strong>GNU MCU Eclipse</strong>.</p>
 
 <p>
 <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/tag/v4.1.1-201707111115">Binary files »</a>
@@ -153,14 +152,21 @@ Posted on July 11, 2017 by Liviu Ionescu.
 
 <ul>
   <li>a new build plug-in that allows to create and manage RISC-V projects was added</li>
-  <li>explicit support for `–specs=nosys.specs’  added to both ARM and RISC-V plug-ins</li>
-  <li>a new RISC-V only repository was added</li>
+</ul>
+
+<p>
+<img src="/assets/images/2017/riscv-tool-settings.png" alt="RISC-V plug-in tool settings" />
+</p>
+
+<ul>
+  <li>explicit support for <code class="highlighter-rouge">--specs=nosys.specs</code>  added to both ARM and RISC-V plug-ins</li>
+  <li>a new RISC-V only repository was added at <code class="highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/riscv-v4-neon-updates/</code></li>
 </ul>
 
 <h2 id="addressed-bugs">Addressed bugs</h2>
 
 <ul>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/207">Issue:#207</a>]: the regular expression used when processing dynamic variables had a flow; fixed;</li>
+  <li>none</li>
 </ul>
 
 <h2 id="template-changes">Template changes</h2>
@@ -172,19 +178,18 @@ Posted on July 11, 2017 by Liviu Ionescu.
 <h2 id="other-changes">Other changes</h2>
 
 <ul>
-  <li>the minimum requirements were raised to Eclipse 4.6 Neon.3, with Java 1.8;</li>
+  <li>the minimum requirements were raised to <strong>Eclipse 4.6 Neon.3</strong>, with <strong>Java 1.8</strong>;</li>
   <li>with the addition of the RISC-V build plug-in, common ARM &amp; RISC-V code was re-structured</li>
-  <li>the preferences and properties pages to configure paths were moved from **C/C++ and Run/Debug under a common MCU page; separate pages for the ARM toolchain, RISC-V toolchain, Windows Build Tools, SEGGER J-Link, OpenOCD, pyOCD are available;</li>
-  <li>the mechanism used to configure the debug plug-ins was migrated from Eclipse stringd to dynamic variables; macros like <code class="highlighter-rouge">${cross_prefix}</code> are all internal and are no longer present in the Run/Debug -&gt; String Sbstitution preference page for inadvertent changes;</li>
-  <li>the update sites were migrated from SourceForge to <a href="https://bintray.com/gnu-mcu-eclipse/v4-neon-updates">Bintray</a>; the public URL for v4.x were migrated to (<code class="highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates</code>) and will be automatically redirected to the new server; currently there are no more functional dependencies on SourceForge;</li>
-  <li>the build scripts were updated to use SHA to compute the checksums for the generated binaries.</li>
+  <li>the preferences and properties pages to configure paths were moved from <strong>C/C++</strong> and <strong>Run/Debug</strong> under a common <strong>MCU</strong> page; separate pages for the ARM toolchain, RISC-V toolchain, Windows Build Tools, SEGGER J-Link, OpenOCD, pyOCD are available;</li>
+  <li>the mechanism used to configure the debug plug-ins was migrated from Eclipse strings to dynamic variables; macros like <code class="highlighter-rouge">${cross_prefix}</code> are all internal and are no longer present in the Run/Debug -&gt; String Substitution preference page for inadvertent changes;</li>
+  <li>the update sites were migrated from SourceForge to <a href="https://bintray.com/gnu-mcu-eclipse/v4-neon-updates">Bintray</a>; the new public URL for v4.x is (<code class="highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/</code>) and will be automatically redirected to the new server; currently there are no more functional dependencies on SourceForge;</li>
 </ul>
 
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>the new plug-ins cannot be installed on older Eclipses; for this, use version 3.x, available from the same update site (<code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates</code>);</li>
-  <li>the new plug-ins have IDs prefixed with <code class="highlighter-rouge">ilg.gnumcueclipse.</code>, while the old IDs were prefixed with <code class="highlighter-rouge">ilg.gnuarmeclipse.</code>; being completely different, this allows to install the new plug-ins along the old one, but this should be avoided, and the old plug-ins should be uninstalled; preferably a new Eclipse instance should be used.</li>
+  <li>the new plug-ins cannot be installed on older Eclipses; for this, use the latest 3.x version, available from the deprecated update site (<code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates</code>);</li>
+  <li>the new plug-ins have IDs prefixed with <code class="highlighter-rouge">ilg.gnumcueclipse.</code>, while the old IDs were prefixed with <code class="highlighter-rouge">ilg.gnuarmeclipse.</code>; being completely different, this allows to install the new plug-ins alongside the old ones, but this should be avoided, and the old plug-ins should be manually uninstalled; preferably a new Eclipse instance should be used.</li>
 </ul>
 
 
@@ -194,8 +199,8 @@ Posted in
 
 <strong>releases</strong>, <strong>plugins</strong> and tagged
 
-<strong>gnu</strong>, <strong>arm</strong>, <strong>risc-v</strong>, <strong>mcu</strong>, <strong>eclipse</strong>, <strong>packs</strong>.
-</br>Last modified on Tue Jul 11 12:43:46 2017 UTC.
+<strong>gnu</strong>, <strong>arm</strong>, <strong>risc-v</strong>, <strong>mcu</strong>, <strong>eclipse</strong>.
+</br>Last modified on Tue Jul 11 13:27:21 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/" data-layout="button"></div>
 </p>
 
