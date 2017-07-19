@@ -105,7 +105,7 @@
 <a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#arm-toolchain"><span class="tocnumber">2</span> <span class="toctext">ARM Toolchain</span></a>
+<a href="#toolchain"><span class="tocnumber">2</span> <span class="toctext">Toolchain</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
 <a href="#windows-build-tools"><span class="tocnumber">3</span> <span class="toctext">Windows Build Tools</span></a>
@@ -146,11 +146,11 @@
 
 <p>The recommended sequence is described below.</p>
 
-<h2 id="arm-toolchain">ARM Toolchain</h2>
+<h2 id="toolchain">Toolchain</h2>
 
-<p>This is generally a mandatory step for all platforms, since most platforms do not come by default with an ARM toolchain.</p>
+<p>This is generally a mandatory step for all platforms, since most platforms do not come by default with an embedded GCC toolchain (ARM or RISC-V).</p>
 
-<p>Please follow the steps in the <a href="/toolchain/arm/install">ARM Toolchain install</a> page.</p>
+<p>Please follow the steps in the <a href="/toolchain/arm/install">ARM Toolchain install</a> or <a href="/toolchain/riscv/install">RISC-V Toolchain install</a> page.</p>
 
 <h2 id="windows-build-tools">Windows Build Tools</h2>
 
@@ -158,7 +158,7 @@
 
 <p>Please follow the steps in the <a href="/windows-build-tools/install/">How to install the Windows Build Tools</a> page.</p>
 
-<p>POSIX platforms generally include <code class="highlighter-rouge">make</code> in the system distribution, or might require to install some developer packages.</p>
+<p>POSIX platforms generally include <code class="highlighter-rouge">make</code> in the system distribution, or might require to install some developer packages (for example on macOS you need to install the Xcode Command Line Tools).</p>
 
 <h2 id="segger-j-link">SEGGER J-Link</h2>
 
@@ -169,6 +169,8 @@
 <p>For the unfortunate developers who do not have a J-Link available, the alternative is to follow the steps in the <a href="/openocd/install">How to install the OpenOCD binaries</a> page.</p>
 
 <p>OpenOCD might be needed when using development boards with integrated debuggers, like STM32F4-DISCOVERY boards, although the recommended solution is to prepare a <a href="/developer/j-link-stm32-boards">custom cable</a> and connect them to J-Link.</p>
+
+<p>OpenOCD is also needed when using RISC-V boards with integrated debuggers.</p>
 
 <h2 id="qemu">QEMU</h2>
 
@@ -188,7 +190,9 @@
 
 <p>Eclipse is the development platform where the GNU MCU Eclipse plug-ins run. Generally it is not available by default on most platforms and requires separate installation.</p>
 
-<p>Be sure you install the <strong>Eclipse IDE for C/C++ Developers</strong>, not other package, since otherwise you’ll have to manually install CDT.</p>
+<p>The simple way is to download <strong>GNU MCU Eclipse IDE for C/C++ Developers</strong> from <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/">GitHub Releases</a> and you get at once both Eclipse CDT and the MCU plug-ins.</p>
+
+<p>If you prefer the manual way, be sure you install the <strong>Eclipse IDE for C/C++ Developers</strong>, not other package, since otherwise you’ll have to manually install CDT.</p>
 
 <p>More details are available in the <a href="/plugins/install/">How to install the GNU MCU Eclipse plug-ins</a> page.</p>
 
@@ -206,7 +210,7 @@
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Thu Jul  6 22:00:35 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Jul 19 14:39:30 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/install/" data-layout="button"></div>
 
 

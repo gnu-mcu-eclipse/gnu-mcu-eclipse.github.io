@@ -165,24 +165,27 @@
 <li class="toc_level-2 toc_section-20">
 <a href="#ubuntu-gtk-issue"><span class="tocnumber">6.4</span> <span class="toctext">Ubuntu GTK issue</span></a>
 </li>
+<li class="toc_level-2 toc_section-21">
+<a href="#macos-comapplequarantine"><span class="tocnumber">6.5</span> <span class="toctext">macOS com.apple.quarantine</span></a>
+</li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-21">
+<li class="toc_level-1 toc_section-22">
 <a href="#plug-ins-versions"><span class="tocnumber">7</span> <span class="toctext">Plug-ins versions</span></a>
 </li>
-<li class="toc_level-1 toc_section-22">
+<li class="toc_level-1 toc_section-23">
 <a href="#set-workspace-preferences"><span class="tocnumber">8</span> <span class="toctext">Set workspace preferences</span></a>
 </li>
-<li class="toc_level-1 toc_section-23">
+<li class="toc_level-1 toc_section-24">
 <a href="#download-cmsis-packs"><span class="tocnumber">9</span> <span class="toctext">Download CMSIS Packs</span></a>
 </li>
-<li class="toc_level-1 toc_section-24">
+<li class="toc_level-1 toc_section-25">
 <a href="#toolchain-and-debugging-support"><span class="tocnumber">10</span> <span class="toctext">Toolchain and debugging support</span></a>
 </li>
-<li class="toc_level-1 toc_section-25">
+<li class="toc_level-1 toc_section-26">
 <a href="#test-project"><span class="tocnumber">11</span> <span class="toctext">Test project</span></a>
 </li>
-<li class="toc_level-1 toc_section-26">
+<li class="toc_level-1 toc_section-27">
 <a href="#support"><span class="tocnumber">12</span> <span class="toctext">Support</span></a>
 </li>
 </ul>
@@ -205,7 +208,7 @@
 </a>
 </p>
 
-<p>If you want to do it manually, you only need the update site details:</p>
+<p>If, for any reason, this does not work and you have to do it manually, you only need the update site details:</p>
 
 <ul>
   <li>name: <strong>GNU MCU Eclipse Plug-ins</strong></li>
@@ -219,7 +222,7 @@
 <blockquote>
   <p>Important notes:</p>
   <ul>
-    <li>if you use the Oracle JDK, starting with mid January, attempts to install from SourceForge <a href="/blog/2017/01/29/plugins-install-issue/">fail with handshake_error</a>;</li>
+    <li>if you use the Oracle JDK, starting with mid January 2017, attempts to install from SourceForge <a href="/blog/2017/01/29/plugins-install-issue/">fail with handshake_error</a>;</li>
     <li>if you are behind a firewall, older Java virtual machines <a href="/blog/2016/12/02/plugins-install-issue/">fail to connect to SourceForge</a>.</li>
   </ul>
 </blockquote>
@@ -240,7 +243,7 @@
 
 <h3 id="java">Java</h3>
 
-<p>The recommended package is the latest version from the official <a href="http://www.oracle.com/technetwork/java/javase/index.html">Oracle <strong>Java SE</strong> page</a>. The <strong>OpenJDK Java</strong> used in Ubuntu is also fine. The minimum is JDK 1.7, or even JRE 1.7 (the Java Runtime Environment), but, as said before, better use the latest JDK (currently 1.8). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.</p>
+<p>The recommended package is the latest version from the official <a href="http://www.oracle.com/technetwork/java/javase/index.html">Oracle <strong>Java SE</strong> page</a>. The <strong>OpenJDK Java</strong> used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8 (the Java Runtime Environment), but, as said before, better use the latest JDK (currently 1.8.141). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.</p>
 
 <p>On some distributions, for example on Ubuntu 16.04 LTS, Java seems to be already installed in the standard distribution:</p>
 
@@ -265,13 +268,11 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <h3 id="java-cryptography-extension-jce">Java Cryptography Extension (JCE)</h3>
 
-<p>If you use the Oracle JDK, starting with mid January 2017, attempts to install from SourceForge might <a href="/blog/2017/01/29/plugins-install-issue/">fail with handshake_error</a>. Install the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html">Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files</a> and the installer should be able to reach the update site.</p>
+<p>If you use the Oracle JDK, starting with mid January 2017, attempts to install via HTTPS from SourceForge might <a href="/blog/2017/01/29/plugins-install-issue/">fail with handshake_error</a>. Install the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html">Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files</a> and the installer should be able to reach the update site.</p>
 
 <h3 id="eclipse--cdt">Eclipse &amp; CDT</h3>
 
-<p>The oldest Eclipse supported by the plug-ins is Eclipse 4.4 Luna SR2 (CDT 8.6), and the recommended version is <strong>4.5 Mars SR2</strong>. Do not try to install them on Kepler, Juno, Indigo, or older versions, since the install will fail.</p>
-
-<p><strong>Neon</strong> initially had several problems, but starting with <strong>Neon.3</strong> it finally seems fully functional. Avoid previous Neon versions, since they do not work properly. If you want to use GCC 6.x, you <strong>need</strong> Neon.3 (the compiler itself has no problems working with Mar, but GDB 7.12 is not supported on versions before Neon.3).</p>
+<p>Starting with version 4.x, the oldest Eclipse supported by the plug-ins is Eclipse 4.6 Neon.3 (CDT 9.2), and the recommended version is <strong>4.5 Mars SR2</strong>. Do not try to install them on Mars, Luna, Kepler, Juno, Indigo, or older versions, since the install will fail.</p>
 
 <h4 id="the-package-way">The package way</h4>
 
@@ -309,7 +310,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <h3 id="cdt">CDT</h3>
 
-<p>The minimum CDT version is 8.6. Do not try to use earlier versions, since either the install will fail (with something like <em>… requires ‘bundle org.eclipse.cdt 8.6.0’ but it could not be found</em>), or it will not run properly.</p>
+<p>The minimum CDT version is 9.2.1. Do not try to use earlier versions, since either the install will fail (with something like <em>… requires ‘bundle org.eclipse.cdt 9.2.1’ but it could not be found</em>), or it will not run properly.</p>
 
 <p>As mentioned before, the recommended way is to use a fresh <strong>Eclipse IDE for C/C++ Developers</strong> for the cross ARM development projects. Even if you did so, but especially if you did not do so, it is a good idea to check if you really have the latest version available. For this, enter the <em>Eclipse</em> menu and go to <strong>Help</strong> → <strong>Install New Software</strong></p>
 
@@ -318,27 +319,32 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 </p>
 
 <ul>
-  <li>select <em>Work with:</em> <strong>Mars</strong> (or more recent)</li>
+  <li>select <em>Work with:</em> <strong>Neon</strong> (or more recent)</li>
   <li>if the <em>Group items by category </em>is enabled, expand the <strong>Programming Languages</strong> group</li>
   <li>select the <strong>C/C++ Development Tools</strong> feature</li>
   <li>click the <strong>Next</strong> button and follow the usual installation procedure</li>
 </ul>
 
 <p>
-<img src="/assets/images/2016/install-cdt.png" alt="CDT install" />
+<img src="/assets/images/2017/install-cdt.png" alt="CDT install" />
 </p>
 
 <h3 id="compatibility-issues">Compatibility issues</h3>
 
-<p>Please note that starting with 3.1.x, compatibility with Eclipses previous than 4.4 Luna was no longer possible. If, for any reason, you need a solution for Eclipse Kepler, you can try the GNU MCU Eclipse Plug-in version 2.12, but please keep in mind that this version is no longer maintained.</p>
+<p>Please note that starting with 4.x, compatibility with Eclipses previous than 4.6 Neon was no longer possible. If, for any reason, you need a solution for Eclipse Luna or Mars, you can try the GNU MCU Eclipse Plug-in version 3.*, but please keep in mind that this version is no longer maintained.</p>
 
-<p>Similarly, starting with 1.1.x, compatibility with Eclipses previous than 4.3 Kepler was no longer possible. If, for any reasons, you need a solution for older Eclipse versions, you can try the GNU MCU Eclipse Plug-in version 0.5.5, but please keep in mind that this old version is no longer maintained.</p>
+<p>Similarly:</p>
+
+<ul>
+  <li>starting with 3.1.x, compatibility with Eclipses previous than 4.4 Luna was no longer possible. If, for any reason, you need a solution for Eclipse Kepler, you can try the GNU MCU Eclipse Plug-in version 2.12, but please keep in mind that this version is no longer maintained.</li>
+  <li>starting with 1.1.x, compatibility with Eclipses previous than 4.3 Kepler was no longer possible. If, for any reasons, you need a solution for older Eclipse versions, you can try the GNU MCU Eclipse Plug-in version 0.5.5, but please keep in mind that this old version is no longer maintained.</li>
+</ul>
 
 <h2 id="plug-ins-installupdate">Plug-ins install/update</h2>
 
 <p>The following samples are from a slightly older Eclipse 4.3 Kepler on macOS. Other platforms may behave slightly different, but the idea is the same.</p>
 
-<p><strong>Warning:</strong> Be sure your Eclipse is 4.4 Luna SR2 or later, otherwise the plug-ins will refuse to install, claiming <strong>Missing requirements</strong> and <strong>Cannot satisfy dependency</strong>.</p>
+<p><strong>Warning:</strong> Be sure your Eclipse is 4.6 Neon.3 or later, otherwise the plug-ins will refuse to install, claiming <strong>Missing requirements</strong> and <strong>Cannot satisfy dependency</strong>.</p>
 
 <h3 id="the-eclipse-marketplace-way">The Eclipse Marketplace way</h3>
 
@@ -353,7 +359,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 <p>This should make Eclipse automatically contact the Marketplace and present a window with all GNU MCU Eclipse features:</p>
 
 <p>
-<img src="/assets/images/2015/eclipse-marketplace-features.png" alt="Eclipse Marketplace Features" />
+<img src="/assets/images/2017/eclipse-marketplace-features.png" alt="Eclipse Marketplace Features" />
 </p>
 
 <p>If, for any reason, this does not work, it is always possible to search the Eclipse Marketplace manually:</p>
@@ -364,11 +370,9 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
   <li>click the Go button</li>
 </ul>
 
-<p>This should identify GNU MCU Eclipse and offer to Install/Update/Uninstall.</p>
-
-<p>
-<img src="/assets/images/2015/eclipse-marketplace-search.png" alt="Eclipse Marketplace Search" />
-</p>
+<p>This should identify GNU MCU Eclipse and offer to Install/Update/Uninstall 
+assets
+<img src="/assets/images/2017/eclipse-marketplace-search.png" alt="Eclipse Marketplace Search" /></p>
 
 <h3 id="the-eclipse-update-site-way">The Eclipse update site way</h3>
 
@@ -382,18 +386,18 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 </ul>
 
 <p>
-<img src="/assets/images/2013/10/AddRepository.png" alt="AddRepository" />
+<img src="/assets/images/2017/add-repository.png" alt="AddRepository" />
 </p>
 
 <ul>
-  <li>normally the main window should list a group named <strong>CDT GNU Cross Development Tools</strong>; expand it</li>
+  <li>normally the main window should list a group named <strong>GNU ARM &amp; RISC-V Cross Development Tools</strong>; expand it</li>
   <li>(in case the main window will list <em>There are no categorized items</em>, you are probably using a very old version; disable the Group items by category option)</li>
   <li>select all the plug-ins (the one marked <em>End of life</em> is needed only for compatibility with previous version, normally can be safely skipped)</li>
   <li>click the <strong>Next</strong> button and follow the usual installation procedure</li>
 </ul>
 
 <p>
-<img src="/assets/images/2014/04/PluginsInstall.png" alt="Plug-ins install" />
+<img src="/assets/images/2017/plugins-install.png" alt="Plug-ins install" />
 </p>
 
 <p>Once you define the update site URL, further updates are greatly simplified (<strong>Help</strong> → <strong>Check For Updates</strong>).</p>
@@ -423,7 +427,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 <img src="/assets/images/2013/10/GDB_Hardware_Install.png" alt="Install the GDB Hardware" />
 </p>
 
-<p>Note: Attempts to install the GNU MCU Eclipse plug-ins off-line without having the <strong>C/C++ GDB Hardware Debugging</strong> installed fails with an error related to installing the <code class="highlighter-rouge">ilg.gnuarmeclipse.debug.gdbjtag.jlink.feature.group</code> and other debugging features.</p>
+<p>Note: Attempts to install the GNU MCU Eclipse plug-ins off-line without having the <strong>C/C++ GDB Hardware Debugging</strong> installed fails with an error related to installing the <code class="highlighter-rouge">ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.group</code> and other debugging features.</p>
 
 <p>On-line install do not have this problem since the Eclipse automatically downloads the C/C++ GDB Hardware Debugging plug-in from the CDT update site.</p>
 
@@ -502,6 +506,16 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 </code></pre>
 </div>
 
+<h3 id="macos-comapplequarantine">macOS com.apple.quarantine</h3>
+
+<p>On macOS Sierra and later, unsigned applications are marked as <em>quarantined</em> and subject to a path randomization, which prevents Eclipse to maintain persistent preferences (for more details see <a href="https://ilgthegeek.wordpress.com/2017/07/13/macos-com-apple-quarantine/">blog post</a>). To disable this, remove the <code class="highlighter-rouge">com.apple.quarantine</code> extended attribute from <code class="highlighter-rouge">Eclipse.app</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ xattr Eclipse.app
+com.apple.quarantine
+$ xattr -d com.apple.quarantine Eclipse.app
+</code></pre>
+</div>
+
 <h2 id="plug-ins-versions">Plug-ins versions</h2>
 
 <p>One of the confusing details of the GNU MCU Eclipse plug-ins versioning system is matching the version from the release announcement (for example <strong>Version 2.6.1-201502281154 released</strong>) with existing plug-ins/features.</p>
@@ -509,16 +523,16 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 <p>The short answer is that the announced version refers to the update site, also packed as an archive, and available from SourceForge. The same version is also used for the <code class="highlighter-rouge">ilg.gnuarmeclipse.core</code> plug-in:</p>
 
 <p>
-<img src="/assets/images/2013/10/Plugins.png" alt="Installed plug-ins" />
+<img src="/assets/images/2017/plugins-versions.png" alt="Installed plug-ins" />
 </p>
 
 <p>Although the core plug-in is referred by all features, this version number cannot be found in the list of the features:</p>
 
 <p>
-<img src="/assets/images/2013/10/Features.png" alt="Installed features" />
+<img src="/assets/images/2017/features.png" alt="Installed features" />
 </p>
 
-<p>However, the common point for all these magic numbers is the release date, <em>201502281154</em> in this case, which is identical for all plug-ins and features.</p>
+<p>However, the common point for all these magic numbers is the release date, <em>201707191338</em> in this case, which is identical for all plug-ins and features.</p>
 
 <p>Thus, the recommended method to <strong>identify plug-ins and features</strong> is <strong>by date, not by version</strong>, which differs from object to object.</p>
 
@@ -555,7 +569,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Wed Jul 12 22:12:22 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Jul 19 14:39:30 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/install/" data-layout="button"></div>
 
 
