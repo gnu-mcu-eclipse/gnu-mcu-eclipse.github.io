@@ -2,18 +2,19 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
   <title>Programmer</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="Programmer" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
+  <meta property="og:title" content="Programmer">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
   <meta property="article:published_time" content="2017-07-17">
@@ -22,9 +23,9 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201707092118" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201707092118" media="print">
@@ -32,7 +33,7 @@
   <link rel="canonical" href="/arch/riscv/programmer/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -74,7 +75,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -249,7 +250,8 @@
 
 <h3 id="32-bits">32 bits</h3>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>./riscv64-unknown-elf-gcc -march<span class="o">=</span>rv32i -mabi<span class="o">=</span>ilp32 -E -dM - &lt; /dev/null | egrep -i <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+<div class="language-bash highlighter-rouge">
+<pre class="highlight"><code><span class="gp">$ </span>./riscv64-unknown-elf-gcc -march<span class="o">=</span>rv32i -mabi<span class="o">=</span>ilp32 -E -dM - &lt; /dev/null | egrep -i <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
 <span class="c">#define __GXX_ABI_VERSION 1011</span>
 <span class="c">#define __STDC_VERSION__ 201112L</span>
 <span class="c">#define __VERSION__ "7.1.1 20170509"</span>
@@ -295,7 +297,8 @@
 
 <h3 id="64-bits">64 bits</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ./riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -E -dM - &lt; /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
+<div class="highlighter-rouge">
+<pre class="highlight"><code>$ ./riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -E -dM - &lt; /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
 #define _LP64 1
 #define __GXX_ABI_VERSION 1011
 #define __LP64__ 1
@@ -347,25 +350,85 @@ $ ./riscv64-unknown-elf-gcc -march=rv64imafdc -mabi=lp64d -E -dM - &lt; /dev/nul
 
 <h3 id="misc">Misc</h3>
 
-<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="cp">#define __riscv_xlen 32
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#define __riscv_xlen 32
 #define __riscv_xlen 64
 </span></code></pre>
 </div>
 
-<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="cp">#define __riscv_cmodel_medlow 1
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#define __riscv_cmodel_medlow 1
 #define __riscv_cmodel_medany 1
 </span></code></pre>
 </div>
 
-<div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="cp">#define __riscv_float_abi_soft 1
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code><span class="cp">#define __riscv_float_abi_soft 1
 #define __riscv_float_abi_single 1
 #define __riscv_float_abi_double 1
 </span></code></pre>
 </div>
 
+<h3 id="the-gp-global-pointer-register">The <code class="highlighter-rouge">gp</code> (Global Pointer) register</h3>
 
-<hr class="page-footer"/>
-<p class="page-footer">Last modified on Thu Jul 20 14:21:03 2017 UTC.</p>
+<p>The <code class="highlighter-rouge">gp</code> (Global Pointer) register is a solution to further optimise memory accesses within a single 4KB region.</p>
+
+<p>The linker uses the <code class="highlighter-rouge">__global_pointer$</code> symbol definition to compare the memory addresses and, if within range, it replaces absolute/pc-relative addressing with gp-relative addressing, which makes the code more efficient. This process is also called <em>relaxing</em>, and can be disabled by <code class="highlighter-rouge">-Wl,--no-relax</code>.</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>$ cat main.c 
+int i;
+int main()
+{
+  return i;
+}
+
+$ riscv32-unknown-elf-gcc  main.c --save-temps
+$ cat main.s
+...
+	lui	a5,%hi(i)
+	lw	a5,%lo(i)(a5)
+...
+$ riscv32-unknown-elf-objdump -d a.out
+...
+   101b4:       8341a783                lw      a5,-1996(gp) # 11fdc &lt;i&gt;
+...
+</code></pre>
+</div>
+
+<p>The gp register should be loaded during startup with the address of the <code class="highlighter-rouge">__global_pointer$</code> symbol and should not be changed later.</p>
+
+<div class="language-c highlighter-rouge">
+<pre class="highlight"><code>	<span class="p">.</span><span class="n">section</span> <span class="p">.</span><span class="n">reset_entry</span><span class="p">,</span><span class="s">"ax"</span><span class="p">,</span><span class="err">@</span><span class="n">progbits</span>
+	<span class="p">.</span><span class="n">align</span>	<span class="mi">1</span>
+	<span class="p">.</span><span class="n">globl</span>	<span class="n">_reset_entry</span>
+	<span class="p">.</span><span class="n">type</span>	<span class="n">_reset_entry</span><span class="p">,</span> <span class="err">@</span><span class="n">function</span>
+<span class="n">_reset_entry</span><span class="o">:</span>
+
+<span class="p">.</span><span class="n">option</span> <span class="n">push</span>
+<span class="p">.</span><span class="n">option</span> <span class="n">norelax</span>
+	<span class="n">la</span> <span class="n">gp</span><span class="p">,</span> <span class="n">__global_pointer</span><span class="err">$</span>
+<span class="p">.</span><span class="n">option</span> <span class="n">pop</span>
+
+	<span class="n">la</span> <span class="n">sp</span><span class="p">,</span> <span class="n">__stack</span>
+
+	<span class="n">j</span> <span class="n">_start</span>
+</code></pre>
+</div>
+
+<p>The 4K region can be anywhere in the addressed memory, but, for the optimisation to be effective, it should preferably cover the most intensely used RAM area. For standard newlib applications, this is the area where the <code class="highlighter-rouge">.sdata</code> section is allocated, since it includes variables like <code class="highlighter-rouge">_impure_ptr</code>, <code class="highlighter-rouge">__malloc_sbrk_base</code>, etc. Thus, the definition should be placed right before the <code class="highlighter-rouge">.sdata</code> section. For example:</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>PROVIDE( __global_pointer$ = . + (4K / 2) );
+*(.sdata .sdata.*)
+</code></pre>
+</div>
+
+<p>The region size is 4K because RISC-V immediate values are 12-bit signed values, which are +/- 2048 in decimal or +/- 0x800 in hex; since the values are signed, the <code class="highlighter-rouge">__global_pointer$</code> must point to the middle of the region.</p>
+
+
+<hr class="page-footer">
+<p class="page-footer">Last modified on Thu Aug  3 07:36:31 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/arch/riscv/programmer/" data-layout="button"></div>
 
 
@@ -384,7 +447,7 @@ $ ./riscv64-unknown-elf-gcc -march=rv64imafdc -mabi=lp64d -E -dM - &lt; /dev/nul
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -394,10 +457,14 @@ $ ./riscv64-unknown-elf-gcc -march=rv64imafdc -mabi=lp64d -E -dM - &lt; /dev/nul
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -407,7 +474,8 @@ $ ./riscv64-unknown-elf-gcc -march=rv64imafdc -mabi=lp64d -E -dM - &lt; /dev/nul
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -475,37 +543,43 @@ $ ./riscv64-unknown-elf-gcc -march=rv64imafdc -mabi=lp64d -E -dM - &lt; /dev/nul
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-arm-openocd-home"><a href="/openocd/">GNU ARM OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -573,7 +647,7 @@ $ ./riscv64-unknown-elf-gcc -march=rv64imafdc -mabi=lp64d -E -dM - &lt; /dev/nul
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -595,7 +669,7 @@ $ ./riscv64-unknown-elf-gcc -march=rv64imafdc -mabi=lp64d -E -dM - &lt; /dev/nul
     <ul>
   <li>© 2017 Liviu Ionescu</li>
   <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
