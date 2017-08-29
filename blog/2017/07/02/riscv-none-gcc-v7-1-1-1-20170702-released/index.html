@@ -158,16 +158,16 @@ Posted on July 2, 2017 by Liviu Ionescu.
   <li>the <a href="https://github.com/riscv/riscv-newlib">riscv/riscv-newlib</a> project, commit <a href="https://github.com/riscv/riscv-newlib/commit/ccd8a0a4ffbbc00400892334eaf64a1616302b35">ccd8a0a</a> from May 2nd, 2017</li>
 </ul>
 
-<p>The supported architectures are:</p>
+<p>The supported architectures (<code class="highlighter-rouge">-march=</code>) are:</p>
 
 <ul>
-  <li>rv32i[m][a][f[d]]</li>
-  <li>rv32g</li>
-  <li>rv64i[m][a][f[d]]</li>
-  <li>rv64g</li>
+  <li>rv32i[m][a][f[d]][c]</li>
+  <li>rv32g[c]</li>
+  <li>rv64i[m][a][f[d]][c]</li>
+  <li>rv64g[c]</li>
 </ul>
 
-<p>The supported ABIs are:</p>
+<p>The supported ABIs (<code class="highlighter-rouge">-mabi=</code>) are:</p>
 
 <ul>
   <li>ilp32 (32-bits, soft-float)</li>
@@ -189,6 +189,8 @@ march=rv64imac/mabi=lp64
 march=rv64imafdc/mabi=lp64d
 </code></pre>
 </div>
+
+<p>Plese note that not all possible combinations of architecture and ABI have libraries.</p>
 
 <h2 id="changes">Changes</h2>
 
@@ -250,7 +252,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>riscv-none-gcc</strong>.
-</br>Last modified on Sun Jul  9 15:23:45 2017 UTC.
+</br>Last modified on Tue Aug 29 17:10:48 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/" data-layout="button"></div>
 </p>
 
@@ -262,11 +264,11 @@ Posted in
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/">GNU MCU Eclipse OpenOCD v0.10.0-3-20170826* released</a></li>
   <li><a href="/blog/2017/07/11/plugins-v4.1.1-201707111115-released/">GNU MCU Eclipse plug-ins v4.1.1-201707111115 released</a></li>
   <li><a href="/blog/2017/07/09/sourceforge-to-netlify-migration/">GNU MCU Eclipse plug-ins v4.x update sites URLs migrated to Netlify</a></li>
   <li><a href="/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></li>
   <li><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></li>
-  <li><a href="/blog/2017/04/25/plugins-v3.4.1-201704251808-released/">GNU ARM Eclipse plug-ins v3.4.1-201704251808 released</a></li>
 </ul>
 
 
