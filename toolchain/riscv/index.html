@@ -162,51 +162,81 @@
 
 <p>RISC-V ISA strings begin with either RV32I, RV32E, RV64I, or RV128I indicating the supported address space size in bits for the base integer ISA.</p>
 
-<p>Standard General-Purpose ISA</p>
+<ul>
+  <li>RV32I: A load-store ISA with 32, 32-bit general-purpose integer registers.</li>
+  <li>RV32E: An embedded flavor of RV32I with only 16 integer registers.</li>
+  <li>RV64I: A 64-bit flavor of RV32I where the general-purpose integer registers are 64-bits wide.</li>
+</ul>
+
+<p>In addition to these base ISAs, a handful of extensions have been 
+specified. The extensions that have both been specified and are supported by the toolchain are:</p>
 
 <ul>
-  <li>I - Integer</li>
   <li>M - Integer Multiplication and Division</li>
   <li>A - Atomics</li>
   <li>F - Single-Precision Floating-Point</li>
   <li>D - Double-Precision Floating-Point</li>
+  <li>
+    <p>C - 16-bit Compressed Instructions</p>
+  </li>
   <li>G - General, a shortcut to IMAFD</li>
 </ul>
 
-<p>Standard User-Level Extensions</p>
-
-<ul>
-  <li>Q - Quad-Precision Floating-Point</li>
-  <li>L - Decimal Floating-Point</li>
-  <li>C - 16-bit Compressed Instructions</li>
-  <li>B - Bit Manipulation</li>
-  <li>J - Dynamic Languages</li>
-  <li>T - Transactional Memory</li>
-  <li>P - Packed-SIMD Extensions</li>
-  <li>V - Vector Extensions</li>
-  <li>N - User-Level Interrupts</li>
-</ul>
+<p>RISC-V ISA strings are defined by appending the supported extensions to the 
+base ISA in the order listed above. For example, the RISC-V ISA with 32, 
+32-bit integer registers and the instructions to for multiplication would 
+be denoted as “RV32IM”. Users can control the set of instructions that GCC 
+uses when generating assembly code by passing the lower-case ISA string to 
+the <code class="highlighter-rouge">-march</code> GCC option: for example <code class="highlighter-rouge">-march=rv32im</code>.</p>
 
 <p>For more details, please see <a href="https://content.riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf">The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document Version 2.2</a>.</p>
 
-<p>Not all these extendsions are yet defined or implemented by the compiler; the <code class="highlighter-rouge">-march</code> supports only:</p>
+<p>In addition to controlling the instructions available to GCC during code 
+generating (which defines the set of implementations the generated code 
+will run on), users can select from various ABIs to target (which defines 
+the calling convention and layout of objects in memory). Objects and 
+libraries may only be linked together if they follow the same ABI.</p>
+
+<p>RISC-V defines two integer ABIs and three floating-point ABIs, which 
+together are treated as a single ABI string. The integer ABIs follow the 
+standard ABI naming scheme:</p>
 
 <ul>
-  <li>rv32i[m][a][f[d]]</li>
-  <li>rv32g</li>
-  <li>rv64i[m][a][f[d]]</li>
-  <li>rv64g</li>
+  <li><code class="highlighter-rouge">ilp32</code>: “int”, “long”, and pointers are all 32-bits long. “long long” is 
+a 64-bit type, “char” is 8-bit, and “short” is 16-bit.</li>
+  <li><code class="highlighter-rouge">lp64</code>: “long” and pointers are 64-bits long, while “int” is a 32-bit type. 
+The other types remain the same as ilp32.</li>
 </ul>
 
-<p>The RISC-V supported application binary interfaces (<code class="highlighter-rouge">-mabi</code>) are:</p>
+<p>while the floating-point ABIs are a RISC-V specific addition:</p>
 
 <ul>
-  <li>ilp32 (32-bits, soft-float)</li>
-  <li>ilp32f (32-bits with single-precision in registers and double in memory, niche use only)</li>
-  <li>ilp32d (32-bits, hard-float)</li>
-  <li>lp64 (64-bits long and pointers, soft-float)</li>
-  <li>lp64f (64-bits long and pointers, with single-precision in registers and double in memory, niche use only)</li>
-  <li>lp64d (64-bits long and pointers, hard-float).</li>
+  <li>”” (the empty string): No floating-point arguments are passed in registers.</li>
+  <li><code class="highlighter-rouge">f</code>: 32-bit and smaller floating-point arguments are passed in registers. 
+This ABI requires the F extension, as without F there are no 
+floating-point registers.</li>
+  <li><code class="highlighter-rouge">d</code>: 64-bit and smaller floating-point arguments are passed in registers. 
+This ABI requires the D extension.</li>
+</ul>
+
+<p>Just like ISA strings, ABI strings are concatenated together and passed via 
+the <code class="highlighter-rouge">-mabi</code> argument to GCC. For example:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">-march=rv32imafdc -mabi=ilp32d</code>: Hardware floating-point instructions can 
+be generated and floating-point arguments are passed in registers. This 
+is like the <code class="highlighter-rouge">-mfloat-abi=hard</code> option to ARM’s GCC.</li>
+  <li><code class="highlighter-rouge">-march=rv32imac -mabi=ilp32</code>: No floating-point instructions can be 
+generated and no floating-point arguments are passed in registers. This 
+is like the <code class="highlighter-rouge">-mfloat-abi=soft</code> argument to ARM’s GCC.</li>
+  <li><code class="highlighter-rouge">-march=rv32imafdc -mabi=ilp32</code>: Hardware floating-point instructions can 
+be generated, but no floating-point arguments will be passed in 
+registers. This is like the <code class="highlighter-rouge">-mfloat-abi=softfp</code> argument to ARM’s GCC, 
+and is usually used when interfacing with soft-float binaries on a 
+hard-float system.</li>
+  <li><code class="highlighter-rouge">-march=rv32imac -mabi=ilp32d</code>: Illegal, as the ABI requires floating-point 
+arguments are passed in registers but the ISA defines no floating-point 
+registers to pass them in.</li>
 </ul>
 
 <p>The GNU MCU Eclipse RISC-V plug-in supports all current options, and reserves some for near future use.</p>
@@ -253,7 +283,7 @@ march=rv64imafdc/mabi=lp64d
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Aug 25 13:34:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Aug 30 22:01:17 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/" data-layout="button"></div>
 
 
