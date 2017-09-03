@@ -103,55 +103,47 @@
 <ul>
 <li class="toc_level-1 toc_section-1">
 <a href="#prerequisites"><span class="tocnumber">1</span> <span class="toctext">Prerequisites</span></a>
-<ul>
-<li class="toc_level-2 toc_section-2">
-<a href="#macos"><span class="tocnumber">1.1</span> <span class="toctext">macOS</span></a>
 </li>
-<li class="toc_level-2 toc_section-3">
-<a href="#gnulinux"><span class="tocnumber">1.2</span> <span class="toctext">GNU/Linux</span></a>
-</li>
-<li class="toc_level-2 toc_section-4">
-<a href="#docker-images"><span class="tocnumber">1.3</span> <span class="toctext">Docker images</span></a>
-</li>
-</ul>
-</li>
-<li class="toc_level-1 toc_section-5">
+<li class="toc_level-1 toc_section-2">
 <a href="#download-the-build-scripts-repo"><span class="tocnumber">2</span> <span class="toctext">Download the build scripts repo</span></a>
 </li>
-<li class="toc_level-1 toc_section-6">
+<li class="toc_level-1 toc_section-3">
 <a href="#check-the-script"><span class="tocnumber">3</span> <span class="toctext">Check the script</span></a>
 </li>
-<li class="toc_level-1 toc_section-7">
+<li class="toc_level-1 toc_section-4">
 <a href="#preload-the-docker-images"><span class="tocnumber">4</span> <span class="toctext">Preload the Docker images</span></a>
 </li>
+<li class="toc_level-1 toc_section-5">
+<a href="#rebuild-the-docker-images"><span class="tocnumber">5</span> <span class="toctext">Rebuild the Docker images</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#select-the-stable-or-the-development-branch"><span class="tocnumber">6</span> <span class="toctext">Select the stable or the development branch</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#build-all-distribution-files"><span class="tocnumber">7</span> <span class="toctext">Build all distribution files</span></a>
+</li>
 <li class="toc_level-1 toc_section-8">
-<a href="#select-the-stable-or-the-development-branch"><span class="tocnumber">5</span> <span class="toctext">Select the stable or the development branch</span></a>
-</li>
-<li class="toc_level-1 toc_section-9">
-<a href="#build-all-distribution-files"><span class="tocnumber">6</span> <span class="toctext">Build all distribution files</span></a>
-</li>
-<li class="toc_level-1 toc_section-10">
-<a href="#subsequent-runs"><span class="tocnumber">7</span> <span class="toctext">Subsequent runs</span></a>
+<a href="#subsequent-runs"><span class="tocnumber">8</span> <span class="toctext">Subsequent runs</span></a>
 <ul>
-<li class="toc_level-2 toc_section-11">
-<a href="#separate-platform-specific-builds"><span class="tocnumber">7.1</span> <span class="toctext">Separate platform specific builds</span></a>
+<li class="toc_level-2 toc_section-9">
+<a href="#separate-platform-specific-builds"><span class="tocnumber">8.1</span> <span class="toctext">Separate platform specific builds</span></a>
 </li>
-<li class="toc_level-2 toc_section-12">
-<a href="#clean"><span class="tocnumber">7.2</span> <span class="toctext">clean</span></a>
+<li class="toc_level-2 toc_section-10">
+<a href="#clean"><span class="tocnumber">8.2</span> <span class="toctext">clean</span></a>
 </li>
 </ul>
 </li>
+<li class="toc_level-1 toc_section-11">
+<a href="#install-hierarchy"><span class="tocnumber">9</span> <span class="toctext">Install hierarchy</span></a>
+</li>
+<li class="toc_level-1 toc_section-12">
+<a href="#uninstall"><span class="tocnumber">10</span> <span class="toctext">Uninstall</span></a>
+</li>
 <li class="toc_level-1 toc_section-13">
-<a href="#install-hierarchy"><span class="tocnumber">8</span> <span class="toctext">Install hierarchy</span></a>
+<a href="#test"><span class="tocnumber">11</span> <span class="toctext">Test</span></a>
 </li>
 <li class="toc_level-1 toc_section-14">
-<a href="#uninstall"><span class="tocnumber">9</span> <span class="toctext">Uninstall</span></a>
-</li>
-<li class="toc_level-1 toc_section-15">
-<a href="#test"><span class="tocnumber">10</span> <span class="toctext">Test</span></a>
-</li>
-<li class="toc_level-1 toc_section-16">
-<a href="#more-build-details"><span class="tocnumber">11</span> <span class="toctext">More build details</span></a>
+<a href="#more-build-details"><span class="tocnumber">12</span> <span class="toctext">More build details</span></a>
 </li>
 </ul>
 </td>
@@ -164,90 +156,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>The main trick that made the multi-platform build possible is <a href="https://www.docker.com">Docker</a>.</p>
-
-<p>Containers based on three docker images are used, one packing MinGW-w64 in two Debian 9 (32/64-bits) containers. The more conservative Debian was preferred to generate the GNU/Linux versions, to avoid problems when attempting to run the executables on older versions.</p>
-
-<h3 id="macos">macOS</h3>
-
-<h4 id="install-the-command-line-tools">Install the Command Line Tools</h4>
-
-<p>The macOS compiler and other development tools are packed in a separate Xcode add-on. The best place to get it is from the <a href="https://developer.apple.com/xcode/downloads/">Developer</a> site, although this might require enrolling to the developer program (free of charge).</p>
-
-<p>It is also possible to install the Command Line Tools via a command line:</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>xcode-select --install
-<span class="gp">$ </span>xcode-select -p
-/Library/Developer/CommandLineTools
-</code></pre>
-</div>
-
-<p>To test if the compiler is available, use:</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gcc --version
-Configured with: --prefix<span class="o">=</span>/Library/Developer/CommandLineTools/usr --with-gxx-include-dir<span class="o">=</span>/usr/include/c++/4.2.1
-Apple LLVM version 8.1.0 <span class="o">(</span>clang-802.0.42<span class="o">)</span>
-Target: x86_64-apple-darwin16.7.0
-Thread model: posix
-InstalledDir: /Library/Developer/CommandLineTools/usr/bin
-</code></pre>
-</div>
-
-<h4 id="install-a-custom-instance-of-homebrew">Install a custom instance of Homebrew</h4>
-
-<p>The build process is quite complex, and requires tools not available in the standard Apple macOS distribution. These tools can be installed with Homebrew. To keep these tools separate, a custom instance of Homebrew is installed in <code class="highlighter-rouge">${HOME}/opt/homebrew/gme</code>.</p>
-
-<p>In a separate run, the <strong><a href="http://www.tug.org/mactex/">MacTex</a></strong> tools are also installed in <code class="highlighter-rouge">${HOME}/opt/texlive</code>. Alternatively you can install MacTex in <code class="highlighter-rouge">/usr/local</code> using the official distribution, but this will add lots of programs to the system path, and this is a bad thing.</p>
-
-<p>The entire process can be automated with two scripts, available from GitHub:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ mkdir -p ${HOME}/opt
-$ git clone https://github.com/ilg-ul/opt-install-scripts \
-    ${HOME}/opt/install-scripts.git
-$ bash ${HOME}/opt/install-scripts.git/install-homebrew-gme.sh
-$ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
-</code></pre>
-</div>
-
-<p>The scripts run with user credentials, no <code class="highlighter-rouge">sudo</code> access is required. Please be aware that the TeX install takes quite some time.</p>
-
-<h4 id="install-docker">Install Docker</h4>
-
-<p>On macOS, Docker can be installed by following the official <a href="https://docs.docker.com/installation/mac/">Install Docker on macOS</a> instructions.</p>
-
-<h3 id="gnulinux">GNU/Linux</h3>
-
-<h4 id="install-docker-1">Install Docker</h4>
-
-<p>For any GNU/Linux distribution, follow the <a href="https://docs.docker.com/installation/#installation">specific instructions</a>.</p>
-
-<h4 id="configure-docker-to-run-as-a-regular-user">Configure Docker to run as a regular user</h4>
-
-<p>To allow docker to run as a regular user, you need to be a member of the <code class="highlighter-rouge">docker</code> group.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo groupadd docker
-$ sudo gpasswd -a ${USER} docker
-$ sudo service docker restart
-</code></pre>
-</div>
-
-<p>To make these changes effective, logout and login.</p>
-
-<p>The above are for Ubuntu and the Debian family. For other distributions, the last line may differ, for example for Arch Linux use:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ systemctl restart docker
-</code></pre>
-</div>
-
-<h4 id="install-required-packages">Install required packages</h4>
-
-<p>Since most of the build is performed inside the Docker containers, there are not many requirements for the host, and most of the time these programs are in the standard distribution (<code class="highlighter-rouge">curl</code>, <code class="highlighter-rouge">git</code>, <code class="highlighter-rouge">automake</code>, <code class="highlighter-rouge">patch</code>, <code class="highlighter-rouge">tar</code>, <code class="highlighter-rouge">unzip</code>).</p>
-
-<p>The script checks for them; if the script fails, install them and re-run.</p>
-
-<h3 id="docker-images">Docker images</h3>
-
-<p>The Docker images are available from <a href="https://hub.docker.com/u/ilegeul/">Docker Hub</a>. They were build using the Dockerfiles available from <a href="https://github.com/ilg-ul/docker">ilg-ul/docker on GitHub</a>.</p>
+<p>The prerequisites are common to all binary builds. Please follow the instructions in the separate <a href="/developer/build-binaries-prerequisites/">Prerequisites for building binaries</a> page and return when ready.</p>
 
 <h2 id="download-the-build-scripts-repo">Download the build scripts repo</h2>
 
@@ -255,7 +164,7 @@ $ sudo service docker restart
 
 <p>To download it, clone the <a href="https://github.com/gnu-mcu-eclipse/openocd-build">gnu-mcu-eclipse/openocd-build</a> Git repo.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone https://github.com/gnu-mcu-eclipse/openocd-build.git \
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git <span class="se">\</span>
   ~/Downloads/openocd-build.git
 </code></pre>
 </div>
@@ -270,17 +179,27 @@ $ sudo service docker restart
 
 <p>However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bash ~/Downloads/openocd-build.git/scripts/build.sh preload-images
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/openocd-build.git/scripts/build.sh preload-images
 </code></pre>
 </div>
 
 <p>The result should look similar to:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ docker images
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker images
 REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-ilegeul/debian      9-gnu-mcu-eclipse   ff8a853cf6cb        7 weeks ago         3.2GB
-ilegeul/debian32    9-gnu-mcu-eclipse   a22ccdf38f1f        7 weeks ago         3.2GB
+ilegeul/debian      9-gnu-mcu-eclipse     ff8a853cf6cb        4 days ago          3.2GB
+ilegeul/debian32    9-gnu-mcu-eclipse     a22ccdf38f1f        4 days ago          3.2GB
+ilegeul/debian32    9                     7348339e67f5        4 days ago          116MB
+debian              9                     a2ff708b7413        2 weeks ago         100MB
+hello-world         latest                1815c82652c0        3 weeks ago         1.84kB
+</code></pre>
+</div>
+
+<h2 id="rebuild-the-docker-images">Rebuild the Docker images</h2>
+
+<p>If the download speed is limited, probably it is faster to rebuild the images locally. For this see the <code class="highlighter-rouge">build-images</code> command:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
 </code></pre>
 </div>
 
@@ -314,14 +233,14 @@ ilegeul/debian32    9-gnu-mcu-eclipse   a22ccdf38f1f        7 weeks ago         
 
 <p>On macOS, to prevent entering sleep, use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ caffeinate bash 
+<div class="highlighter-rouge"><pre class="highlight"><code>$ caffeinate bash
 $ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 </code></pre>
 </div>
 
 <p>About half an hour later, the output of the build script is a set of 5 files in the output folder:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ls -l deploy
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ls -l deploy
 total 41992
 drwxr-xr-x  8 ilg  staff      272 Aug 26 12:57 debian32
 drwxr-xr-x  8 ilg  staff      272 Aug 26 12:45 debian64
@@ -362,13 +281,13 @@ drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
 
 <p>To remove most build files, use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bash ~/Downloads/openocd-build.git/scripts/build.sh clean
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/openocd-build.git/scripts/build.sh clean
 </code></pre>
 </div>
 
 <p>To also remove the repository and the output files, use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
 </code></pre>
 </div>
 
@@ -378,8 +297,8 @@ drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
 
 <p>After install, this package should create structure like this (only the first two depth levels are shown):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ tree -L 2 /Applications/GNU\ MCU\ Eclipse/OpenOCD
-/Applications/GNU\ MCU\ Eclipse/OpenOCD
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>tree -L 2 /Applications/GNU<span class="se">\ </span>MCU<span class="se">\ </span>Eclipse/OpenOCD
+/Applications/GNU<span class="se">\ </span>MCU<span class="se">\ </span>Eclipse/OpenOCD
 ├── bin
 │   └── openocd
 ├── doc
@@ -403,7 +322,7 @@ drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
     ├── memory.tcl
     ├── mmr_helpers.tcl
     ├── target
-    ├── test
+    ├── <span class="nb">test</span>
     └── tools
 
 16 directories, 9 files
@@ -424,11 +343,11 @@ drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
 
 <p>For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ opt/gnu-mcu-eclipse/openocd/0.10.0-3-20170826-0939-dev/bin/openocd --version
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00138-g96c70022 (2017-08-26-12:40)
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-3-20170826-0939-dev/bin/openocd --version
+GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00138-g96c70022 <span class="o">(</span>2017-08-26-12:40<span class="o">)</span>
 Licensed under GNU GPL v2
-For bug reports, read
-	http://openocd.org/doc/doxygen/bugs.html
+For bug reports, <span class="nb">read
+	</span>http://openocd.org/doc/doxygen/bugs.html
 </code></pre>
 </div>
 
@@ -438,7 +357,7 @@ For bug reports, read
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Tue Aug 29 17:13:11 2017 UTC.</p>
+<p class="page-footer">Last modified on Sun Sep  3 18:40:05 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/build-procedure/" data-layout="button"></div>
 
 

@@ -161,8 +161,8 @@
 
 <p>To download it, clone the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> Git repo, including submodules.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ rm -rf ~/Downloads/riscv-none-gcc-build.git
-$ git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git \
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>rm -rf ~/Downloads/riscv-none-gcc-build.git
+<span class="gp">$ </span>git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git <span class="se">\</span>
   ~/Downloads/riscv-none-gcc-build.git
 </code></pre>
 </div>
@@ -203,20 +203,20 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <h2 id="build-all-distribution-files">Build all distribution files</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 </code></pre>
 </div>
 
 <p>On macOS, to prevent entering sleep, use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ caffeinate bash
-$ exec bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>caffeinate bash
+<span class="gp">$ </span><span class="nb">exec </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 </code></pre>
 </div>
 
 <p>Many, many hours later, the output of the build script is a set of 8 files and their SHA signatures in the <code class="highlighter-rouge">deploy</code> folder:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ls -l deploy
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ls -l deploy
 total 784400
 -rw-r--r--  1 ilg  staff  75678450 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg
 -rw-r--r--  1 ilg  staff       127 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg.sha
@@ -269,7 +269,7 @@ total 784400
 
 <p>After install, this package should create structure like this (only the first two depth levels are shown):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ tree -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>tree -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 ├── README.md
 ├── bin
@@ -355,8 +355,8 @@ total 784400
 
 <p>For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
-riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
+riscv64-unknown-elf-gcc <span class="o">(</span>GNU MCU Eclipse RISC-V Embedded GCC, 64-bits<span class="o">)</span> 7.1.1 20170509
 </code></pre>
 </div>
 
@@ -366,7 +366,7 @@ riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 201
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Jul  7 16:15:13 2017 UTC.</p>
+<p class="page-footer">Last modified on Sun Sep  3 18:40:36 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/build-procedure/" data-layout="button"></div>
 
 
