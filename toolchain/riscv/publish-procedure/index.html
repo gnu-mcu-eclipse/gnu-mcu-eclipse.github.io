@@ -156,21 +156,23 @@
 
 <h2 id="add-tags-to-source-repos">Add tags to source repos</h2>
 
-<p>Check the project <a href="https://github.com/riscv/riscv-gnu-toolchain">riscv/riscv-gnu-toolchain</a>, and determine the specific commits used in the official distribution.</p>
+<p>Check the project <a href="https://github.com/riscv/riscv-gnu-toolchain">riscv/riscv-gnu-toolchain</a>, and determine the specific commits used in the official distribution. Also check if newer stable commits are available</p>
 
-<p>Add tags with the original version number (like <code class="highlighter-rouge">v20170612</code>), in the following projects:</p>
+<p>If not present, add tags with the original version number (like <code class="highlighter-rouge">v20170612</code>).</p>
+
+<p>Add tags with the current version number (like <code class="highlighter-rouge">v7.1.1-2-20170912</code>), in the following projects:</p>
 
 <ul>
-  <li>the <a href="https://github.com/riscv/riscv-gcc">riscv/riscv-gcc</a> project</li>
-  <li>the <a href="https://github.com/riscv/riscv-binutils-gdb">riscv/riscv-binutils-gdb</a> project</li>
-  <li>the <a href="https://github.com/riscv/riscv-newlib">riscv/riscv-newlib</a> project</li>
+  <li>the <a href="https://github.com/gnu-mcu-eclipse/riscv-gcc">gnu-mcu-eclipse/riscv-gcc</a> project</li>
+  <li>the <a href="https://github.com/gnu-mcu-eclipse/riscv-binutils-gdb">gnu-mcu-eclipse/riscv-binutils-gdb</a> project</li>
+  <li>the <a href="https://github.com/gnu-mcu-eclipse/riscv-newlib">gnu-mcu-eclipse/riscv-newlib</a> project</li>
 </ul>
 
 <h2 id="update-the-script">Update the script</h2>
 
-<p>In the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a>, update the <code class="highlighter-rouge">scripts/build.sh</code> to refer to the latest version number.</p>
+<p>In the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a>, update the <code class="highlighter-rouge">scripts/build.sh</code> to refer to the latest version number (<code class="highlighter-rouge">RELEASE_VERSION</code>).</p>
 
-<p>Check if the library sources (gmp, mpfr, mpc, isl) did change and possibly update them.</p>
+<p>For major releases, Check if the library sources (gmp, mpfr, mpc, isl) did change and possibly update them.</p>
 
 <h2 id="build">Build</h2>
 
@@ -217,7 +219,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 <ul>
   <li>go to the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases">GitHub Releases</a> page</li>
   <li>click <strong>Draft a new release</strong></li>
-  <li>name the tag like <strong>v7.1.1-1-20170702-0625</strong> (mind the dashes in the middle!)</li>
+  <li>name the tag like <strong>v7.1.1-1-20170702</strong> (mind the dashes in the middle!)</li>
   <li>as description, copy the first paragraph from the Web release page</li>
   <li><strong>attach binaries</strong> (drag and drop from the <code class="highlighter-rouge">deploy</code> folder will do it)</li>
   <li>click the <strong>Publish Release</strong> button</li>
@@ -230,13 +232,13 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 <p>In the project web, the recent post:</p>
 
 <ul>
-  <li>update the <strong>Binary files »</strong> link to use the actual version, like <code class="highlighter-rouge">https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702-0625</code> (copy/paste it from the browser).</li>
+  <li>update the <strong>Binary files »</strong> link to use the actual version, like <code class="highlighter-rouge">https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702</code> (copy/paste it from the browser).</li>
 </ul>
 
 <h2 id="publish-the-web-1">Publish the Web</h2>
 
 <ul>
-  <li>git commit &amp; push the <code class="highlighter-rouge">gnu-mcu-eclipse.github.io-source</code> project; use something like <code class="highlighter-rouge">v7.1.1-1-20170702-0625 update link</code> as message</li>
+  <li>git commit &amp; push the <code class="highlighter-rouge">gnu-mcu-eclipse.github.io-source</code> project; use something like <code class="highlighter-rouge">v7.1.1-1-20170702 update link</code> as message</li>
 </ul>
 
 <h2 id="share-on-facebook">Share on Facebook</h2>
@@ -253,7 +255,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Jul  7 16:39:59 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Sep 13 09:02:35 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/publish-procedure/" data-layout="button"></div>
 
 
