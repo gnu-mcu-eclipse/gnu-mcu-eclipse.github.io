@@ -133,7 +133,10 @@ Posted on July 2, 2017 by Liviu Ionescu.
 <a href="#binaries"><span class="tocnumber">5</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#checksums"><span class="tocnumber">6</span> <span class="toctext">Checksums</span></a>
+<a href="#known-problems"><span class="tocnumber">6</span> <span class="toctext">Known problems</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#checksums"><span class="tocnumber">7</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
@@ -216,6 +219,17 @@ march=rv64imafdc/mabi=lp64d
 
 <p>For better control and repetability, the build scripts use Docker containers; all files required during builds are available as a separate <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> project.</p>
 
+<h2 id="known-problems">Known problems</h2>
+
+<p>[2017-09-14 update] Soon after this release was used in real projects, it was discovered that the general configuration of the toolchain was intended more to applications that include a kernel-like environment, and less to bare-metal environments. The main problems are:</p>
+
+<ul>
+  <li>the <code class="highlighter-rouge">newlib</code> configuration does not use the <code class="highlighter-rouge">underscore</code> syscall function, but the direct names (like <code class="highlighter-rouge">write()</code> instead of <code class="highlighter-rouge">_write()</code>), calls that are always forwarded to <code class="highlighter-rouge">libgloss</code></li>
+  <li>the compiler configuration always links <code class="highlighter-rouge">libgloss</code> to the application; <code class="highlighter-rouge">libgloss</code> implements all system calls via traps to a unix like kernel.</li>
+</ul>
+
+<p>Both problems were fixed in the <a href="https://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/">v7.1.1-2-20170912</a> release.</p>
+
 <h2 id="checksums">Checksums</h2>
 
 <p>The SHA-256 hashes for the files are:</p>
@@ -252,7 +266,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>riscv-none-gcc</strong>.
-</br>Last modified on Tue Aug 29 17:10:48 2017 UTC.
+</br>Last modified on Thu Sep 14 20:58:10 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/" data-layout="button"></div>
 </p>
 
