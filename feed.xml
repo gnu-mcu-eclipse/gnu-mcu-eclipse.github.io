@@ -5,9 +5,25 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Sep 2017 09:04:08 +0000</pubDate>
-    <lastBuildDate>Wed, 13 Sep 2017 09:04:08 +0000</lastBuildDate>
+    <pubDate>Thu, 14 Sep 2017 17:15:41 +0000</pubDate>
+    <lastBuildDate>Thu, 14 Sep 2017 17:15:41 +0000</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-2-20170912-* released</title>
+        <description>&lt;p&gt;Version v7.1.1-2-20170912-2255 is a new release of &lt;strong&gt;GNU MCU Eclipse RISC-V Embedded GCC&lt;/strong&gt;; after the initial version of the &lt;code class=&quot;highlighter-rouge&quot;&gt;riscv64-unknown-elf&lt;/code&gt; toolchain was released, it was discovered that it was intended more to applications that include a kernel-like environment, and less to bare-metal environments. This second release is intended to provide a temporary fix to this problem and make the toolchain more suitable for embedded bare-metal applications; for this it was necessary to &lt;strong&gt;remove the mandatory use of libgloss&lt;/strong&gt; and to update to the latest newlib version which uses ‘underscore’ syscall functions. Hopefully the official toolchain distribution will follow shortly.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 13 Sep 2017 07:28:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>riscv-none-gcc</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse OpenOCD v0.10.0-3-20170826* released</title>
@@ -210,28 +226,6 @@
         <category>support</category>
         
         <category>plugins</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU ARM Eclipse: 5.000.000 SourceForge downloads, January 2017</title>
-        <description>&lt;p&gt;January 2017 came with a nice surprise, the SourceForge statistics for the GNU ARM Eclipse project show &lt;strong&gt;more than 5.000.000 downloads&lt;/strong&gt; in the last 4 years:&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 26 Jan 2017 10:15:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/01/26/sourceforge-5m-downloads/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/01/26/sourceforge-5m-downloads/</guid>
-        
-        <category>featured</category>
-        
-        <category>SourceForge</category>
-        
-        <category>downloads</category>
-        
-        
-        <category>news</category>
-        
-        <category>project</category>
         
       </item>
     
