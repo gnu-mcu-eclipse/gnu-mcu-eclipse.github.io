@@ -156,7 +156,7 @@ Posted on September 13, 2017 by Liviu Ionescu.
 
 <h2 id="compliance">Compliance</h2>
 
-<p>All <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> releases follow the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
+<p>All <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> releases are based on the official <a href="https://github.com/riscv/riscv-gcc">RISC-V source files</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
 
 <p>The current version is based on the following commits:</p>
 
@@ -206,9 +206,10 @@ march=rv64imafdc/mabi=lp64d (march.rv64gc/mabi.lp64d)
 <p>Compared to the original RISC-V <code class="highlighter-rouge">riscv64-unknown-elf</code> toolchain, the following improvements can be noted:</p>
 
 <ul>
+  <li>a newer <code class="highlighter-rouge">newlib</code> was included, which supports the ‘underscore’ syscall functions</li>
   <li>the mandatory reference to <code class="highlighter-rouge">libgloss</code> in the linker configuration was removed</li>
   <li>the <code class="highlighter-rouge">march=rv32imaf/mabi=ilp32f</code> libary was added to the list of multilibs</li>
-  <li><code class="highlighter-rouge">newlib-nano</code> was added</li>
+  <li>support for <code class="highlighter-rouge">newlib-nano</code> was added</li>
   <li>the standard documentation, in PDF and HTML, was added</li>
 </ul>
 
@@ -284,7 +285,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170912-2255-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>riscv-none-gcc</strong>.
-</br>Last modified on Thu Sep 14 17:47:50 2017 UTC.
+</br>Last modified on Thu Sep 14 17:59:22 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/" data-layout="button"></div>
 </p>
 
