@@ -183,8 +183,8 @@ In the documentation git, add new entries to the <a href="/openocd/change-log/">
 
 <p>Be sure the scripts in the <strong>openocd/build.git</strong> are up to date.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone https://github.com/gnu-mcu-eclipse/openocd-build.git \
-  ~/Downloads/openocd-build.git
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone https://github.com/gnu-mcu-eclipse/openocd-build.git \
+</span>  ~/Downloads/openocd-build.git
 </code></pre>
 </div>
 
@@ -192,11 +192,11 @@ In the documentation git, add new entries to the <a href="/openocd/change-log/">
 
 <p>Important note: Before starting the build, double check if the repository is clean (all changes were commited), otherwise the build version will be stamped with <code class="highlighter-rouge">-dirty</code>).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
-$ bash ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
-$ caffeinate bash 
-$ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh cleanall
+</span><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
+</span><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash 
+</span><span class="w">$ </span><span class="nc">exec</span><span class="kv"> bash ~/Downloads/openocd-build.git/scripts/build.sh --all
+</span></code></pre>
 </div>
 
 <h2 id="prepare-a-new-blog-post-to-announce-the-release">Prepare a new blog post to announce the release</h2>
@@ -213,7 +213,7 @@ $ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 
 <p>Copy/paste the build report at the end of the post as</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>4ca0dd6d9c9ad24af2aa4eddec7717e1  
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>4ca0dd6d9c9ad24af2aa4eddec7717e1  
 gnuarmeclipse-openocd-debian32-0.10.0-201601101000-dev.tgz
 
 3ac38e2ac8b71a8ede734a271f0765de  
@@ -277,7 +277,7 @@ gnuarmeclipse-openocd-win64-0.10.0-201601101000-dev-setup.exe
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Tue Aug 29 17:13:11 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/publish-procedure/" data-layout="button"></div>
 
 

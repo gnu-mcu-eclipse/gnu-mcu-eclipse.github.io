@@ -153,19 +153,19 @@
 
 <p>To view the attached USB devices on macOS, use <code class="highlighter-rouge">system_profiler</code>. For example, the HiFive1 board is seen as Dual RS232-HS, PID:VID 6010:0403:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>system_profiler SPUSBDataType
-...
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">system_profiler</span><span class="kv"> SPUSBDataType
+</span>...
     Dual RS232-HS:
 
       Product ID: 0x6010
-      Vendor ID: 0x0403  <span class="o">(</span>Future Technology Devices International Limited<span class="o">)</span>
+      Vendor ID: 0x0403  (Future Technology Devices International Limited)
       Version: 7.00
       Speed: Up to 480 Mb/sec
       Manufacturer: FTDI
       Location ID: 0xfa130000 / 5
-      Current Available <span class="o">(</span>mA<span class="o">)</span>: 500
-      Current Required <span class="o">(</span>mA<span class="o">)</span>: 500
-      Extra Operating Current <span class="o">(</span>mA<span class="o">)</span>: 0
+      Current Available (mA): 500
+      Current Required (mA): 500
+      Extra Operating Current (mA): 0
 </code></pre>
 </div>
 
@@ -173,16 +173,16 @@
 
 <p>By default, macOS identifies the board as a <strong>Dual RS232-HS</strong> device, and offers to configure it as a network interface. Since the HiFive1 board does not have an EEPROM to store an unique ID, the devices are named using a string containing the address in the HUB hierarchy, so the <code class="highlighter-rouge">a13</code> letters in the name are different when connecting the board to a different USB port.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ls -l /dev/tty.usbserial<span class="k">*</span>
-crw-rw-rw-  1 root  wheel   19,  28 Jul 10 12:09 /dev/tty.usbserial-fa13A
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">ls</span><span class="kv"> -l /dev/tty.usbserial*
+</span>crw-rw-rw-  1 root  wheel   19,  28 Jul 10 12:09 /dev/tty.usbserial-fa13A
 crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 </code></pre>
 </div>
 
 <p>Attempts to open the trace port (the second UART) are ok:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>screen /dev/tty.usbserial-fa13B 115200
-                SIFIVE, INC.
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">screen</span><span class="kv"> /dev/tty.usbserial-fa13B 115200
+</span>                SIFIVE, INC.
 
          5555555555555555555555555
         5555                   5555
@@ -206,7 +206,7 @@ crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
                    55555
                      5
 
-               <span class="s1">'led_fade'</span> Demo
+               'led_fade' Demo
 ...
 </code></pre>
 </div>
@@ -215,8 +215,8 @@ crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 
 <p>Attempts to open the HiFive1 board with OpenOCD fail with:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ openocd -f board/sifive-freedom-e300-hifive1.cfg 
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">openocd</span><span class="kv"> -f board/sifive-freedom-e300-hifive1.cfg 
+</span>GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
 Licensed under GNU GPL v2
 For bug reports, read
 	http://openocd.org/doc/doxygen/bugs.html
@@ -229,41 +229,41 @@ Error: unable to open ftdi device with vid 0403, pid 6010, description 'Dual RS2
 
 <p>The workaround it to disable all <em>personalities</em> of the AppleUSBFTDI kernel:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
+</span></code></pre>
 </div>
 
 <p>This command will remove the UART associations for all FTDI based devices. All devices will be available for user space drivers, like <code class="highlighter-rouge">libusb</code>.</p>
 
 <p>In the HiFive1 case, the first interface should no longer be available as a tty device, but as JTAG, and OpenOCD should be able to connect to the JTAG interface:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>openocd -f board/sifive-freedom-e300-hifive1.cfg 
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00135-g80299198 <span class="o">(</span>2017-06-22-18:37<span class="o">)</span>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">openocd</span><span class="kv"> -f board/sifive-freedom-e300-hifive1.cfg 
+</span>GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
 Licensed under GNU GPL v2
-For bug reports, <span class="nb">read
-	</span>http://openocd.org/doc/doxygen/bugs.html
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
 adapter speed: 10000 kHz
-Info : auto-selecting first available session transport <span class="s2">"jtag"</span>. To override use <span class="s1">'transport select &lt;transport&gt;'</span>.
-Info : ftdi: <span class="k">if </span>you experience problems at higher adapter clocks, try the <span class="nb">command</span> <span class="s2">"ftdi_tdo_sample_edge falling"</span>
+Info : auto-selecting first available session transport "jtag". To override use 'transport select &lt;transport&gt;'.
+Info : ftdi: if you experience problems at higher adapter clocks, try the command "ftdi_tdo_sample_edge falling"
 Info : clock speed 10000 kHz
-Info : JTAG tap: riscv.cpu tap/device found: 0x10e31913 <span class="o">(</span>mfg: 0x489 <span class="o">(</span>SiFive, Inc.<span class="o">)</span>, part: 0x0e31, ver: 0x1<span class="o">)</span>
-Info : <span class="nv">dtmcontrol_idle</span><span class="o">=</span>5, <span class="nv">dbus_busy_delay</span><span class="o">=</span>1, <span class="nv">interrupt_high_delay</span><span class="o">=</span>0
-Info : <span class="nv">dtmcontrol_idle</span><span class="o">=</span>5, <span class="nv">dbus_busy_delay</span><span class="o">=</span>1, <span class="nv">interrupt_high_delay</span><span class="o">=</span>1
-Info : Examined RISCV core; <span class="nv">XLEN</span><span class="o">=</span>32, <span class="nv">misa</span><span class="o">=</span>0x40001105
-Info : <span class="nv">dtmcontrol_idle</span><span class="o">=</span>5, <span class="nv">dbus_busy_delay</span><span class="o">=</span>1, <span class="nv">interrupt_high_delay</span><span class="o">=</span>2
+Info : JTAG tap: riscv.cpu tap/device found: 0x10e31913 (mfg: 0x489 (SiFive, Inc.), part: 0x0e31, ver: 0x1)
+Info : dtmcontrol_idle=5, dbus_busy_delay=1, interrupt_high_delay=0
+Info : dtmcontrol_idle=5, dbus_busy_delay=1, interrupt_high_delay=1
+Info : Examined RISCV core; XLEN=32, misa=0x40001105
+Info : dtmcontrol_idle=5, dbus_busy_delay=1, interrupt_high_delay=2
 ...
-Info : <span class="nv">dtmcontrol_idle</span><span class="o">=</span>5, <span class="nv">dbus_busy_delay</span><span class="o">=</span>2, <span class="nv">interrupt_high_delay</span><span class="o">=</span>36
+Info : dtmcontrol_idle=5, dbus_busy_delay=2, interrupt_high_delay=36
 halted at 0x204003b8 due to debug interrupt
-Info : Found flash device <span class="s1">'issi is25lp128'</span> <span class="o">(</span>ID 0x0018609d<span class="o">)</span>
-cleared protection <span class="k">for </span>sectors 64 through 255 on flash bank 0
+Info : Found flash device 'issi is25lp128' (ID 0x0018609d)
+cleared protection for sectors 64 through 255 on flash bank 0
 </code></pre>
 </div>
 
 <p>This next command will redo the UART association only for the given personality, in this case the second interface of PID 0x6010 (<code class="highlighter-rouge">AppleUSBEFTDI-6010-1</code>).</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
-<span class="gp">$ </span>ls -l /dev/tty.usbserial<span class="k">*</span>
-crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
+</span><span class="w">$ </span><span class="nc">ls</span><span class="kv"> -l /dev/tty.usbserial*
+</span>crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 </code></pre>
 </div>
 
@@ -273,30 +273,30 @@ crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 
 <p>The AppleUSBFTDI module has many <em>personalities</em>; to bring them back, start <code class="highlighter-rouge">kextutil</code> in interractive mode, or reboot:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -interactive
-Defaulting to kernel file <span class="s1">'/System/Library/Kernels/kernel'</span>
-/System/Library/Extensions/AppleUSBFTDI.kext appears to be loadable <span class="o">(</span>not including linkage <span class="k">for </span>on-disk libraries<span class="o">)</span>.
-Load /System/Library/Extensions/AppleUSBFTDI.kext and its dependencies into the kernel <span class="o">[</span>Y/n]? 
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -interactive
+</span>Defaulting to kernel file '/System/Library/Kernels/kernel'
+/System/Library/Extensions/AppleUSBFTDI.kext appears to be loadable (not including linkage for on-disk libraries).
+Load /System/Library/Extensions/AppleUSBFTDI.kext and its dependencies into the kernel [Y/n]? 
 Loading /System/Library/Extensions/AppleUSBFTDI.kext.
-/System/Library/Extensions/AppleUSBFTDI.kext successfully loaded <span class="o">(</span>or already loaded<span class="o">)</span>.
+/System/Library/Extensions/AppleUSBFTDI.kext successfully loaded (or already loaded).
 
-/System/Library/Extensions/AppleUSBFTDI.kext and its dependencies are now loaded, and started as listed below. You can now <span class="k">return </span>to the debugger to <span class="nb">set </span>breakpoints before starting any kexts that need to be started.
+/System/Library/Extensions/AppleUSBFTDI.kext and its dependencies are now loaded, and started as listed below. You can now return to the debugger to set breakpoints before starting any kexts that need to be started.
 
     com.apple.driver.AppleUSBFTDI - already started
 
-Send personalities <span class="k">for</span> /System/Library/Extensions/AppleUSBFTDI.kext <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-6011-3 <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-6011-0 <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-FT2232HQ-1 <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-6010-0 <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-6015 <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-6011-1 <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-6001 <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-6010-1 <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-SeaLevel <span class="o">[</span>Y/n/a]? 
-Send personality TI XDS100v2 Serial <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-6011-2 <span class="o">[</span>Y/n/a]? 
-Send personality AppleUSBEFTDI-6014 <span class="o">[</span>Y/n/a]? 
+Send personalities for /System/Library/Extensions/AppleUSBFTDI.kext [Y/n/a]? 
+Send personality AppleUSBEFTDI-6011-3 [Y/n/a]? 
+Send personality AppleUSBEFTDI-6011-0 [Y/n/a]? 
+Send personality AppleUSBEFTDI-FT2232HQ-1 [Y/n/a]? 
+Send personality AppleUSBEFTDI-6010-0 [Y/n/a]? 
+Send personality AppleUSBEFTDI-6015 [Y/n/a]? 
+Send personality AppleUSBEFTDI-6011-1 [Y/n/a]? 
+Send personality AppleUSBEFTDI-6001 [Y/n/a]? 
+Send personality AppleUSBEFTDI-6010-1 [Y/n/a]? 
+Send personality AppleUSBEFTDI-SeaLevel [Y/n/a]? 
+Send personality TI XDS100v2 Serial [Y/n/a]? 
+Send personality AppleUSBEFTDI-6011-2 [Y/n/a]? 
+Send personality AppleUSBEFTDI-6014 [Y/n/a]? 
 </code></pre>
 </div>
 
@@ -306,27 +306,27 @@ Send personality AppleUSBEFTDI-6014 <span class="o">[</span>Y/n/a]?
 
 <p>To make them work, I use a file</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Disable all FTDI devices
-kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
-# Enable the second interface on the HiFive1 board
-kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
-# Enable the DIGITUS USB/UART DB-9 adapters
-kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6001
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="ni"># </span><span class="nc">Disable</span><span class="kv"> all FTDI devices
+</span>kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
+<span class="ni"># </span><span class="nc">Enable</span><span class="kv"> the second interface on the HiFive1 board
+</span>kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
+<span class="ni"># </span><span class="nc">Enable</span><span class="kv"> the DIGITUS USB/UART DB-9 adapters
+</span>kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6001
 </code></pre>
 </div>
 
 <p>that I start with:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo bash ${HOME}/opt/scripts/ftdi.sh
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> bash ${HOME}/opt/scripts/ftdi.sh
+</span></code></pre>
 </div>
 
 <h2 id="gnulinux">GNU/Linux</h2>
 
 <p>GNU/Linux systems do not need suplimentary drivers to access the FTDI devices, but only some configuration tweaks.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ lsusb
-...
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">lsusb</span><span class="kv">
+</span>...
 Bus XXX Device XXX: ID 0403:6010 Future Technology Devices
 International, Ltd FT2232C Dual USB-UART/FIFO IC
 </code></pre>
@@ -337,7 +337,7 @@ International, Ltd FT2232C Dual USB-UART/FIFO IC
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Tue Jul 11 06:59:16 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/arch/riscv/ftdi-jtag-drivers/" data-layout="button"></div>
 
 

@@ -202,7 +202,7 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 
 <p>In addition, the GNU MCU Eclipse plug-ins also check the following locations (POSIX paths):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>${user.home}/AppData/Local/GNU Tools ARM Embedded;\
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>${user.home}/AppData/Local/GNU Tools ARM Embedded;\
 ${user.home}/opt/GNU Tools ARM Embedded;\
 ${user.home}/opt/gnu-tools-arm-embedded;\
 ${user.home}/local/GNU Tools ARM Embedded;\
@@ -252,8 +252,8 @@ D:/Program Files (x86)/GNU Tools ARM Embedded
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>C:<span class="se">\&gt;</span><span class="s2">"C:</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\G</span><span class="s2">NU Tools ARM Embedded</span><span class="se">\4</span><span class="s2">.8 2014q2</span><span class="se">\b</span><span class="s2">in</span><span class="se">\a</span><span class="s2">rm-none-eabi-gcc.exe"</span> --version
-arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>ARM Embedded Processors<span class="o">)</span> 4.8.4 20140526 <span class="o">(</span>release<span class="o">)</span> <span class="o">[</span>ARM/embedded-4_8-branch revision 211358]
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code>C:\&gt;"C:\Program Files\GNU Tools ARM Embedded\4.8 2014q2\bin\arm-none-eabi-gcc.exe" --version
+arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-branch revision 211358]
 </code></pre>
     </div>
   </li>
@@ -292,18 +292,18 @@ ${user.home}/local:\
   <li>
     <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update</code></p>
 
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>mkdir -p <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$ </span><span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$ </span>tar xjf ~/Downloads/gcc-arm-none-eabi-6-2017-q1-update-mac.tar.bz2
-<span class="gp">$ </span>chmod -R -w <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gcc-arm-none-eabi-6-2017-q1-update
-</code></pre>
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
+</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> ${HOME}/opt
+</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xjf ~/Downloads/gcc-arm-none-eabi-6-2017-q1-update-mac.tar.bz2
+</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w ${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update
+</span></code></pre>
     </div>
   </li>
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc --version
-arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>ARM Embedded Processors 6-2017-q1-update<span class="o">)</span> 6.3.1 20170215 <span class="o">(</span>release<span class="o">)</span> <span class="o">[</span>ARM/embedded-6-branch revision 245512]
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc</span><span class="kv"> --version
+</span>arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors 6-2017-q1-update) 6.3.1 20170215 (release) [ARM/embedded-6-branch revision 245512]
 </code></pre>
     </div>
 
@@ -334,22 +334,22 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
   <li>
     <p>in older versions, the toolchain executables are 32-bits apps; when running on 64-bits machines, be sure you install the following 32-bits libraries (for different versions check the toolchain README for the actual list):</p>
 
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get -y install lib32z1 lib32ncurses5 lib32bz2-1.0
-</code></pre>
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> apt-get -y install lib32z1 lib32ncurses5 lib32bz2-1.0
+</span></code></pre>
     </div>
   </li>
   <li>
     <p>on Ubuntu 15.04 the following libraries are required:</p>
 
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get -y install lib32ncurses5
-</code></pre>
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> apt-get -y install lib32ncurses5
+</span></code></pre>
     </div>
   </li>
   <li>
     <p>on Ubuntu 12 LTSx64 all 32-bits libraries were packed in ia32-libs, so you can also use, but be prepared to get a lot of useless libraries:</p>
 
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get -y install ia32-libs
-</code></pre>
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> apt-get -y install ia32-libs
+</span></code></pre>
     </div>
   </li>
   <li>
@@ -368,19 +368,19 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
       <p>Note: It is highly recommended to <strong>do not change the install path</strong>, since the plug-in tries to automatically discover the toolchain by searching only a limited set of possible locations (<code class="highlighter-rouge">${HOME}/local</code>, <code class="highlighter-rouge">${HOME}/opt</code>, <code class="highlighter-rouge">/usr/local</code>).</p>
     </blockquote>
 
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>mkdir -p <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$ </span><span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$ </span>tar xjf ~/Downloads/gcc-arm-none-eabi-6-2017-q1-update-linux.tar.bz2
-<span class="gp">$ </span>chmod -R -w <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gcc-arm-none-eabi-6-2017-q1-update
-</code></pre>
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
+</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> ${HOME}/opt
+</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xjf ~/Downloads/gcc-arm-none-eabi-6-2017-q1-update-linux.tar.bz2
+</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w ${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update
+</span></code></pre>
     </div>
   </li>
   <li>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-6-2017-q1-update</code></li>
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
-    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gcc-arm-none-eabi-4_8-2014q1/bin/arm-none-eabi-gcc --version
-arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>ARM Embedded Processors<span class="o">)</span> 4.8.3 20140228 <span class="o">(</span>release<span class="o">)</span> <span class="o">[</span>ARM/embedded-4_8-branch revision 208322]
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gcc-arm-none-eabi-4_8-2014q1/bin/arm-none-eabi-gcc</span><span class="kv"> --version
+</span>arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.3 20140228 (release) [ARM/embedded-4_8-branch revision 208322]
 </code></pre>
     </div>
 
@@ -415,7 +415,7 @@ arm-none-eabi-gcc <span class="o">(</span>GNU Tools <span class="k">for </span>A
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Jul  7 16:31:50 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/arm/install/" data-layout="button"></div>
 
 

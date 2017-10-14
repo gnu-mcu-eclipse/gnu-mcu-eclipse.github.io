@@ -256,8 +256,8 @@
   <p>I get the following when trying to install Cross Compiler</p>
 </blockquote>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Cannot <span class="nb">complete </span>the install because one or more required items could not be found.
-Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 <span class="o">(</span>ilg.gnuarmeclipse.managedbuild.cross.feature.group 1.15.2.201511061603<span class="o">)</span>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>Cannot complete the install because one or more required items could not be found.
+Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 (ilg.gnuarmeclipse.managedbuild.cross.feature.group 1.15.2.201511061603)
 </code></pre>
 </div>
 
@@ -281,7 +281,7 @@ Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 <span
 
 <p>The syntax required by the OpenOCD <code class="highlighter-rouge">echo</code> command is a single string, in other words both echo and the message must be in the same string. To achieve this in a shell, the string must be quoted:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>-c <span class="s1">'echo "Started by GNU ARM Eclipse"'</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>-c 'echo "Started by GNU ARM Eclipse"'
 </code></pre>
 </div>
 
@@ -469,12 +469,12 @@ Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 <span
 
 <h2 id="i-tried-to-use-float-abi-hard-on-cortex-m4-but-the-linker-fails">I tried to use Float ABI: hard on Cortex-M4, but the linker fails</h2>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Building target: test1.elf
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>Building target: test1.elf
 Invoking: Cross ARM C++ Linker
 /usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/bin/ld: error: test1.elf uses VFP register arguments
-/usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/libg.a<span class="o">(</span>lib_a-impure.o<span class="o">)</span> does not
+/usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/libg.a(lib_a-impure.o) does not
 /usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/bin/ld: failed to merge target specific data of file
-/usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/libg.a<span class="o">(</span>lib_a-impure.o<span class="o">)</span>
+/usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/libg.a(lib_a-impure.o)
 ...
 </code></pre>
 </div>
@@ -514,7 +514,7 @@ Invoking: Cross ARM C++ Linker
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Mon Jul 17 21:09:55 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/support/faq/" data-layout="button"></div>
 
 

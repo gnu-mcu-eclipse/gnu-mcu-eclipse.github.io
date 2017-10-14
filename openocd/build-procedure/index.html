@@ -117,21 +117,21 @@
 <a href="#rebuild-the-docker-images"><span class="tocnumber">5</span> <span class="toctext">Rebuild the Docker images</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#select-the-stable-or-the-development-branch"><span class="tocnumber">6</span> <span class="toctext">Select the stable or the development branch</span></a>
+<a href="#build-all-distribution-files"><span class="tocnumber">6</span> <span class="toctext">Build all distribution files</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#build-all-distribution-files"><span class="tocnumber">7</span> <span class="toctext">Build all distribution files</span></a>
-</li>
-<li class="toc_level-1 toc_section-8">
-<a href="#subsequent-runs"><span class="tocnumber">8</span> <span class="toctext">Subsequent runs</span></a>
+<a href="#subsequent-runs"><span class="tocnumber">7</span> <span class="toctext">Subsequent runs</span></a>
 <ul>
-<li class="toc_level-2 toc_section-9">
-<a href="#separate-platform-specific-builds"><span class="tocnumber">8.1</span> <span class="toctext">Separate platform specific builds</span></a>
+<li class="toc_level-2 toc_section-8">
+<a href="#separate-platform-specific-builds"><span class="tocnumber">7.1</span> <span class="toctext">Separate platform specific builds</span></a>
 </li>
-<li class="toc_level-2 toc_section-10">
-<a href="#clean"><span class="tocnumber">8.2</span> <span class="toctext">clean</span></a>
+<li class="toc_level-2 toc_section-9">
+<a href="#clean"><span class="tocnumber">7.2</span> <span class="toctext">clean</span></a>
 </li>
 </ul>
+</li>
+<li class="toc_level-1 toc_section-10">
+<a href="#native-builds"><span class="tocnumber">8</span> <span class="toctext">Native builds</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
 <a href="#install-hierarchy"><span class="tocnumber">9</span> <span class="toctext">Install hierarchy</span></a>
@@ -164,8 +164,8 @@
 
 <p>To download it, clone the <a href="https://github.com/gnu-mcu-eclipse/openocd-build">gnu-mcu-eclipse/openocd-build</a> Git repo.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git <span class="se">\</span>
-  ~/Downloads/openocd-build.git
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git \
+</span>  ~/Downloads/openocd-build.git
 </code></pre>
 </div>
 
@@ -179,14 +179,14 @@
 
 <p>However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/openocd-build.git/scripts/build.sh preload-images
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh preload-images
+</span></code></pre>
 </div>
 
 <p>The result should look similar to:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker images
-REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">docker</span><span class="kv"> images
+</span>REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
 ilegeul/debian      9-gnu-mcu-eclipse     ff8a853cf6cb        4 days ago          3.2GB
 ilegeul/debian32    9-gnu-mcu-eclipse     a22ccdf38f1f        4 days ago          3.2GB
 ilegeul/debian32    9                     7348339e67f5        4 days ago          116MB
@@ -199,37 +199,27 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <p>If the download speed is limited, probably it is faster to rebuild the images locally. For this see the <code class="highlighter-rouge">build-images</code> command:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
-</code></pre>
-</div>
-
-<h2 id="select-the-stable-or-the-development-branch">Select the stable or the development branch</h2>
-
-<p>The repository has two branches; by default the development branch is used.</p>
-
-<p>To pull new commits from the repository, use:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bash ~/Downloads/openocd-build.git/scripts/build.sh pull
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh build-images
+</span></code></pre>
 </div>
 
 <h2 id="build-all-distribution-files">Build all distribution files</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bash ~/Downloads/openocd-build.git/scripts/build.sh --all
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh --all
+</span></code></pre>
 </div>
 
 <p>On macOS, to prevent entering sleep, use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ caffeinate bash
-$ exec bash ~/Downloads/openocd-build.git/scripts/build.sh --all
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash
+</span><span class="w">$ </span><span class="nc">exec</span><span class="kv"> bash ~/Downloads/openocd-build.git/scripts/build.sh --all
+</span></code></pre>
 </div>
 
 <p>About half an hour later, the output of the build script is a set of 5 files in the output folder:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ls -l deploy
-total 41992
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">ls</span><span class="kv"> -l deploy
+</span>total 41992
 drwxr-xr-x  8 ilg  staff      272 Aug 26 12:57 debian32
 drwxr-xr-x  8 ilg  staff      272 Aug 26 12:45 debian64
 -rw-r--r--  1 ilg  staff        1 Aug 26 13:03 empty.sha
@@ -261,7 +251,7 @@ drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
 
 <p>Instead of <code class="highlighter-rouge">--all</code>, you can use any combination of:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>--win32 --win64 --debian32 --debian64 --osx
+<div class="highlighter-rouge"><pre class="highlight"><code>--win32 --win64 --linux32 --linux64 --osx
 </code></pre>
 </div>
 
@@ -269,15 +259,26 @@ drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
 
 <p>To remove most build files, use:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/openocd-build.git/scripts/build.sh clean
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh clean
+</span></code></pre>
 </div>
 
 <p>To also remove the repository and the output files, use:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh cleanall
+</span></code></pre>
 </div>
+
+<h2 id="native-builds">Native builds</h2>
+
+<p>In addition to the Debian 9 binaries, if necessary, the script can be used to build binaries for any Linux distribution.</p>
+
+<p>For such cases, simply start the script without any platform option:</p>
+
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh
+</span></code></pre>
+</div>
+<p>It is the responsibility of the user to meet all the prerequisites.</p>
 
 <h2 id="install-hierarchy">Install hierarchy</h2>
 
@@ -285,8 +286,8 @@ drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
 
 <p>After install, this package should create structure like this (only the first two depth levels are shown):</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>tree -L 2 /Applications/GNU<span class="se">\ </span>MCU<span class="se">\ </span>Eclipse/OpenOCD
-/Applications/GNU<span class="se">\ </span>MCU<span class="se">\ </span>Eclipse/OpenOCD
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">tree</span><span class="kv"> -L 2 /Applications/GNU\ MCU\ Eclipse/OpenOCD
+</span>/Applications/GNU\ MCU\ Eclipse/OpenOCD
 ├── bin
 │   └── openocd
 ├── doc
@@ -310,7 +311,7 @@ drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
     ├── memory.tcl
     ├── mmr_helpers.tcl
     ├── target
-    ├── <span class="nb">test</span>
+    ├── test
     └── tools
 
 16 directories, 9 files
@@ -331,11 +332,11 @@ drwxr-xr-x  8 ilg  staff      272 Aug 26 12:52 win64
 
 <p>For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-3-20170826-0939-dev/bin/openocd --version
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00138-g96c70022 <span class="o">(</span>2017-08-26-12:40<span class="o">)</span>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-3-20170826-0939-dev/bin/openocd</span><span class="kv"> --version
+</span>GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00138-g96c70022 (2017-08-26-12:40)
 Licensed under GNU GPL v2
-For bug reports, <span class="nb">read
-	</span>http://openocd.org/doc/doxygen/bugs.html
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
 </code></pre>
 </div>
 
@@ -345,7 +346,7 @@ For bug reports, <span class="nb">read
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Wed Sep 27 20:49:25 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/build-procedure/" data-layout="button"></div>
 
 

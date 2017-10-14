@@ -179,8 +179,8 @@
 
 <p>To test if the compiler is available, use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ gcc --version
-Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">gcc</span><span class="kv"> --version
+</span>Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
 Target: x86_64-apple-darwin14.3.0
 Thread model: posix
@@ -195,12 +195,12 @@ Thread model: posix
 
 <p>The entire process can be automated with two scripts, available from GitHub:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ mkdir -p ${HOME}/opt
-$ git clone https://github.com/ilg-ul/opt-install-scripts \
-    ${HOME}/opt/install-scripts.git
-$ bash ${HOME}/opt/install-scripts.git/install-homebrew-gae.sh
-$ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
+</span><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone https://github.com/ilg-ul/opt-install-scripts \
+</span>    ${HOME}/opt/install-scripts.git
+<span class="w">$ </span><span class="nc">bash</span><span class="kv"> ${HOME}/opt/install-scripts.git/install-homebrew-gae.sh
+</span><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ${HOME}/opt/install-scripts.git/install-texlive.sh
+</span></code></pre>
 </div>
 
 <p>The scripts run with user credentials, no <code class="highlighter-rouge">sudo</code> access is required.</p>
@@ -219,18 +219,18 @@ $ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
 
 <p>To allow Docker to run as a regular user, you need to be a member of the <code class="highlighter-rouge">docker</code> group.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo groupadd docker
-$ sudo gpasswd -a ${USER} docker
-$ sudo service docker restart
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> groupadd docker
+</span><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> gpasswd -a ${USER} docker
+</span><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> service docker restart
+</span></code></pre>
 </div>
 
 <p>To make these changes effective, logout and login.</p>
 
 <p>The above are for Ubuntu and the Debian family. For other distributions, the last line may differ, for example for Arch Linux use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ systemctl restart docker
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">systemctl</span><span class="kv"> restart docker
+</span></code></pre>
 </div>
 
 <h4 id="install-required-packages">Install required packages</h4>
@@ -249,8 +249,8 @@ $ sudo service docker restart
 
 <p>To download it, clone the <a href="https://github.com/gnu-mcu-eclipse/build-scripts">gnuarmeclipse/build-scripts</a> Git repo.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
-  ~/Downloads/build-scripts.git
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
+</span>  ~/Downloads/build-scripts.git
 </code></pre>
 </div>
 
@@ -264,16 +264,16 @@ $ sudo service docker restart
 
 <p>However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh preload-images
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/build-scripts.git/scripts/build-qemu.sh preload-images
+</span></code></pre>
 </div>
 
 <p>Please be patient, this will bring about 5 GB, which on a regular broadband line might take more than 30 minutes.</p>
 
 <p>The result should look similar to:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">docker</span><span class="kv"> images
+</span>REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 ilegeul/debian32    8-gnuarm-gcc-x11-v3   14a0dcce0dd7        11 months ago       1.633 GB
 ilegeul/debian      8-gnuarm-gcc-x11-v3   a461714e9b42        11 months ago       1.771 GB
 ilegeul/debian      8-gnuarm-mingw        1c04c24123c1        15 months ago       2.486 GB
@@ -282,20 +282,20 @@ ilegeul/debian      8-gnuarm-mingw        1c04c24123c1        15 months ago     
 
 <h2 id="build-all-distribution-files">Build all distribution files</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh --all
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/build-scripts.git/scripts/build-qemu.sh --all
+</span></code></pre>
 </div>
 
 <p>On macOS, to prevent entering sleep, use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ caffeinate bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh --all
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh --all
+</span></code></pre>
 </div>
 
 <p>About half an hour later, the output of the build script is a set of 5 files in the output folder:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ls -l output
-total 105616
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">ls</span><span class="kv"> -l output
+</span>total 105616
 total 51336
 drwxr-xr-x  6 ilg  staff      204 May 12 22:07 debian32
 drwxr-xr-x  6 ilg  staff      204 May 12 21:43 debian64
@@ -324,8 +324,8 @@ drwxr-xr-x  6 ilg  staff      204 May 12 21:04 win64
 
 <p>To remove all build files, use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh clean
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/build-scripts.git/scripts/build-qemu.sh clean
+</span></code></pre>
 </div>
 
 <h2 id="the-work-folder">The Work folder</h2>
@@ -334,8 +334,8 @@ drwxr-xr-x  6 ilg  staff      204 May 12 21:04 win64
 
 <p>A typical Work folder includes sub-folders for each project:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ tree -L 1 qemu
-qemu
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">tree</span><span class="kv"> -L 1 qemu
+</span>qemu
 ├── README.txt
 ├── build
 ├── gnuarmeclipse-qemu.git
@@ -349,8 +349,8 @@ qemu
 
 <p>The build and include subfolders look like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ tree -L 2 qemu/build/ qemu/install
-qemu/build/
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">tree</span><span class="kv"> -L 2 qemu/build/ qemu/install
+</span>qemu/build/
 ├── debian32
 │   └── qemu
 ├── debian64
@@ -387,8 +387,8 @@ qemu/install
 
 <p>After install, the package should create a structure like this (only the first two depth levels are shown):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ tree -L 2 /Applications/GNU\ ARM\ Eclipse/QEMU/2.3.50-201505141607-dev
-/Applications/GNU\ ARM\ Eclipse/QEMU/2.3.50-201505141607-dev
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">tree</span><span class="kv"> -L 2 /Applications/GNU\ ARM\ Eclipse/QEMU/2.3.50-201505141607-dev
+</span>/Applications/GNU\ ARM\ Eclipse/QEMU/2.3.50-201505141607-dev
 ├── INFO.txt
 ├── bin
 │   ├── libffi.6.dylib
@@ -441,8 +441,8 @@ qemu/install
 
 <p>For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ /Applications/GNU\ ARM\ Eclipse/QEMU/2.2.91-201504021111-dev/bin/qemu-system-gnuarmeclipse --version
-GNU MCU Eclipse QEMU 64-bits emulator version 2.2.91
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">/Applications/GNU\</span><span class="kv"> ARM\ Eclipse/QEMU/2.2.91-201504021111-dev/bin/qemu-system-gnuarmeclipse --version
+</span>GNU MCU Eclipse QEMU 64-bits emulator version 2.2.91
 Copyright (c) 2003-2008 Fabrice Bellard
 </code></pre>
 </div>
@@ -453,7 +453,7 @@ Copyright (c) 2003-2008 Fabrice Bellard
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Thu Jul  6 21:53:38 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/qemu/build-procedure/" data-layout="button"></div>
 
 

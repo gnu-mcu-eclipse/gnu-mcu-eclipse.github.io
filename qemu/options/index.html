@@ -153,9 +153,9 @@
 
 <p>The command line used by the QEMU plug-in to start a debug session looks like this:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>qemu-system-gnuarmeclipse --verbose --verbose --board STM32F4-Discovery \
---mcu STM32F407VG --gdb tcp::1234 -d unimp,guest_errors \
+<div class="language-console highlighter-rouge">
+<pre class="highlight"><code><span class="w">$ </span><span class="nc">qemu-system-gnuarmeclipse</span><span class="kv"> --verbose --verbose --board STM32F4-Discovery \
+</span>--mcu STM32F407VG --gdb tcp::1234 -d unimp,guest_errors \
 --semihosting-config enable=on,target=native \
 --semihosting-cmdline blinky
 </code></pre>
@@ -163,9 +163,9 @@
 
 <p>A typical emulation session started outside Eclipse looks like this:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>qemu-system-gnuarmeclipse --verbose --verbose --board STM32F4-Discovery \
---mcu STM32F407VG -d unimp,guest_errors \
+<div class="language-console highlighter-rouge">
+<pre class="highlight"><code><span class="w">$ </span><span class="nc">qemu-system-gnuarmeclipse</span><span class="kv"> --verbose --verbose --board STM32F4-Discovery \
+</span>--mcu STM32F407VG -d unimp,guest_errors \
 --nographic --image test.elf \
 --semihosting-config enable=on,target=native \
 --semihosting-cmdline test 1 2 3
@@ -288,7 +288,7 @@ Cortex-M4 r0p0 core reset.
 
 <p>Adding one more <code class="highlighter-rouge">--verbose</code>  will make QEMU extra verbose and it’ll display details about the board hardware configuration and the memory sections loaded by GDB:</p>
 
-<div class="highlighter-rouge">
+<div class="language-console highlighter-rouge">
 <pre class="highlight"><code>GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.
@@ -375,7 +375,7 @@ Cortex-M4 r0p0 core reset.
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/qemu/options/" data-layout="button"></div>
 
 

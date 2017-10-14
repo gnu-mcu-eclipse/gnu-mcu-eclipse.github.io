@@ -161,9 +161,9 @@
 
 <p>To download it, clone the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> Git repo, including submodules.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>rm -rf ~/Downloads/riscv-none-gcc-build.git
-<span class="gp">$ </span>git clone --recurse-submodules https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git <span class="se">\</span>
-  ~/Downloads/riscv-none-gcc-build.git
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">rm</span><span class="kv"> -rf ~/Downloads/riscv-none-gcc-build.git
+</span><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git \
+</span>  ~/Downloads/riscv-none-gcc-build.git
 </code></pre>
 </div>
 
@@ -177,14 +177,14 @@
 
 <p>However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh preload-images
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh preload-images
+</span></code></pre>
 </div>
 
 <p>The result should look similar to:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker images
-REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">docker</span><span class="kv"> images
+</span>REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
 ilegeul/debian      9-gnu-mcu-eclipse     ff8a853cf6cb        4 days ago          3.2GB
 ilegeul/debian32    9-gnu-mcu-eclipse     a22ccdf38f1f        4 days ago          3.2GB
 ilegeul/debian32    9                     7348339e67f5        4 days ago          116MB
@@ -197,27 +197,27 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <p>If the download speed is limited, probably it is faster to rebuild the images locally. For this see the <code class="highlighter-rouge">build-images</code> command:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
+</span></code></pre>
 </div>
 
 <h2 id="build-all-distribution-files">Build all distribution files</h2>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
+</span></code></pre>
 </div>
 
 <p>On macOS, to prevent entering sleep, use:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>caffeinate bash
-<span class="gp">$ </span><span class="nb">exec </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash
+</span><span class="w">$ </span><span class="nc">exec</span><span class="kv"> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
+</span></code></pre>
 </div>
 
 <p>Many, many hours later, the output of the build script is a set of 8 files and their SHA signatures in the <code class="highlighter-rouge">deploy</code> folder:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ls -l deploy
-total 784400
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">ls</span><span class="kv"> -l deploy
+</span>total 784400
 -rw-r--r--  1 ilg  staff  75678450 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg
 -rw-r--r--  1 ilg  staff       127 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg.sha
 -rw-r--r--  1 ilg  staff  75726500 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.tgz
@@ -253,14 +253,14 @@ total 784400
 
 <p>To remove most build files, use:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh clean
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh clean
+</span></code></pre>
 </div>
 
 <p>To also remove the repository and the output files, use:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh cleanall
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh cleanall
+</span></code></pre>
 </div>
 
 <h2 id="install-hierarchy">Install hierarchy</h2>
@@ -269,8 +269,8 @@ total 784400
 
 <p>After install, this package should create structure like this (only the first two depth levels are shown):</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>tree -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
-/Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">tree</span><span class="kv"> -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
+</span>/Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 ├── README.md
 ├── bin
 │   ├── riscv64-unknown-elf-addr2line
@@ -355,8 +355,8 @@ total 784400
 
 <p>For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
-riscv64-unknown-elf-gcc <span class="o">(</span>GNU MCU Eclipse RISC-V Embedded GCC, 64-bits<span class="o">)</span> 7.1.1 20170509
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc</span><span class="kv"> --version
+</span>riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
 </code></pre>
 </div>
 
@@ -366,7 +366,7 @@ riscv64-unknown-elf-gcc <span class="o">(</span>GNU MCU Eclipse RISC-V Embedded 
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sun Sep  3 18:40:36 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/build-procedure/" data-layout="button"></div>
 
 

@@ -106,17 +106,17 @@
 
 <p>It is also possible to install the Command Line Tools via a command line:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>xcode-select --install
-<span class="gp">$ </span>xcode-select -p
-/Library/Developer/CommandLineTools
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">xcode-select</span><span class="kv"> --install
+</span><span class="w">$ </span><span class="nc">xcode-select</span><span class="kv"> -p
+</span>/Library/Developer/CommandLineTools
 </code></pre>
 </div>
 
 <p>To test if the compiler is available, use:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gcc --version
-Configured with: --prefix<span class="o">=</span>/Library/Developer/CommandLineTools/usr --with-gxx-include-dir<span class="o">=</span>/usr/include/c++/4.2.1
-Apple LLVM version 8.1.0 <span class="o">(</span>clang-802.0.42<span class="o">)</span>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">gcc</span><span class="kv"> --version
+</span>Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.1.0 (clang-802.0.42)
 Target: x86_64-apple-darwin16.7.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
@@ -161,27 +161,27 @@ $ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
 
 <p>The steps are basically:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get update
-
-<span class="gp">$ </span>sudo apt-get install apt-transport-https ca-certificates  curl software-properties-common
-
-<span class="gp">$ </span>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-<span class="gp">$ </span>sudo add-apt-repository  <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu  </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2">  stable"</span>
-
-<span class="gp">$ </span>sudo apt-get update
-<span class="gp">$ </span>sudo apt-get -y install docker-ce
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> apt-get update
+</span>
+<span class="w">$ </span><span class="nc">sudo</span><span class="kv"> apt-get install apt-transport-https ca-certificates  curl software-properties-common
+</span>
+<span class="w">$ </span><span class="nc">curl</span><span class="kv"> -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+</span>
+<span class="w">$ </span><span class="nc">sudo</span><span class="kv"> add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
+</span>
+<span class="w">$ </span><span class="nc">sudo</span><span class="kv"> apt-get update
+</span><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> apt-get -y install docker-ce
+</span></code></pre>
 </div>
 
 <p>To check if the install is functional, run the <em>Hello World</em> image, for the moment as <code class="highlighter-rouge">sudo</code>:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker run hello-world
-Unable to find image <span class="s1">'hello-world:latest'</span> locally
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> docker run hello-world
+</span>Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
-b04784fba78d: Pull <span class="nb">complete 
-</span>Digest: sha256:f3b3b28a45160805bb16542c9531888519430e9e6d6ffc09d72261b0d26ff74f
-Status: Downloaded newer image <span class="k">for </span>hello-world:latest
+b04784fba78d: Pull complete 
+Digest: sha256:f3b3b28a45160805bb16542c9531888519430e9e6d6ffc09d72261b0d26ff74f
+Status: Downloaded newer image for hello-world:latest
 
 Hello from Docker!
 ...
@@ -192,24 +192,24 @@ Hello from Docker!
 
 <p>To allow Docker to run as a regular user, you need to be a member of the <code class="highlighter-rouge">docker</code> group.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo groupadd docker
-<span class="gp">$ </span>sudo gpasswd -a <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
-<span class="gp">$ </span>sudo service docker restart
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> groupadd docker
+</span><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> gpasswd -a ${USER} docker
+</span><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> service docker restart
+</span></code></pre>
 </div>
 
 <p>The above spets are for Ubuntu and the Debian family. For other distributions, the last line may differ, for example for Arch Linux use:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>systemctl restart docker
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">systemctl</span><span class="kv"> restart docker
+</span></code></pre>
 </div>
 
 <p>To make these changes effective, logout and login.</p>
 
 <p>To check if the configuration change is functional, run the same <em>Hello World</em> image without sudo:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker run hello-world
-
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">docker</span><span class="kv"> run hello-world
+</span>
 Hello from Docker!
 ...
 </code></pre>
@@ -221,8 +221,8 @@ Hello from Docker!
 
 <p>However, a very few of them might need to be installed explicitly. On Ubuntu the command is:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo apt-get -y install curl git automake libtool patch tar unzip
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> apt-get -y install curl git automake libtool patch tar unzip
+</span></code></pre>
 </div>
 
 <p>The script checks for them; if the script fails, install them and re-run.</p>
@@ -241,7 +241,7 @@ Hello from Docker!
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Wed Sep 27 20:38:27 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/build-binaries-prerequisites/" data-layout="button"></div>
 
 

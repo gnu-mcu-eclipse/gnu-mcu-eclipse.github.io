@@ -205,7 +205,7 @@
 
 <p>To check if OpenOCD starts, use the following command:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>C:&gt;"C:\Program Files\GNU MCU Eclipse\OpenOCD\0.8.0-201503201840\bin\openocd" --version
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>C:&gt;"C:\Program Files\GNU MCU Eclipse\OpenOCD\0.8.0-201503201840\bin\openocd" --version
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-03-20-18:40)
 </code></pre>
 </div>
@@ -260,8 +260,8 @@ GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-03-20-18:40)
 
 <p>To check if OpenOCD starts, use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ /Applications/GNU\ ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd --version
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-01-18-12:57)
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">/Applications/GNU\</span><span class="kv"> ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd --version
+</span>GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-01-18-12:57)
 </code></pre>
 </div>
 
@@ -280,18 +280,18 @@ GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036 (2015-01-18-12:57)
 
 <p>To install this package, unpack the archive and copy it to  <code class="highlighter-rouge">/opt/gnuarmeclipse/openocd/${version}</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo mkdir -p /opt/gnuarmeclipse
-$ cd /opt/gnuarmeclipse
-$ sudo tar xvf ~/Downloads/gnuarmeclipse-openocd-debian64-0.10.0-201510281129-dev.tgz
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> mkdir -p /opt/gnuarmeclipse
+</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> /opt/gnuarmeclipse
+</span><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> tar xvf ~/Downloads/gnuarmeclipse-openocd-debian64-0.10.0-201510281129-dev.tgz
+</span></code></pre>
 </div>
 
 <p>Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.</p>
 
 <p>To check if OpenOCD starts and is recent, use:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ /opt/gnuarmeclipse/openocd/0.10.0-201510281129-dev/bin/openocd --version
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0-dev-00141-g09aeb96-dirty (2015-10-28-11:56)
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">/opt/gnuarmeclipse/openocd/0.10.0-201510281129-dev/bin/openocd</span><span class="kv"> --version
+</span>GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0-dev-00141-g09aeb96-dirty (2015-10-28-11:56)
 </code></pre>
 </div>
 
@@ -299,10 +299,10 @@ GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0-dev-00141-g09aeb96-dirty (2
 
 <p>For the JTAG probes implemented as USB devices (actually most of them), the last installation step on GNU/Linux is to configure the <strong>UDEV</strong> subsystem. OpenOCD provides an UDEV rules file defining all the supported IDs; to install it, just copy the file to <code class="highlighter-rouge">/etc/udev/rules.d</code> and eventually notify the daemon:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo cp /opt/gnuarmeclipse/openocd/0.10.0-201510281129-dev/contrib/99-openocd.rules \
-  /etc/udev/rules.d/
-$ sudo udevadm control --reload-rules
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> cp /opt/gnuarmeclipse/openocd/0.10.0-201510281129-dev/contrib/99-openocd.rules \
+</span>  /etc/udev/rules.d/
+<span class="w">$ </span><span class="nc">sudo</span><span class="kv"> udevadm control --reload-rules
+</span></code></pre>
 </div>
 
 <p>Note: If you previously installed the J-Link binaries, the USB IDs were already added to UDEV. The above OpenOCD rules file also defines the J-Link ID. Apparently UDEV does not complain; if you encounter problems, just comment out the definition in the OpenOCD file.</p>
@@ -313,7 +313,7 @@ $ sudo udevadm control --reload-rules
 or are not effective, and when trying to access the JTAG probe,
 an error is issued:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>libusb_open failed: LIBUSB_ERROR_ACCESS
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>libusb_open failed: LIBUSB_ERROR_ACCESS
 </code></pre>
 </div>
 
@@ -322,8 +322,8 @@ for regular work you also need to grant your user permission to use the USB.</p>
 
 <p>For example, on Ubuntu 15.10 you need to issue something like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo usermod -aG plugdev $USER
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> usermod -aG plugdev $USER
+</span></code></pre>
 </div>
 
 <p>Then relogin or restart.</p>
@@ -335,8 +335,8 @@ when you have a functional solution post it on the project forum.</p>
 
 <p>To test if OpenOCD is able to connect to a specific board, you generally need to select the interface and the processor. As a shortcut, for some well known boards, there are ready made configuration files to set both the interface and the processor. For example, on macOS, to test a connection via ST/LINK v2 to the STM32F4DISCOERY board, you can use the sample below:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ /Applications/GNU\ ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd \
-  -f board/stm32f4discovery.cfg
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">/Applications/GNU\</span><span class="kv"> ARM\ Eclipse/OpenOCD/0.8.0-201501181257/bin/openocd \
+</span>  -f board/stm32f4discovery.cfg
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
 Licensed under GNU GPL v2
 For bug reports, read
@@ -383,7 +383,7 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Mon Jul 17 21:16:33 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/install/" data-layout="button"></div>
 
 

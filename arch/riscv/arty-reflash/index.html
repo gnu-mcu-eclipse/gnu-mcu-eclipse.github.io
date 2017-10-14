@@ -110,13 +110,13 @@
 
 <p>On GNU/Linux, building <code class="highlighter-rouge">xc3sprog</code> requires <code class="highlighter-rouge">svn</code>, <code class="highlighter-rouge">cmake</code>, <code class="highlighter-rouge">libftdi</code> and <code class="highlighter-rouge">libusb</code>.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>svn http://xc3sprog.svn.sourceforge.net/svnroot/xc3sprog/trunk xc3sprog.svn
-<span class="gp">$ </span>mkdir build
-<span class="gp">$ </span><span class="nb">cd </span>build
-<span class="gp">$ </span>cmake ../xc3sprog.svn
-<span class="gp">$ </span>make
-<span class="gp">$ </span>make install
-</code></pre>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">svn</span><span class="kv"> http://xc3sprog.svn.sourceforge.net/svnroot/xc3sprog/trunk xc3sprog.svn
+</span><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> build
+</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> build
+</span><span class="w">$ </span><span class="nc">cmake</span><span class="kv"> ../xc3sprog.svn
+</span><span class="w">$ </span><span class="nc">make</span><span class="kv">
+</span><span class="w">$ </span><span class="nc">make</span><span class="kv"> install
+</span></code></pre>
 </div>
 
 <h4 id="macos">macOS</h4>
@@ -134,12 +134,12 @@
   <li>the second step uses <code class="highlighter-rouge">openocd</code> to program the main <code class="highlighter-rouge">.mcs</code> image into the SPI flash</li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>xc3sprog -c nexys4 E31_ArtyTop.bit
-<span class="gp">$ </span><span class="nb">cd </span>freedom-e-sdk
-<span class="gp">$ </span>openocd -f bsp/env/coreplexip-e31-arty/openocd.cfg <span class="se">\</span>
-    -c <span class="s2">"flash protect 0 0 last off"</span> <span class="se">\</span>
-    -c <span class="s2">"program coreplexip_e31_arty/arty.E31FPGAEvaluationConfig.mcs verify 0x40000000"</span> <span class="se">\</span>
-    -c <span class="s2">"exit"</span>
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">xc3sprog</span><span class="kv"> -c nexys4 E31_ArtyTop.bit
+</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> freedom-e-sdk
+</span><span class="w">$ </span><span class="nc">openocd</span><span class="kv"> -f bsp/env/coreplexip-e31-arty/openocd.cfg \
+</span>    -c "flash protect 0 0 last off" \
+    -c "program coreplexip_e31_arty/arty.E31FPGAEvaluationConfig.mcs verify 0x40000000" \
+    -c "exit"
 </code></pre>
 </div>
 
@@ -147,7 +147,7 @@
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Sep 29 09:53:57 2017 UTC.</p>
+<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/arch/riscv/arty-reflash/" data-layout="button"></div>
 
 
