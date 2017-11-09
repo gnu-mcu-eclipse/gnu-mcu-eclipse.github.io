@@ -123,7 +123,7 @@
 <a href="#update-git-repos"><span class="tocnumber">6.1</span> <span class="toctext">Update git repos</span></a>
 </li>
 <li class="toc_level-2 toc_section-8">
-<a href="#prepare-pre-release"><span class="tocnumber">6.2</span> <span class="toctext">Prepare pre-release</span></a>
+<a href="#prepare-release"><span class="tocnumber">6.2</span> <span class="toctext">Prepare release</span></a>
 </li>
 </ul>
 </li>
@@ -232,7 +232,7 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <p>After merging the remote branches, merge the result into the <code class="highlighter-rouge">-gme</code> branch.</p>
 
-<h3 id="prepare-pre-release">Prepare pre-release</h3>
+<h3 id="prepare-release">Prepare release</h3>
 
 <p>By default, the build script uses tagged commits and downloads the corresponding archives.</p>
 
@@ -251,6 +251,13 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 <p>When the result is acceptable, commit all repos and tag all with the same tag (like <code class="highlighter-rouge">v7.2.0-1-20171109</code>).</p>
 
 <p>Update the <code class="highlighter-rouge">RELEASE_VERSION</code> to use exactly the same tag, but without the initial <code class="highlighter-rouge">v</code>.</p>
+
+<p>Update <code class="highlighter-rouge">gnu-mcu-eclipse/info</code> files:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">CHANGES.txt</code> (add release)</li>
+  <li><code class="highlighter-rouge">INFO.md</code> (update references to commits)</li>
+</ul>
 
 <h2 id="build-all-distribution-files">Build all distribution files</h2>
 
@@ -417,7 +424,7 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Thu Nov  9 19:42:16 2017 UTC.</p>
+<p class="page-footer">Last modified on Thu Nov  9 23:45:01 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/build-procedure/" data-layout="button"></div>
 
 
