@@ -117,30 +117,41 @@
 <a href="#rebuild-the-docker-images"><span class="tocnumber">5</span> <span class="toctext">Rebuild the Docker images</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#build-all-distribution-files"><span class="tocnumber">6</span> <span class="toctext">Build all distribution files</span></a>
-</li>
-<li class="toc_level-1 toc_section-7">
-<a href="#subsequent-runs"><span class="tocnumber">7</span> <span class="toctext">Subsequent runs</span></a>
+<a href="#development"><span class="tocnumber">6</span> <span class="toctext">Development</span></a>
 <ul>
-<li class="toc_level-2 toc_section-8">
-<a href="#separate-platform-specific-builds"><span class="tocnumber">7.1</span> <span class="toctext">Separate platform specific builds</span></a>
+<li class="toc_level-2 toc_section-7">
+<a href="#update-git-repos"><span class="tocnumber">6.1</span> <span class="toctext">Update git repos</span></a>
 </li>
-<li class="toc_level-2 toc_section-9">
-<a href="#clean"><span class="tocnumber">7.2</span> <span class="toctext">clean</span></a>
+<li class="toc_level-2 toc_section-8">
+<a href="#prepare-pre-release"><span class="tocnumber">6.2</span> <span class="toctext">Prepare pre-release</span></a>
 </li>
 </ul>
 </li>
+<li class="toc_level-1 toc_section-9">
+<a href="#build-all-distribution-files"><span class="tocnumber">7</span> <span class="toctext">Build all distribution files</span></a>
+</li>
 <li class="toc_level-1 toc_section-10">
-<a href="#install-hierarchy"><span class="tocnumber">8</span> <span class="toctext">Install hierarchy</span></a>
+<a href="#subsequent-runs"><span class="tocnumber">8</span> <span class="toctext">Subsequent runs</span></a>
+<ul>
+<li class="toc_level-2 toc_section-11">
+<a href="#separate-platform-specific-builds"><span class="tocnumber">8.1</span> <span class="toctext">Separate platform specific builds</span></a>
 </li>
-<li class="toc_level-1 toc_section-11">
-<a href="#uninstall"><span class="tocnumber">9</span> <span class="toctext">Uninstall</span></a>
+<li class="toc_level-2 toc_section-12">
+<a href="#clean"><span class="tocnumber">8.2</span> <span class="toctext">clean</span></a>
 </li>
-<li class="toc_level-1 toc_section-12">
-<a href="#test"><span class="tocnumber">10</span> <span class="toctext">Test</span></a>
+</ul>
 </li>
 <li class="toc_level-1 toc_section-13">
-<a href="#more-build-details"><span class="tocnumber">11</span> <span class="toctext">More build details</span></a>
+<a href="#install-hierarchy"><span class="tocnumber">9</span> <span class="toctext">Install hierarchy</span></a>
+</li>
+<li class="toc_level-1 toc_section-14">
+<a href="#uninstall"><span class="tocnumber">10</span> <span class="toctext">Uninstall</span></a>
+</li>
+<li class="toc_level-1 toc_section-15">
+<a href="#test"><span class="tocnumber">11</span> <span class="toctext">Test</span></a>
+</li>
+<li class="toc_level-1 toc_section-16">
+<a href="#more-build-details"><span class="tocnumber">12</span> <span class="toctext">More build details</span></a>
 </li>
 </ul>
 </td>
@@ -200,6 +211,46 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
 </span></code></pre>
 </div>
+
+<h2 id="development">Development</h2>
+
+<h3 id="update-git-repos">Update git repos</h3>
+
+<p>The GNU MCU Eclipse RISC-V GCC is following closely the official <a href="https://github.com/riscv/riscv-gnu-toolchain/releases">RISC-V releases</a>.</p>
+
+<p>The procedure is to first merge the remote branches to the local branches.</p>
+
+<p>Currently, the following branches are used</p>
+
+<ul>
+  <li><code class="highlighter-rouge">riscv-gcc-7.2.0</code></li>
+  <li><code class="highlighter-rouge">riscv-newlib-2.5.0</code></li>
+  <li><code class="highlighter-rouge">riscv-binutils-2.29</code></li>
+</ul>
+
+<p>The GNU MCU Eclipse branches have similar names, but suffixed with <code class="highlighter-rouge">-gme</code>.</p>
+
+<p>After merging the remote branches, merge the result into the <code class="highlighter-rouge">-gme</code> branch.</p>
+
+<h3 id="prepare-pre-release">Prepare pre-release</h3>
+
+<p>By default, the build script uses tagged commits and downloads the corresponding archives.</p>
+
+<p>While preparing the release it is important to be able to use live Git versions. For this,</p>
+
+<ul>
+  <li>update the commit ids to the desired ones</li>
+  <li>commit and push</li>
+  <li>start the build script and pass <code class="highlighter-rouge">--use-gits</code></li>
+</ul>
+
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --use-gits
+</span></code></pre>
+</div>
+
+<p>When the result is acceptable, commit all repos and tag all with the same tag (like <code class="highlighter-rouge">v7.2.0-1-20171109</code>).</p>
+
+<p>Update the <code class="highlighter-rouge">RELEASE_VERSION</code> to use exactly the same tag, but without the initial <code class="highlighter-rouge">v</code>.</p>
 
 <h2 id="build-all-distribution-files">Build all distribution files</h2>
 
@@ -366,7 +417,7 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Thu Nov  9 19:42:16 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/build-procedure/" data-layout="button"></div>
 
 
