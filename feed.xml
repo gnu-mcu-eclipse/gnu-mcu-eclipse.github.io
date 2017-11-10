@@ -5,8 +5,8 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 10 Nov 2017 13:11:40 +0000</pubDate>
-    <lastBuildDate>Fri, 10 Nov 2017 13:11:40 +0000</lastBuildDate>
+    <pubDate>Fri, 10 Nov 2017 19:27:31 +0000</pubDate>
+    <lastBuildDate>Fri, 10 Nov 2017 19:27:31 +0000</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -70,6 +70,32 @@
         <category>releases</category>
         
         <category>openocd</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU MCU Eclipse plug-ins v4.2.1-201711101735 released</title>
+        <description>&lt;p&gt;Version 4.2.1-201711101735 is a major release; thanks to a contribution from &lt;a href=&quot;https://www.sifive.com&quot;&gt;SiFive&lt;/a&gt;, the project was enhanced with a template plug-in to create projects for the SiFive boards.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 11 Jul 2017 11:29:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.2.1-201711101735-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.2.1-201711101735-released/</guid>
+        
+        <category>GNU</category>
+        
+        <category>ARM</category>
+        
+        <category>RISC-V</category>
+        
+        <category>MCU</category>
+        
+        <category>Eclipse</category>
+        
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
         
       </item>
     
@@ -190,22 +216,6 @@
         <category>releases</category>
         
         <category>plugins</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU ARM Eclipse OpenOCD v0.10.0-20170418* released</title>
-        <description>&lt;p&gt;Version v0.10.0-201704182147 is a maintenance release. It updates &lt;code class=&quot;highlighter-rouge&quot;&gt;libhid.a&lt;/code&gt; to the latest available version, 0.8.0-rc1. It includes binaries for Windows, macOS and GNU/Linux.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 19 Apr 2017 04:41:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/04/19/openocd-v0-10-0-20170418-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/04/19/openocd-v0-10-0-20170418-released/</guid>
-        
-        
-        <category>releases</category>
-        
-        <category>openocd</category>
         
       </item>
     
