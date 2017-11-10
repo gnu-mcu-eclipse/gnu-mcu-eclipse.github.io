@@ -153,11 +153,11 @@ Posted on November 10, 2017 by Liviu Ionescu.
 <h2 id="new-features">New features</h2>
 
 <ul>
-  <li>a new template plug-in was added to create projects for the SiFive boards</li>
+  <li>a new template plug-in was added to create projects for the SiFive boards
+<img src="/assets/images/2017/sifive-template-config.png" alt="RISC-V plug-in tool settings" /></li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/247">#247</a>] support for an explicitly embedded RISC-V toolchain (<code class="highlighter-rouge">riscv-none-embed-gcc</code>) was added</li>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/240">#240</a>] - support for Linux &amp; rtems toolchains was added</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/240">#240</a>] - support for Linux &amp; rtems RISC-V toolchains was added</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/249">#249</a>] add GUI support to configure the TCL port (useful for multi-core debug sessions)</li>
-  <li>gdbjtag.*: show Actual executable</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/243">#243</a>] when one of the remote servers did not respond, the packs plugin was waiting very long before timing out; shorter connect &amp; read timeout were added</li>
   <li>for multi-core debug session, it is sometimes necessary to sart the OpenOCD server separately from the GDB client; to allow this a <strong>Start GDB session</strong> was added to OpenOCD GUI, to allow multiple GDB instances to attach to the same OpenCOD</li>
   <li>in the debug plug-ins, after the field used to configure the GDB executable, a new field showing the <strong>Actual executable</strong> was added</li>
@@ -167,7 +167,7 @@ Posted on November 10, 2017 by Liviu Ionescu.
 
 <ul>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/242">#242</a>] the debug plug-ins failed with an exception if some of the numeric fields were empty (the telnet/gdb port); fixed</li>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/246">#246</a>] gdbjtag.*: substitute dynamic variables too;  add Actual client executable</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/246">#246</a>] gdbjtag.*: substitute dynamic variables too; add <strong>Actual client executable</strong>;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/222">#222</a>] the <code class="highlighter-rouge">-fno-common</code> option was shown twice in the RISC-V build plug-in; fixed</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/224">#224</a>] when the GDB server is started without starting the client, do not wait for the confirmation message, since it is expected that the user is responsible for the synchronisation. This allows to use <code class="highlighter-rouge">-l filename</code> to log debug messages, otherwise not possible since the echo message is written to the log, not the stderr stream.</li>
 </ul>
@@ -199,7 +199,7 @@ Posted in
 <strong>releases</strong>, <strong>plugins</strong> and tagged
 
 <strong>gnu</strong>, <strong>arm</strong>, <strong>risc-v</strong>, <strong>mcu</strong>, <strong>eclipse</strong>.
-</br>Last modified on Fri Nov 10 20:05:29 2017 UTC.
+</br>Last modified on Fri Nov 10 20:13:31 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/11/10/plugins-v4.2.1-201711101735-released/" data-layout="button"></div>
 </p>
 
