@@ -241,6 +241,52 @@ logout
 
 <p>Add an entry with the latest feature &amp; plug-in versions, copied from the publish script output. Name it like <strong>version 4.1.1.201707111115 released</strong>.</p>
 
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>repository/features:
+ilg.gnumcueclipse.codered.feature_1.1.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.2.1.201711101735.jar
+ilg.gnumcueclipse.doc.user.feature_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.5.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.6.1.201711101735.jar
+ilg.gnumcueclipse.packs.feature_2.2.2.201711101735.jar
+ilg.gnumcueclipse.templates.ad.feature_1.1.5.201711101735.jar
+ilg.gnumcueclipse.templates.cortexm.feature_1.4.3.201711101735.jar
+ilg.gnumcueclipse.templates.freescale.feature_2.2.9.201711101735.jar
+ilg.gnumcueclipse.templates.sifive.feature_1.1.1.201711101735.jar
+ilg.gnumcueclipse.templates.stm.feature_2.6.3.201711101735.jar
+
+repository/plugins:
+ilg.gnumcueclipse.codered_1.1.2.201711101735.jar
+ilg.gnumcueclipse.core_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.core_1.2.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu_3.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag_3.2.3.201711101735.jar
+ilg.gnumcueclipse.debug.packs_1.1.2.201711101735.jar
+ilg.gnumcueclipse.doc.user_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.arm_2.5.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv_2.6.1.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.packs_1.3.2.201711101735.jar
+ilg.gnumcueclipse.packs.core_1.1.4.201711101735.jar
+ilg.gnumcueclipse.packs.data_1.3.2.201711101735.jar
+ilg.gnumcueclipse.packs.ui_1.2.5.201711101735.jar
+ilg.gnumcueclipse.packs_1.2.5.201711101735.jar
+ilg.gnumcueclipse.templates.ad_1.2.1.201711101735.jar
+ilg.gnumcueclipse.templates.core_2.6.1.201711101735.jar
+ilg.gnumcueclipse.templates.cortexm_1.4.3.201711101735.jar
+ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201711101735.jar
+ilg.gnumcueclipse.templates.freescale_2.2.9.201711101735.jar
+ilg.gnumcueclipse.templates.sifive_1.1.1.201711101735.jar
+ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
+</code></pre>
+</div>
+
 <h2 id="prepare-a-new-blog-post-to-announce-the-release">Prepare a new blog post to announce the release</h2>
 
 <p>Add a new file to the <code class="highlighter-rouge">_drafts</code> and later moved to <code class="highlighter-rouge">_posts/plugins/releases</code>.</p>
@@ -250,11 +296,14 @@ logout
 <p>The structure of the post should contain:</p>
 
 <ul>
-  <li>the initial <code class="highlighter-rouge">download_url</code> pointing to the releases page
-    <div class="highlighter-rouge"><pre class="highlight"><code>download_url: https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/
+  <li>the initial <code class="highlighter-rouge">download_url</code> pointing to the releases generic page, not a specific release, since it does not exist, and the htmlproofer will fail.</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>download_url: https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/
 </code></pre>
-    </div>
-  </li>
+</div>
+
+<ul>
   <li>one intro paragraph with the summary of the changes</li>
   <li>a link to <code class="highlighter-rouge">[Binary files »]()</code></li>
   <li>headers like:</li>
@@ -331,7 +380,7 @@ logout
 <h2 id="publish-the-web">Publish the Web</h2>
 
 <ul>
-  <li>Git Push &amp; Sync the <strong>gnu-mcu-eclipse.github.io-source</strong> project; use something like <code class="highlighter-rouge">v3.2.1-201701141320 released</code> as message</li>
+  <li>Git Push &amp; Sync the <strong>gnu-mcu-eclipse.github.io-source</strong> project; use something like <code class="highlighter-rouge">v4.2.1-201711101735 released</code> as message</li>
   <li>wait for the Travis build to complete; occasionally links to not work, and might need to restart the build</li>
 </ul>
 
@@ -364,10 +413,10 @@ logout
 
 <h2 id="update-the-release-link">Update the release link</h2>
 
-<p>From the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a> page, get the URL</p>
+<p>From the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a> page, get the URL.</p>
 
 <ul>
-  <li>update <code class="highlighter-rouge">download_url</code> to the releases page</li>
+  <li>update <code class="highlighter-rouge">download_url</code> to the actual release URL.</li>
 </ul>
 
 <h2 id="add-the-release-downloads-badge">Add the release downloads badge</h2>
@@ -439,7 +488,7 @@ logout
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Nov 10 19:46:07 2017 UTC.</p>
+<p class="page-footer">Last modified on Fri Nov 10 20:06:28 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/publish-procedure/" data-layout="button"></div>
 
 
