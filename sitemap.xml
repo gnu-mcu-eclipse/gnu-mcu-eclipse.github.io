@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2017/11/10/plugins-v4.2.1-201711101735-released/</loc>
+<lastmod>2017-11-10T19:40:33+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/11/10/openocd-v0-10-0-5-20171110-released/</loc>
 <lastmod>2017-11-10T13:01:39+00:00</lastmod>
 </url>
@@ -15,10 +19,6 @@
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/</loc>
 <lastmod>2017-11-10T12:56:24+00:00</lastmod>
-</url>
-<url>
-<loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.2.1-201711101735-released/</loc>
-<lastmod>2017-11-10T19:25:24+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/</loc>
