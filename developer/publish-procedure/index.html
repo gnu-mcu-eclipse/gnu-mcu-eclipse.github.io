@@ -123,25 +123,25 @@
 <a href="#prepare-a-new-blog-post-to-announce-the-release"><span class="tocnumber">7</span> <span class="toctext">Prepare a new blog post to announce the release</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#test-local-version-of-the-web"><span class="tocnumber">8</span> <span class="toctext">Test local version of the Web</span></a>
+<a href="#publish-on-the-main-bintray-updates-site"><span class="tocnumber">8</span> <span class="toctext">Publish on the main Bintray updates site</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#publish-on-the-main-bintray-updates-site"><span class="tocnumber">9</span> <span class="toctext">Publish on the main Bintray updates site</span></a>
+<a href="#publish-on-the-main-risc-v-update-site"><span class="tocnumber">9</span> <span class="toctext">Publish on the main RISC-V update site</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#publish-on-the-main-risc-v-update-site"><span class="tocnumber">10</span> <span class="toctext">Publish on the main RISC-V update site</span></a>
+<a href="#clean-the-mess-in-the-local-archive-folder"><span class="tocnumber">10</span> <span class="toctext">Clean the mess in the local archive folder</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#clean-the-mess-in-the-local-archive-folder"><span class="tocnumber">11</span> <span class="toctext">Clean the mess in the local archive folder</span></a>
+<a href="#merge-develop-into-master"><span class="tocnumber">11</span> <span class="toctext">Merge develop into master</span></a>
 </li>
 <li class="toc_level-1 toc_section-12">
-<a href="#merge-develop-into-master"><span class="tocnumber">12</span> <span class="toctext">Merge develop into master</span></a>
+<a href="#publish-the-web"><span class="tocnumber">12</span> <span class="toctext">Publish the Web</span></a>
 </li>
 <li class="toc_level-1 toc_section-13">
 <a href="#create-a-new-github-release"><span class="tocnumber">13</span> <span class="toctext">Create a new GitHub release</span></a>
 </li>
 <li class="toc_level-1 toc_section-14">
-<a href="#publish-the-web"><span class="tocnumber">14</span> <span class="toctext">Publish the Web</span></a>
+<a href="#publish-the-web-1"><span class="tocnumber">14</span> <span class="toctext">Publish the Web</span></a>
 </li>
 <li class="toc_level-1 toc_section-15">
 <a href="#update-the-release-link"><span class="tocnumber">15</span> <span class="toctext">Update the release link</span></a>
@@ -245,14 +245,18 @@ logout
 
 <p>Add a new file to the <code class="highlighter-rouge">_drafts</code> and later moved to <code class="highlighter-rouge">_posts/plugins/releases</code>.</p>
 
-<p>Name the post like: <em>Release v2.9.3 201508190739</em>, title: <em>Version 2.2.1-201404120702 released</em>.</p>
+<p>Name the post like: <em>2017-11-10-plugins-v4.2.1-201711101735-released.md</em>, title: <em>GNU MCU Eclipse plug-ins v4.2.1-201711101735 released</em>.</p>
 
 <p>The structure of the post should contain:</p>
 
 <ul>
-  <li>date, as <em>Aug 1, 2015</em> (italics)</li>
+  <li>the initial <code class="highlighter-rouge">download_url</code> pointing to the releases page
+    <div class="highlighter-rouge"><pre class="highlight"><code>download_url: https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/
+</code></pre>
+    </div>
+  </li>
   <li>one intro paragraph with the summary of the changes</li>
-  <li>a link to <code class="highlighter-rouge">[Binary files »]()</code>, currently empty, to be filled with the release URL</li>
+  <li>a link to <code class="highlighter-rouge">[Binary files »]()</code></li>
   <li>headers like:</li>
 </ul>
 
@@ -264,20 +268,11 @@ logout
 </code></pre>
 </div>
 
-<p>An example would be the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/wiki/Release-v2.9.1-201508011813">2.9.1</a> announcement.</p>
+<p>An example would be the <a href="https://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/">4.1.1</a> announcement.</p>
 
-<p>Scan the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues">GitHub Issues</a> and the <a href="https://sourceforge.net/p/gnuarmeclipse/_list/tickets">SourceForge trackers</a> and add references to all tracked issues.</p>
+<p>Scan the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues">GitHub Issues</a> and add references to all tracked issues.</p>
 
-<p>Mark all these issues as part of the current version milestone. Refer to them as <strong>[Issue:#22]</strong>. For SourceForge, refer to them as <strong>[bugs:#98]</strong>, <strong>[feature-requests:#60]</strong>, <strong>[support-requests:#81]</strong>.</p>
-
-<h2 id="test-local-version-of-the-web">Test local version of the Web</h2>
-
-<ul>
-  <li>build the local Jekyll <strong>gnuarmeclipse.github.io-source</strong> project</li>
-  <li>test it using the localhost:4000 address</li>
-  <li>Git Push &amp; Sync the <strong>gnuarmeclipse.github.io-source</strong> project; use something like <code class="highlighter-rouge">v3.2.1-201701141320 released</code> as message</li>
-  <li>Git Push &amp; Sync the <strong>gnuarmeclipse.github.io</strong> project; use something like <code class="highlighter-rouge">v3.2.1-201701141320 released</code> as message</li>
-</ul>
+<p>Mark all these issues as part of the current version milestone. Refer to them as <strong>[Issue:#22]</strong>.</p>
 
 <h2 id="publish-on-the-main-bintray-updates-site">Publish on the main Bintray updates site</h2>
 
@@ -333,23 +328,32 @@ logout
   <li>switch to <strong>develop</strong></li>
 </ul>
 
+<h2 id="publish-the-web">Publish the Web</h2>
+
+<ul>
+  <li>Git Push &amp; Sync the <strong>gnu-mcu-eclipse.github.io-source</strong> project; use something like <code class="highlighter-rouge">v3.2.1-201701141320 released</code> as message</li>
+  <li>wait for the Travis build to complete; occasionally links to not work, and might need to restart the build</li>
+</ul>
+
 <h2 id="create-a-new-github-release">Create a new GitHub release</h2>
 
 <ul>
   <li>be sure the <strong>develop</strong> branch is up to date and set as default</li>
   <li>go to the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a> page</li>
   <li>click <strong>Draft a new release</strong></li>
-  <li>name the tag like <strong>v2.9.3-201508190739</strong> (mind the <code class="highlighter-rouge">-</code> in the middle!)</li>
+  <li>name the tag like <strong>v4.2.1-201711101735</strong> (mind the <code class="highlighter-rouge">-</code> in the middle!)</li>
   <li>select the <strong>develop</strong> branch</li>
-  <li>name the release like <strong>GNU MCU Eclipse plug-ins v2.9.3-201508190739</strong>  (mind the <code class="highlighter-rouge">-</code> in the middle!)</li>
+  <li>name the release like <strong>GNU MCU Eclipse plug-ins v4.2.1-201711101735</strong>  (mind the <code class="highlighter-rouge">-</code> in the middle!)</li>
   <li>as description, copy the first paragraph from the Web release page</li>
+  <li>add a link to the Web page <code class="highlighter-rouge">[Continue reading »]()</code></li>
+  <li>get the URL from the web <a href="http://gnu-mcu-eclipse.github.io/developer/releases/">Releases</a> page and update the above link</li>
   <li><strong>attach binaries</strong> (drag and drop from the archives folder will do it)</li>
   <li>click the <strong>Publish Release</strong> button</li>
 </ul>
 
 <p>Note: at this moment the system should send a notification to all clients watching this project.</p>
 
-<h2 id="publish-the-web">Publish the Web</h2>
+<h2 id="publish-the-web-1">Publish the Web</h2>
 
 <ul>
   <li>Git Push &amp; Sync the <strong>gnu-mcu-eclipse.github.io-source</strong> project; use something like <code class="highlighter-rouge">v3.2.1-201701141320 released</code> as message</li>
@@ -360,11 +364,10 @@ logout
 
 <h2 id="update-the-release-link">Update the release link</h2>
 
-<p>In the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a> page:</p>
+<p>From the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a> page, get the URL</p>
 
 <ul>
-  <li>add a link to the Web page <code class="highlighter-rouge">[Continue reading »]()</code></li>
-  <li>get URL from web <a href="http://gnuarmeclipse.github.io/developer/releases/">Releases</a> and update the above link</li>
+  <li>update <code class="highlighter-rouge">download_url</code> to the releases page</li>
 </ul>
 
 <h2 id="add-the-release-downloads-badge">Add the release downloads badge</h2>
@@ -436,7 +439,7 @@ logout
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Fri Nov 10 19:46:07 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/publish-procedure/" data-layout="button"></div>
 
 
