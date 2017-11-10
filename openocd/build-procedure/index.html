@@ -117,33 +117,44 @@
 <a href="#rebuild-the-docker-images"><span class="tocnumber">5</span> <span class="toctext">Rebuild the Docker images</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#build-all-distribution-files"><span class="tocnumber">6</span> <span class="toctext">Build all distribution files</span></a>
-</li>
-<li class="toc_level-1 toc_section-7">
-<a href="#subsequent-runs"><span class="tocnumber">7</span> <span class="toctext">Subsequent runs</span></a>
+<a href="#development"><span class="tocnumber">6</span> <span class="toctext">Development</span></a>
 <ul>
-<li class="toc_level-2 toc_section-8">
-<a href="#separate-platform-specific-builds"><span class="tocnumber">7.1</span> <span class="toctext">Separate platform specific builds</span></a>
+<li class="toc_level-2 toc_section-7">
+<a href="#update-git-repos"><span class="tocnumber">6.1</span> <span class="toctext">Update git repos</span></a>
 </li>
-<li class="toc_level-2 toc_section-9">
-<a href="#clean"><span class="tocnumber">7.2</span> <span class="toctext">clean</span></a>
+<li class="toc_level-2 toc_section-8">
+<a href="#prepare-release"><span class="tocnumber">6.2</span> <span class="toctext">Prepare release</span></a>
 </li>
 </ul>
 </li>
+<li class="toc_level-1 toc_section-9">
+<a href="#build-all-distribution-files"><span class="tocnumber">7</span> <span class="toctext">Build all distribution files</span></a>
+</li>
 <li class="toc_level-1 toc_section-10">
-<a href="#native-builds"><span class="tocnumber">8</span> <span class="toctext">Native builds</span></a>
+<a href="#subsequent-runs"><span class="tocnumber">8</span> <span class="toctext">Subsequent runs</span></a>
+<ul>
+<li class="toc_level-2 toc_section-11">
+<a href="#separate-platform-specific-builds"><span class="tocnumber">8.1</span> <span class="toctext">Separate platform specific builds</span></a>
 </li>
-<li class="toc_level-1 toc_section-11">
-<a href="#install-hierarchy"><span class="tocnumber">9</span> <span class="toctext">Install hierarchy</span></a>
+<li class="toc_level-2 toc_section-12">
+<a href="#clean"><span class="tocnumber">8.2</span> <span class="toctext">clean</span></a>
 </li>
-<li class="toc_level-1 toc_section-12">
-<a href="#uninstall"><span class="tocnumber">10</span> <span class="toctext">Uninstall</span></a>
+</ul>
 </li>
 <li class="toc_level-1 toc_section-13">
-<a href="#test"><span class="tocnumber">11</span> <span class="toctext">Test</span></a>
+<a href="#native-builds"><span class="tocnumber">9</span> <span class="toctext">Native builds</span></a>
 </li>
 <li class="toc_level-1 toc_section-14">
-<a href="#more-build-details"><span class="tocnumber">12</span> <span class="toctext">More build details</span></a>
+<a href="#install-hierarchy"><span class="tocnumber">10</span> <span class="toctext">Install hierarchy</span></a>
+</li>
+<li class="toc_level-1 toc_section-15">
+<a href="#uninstall"><span class="tocnumber">11</span> <span class="toctext">Uninstall</span></a>
+</li>
+<li class="toc_level-1 toc_section-16">
+<a href="#test"><span class="tocnumber">12</span> <span class="toctext">Test</span></a>
+</li>
+<li class="toc_level-1 toc_section-17">
+<a href="#more-build-details"><span class="tocnumber">13</span> <span class="toctext">More build details</span></a>
 </li>
 </ul>
 </td>
@@ -203,7 +214,49 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 </span></code></pre>
 </div>
 
+<h2 id="development">Development</h2>
+
+<p>When preparing official release, follow the following steps.</p>
+
+<h3 id="update-git-repos">Update git repos</h3>
+
+<p>The GNU MCU Eclipse OpenOCD is following closely the OpenOCD master and the official <a href="https://github.com/riscv/riscv-openocd">RISC-V OpenOCD</a>.</p>
+
+<ul>
+  <li>into <a href="https://github.com/gnu-mcu-eclipse/riscv-openocd">gnu-mcu-eclipse/riscv-openocd</a>
+    <ul>
+      <li>merge the <a href="https://github.com/riscv/riscv-openocd">riscv/riscv-openocd</a> <code class="highlighter-rouge">riscv</code> branch into the local <code class="highlighter-rouge">riscv</code> branch</li>
+    </ul>
+  </li>
+  <li>into <a href="https://github.com/gnu-mcu-eclipse/openocd">gnu-mcu-eclipse/openocd</a>
+    <ul>
+      <li>merge the <a href="http://repo.or.cz/openocd.git">OpenOCD</a> <code class="highlighter-rouge">master</code> branch into the <code class="highlighter-rouge">gnu-mcu-eclipse-dev</code> branch</li>
+      <li>merge the <a href="https://github.com/gnu-mcu-eclipse/riscv-openocd">gnu-mcu-eclipse/riscv-openocd</a> <code class="highlighter-rouge">riscv</code> branch into the <code class="highlighter-rouge">gnu-mcu-eclipse-dev</code> branch</li>
+    </ul>
+  </li>
+  <li>compare the <code class="highlighter-rouge">gnu-mcu-eclipse-dev</code> and <code class="highlighter-rouge">riscv</code> branches, add <code class="highlighter-rouge">#if BUILD_RISCV == 1</code> where needed</li>
+</ul>
+
+<h3 id="prepare-release">Prepare release</h3>
+
+<p>Update <code class="highlighter-rouge">gnu-mcu-eclipse/info</code> files:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">CHANGES.txt</code> (add release, scan the log)</li>
+  <li><code class="highlighter-rouge">INFO.md</code> (update references to commits)</li>
+  <li><code class="highlighter-rouge">VERSION</code></li>
+</ul>
+
+<p>In the <code class="highlighter-rouge">build.sh</code> script:</p>
+
+<ul>
+  <li>update the commit id <code class="highlighter-rouge">OPENOCD_GIT_COMMIT</code> to the desired one</li>
+  <li>commit and push (without push, the inner clone uses an older version)</li>
+</ul>
+
 <h2 id="build-all-distribution-files">Build all distribution files</h2>
+
+<p>Before starting a multi-platform build, check if Docker is started.</p>
 
 <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh --all
 </span></code></pre>
@@ -346,7 +399,7 @@ For bug reports, read
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Fri Nov 10 12:56:52 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/build-procedure/" data-layout="button"></div>
 
 

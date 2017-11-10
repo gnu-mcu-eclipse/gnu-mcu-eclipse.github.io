@@ -108,12 +108,112 @@
 Posted on October 4, 2017 by Liviu Ionescu.
 </p>
 
-<p>Version v0.10.0-4-20171004-0812-dev is a maintenance release; the main change was to revert some of the RISC-V patches that caused problems for other targets.</p>
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#changes"><span class="tocnumber">1</span> <span class="toctext">Changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#differences-from-risc-v-releases"><span class="tocnumber">2</span> <span class="toctext">Differences from RISC-V releases</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#known-problems"><span class="tocnumber">3</span> <span class="toctext">Known problems</span></a>
+<ul>
+<li class="toc_level-2 toc_section-4">
+<a href="#risc-v"><span class="tocnumber">3.1</span> <span class="toctext">RISC-V</span></a>
+</li>
+</ul>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#build-notes"><span class="tocnumber">4</span> <span class="toctext">Build notes</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#binaries"><span class="tocnumber">5</span> <span class="toctext">Binaries</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#checksums"><span class="tocnumber">6</span> <span class="toctext">Checksums</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><p>Version v0.10.0-4-20171004-0812-dev is a maintenance release; the main change was to revert some of the RISC-V patches that caused problems for other targets.</p>
 
-<p>It also updates to the latest RISC-V <a href="https://github.com/gnu-mcu-eclipse/openocd/commit/12bb3a4fd4a3fe52e15ff01dfff1a7a723d46463">12bb3a4</a> commit and to the master <a href="https://github.com/gnu-mcu-eclipse/openocd/commit/7719e9618e753ac41a46a2488dfba549ac578891">7719e96</a> commit from Aug 10th, 2017.</p>
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-4-20171004-0812-dev">Binary files »</a>
+</p>
 
-<p><a href="https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-4-20171004-0812-dev">Binary files »</a></p>
+<h2 id="changes">Changes</h2>
 
+<ul>
+  <li>update to the latest RISC-V <a href="https://github.com/gnu-mcu-eclipse/openocd/commit/12bb3a4fd4a3fe52e15ff01dfff1a7a723d46463">12bb3a4</a> commit and to the master <a href="https://github.com/gnu-mcu-eclipse/openocd/commit/7719e9618e753ac41a46a2488dfba549ac578891">7719e96</a> commit from Aug 10th, 2017</li>
+  <li>revert some of the RISC-V patches in <code class="highlighter-rouge">gdb_server.c</code> that caused GDB crashes for other targets.</li>
+</ul>
+
+<h2 id="differences-from-risc-v-releases">Differences from RISC-V releases</h2>
+
+<p>The following configuration files were added:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">board/sifive-coreplexip-e31-arty.cfg</code></li>
+  <li><code class="highlighter-rouge">board/sifive-coreplexip-e51-arty.cfg</code></li>
+  <li><code class="highlighter-rouge">board/sifive-freedom-e300-hifive1.cfg</code></li>
+</ul>
+
+<h2 id="known-problems">Known problems</h2>
+
+<h3 id="risc-v">RISC-V</h3>
+
+<ul>
+  <li>the registers names (x0-x31) displayed in the <em>Registers</em> view are not consistent with the register names in the <em>Disassembly</em> view;</li>
+  <li>the list of register displayed in the <em>Registers</em> view should not include the list of 4096 CSRs</li>
+</ul>
+
+<h2 id="build-notes">Build notes</h2>
+
+<p>The build environment uses Debian 9 Docker containers.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for Windows, macOS and GNU/Linux are provided. For Windows and macOS, separate installable and plain archives are provided.</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>7012d977b26e18ad473efc9e1f1f794b231c5233545a9bb6375f3cc598fa90c4 ?
+gnu-mcu-eclipse-openocd-0.10.0-4-20171004-0812-dev-debian32.tgz
+
+19856aaac1a1c49e3c82898668ac04b5ec8ca8ab80eef6043a83903f1abe0f1f ?
+gnu-mcu-eclipse-openocd-0.10.0-4-20171004-0812-dev-debian64.tgz
+
+064773ea85fd2a2a700ca7182bbfa2dedd4bcfb0971131d8ddaf8fd9dd5928c1 ?
+gnu-mcu-eclipse-openocd-0.10.0-4-20171004-0812-dev-osx.pkg
+
+30f15c9cfe068ea7cc354ff3acb6bf91666646ded9027f59bf3b78b001d57d3b ?
+gnu-mcu-eclipse-openocd-0.10.0-4-20171004-0812-dev-osx.tgz
+
+7142cc3625e19fdea4f0987ddcb5ae7d067f5500cfddf5b2db78357bf8a03731 ?
+gnu-mcu-eclipse-openocd-0.10.0-4-20171004-0812-dev-win32-setup.exe
+
+af1fd22c3fac632df83b61a60faaee37c9a927b3664334f75d472824f8e88b25 ?
+gnu-mcu-eclipse-openocd-0.10.0-4-20171004-0812-dev-win32.zip
+
+44626f94ee9d3252a40d49a52cc36f8f7a6d3343e8d2cacfe7f56212a91317a2 ?
+gnu-mcu-eclipse-openocd-0.10.0-4-20171004-0812-dev-win64-setup.exe
+
+26e3035220b9e6a2986b81fb98df8a904b3b899ee869917ac6d920cca811be3b ?
+gnu-mcu-eclipse-openocd-0.10.0-4-20171004-0812-dev-win64.zip
+</code></pre>
+</div>
 
 
 <hr class="post-footer"/>
@@ -121,7 +221,7 @@ Posted on October 4, 2017 by Liviu Ionescu.
 Posted in
 
 <strong>releases</strong>, <strong>openocd</strong>.
-</br>Last modified on Wed Oct  4 11:46:45 2017 UTC.
+</br>Last modified on Fri Nov 10 12:56:24 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/" data-layout="button"></div>
 </p>
 

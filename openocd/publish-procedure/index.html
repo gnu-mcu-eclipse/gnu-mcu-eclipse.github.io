@@ -105,34 +105,34 @@
 <a href="#update-the-change-log"><span class="tocnumber">1</span> <span class="toctext">Update the Change log</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#update-the-changestxt-file"><span class="tocnumber">2</span> <span class="toctext">Update the CHANGES.txt file</span></a>
+<a href="#commit-to-the-project-git"><span class="tocnumber">2</span> <span class="toctext">Commit to the project git</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#commit-to-the-project-git"><span class="tocnumber">3</span> <span class="toctext">Commit to the project git</span></a>
+<a href="#merge-stable-release"><span class="tocnumber">3</span> <span class="toctext">Merge stable release</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#merge-stable-release"><span class="tocnumber">4</span> <span class="toctext">Merge stable release</span></a>
+<a href="#push-the-project-git"><span class="tocnumber">4</span> <span class="toctext">Push the project git</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#push-the-project-git"><span class="tocnumber">5</span> <span class="toctext">Push the project git</span></a>
+<a href="#checkclonepull-build-scripts"><span class="tocnumber">5</span> <span class="toctext">Check/clone/pull build scripts</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#checkclonepull-build-scripts"><span class="tocnumber">6</span> <span class="toctext">Check/clone/pull build scripts</span></a>
+<a href="#build"><span class="tocnumber">6</span> <span class="toctext">Build</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#build"><span class="tocnumber">7</span> <span class="toctext">Build</span></a>
+<a href="#prepare-a-new-blog-post-to-announce-the-release"><span class="tocnumber">7</span> <span class="toctext">Prepare a new blog post to announce the release</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#prepare-a-new-blog-post-to-announce-the-release"><span class="tocnumber">8</span> <span class="toctext">Prepare a new blog post to announce the release</span></a>
+<a href="#update-the-release-post-with-the-md5-sums"><span class="tocnumber">8</span> <span class="toctext">Update the release post with the MD5 sums</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#update-the-release-post-with-the-md5-sums"><span class="tocnumber">9</span> <span class="toctext">Update the release post with the MD5 sums</span></a>
+<a href="#update-the-web"><span class="tocnumber">9</span> <span class="toctext">Update the web</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#update-the-web"><span class="tocnumber">10</span> <span class="toctext">Update the web</span></a>
+<a href="#create-the-release"><span class="tocnumber">10</span> <span class="toctext">Create the release</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#create-the-release"><span class="tocnumber">11</span> <span class="toctext">Create the release</span></a>
+<a href="#update-the-web-link-to-resources"><span class="tocnumber">11</span> <span class="toctext">Update the web link to resources</span></a>
 </li>
 <li class="toc_level-1 toc_section-12">
 <a href="#copy-binaries-to-the-local-archive-folder"><span class="tocnumber">12</span> <span class="toctext">Copy binaries to the local archive folder</span></a>
@@ -149,7 +149,7 @@
 
 <h2 id="update-the-change-log">Update the Change log</h2>
 
-<p>In the project git, scan the log.
+<p>Copy entries from the <code class="highlighter-rouge">info/CHANGES.txt</code> file. In the project git, scan the log.
 In the documentation git, add new entries to the <a href="/openocd/change-log/">Change log</a> (<code class="highlighter-rouge">pages/openocd/change-log.md</code>), grouped by days.</p>
 
 <p>Close issues on the way. Refer to them as:</p>
@@ -157,10 +157,6 @@ In the documentation git, add new entries to the <a href="/openocd/change-log/">
 <ul>
   <li><strong>[Issue:[#22](…)]</strong>.</li>
 </ul>
-
-<h2 id="update-the-changestxt-file">Update the CHANGES.txt file</h2>
-
-<p>In the project git, edit the <code class="highlighter-rouge">gnu-mcu-eclipse/info/CHANGES.txt</code> file (copy the entries from the web change log).</p>
 
 <h2 id="commit-to-the-project-git">Commit to the project git</h2>
 
@@ -183,14 +179,14 @@ In the documentation git, add new entries to the <a href="/openocd/change-log/">
 
 <p>Be sure the scripts in the <strong>openocd/build.git</strong> are up to date.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone https://github.com/gnu-mcu-eclipse/openocd-build.git \
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git \
 </span>  ~/Downloads/openocd-build.git
 </code></pre>
 </div>
 
 <h2 id="build">Build</h2>
 
-<p>Important note: Before starting the build, double check if the repository is clean (all changes were commited), otherwise the build version will be stamped with <code class="highlighter-rouge">-dirty</code>).</p>
+<p>Important note: Before starting the build, double check if the repository is clean (all changes were committed), otherwise the build version will be stamped with <code class="highlighter-rouge">-dirty</code>).</p>
 
 <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh cleanall
 </span><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
@@ -206,36 +202,46 @@ In the documentation git, add new entries to the <a href="/openocd/change-log/">
 <ul>
   <li>add a new file to <code class="highlighter-rouge">_posts/openocd/releases</code></li>
   <li>name the file like <code class="highlighter-rouge">2016-01-11-openocd-v0-10-0-20160110-dev-released.md</code></li>
-  <li>name the post like: <strong>GNU MCU Eclipse OpenOCD v0.10.0-20160110*-dev released</strong>.</li>
+  <li>name the post like: <strong>GNU MCU Eclipse OpenOCD v0.10.0-20160110-dev released</strong>.</li>
+  <li>as <code class="highlighter-rouge">download_url</code> use the generic <code class="highlighter-rouge">https://github.com/gnu-mcu-eclipse/openocd/releases/</code> (will be updated later after the release is created)</li>
 </ul>
 
 <h2 id="update-the-release-post-with-the-md5-sums">Update the release post with the MD5 sums</h2>
 
 <p>Copy/paste the build report at the end of the post as</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>4ca0dd6d9c9ad24af2aa4eddec7717e1  
-gnuarmeclipse-openocd-debian32-0.10.0-201601101000-dev.tgz
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>06e474fe8e5070c84a80c7ffcb697e616a5f2a60f6178cc0c1ccd330c3e052f2 ?
+gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian32.tgz
 
-3ac38e2ac8b71a8ede734a271f0765de  
-gnuarmeclipse-openocd-debian64-0.10.0-201601101000-dev.tgz
+1c96b1e906fcaab55d5e3842049d05f76cb917c4bd5fbe71da9a0838d6519127 ?
+gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian64.tgz
 
-8275148ae11b954668d77739715bb1f1
-gnuarmeclipse-openocd-osx-0.10.0-201601101000-dev.pkg
+528722a2da544ed29c390c73ed2027c23f03df8d8ecd363b6f5f32df28ceca06 ?
+gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-osx.pkg
 
-05a793b6d5297fbc9b9ed46f283b5152  
-gnuarmeclipse-openocd-win32-0.10.0-201601101000-dev-setup.exe
+0a8486eecd5b7d1a8d9a9a3d63a8374d918bd4665a617c300f06950791f55b40 ?
+gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-osx.tgz
 
-49eae144aa3a43aa991d2a9444549ab6  
-gnuarmeclipse-openocd-win64-0.10.0-201601101000-dev-setup.exe
+26bdcec5e696eadd52df8600070f5353f298b26e3dc456015cceb6f54ab367a2 ?
+gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win32-setup.exe
+
+de3550c296611883587483073c3be9597a904e961a85c8e866ea499978eacc04 ?
+gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win32.zip
+
+142ee2936693f16205ba82adf3d0bee90cc4e9e279951c2b18a3929a7552cb8e ?
+gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64-setup.exe
+
+0ec4539ca660d80f5ad1a6000f41852647ef93afc26a11d01f4bda5847277bfc ?
+gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64.zip
 </code></pre>
 </div>
 
 <h2 id="update-the-web">Update the web</h2>
 
 <ul>
-  <li>commit the <strong>gnuarmeclipse.github.io-source.git</strong> project; use a message like <strong>OpenOCD v0.10.0-20160110*-dev released</strong></li>
+  <li>commit the <strong>gnuarmeclipse.github.io-source.git</strong> project; use a message like <strong>OpenOCD v0.10.0-5-20171110 released</strong></li>
   <li>run <code class="highlighter-rouge">jekyll-build.command</code></li>
-  <li>commit the <strong>gnuarmeclipse.github.io.git</strong> project; use a message like <strong>OpenOCD v0.10.0-20160110*-dev released</strong></li>
+  <li>commit the <strong>gnuarmeclipse.github.io.git</strong> project; use a message like <strong>OpenOCD v0.10.0-5-20171110 released</strong></li>
   <li>push the <strong>gnuarmeclipse.github.io.git</strong> project</li>
 </ul>
 
@@ -245,9 +251,9 @@ gnuarmeclipse-openocd-win64-0.10.0-201601101000-dev-setup.exe
   <li>for stable releases, be sure the <strong>gnuarmeclipse</strong> branch is up to date and set as default</li>
   <li>go to the <a href="https://github.com/gnu-mcu-eclipse/openocd/releases">GitHub Releases</a> page</li>
   <li>click <strong>Draft a new release</strong></li>
-  <li>name the tag like <strong>v0.10.0-3-20170826-1813</strong></li>
+  <li>name the tag like <strong>v0.10.0-5-20171110</strong></li>
   <li>select the<strong>gnuarmeclipse</strong> or <strong>gnuarmeclipse-dev</strong> branch</li>
-  <li>name the release like <strong>GNU MCU Eclipse OpenOCD v0.10.0-3-20170826-1813</strong></li>
+  <li>name the release like <strong>GNU MCU Eclipse OpenOCD v0.10.0-5-20171110</strong></li>
   <li>as description, copy the first paragraph from the Web release page</li>
   <li>add a link to the Web page <strong>[Continue reading »]()</strong></li>
   <li>get URL from web and update the above link</li>
@@ -256,6 +262,12 @@ gnuarmeclipse-openocd-win64-0.10.0-201601101000-dev-setup.exe
 </ul>
 
 <p>Note: at this moment the system should send a notification to all clients watching this project.</p>
+
+<h2 id="update-the-web-link-to-resources">Update the web link to resources</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">download_url: https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-4-20171004</code></li>
+</ul>
 
 <h2 id="copy-binaries-to-the-local-archive-folder">Copy binaries to the local archive folder</h2>
 
@@ -277,7 +289,7 @@ gnuarmeclipse-openocd-win64-0.10.0-201601101000-dev-setup.exe
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Fri Nov 10 12:56:52 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/publish-procedure/" data-layout="button"></div>
 
 

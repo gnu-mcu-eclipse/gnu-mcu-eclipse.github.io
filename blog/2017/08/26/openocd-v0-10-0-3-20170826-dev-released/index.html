@@ -108,10 +108,113 @@
 Posted on August 26, 2017 by Liviu Ionescu.
 </p>
 
-<p>Version v0.10.0-3-20170826-1813-dev is a maintenance release; it updates to the latest RISC-V <a href="https://github.com/riscv/riscv-openocd/releases/tag/v20170818">v20170818</a> release and to the original <a href="https://github.com/gnu-mcu-eclipse/openocd/commit/1025be363e2bf42f1613083223a2322cc3a9bd4c">1025be3</a> commit from June 2nd, 2017.</p>
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#changes"><span class="tocnumber">1</span> <span class="toctext">Changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#differences-from-risc-v-release"><span class="tocnumber">2</span> <span class="toctext">Differences from RISC-V release</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#known-problems"><span class="tocnumber">3</span> <span class="toctext">Known problems</span></a>
+<ul>
+<li class="toc_level-2 toc_section-4">
+<a href="#risc-v"><span class="tocnumber">3.1</span> <span class="toctext">RISC-V</span></a>
+</li>
+</ul>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#build-notes"><span class="tocnumber">4</span> <span class="toctext">Build notes</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#binaries"><span class="tocnumber">5</span> <span class="toctext">Binaries</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#checksums"><span class="tocnumber">6</span> <span class="toctext">Checksums</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><p>Version v0.10.0-3-20170826-1813-dev is a maintenance release; it updates to the latest RISC-V <a href="https://github.com/riscv/riscv-openocd/releases/tag/v20170818">v20170818</a> release and to the original <a href="https://github.com/gnu-mcu-eclipse/openocd/commit/1025be363e2bf42f1613083223a2322cc3a9bd4c">1025be3</a> commit from June 2nd, 2017.</p>
 
-<p><a href="https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-3-20170826-1813-dev">Binary files »</a></p>
+<p>[2017-09-20 update] <strong>It was reported that the RISC-V specific changes have a negative impact on some other targets. Until the problem is identified and a fix released, for non-RISC-V targets please use an older release.</strong></p>
 
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-3-20170826-1813-dev">Binary files »</a>
+</p>
+
+<h2 id="changes">Changes</h2>
+
+<ul>
+  <li>apart from the RISC-V updates, there are no other changes.</li>
+</ul>
+
+<h2 id="differences-from-risc-v-release">Differences from RISC-V release</h2>
+
+<p>The following configuration files were added:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">board/sifive-coreplexip-e31-arty.cfg</code></li>
+  <li><code class="highlighter-rouge">board/sifive-coreplexip-e51-arty.cfg</code></li>
+  <li><code class="highlighter-rouge">board/sifive-freedom-e300-hifive1.cfg</code></li>
+</ul>
+
+<h2 id="known-problems">Known problems</h2>
+
+<h3 id="risc-v">RISC-V</h3>
+
+<ul>
+  <li>the registers names (x0-x31) displayed in the <em>Registers</em> view are not consistent with the register names in the <em>Disassembly</em> view;</li>
+  <li>the list of register displayed in the <em>Registers</em> view should not include the list of 4096 CSRs</li>
+</ul>
+
+<h2 id="build-notes">Build notes</h2>
+
+<p>The build environment was upgraded to Debian 9.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for Windows, macOS and GNU/Linux are provided. For Windows and macOS, separate installable and plain archives are provided.</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>59c92d2f165bce5557a12244d88384258630e079fbb1dbc1992d2fa939aa1007 ?
+gnu-mcu-eclipse-openocd-0.10.0-3-20170826-1813-dev-debian32.tgz
+
+4dd902f17a76c4cbb1dec7f1503f33d04d569824a033b51bafb80bc7ed996abb ?
+gnu-mcu-eclipse-openocd-0.10.0-3-20170826-1813-dev-debian64.tgz
+
+c939cd5087da24694c7d496d99f1f6686e3e1d7badb386e9b8189b1752975192 ?
+gnu-mcu-eclipse-openocd-0.10.0-3-20170826-1813-dev-osx.pkg
+
+82ed7a8d74d6116a77bfef92d2494705a70a08e2b1df2aa14d5f18610e5332af ?
+gnu-mcu-eclipse-openocd-0.10.0-3-20170826-1813-dev-osx.tgz
+
+f12acf83204ac94dec8bcea0b72487c988da7a106294bbf0ec5f2b5760fd6f30 ?
+gnu-mcu-eclipse-openocd-0.10.0-3-20170826-1813-dev-win32-setup.exe
+
+04510b7e51bb5e7418bbb0b4e92963fce6440a9efd6c02184a2f94221147671f ?
+gnu-mcu-eclipse-openocd-0.10.0-3-20170826-1813-dev-win32.zip
+
+bfda8b81b2c360132b6197469890e20ca32fc92c7015422057025e1f1036af93 ?
+gnu-mcu-eclipse-openocd-0.10.0-3-20170826-1813-dev-win64-setup.exe
+
+b96248bcfcfefc4572e49f5960534783440f5d449762805a8f224489dde246f7 ?
+gnu-mcu-eclipse-openocd-0.10.0-3-20170826-1813-dev-win64.zip
+</code></pre>
+</div>
 
 
 <hr class="post-footer"/>
@@ -119,7 +222,7 @@ Posted on August 26, 2017 by Liviu Ionescu.
 Posted in
 
 <strong>releases</strong>, <strong>openocd</strong>.
-</br>Last modified on Tue Aug 29 17:12:53 2017 UTC.
+</br>Last modified on Fri Nov 10 12:56:24 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/" data-layout="button"></div>
 </p>
 
