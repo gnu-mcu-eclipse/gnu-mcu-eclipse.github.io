@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2017/11/10/openocd-v0-10-0-5-20171110-dev-released/</loc>
+<lastmod>2017-11-10T12:04:53+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/</loc>
 <lastmod>2017-10-04T11:46:45+00:00</lastmod>
 </url>
@@ -462,7 +466,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/openocd/change-log/</loc>
-<lastmod>2017-10-04T11:46:45+00:00</lastmod>
+<lastmod>2017-11-10T12:04:53+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/change-log/</loc>
@@ -582,7 +586,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/arm/install/</loc>
-<lastmod>2017-11-09T22:19:14+00:00</lastmod>
+<lastmod>2017-11-10T12:24:01+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/install/</loc>
@@ -834,6 +838,10 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/page9/</loc>
+<lastmod>2015-10-02T10:18:39+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/page10/</loc>
 <lastmod>2015-10-02T10:18:39+00:00</lastmod>
 </url>
 </urlset>
