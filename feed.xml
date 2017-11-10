@@ -5,13 +5,13 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 10 Nov 2017 12:36:09 +0000</pubDate>
-    <lastBuildDate>Fri, 10 Nov 2017 12:36:09 +0000</lastBuildDate>
+    <pubDate>Fri, 10 Nov 2017 12:50:16 +0000</pubDate>
+    <lastBuildDate>Fri, 10 Nov 2017 12:50:16 +0000</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>GNU MCU Eclipse OpenOCD v0.10.0-5-20171110 released</title>
-        <description>&lt;p&gt;Version v0.10.0-5-20171110-dev is a maintenance release; the main change was to patch the RISC-V code to no longer print the 4096 CSRs.&lt;/p&gt;
+        <description>&lt;p&gt;Version v0.10.0-5-20171110 is a maintenance release; the main change was to patch the RISC-V code to no longer print the 4096 CSRs.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 10 Nov 2017 11:04:00 +0000</pubDate>
