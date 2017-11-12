@@ -128,30 +128,33 @@
 </ul>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#build-all-distribution-files"><span class="tocnumber">7</span> <span class="toctext">Build all distribution files</span></a>
+<a href="#update-the-script"><span class="tocnumber">7</span> <span class="toctext">Update the script</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#subsequent-runs"><span class="tocnumber">8</span> <span class="toctext">Subsequent runs</span></a>
-<ul>
-<li class="toc_level-2 toc_section-11">
-<a href="#separate-platform-specific-builds"><span class="tocnumber">8.1</span> <span class="toctext">Separate platform specific builds</span></a>
+<a href="#build-all-distribution-files"><span class="tocnumber">8</span> <span class="toctext">Build all distribution files</span></a>
 </li>
+<li class="toc_level-1 toc_section-11">
+<a href="#subsequent-runs"><span class="tocnumber">9</span> <span class="toctext">Subsequent runs</span></a>
+<ul>
 <li class="toc_level-2 toc_section-12">
-<a href="#clean"><span class="tocnumber">8.2</span> <span class="toctext">clean</span></a>
+<a href="#separate-platform-specific-builds"><span class="tocnumber">9.1</span> <span class="toctext">Separate platform specific builds</span></a>
+</li>
+<li class="toc_level-2 toc_section-13">
+<a href="#clean"><span class="tocnumber">9.2</span> <span class="toctext">clean</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-13">
-<a href="#install-hierarchy"><span class="tocnumber">9</span> <span class="toctext">Install hierarchy</span></a>
-</li>
 <li class="toc_level-1 toc_section-14">
-<a href="#uninstall"><span class="tocnumber">10</span> <span class="toctext">Uninstall</span></a>
+<a href="#install-hierarchy"><span class="tocnumber">10</span> <span class="toctext">Install hierarchy</span></a>
 </li>
 <li class="toc_level-1 toc_section-15">
-<a href="#test"><span class="tocnumber">11</span> <span class="toctext">Test</span></a>
+<a href="#uninstall"><span class="tocnumber">11</span> <span class="toctext">Uninstall</span></a>
 </li>
 <li class="toc_level-1 toc_section-16">
-<a href="#more-build-details"><span class="tocnumber">12</span> <span class="toctext">More build details</span></a>
+<a href="#test"><span class="tocnumber">12</span> <span class="toctext">Test</span></a>
+</li>
+<li class="toc_level-1 toc_section-17">
+<a href="#more-build-details"><span class="tocnumber">13</span> <span class="toctext">More build details</span></a>
 </li>
 </ul>
 </td>
@@ -248,18 +251,34 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 </span></code></pre>
 </div>
 
-<p>When the result is acceptable, commit all repos and tag all with the same tag (like <code class="highlighter-rouge">v7.2.0-1-20171109</code>).</p>
+<p>When the result is acceptable, commit all repos and tag all with the same tag (like <code class="highlighter-rouge">v7.2.0-1-20171109</code>):</p>
 
-<p>Update the <code class="highlighter-rouge">RELEASE_VERSION</code> to use exactly the same tag, but without the initial <code class="highlighter-rouge">v</code>.</p>
+<ul>
+  <li>the <a href="https://github.com/gnu-mcu-eclipse/riscv-gcc">gnu-mcu-eclipse/riscv-gcc</a> project</li>
+  <li>the <a href="https://github.com/gnu-mcu-eclipse/riscv-binutils-gdb">gnu-mcu-eclipse/riscv-binutils-gdb</a> project</li>
+  <li>the <a href="https://github.com/gnu-mcu-eclipse/riscv-newlib">gnu-mcu-eclipse/riscv-newlib</a> project</li>
+</ul>
+
+<h2 id="update-the-script">Update the script</h2>
+
+<p>In the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a>, update the <code class="highlighter-rouge">scripts/build.sh</code> to refer to the latest version number (<code class="highlighter-rouge">RELEASE_VERSION</code>), but without the initial <code class="highlighter-rouge">v</code>.</p>
+
+<p>For major releases, Check if the library sources (gmp, mpfr, mpc, isl) did change and possibly update them.</p>
+
+<p>In the riscv-none-gcc-build project, update <code class="highlighter-rouge">RELEASE_VERSION</code></p>
 
 <p>Update <code class="highlighter-rouge">gnu-mcu-eclipse/info</code> files:</p>
 
 <ul>
   <li><code class="highlighter-rouge">CHANGES.txt</code> (add release)</li>
   <li><code class="highlighter-rouge">INFO.md</code> (update references to commits)</li>
+  <li><code class="highlighter-rouge">VERSION</code></li>
+  <li>commit and push (without push, the inner clone uses an older version)</li>
 </ul>
 
 <h2 id="build-all-distribution-files">Build all distribution files</h2>
+
+<p>Before starting a multi-platform build, check if Docker is started.</p>
 
 <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
 </span></code></pre>
@@ -424,7 +443,7 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Thu Nov  9 23:45:01 2017 UTC.</p>
+<p class="page-footer">Last modified on Sun Nov 12 00:11:53 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/build-procedure/" data-layout="button"></div>
 
 
@@ -437,9 +456,9 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 <ul>
   <li><a href="/blog/2017/11/10/plugins-v4.2.1-201711101735-released/">GNU MCU Eclipse plug-ins v4.2.1-201711101735 released</a></li>
   <li><a href="/blog/2017/11/10/openocd-v0-10-0-5-20171110-released/">GNU MCU Eclipse OpenOCD v0.10.0-5-20171110 released</a></li>
+  <li><a href="/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-1-20171109 released</a></li>
   <li><a href="/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/">GNU MCU Eclipse OpenOCD v0.10.0-4-20171004* released</a></li>
   <li><a href="/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-2-20170912-* released</a></li>
-  <li><a href="/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/">GNU MCU Eclipse OpenOCD v0.10.0-3-20170826* released</a></li>
 </ul>
 
 

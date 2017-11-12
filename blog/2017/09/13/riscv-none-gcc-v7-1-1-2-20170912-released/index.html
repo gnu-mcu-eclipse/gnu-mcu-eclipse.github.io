@@ -208,7 +208,7 @@ march=rv64imafdc/mabi=lp64d (march.rv64gc/mabi.lp64d)
 <ul>
   <li>a newer <code class="highlighter-rouge">newlib</code> was included, which supports the ‘underscore’ syscall functions</li>
   <li>the mandatory reference to <code class="highlighter-rouge">libgloss</code> in the linker configuration was removed</li>
-  <li>the <code class="highlighter-rouge">march=rv32imaf/mabi=ilp32f</code> libary was added to the list of multilibs</li>
+  <li>the <code class="highlighter-rouge">march=rv32imaf/mabi=ilp32f</code> library was added to the list of multilibs</li>
   <li>support for <code class="highlighter-rouge">newlib-nano</code> was added</li>
   <li>the standard documentation, in PDF and HTML, was added</li>
 </ul>
@@ -229,7 +229,7 @@ march=rv64imafdc/mabi=lp64d (march.rv64gc/mabi.lp64d)
 
 <p>This change is welcome, since it brings the RISC-V toolchain in line with other toolchains, like <code class="highlighter-rouge">arm-none-eabi</code>.</p>
 
-<p>Unfortunatley this change breaks the builds for the initial SiFive SDK samples, which implements the direct function names in the <code class="highlighter-rouge">libwrap</code> library. To fix them, <code class="highlighter-rouge">libwrap</code> should no longer be used, the <code class="highlighter-rouge">--wrap</code> options should no longer be passed to the linker, and several functions (like <code class="highlighter-rouge">_write()</code>, <code class="highlighter-rouge">_istty()</code>, …) must be implemented by the application.</p>
+<p>Unfortunately this change breaks the builds for the initial SiFive SDK samples, which implements the direct function names in the <code class="highlighter-rouge">libwrap</code> library. To fix them, <code class="highlighter-rouge">libwrap</code> should no longer be used, the <code class="highlighter-rouge">--wrap</code> options should no longer be passed to the linker, and several functions (like <code class="highlighter-rouge">_write()</code>, <code class="highlighter-rouge">_istty()</code>, …) must be implemented by the application.</p>
 
 <h2 id="libgloss">libgloss</h2>
 
@@ -247,7 +247,7 @@ march=rv64imafdc/mabi=lp64d (march.rv64gc/mabi.lp64d)
 
 <p>Instructions on how to install them are available in the <a href="https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/">How to install the RISC-V toolchain?</a> page.</p>
 
-<p>For better control and repetability, the build scripts use Docker containers; all files required during builds are available as a separate <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> project.</p>
+<p>For better control and repeatability, the build scripts use Docker containers; all files required during builds are available as a separate <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> project.</p>
 
 <h2 id="checksums">Checksums</h2>
 
@@ -285,7 +285,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170912-2255-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>riscv-none-gcc</strong>.
-</br>Last modified on Sat Oct 14 22:57:19 2017 UTC.
+</br>Last modified on Sun Nov 12 00:11:25 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/" data-layout="button"></div>
 </p>
 
@@ -299,9 +299,9 @@ Posted in
 <ul>
   <li><a href="/blog/2017/11/10/plugins-v4.2.1-201711101735-released/">GNU MCU Eclipse plug-ins v4.2.1-201711101735 released</a></li>
   <li><a href="/blog/2017/11/10/openocd-v0-10-0-5-20171110-released/">GNU MCU Eclipse OpenOCD v0.10.0-5-20171110 released</a></li>
+  <li><a href="/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-1-20171109 released</a></li>
   <li><a href="/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/">GNU MCU Eclipse OpenOCD v0.10.0-4-20171004* released</a></li>
   <li><a href="/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-2-20170912-* released</a></li>
-  <li><a href="/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/">GNU MCU Eclipse OpenOCD v0.10.0-3-20170826* released</a></li>
 </ul>
 
 
