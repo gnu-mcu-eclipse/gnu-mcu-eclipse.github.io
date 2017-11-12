@@ -151,7 +151,7 @@
 </table>
 </div><h2 id="overview">Overview</h2>
 
-<p>The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><strong>GNU MCU Eclipse RISC-V Embdedded GCC</strong></a>. This toolchain closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
+<p>The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><strong>GNU MCU Eclipse RISC-V Embedded GCC</strong></a>. This toolchain closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
 
 <h2 id="target-vs-host-platform">Target vs host platform</h2>
 
@@ -163,20 +163,20 @@
 </ul>
 
 <blockquote>
-  <p>Note: Be sure you select the proper toolchain for the target platform, otherwise builds will not succeed, or the generated applications will fail to run. <strong>Do not</strong> try to use the RISC-V Embdedded GCC to build GNU/Linux applications, because the executables will not run on anything than bare metal, and <strong>do not try to use the Linux toolchains for bare metal applications</strong>.</p>
+  <p>Note: Be sure you select the proper toolchain for the target platform, otherwise builds will not succeed, or the generated applications will fail to run. <strong>Do not</strong> try to use the RISC-V Embedded GCC to build GNU/Linux applications, because the executables will not run on anything than bare metal, and <strong>do not try to use the Linux toolchains for bare metal applications</strong>.</p>
 </blockquote>
 
-<p>The installation details described below assume the selection of the GNU MCU Eclipse RISC-V Embdedded GCC toolchain. For other toolchains, please follow the specific installation instructions.</p>
+<p>The installation details described below assume the selection of the GNU MCU Eclipse RISC-V Embedded GCC toolchain. For other toolchains, please follow the specific installation instructions.</p>
 
 <h2 id="riscv64-unknown-elf-gcc">riscv64-unknown-elf-gcc</h2>
 
-<p>After installing the toolchain, you’ll end up with lots of programs prefixed by <code class="highlighter-rouge">riscv64-unknown-elf-</code>. Don’t be confused by this unfortunate name, the executables are not as <em>unknown</em> as they pretend to be, and the <strong>64</strong> does not mean it runs only on 64-bits platforms, or that it produces 64-bits only binaries. Actually, the toolchain produces both 32/64-bits binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>.</p>
+<p>After installing the toolchain, you’ll end up with lots of programs prefixed by <code class="highlighter-rouge">riscv-none-embed-</code>. For those used to the RISC-V original toolchains, there is no <code class="highlighter-rouge">riscv64-</code> or <code class="highlighter-rouge">riscv32-</code> prefix since it is actually not needed, the toolchain produces both 32/64-bits binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>.</p>
 
 <p>Be sure you <strong>do</strong> select carefully the proper release file to  match the 32/64-bits platform you are using.</p>
 
 <h2 id="download">Download</h2>
 
-<p>Due to portability reasons, the GNU MCU Eclipse plug-ins do not include any toolchain binaries, but they can be downloaded from <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases">GNU MCU Eclipse RISC-V Embdedded GCC</a>. Alternatively, a slightly less elaborated distribution can be downloaded from the <a href="https://www.sifive.com/products/tools/">SiFive Tools</a> page (currently less platforms supported and no newlib-nano).</p>
+<p>Due to portability reasons, the GNU MCU Eclipse plug-ins distributions <strong>do not</strong> include any toolchain binaries, but they can be downloaded from <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases">GNU MCU Eclipse RISC-V Embedded GCC</a>.</p>
 
 <p>
 <img src="/assets/images/2017/riscv-releases.png" alt="RISC-V Releases" />
@@ -191,14 +191,14 @@
   <li>a Windows setup that can install the binaries in the standard system location</li>
 </ul>
 
-<p>Our prefered method is to install the binaries in the user home folder, but your mileage may vary.</p>
+<p>Our preferred method is to install the binaries in the user home folder, but your mileage may vary.</p>
 
 <h3 id="portable-archive">Portable archive</h3>
 
 <p>To install the archive, the steps are:</p>
 
 <ul>
-  <li>download the latest <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-*-win*.zip</code> file for your platform; if you are using a modern 64-bits machine, use the <code class="highlighter-rouge">*-win64.zip</code> file, otherwise the <code class="highlighter-rouge">*-win32.zip</code> (however, the 32-bits toolchain executables also run on 64-bits platforms);</li>
+  <li>download the latest <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-*-win*.zip</code> file for your platform; if you are using a modern 64-bits machine, use the <code class="highlighter-rouge">*-win64.zip</code> file, otherwise the <code class="highlighter-rouge">*-win32.zip</code> (however, the 32-bits toolchain executables also run on 64-bits platforms);</li>
   <li>open the archive in the file explorer</li>
   <li>extract the <code class="highlighter-rouge">GNU MCU Eclipse</code> folder in <code class="highlighter-rouge">%userprofile%\AppData\Local</code></li>
 </ul>
@@ -228,7 +228,7 @@ D:/Program Files (x86)/GNU MCU Eclipse/RISC-V Embedded GCC
 <p>If you decide to install the toolchain in a system location, you can use the common setup procedure:</p>
 
 <ul>
-  <li>download the latest <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-win*-setup.exe</code> file for your platform; if you are using a modern 64-bits machine, use the <code class="highlighter-rouge">*-win64-setup.exe</code> file, otherwise use the <code class="highlighter-rouge">*-win32-setup.exe</code> (however, the 32-bits toolchain executables also run on 64-bits platforms);</li>
+  <li>download the latest <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-win*-setup.exe</code> file for your platform; if you are using a modern 64-bits machine, use the <code class="highlighter-rouge">*-win64-setup.exe</code> file, otherwise use the <code class="highlighter-rouge">*-win32-setup.exe</code> (however, the 32-bits toolchain executables also run on 64-bits platforms);</li>
   <li>locate the file (usually in the <code class="highlighter-rouge">...\Downloads\</code>  folder) and double click it to start the installer</li>
   <li>authenticate with the administrative password, to allow the installer write in system locations</li>
   <li>select the desired language</li>
@@ -251,8 +251,8 @@ D:/Program Files (x86)/GNU MCU Eclipse/RISC-V Embedded GCC
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
-    <div class="language-console highlighter-rouge"><pre class="highlight"><code>C:\&gt;"C:\Program Files\GNU MCU Eclipse\RISC-V Embedded GCC\7.1.1-1-20170702-0625\bin\riscv64-unknown-elf-gcc.exe" --version
-riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code>C:\&gt;"C:\Program Files\GNU MCU Eclipse\RISC-V Embedded GCC\7.2.0-1-20171109-1926\bin\riscv-none-embed-gcc.exe" --version
+riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 </code></pre>
     </div>
   </li>
@@ -273,14 +273,14 @@ riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 201
   <li>an installable package that can install the binaries in the standard system location</li>
 </ul>
 
-<p>Our prefered method is to install the binaries in the user home folder, but your mileage may vary.</p>
+<p>Our preferred method is to install the binaries in the user home folder, but your mileage may vary.</p>
 
 <h3 id="portable-archive-1">Portable archive</h3>
 
 <p>To install the archive, the steps are:</p>
 
 <ul>
-  <li>download the latest macOS tarball file (for example <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.tgz</code>)</li>
+  <li>download the latest macOS tarball file (for example <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-osx.tgz</code>)</li>
   <li>locate the file (usually in the <code class="highlighter-rouge">${HOME}/Downloads</code> folder)</li>
   <li>
     <p>decide on a location to install the toolchain; the recommended folder is <code class="highlighter-rouge">${HOME}/opt/</code></p>
@@ -302,20 +302,20 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
   </li>
   <li>unpack the archive in the destination folder</li>
   <li>
-    <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625</code></p>
+    <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926</code></p>
 
     <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
 </span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-osx.tgz
-</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625
+</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-osx.tgz
+</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926
 </span></code></pre>
     </div>
   </li>
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
-    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc</span><span class="kv"> --version
-</span>riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc</span><span class="kv"> --version
+</span>riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 </code></pre>
     </div>
   </li>
@@ -339,8 +339,8 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 
 <p>To check if the compiler starts, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">/Applications/GNU\</span><span class="kv"> ARM\ Eclipse/RISC-V\ Embedded\ GCC/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc --version
-</span>riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">/Applications/GNU\</span><span class="kv"> ARM\ Eclipse/RISC-V\ Embedded\ GCC/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc --version
+</span>riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 </code></pre>
 </div>
 
@@ -350,7 +350,7 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 
 <p>The complete toolchain documentation is available in the <code class="highlighter-rouge">.../share/doc/pdf/</code> folder.</p>
 
-<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">riscv-none-gcc/7.1.1-1-20170702-0625</code> folder, there are no other components stored in any system folders.</p>
+<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">riscv-none-gcc/7.2.0-1-20171109-1926</code> folder, there are no other components stored in any system folders.</p>
 
 <h2 id="gnulinux">GNU/Linux</h2>
 
@@ -359,7 +359,7 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 <p>The following steps were performed on <strong>Ubuntu 16.04 LTSx64</strong> (please adjust them accordingly for other distributions):</p>
 
 <ul>
-  <li>download the latest <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-*-debian*.tgz</code> file for your platform; if you are using a modern 64-bits machine, use the <code class="highlighter-rouge">*-debian64.zip</code> file, otherwise use the <code class="highlighter-rouge">*-debian32.zip</code> (however, with some extra care to install the 32-bits libraries, the 32-bits toolchain executables can also run on 64-bits platforms);</li>
+  <li>download the latest <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-*-debian*.tgz</code> file for your platform; if you are using a modern 64-bits machine, use the <code class="highlighter-rouge">*-debian64.zip</code> file, otherwise use the <code class="highlighter-rouge">*-debian32.zip</code> (however, with some extra care to install the 32-bits libraries, the 32-bits toolchain executables can also run on 64-bits platforms);</li>
   <li>locate the file (usually in the <code class="highlighter-rouge">${HOME}/Downloads/</code> folder)</li>
   <li>decide on a location to install the toolchain; the recommended folder is <code class="highlighter-rouge">${HOME}/opt/</code></li>
   <li>
@@ -381,20 +381,20 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
   </li>
   <li>unpack the archive in the destination folder</li>
   <li>
-    <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625</code></p>
+    <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926</code></p>
 
     <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
 </span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian64.tgz
-</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625
+</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-debian64.tgz
+</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926
 </span></code></pre>
     </div>
   </li>
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
-    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv64-unknown-elf-gcc</span><span class="kv"> --version
-</span>riscv64-unknown-elf-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc</span><span class="kv"> --version
+</span>riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 </code></pre>
     </div>
   </li>
@@ -406,7 +406,7 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 
 <p>The complete toolchain documentation is available in the <code class="highlighter-rouge">.../share/doc/pdf/</code> folder.</p>
 
-<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">riscv-none-gcc/7.1.1-1-20170702-0625</code> folder, there are no other components stored in any system folders.</p>
+<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">riscv-none-gcc/7.2.0-1-20171109-1926</code> folder, there are no other components stored in any system folders.</p>
 
 <h2 id="toolchain-path">Toolchain path</h2>
 
@@ -455,7 +455,7 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Sun Nov 12 10:38:47 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/install/" data-layout="button"></div>
 
 

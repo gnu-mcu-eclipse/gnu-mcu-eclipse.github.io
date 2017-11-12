@@ -123,19 +123,25 @@ Posted on November 10, 2017 by Liviu Ionescu.
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#new-features"><span class="tocnumber">1</span> <span class="toctext">New features</span></a>
+<a href="#new-risc-v-project-template"><span class="tocnumber">1</span> <span class="toctext">New RISC-V project template</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#addressed-bugs"><span class="tocnumber">2</span> <span class="toctext">Addressed bugs</span></a>
+<a href="#new-risc-v-toolchains"><span class="tocnumber">2</span> <span class="toctext">New RISC-V toolchains</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#template-changes"><span class="tocnumber">3</span> <span class="toctext">Template changes</span></a>
+<a href="#new-features"><span class="tocnumber">3</span> <span class="toctext">New features</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#other-changes"><span class="tocnumber">4</span> <span class="toctext">Other changes</span></a>
+<a href="#addressed-bugs"><span class="tocnumber">4</span> <span class="toctext">Addressed bugs</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#known-problems"><span class="tocnumber">5</span> <span class="toctext">Known problems</span></a>
+<a href="#template-changes"><span class="tocnumber">5</span> <span class="toctext">Template changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#other-changes"><span class="tocnumber">6</span> <span class="toctext">Other changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#known-problems"><span class="tocnumber">7</span> <span class="toctext">Known problems</span></a>
 </li>
 </ul>
 </td>
@@ -150,11 +156,62 @@ Posted on November 10, 2017 by Liviu Ionescu.
 <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/tag/v4.2.1-201711101735">Binary files »</a>
 </p>
 
+<p>For convenience, the plug-ins are also available as <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases">GNU MCU Eclipse IDE for C/C++ Developers</a>, which packs together the <strong>Eclipse IDE for C/C++ Developers</strong> with the <strong>GNU MCU Eclipse plug-ins</strong>.</p>
+
+<h2 id="new-risc-v-project-template">New RISC-V project template</h2>
+
+<p>A new template plug-in was added to create projects for the SiFive boards; it can be accessed from the <strong>New</strong> → <strong>C/C++ Project</strong> menu, the <strong>SiFIve C/C++ Project</strong>:</p>
+
+<p>
+<img src="/assets/images/2017/create-sifive-cpp-project.png" alt="Create SiFive projects" />
+</p>
+
+<p>The template can generate both C and C++ projects. The difference between them is reflected in the type of the files generated in the top <code class="highlighter-rouge">src</code> folder; for C++, most of the files are <code class="highlighter-rouge">.cpp</code>, while for C, as expected, all files are <code class="highlighter-rouge">.c</code>.</p>
+
+<p>However, please note that this selection refers to the application files only; internally, the support packages are mainly written in C++, all with equivalent C API. For those with little C++ experience, this might be a good opportunity to start studying C++, by comparing the differences between the C and C++ projects generated with the same options.</p>
+
+<p>The wizard has many configuration options:</p>
+
+<p>
+<img src="/assets/images/2017/sifive-template-config.png" alt="RISC-V plug-in tool settings" />
+</p>
+
+<p>It currently supports three boards, <strong>HiFive1</strong>, <strong>E31 Arty</strong> and <strong>E51 Arty</strong>.</p>
+
+<p>
+<img src="/assets/images/2017/sifive-boards-combo.png" alt="SiFive boards" />
+</p>
+
+<p>The wizard can generate <strong>Blinky</strong> vs <strong>Empty</strong> projects, <strong>Freestanding</strong> vs <strong>POSIX</strong>, with or without support for tracing, with or without various warnings enabled.</p>
+
+<h2 id="new-risc-v-toolchains">New RISC-V toolchains</h2>
+
+<p>In addition to the initial <code class="highlighter-rouge">riscv64-unknown-elf-</code> toolchain, support for following toolchains was added:</p>
+
+<ul>
+  <li><strong>GNU MCU RISC-V GCC</strong> (<code class="highlighter-rouge">riscv-none-embed-</code>)</li>
+  <li><strong>RISC-V GCC/Linux</strong> (<code class="highlighter-rouge">riscv64-unknown-linux-gnu-</code>)</li>
+  <li><strong>RISC-V GCC/RTEMS</strong> (<code class="highlighter-rouge">riscv64-unknown-rtems-</code>)</li>
+  <li><strong>Custom</strong> (<code class="highlighter-rouge">riscv64-unknown-none-</code>)</li>
+</ul>
+
+<p>
+<img src="/assets/images/2017/wizard-riscv-toolchains-selection.png" alt="RISC-V toolchains" />
+</p>
+
+<p>Separate paths for each toolchain can be configured in the <strong>Preferences…</strong> → <strong>MCU</strong> → <strong>Global RISC-V Toolchain Paths</strong>.</p>
+
+<p>
+<img src="/assets/images/2017/preferences-riscv-paths.png" alt="RISC-V Paths" />
+</p>
+
+<p>In the same page it is possible to set the <strong>default toolchain</strong> used when creating new projects.</p>
+
+<p>Note: the <code class="highlighter-rouge">riscv-none-embed-</code> toolchain is available starting with version <strong>7.2.0-1-20171109</strong> of the <a href="/toolchain/riscv/">GNU MCU Eclipse RISC-V GCC</a> toolchain, just <a href="/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/">released</a>.</p>
+
 <h2 id="new-features">New features</h2>
 
 <ul>
-  <li>a new template plug-in was added to create projects for the SiFive boards
-<img src="/assets/images/2017/sifive-template-config.png" alt="RISC-V plug-in tool settings" /></li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/247">#247</a>] - support for an explicitly embedded RISC-V toolchain (<code class="highlighter-rouge">riscv-none-embed-gcc</code>) was added</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/240">#240</a>] - support for <strong>Linux</strong> &amp; <strong>rtems</strong> RISC-V toolchains was added</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/249">#249</a>] - add GUI support to configure the <strong>TCL port</strong> (useful for multi-core debug sessions)</li>
@@ -199,7 +256,7 @@ Posted in
 <strong>releases</strong>, <strong>plugins</strong> and tagged
 
 <strong>gnu</strong>, <strong>arm</strong>, <strong>risc-v</strong>, <strong>mcu</strong>, <strong>eclipse</strong>.
-</br>Last modified on Fri Nov 10 20:22:19 2017 UTC.
+</br>Last modified on Sun Nov 12 10:38:47 2017 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/11/10/plugins-v4.2.1-201711101735-released/" data-layout="button"></div>
 </p>
 

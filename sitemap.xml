@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/11/10/plugins-v4.2.1-201711101735-released/</loc>
-<lastmod>2017-11-10T20:22:19+00:00</lastmod>
+<lastmod>2017-11-12T10:38:47+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/11/10/openocd-v0-10-0-5-20171110-released/</loc>
@@ -438,7 +438,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/build-procedure/</loc>
-<lastmod>2017-11-12T00:11:53+00:00</lastmod>
+<lastmod>2017-11-12T10:38:47+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/build-procedure/</loc>
@@ -598,7 +598,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/install/</loc>
-<lastmod>2017-10-14T22:57:19+00:00</lastmod>
+<lastmod>2017-11-12T10:38:47+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/install/</loc>
@@ -666,7 +666,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/</loc>
-<lastmod>2017-08-30T22:01:17+00:00</lastmod>
+<lastmod>2017-11-12T10:38:47+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/</loc>
@@ -738,7 +738,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/arch/riscv/programmer/</loc>
-<lastmod>2017-10-14T22:57:19+00:00</lastmod>
+<lastmod>2017-11-12T10:38:47+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/publish-procedure/</loc>

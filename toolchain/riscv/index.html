@@ -105,19 +105,22 @@
 <a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#riscv64-unknown-elf-gcc-vs-riscv32-unknown-elf-gcc"><span class="tocnumber">2</span> <span class="toctext">riscv64-unknown-elf-gcc vs riscv32-unknown-elf-gcc</span></a>
+<a href="#riscv64-unknown-elf-gcc"><span class="tocnumber">2</span> <span class="toctext">riscv64-unknown-elf-gcc?</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#-march-and--mabi"><span class="tocnumber">3</span> <span class="toctext">-march and -mabi</span></a>
+<a href="#riscv-none-embed-gcc"><span class="tocnumber">3</span> <span class="toctext">riscv-none-embed-gcc</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#multiple-libraries"><span class="tocnumber">4</span> <span class="toctext">Multiple libraries</span></a>
+<a href="#-march-and--mabi"><span class="tocnumber">4</span> <span class="toctext">-march and -mabi</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#more-user-pages"><span class="tocnumber">5</span> <span class="toctext">More user pages</span></a>
+<a href="#multiple-libraries"><span class="tocnumber">5</span> <span class="toctext">Multiple libraries</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#more-developer-pages"><span class="tocnumber">6</span> <span class="toctext">More developer pages</span></a>
+<a href="#more-user-pages"><span class="tocnumber">6</span> <span class="toctext">More user pages</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#more-developer-pages"><span class="tocnumber">7</span> <span class="toctext">More developer pages</span></a>
 </li>
 </ul>
 </td>
@@ -126,9 +129,11 @@
 </table>
 </div><h2 id="overview">Overview</h2>
 
-<p>The <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><strong>GNU MCU Eclipse RISC-V Embdedded GCC</strong></a> is an elaborated binary distribution that closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
+<p>The <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><strong>GNU MCU Eclipse RISC-V Embedded GCC</strong></a> is an elaborated binary distribution that follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
 
-<h2 id="riscv64-unknown-elf-gcc-vs-riscv32-unknown-elf-gcc">riscv64-unknown-elf-gcc vs riscv32-unknown-elf-gcc</h2>
+<h2 id="riscv64-unknown-elf-gcc">riscv64-unknown-elf-gcc?</h2>
+
+<p>Actually the long question is <code class="highlighter-rouge">riscv64-unknown-elf-gcc</code> vs <code class="highlighter-rouge">riscv32-unknown-elf-gcc</code>?</p>
 
 <p>With lots of architectures and systems supported, GCC recommends prefixing the binaries with a unique tuple:</p>
 
@@ -136,25 +141,21 @@
 </code></pre>
 </div>
 
-<p>The current RISC-V prefixes for the bare metal toolchains are <code class="highlighter-rouge">riscv64-unknown-elf-</code> and <code class="highlighter-rouge">riscv32-unknown-elf-</code>.</p>
+<p>The current RISC-V prefixes for the Linux toolchains are <code class="highlighter-rouge">riscv64-unknown-linux-gnu-</code> and <code class="highlighter-rouge">riscv32-unknown-linux-gnu-</code> and for the non-Linux toolchains are <code class="highlighter-rouge">riscv64-unknown-elf-</code> and <code class="highlighter-rouge">riscv32-unknown-elf-</code>.</p>
 
-<p>Well, don’t be confused by this unfortunate names. The <strong>64</strong> or <strong>32</strong> attached to the architecture does not mean that the toolchain runs on 64-bits or 32-bits platforms only. It does not mean either that the compiler produces 64-bits or 32-bits RISC-V binaries. Actually, the compilers produce both 32/64-bits binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>. The only difference are defaults, when the compiler are invoked without the <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code> explicitly set on the command line.</p>
+<p>Well, don’t be confused by this unfortunate names. The <strong>64</strong> or <strong>32</strong> prefix attached to the architecture does not mean that the toolchain runs on 64-bits or 32-bits platforms only. It does not mean either that the compiler produces 64-bits or 32-bits RISC-V binaries. Actually, the compilers produce both 32/64-bits binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>. The only difference are defaults, when the compiler are invoked without the <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code> explicitly set on the command line.</p>
 
-<p>The <strong>unknown</strong> part of the tuple also does not bring any useful information. If it referes to the vendor, it could have been easily skipped. If it refers to the OS, or to the lack of it, being a bare metal toolchain, <strong>none</strong> would have been a shorter and more usual name.</p>
+<p>The <strong>unknown</strong> part of the tuple also does not bring any useful information. If it refers to the OS, it could have been easily skipped. Not to mention that for bare metal toolchains, <strong>none</strong> would have been a shorter and more usual name.</p>
 
-<p>So, giving away the confusing parts, a more apropriate prefix for the multilib toolchain would have been:</p>
+<h2 id="riscv-none-embed-gcc">riscv-none-embed-gcc</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>riscv-none-newlib-
+<p>So, giving away the confusing parts, a more appropriate prefix for the multilib toolchain dedicated for bare-metal embedded applications would have been:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>riscv-none-embed-
 </code></pre>
 </div>
 
-<p>or even the shorter:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>riscv-none-
-</code></pre>
-</div>
-
-<p>Hopefully, someday RISC-V will revise the toolchain naming scheme, and correct this confusion.</p>
+<p>To reduce confusion, and to differentiate from the <code class="highlighter-rouge">riscv64-unknown-elf-gcc</code> which is tightly coupled with a  <code class="highlighter-rouge">libgloss</code> implemented with kernel traps, the <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> toolchain, starting with the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.2.0-1-20171109">7.2.0-1-20171109 release</a> adopted this name.</p>
 
 <h2 id="-march-and--mabi"><code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code></h2>
 
@@ -283,7 +284,7 @@ march=rv64imafdc/mabi=lp64d
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Wed Aug 30 22:01:17 2017 UTC.</p>
+<p class="page-footer">Last modified on Sun Nov 12 10:38:47 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/" data-layout="button"></div>
 
 
