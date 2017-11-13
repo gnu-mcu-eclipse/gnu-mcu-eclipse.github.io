@@ -103,19 +103,22 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#build"><span class="tocnumber">1</span> <span class="toctext">Build</span></a>
+<a href="#build-the-plug-ins"><span class="tocnumber">1</span> <span class="toctext">Build the plug-ins</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#debug"><span class="tocnumber">2</span> <span class="toctext">Debug</span></a>
+<a href="#build-the-packages"><span class="tocnumber">2</span> <span class="toctext">Build the packages</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#debug-options"><span class="tocnumber">3</span> <span class="toctext">Debug options</span></a>
+<a href="#debug"><span class="tocnumber">3</span> <span class="toctext">Debug</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#plug-ins-cache"><span class="tocnumber">4</span> <span class="toctext">Plug-ins cache</span></a>
+<a href="#debug-options"><span class="tocnumber">4</span> <span class="toctext">Debug options</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#debug-with-cdt-sources"><span class="tocnumber">5</span> <span class="toctext">Debug with CDT sources</span></a>
+<a href="#plug-ins-cache"><span class="tocnumber">5</span> <span class="toctext">Plug-ins cache</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#debug-with-cdt-sources"><span class="tocnumber">6</span> <span class="toctext">Debug with CDT sources</span></a>
 </li>
 </ul>
 </td>
@@ -123,7 +126,7 @@
 </tbody>
 </table>
 </div>
-<h2 id="build">Build</h2>
+<h2 id="build-the-plug-ins">Build the plug-ins</h2>
 
 <ul>
   <li>select the <strong>gnumcueclipse-plugins</strong> parent project</li>
@@ -134,53 +137,63 @@
 <p>The result of a successful build looks like this:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code>[INFO] --- tycho-p2-plugin:0.25.0:update-local-index (default-update-local-index) @ ilg.gnumcueclipse.repository ---
+<pre class="highlight"><code>[INFO] ------------------------------------------------------------------------
+[INFO] Building GNU MCU Eclipse plug-ins root 4.2.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ilg.gnumcueclipse.plugins ---
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary:
 [INFO] 
-[INFO] GNU MCU Eclipse parent ............................. SUCCESS [  0.153 s]
-[INFO] GNU MCU Eclipse core ............................... SUCCESS [  2.347 s]
-[INFO] GNU MCU Eclipse debug core ......................... SUCCESS [  0.276 s]
-[INFO] GNU MCU Eclipse packages core ...................... SUCCESS [  0.405 s]
-[INFO] GNU MCU Eclipse managed build code ................. SUCCESS [  0.655 s]
-[INFO] GNU MCU Eclipse managed build feature .............. SUCCESS [  0.137 s]
-[INFO] GNU MCU Eclipse templates core ..................... SUCCESS [  0.422 s]
-[INFO] GNU MCU Eclipse Cortex-M template .................. SUCCESS [  0.252 s]
-[INFO] GNU MCU Eclipse Cortex-M template feature .......... SUCCESS [  0.097 s]
-[INFO] GNU MCU Eclipse STM32Fx templates .................. SUCCESS [  1.709 s]
-[INFO] GNU MCU Eclipse STM32Fx templates feature .......... SUCCESS [  0.082 s]
-[INFO] GNU MCU Eclipse Freescale Kinetis templates ........ SUCCESS [  0.292 s]
-[INFO] GNU MCU Eclipse Freescale PEx template ............. SUCCESS [  0.268 s]
-[INFO] GNU MCU Eclipse Freescale templates feature ........ SUCCESS [  0.100 s]
-[INFO] GNU MCU Eclipse ADuCM template ..................... SUCCESS [  0.396 s]
-[INFO] GNU MCU Eclipse ADuCM template feature ............. SUCCESS [  0.080 s]
-[INFO] GNU MCU Eclipse GDB debug .......................... SUCCESS [  1.170 s]
-[INFO] GNU MCU Eclipse J-Link debug ....................... SUCCESS [  0.648 s]
-[INFO] GNU MCU Eclipse debugger Restart button ............ SUCCESS [  0.233 s]
-[INFO] GNU MCU Eclipse J-Link debug feature ............... SUCCESS [  0.117 s]
-[INFO] GNU MCU Eclipse OpenOCD debug ...................... SUCCESS [  0.478 s]
-[INFO] GNU MCU Eclipse OpenOCD debug feature .............. SUCCESS [  0.118 s]
-[INFO] GNU MCU Eclipse PyOCD debug ........................ SUCCESS [  0.820 s]
-[INFO] GNU MCU Eclipse PyOCD debug feature ................ SUCCESS [  0.088 s]
-[INFO] GNU MCU Eclipse QEMU debug ......................... SUCCESS [  0.432 s]
-[INFO] GNU MCU Eclipse QEMU debug feature ................. SUCCESS [  0.089 s]
-[INFO] GNU MCU Eclipse packages data ...................... SUCCESS [  0.339 s]
-[INFO] GNU MCU Eclipse debug packs ........................ SUCCESS [  0.268 s]
-[INFO] GNU MCU Eclipse packages ........................... SUCCESS [  0.208 s]
-[INFO] GNU MCU Eclipse packages UI ........................ SUCCESS [  0.431 s]
-[INFO] GNU MCU Eclipse managed build packs ................ SUCCESS [  0.329 s]
-[INFO] GNU MCU Eclipse packages feature ................... SUCCESS [  0.129 s]
-[INFO] GNU MCU Eclipse CodeRed perspective ................ SUCCESS [  0.258 s]
-[INFO] GNU MCU Eclipse CodeRed perspective feature ........ SUCCESS [  0.151 s]
-[INFO] GNU MCU Eclipse documentation ...................... SUCCESS [  0.052 s]
-[INFO] GNU MCU Eclipse documentation feature .............. SUCCESS [  0.043 s]
-[INFO] GNU MCU Eclipse repository ......................... SUCCESS [  5.770 s]
+[INFO] GNU MCU Eclipse core ............................... SUCCESS [  4.101 s]
+[INFO] GNU MCU Eclipse debug core ......................... SUCCESS [  0.422 s]
+[INFO] GNU MCU Eclipse packages core ...................... SUCCESS [  0.621 s]
+[INFO] GNU MCU Eclipse managed build common code .......... SUCCESS [  0.596 s]
+[INFO] GNU MCU Eclipse ARM managed build code ............. SUCCESS [  0.810 s]
+[INFO] GNU MCU Eclipse packages data ...................... SUCCESS [  0.826 s]
+[INFO] GNU MCU Eclipse packages ........................... SUCCESS [  0.550 s]
+[INFO] GNU MCU Eclipse packages UI ........................ SUCCESS [  0.921 s]
+[INFO] GNU MCU Eclipse managed build packs ................ SUCCESS [  0.646 s]
+[INFO] GNU MCU Eclipse debug packs ........................ SUCCESS [  0.464 s]
+[INFO] GNU MCU Eclipse packages feature ................... SUCCESS [  0.300 s]
+[INFO] GNU MCU Eclipse GDB debug .......................... SUCCESS [  1.762 s]
+[INFO] GNU MCU Eclipse J-Link debug ....................... SUCCESS [  1.135 s]
+[INFO] GNU MCU Eclipse debugger Restart button ............ SUCCESS [  0.507 s]
+[INFO] GNU MCU Eclipse J-Link debug feature ............... SUCCESS [  0.164 s]
+[INFO] GNU MCU Eclipse OpenOCD debug ...................... SUCCESS [  0.771 s]
+[INFO] GNU MCU Eclipse OpenOCD debug feature .............. SUCCESS [  0.149 s]
+[INFO] GNU MCU Eclipse PyOCD debug ........................ SUCCESS [  1.196 s]
+[INFO] GNU MCU Eclipse PyOCD debug feature ................ SUCCESS [  0.133 s]
+[INFO] GNU MCU Eclipse QEMU debug ......................... SUCCESS [  0.792 s]
+[INFO] GNU MCU Eclipse QEMU debug feature ................. SUCCESS [  0.138 s]
+[INFO] GNU MCU Eclipse CodeRed perspective ................ SUCCESS [  0.476 s]
+[INFO] GNU MCU Eclipse CodeRed perspective feature ........ SUCCESS [  0.105 s]
+[INFO] GNU MCU Eclipse documentation ...................... SUCCESS [  0.071 s]
+[INFO] GNU MCU Eclipse documentation feature .............. SUCCESS [  0.071 s]
+[INFO] GNU MCU Eclipse ARM managed build feature .......... SUCCESS [  0.118 s]
+[INFO] GNU MCU Eclipse RISC-V managed build code .......... SUCCESS [  0.679 s]
+[INFO] GNU MCU Eclipse RISC-V managed build feature ....... SUCCESS [  0.193 s]
+[INFO] GNU MCU Eclipse templates core ..................... SUCCESS [  0.631 s]
+[INFO] GNU MCU Eclipse STM32Fx templates .................. SUCCESS [  2.627 s]
+[INFO] GNU MCU Eclipse STM32Fx templates feature .......... SUCCESS [  0.089 s]
+[INFO] GNU MCU Eclipse Freescale Kinetis templates ........ SUCCESS [  0.491 s]
+[INFO] GNU MCU Eclipse Freescale PEx template ............. SUCCESS [  0.365 s]
+[INFO] GNU MCU Eclipse Freescale templates feature ........ SUCCESS [  0.121 s]
+[INFO] GNU MCU Eclipse SiFive template .................... SUCCESS [  0.571 s]
+[INFO] GNU MCU Eclipse SiFive template feature ............ SUCCESS [  0.092 s]
+[INFO] GNU MCU Eclipse Cortex-M template .................. SUCCESS [  0.425 s]
+[INFO] GNU MCU Eclipse Cortex-M template feature .......... SUCCESS [  0.098 s]
+[INFO] GNU MCU Eclipse ADuCM template ..................... SUCCESS [  0.465 s]
+[INFO] GNU MCU Eclipse ADuCM template feature ............. SUCCESS [  0.077 s]
+[INFO] GNU MCU Eclipse repository ......................... SUCCESS [  7.358 s]
+[INFO] GNU MCU Eclipse RISC-V repository .................. SUCCESS [  3.200 s]
+[INFO] GNU MCU Eclipse plug-ins root ...................... SUCCESS [  0.002 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 43.399 s
-[INFO] Finished at: 2017-02-18T15:18:25+02:00
-[INFO] Final Memory: 146M/1424M
+[INFO] Total time: 01:15 min
+[INFO] Finished at: 2017-11-13T20:01:33+02:00
+[INFO] Final Memory: 171M/1483M
 [INFO] ------------------------------------------------------------------------
 </code></pre>
 </div>
@@ -192,9 +205,11 @@
   <li><code class="highlighter-rouge">repositories/ilg.gnumcueclipse.riscv.repository/target/repository</code></li>
 </ul>
 
-<h2 id="debug">Debug</h2>
+<h2 id="build-the-packages">Build the packages</h2>
 
-<p>Download the <code class="highlighter-rouge">debug.options</code> file from https://github.com/gnu-mcu-eclipse/eclipse-plugins/blob/develop/debug.options into a local <code class="highlighter-rouge">Eclipse Workspaces/debug.options</code> and, if needed, edit it.</p>
+<p>… mvn clean verify -Pepp.package.cpp</p>
+
+<h2 id="debug">Debug</h2>
 
 <p>To run a debug session using the GNU MCU Eclipse plug-ins:</p>
 
@@ -207,7 +222,7 @@
   <li>
 <strong>Name:</strong> <code class="highlighter-rouge">Eclipse GNU MCU Plug-ins</code>
 </li>
-  <li>Location: <code class="highlighter-rouge">${workspace_loc}/../runtime-e46</code>
+  <li>Location: <code class="highlighter-rouge">${workspace_loc}/../runtime-e47</code>
 </li>
   <li>Tab: <strong>Plug-ins</strong>
     <ul>
@@ -223,7 +238,7 @@
         <ul>
           <li><code class="highlighter-rouge">-consoleLog</code></li>
           <li>
-<code class="highlighter-rouge">../</code> <code class="highlighter-rouge">../../Eclipse\ Workspaces/debug.options</code> (<code class="highlighter-rouge">"..\..\Eclipse Workspaces\debug.options"</code> on Windows)</li>
+<code class="highlighter-rouge">-debug "${workspace_loc}/../../eclipse-plugins.git/debug.options"</code> (<code class="highlighter-rouge">-debug "${workspace_loc}\..\..\eclipse-plugins.git\debug.options"</code> on Windows)</li>
         </ul>
       </li>
       <li>VM arguments:
@@ -244,11 +259,13 @@
   <li>click the <strong>Debug</strong> button</li>
 </ul>
 
+<p>Clear all errors in the <strong>Problems</strong> tab.</p>
+
 <p>Be sure the target platform is the Running Platform, otherwise starting the debug session fails.</p>
 
 <h2 id="debug-options">Debug options</h2>
 
-<p>as seen before, the debug options are grouped in a file and passed to Eclipse using the <code class="highlighter-rouge">-debug &lt;name&gt;</code> option.</p>
+<p>As seen before, the debug options are grouped in a file and passed to Eclipse using the <code class="highlighter-rouge">-debug &lt;file&gt;</code> option.</p>
 
 <h2 id="plug-ins-cache">Plug-ins cache</h2>
 
@@ -270,19 +287,23 @@
 <p>Clone the CDT repository:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git org.eclipse.cdt.git
+<pre class="highlight"><code><span class="w">$ </span><span class="nc">cd</span><span class="kv"> .../"GNU MCU Eclipse"
+</span><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p originals
+</span><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git originals/org.eclipse.cdt.git
 </span></code></pre>
 </div>
 
-<p>Create a new working set named <strong>CDT</strong></p>
+<p>For regular tests, select the <code class="highlighter-rouge">CDT_9_2_1</code> tag.</p>
+
+<p>Create a new working set named <code class="highlighter-rouge">CDT</code>.</p>
 
 <ul>
   <li>in the Package Explorer view, click the down pointing triangle,</li>
   <li>select <strong>Configure Working Sets…</strong>
     <ul>
       <li>click the <strong>New…</strong> button</li>
-      <li>select the Resource category</li>
-      <li>fill in the <strong>Working set name:</strong> with CDT</li>
+      <li>fill in the <strong>Working set name:</strong> with <code class="highlighter-rouge">CDT</code>
+</li>
       <li>click the <strong>Finish</strong> button</li>
       <li>click the <strong>OK</strong> button</li>
     </ul>
@@ -292,7 +313,7 @@
 <p>Import all CDT projects</p>
 
 <ul>
-  <li>in the <em>Eclipse</em> menu → <strong>File</strong> → <strong>Import…</strong> → General → <strong>Existing Projects into Workspace</strong>
+  <li>in the <em>Eclipse</em> menu → <strong>File</strong> → <strong>Import…</strong> → <strong>General</strong> → <strong>Existing Projects into Workspace</strong>
 </li>
   <li>click the <strong>Next &gt;</strong> button</li>
   <li>browse for the <code class="highlighter-rouge">org.eclipse.cdt.git</code> folder</li>
@@ -306,21 +327,22 @@
 <ul>
   <li>in the <em>Eclipse</em> menu → <strong>Run</strong> → <strong>Debug Configurations…</strong>
 </li>
-  <li>duplicate ‘Eclipse GNU MCU Plug-ins’ into ‘Eclipse GNU MCU Plug-ins with CDT’</li>
-  <li>click the <strong>Add Working Sets..</strong>
+  <li>duplicate <code class="highlighter-rouge">Eclipse GNU MCU Plug-ins</code> into <code class="highlighter-rouge">Eclipse GNU MCU Plug-ins with CDT</code>
+</li>
+  <li>in teh <strong>Plug-ins</strong> tab, click the <strong>Add Working Sets..</strong> button
     <ul>
-      <li>select the CDT set</li>
+      <li>select the <code class="highlighter-rouge">CDT</code> set</li>
       <li>click the <strong>OK</strong> button</li>
     </ul>
   </li>
-  <li>using the <strong>Validate Plug-ins</strong> button, disable unwanted plug-ins until the validation passes</li>
+  <li>using the <strong>Validate Plug-ins</strong> button, disable unwanted plug-ins (like all tests) until the validation passes</li>
   <li>click the <strong>Apply</strong> button</li>
   <li>click the <strong>Debug</strong> buton to start a debug session</li>
 </ul>
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Mon Nov 13 20:49:28 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/build-procedure/" data-layout="button"></div>
 
 
