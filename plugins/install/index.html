@@ -206,7 +206,7 @@
   <li>URL: <code class="highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/</code></li>
 </ul>
 
-<p>Note: the old URL <code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates/</code> is now deprecated, and its content will point to v3.x, that can be used to install the older versions of the plug-ins.</p>
+<p>Note: as the name implies, this URL is only valid for Eclipse <strong>Neon</strong> or later; the old URL <code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates/</code> is now deprecated, and its content will point to v3.x, that can be used to install the older versions of the plug-ins on older Eclipses.</p>
 
 <p>It is recommended that you install the plug-ins after installing the <a href="/toolchain/arm/install">ARM toolchain</a> and/or the <a href="/toolchain/riscv/install">RISC-V toolchain</a>, the <a href="/windows-build-tools/install/">build tools</a> (on Windows), and the <a href="/debug/install/">debugging binaries</a>.</p>
 
@@ -220,7 +220,7 @@
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>Since these are Eclipse plug-ins, they obviously require a functional Eclipse CDT, which requires Java.</p>
+<p>Since these are Eclipse plug-ins, they obviously require a functional Eclipse CDT (Neon or later), which requires Java.</p>
 
 <h3 id="win-xp---a-word-of-caution">Win XP - a word of caution</h3>
 
@@ -263,7 +263,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <h3 id="eclipse--cdt">Eclipse &amp; CDT</h3>
 
-<p>Starting with version 4.x, the oldest Eclipse supported by the plug-ins is Eclipse 4.6 Neon.3 (CDT 9.2), and the recommended version is <strong>4.5 Mars SR2</strong>. Do not try to install them on Mars, Luna, Kepler, Juno, Indigo, or older versions, since the install will fail.</p>
+<p>Starting with version 4.x, the oldest Eclipse supported by the plug-ins is Eclipse 4.6 Neon.3 (CDT 9.2), and the recommended version is <strong>4.7 Oxygen</strong>. Do not try to install them on Mars, Luna, Kepler, Juno, Indigo, or older versions, since the install will fail.</p>
 
 <h4 id="the-package-way">The package way</h4>
 
@@ -301,7 +301,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <h3 id="cdt">CDT</h3>
 
-<p>The minimum CDT version is 9.2.1. Do not try to use earlier versions, since either the install will fail (with something like <em>… requires ‘bundle org.eclipse.cdt 9.2.1’ but it could not be found</em>), or it will not run properly.</p>
+<p>The minimum CDT version is 9.2.1, that came with Eclipse Neon. Do not try to use earlier versions, since either the install will fail (with something like <em>… requires ‘bundle org.eclipse.cdt 9.2.1’ but it could not be found</em>), or it will not run properly.</p>
 
 <p>As mentioned before, the recommended way is to use a fresh <strong>Eclipse IDE for C/C++ Developers</strong> for the cross ARM development projects. Even if you did so, but especially if you did not do so, it is a good idea to check if you really have the latest version available. For this, enter the <em>Eclipse</em> menu and go to <strong>Help</strong> → <strong>Install New Software</strong></p>
 
@@ -546,7 +546,7 @@ On macOS Sierra and later, unsigned applications are marked as _quarantined_ and
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Tue Nov 28 01:18:15 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/install/" data-layout="button"></div>
 
 
