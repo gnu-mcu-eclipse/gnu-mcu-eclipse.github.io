@@ -236,7 +236,9 @@
 
 <p>The recommended package is the latest version from the official <a href="http://www.oracle.com/technetwork/java/javase/index.html">Oracle <strong>Java SE</strong> page</a>. The <strong>OpenJDK Java</strong> used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8 (the Java Runtime Environment), but, as said before, better use the latest JDK (currently 1.8.151). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.</p>
 
-<p>Note: please note that Java may be distributed in separate 32/64-bits packages. Unless you have older applications requiring 32-bits Java, on 64-bits systems it is recommended to install the 64-bits JDK. Anyway, Oracle JDK 9 might not even be available for 32-bits.</p>
+<blockquote>
+  <p>Important note: Java may be distributed in separate 32/64-bits packages. Unless you have older applications requiring 32-bits Java, on 64-bits systems it is recommended to install the 64-bits JDK. Anyway, Oracle JDK 9 might not even be available for 32-bits.</p>
+</blockquote>
 
 <p>On some distributions, for example on Ubuntu 16.04 LTS, Java seems to be already installed in the standard distribution:</p>
 
@@ -275,7 +277,9 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 <img src="/assets/images/2017/epp-releases.png" alt="Eclipse EPP" />
 </p>
 
-<p>Note: Please note that there are different binaries for 32-bits (<code class="highlighter-rouge">_x86</code>) and 64-bits (<code class="highlighter-rouge">x86-64</code>). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure <code class="highlighter-rouge">Java was started but returned exit code=13</code> message is issued.</p>
+<blockquote>
+  <p>Important note: there are different binaries for 32-bits (<code class="highlighter-rouge">_x86</code>) and 64-bits (<code class="highlighter-rouge">x86-64</code>). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure <code class="highlighter-rouge">Java was started but returned exit code=13</code> message is issued.</p>
+</blockquote>
 
 <h4 id="the-plug-ins-install-way">The plug-ins install way</h4>
 
@@ -550,7 +554,7 @@ On macOS Sierra and later, unsigned applications are marked as _quarantined_ and
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Dec 29 08:52:08 2017 UTC.</p>
+<p class="page-footer">Last modified on Fri Dec 29 09:25:58 2017 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/install/" data-layout="button"></div>
 
 
