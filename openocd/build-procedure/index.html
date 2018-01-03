@@ -114,47 +114,44 @@
 <a href="#preload-the-docker-images"><span class="tocnumber">4</span> <span class="toctext">Preload the Docker images</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#rebuild-the-docker-images"><span class="tocnumber">5</span> <span class="toctext">Rebuild the Docker images</span></a>
-</li>
-<li class="toc_level-1 toc_section-6">
-<a href="#development"><span class="tocnumber">6</span> <span class="toctext">Development</span></a>
+<a href="#development"><span class="tocnumber">5</span> <span class="toctext">Development</span></a>
 <ul>
-<li class="toc_level-2 toc_section-7">
-<a href="#update-git-repos"><span class="tocnumber">6.1</span> <span class="toctext">Update git repos</span></a>
+<li class="toc_level-2 toc_section-6">
+<a href="#update-git-repos"><span class="tocnumber">5.1</span> <span class="toctext">Update git repos</span></a>
 </li>
-<li class="toc_level-2 toc_section-8">
-<a href="#prepare-release"><span class="tocnumber">6.2</span> <span class="toctext">Prepare release</span></a>
+<li class="toc_level-2 toc_section-7">
+<a href="#prepare-release"><span class="tocnumber">5.2</span> <span class="toctext">Prepare release</span></a>
 </li>
 </ul>
+</li>
+<li class="toc_level-1 toc_section-8">
+<a href="#build-all-distribution-files"><span class="tocnumber">6</span> <span class="toctext">Build all distribution files</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#build-all-distribution-files"><span class="tocnumber">7</span> <span class="toctext">Build all distribution files</span></a>
-</li>
-<li class="toc_level-1 toc_section-10">
-<a href="#subsequent-runs"><span class="tocnumber">8</span> <span class="toctext">Subsequent runs</span></a>
+<a href="#subsequent-runs"><span class="tocnumber">7</span> <span class="toctext">Subsequent runs</span></a>
 <ul>
-<li class="toc_level-2 toc_section-11">
-<a href="#separate-platform-specific-builds"><span class="tocnumber">8.1</span> <span class="toctext">Separate platform specific builds</span></a>
+<li class="toc_level-2 toc_section-10">
+<a href="#separate-platform-specific-builds"><span class="tocnumber">7.1</span> <span class="toctext">Separate platform specific builds</span></a>
 </li>
-<li class="toc_level-2 toc_section-12">
-<a href="#clean"><span class="tocnumber">8.2</span> <span class="toctext">clean</span></a>
+<li class="toc_level-2 toc_section-11">
+<a href="#clean"><span class="tocnumber">7.2</span> <span class="toctext">clean</span></a>
 </li>
 </ul>
 </li>
+<li class="toc_level-1 toc_section-12">
+<a href="#native-builds"><span class="tocnumber">8</span> <span class="toctext">Native builds</span></a>
+</li>
 <li class="toc_level-1 toc_section-13">
-<a href="#native-builds"><span class="tocnumber">9</span> <span class="toctext">Native builds</span></a>
+<a href="#install-hierarchy"><span class="tocnumber">9</span> <span class="toctext">Install hierarchy</span></a>
 </li>
 <li class="toc_level-1 toc_section-14">
-<a href="#install-hierarchy"><span class="tocnumber">10</span> <span class="toctext">Install hierarchy</span></a>
+<a href="#uninstall"><span class="tocnumber">10</span> <span class="toctext">Uninstall</span></a>
 </li>
 <li class="toc_level-1 toc_section-15">
-<a href="#uninstall"><span class="tocnumber">11</span> <span class="toctext">Uninstall</span></a>
+<a href="#test"><span class="tocnumber">11</span> <span class="toctext">Test</span></a>
 </li>
 <li class="toc_level-1 toc_section-16">
-<a href="#test"><span class="tocnumber">12</span> <span class="toctext">Test</span></a>
-</li>
-<li class="toc_level-1 toc_section-17">
-<a href="#more-build-details"><span class="tocnumber">13</span> <span class="toctext">More build details</span></a>
+<a href="#more-build-details"><span class="tocnumber">12</span> <span class="toctext">More build details</span></a>
 </li>
 </ul>
 </td>
@@ -197,21 +194,11 @@
 <p>The result should look similar to:</p>
 
 <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">docker</span><span class="kv"> images
-</span>REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
-ilegeul/debian      9-gnu-mcu-eclipse     ff8a853cf6cb        4 days ago          3.2GB
-ilegeul/debian32    9-gnu-mcu-eclipse     a22ccdf38f1f        4 days ago          3.2GB
-ilegeul/debian32    9                     7348339e67f5        4 days ago          116MB
-debian              9                     a2ff708b7413        2 weeks ago         100MB
-hello-world         latest                1815c82652c0        3 weeks ago         1.84kB
+</span>REPOSITORY                  TAG                   IMAGE ID            CREATED             SIZE
+ilegeul/centos32            6-xbb-tex-v1          84e5da687232        3 days ago          4.52GB
+ilegeul/centos              6-xbb-tex-v1          4e96fda659ab        3 days ago          4.71GB
+hello-world                 latest                1815c82652c0        6 months ago        1.84kB
 </code></pre>
-</div>
-
-<h2 id="rebuild-the-docker-images">Rebuild the Docker images</h2>
-
-<p>If the download speed is limited, probably it is faster to rebuild the images locally. For this see the <code class="highlighter-rouge">build-images</code> command:</p>
-
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh build-images
-</span></code></pre>
 </div>
 
 <h2 id="development">Development</h2>
@@ -264,8 +251,7 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <p>On macOS, to prevent entering sleep, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash
-</span><span class="w">$ </span><span class="nc">exec</span><span class="kv"> bash ~/Downloads/openocd-build.git/scripts/build.sh --all
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash ~/Downloads/openocd-build.git/scripts/build.sh --all
 </span></code></pre>
 </div>
 
@@ -399,7 +385,7 @@ For bug reports, read
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Nov 10 12:56:52 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Jan  3 21:28:20 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/build-procedure/" data-layout="button"></div>
 
 

@@ -120,7 +120,7 @@
 <a href="#prepare-a-new-blog-post-to-announce-the-release"><span class="tocnumber">6</span> <span class="toctext">Prepare a new blog post to announce the release</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#update-the-release-post-with-the-md5-sums"><span class="tocnumber">7</span> <span class="toctext">Update the release post with the MD5 sums</span></a>
+<a href="#update-the-release-post-with-the-sha-sums"><span class="tocnumber">7</span> <span class="toctext">Update the release post with the SHA sums</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
 <a href="#update-the-web"><span class="tocnumber">8</span> <span class="toctext">Update the web</span></a>
@@ -132,10 +132,13 @@
 <a href="#create-the-release"><span class="tocnumber">10</span> <span class="toctext">Create the release</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#copy-binaries-to-the-local-archive-folder"><span class="tocnumber">11</span> <span class="toctext">Copy binaries to the local archive folder</span></a>
+<a href="#update-the-web-link-to-resources"><span class="tocnumber">11</span> <span class="toctext">Update the web link to resources</span></a>
 </li>
 <li class="toc_level-1 toc_section-12">
-<a href="#share-on-facebook"><span class="tocnumber">12</span> <span class="toctext">Share on Facebook</span></a>
+<a href="#copy-binaries-to-the-local-archive-folder"><span class="tocnumber">12</span> <span class="toctext">Copy binaries to the local archive folder</span></a>
+</li>
+<li class="toc_level-1 toc_section-13">
+<a href="#share-on-facebook"><span class="tocnumber">13</span> <span class="toctext">Share on Facebook</span></a>
 </li>
 </ul>
 </td>
@@ -164,14 +167,16 @@
 
 <h2 id="checkclonepull-build-scripts">Check/clone/pull build scripts</h2>
 
-<p>Be sure the scripts in the <strong>build-scripts.git</strong> are up to date.</p>
+<p>Be sure the scripts in the <strong>windows-build-tools.git</strong> are up to date.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
-</span>  ~/Downloads/build-scripts.git
+<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/windows-build-tools.git \
+</span>  ~/Downloads/windows-build-tools.git
 </code></pre>
 </div>
 
 <h2 id="build">Build</h2>
+
+<p>Important note: Before starting the build, double check if the repository is clean (all changes were committed), otherwise the build version will be stamped with <code class="highlighter-rouge">-dirty</code>.</p>
 
 <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh cleanall
 </span><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh --all
@@ -183,33 +188,31 @@
 <ul>
   <li>add a new file to <code class="highlighter-rouge">_posts/windows-build-tools/releases</code></li>
   <li>name the file like <code class="highlighter-rouge">2016-10-28-windows-build-tools-v2-7-20161028-released.md</code></li>
-  <li>name the post like: <strong>GNU MCU Eclipse Windows Build Tools v2.7-20161028* released</strong>.</li>
+  <li>name the post like: <strong>GNU MCU Eclipse Windows Build Tools v2.7-20161028 released</strong>.</li>
 </ul>
 
-<h2 id="update-the-release-post-with-the-md5-sums">Update the release post with the MD5 sums</h2>
+<h2 id="update-the-release-post-with-the-sha-sums">Update the release post with the SHA sums</h2>
 
 <p>Copy/paste the build report at the end of the post as</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>c88f834f14f20b99bda1747ab6a8857b
-gnuarmeclipse-build-tools-win32-2.7-201610281058-setup.exe
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>25b495b340d84b971736a5dfc2a639608c19b5d9d30d14e86e870c1ce461b855 ?
+gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip
 
-e7a34cb1e2ee68acbb41a4e441f75aa1
-gnuarmeclipse-build-tools-win64-2.7-201610281058-setup.exe
+da147a2cd378183af1d19ecb655637b5b1deedb691fac25657d9d0e2a102e1be ?
+gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip
 </code></pre>
 </div>
 
 <h2 id="update-the-web">Update the web</h2>
 
 <ul>
-  <li>commit the <strong>gnuarmeclipse.github.io-source.git</strong> project; use a message like <strong>Windows Build Tools v2.7-20161028* released</strong></li>
-  <li>run <code class="highlighter-rouge">jekyll-build.command</code></li>
-  <li>commit the <strong>gnuarmeclipse.github.io.git</strong> project; use a message like <strong>Windows Build Tools v2.7-20161028* released</strong></li>
-  <li>push the <strong>gnuarmeclipse.github.io.git</strong> project</li>
+  <li>commit the <strong>gnuarmeclipse.github.io-source.git</strong> project; use a message like <strong>Windows Build Tools v2.7-20161028 released</strong></li>
+  <li>push the <strong>gnuarmeclipse.github.io-source.git</strong> project</li>
 </ul>
 
 <h2 id="push-the-project-git">Push the project git</h2>
 
-<p>With SourceTree, push to the GitHub remote, the <strong>master</strong> branche.</p>
+<p>With SourceTree, push to the GitHub remote, the <strong>master</strong> branch.</p>
 
 <h2 id="create-the-release">Create the release</h2>
 
@@ -217,23 +220,29 @@ gnuarmeclipse-build-tools-win64-2.7-201610281058-setup.exe
   <li>for stable releases, be sure the <strong>master</strong> branch is up to date and set as default</li>
   <li>go to the <a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/releases">GitHub Releases</a> page</li>
   <li>click <strong>Draft a new release</strong></li>
-  <li>name the tag like <strong>v2.7</strong></li>
+  <li>name the tag like <strong>v2.7-20161028</strong></li>
   <li>select the <strong>master</strong> branch</li>
-  <li>name the release like <strong>GNU MCU Eclipse Windows Build Tools v2.7-201610281058</strong></li>
+  <li>name the release like <strong>GNU MCU Eclipse Windows Build Tools v2.7-20161028</strong></li>
   <li>as description, copy the first paragraph from the Web release page</li>
   <li>add a link to the Web page <strong>[Continue reading »]()</strong></li>
   <li>get URL from web and update the above link</li>
-  <li>attach binaries and MD5 (drag and drop from the archives folder will do it)</li>
+  <li>attach binaries and SHA (drag and drop from the archives folder will do it)</li>
   <li>click the <strong>Publish Release</strong> button</li>
 </ul>
 
 <p>Note: at this moment the system should send a notification to all clients watching this project.</p>
 
+<h2 id="update-the-web-link-to-resources">Update the web link to resources</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">download_url: https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.9-20170629-1013</code></li>
+</ul>
+
 <h2 id="copy-binaries-to-the-local-archive-folder">Copy binaries to the local archive folder</h2>
 
 <ul>
   <li>go to <code class="highlighter-rouge">.../GNU MCU Eclipse/archive</code></li>
-  <li>move the latest binaries and MD5 to <code class="highlighter-rouge">releases/build-tools</code></li>
+  <li>move the latest binaries and SHA to <code class="highlighter-rouge">releases/build-tools</code></li>
 </ul>
 
 <h2 id="share-on-facebook">Share on Facebook</h2>
@@ -241,15 +250,15 @@ gnuarmeclipse-build-tools-win64-2.7-201610281058-setup.exe
 <ul>
   <li>go to the new post and follow the Share link.</li>
   <li>DO NOT select <strong>On your own Timeline</strong>, but <strong>On a Page you manage</strong></li>
-  <li>select GNU ARM Eclipse</li>
-  <li>posting as GNU ARM Eclipse</li>
+  <li>select GNU MCU Eclipse</li>
+  <li>posting as GNU MCU Eclipse</li>
   <li>click <strong>Post to Facebook</strong></li>
   <li>check the post in the <a href="https://www.facebook.com/gnu-mcu-eclipse">Facebook page</a></li>
 </ul>
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Jan  3 21:28:20 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/windows-build-tools/publish-procedure/" data-layout="button"></div>
 
 

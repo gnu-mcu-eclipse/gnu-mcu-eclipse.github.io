@@ -123,7 +123,7 @@
 <a href="#prepare-a-new-blog-post-to-announce-the-release"><span class="tocnumber">7</span> <span class="toctext">Prepare a new blog post to announce the release</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#update-the-release-post-with-the-md5-sums"><span class="tocnumber">8</span> <span class="toctext">Update the release post with the MD5 sums</span></a>
+<a href="#update-the-release-post-with-the-sha-sums"><span class="tocnumber">8</span> <span class="toctext">Update the release post with the SHA sums</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
 <a href="#update-the-web"><span class="tocnumber">9</span> <span class="toctext">Update the web</span></a>
@@ -177,7 +177,7 @@ In the documentation git, add new entries to the <a href="/openocd/change-log/">
 
 <h2 id="checkclonepull-build-scripts">Check/clone/pull build scripts</h2>
 
-<p>Be sure the scripts in the <strong>openocd/build.git</strong> are up to date.</p>
+<p>Be sure the scripts in the <strong>openocd-build.git</strong> are up to date.</p>
 
 <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git \
 </span>  ~/Downloads/openocd-build.git
@@ -186,7 +186,7 @@ In the documentation git, add new entries to the <a href="/openocd/change-log/">
 
 <h2 id="build">Build</h2>
 
-<p>Important note: Before starting the build, double check if the repository is clean (all changes were committed), otherwise the build version will be stamped with <code class="highlighter-rouge">-dirty</code>).</p>
+<p>Important note: Before starting the build, double check if the repository is clean (all changes were committed), otherwise the build version will be stamped with <code class="highlighter-rouge">-dirty</code>.</p>
 
 <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh cleanall
 </span><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
@@ -206,7 +206,7 @@ In the documentation git, add new entries to the <a href="/openocd/change-log/">
   <li>as <code class="highlighter-rouge">download_url</code> use the generic <code class="highlighter-rouge">https://github.com/gnu-mcu-eclipse/openocd/releases/</code> (will be updated later after the release is created)</li>
 </ul>
 
-<h2 id="update-the-release-post-with-the-md5-sums">Update the release post with the MD5 sums</h2>
+<h2 id="update-the-release-post-with-the-sha-sums">Update the release post with the SHA sums</h2>
 
 <p>Copy/paste the build report at the end of the post as</p>
 
@@ -257,7 +257,7 @@ gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64.zip
   <li>as description, copy the first paragraph from the Web release page</li>
   <li>add a link to the Web page <strong>[Continue reading »]()</strong></li>
   <li>get URL from web and update the above link</li>
-  <li>attach binaries and MD5 (drag and drop from the archives folder will do it)</li>
+  <li>attach binaries and SHA (drag and drop from the archives folder will do it)</li>
   <li>click the <strong>Publish Release</strong> button</li>
 </ul>
 
@@ -273,7 +273,7 @@ gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64.zip
 
 <ul>
   <li>go to <code class="highlighter-rouge">.../GNU MCU Eclipse/archive</code></li>
-  <li>move the latest binaries and MD5 to <code class="highlighter-rouge">releases/openocd</code></li>
+  <li>move the latest binaries and SHA to <code class="highlighter-rouge">releases/openocd</code></li>
 </ul>
 
 <h2 id="share-on-facebook">Share on Facebook</h2>
@@ -289,7 +289,7 @@ gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64.zip
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Nov 10 12:56:52 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Jan  3 21:28:20 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/publish-procedure/" data-layout="button"></div>
 
 
