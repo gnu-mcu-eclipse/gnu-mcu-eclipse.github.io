@@ -5,9 +5,37 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Dec 2017 09:28:11 +0000</pubDate>
-    <lastBuildDate>Fri, 29 Dec 2017 09:28:11 +0000</lastBuildDate>
+    <pubDate>Wed, 03 Jan 2018 21:09:07 +0000</pubDate>
+    <lastBuildDate>Wed, 03 Jan 2018 21:09:07 +0000</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse Windows Build Tools v2.10-20180103 released</title>
+        <description>&lt;p&gt;Version 2.10-20180103 is a maintenance release of the GNU MCU Eclipse Windows Build Tools.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 03 Jan 2018 19:18:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/01/03/windows-build-tools-v2-10-20180103-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/01/03/windows-build-tools-v2-10-20180103-released/</guid>
+        
+        <category>windows</category>
+        
+        <category>build</category>
+        
+        <category>make</category>
+        
+        <category>rm</category>
+        
+        <category>mkdir</category>
+        
+        <category>busybox</category>
+        
+        
+        <category>releases</category>
+        
+        <category>windows-build-tools</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse plug-ins v4.2.1-201711101735 released</title>
@@ -180,32 +208,6 @@
         <category>releases</category>
         
         <category>riscv-none-gcc</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU ARM Eclipse plug-ins update sites migrated to Bintray</title>
-        <description>&lt;p&gt;After serving almost 6 million downloaded files, the &lt;strong&gt;Eclipse update sites&lt;/strong&gt; were &lt;strong&gt;migrated&lt;/strong&gt; from the venerable SourceForge &lt;strong&gt;to the new Bintray site&lt;/strong&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 02 May 2017 08:15:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/05/02/sourceforge-to-bintray-migration/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/05/02/sourceforge-to-bintray-migration/</guid>
-        
-        <category>featured</category>
-        
-        <category>SourceForge</category>
-        
-        <category>Bintray</category>
-        
-        <category>downloads</category>
-        
-        <category>update</category>
-        
-        
-        <category>news</category>
-        
-        <category>project</category>
         
       </item>
     
