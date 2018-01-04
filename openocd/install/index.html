@@ -182,7 +182,7 @@
 </span></code></pre>
 </div>
 
-<p>This will always install the latest available version, in the central pxPacks repository, which is a platform dependent folder:</p>
+<p>This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:</p>
 
 <ul>
   <li>Windows: <code class="highlighter-rouge">%APPDATA%\xPacks</code> (<code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks</code>)</li>
@@ -205,7 +205,7 @@
 
 <p>Select the <code class="highlighter-rouge">-win64</code> file for Windows x64 machines and the <code class="highlighter-rouge">-win32</code> file for Windows x32 machines.</p>
 
-<p>Unpack the archive and copy it into the <code class="highlighter-rouge">%APPDATA%\GNU MCU Eclipse</code> (<code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse</code>) folder.</p>
+<p>Unpack the archive and copy it into the <code class="highlighter-rouge">%APPDATA%\GNU MCU Eclipse</code> (for example <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse</code>) folder.</p>
 
 <p>Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.</p>
 
@@ -218,7 +218,7 @@
 <p>To check if OpenOCD starts, use the following command:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code>C:&gt;"C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\bin\openocd" --version
+<pre class="highlight"><code>C:&gt;"C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-5-20171110-1117\bin\openocd" --version
 GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
 </code></pre>
 </div>
@@ -289,7 +289,7 @@ GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-1
 
 <p>As the name implies, these are Debian <code class="highlighter-rouge">tar.gz</code> archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-debian64</code> file for 64-bits machines and the <code class="highlighter-rouge">-debian32</code> file for 32-bits machines.</p>
 
-<p>To install this package, unpack the archive and copy it to  <code class="highlighter-rouge">/opt/gnuarmeclipse/openocd/${version}</code></p>
+<p>To install this package, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/openocd/${version}</code></p>
 
 <div class="language-console highlighter-rouge">
 <pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
@@ -387,9 +387,9 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
 
 <ul>
   <li>
-    <p>in the <em>Eclipse</em> menu, go to <strong>(Window →) Preferences</strong> → <strong>Run/Debug</strong> → <strong>OpenOCD</strong></p>
+    <p>in the <em>Eclipse</em> menu, go to <strong>(Window →) Preferences</strong> → <strong>MCU</strong> → <strong>Global OpenOCD Path</strong></p>
 
-    <p><img src="/assets/images/2015/preferences-run-openocd.png" alt="OpenOCD preferences page"></p>
+    <p><img src="/assets/images/2018/preferences-mcu-openocd-path.png" alt="OpenOCD preferences page"></p>
   </li>
   <li>
     <p>click the <strong>Restore Defaults</strong> button</p>
@@ -401,7 +401,7 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Thu Jan  4 18:18:30 2018 UTC.</p>
+<p class="page-footer">Last modified on Thu Jan  4 18:49:58 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/install/" data-layout="button"></div>
 
 
