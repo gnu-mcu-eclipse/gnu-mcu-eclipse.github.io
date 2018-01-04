@@ -105,25 +105,19 @@
 <a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#mentor-sourcery-codebench"><span class="tocnumber">2</span> <span class="toctext">Mentor Sourcery CodeBench</span></a>
+<a href="#download-the-windows-build-tools-archives"><span class="tocnumber">2</span> <span class="toctext">Download the Windows Build Tools archives</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#download-the-windows-build-tools-setup"><span class="tocnumber">3</span> <span class="toctext">Download the Windows Build Tools setup</span></a>
+<a href="#check-version"><span class="tocnumber">3</span> <span class="toctext">Check version</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#run-the-setup"><span class="tocnumber">4</span> <span class="toctext">Run the setup</span></a>
+<a href="#do-not-update-the-user-or-system-path"><span class="tocnumber">4</span> <span class="toctext">DO NOT update the user or system path!</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#check-version"><span class="tocnumber">5</span> <span class="toctext">Check version</span></a>
+<a href="#uninstall"><span class="tocnumber">5</span> <span class="toctext">Uninstall</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#do-not-update-the-user-or-system-path"><span class="tocnumber">6</span> <span class="toctext">DO NOT update the user or system path!</span></a>
-</li>
-<li class="toc_level-1 toc_section-7">
-<a href="#uninstall"><span class="tocnumber">7</span> <span class="toctext">Uninstall</span></a>
-</li>
-<li class="toc_level-1 toc_section-8">
-<a href="#the-echo-command"><span class="tocnumber">8</span> <span class="toctext">The echo command</span></a>
+<a href="#the-echo-command"><span class="tocnumber">6</span> <span class="toctext">The echo command</span></a>
 </li>
 </ul>
 </td>
@@ -138,37 +132,26 @@
 
 <p>On macOS and GNU/Linux these programs are part of the standard distributions, either directly or in separate Developer packages, so the following steps do not apply.</p>
 
-<h2 id="mentor-sourcery-codebench">Mentor Sourcery CodeBench</h2>
+<h2 id="download-the-windows-build-tools-archives">Download the Windows Build Tools archives</h2>
 
-<p>One notable exception is the <strong><a href="http://www.mentor.com/embedded-software/sourcery-tools/sourcery-codebench/editions/lite-edition/">Mentor Sourcery CodeBench Lite</a></strong> toolchain for Windows, which provides two programs, <code class="highlighter-rouge">cs-make</code> and <code class="highlighter-rouge">cs-rm</code> (the <code class="highlighter-rouge">cs-</code> prefix comes from CodeSourcery, the former name of the company that distributed the toolchain).</p>
+<p>The Windows versions of <strong>GNU MCU Eclipse Windows Build Tools</strong> are packed as ZIP files. Go to the <a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/releases">GitHub Releases</a> page and download the latest version named like:</p>
 
-<p>Unfortunately it seems that the CodeSourcery setup is not complete, and the <code class="highlighter-rouge">bin/sh</code> is not present, so, <code class="highlighter-rouge">make</code> is using <code class="highlighter-rouge">cmd.exe</code> to run sub processes, which presents the <strong>old Windows 8191 characters</strong> command line limitation.</p>
+<ul>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip</code></li>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip</code></li>
+</ul>
 
-<p>So, if you use the CodeBench Lite (not recommended anyway), although you already have these two programs in the toolchain path, if you want to use longer lines and a modern make, preferably install these tools and update the names from <code class="highlighter-rouge">cs-make</code> to <code class="highlighter-rouge">make</code> and from <code class="highlighter-rouge">cs-rm</code> to <code class="highlighter-rouge">rm</code> in the <strong>Toolchains</strong> configuration tab.</p>
+<p>Select the <code class="highlighter-rouge">-win64</code> file for Windows x64 machines and the <code class="highlighter-rouge">-win32</code> file for Windows x32 machines.</p>
 
-<h2 id="download-the-windows-build-tools-setup">Download the Windows Build Tools setup</h2>
+<p>Unpack the archive and copy it into the <code class="highlighter-rouge">%APPDATA%\GNU MCU Eclipse</code> (<code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse</code>) folder.</p>
 
-<p>Otherwise, if you use other toolchains, like the recommended <a href="http://launchpad.net/gcc-arm-embedded"><strong>GNU Tools for ARM Embedded Processors</strong></a>, for your convenience we prepared a small package with the required build tools; download the most recent <code class="highlighter-rouge">gnuarmeclipse-build-tools-win[32|64]-*.*-*-setup.exe</code> file from the <a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/releases">Github Releases</a> page and proceed with the setup.</p>
-
-<h2 id="run-the-setup">Run the setup</h2>
-
-<p>Run the setup with the default settings:</p>
-
-<p>
-<img src="/assets/images/2015/win-build-tools-setup.png" alt="Windows Build Tools Setup" />
-</p>
-
-<p>By default this will install the programs in the <code class="highlighter-rouge">C:\Program Files\GNU MCU Eclipse\Build Tools</code> folder:</p>
-
-<p>
-<img src="/assets/images/2015/win-build-tools-setup-destination.png" alt="Default install destination" />
-</p>
+<p>Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.</p>
 
 <h2 id="check-version">Check version</h2>
 
 <p>Check if the tool is functional; go to the folder where you installed the tools and run <code class="highlighter-rouge">make --version</code>.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>C:\Program Files\GNU MCU Eclipse\Build Tools\bin&gt;make --version
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\Build Tools\2.10-20180103-1919\bin&gt;make --version
 GNU Make 4.1
 Built for i686-w64-mingw32
 Copyright (C) 1988-2014 Free Software Foundation, Inc.
@@ -184,7 +167,7 @@ There is NO WARRANTY, to the extent permitted by law.
 
 <h2 id="uninstall">Uninstall</h2>
 
-<p>If needed, you can completely remove the package from your system by running the provided uninstall (<code class="highlighter-rouge">build-tools-uninstall.exe</code>).</p>
+<p>The binaries are distributed as portable archives, that do not need to run a setup and do not require an uninstall.</p>
 
 <h2 id="the-echo-command">The echo command</h2>
 
@@ -192,7 +175,7 @@ There is NO WARRANTY, to the extent permitted by law.
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Oct 14 22:57:19 2017 UTC.</p>
+<p class="page-footer">Last modified on Thu Jan  4 18:18:48 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/windows-build-tools/install/" data-layout="button"></div>
 
 
