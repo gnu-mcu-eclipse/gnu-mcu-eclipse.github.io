@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+
+  <title>The 2017 GNU MCU Eclipse Plug-ins Change Log</title>
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+
+  <meta property="og:title" content="The 2017 GNU MCU Eclipse Plug-ins Change Log" />
+  <meta property="og:site_name" content="GNU MCU Eclipse" />
+
+
+  <meta property="article:published_time" content="2017-02-24">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201707092118" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201707092118" media="print">
+
+  <link rel="canonical" href="/developer/change-log/2017/">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/manifest.json">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-16', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<header>
+  <div class="inner">
+    <h1><a href="/">GNU MCU Eclipse</a></h1>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <div id="buttons">
+      <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
+    </div>
+  </div>
+</header>
+
+
+<div id="content-wrapper">
+<div class="inner clearfix">
+
+<div id="site-body">
+<section id="main-content">
+
+
+<h1 class="page-title">The 2017 GNU MCU Eclipse Plug-ins Change Log</h1>
+
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#2017"><span class="tocnumber">1</span> <span class="toctext">2017</span></a>
+<ul>
+<li class="toc_level-2 toc_section-2">
+<a href="#2017-12-29"><span class="tocnumber">1.1</span> <span class="toctext">2017-12-29</span></a>
+</li>
+<li class="toc_level-2 toc_section-3">
+<a href="#2017-12-28"><span class="tocnumber">1.2</span> <span class="toctext">2017-12-28</span></a>
+</li>
+<li class="toc_level-2 toc_section-4">
+<a href="#2017-12-27"><span class="tocnumber">1.3</span> <span class="toctext">2017-12-27</span></a>
+</li>
+<li class="toc_level-2 toc_section-5">
+<a href="#2017-12-09"><span class="tocnumber">1.4</span> <span class="toctext">2017-12-09</span></a>
+</li>
+<li class="toc_level-2 toc_section-6">
+<a href="#2017-12-08"><span class="tocnumber">1.5</span> <span class="toctext">2017-12-08</span></a>
+</li>
+<li class="toc_level-2 toc_section-7">
+<a href="#2017-12-06"><span class="tocnumber">1.6</span> <span class="toctext">2017-12-06</span></a>
+</li>
+<li class="toc_level-2 toc_section-8">
+<a href="#2017-12-04"><span class="tocnumber">1.7</span> <span class="toctext">2017-12-04</span></a>
+</li>
+<li class="toc_level-2 toc_section-9">
+<a href="#2017-12-02"><span class="tocnumber">1.8</span> <span class="toctext">2017-12-02</span></a>
+</li>
+<li class="toc_level-2 toc_section-10">
+<a href="#2017-11-28"><span class="tocnumber">1.9</span> <span class="toctext">2017-11-28</span></a>
+</li>
+<li class="toc_level-2 toc_section-11">
+<a href="#2017-11-24"><span class="tocnumber">1.10</span> <span class="toctext">2017-11-24</span></a>
+</li>
+<li class="toc_level-2 toc_section-12">
+<a href="#2017-11-23"><span class="tocnumber">1.11</span> <span class="toctext">2017-11-23</span></a>
+</li>
+<li class="toc_level-2 toc_section-13">
+<a href="#2017-11-22"><span class="tocnumber">1.12</span> <span class="toctext">2017-11-22</span></a>
+</li>
+<li class="toc_level-2 toc_section-14">
+<a href="#2017-11-20"><span class="tocnumber">1.13</span> <span class="toctext">2017-11-20</span></a>
+</li>
+<li class="toc_level-2 toc_section-15">
+<a href="#2017-11-10"><span class="tocnumber">1.14</span> <span class="toctext">2017-11-10</span></a>
+</li>
+<li class="toc_level-2 toc_section-16">
+<a href="#2017-11-05"><span class="tocnumber">1.15</span> <span class="toctext">2017-11-05</span></a>
+</li>
+<li class="toc_level-2 toc_section-17">
+<a href="#2017-11-04"><span class="tocnumber">1.16</span> <span class="toctext">2017-11-04</span></a>
+</li>
+<li class="toc_level-2 toc_section-18">
+<a href="#2017-10-20"><span class="tocnumber">1.17</span> <span class="toctext">2017-10-20</span></a>
+</li>
+<li class="toc_level-2 toc_section-19">
+<a href="#2017-09-25"><span class="tocnumber">1.18</span> <span class="toctext">2017-09-25</span></a>
+</li>
+<li class="toc_level-2 toc_section-20">
+<a href="#2017-07-19"><span class="tocnumber">1.19</span> <span class="toctext">2017-07-19</span></a>
+</li>
+<li class="toc_level-2 toc_section-21">
+<a href="#2017-07-14"><span class="tocnumber">1.20</span> <span class="toctext">2017-07-14</span></a>
+</li>
+<li class="toc_level-2 toc_section-22">
+<a href="#2017-07-13"><span class="tocnumber">1.21</span> <span class="toctext">2017-07-13</span></a>
+</li>
+<li class="toc_level-2 toc_section-23">
+<a href="#2017-07-11"><span class="tocnumber">1.22</span> <span class="toctext">2017-07-11</span></a>
+</li>
+<li class="toc_level-2 toc_section-24">
+<a href="#2017-06-29"><span class="tocnumber">1.23</span> <span class="toctext">2017-06-29</span></a>
+</li>
+<li class="toc_level-2 toc_section-25">
+<a href="#2017-06-12"><span class="tocnumber">1.24</span> <span class="toctext">2017-06-12</span></a>
+</li>
+<li class="toc_level-2 toc_section-26">
+<a href="#2017-06-11"><span class="tocnumber">1.25</span> <span class="toctext">2017-06-11</span></a>
+</li>
+<li class="toc_level-2 toc_section-27">
+<a href="#2017-06-09"><span class="tocnumber">1.26</span> <span class="toctext">2017-06-09</span></a>
+</li>
+<li class="toc_level-2 toc_section-28">
+<a href="#2017-06-08"><span class="tocnumber">1.27</span> <span class="toctext">2017-06-08</span></a>
+</li>
+<li class="toc_level-2 toc_section-29">
+<a href="#2017-06-02"><span class="tocnumber">1.28</span> <span class="toctext">2017-06-02</span></a>
+</li>
+<li class="toc_level-2 toc_section-30">
+<a href="#2017-06-01"><span class="tocnumber">1.29</span> <span class="toctext">2017-06-01</span></a>
+</li>
+<li class="toc_level-2 toc_section-31">
+<a href="#2017-05-31"><span class="tocnumber">1.30</span> <span class="toctext">2017-05-31</span></a>
+</li>
+<li class="toc_level-2 toc_section-32">
+<a href="#2017-05-30"><span class="tocnumber">1.31</span> <span class="toctext">2017-05-30</span></a>
+</li>
+<li class="toc_level-2 toc_section-33">
+<a href="#2017-05-29"><span class="tocnumber">1.32</span> <span class="toctext">2017-05-29</span></a>
+</li>
+<li class="toc_level-2 toc_section-34">
+<a href="#2017-05-28"><span class="tocnumber">1.33</span> <span class="toctext">2017-05-28</span></a>
+</li>
+<li class="toc_level-2 toc_section-35">
+<a href="#2017-05-27"><span class="tocnumber">1.34</span> <span class="toctext">2017-05-27</span></a>
+</li>
+<li class="toc_level-2 toc_section-36">
+<a href="#2017-05-26"><span class="tocnumber">1.35</span> <span class="toctext">2017-05-26</span></a>
+</li>
+<li class="toc_level-2 toc_section-37">
+<a href="#2017-05-25"><span class="tocnumber">1.36</span> <span class="toctext">2017-05-25</span></a>
+</li>
+<li class="toc_level-2 toc_section-38">
+<a href="#2017-05-23"><span class="tocnumber">1.37</span> <span class="toctext">2017-05-23</span></a>
+</li>
+<li class="toc_level-2 toc_section-39">
+<a href="#2017-05-22"><span class="tocnumber">1.38</span> <span class="toctext">2017-05-22</span></a>
+</li>
+<li class="toc_level-2 toc_section-40">
+<a href="#2017-05-20"><span class="tocnumber">1.39</span> <span class="toctext">2017-05-20</span></a>
+</li>
+<li class="toc_level-2 toc_section-41">
+<a href="#2017-05-19"><span class="tocnumber">1.40</span> <span class="toctext">2017-05-19</span></a>
+</li>
+<li class="toc_level-2 toc_section-42">
+<a href="#2017-05-17"><span class="tocnumber">1.41</span> <span class="toctext">2017-05-17</span></a>
+</li>
+<li class="toc_level-2 toc_section-43">
+<a href="#2017-05-16"><span class="tocnumber">1.42</span> <span class="toctext">2017-05-16</span></a>
+</li>
+<li class="toc_level-2 toc_section-44">
+<a href="#2017-05-15"><span class="tocnumber">1.43</span> <span class="toctext">2017-05-15</span></a>
+</li>
+<li class="toc_level-2 toc_section-45">
+<a href="#2017-05-12"><span class="tocnumber">1.44</span> <span class="toctext">2017-05-12</span></a>
+</li>
+<li class="toc_level-2 toc_section-46">
+<a href="#2017-05-10"><span class="tocnumber">1.45</span> <span class="toctext">2017-05-10</span></a>
+</li>
+<li class="toc_level-2 toc_section-47">
+<a href="#2017-05-08"><span class="tocnumber">1.46</span> <span class="toctext">2017-05-08</span></a>
+</li>
+<li class="toc_level-2 toc_section-48">
+<a href="#2017-05-04"><span class="tocnumber">1.47</span> <span class="toctext">2017-05-04</span></a>
+</li>
+<li class="toc_level-2 toc_section-49">
+<a href="#2017-05-03"><span class="tocnumber">1.48</span> <span class="toctext">2017-05-03</span></a>
+</li>
+<li class="toc_level-2 toc_section-50">
+<a href="#2017-05-02"><span class="tocnumber">1.49</span> <span class="toctext">2017-05-02</span></a>
+</li>
+<li class="toc_level-2 toc_section-51">
+<a href="#2017-04-25"><span class="tocnumber">1.50</span> <span class="toctext">2017-04-25</span></a>
+</li>
+<li class="toc_level-2 toc_section-52">
+<a href="#2017-04-24"><span class="tocnumber">1.51</span> <span class="toctext">2017-04-24</span></a>
+</li>
+<li class="toc_level-2 toc_section-53">
+<a href="#2017-04-23"><span class="tocnumber">1.52</span> <span class="toctext">2017-04-23</span></a>
+</li>
+<li class="toc_level-2 toc_section-54">
+<a href="#2017-04-04"><span class="tocnumber">1.53</span> <span class="toctext">2017-04-04</span></a>
+</li>
+<li class="toc_level-2 toc_section-55">
+<a href="#2017-04-03"><span class="tocnumber">1.54</span> <span class="toctext">2017-04-03</span></a>
+</li>
+<li class="toc_level-2 toc_section-56">
+<a href="#2017-03-24"><span class="tocnumber">1.55</span> <span class="toctext">2017-03-24</span></a>
+</li>
+<li class="toc_level-2 toc_section-57">
+<a href="#2017-02-26"><span class="tocnumber">1.56</span> <span class="toctext">2017-02-26</span></a>
+</li>
+<li class="toc_level-2 toc_section-58">
+<a href="#2017-02-25"><span class="tocnumber">1.57</span> <span class="toctext">2017-02-25</span></a>
+</li>
+<li class="toc_level-2 toc_section-59">
+<a href="#2017-02-24"><span class="tocnumber">1.58</span> <span class="toctext">2017-02-24</span></a>
+</li>
+<li class="toc_level-2 toc_section-60">
+<a href="#2017-02-22"><span class="tocnumber">1.59</span> <span class="toctext">2017-02-22</span></a>
+</li>
+<li class="toc_level-2 toc_section-61">
+<a href="#2017-02-20"><span class="tocnumber">1.60</span> <span class="toctext">2017-02-20</span></a>
+</li>
+<li class="toc_level-2 toc_section-62">
+<a href="#2017-02-16"><span class="tocnumber">1.61</span> <span class="toctext">2017-02-16</span></a>
+</li>
+<li class="toc_level-2 toc_section-63">
+<a href="#2017-02-04"><span class="tocnumber">1.62</span> <span class="toctext">2017-02-04</span></a>
+</li>
+<li class="toc_level-2 toc_section-64">
+<a href="#2017-02-01"><span class="tocnumber">1.63</span> <span class="toctext">2017-02-01</span></a>
+</li>
+<li class="toc_level-2 toc_section-65">
+<a href="#2017-01-29"><span class="tocnumber">1.64</span> <span class="toctext">2017-01-29</span></a>
+</li>
+<li class="toc_level-2 toc_section-66">
+<a href="#2017-01-27"><span class="tocnumber">1.65</span> <span class="toctext">2017-01-27</span></a>
+</li>
+<li class="toc_level-2 toc_section-67">
+<a href="#2017-01-14"><span class="tocnumber">1.66</span> <span class="toctext">2017-01-14</span></a>
+</li>
+<li class="toc_level-2 toc_section-68">
+<a href="#2017-01-11"><span class="tocnumber">1.67</span> <span class="toctext">2017-01-11</span></a>
+</li>
+<li class="toc_level-2 toc_section-69">
+<a href="#2017-01-09"><span class="tocnumber">1.68</span> <span class="toctext">2017-01-09</span></a>
+</li>
+</ul>
+</li>
+<li class="toc_level-1 toc_section-70">
+<a href="#2016"><span class="tocnumber">2</span> <span class="toctext">2016</span></a>
+</li>
+<li class="toc_level-1 toc_section-71">
+<a href="#2015"><span class="tocnumber">3</span> <span class="toctext">2015</span></a>
+</li>
+<li class="toc_level-1 toc_section-72">
+<a href="#2014"><span class="tocnumber">4</span> <span class="toctext">2014</span></a>
+</li>
+<li class="toc_level-1 toc_section-73">
+<a href="#2013"><span class="tocnumber">5</span> <span class="toctext">2013</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><p>Entries in this file are in reverse chronological order.</p>
+
+<h2 id="2017">2017</h2>
+
+<h3 id="2017-12-29">2017-12-29</h3>
+
+<ul>
+  <li>SvdUtils: silently ignore missing package.json</li>
+  <li>[#260] DebugUtils.resolveAll substitute project_loc</li>
+</ul>
+
+<h3 id="2017-12-28">2017-12-28</h3>
+
+<ul>
+  <li>[#259] fix Windows CR LF issue</li>
+  <li>submodule</li>
+</ul>
+
+<h3 id="2017-12-27">2017-12-27</h3>
+
+<ul>
+  <li>core/EclipseUtils: add getProjectFromConfiguration</li>
+  <li>core/JsonUtils: add get() with default</li>
+  <li>managedbuild.packs: explicit ‘Used by debug’</li>
+  <li>packs.data: add xcdl &amp; xpack utils</li>
+  <li>packs.core: add json support &amp; js objects</li>
+  <li>(multi) add Devices tab for Xcdl projects</li>
+  <li>cross.*.feature: add ref to managedbuild.packs</li>
+  <li>submodules</li>
+  <li>packs.core: DurationMonitor with public start/stop</li>
+  <li>debug.gdbjtag: time SVD parsing</li>
+  <li>debug.gdbjtag: move SVD Path to debug launch</li>
+  <li>gdbjtag.*: add TabSvd</li>
+  <li>gdbjtag.{jlink,pyocd,qemu} fix openocd message</li>
+  <li>debug.gdbjtag: improve SVD Path messages</li>
+  <li>debug.gdbjtag: add log line for missing SVD Path</li>
+</ul>
+
+<h3 id="2017-12-09">2017-12-09</h3>
+
+<ul>
+  <li>core: fix PacksStorage</li>
+  <li>core: add JsonUtils</li>
+  <li>core: clean PacksStorage</li>
+  <li>packs.core: add PackTypes</li>
+  <li>debug.gdbjtag: automatically identify xsvd</li>
+</ul>
+
+<h3 id="2017-12-08">2017-12-08</h3>
+
+<ul>
+  <li>packs.core: Node.getChildren() add doc</li>
+  <li>packs.core: Xsvd process ‘enumerations’ (plural)</li>
+  <li>debug.gdbjtag: SvdField process ‘enumerations’</li>
+  <li>debug.gdbjtag: clean PeripheralsService code</li>
+</ul>
+
+<h3 id="2017-12-06">2017-12-06</h3>
+
+<ul>
+  <li>core: CProjectPacksStorage prefix with CMSIS_</li>
+  <li>debug.gdbjtag: fix finding enum default as value 0</li>
+</ul>
+
+<h3 id="2017-12-04">2017-12-04</h3>
+
+<ul>
+  <li>debug.gdbjtag: field repetitions functional</li>
+</ul>
+
+<h3 id="2017-12-02">2017-12-02</h3>
+
+<ul>
+  <li>debug.gdbjtag: peripheral viewer order by addr</li>
+  <li>packs.core: XsvdGenericParser, add enums</li>
+  <li>debug.gdbjtag: implement repetitions and enums</li>
+</ul>
+
+<h3 id="2017-11-28">2017-11-28</h3>
+
+<ul>
+  <li>debug.gdbjtag: [#249] rename Tcl</li>
+</ul>
+
+<h3 id="2017-11-24">2017-11-24</h3>
+
+<ul>
+  <li>move classes to packs.core</li>
+  <li>packs.data: reformat comments</li>
+  <li>version 4.3.1</li>
+  <li>packs.core: Leaf properties trimmed</li>
+  <li>packs.core &amp; debug.gdbjtag: arrays &amp; repetitions</li>
+</ul>
+
+<h3 id="2017-11-23">2017-11-23</h3>
+
+<ul>
+  <li>debug.gdbjtag &amp; core.data: add pack type</li>
+  <li>debug.gdbjtag &amp; core.data: NAME_ DESCRIPTION_</li>
+  <li>packs.core: add KEY_ &amp; [gs]etKeyName()</li>
+  <li>debug.gdbjtag: show reset values for fields</li>
+  <li>packs.core: Json parser add group nodes</li>
+  <li>debug.gdbjtag &amp; core.data: consistent getName()</li>
+  <li>debug.gdbjtag &amp; core.data: reformat comments</li>
+  <li>debug.gdbjtag: show r,w,rw in tooltips</li>
+  <li>debug.gdbjtag(): assert in SvdRegisterDMNode</li>
+</ul>
+
+<h3 id="2017-11-22">2017-11-22</h3>
+
+<ul>
+  <li>core: add json-simple-1.1.1.jar</li>
+  <li>packs.core: add Json &amp; Xsvd parsers to tree</li>
+  <li>debug.gdbjtag: SvdObjectDMNode cached name &amp; $KEY</li>
+  <li>debug.gdbjtag: parse xsvd too</li>
+  <li>debug.gdbjtag: PeripheralService cleanup</li>
+</ul>
+
+<h3 id="2017-11-20">2017-11-20</h3>
+
+<ul>
+  <li>debug.gdbjtag: add SVD Path property to MCU</li>
+  <li>debug.gdbjtag: PeripheralService with custom SVD</li>
+  <li>debug.gdbjtag: svd key includes debu/release</li>
+</ul>
+
+<h3 id="2017-11-10">2017-11-10</h3>
+
+<ul>
+  <li>version 4.2.1-201711101735 released</li>
+</ul>
+
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>repository/features:
+ilg.gnumcueclipse.codered.feature_1.1.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.2.1.201711101735.jar
+ilg.gnumcueclipse.doc.user.feature_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.5.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.6.1.201711101735.jar
+ilg.gnumcueclipse.packs.feature_2.2.2.201711101735.jar
+ilg.gnumcueclipse.templates.ad.feature_1.1.5.201711101735.jar
+ilg.gnumcueclipse.templates.cortexm.feature_1.4.3.201711101735.jar
+ilg.gnumcueclipse.templates.freescale.feature_2.2.9.201711101735.jar
+ilg.gnumcueclipse.templates.sifive.feature_1.1.1.201711101735.jar
+ilg.gnumcueclipse.templates.stm.feature_2.6.3.201711101735.jar
+
+repository/plugins:
+ilg.gnumcueclipse.codered_1.1.2.201711101735.jar
+ilg.gnumcueclipse.core_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.core_1.2.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd_4.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu_3.2.1.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201711101735.jar
+ilg.gnumcueclipse.debug.gdbjtag_3.2.3.201711101735.jar
+ilg.gnumcueclipse.debug.packs_1.1.2.201711101735.jar
+ilg.gnumcueclipse.doc.user_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.arm_2.5.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv_2.6.1.201711101735.jar
+ilg.gnumcueclipse.managedbuild.cross_1.1.2.201711101735.jar
+ilg.gnumcueclipse.managedbuild.packs_1.3.2.201711101735.jar
+ilg.gnumcueclipse.packs.core_1.1.4.201711101735.jar
+ilg.gnumcueclipse.packs.data_1.3.2.201711101735.jar
+ilg.gnumcueclipse.packs.ui_1.2.5.201711101735.jar
+ilg.gnumcueclipse.packs_1.2.5.201711101735.jar
+ilg.gnumcueclipse.templates.ad_1.2.1.201711101735.jar
+ilg.gnumcueclipse.templates.core_2.6.1.201711101735.jar
+ilg.gnumcueclipse.templates.cortexm_1.4.3.201711101735.jar
+ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201711101735.jar
+ilg.gnumcueclipse.templates.freescale_2.2.9.201711101735.jar
+ilg.gnumcueclipse.templates.sifive_1.1.1.201711101735.jar
+ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
+</code></pre>
+</div>
+
+<ul>
+  <li>[#249] gdbjtag.openocd: configurable TCL port</li>
+  <li>update SiFive template code to v0.1.1</li>
+</ul>
+
+<h3 id="2017-11-05">2017-11-05</h3>
+
+<ul>
+  <li>[#242] gdbjtag.*: validate telnet port;  also server executable, gdb port, client executable</li>
+  <li>[#246] gdbjtag.*: substitute dynamic variables too;  add Actual client executable</li>
+  <li>gdbjtag.*: show Actual executable</li>
+</ul>
+
+<h3 id="2017-11-04">2017-11-04</h3>
+
+<ul>
+  <li>cross.riscv: add riscv-none-embed-</li>
+</ul>
+
+<h3 id="2017-10-20">2017-10-20</h3>
+
+<ul>
+  <li>[#241] packs: add connect &amp; read timeout</li>
+</ul>
+
+<h3 id="2017-09-25">2017-09-25</h3>
+
+<ul>
+  <li>[#223] - refactor of checkServer</li>
+  <li>[#240] - cross.riscv: add linux &amp; rtems toolchains</li>
+</ul>
+
+<h3 id="2017-07-19">2017-07-19</h3>
+
+<ul>
+  <li>[#223] - fix bundle blurbs to reflect bundle name</li>
+  <li>[#222] - fix double -fno-common options</li>
+  <li>[#224] - gdbjtag.openocd: do not wait for the echo</li>
+</ul>
+
+<h3 id="2017-07-14">2017-07-14</h3>
+
+<ul>
+  <li>add SiFive preliminary template</li>
+</ul>
+
+<h3 id="2017-07-13">2017-07-13</h3>
+
+<ul>
+  <li>add <strong>Start GDB session</strong> to OpenOCD GUI, to allow multiple GDB instances attached to the same OpenCOD</li>
+</ul>
+
+<h3 id="2017-07-11">2017-07-11</h3>
+
+<ul>
+  <li>version 4.1.1.201707111115 released</li>
+</ul>
+
+<div class="language-console highlighter-rouge"><pre class="highlight"><code>features:
+ilg.gnumcueclipse.codered.feature_1.1.2.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.1.5.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.1.5.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd.feature_1.1.4.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu.feature_3.1.5.201707111115.jar
+ilg.gnumcueclipse.doc.user.feature_1.1.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.cross.arm.feature_2.5.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv.feature_2.5.2.201707111115.jar
+ilg.gnumcueclipse.packs.feature_2.2.2.201707111115.jar
+ilg.gnumcueclipse.templates.ad.feature_1.1.5.201707111115.jar
+ilg.gnumcueclipse.templates.cortexm.feature_1.4.3.201707111115.jar
+ilg.gnumcueclipse.templates.freescale.feature_2.2.9.201707111115.jar
+ilg.gnumcueclipse.templates.stm.feature_2.6.3.201707111115.jar
+
+plugins:
+ilg.gnumcueclipse.codered_1.1.2.201707111115.jar
+ilg.gnumcueclipse.core_4.1.1.201707111115.jar
+ilg.gnumcueclipse.debug.core_1.2.2.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.jlink_4.1.5.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.openocd_4.1.5.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.pyocd_1.1.4.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.qemu_3.1.5.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag.restart_1.3.2.201707111115.jar
+ilg.gnumcueclipse.debug.gdbjtag_3.2.2.201707111115.jar
+ilg.gnumcueclipse.debug.packs_1.1.2.201707111115.jar
+ilg.gnumcueclipse.doc.user_1.1.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.cross.arm_2.5.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.cross.riscv_2.5.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.cross_1.1.2.201707111115.jar
+ilg.gnumcueclipse.managedbuild.packs_1.3.2.201707111115.jar
+ilg.gnumcueclipse.packs.core_1.1.4.201707111115.jar
+ilg.gnumcueclipse.packs.data_1.3.2.201707111115.jar
+ilg.gnumcueclipse.packs.ui_1.2.5.201707111115.jar
+ilg.gnumcueclipse.packs_1.2.5.201707111115.jar
+ilg.gnumcueclipse.templates.ad_1.1.5.201707111115.jar
+ilg.gnumcueclipse.templates.core_2.5.7.201707111115.jar
+ilg.gnumcueclipse.templates.cortexm_1.4.3.201707111115.jar
+ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201707111115.jar
+ilg.gnumcueclipse.templates.freescale_2.2.9.201707111115.jar
+ilg.gnumcueclipse.templates.stm_2.6.3.201707111115.jar
+</code></pre>
+</div>
+
+<ul>
+  <li>p2.inf: gnu-mcu-eclipse.netlify.com</li>
+</ul>
+
+<h3 id="2017-06-29">2017-06-29</h3>
+
+<ul>
+  <li>rebrand url http://gnu-mcu-eclipse.github.io</li>
+  <li>update url to http://gnu-mcu-eclipse.netlify.com</li>
+</ul>
+
+<h3 id="2017-06-12">2017-06-12</h3>
+
+<ul>
+  <li>refurbish all path discovery code</li>
+  <li>gdbjtag: common code to discover Installpath</li>
+  <li>mbs.cross: common code to discover toolchain</li>
+  <li>openocd: search path includes “bin”</li>
+  <li>preferences.ini: update search paths</li>
+</ul>
+
+<h3 id="2017-06-11">2017-06-11</h3>
+
+<ul>
+  <li>mbs.cross: process build tools path centrally</li>
+  <li>cross.arm: rework the path search</li>
+  <li>cross.riscv: remove build tools path, done centrally</li>
+  <li>cross.riscv: rework the path search</li>
+  <li>cross.arm: group preference classes</li>
+  <li>cross: DefaultPreferences cleanups</li>
+  <li>gdbjtag.*: create package .preferences</li>
+  <li>core: reorganise packages .preferences &amp; .ui</li>
+</ul>
+
+<h3 id="2017-06-09">2017-06-09</h3>
+
+<ul>
+  <li>dynamic variables: quote strings for ‘' for ‘$’</li>
+  <li>gdbjtag.*: fix TabMain deprecation warning</li>
+</ul>
+
+<h3 id="2017-06-08">2017-06-08</h3>
+
+<ul>
+  <li>persistent preferences: fix npe</li>
+  <li>[#207] dynamic variables: fix regexp</li>
+</ul>
+
+<h3 id="2017-06-02">2017-06-02</h3>
+
+<ul>
+  <li>core: add Default &amp; Persistent preferences</li>
+  <li>gdbjtag.*: refurbish preferences &amp; properties</li>
+  <li>mbs.cross.*: refurbish preferences &amp; properties</li>
+  <li>fix references to Activator</li>
+</ul>
+
+<h3 id="2017-06-01">2017-06-01</h3>
+
+<ul>
+  <li>openocd: add actual executable &amp; links</li>
+  <li>mbs.cross,arm,riscv: fix build tools processing</li>
+  <li>core: remove unused global field editors</li>
+</ul>
+
+<h3 id="2017-05-31">2017-05-31</h3>
+
+<ul>
+  <li>core: field editors pick preferences if empty</li>
+  <li>core: add global field editors</li>
+  <li>openocd/preferences: add install.folder &amp; co.</li>
+  <li>openocd: switch to dynamic variables</li>
+  <li>openocd: rename Workspace OpenOCD Path</li>
+  <li>core: add common MCU preferences &amp; properties</li>
+  <li>core/EclipseUtils: add getProjectByLaunchConfig</li>
+  <li>core: fix message for MCU preferences page</li>
+  <li>openocd: separate global/workspace/project configs</li>
+  <li>mbs.cross: move arm &amp; riscv prefs &amp; props</li>
+</ul>
+
+<h3 id="2017-05-30">2017-05-30</h3>
+
+<ul>
+  <li>core: DirectoryNotStrict use getString()</li>
+  <li>core: setVariableValue() more verbose</li>
+  <li>scripts/publish-updates.sh: update path to repos</li>
+  <li>core: field editors: also use persistent store</li>
+  <li>category.xml: consistent artefact feature names</li>
+</ul>
+
+<h3 id="2017-05-29">2017-05-29</h3>
+
+<ul>
+  <li>maven cleanups in repositories</li>
+  <li>project names: give up the ‘-‘, use ‘.’</li>
+</ul>
+
+<h3 id="2017-05-28">2017-05-28</h3>
+
+<ul>
+  <li>cleanups in maven configuration</li>
+</ul>
+
+<h3 id="2017-05-27">2017-05-27</h3>
+
+<ul>
+  <li>create bundles, features, repos folders</li>
+</ul>
+
+<h3 id="2017-05-26">2017-05-26</h3>
+
+<ul>
+  <li>cross.arm &amp; riscv: fix toolchain path discovery</li>
+  <li>more verbose debug</li>
+  <li>cross.arm &amp; riscv: simplify toolchain search path</li>
+  <li>publish-updates.sh: no more SourceForge</li>
+  <li>windows toolchain path simplified too much</li>
+  <li>gdbjtag.*: check &amp; update preferences</li>
+  <li>gdbjtag.*: make verbose messages specific</li>
+  <li>core/Discoverer: increase trace verbosity</li>
+</ul>
+
+<h3 id="2017-05-25">2017-05-25</h3>
+
+<ul>
+  <li>add debug.options with all options enabled</li>
+  <li>logos: add gme-*.png files</li>
+</ul>
+
+<h3 id="2017-05-23">2017-05-23</h3>
+
+<ul>
+  <li>mbs.cross: make secondary bool options invisible</li>
+  <li>mbs.riscv: isa fp text: RVFD, RVFDQ (multiletters)</li>
+  <li>cross.riscv: add more enablements to -march/-mabi</li>
+</ul>
+
+<h3 id="2017-05-22">2017-05-22</h3>
+
+<ul>
+  <li>mbs.cross: all common xml definitions extracted</li>
+  <li>riscv-repo: add debug &amp; codered features</li>
+</ul>
+
+<h3 id="2017-05-20">2017-05-20</h3>
+
+<ul>
+  <li>suppress some warnings</li>
+  <li>core &amp; debug.gdbjtag: fix non-API warnings</li>
+  <li>core/semver: silence some warnings</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>cross.[arm</td>
+          <td>riscv]: contenttype.contentTypes</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>packs.ui, cross.riscv: fix static use warnings</li>
+  <li>fix import warnings</li>
+  <li>gdbjtag: fix super() call warning</li>
+  <li>mbs.cross: extract common arm/riscv classes</li>
+  <li>mbs.cross: extract common plugin.xml defs</li>
+  <li>mbs.riscv/template: remove semi-hosting notice</li>
+</ul>
+
+<h3 id="2017-05-19">2017-05-19</h3>
+
+<ul>
+  <li>p2.inf &amp; about.properties: update repo url</li>
+  <li>scripts to publish to v4-neon-updates*</li>
+  <li>comment out remover feature</li>
+  <li>fix deprecated ViewerSorter</li>
+  <li>fix cleanupLaunchLocal() deprecation warning</li>
+  <li>remove any project setting related to Java 1.7</li>
+  <li>debug/jlink: fix startup problem</li>
+  <li>debug/openocd,pyocd,qemu: add deprecated names</li>
+  <li>packs: build.properties output… fixed</li>
+</ul>
+
+<h3 id="2017-05-17">2017-05-17</h3>
+
+<ul>
+  <li>raise API Baseline to 9.2.1 and Java to 1.8</li>
+  <li>update version for dependencies to Neon.3</li>
+  <li>add GNU ARM Eclipse remover, as simple plug-in</li>
+  <li>add GNU ARM Eclipse removers</li>
+  <li>redo GNU MCU Eclipse branding</li>
+</ul>
+
+<h3 id="2017-05-16">2017-05-16</h3>
+
+<ul>
+  <li>risc-v target options reordered</li>
+</ul>
+
+<h3 id="2017-05-15">2017-05-15</h3>
+
+<ul>
+  <li>MAJOR: rebrand to GNU MCU</li>
+  <li>versions: increase patch to mark rebranding</li>
+</ul>
+
+<h3 id="2017-05-12">2017-05-12</h3>
+
+<ul>
+  <li>add managedbuild.cross 1.1.1</li>
+  <li>mbs.riscv: use MCU properties &amp; preferences</li>
+  <li>mbs.arm: use MCU properties &amp; preferences</li>
+  <li>mcu.mbs.cross: add preferences package</li>
+  <li>mcu.mbs.cross.riscv: use common preferences</li>
+  <li>gnuarmeclipse.mbs.cross: use common paths</li>
+  <li>rename ilg.gnumcueclipse.managedbuld.cross.arm</li>
+</ul>
+
+<h3 id="2017-05-10">2017-05-10</h3>
+
+<ul>
+  <li>gnuarmeclipse-repository: add RISC-V mbs feature</li>
+  <li>mbs.riscv: fix target options spelling</li>
+  <li>mbs.riscv: optimize imports</li>
+  <li>mbs.riscv: process options</li>
+  <li>mbs.riscv: clean rdimon refs from templates</li>
+  <li>mbs.riscv: temporarily disable -mmemcpy</li>
+</ul>
+
+<h3 id="2017-05-08">2017-05-08</h3>
+
+<ul>
+  <li>mbs.riscv: ToolchainDefinition riscv64-unknown-elf</li>
+  <li>mbs.riscv: disable ARM options in UI</li>
+  <li>mbs.riscv: Target options definitions</li>
+</ul>
+
+<h3 id="2017-05-04">2017-05-04</h3>
+
+<ul>
+  <li>riscv-repository: category name Cross C/C++ Dev</li>
+  <li>mcu-repository: category name Cross C/C++ Dev</li>
+  <li>riscv: inconsistent name, must be C/C++ Cross *</li>
+  <li>arm: inconsistent name, must be C/C++ Cross *</li>
+  <li>mbs.riscv: preliminary abi &amp; architecture fields</li>
+  <li>mbs.arm: fix debugg typo</li>
+</ul>
+
+<h3 id="2017-05-03">2017-05-03</h3>
+
+<ul>
+  <li>mbs.riscv: rename everything to use mcu.riscv</li>
+  <li>mbs.riscv: preliminary toolchain defs</li>
+  <li>mbs.arm: update toolchain &amp; tools names</li>
+  <li>mbs.arm: promote opt in the search path</li>
+  <li>versions: mbs.arm 2.5.1, mbs.riscv 2.5.1</li>
+  <li>pyocd: fix reference to livius.net</li>
+  <li>pyocd: version 1.1.4</li>
+</ul>
+
+<h3 id="2017-05-02">2017-05-02</h3>
+
+<ul>
+  <li>add first riscv projects</li>
+  <li>version 4.1.1</li>
+  <li>Merge branch ‘develop’ into riscv</li>
+  <li>update riscv projects to 4.1.1</li>
+  <li>mbs.cross*-feature: add dependency to debug.core</li>
+  <li>mbs.cross.riscv: templates mention RISC-V</li>
+  <li>scripts: add riscv support</li>
+</ul>
+
+<h3 id="2017-04-25">2017-04-25</h3>
+
+<ul>
+  <li>version 3.4.1.201704251808 released
+    <ul>
+      <li>features/ilg.gnuarmeclipse.codered_1.1.1.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.4.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.4.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.3.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.4.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.doc.user_1.1.1.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.managedbuild.cross_2.4.1.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.packs_2.2.2.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.ad_1.1.4.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.cortexm_1.4.2.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.freescale_2.2.8.201704251808.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.stm_2.6.2.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.codered_1.1.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.core_3.4.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.core_1.2.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.4.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.4.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.3.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.4.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.restart_1.3.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag_3.2.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.packs_1.1.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.doc.user_1.1.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.managedbuild.cross_2.4.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.managedbuild.packs_1.3.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs.core_1.1.3.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs.data_1.3.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs.ui_1.2.4.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs_1.2.4.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.ad_1.1.4.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.core_2.5.6.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.cortexm_1.4.2.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.freescale.pe_1.2.1.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.freescale_2.2.8.201704251808.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.stm_2.6.2.201704251808.jar</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2017-04-24">2017-04-24</h3>
+
+<ul>
+  <li>[#199] packs.data: parse index.pidx files, convert old index.idx to pidx internally</li>
+  <li>packs.data: version 1.3.1</li>
+  <li>[#200] packs.ui/PacksView: use semver, order versions by full semver</li>
+  <li>packs.ui/update: explicit malformed index message</li>
+  <li>[#153] templates.core: make raise() &amp; kill() weak</li>
+  <li>debug.gdbjtag: peripheralAddressOffset, PeripheralTreeVMNode.java: getPeripheralBigAddressOffset() cumulates this offset with parent peripheral offset</li>
+  <li>debug.gdbjtag: register array address, PeripheralRegisterArrayVMNode.java no longer needs getBigAbsoluteAddress(), parent is good for all nodes</li>
+  <li>[#150] debug.gdbjtag: cluster addressOffset, SvdClusterDMNode.java get offset from property</li>
+  <li>[#144] gdbjtag.jlink: make windows scrolable</li>
+  <li>gdbjtag.openocd,pyocd,qemu scrollable windows; same medicine as for jlink</li>
+  <li>[#137] SAX line &amp; column; print details for SAX parse error</li>
+  <li>[#25] avoid multiple defs in devices/boards/books; use a Set instead of a list to collect installed packages</li>
+  <li>version: gdbjtag 3.2.1, packs[.ui] 1.2.4</li>
+</ul>
+
+<h3 id="2017-04-23">2017-04-23</h3>
+
+<ul>
+  <li>core/StringUtils: add compareSimpleVersion</li>
+  <li>packs.ui/PacksView: compare numeric versions</li>
+  <li>packs.ui: version 1.2.3</li>
+  <li>ISSUE_TEMPLATE: fix typos, add reference to crypto extensions</li>
+  <li>add UNUSED pack type for disabling repos</li>
+</ul>
+
+<h3 id="2017-04-04">2017-04-04</h3>
+
+<ul>
+  <li>publish-updates.sh: publish to bintray</li>
+</ul>
+
+<h3 id="2017-04-03">2017-04-03</h3>
+
+<ul>
+  <li>templates.*: explicit MIT license</li>
+  <li>versions: templates.core 2.5.6, tempaltes.ad 1.1.4, templates.cortexm 1.4.2,
+ templates.freescale 2.2.8, templates.stm 2.6.2</li>
+</ul>
+
+<h3 id="2017-03-24">2017-03-24</h3>
+
+<ul>
+  <li>[#185] cross.mbs: mcu default back to m3</li>
+  <li>versions: cross.mbs 2.4.1</li>
+  <li>[#183] templates.cortexm: add m23, m33 to list</li>
+  <li>versions: templates.cortexm 1.4.1</li>
+</ul>
+
+<h3 id="2017-02-26">2017-02-26</h3>
+
+<ul>
+  <li>gdbjtag.*: add explicit tests for isWindows() when checking registry</li>
+  <li>versions: jlink,openocd 4.1.4, qemu 3.1.4, pyocd 1.1.3</li>
+  <li>publish-update.sh: compute SHA, relative archive foder</li>
+</ul>
+
+<h3 id="2017-02-25">2017-02-25</h3>
+
+<ul>
+  <li>version 3.3.1-201702251311 released
+    <ul>
+      <li>features/ilg.gnuarmeclipse.codered_1.1.1.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.3.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.3.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.2.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.3.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.doc.user_1.1.1.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.managedbuild.cross_2.3.1.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.packs_2.2.2.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.ad_1.1.3.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.cortexm_1.3.1.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.freescale_2.2.7.201702251311.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.stm_2.6.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.codered_1.1.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.core_3.3.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.core_1.2.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.3.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.3.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.2.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.3.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.restart_1.3.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag_3.1.2.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.packs_1.1.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.doc.user_1.1.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.managedbuild.cross_2.3.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.managedbuild.packs_1.3.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs.core_1.1.3.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs.data_1.2.3.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs.ui_1.2.2.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs_1.2.3.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.ad_1.1.3.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.core_2.5.5.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.cortexm_1.3.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.freescale.pe_1.2.1.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.freescale_2.2.7.201702251311.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.stm_2.6.1.201702251311.jar</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2017-02-24">2017-02-24</h3>
+
+<ul>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/177">issue #177</a>] gdbjtag.jlink: acceppt ‘:’ in IP field</li>
+  <li>version: jlink 4.1.3</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/175">issue #175</a>] mbs.cross: always show Hex in Print Size tool</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/174">issue #174</a>] log external command for debug</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/173">issue #173</a>] gdbjtag.openocd: start without server; do not check the config field if starting without server</li>
+  <li>versions: pyocd 1.1.2, gdbjtag 3.1.2</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/182">issue #182</a>] mbs.cross: default toolchain logic; use modified date</li>
+</ul>
+
+<h3 id="2017-02-22">2017-02-22</h3>
+
+<ul>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/181">issue #181</a>] mbs.cross: avoid bug 512550
+    <ul>
+      <li>workaround for canFinish()</li>
+      <li>get the projectName even if the toolchain page was not entered</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2017-02-20">2017-02-20</h3>
+
+<ul>
+  <li>.classpath &amp; prefs: refer to 1.7</li>
+  <li>rename parent project as <code class="highlighter-rouge">gnuarmeclipse-parent</code></li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/180">issue #180</a>] update march &amp; mtune for GCC 6.2
+    <ul>
+      <li>deprecate armv2, armv2a, armv3, armv3m</li>
+      <li>add arch armv8.1-a, armv8.1-a+crc</li>
+      <li>add mcpu cortex-a17/a32/a35/a72</li>
+      <li>add mcpu cortex-m23/m33</li>
+      <li>add mcpu qdf24xx</li>
+    </ul>
+  </li>
+  <li>version: mbs.cross 2.3.1</li>
+</ul>
+
+<h3 id="2017-02-16">2017-02-16</h3>
+
+<ul>
+  <li>add LICENSE file (EPL-1.0)</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/179">issue #179</a>] add <code class="highlighter-rouge">${user.home}/opt</code> subfolders to the search path for toolchain, openocd and qemu.</li>
+  <li>versions: mbs.cross: 2.2.2, openocd 4.1.3</li>
+</ul>
+
+<h3 id="2017-02-04">2017-02-04</h3>
+
+<ul>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/pull/176">PR #176</a>] pyOCD: fix target override combo in Debugger pane</li>
+</ul>
+
+<h3 id="2017-02-01">2017-02-01</h3>
+
+<ul>
+  <li>README.md: add badges</li>
+</ul>
+
+<h3 id="2017-01-29">2017-01-29</h3>
+
+<ul>
+  <li>reformat xml files using tabs</li>
+</ul>
+
+<h3 id="2017-01-27">2017-01-27</h3>
+
+<ul>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/170">issue #170</a>] gdbjtag.qemu: add  DeviceName callback in TabDebugger</li>
+  <li>versions: core v3.3.1, gdbjtag.qemu 3.1.3</li>
+</ul>
+
+<h3 id="2017-01-14">2017-01-14</h3>
+
+<ul>
+  <li>version 3.2.1-201701141320 released
+    <ul>
+      <li>features/ilg.gnuarmeclipse.codered_1.1.1.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.2.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.2.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.1.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.2.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.doc.user_1.1.1.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.managedbuild.cross_2.2.1.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.packs_2.2.2.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.ad_1.1.3.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.cortexm_1.3.1.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.freescale_2.2.7.201701141320.jar</li>
+      <li>features/ilg.gnuarmeclipse.templates.stm_2.6.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.codered_1.1.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.core_3.2.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.core_1.2.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.jlink_4.1.2.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.openocd_4.1.2.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.pyocd_1.1.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.qemu_3.1.2.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag.restart_1.3.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.gdbjtag_3.1.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.debug.packs_1.1.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.doc.user_1.1.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.managedbuild.cross_2.2.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.managedbuild.packs_1.3.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs.core_1.1.3.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs.data_1.2.3.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs.ui_1.2.2.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.packs_1.2.3.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.ad_1.1.3.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.core_2.5.5.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.cortexm_1.3.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.freescale.pe_1.2.1.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.freescale_2.2.7.201701141320.jar</li>
+      <li>plugins/ilg.gnuarmeclipse.templates.stm_2.6.1.201701141320.jar</li>
+    </ul>
+  </li>
+  <li>mbs.cross: <code class="highlighter-rouge">-include</code> headers used by scanner (#164)</li>
+  <li>mbs.cross: update <code class="highlighter-rouge">-march</code> &amp; <code class="highlighter-rouge">-mtune</code>
+    <ul>
+      <li>arch: armv8-m.base, armv8-m.main, armv8-m.main+dsp</li>
+      <li>tune: cortex-a72, cortex-r8, exynos-m1, xgene1</li>
+    </ul>
+  </li>
+  <li>mbs.cross: rename Cross ARM GNU C/C++ Compiler/Linker</li>
+  <li>mbs.cross: support cpp abi version 7,8,9</li>
+  <li>mbs.cross: support dwarf-5</li>
+  <li>mbs.cross: support up to c++1z</li>
+</ul>
+
+<h3 id="2017-01-11">2017-01-11</h3>
+
+<ul>
+  <li>debug consoles: remove the <code class="highlighter-rouge">PROCESS_TYPE_CREATION_ATTR</code>; functional on Neon.2</li>
+</ul>
+
+<h3 id="2017-01-09">2017-01-09</h3>
+
+<ul>
+  <li>Merge pull request #109 from sukidog/fix_issue108</li>
+  <li>Merge pull request #128 from johnmoule/issue125</li>
+</ul>
+
+<h2 id="2016">2016</h2>
+
+<p>See <a href="/developer/change-log/2016/">2016</a>.</p>
+
+<h2 id="2015">2015</h2>
+
+<p>See <a href="/developer/change-log/2015/">2015</a>.</p>
+
+<h2 id="2014">2014</h2>
+
+<p>See <a href="/developer/change-log/2014/">2014</a>.</p>
+
+<h2 id="2013">2013</h2>
+
+<p>See <a href="/developer/change-log/2013/">2013</a>.</p>
+
+
+
+<hr class="page-footer"/>
+<p class="page-footer">Last modified on Tue Jan  9 15:06:18 2018 UTC.</p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/change-log/2017/" data-layout="button"></div>
+
+
+</section>
+
+<aside id="sidebar">
+
+<h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
+
+<ul>
+  <li><a href="/blog/2018/01/03/windows-build-tools-v2-10-20180103-released/">GNU MCU Eclipse Windows Build Tools v2.10-20180103 released</a></li>
+  <li><a href="/blog/2017/11/10/plugins-v4.2.1-201711101735-released/">GNU MCU Eclipse plug-ins v4.2.1-201711101735 released</a></li>
+  <li><a href="/blog/2017/11/10/openocd-v0-10-0-5-20171110-released/">GNU MCU Eclipse OpenOCD v0.10.0-5-20171110 released</a></li>
+  <li><a href="/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-1-20171109 released</a></li>
+  <li><a href="/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/">GNU MCU Eclipse OpenOCD v0.10.0-4-20171004* released</a></li>
+</ul>
+
+
+<hr />
+
+<h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
+
+<h4 id="features"><a href="/plugins/features/">Features</a></h4>
+
+<h4 id="downloads"><a href="/downloads/">Downloads</a></h4>
+
+<ul>
+  <li><a href="/downloads/">Overview</a></li>
+  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+</ul>
+
+<h4 id="install"><a href="/install/">Install</a></h4>
+
+<ul>
+  <li><a href="/install/">Overview</a></li>
+  <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
+  <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
+  <li><a href="/debug/install/">Debugging binaries</a>
+    <ul>
+      <li><a href="/debug/install/">Overview</a></li>
+      <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
+      <li><a href="/openocd/install/">OpenOCD install</a></li>
+      <li><a href="/qemu/install/">QEMU install</a></li>
+    </ul>
+  </li>
+  <li><a href="/plugins/install/">Eclipse plug-ins install</a></li>
+</ul>
+
+<h4 id="important">Important</h4>
+
+<ul>
+  <li><a href="/install/">Install order</a></li>
+  <li><a href="/eclipse/workspace/preferences/">Workspace preferences</a></li>
+  <li><a href="/toolchain/path/">Toolchain path</a></li>
+  <li><a href="/eclipse/project/portability/">Project portability</a></li>
+</ul>
+
+<h4 id="tutorials">Tutorials</h4>
+
+<ul>
+  <li><a href="/tutorials/blinky-arm/">Create a Blinky ARM test project</a></li>
+  <li><a href="/tutorials/hello-arm/">Create a Hello ARM test project</a></li>
+</ul>
+
+<h4 id="how-to-use">How to use</h4>
+
+<ul>
+  <li><a href="/plugins/mbs/">The managed build plug-in</a></li>
+  <li><a href="/plugins/packs-manager/">The packs manager (CMSIS)</a></li>
+  <li><a href="/eclipse/project/assign-device/">Assign a device</a></li>
+</ul>
+
+<h4 id="templates"><a href="/templates/">Templates</a></h4>
+
+<ul>
+  <li><a href="/templates/">Overview</a></li>
+  <li><a href="/templates/cortexm/">Cortex-M template</a></li>
+  <li><a href="/templates/stm32f/">STM32Fxx template</a></li>
+  <li><a href="/templates/klxx/">Freescale KLxx templates</a></li>
+</ul>
+
+<h4 id="debugging"><a href="/debug/">Debugging</a></h4>
+
+<ul>
+  <li><a href="/debug/">Overview</a></li>
+  <li><a href="/debug/jlink/">The SEGGER J-Link plug-in</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/qemu/">The QEMU plug-in</a></li>
+  <li><a href="/debug/peripheral-registers/">The peripheral registers view (CMSIS)</a></li>
+</ul>
+
+<h4 id="gnu-mcu-risc-v-gcc"><a href="/toolchain/riscv/">GNU MCU RISC-V GCC</a></h4>
+
+<ul>
+  <li><a href="/toolchain/riscv/">Overview</a></li>
+  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
+  <li><a href="/toolchain/riscv/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/riscv/publish-procedure/">How to publish</a></li>
+  <li><a href="/toolchain/riscv/releases/">Releases</a></li>
+  <li><a href="/toolchain/riscv/support/">Support</a></li>
+</ul>
+
+<h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
+
+<ul>
+  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li><a href="/qemu/install/">QEMU Install</a></li>
+  <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
+  <li><a href="/qemu/options/">Command line options</a></li>
+  <li><a href="/qemu/build-procedure/">How to build</a></li>
+  <li><a href="/qemu/publish-procedure/">How to publish</a></li>
+  <li><a href="/qemu/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
+
+<ul>
+  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li><a href="/openocd/install/">OpenOCD Install</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
+  <li><a href="/openocd/build-procedure/">How to build</a></li>
+  <li><a href="/openocd/publish-procedure/">How to publish</a></li>
+  <li><a href="/openocd/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+</ul>
+
+<h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
+
+<ul>
+  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
+  <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
+  <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
+  <li><a href="/windows-build-tools/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
+
+<ul>
+  <li><a href="/arch/riscv/">Overview</a></li>
+  <li><a href="/arch/riscv/arty-reflash/">Flashing the Arty boards</a></li>
+  <li><a href="/arch/riscv/ftdi-jtag-drivers/">FTDI JTAG drivers</a></li>
+</ul>
+
+<h4 id="advanced">Advanced</h4>
+
+<ul>
+  <li><a href="/advanced/headless-builds/">Headless builds</a></li>
+</ul>
+
+<h4 id="support"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
+</ul>
+
+<h4 id="developer"><a href="/developer/">Developer</a></h4>
+
+<ul>
+  <li><a href="/developer/">Overview</a></li>
+  <li><a href="/developer/build-procedure/">How to build</a></li>
+  <li><a href="/developer/publish-procedure/">How to publish</a></li>
+  <li><a href="/developer/change-log">Change log</a></li>
+  <li><a href="/developer/contribute/">Contribute</a></li>
+</ul>
+
+<h4 id="hardware">Hardware</h4>
+
+<ul>
+  <li><a href="/developer/j-link-stm32-boards/">J-Link and STM32 boards</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+</ul>
+
+<h4 id="licenses">Licenses</h4>
+
+<ul>
+  <li><a href="/licenses/plug-ins/">Eclipse plug-ins</a></li>
+  <li><a href="/licenses/tools/">Tools</a></li>
+</ul>
+
+<h4 id="finance">Finance</h4>
+
+<ul>
+  <li><a href="/finance/sponsorship/">Sponsorship &amp; donations</a></li>
+</ul>
+
+<h4 id="about"><a href="/about/">About</a></h4>
+
+<hr />
+<p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NXKFN7DJH8DJ6">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="Pay Pal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</aside>
+
+
+</div>
+</div>
+
+<div class="inner clearfix">
+<div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2017 Liviu Ionescu</li>
+  <li>Hosted on GitHub Pages</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  </li>
+</ul>
+
+  </div>
+  <a href="http://github.com/gnu-mcu-eclipse" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/support/">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
