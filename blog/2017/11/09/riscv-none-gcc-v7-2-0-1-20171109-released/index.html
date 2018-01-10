@@ -140,7 +140,15 @@ Posted on November 9, 2017 by Liviu Ionescu.
 <a href="#binaries"><span class="tocnumber">7</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#checksums"><span class="tocnumber">8</span> <span class="toctext">Checksums</span></a>
+<a href="#known-problems"><span class="tocnumber">8</span> <span class="toctext">Known problems</span></a>
+<ul>
+<li class="toc_level-2 toc_section-9">
+<a href="#running-on-old-processors"><span class="tocnumber">8.1</span> <span class="toctext">Running on old processors</span></a>
+</li>
+</ul>
+</li>
+<li class="toc_level-1 toc_section-10">
+<a href="#checksums"><span class="tocnumber">9</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
@@ -273,6 +281,14 @@ march=rv64imafdc/mabi=lp64d (march.rv64gc/mabi.lp64d)
 
 <p>For better control and repeatability, the build scripts use Docker containers; all files required during builds are available as a separate <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> project.</p>
 
+<h2 id="known-problems">Known problems</h2>
+
+<h3 id="running-on-old-processors">Running on old processors</h3>
+
+<p>[2018-01-10] It was recently discovered that the GNU/Linux binaries do not run on machines equipped with an older processor, even if they run a recent GNU/Linux distribution. Windows binaries seem not affected. macOS binaries may be affected, but Mac machines use more or less recent processors.</p>
+
+<p>The problem was identified to be related to the build configuration, which allowed some optimizations specific to the modern processor used on the build machine. The build script was fixed to avoid specific optimizations, and the new binaries should run on any i686/x86_64 processor or newer.</p>
+
 <h2 id="checksums">Checksums</h2>
 
 <p>The SHA-256 hashes for the files are:</p>
@@ -310,7 +326,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>riscv-none-gcc</strong>.
-Last modified on Thu Nov 16 13:26:06 2017 UTC.
+Last modified on Wed Jan 10 21:18:41 2018 UTC.
 </p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/" data-layout="button"></div>
 
