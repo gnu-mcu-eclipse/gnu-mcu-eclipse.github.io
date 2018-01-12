@@ -165,24 +165,27 @@
 <li class="toc_level-2 toc_section-20">
 <a href="#ubuntu-gtk-issue"><span class="tocnumber">6.4</span> <span class="toctext">Ubuntu GTK issue</span></a>
 </li>
+<li class="toc_level-2 toc_section-21">
+<a href="#macos-comapplequarantine"><span class="tocnumber">6.5</span> <span class="toctext">macOS com.apple.quarantine</span></a>
+</li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-21">
+<li class="toc_level-1 toc_section-22">
 <a href="#plug-ins-versions"><span class="tocnumber">7</span> <span class="toctext">Plug-ins versions</span></a>
 </li>
-<li class="toc_level-1 toc_section-22">
+<li class="toc_level-1 toc_section-23">
 <a href="#set-workspace-preferences"><span class="tocnumber">8</span> <span class="toctext">Set workspace preferences</span></a>
 </li>
-<li class="toc_level-1 toc_section-23">
+<li class="toc_level-1 toc_section-24">
 <a href="#download-cmsis-packs"><span class="tocnumber">9</span> <span class="toctext">Download CMSIS Packs</span></a>
 </li>
-<li class="toc_level-1 toc_section-24">
+<li class="toc_level-1 toc_section-25">
 <a href="#toolchain-and-debugging-support"><span class="tocnumber">10</span> <span class="toctext">Toolchain and debugging support</span></a>
 </li>
-<li class="toc_level-1 toc_section-25">
+<li class="toc_level-1 toc_section-26">
 <a href="#test-project"><span class="tocnumber">11</span> <span class="toctext">Test project</span></a>
 </li>
-<li class="toc_level-1 toc_section-26">
+<li class="toc_level-1 toc_section-27">
 <a href="#support"><span class="tocnumber">12</span> <span class="toctext">Support</span></a>
 </li>
 </ul>
@@ -505,14 +508,18 @@ assets
 <div class="highlight">
 <pre class="highlight">
 <code><span class="gp">$</span> <span class="nb">export </span><span class="nv">SWT_GTK3</span><span class="o">=</span>0
-<span class="go">```console
+</code></pre>
+</div>
+</div>
 
-</span><span class="gp">#</span><span class="c">## macOS com.apple.quarantine</span>
-<span class="go">
-On macOS Sierra and later, unsigned applications are marked as _quarantined_ and subject to a path randomization, which prevents Eclipse to maintain persistent preferences (for more details see [blog post](https://ilgthegeek.wordpress.com/2017/07/13/macos-com-apple-quarantine/)). To disable this, remove the `com.apple.quarantine` extended attribute from `Eclipse.app`:
+<h3 id="macos-comapplequarantine">macOS com.apple.quarantine</h3>
 
-```console
-</span><span class="gp">$</span> xattr Eclipse.app
+<p>On macOS Sierra and later, unsigned applications are marked as <em>quarantined</em> and subject to a path randomization, which prevents Eclipse to maintain persistent preferences (for more details see <a href="https://ilgthegeek.wordpress.com/2017/07/13/macos-com-apple-quarantine/">blog post</a>). To disable this, remove the <code class="highlighter-rouge">com.apple.quarantine</code> extended attribute from <code class="highlighter-rouge">Eclipse.app</code>:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xattr Eclipse.app
 <span class="go">com.apple.quarantine
 </span><span class="gp">$</span> xattr <span class="nt">-d</span> com.apple.quarantine Eclipse.app
 </code></pre>
@@ -572,7 +579,7 @@ On macOS Sierra and later, unsigned applications are marked as _quarantined_ and
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Dec 29 09:25:58 2017 UTC.</p>
+<p class="page-footer">Last modified on Fri Jan 12 21:42:13 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/install/" data-layout="button"></div>
 
 
