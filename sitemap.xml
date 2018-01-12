@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/</loc>
+<lastmod>2018-01-12T15:50:07+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2018/01/10/plugins-v4.3.1-201801092051-released/</loc>
 <lastmod>2018-01-10T12:24:48+00:00</lastmod>
 </url>
@@ -490,7 +494,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/openocd/change-log/</loc>
-<lastmod>2017-11-10T12:04:53+00:00</lastmod>
+<lastmod>2018-01-12T15:50:07+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/change-log/</loc>

@@ -9,26 +9,19 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
 
-  <title>GNU MCU Eclipse Windows Build Tools v2.9-20170629 released</title>
-  <meta name="description" content="Version 2.9-20170629 is a maintenance release of the GNU MCU Eclipse Windows Build Tools.">
+  <title>GNU MCU Eclipse OpenOCD v0.10.0-6-20180112 released</title>
+  <meta name="description" content="Version v0.10.0-6-20180112 is a maintenance release; the main change was to update to the latest commits.">
 
-  <meta property="og:title" content="GNU MCU Eclipse Windows Build Tools v2.9-20170629 released" />
+  <meta property="og:title" content="GNU MCU Eclipse OpenOCD v0.10.0-6-20180112 released" />
   <meta property="og:site_name" content="GNU MCU Eclipse" />
 
 
-  <meta property="article:published_time" content="2017-06-29">
+  <meta property="article:published_time" content="2018-01-12">
 
 
   <meta property="article:section" content="releases" />
-  <meta property="article:section" content="windows-build-tools" />
+  <meta property="article:section" content="openocd" />
 
-  <meta property="article:tag" content="windows" />
-  <meta property="article:tag" content="setup" />
-  <meta property="article:tag" content="build" />
-  <meta property="article:tag" content="make" />
-  <meta property="article:tag" content="makedir" />
-  <meta property="article:tag" content="rm" />
-  <meta property="article:tag" content="busybox" />
 
 
   <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
@@ -38,7 +31,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201707092118" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201707092118" media="print">
 
-  <link rel="canonical" href="/blog/2017/06/29/windows-build-tools-v2-9-20170629-released/">
+  <link rel="canonical" href="/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
@@ -99,20 +92,20 @@
 
 <table id="post-navigation">
   <tr>
-    <td><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">←</a></td>
-    <td><a href="/blog/2017/05/02/sourceforge-to-bintray-migration/">GNU ARM Eclipse plug-ins update sites migrated to Bintray</a></td>
+    <td><a href="/blog/2018/01/10/plugins-v4.3.1-201801092051-released/">←</a></td>
+    <td><a href="/blog/2018/01/10/plugins-v4.3.1-201801092051-released/">GNU MCU Eclipse plug-ins v4.3.1-201801092051 released</a></td>
     <td></td>
-    <td><a href="/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</a></td>
-    <td><a href="/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/">→</a></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
 
 
-<h1 class="post-title">GNU MCU Eclipse Windows Build Tools v2.9-20170629 released</h1>
+<h1 class="post-title">GNU MCU Eclipse OpenOCD v0.10.0-6-20180112 released</h1>
 
 
 <p class="post-meta">
-Posted on June 29, 2017 by Liviu Ionescu.
+Posted on January 12, 2018 by Liviu Ionescu.
 </p>
 
 <div id="toc-container">
@@ -125,66 +118,77 @@ Posted on June 29, 2017 by Liviu Ionescu.
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#content"><span class="tocnumber">1</span> <span class="toctext">Content</span></a>
+<a href="#changes"><span class="tocnumber">1</span> <span class="toctext">Changes</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#changes"><span class="tocnumber">2</span> <span class="toctext">Changes</span></a>
+<a href="#differences-from-risc-v-releases"><span class="tocnumber">2</span> <span class="toctext">Differences from RISC-V releases</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
 <a href="#known-problems"><span class="tocnumber">3</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#download"><span class="tocnumber">4</span> <span class="toctext">Download</span></a>
+<a href="#build-notes"><span class="tocnumber">4</span> <span class="toctext">Build notes</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#checksums"><span class="tocnumber">5</span> <span class="toctext">Checksums</span></a>
+<a href="#binaries"><span class="tocnumber">5</span> <span class="toctext">Binaries</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#checksums"><span class="tocnumber">6</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div><p>Version 2.9-20170629 is a maintenance release of the GNU MCU Eclipse Windows Build Tools.</p>
+</div><p>Version v0.10.0-6-20180112 is a maintenance release; the main change was to update to the latest commits.</p>
 
 <p>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.9-20170629-1013">Binary files »</a>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/releases/">Binary files »</a>
 </p>
-
-<h2 id="content">Content</h2>
-
-<p>The GNU MCU Eclipse Build Tools v2.9 package includes the <strong>version 4.1 of GNU make</strong> (built from MSYS2 source files), and version <strong>1.26.0-git of BusyBox</strong>, which provides a convenient implementation for sh/rm/echo/mkdir.</p>
 
 <h2 id="changes">Changes</h2>
 
-<p>The BusyBox sources were upgraded to the latest available release.</p>
+<ul>
+  <li>update to the latest RISC-V <a href="https://github.com/gnu-mcu-eclipse/openocd/commit/055a70f66f8c27e52798197e11505688b994a241">055a70f</a> commit and to the master <a href="https://github.com/gnu-mcu-eclipse/openocd/commit/7719e9618e753ac41a46a2488dfba549ac578891">7719e96</a> commit from Aug 10th, 2017</li>
+  <li>revert the RISC-V changes in <code class="highlighter-rouge">remote_bitbang.c</code>, since they break the build on mingw-w64</li>
+</ul>
+
+<h2 id="differences-from-risc-v-releases">Differences from RISC-V releases</h2>
+
+<p>The <code class="highlighter-rouge">remote_bitbang.c</code> patches that were reversed.</p>
 
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>the folder structure generated by the Windows setup was wrong, it included an unnecessary level <code class="highlighter-rouge">\bin\bin</code>.</li>
+  <li>none</li>
 </ul>
 
-<h2 id="download">Download</h2>
+<h2 id="build-notes">Build notes</h2>
 
-<p>The new Windows Build Tools can be downloaded from the <a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.9-20170629-1013">GitHub Release</a> page.</p>
+<p>The build environment uses CentOS 6 Docker containers.</p>
 
-<p>Separate setup and archive files are provided for Windows 32/64-bits systems.</p>
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for Windows, macOS and GNU/Linux are provided.</p>
 
 <h2 id="checksums">Checksums</h2>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>83369ff3ec687850e265195a96d043aecc47230499597ecf0e1a76d6adeab44d ?
-gnu-mcu-eclipse-build-tools-2.9-20170629-1013-win32-setup.exe
+<div class="highlighter-rouge"><pre class="highlight"><code>2c9cd4585d7a44cb80dc65fa5e1a46decc3ce2ba1d28ad0da4301c33ee6bcbb3 ?
+gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos32.tgz
 
-ff291c54c733792be83ad4c0c60058d99251216631a0c50cb507bfd9903f4305 ?
-gnu-mcu-eclipse-build-tools-2.9-20170629-1013-win32.zip
+896f00121cd9df505182266924c7bdbe201b6de85edca58b9144331f3bf75d39 ?
+gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos64.tgz
 
-7f3269b2051ff020560aac81f6a46c8508f380d17f5d4ca9d4f30e60518e82b0 ?
-gnu-mcu-eclipse-build-tools-2.9-20170629-1013-win64-setup.exe
+8926cb9cc4cd2894f6b5c8da06943569f497313f8e77dcf5641320b7889eb859 ?
+gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-osx.tgz
 
-79fd2ea1e3d719c66140e2d0a771543f3f39c3d7644ea2c344590aea74907f84 ?
-gnu-mcu-eclipse-build-tools-2.9-20170629-1013-win64.zip
+605e38cd489190ed01d40be130c3be5d70e3370ffc4182f1b561de089a017116 ?
+gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win32.zip
+
+b757fb3c838ea82c88adae74043918b552c8ca48de0eb99c3507f321b97db5f5 ?
+gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win64.zip
 </code></pre>
 </div>
 
@@ -193,11 +197,9 @@ gnu-mcu-eclipse-build-tools-2.9-20170629-1013-win64.zip
 <p class="post-footer">
 Posted in
 
-<strong>releases</strong>, <strong>windows-build-tools</strong> and tagged
-
-<strong>windows</strong>, <strong>setup</strong>, <strong>build</strong>, <strong>make</strong>, <strong>makedir</strong>, <strong>rm</strong>, <strong>busybox</strong>.
-</br>Last modified on Fri Jan  5 17:19:26 2018 UTC.
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/06/29/windows-build-tools-v2-9-20170629-released/" data-layout="button"></div>
+<strong>releases</strong>, <strong>openocd</strong>.
+</br>Last modified on Fri Jan 12 15:50:07 2018 UTC.
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/" data-layout="button"></div>
 </p>
 
 

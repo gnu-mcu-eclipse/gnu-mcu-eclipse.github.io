@@ -5,9 +5,25 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Jan 2018 21:21:03 +0000</pubDate>
-    <lastBuildDate>Wed, 10 Jan 2018 21:21:03 +0000</lastBuildDate>
+    <pubDate>Fri, 12 Jan 2018 15:51:59 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Jan 2018 15:51:59 +0000</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse OpenOCD v0.10.0-6-20180112 released</title>
+        <description>&lt;p&gt;Version v0.10.0-6-20180112 is a maintenance release; the main change was to update to the latest commits.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 12 Jan 2018 12:58:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>openocd</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse plug-ins v4.3.1-201801092051 released</title>
@@ -192,32 +208,6 @@
         <category>releases</category>
         
         <category>plugins</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse plug-ins v4.x update sites URLs migrated to Netlify</title>
-        <description>&lt;p&gt;Starting with Eclipse plug-ins v4.x, the &lt;strong&gt;Eclipse update sites URLs&lt;/strong&gt; were &lt;strong&gt;migrated&lt;/strong&gt; from the venerable SourceForge &lt;strong&gt;to the new Netlify site&lt;/strong&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 09 Jul 2017 09:06:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/07/09/sourceforge-to-netlify-migration/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/07/09/sourceforge-to-netlify-migration/</guid>
-        
-        <category>featured</category>
-        
-        <category>SourceForge</category>
-        
-        <category>Netlify</category>
-        
-        <category>downloads</category>
-        
-        <category>update</category>
-        
-        
-        <category>news</category>
-        
-        <category>project</category>
         
       </item>
     
