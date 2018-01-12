@@ -207,7 +207,10 @@
 
 <p>In addition, the GNU MCU Eclipse plug-ins also check the following locations (POSIX paths):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>${user.home}/AppData/Roaming/GNU MCU Eclipse/RISC-V Embedded GCC;\
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>${user.home}/AppData/Roaming/GNU MCU Eclipse/RISC-V Embedded GCC;\
 ${user.home}/AppData/Local/GNU MCU Eclipse/RISC-V Embedded GCC;\
 ${user.home}/opt/GNU MCU Eclipse/RISC-V Embedded GCC;\
 ${user.home}/opt/gnu-mcu-eclipse/riscv-none-gcc;\
@@ -220,6 +223,7 @@ C:/Program Files (x86)/GNU MCU Eclipse/RISC-V Embedded GCC;\
 D:/Program Files/GNU MCU Eclipse/RISC-V Embedded GCC;\
 D:/Program Files (x86)/GNU MCU Eclipse/RISC-V Embedded GCC
 </code></pre>
+</div>
 </div>
 
 <p>It is recommended to use one of these locations, since the plug-ins will automatically set the default toolchain path to the most recently installed toolchain found in these folders.</p>
@@ -252,10 +256,9 @@ D:/Program Files (x86)/GNU MCU Eclipse/RISC-V Embedded GCC
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
-    <div class="language-console highlighter-rouge"><pre class="highlight"><code>C:\&gt;"C:\Program Files\GNU MCU Eclipse\RISC-V Embedded GCC\7.2.0-1-20171109-1926\bin\riscv-none-embed-gcc.exe" --version
-riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
-</code></pre>
-    </div>
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">C:\&gt;</span><span class="s2">"C:</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\G</span><span class="s2">NU MCU Eclipse</span><span class="se">\R</span><span class="s2">ISC-V Embedded GCC</span><span class="se">\7</span><span class="s2">.2.0-1-20171109-1926</span><span class="se">\b</span><span class="s2">in</span><span class="se">\r</span><span class="s2">iscv-none-embed-gcc.exe"</span> <span class="nt">--version</span>
+<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
+</span></code></pre></div>    </div>
   </li>
 </ul>
 
@@ -292,33 +295,30 @@ riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 
     <p>In addition, the GNU MCU Eclipse plug-ins also check the following locations:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>${user.home}/opt/gnu-mcu-eclipse/riscv-none-gcc:\
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>${user.home}/opt/gnu-mcu-eclipse/riscv-none-gcc:\
 ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 /usr/opt/gnu-mcu-eclipse/riscv-none-gcc:\
 /usr/local/gnu-mcu-eclipse/riscv-none-gcc:\
 /opt/gnu-mcu-eclipse/riscv-none-gcc:\
 /Applications/GNU MCU Eclipse/RISC-V Embedded GCC
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>unpack the archive in the destination folder</li>
   <li>
     <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926</code></p>
 
-    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-osx.tgz
-</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926
-</span></code></pre>
-    </div>
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-osx.tgz
+<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926
+</code></pre></div>    </div>
   </li>
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
-    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc</span><span class="kv"> --version
-</span>riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
-</code></pre>
-    </div>
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc <span class="nt">--version</span>
+<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
+</span></code></pre></div>    </div>
   </li>
 </ul>
 
@@ -340,9 +340,13 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 
 <p>To check if the compiler starts, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">/Applications/GNU\</span><span class="kv"> ARM\ Eclipse/RISC-V\ Embedded\ GCC/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc --version
-</span>riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
-</code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> /Applications/GNU<span class="se">\ </span>ARM<span class="se">\ </span>Eclipse/RISC-V<span class="se">\ </span>Embedded<span class="se">\ </span>GCC/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc <span class="nt">--version</span>
+<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
+</span></code></pre>
+</div>
 </div>
 
 <blockquote>
@@ -372,32 +376,29 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 
     <p>In addition, the GNU MCU Eclipse plug-ins also check the following locations:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>${user.home}/opt/gnu-mcu-eclipse/riscv-none-gcc:\
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>${user.home}/opt/gnu-mcu-eclipse/riscv-none-gcc:\
 ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 /usr/opt/gnu-mcu-eclipse/riscv-none-gcc:\
 /usr/local/gnu-mcu-eclipse/riscv-none-gcc:\
 /opt/gnu-mcu-eclipse/riscv-none-gcc
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>unpack the archive in the destination folder</li>
   <li>
     <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926</code></p>
 
-    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-debian64.tgz
-</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w ${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926
-</span></code></pre>
-    </div>
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-debian64.tgz
+<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926
+</code></pre></div>    </div>
   </li>
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
-    <div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc</span><span class="kv"> --version
-</span>riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
-</code></pre>
-    </div>
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc <span class="nt">--version</span>
+<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
+</span></code></pre></div>    </div>
   </li>
 </ul>
 
@@ -427,8 +428,11 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 
 <p>The documentation is located in the <code class="highlighter-rouge">share/doc</code> folder, for example the pdf files are:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">tree</span><span class="kv"> share/doc/pdf
-</span>share/doc/pdf
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> tree share/doc/pdf
+<span class="go">share/doc/pdf
 ├── annotate.pdf
 ├── as.pdf
 ├── bfd.pdf
@@ -450,7 +454,8 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 └── stabs.pdf
 
 1 directory, 18 files
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 

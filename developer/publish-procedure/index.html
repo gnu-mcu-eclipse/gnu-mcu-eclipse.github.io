@@ -225,22 +225,25 @@
 
 <p>A typical session looks like:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">/Users/ilg/My\</span><span class="kv"> Files/MacBookPro\ Projects/GNU\ ARM\ Eclipse/plug-ins.git/scripts/publish-v4-neon-updates-test.command ; exit;
-</span>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> /Users/ilg/My<span class="se">\ </span>Files/MacBookPro<span class="se">\ </span>Projects/GNU<span class="se">\ </span>ARM<span class="se">\ </span>Eclipse/plug-ins.git/scripts/publish-v4-neon-updates-test.command <span class="p">;</span> <span class="nb">exit</span><span class="p">;</span>
+<span class="go">
 User: ilg-ul
 API key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Owner: gnu-mcu-eclipse
 Create version 'v4-neon-updates-test/p2/4.1.1.201707111115'
-<span class="ni">######################################################################## </span><span class="nc">100.0%</span><span class="kv">
-</span>Created.
+</span><span class="gp">#</span><span class="c">####################################################################### 100.0%</span>
+<span class="go">Created.
 
 Upload 'artifacts.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-<span class="ni">######################################################################## </span><span class="nc">100.0%</span><span class="kv">
-</span>Uploaded.
-...
-Upload 'plugins/ilg.gnumcueclipse.templates.stm_2.6.3.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
-<span class="ni">######################################################################## </span><span class="nc">100.0%</span><span class="kv">
-</span>Uploaded.
+</span><span class="gp">#</span><span class="c">####################################################################### 100.0%</span>
+<span class="go">Uploaded.
+</span><span class="c">...
+</span><span class="go">Upload 'plugins/ilg.gnumcueclipse.templates.stm_2.6.3.201707111115.jar' to '/v4-neon-updates-test/p2/4.1.1.201707111115/'
+</span><span class="gp">#</span><span class="c">####################################################################### 100.0%</span>
+<span class="go">Uploaded.
 Publish 'v4-neon-updates-test/p2/4.1.1.201707111115'
 {"files":38}
 
@@ -249,7 +252,8 @@ Archive available from "/Users/ilg/My Files/MacBookPro Projects/GNU ARM Eclipse/
 When final, don't forget to publish the archive too!
 Install new software from http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test
 logout
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="install-on-a-separate-eclipse">Install on a separate Eclipse</h2>
@@ -289,15 +293,23 @@ logout
 
 <p>Scan the Git log and add new entries to the <a href="/developer/change-log/">Change log</a> (pages/developer/change-log.md), grouped by days.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> log --pretty='%cd * %h - %s' --date=short
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> git log <span class="nt">--pretty</span><span class="o">=</span><span class="s1">'%cd * %h - %s'</span> <span class="nt">--date</span><span class="o">=</span>short
+</code></pre>
+</div>
 </div>
 
 <h2 id="update-the-list-of-current-features-and-plug-ins-versions">Update the list of current features and plug-ins versions</h2>
 
 <p>Add an entry with the latest feature &amp; plug-in versions, copied from the publish script output. Name it like <strong>version 4.1.1.201707111115 released</strong>.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>repository/features:
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">repository/features:
 ilg.gnumcueclipse.codered.feature_1.1.2.201711101735.jar
 ilg.gnumcueclipse.debug.gdbjtag.jlink.feature_4.2.1.201711101735.jar
 ilg.gnumcueclipse.debug.gdbjtag.openocd.feature_4.2.1.201711101735.jar
@@ -340,7 +352,9 @@ ilg.gnumcueclipse.templates.freescale.pe_1.2.2.201711101735.jar
 ilg.gnumcueclipse.templates.freescale_2.2.9.201711101735.jar
 ilg.gnumcueclipse.templates.sifive_1.1.1.201711101735.jar
 ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
+</span>
 </code></pre>
+</div>
 </div>
 
 <h2 id="prepare-a-new-blog-post-to-announce-the-release">Prepare a new blog post to announce the release</h2>
@@ -355,8 +369,12 @@ ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
   <li>the initial <code class="highlighter-rouge">download_url</code> pointing to the releases generic page, not a specific release, since it does not exist, and the htmlproofer will fail.</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>download_url: https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>download_url: https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/
 </code></pre>
+</div>
 </div>
 
 <ul>
@@ -365,12 +383,16 @@ ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
   <li>headers like:</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>## New features
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>## New features
 ## Addressed bugs
 ## Template issues
 ## Other changes
 ## Known problems
 </code></pre>
+</div>
 </div>
 
 <p>An example would be the <a href="https://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/">4.1.1</a> announcement.</p>
@@ -388,29 +410,33 @@ ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
 
 <p>When all ready, run the <code class="highlighter-rouge">scripts/publish-v4-neon-updates.command</code>:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">/Users/ilg/My\</span><span class="kv"> Files/MacBookPro\ Projects/GNU\ ARM\ Eclipse/plug-ins.git/scripts/publish-v4-neon-updates.command ; exit;
-</span>Do you really want to publish? (Yes)? Yes
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> /Users/ilg/My<span class="se">\ </span>Files/MacBookPro<span class="se">\ </span>Projects/GNU<span class="se">\ </span>ARM<span class="se">\ </span>Eclipse/plug-ins.git/scripts/publish-v4-neon-updates.command <span class="p">;</span> <span class="nb">exit</span><span class="p">;</span>
+<span class="go">Do you really want to publish? (Yes)? Yes
 
 User: ilg-ul
 API key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Owner: gnu-mcu-eclipse
 Create version 'v4-neon-updates/p2/4.1.1.201707111115'
-<span class="ni">######################################################################## </span><span class="nc">100.0%</span><span class="kv">
-</span>Created.
+</span><span class="gp">#</span><span class="c">####################################################################### 100.0%</span>
+<span class="go">Created.
 
 Upload 'artifacts.jar' to '/v4-neon-updates/p2/4.1.1.201707111115/'
-<span class="ni">######################################################################## </span><span class="nc">100.0%</span><span class="kv">
-</span>...
-Upload 'plugins/ilg.gnumcueclipse.templates.stm_2.6.3.201707111115.jar' to '/v4-neon-updates/p2/4.1.1.201707111115/'
-<span class="ni">######################################################################## </span><span class="nc">100.0%</span><span class="kv">
-</span>Uploaded.
+</span><span class="gp">#</span><span class="c">####################################################################### 100.0%</span>
+<span class="c">...
+</span><span class="go">Upload 'plugins/ilg.gnumcueclipse.templates.stm_2.6.3.201707111115.jar' to '/v4-neon-updates/p2/4.1.1.201707111115/'
+</span><span class="gp">#</span><span class="c">####################################################################### 100.0%</span>
+<span class="go">Uploaded.
 Publish 'v4-neon-updates/p2/4.1.1.201707111115'
 {"files":38}
 
 Published on the main site.
 When final, don't forget to publish the archive too!
 logout
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <p>Do not close the terminal before copy/paste the list to the ChangeLog page!.</p>
@@ -463,8 +489,12 @@ logout
   <li>as first line of the description, copy the download badge</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/plug-ins/v4.1.1-201707111115/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/)
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/plug-ins/v4.1.1-201707111115/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/)
 </code></pre>
+</div>
 </div>
 <ul>
   <li>update the tag (v4.1.1-201707111115)</li>
@@ -524,9 +554,8 @@ logout
   <li>select the corresponding GME branch, like <strong>oxygen-gme</strong></li>
   <li>name the release like <strong>GNU MCU Eclipse IDE for C/C++ Developers Oxygen.2 20170711</strong>; mind the short date</li>
   <li>as first line of the description, copy the download badge
-    <div class="highlighter-rouge"><pre class="highlight"><code>[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/org.eclipse.epp.packages/v4.3.1-20180110-o2/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2018/01/10/plugins-v4.3.1-201801092051-released/)
-</code></pre>
-    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/org.eclipse.epp.packages/v4.3.1-20180110-o2/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2018/01/10/plugins-v4.3.1-201801092051-released/)
+</code></pre></div>    </div>
   </li>
   <li>update the tag (v4.3.1-20180110-o2)</li>
   <li>update the URL to the actual release post</li>

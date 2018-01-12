@@ -185,10 +185,14 @@
 
 <p>To check if QEMU starts, use the following command:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>C:\&gt;"\Program Files\GNU MCU Eclipse\QEMU\2.2.92-201504041652-dev\bin\qemu-system-gnuarmeclipse.exe" --version
-GNU MCU Eclipse 32-bits QEMU emulator version 2.2.92
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">C:\&gt;</span><span class="s2">"</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\G</span><span class="s2">NU MCU Eclipse</span><span class="se">\Q</span><span class="s2">EMU</span><span class="se">\2</span><span class="s2">.2.92-201504041652-dev</span><span class="se">\b</span><span class="s2">in</span><span class="se">\q</span><span class="s2">emu-system-gnuarmeclipse.exe"</span> <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 32-bits QEMU emulator version 2.2.92
 Copyright (c) 2003-2008 Fabrice Bellard
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h4 id="drivers">Drivers</h4>
@@ -206,19 +210,27 @@ Copyright (c) 2003-2008 Fabrice Bellard
 
 <p>The recommended way is to unpack the archive in your home folder:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xvf ~/Downloads/gnuarmeclipse-qemu-osx-2.8.0-201703012029-head.tgz
-</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w ${HOME}/opt/gnuarmeclipse/qemu
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/gnuarmeclipse-qemu-osx-2.8.0-201703012029-head.tgz
+<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnuarmeclipse/qemu
+</code></pre>
+</div>
 </div>
 
 <p>To check if QEMU starts, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnuarmeclipse/qemu/2.8.0-201703012029-head/bin/qemu-system-gnuarmeclipse</span><span class="kv"> --version
-</span>GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0 (v2.8.0-644-ge45e0e1)
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnuarmeclipse/qemu/2.8.0-201703012029-head/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0 (v2.8.0-644-ge45e0e1)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <p>Another version, deprecated now, is to use the package installer, that installs QEMU in the <code class="highlighter-rouge">/Applications</code> folder.</p>
@@ -243,10 +255,14 @@ Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 
 <p>To check if QEMU starts, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">/Applications/GNU\</span><span class="kv"> ARM\ Eclipse/QEMU/2.2.92-201504041609-dev/bin/qemu-system-gnuarmeclipse --version
-</span>GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> /Applications/GNU<span class="se">\ </span>ARM<span class="se">\ </span>Eclipse/QEMU/2.2.92-201504041609-dev/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
 Copyright (c) 2003-2008 Fabrice Bellard
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h3 id="gnulinux">GNU/Linux</h3>
@@ -264,21 +280,29 @@ Copyright (c) 2003-2008 Fabrice Bellard
 
 <p>To install this package, unpack the distribution archive and copy it to <code class="highlighter-rouge">/opt/gnuarmeclipse/qemu/${version}</code></p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xvf ~/Downloads/gnuarmeclipse-qemu-debian64-2.4.50-201510290935-dev.tgz
-</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w ${HOME}/opt/gnuarmeclipse/qemu
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/gnuarmeclipse-qemu-debian64-2.4.50-201510290935-dev.tgz
+<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnuarmeclipse/qemu
+</code></pre>
+</div>
 </div>
 
 <p>Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.</p>
 
 <p>To check if QEMU starts and is recent, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnuarmeclipse/qemu/2.2.92-201504041716-dev/bin/qemu-system-gnuarmeclipse</span><span class="kv"> --version
-</span>GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnuarmeclipse/qemu/2.2.92-201504041716-dev/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 64-bits QEMU emulator version 2.2.92
 Copyright (c) 2003-2008 Fabrice Bellard
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h4 id="udev--drivers">UDEV &amp; Drivers</h4>

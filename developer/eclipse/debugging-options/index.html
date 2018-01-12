@@ -96,20 +96,32 @@
 
 <p>To start Eclipse with all tracing messages enabled, add <code class="highlighter-rouge">-debug &lt;file&gt;</code> to the command line:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.../Eclipse.app/Contents/MacOS/eclipse -debug https://github.com/gnu-mcu-eclipse/eclipse-plugins/raw/develop/debug.options
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>.../Eclipse.app/Contents/MacOS/eclipse -debug https://github.com/gnu-mcu-eclipse/eclipse-plugins/raw/develop/debug.options
 </code></pre>
+</div>
 </div>
 
 <p>Alternatively, you can copy the file locally, edit it and point Eclipse to it:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.../Eclipse.app/Contents/MacOS/eclipse -debug ${HOME}/tmp/debug.options
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>.../Eclipse.app/Contents/MacOS/eclipse -debug ${HOME}/tmp/debug.options
 </code></pre>
+</div>
 </div>
 
 <p>For convenience, you can also copy into the file as <code class="highlighter-rouge">.options</code> Eclipse folder (for example as <code class="highlighter-rouge">Eclipse.app/Contents/MacOS/.options</code>) and start Eclipse without the file name:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.../Eclipse.app/Contents/MacOS/eclipse -debug
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>.../Eclipse.app/Contents/MacOS/eclipse -debug
 </code></pre>
+</div>
 </div>
 
 <h2 id="how-eclipse-tracing-works">How Eclipse tracing works?</h2>
@@ -120,37 +132,53 @@
 
 <p>The properties not defined in the file given to <code class="highlighter-rouge">-debug</code> (or in Eclipse <code class="highlighter-rouge">.options</code>) default to the values defined in <strong>.options</strong> files located in each plug-in folder (generally set to <code class="highlighter-rouge">false</code>).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>org.eclipse.cdt.core/debug=false
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>org.eclipse.cdt.core/debug=false
 
 # ASTCache debugging
 org.eclipse.cdt.core/debug/ASTCache=false
 </code></pre>
+</div>
 </div>
 
 <h3 id="programatic-access">Programatic access</h3>
 
 <p>The actual values of the debug options are programatically available via:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">String</span> <span class="n">Platform</span><span class="o">.</span><span class="na">getDebugOption</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">String</span> <span class="n">Platform</span><span class="o">.</span><span class="na">getDebugOption</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span>
 </code></pre>
+</div>
 </div>
 
 <p>Example:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">DEBUG</span> <span class="o">=</span> <span class="s">"true"</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="n">Platform</span><span class="o">.</span><span class="na">getDebugOption</span><span class="o">(</span><span class="s">"org.eclipse.cdt.core/debug/ASTCache"</span><span class="o">));</span>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">DEBUG</span> <span class="o">=</span> <span class="s">"true"</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="n">Platform</span><span class="o">.</span><span class="na">getDebugOption</span><span class="o">(</span><span class="s">"org.eclipse.cdt.core/debug/ASTCache"</span><span class="o">));</span>
 <span class="o">...</span>
 <span class="k">if</span> <span class="o">(</span><span class="n">DEBUG</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"message"</span><span class="o">);</span>
 <span class="o">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>A more elaborated solution is to derive the <code class="highlighter-rouge">Activator</code> class from <code class="highlighter-rouge">ilg.gnumcueclipse.core.AbstractUIActivator</code> and use the <code class="highlighter-rouge">isDebugging()</code> method:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>if (Activator.getInstance().isDebugging()) {
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>if (Activator.getInstance().isDebugging()) {
 	System.out.println("message");
 }
 </code></pre>
+</div>
 </div>
 
 

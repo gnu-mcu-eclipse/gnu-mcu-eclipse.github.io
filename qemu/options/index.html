@@ -154,22 +154,28 @@
 <p>The command line used by the QEMU plug-in to start a debug session looks like this:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">qemu-system-gnuarmeclipse</span><span class="kv"> --verbose --verbose --board STM32F4-Discovery \
-</span>--mcu STM32F407VG --gdb tcp::1234 -d unimp,guest_errors \
---semihosting-config enable=on,target=native \
---semihosting-cmdline blinky
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> qemu-system-gnuarmeclipse <span class="nt">--verbose</span> <span class="nt">--verbose</span> <span class="nt">--board</span> STM32F4-Discovery <span class="se">\</span>
+<span class="nt">--mcu</span> STM32F407VG <span class="nt">--gdb</span> tcp::1234 <span class="nt">-d</span> unimp,guest_errors <span class="se">\</span>
+<span class="nt">--semihosting-config</span> <span class="nb">enable</span><span class="o">=</span>on,target<span class="o">=</span>native <span class="se">\</span>
+<span class="nt">--semihosting-cmdline</span> blinky
 </code></pre>
+</div>
 </div>
 
 <p>A typical emulation session started outside Eclipse looks like this:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">qemu-system-gnuarmeclipse</span><span class="kv"> --verbose --verbose --board STM32F4-Discovery \
-</span>--mcu STM32F407VG -d unimp,guest_errors \
---nographic --image test.elf \
---semihosting-config enable=on,target=native \
---semihosting-cmdline test 1 2 3
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> qemu-system-gnuarmeclipse <span class="nt">--verbose</span> <span class="nt">--verbose</span> <span class="nt">--board</span> STM32F4-Discovery <span class="se">\</span>
+<span class="nt">--mcu</span> STM32F407VG <span class="nt">-d</span> unimp,guest_errors <span class="se">\</span>
+<span class="nt">--nographic</span> <span class="nt">--image</span> test.elf <span class="se">\</span>
+<span class="nt">--semihosting-config</span> <span class="nb">enable</span><span class="o">=</span>on,target<span class="o">=</span>native <span class="se">\</span>
+<span class="nt">--semihosting-cmdline</span> <span class="nb">test </span>1 2 3
 </code></pre>
+</div>
 </div>
 
 <h2 id="command-line-options">Command line options</h2>
@@ -189,15 +195,21 @@
 <p>A string that defines the name of the board to be emulated:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>--board STM32F4-Discovery
+<div class="highlight">
+<pre class="highlight">
+<code>--board STM32F4-Discovery
 </code></pre>
+</div>
 </div>
 
 <p>To get a list of supported boards, use <code class="highlighter-rouge">?</code> or <code class="highlighter-rouge">help</code>:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>--board ?
+<div class="highlight">
+<pre class="highlight">
+<code>--board ?
 </code></pre>
+</div>
 </div>
 
 <h3 id="mcu">
@@ -209,15 +221,21 @@
 <p>However it is possible to pretend the board has a different MCU, by explicitly specifying a MCU name:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>--mcu STM32F407VG
+<div class="highlight">
+<pre class="highlight">
+<code>--mcu STM32F407VG
 </code></pre>
+</div>
 </div>
 
 <p>To get a list of supported MCUs, use <code class="highlighter-rouge">?</code> or <code class="highlighter-rouge">help</code>:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>--mcu ?
+<div class="highlight">
+<pre class="highlight">
+<code>--mcu ?
 </code></pre>
+</div>
 </div>
 
 <h3 id="image">
@@ -229,8 +247,11 @@
 <p>For debug sessions, this can be done via the GDB protocol. For standalone sessions, QEMU needs to know the name of the ELF file:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>--image blinky.elf
+<div class="highlight">
+<pre class="highlight">
+<code>--image blinky.elf
 </code></pre>
+</div>
 </div>
 
 <h3 id="gdb">
@@ -242,8 +263,11 @@
 <p>The default QEMU port is <code class="highlighter-rouge">1234</code>; the option to start QEMU in server mode and listen on the TCP port 1234 is:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>--gdb tcp::1234
+<div class="highlight">
+<pre class="highlight">
+<code>--gdb tcp::1234
 </code></pre>
+</div>
 </div>
 
 <p>When in GDB server mode, it is no longer required to specify the ELF image, since it will be loaded by the GDB client, as in any usual debug session, which rewrites the MCU flash memory.</p>
@@ -257,8 +281,11 @@
 <p>For running unit tests this is generally not needed, and QEMU can be started with graphics support disabled:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>--nographic
+<div class="highlight">
+<pre class="highlight">
+<code>--nographic
 </code></pre>
+</div>
 </div>
 
 <h3 id="verbose">
@@ -270,7 +297,9 @@
 <p>To make it minimally social, add one <code class="highlighter-rouge">--verbose</code>, and it’ll tell what is going on:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
+<div class="highlight">
+<pre class="highlight">
+<code>GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.
 Command line: 'blinky' (6 bytes).
@@ -285,11 +314,15 @@ Cortex-M4 r0p0 core reset.
 ...
 </code></pre>
 </div>
+</div>
 
 <p>Adding one more <code class="highlighter-rouge">--verbose</code>  will make QEMU extra verbose and it’ll display details about the board hardware configuration and the memory sections loaded by GDB:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code>GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">GNU MCU Eclipse 64-bits QEMU v2.4.50 (qemu-system-gnuarmeclipse).
 Board: 'STM32F4-Discovery' (ST Discovery kit for STM32F407/417 lines).
 Device: 'STM32F407VG' (Cortex-M4 r0p0, MPU), Flash: 1024 kB, RAM: 128 kB.
 Command line: 'blinky' (6 bytes).
@@ -316,8 +349,11 @@ Write  132 bytes at 0x0800351C-0x0800359F.
 Execute 'mon system_reset'.
 
 Cortex-M4 r0p0 core reset.
-...
+</span>
+<span class="c">...
+</span>
 </code></pre>
+</div>
 </div>
 
 <h3 id="d">
@@ -331,8 +367,11 @@ Cortex-M4 r0p0 core reset.
 <p>There are many such options available, but the ones the plug-in uses are:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>-d unimp,guest_errors
+<div class="highlight">
+<pre class="highlight">
+<code>-d unimp,guest_errors
 </code></pre>
+</div>
 </div>
 
 <h3 id="semihosting-config">
@@ -342,8 +381,11 @@ Cortex-M4 r0p0 core reset.
 <p>QEMU fully implements the ARM semihosting protocol. To enable it, use the following complicated option:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>--semihosting-config enable=on,target=native
+<div class="highlight">
+<pre class="highlight">
+<code>--semihosting-config enable=on,target=native
 </code></pre>
+</div>
 </div>
 
 <h3 id="semihosting-cmdline">
@@ -357,8 +399,11 @@ Cortex-M4 r0p0 core reset.
 <p>This option <strong>must be the last one</strong>, and all following options will be passed to the application:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>--semihosting-cmdline test 1 2 3
+<div class="highlight">
+<pre class="highlight">
+<code>--semihosting-cmdline test 1 2 3
 </code></pre>
+</div>
 </div>
 
 <p>The first option will be passed as argv[0], so it generally should reflect the application name. The following options will be passed as argv[1] … argv[n-1], without special processing.</p>

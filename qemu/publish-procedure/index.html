@@ -16,7 +16,7 @@
   <meta property="og:site_name" content="GNU MCU Eclipse" />
 
 
-  <meta property="article:published_time" content="2016-07-27">
+  <meta property="article:published_time" content="2016-07-28">
 
 
 
@@ -178,19 +178,27 @@
 
 <p>Be sure the scripts in the <strong>build-scripts.git</strong> are up to date.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone https://github.com/gnu-mcu-eclipse/build-scripts.git \
-</span>  ~/Downloads/build-scripts.git
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> git clone https://github.com/gnu-mcu-eclipse/build-scripts.git <span class="se">\</span>
+  ~/Downloads/build-scripts.git
 </code></pre>
+</div>
 </div>
 
 <h2 id="build">Build</h2>
 
 <p>Important note: Before starting the build, double check if the repository is clean (all changes were commited), otherwise the build version will be stamped with <code class="highlighter-rouge">-dirty</code>).</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash
-</span><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/build-scripts.git/scripts/build-qemu.sh cleanall
-</span><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/build-scripts.git/scripts/build-qemu.sh --all
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> caffeinate bash
+<span class="gp">$</span> bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh cleanall
+<span class="gp">$</span> bash ~/Downloads/build-scripts.git/scripts/build-qemu.sh <span class="nt">--all</span>
+</code></pre>
+</div>
 </div>
 
 <h2 id="prepare-a-new-blog-post-to-announce-the-release">Prepare a new blog post to announce the release</h2>
@@ -205,7 +213,11 @@
 
 <p>Copy/paste the build report at the end of the post as</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>00fa757a9bd0f80ce897e6d546183b58  
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">00fa757a9bd0f80ce897e6d546183b58  
 gnuarmeclipse-qemu-debian32-2.4.50-201510290935-dev.tgz
 
 69588b16c19006275cb79aba7ee2c3f8  
@@ -219,7 +231,9 @@ gnuarmeclipse-qemu-win32-2.4.50-201510290935-dev-setup.exe
 
 70881d71c1516aeb9c7efc514cd1f32c  
 gnuarmeclipse-qemu-win64-2.4.50-201510290935-dev-setup.exe
+</span>
 </code></pre>
+</div>
 </div>
 
 <h2 id="update-the-web">Update the web</h2>

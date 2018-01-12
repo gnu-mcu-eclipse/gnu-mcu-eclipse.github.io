@@ -137,8 +137,12 @@
 
 <p>The only function required is:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="nf">getExtraProperties</span><span class="o">(</span><span class="n">IConfiguration</span> <span class="n">config</span><span class="o">);</span>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="nf">getExtraProperties</span><span class="o">(</span><span class="n">IConfiguration</span> <span class="n">config</span><span class="o">);</span>
 </code></pre>
+</div>
 </div>
 
 <h2 id="where-is-this-extension-point-used">Where is this extension point used?</h2>
@@ -147,7 +151,10 @@
 
 <p>This <code class="highlighter-rouge">CProjectExtraDataManagerProxy.getExtraProperties(config)</code> is called from <code class="highlighter-rouge">PeripheralsService.etPeripherals(IContainerDMContext containerDMContext, DataRequestMonitor&lt;IPeripheralDMContext[]&gt; drm)</code>:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">String</span> <span class="n">vendorId</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="n">String</span> <span class="n">vendorId</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">deviceName</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 
 <span class="n">CProjectExtraDataManagerProxy</span> <span class="n">dataManager</span> <span class="o">=</span> <span class="n">CProjectExtraDataManagerProxy</span>
@@ -180,6 +187,7 @@
 <span class="o">}</span>
 </code></pre>
 </div>
+</div>
 
 <p>As seen above, this extension point is used to get the <strong>cmsis.device.vendor.id</strong> and <strong>cmsis.device.name</strong> associated with a project, and from it get the SVD to populate the Peripherals view.</p>
 
@@ -187,7 +195,10 @@
 
 <p>This extension point is implemented one in <strong>ilg.gnumcueclipse.managedbuild.cross</strong>:</p>
 
-<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;extension</span>
+<div class="language-xml highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="nt">&lt;extension</span>
         <span class="na">point=</span><span class="s">"ilg.gnumcueclipse.debug.core.cprojectExtra"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;factory</span>
         <span class="na">class=</span><span class="s">"ilg.gnumcueclipse.managedbuild.cross.xpi.CProjectExtraDataManagerFactory"</span><span class="nt">&gt;</span>
@@ -195,10 +206,14 @@
 <span class="nt">&lt;/extension&gt;</span>
 </code></pre>
 </div>
+</div>
 
 <p>The data manager created by this factory is <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/blob/develop/bundles/ilg.gnumcueclipse.managedbuild.cross/src/ilg/gnumcueclipse/managedbuild/cross/xpi/CProjectExtraDataManager.java">ilg.gnumcueclipse.managedbuild.cross.xpi/CProjectExtraDataManager.java</a> which returns the entire map of extra properties associated with GNU MCU Eclipse projects, stored in .cproject:</p>
 
-<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;storageModule</span> <span class="na">moduleId=</span><span class="s">"ilg.gnumcueclipse.managedbuild.packs"</span><span class="nt">&gt;</span>
+<div class="language-xml highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="nt">&lt;storageModule</span> <span class="na">moduleId=</span><span class="s">"ilg.gnumcueclipse.managedbuild.packs"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">id=</span><span class="s">"cmsis.device.name"</span> <span class="na">value=</span><span class="s">"STM32F407VG"</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">id=</span><span class="s">"cmsis.subfamily.name"</span> <span class="na">value=</span><span class="s">"STM32F407"</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">id=</span><span class="s">"cmsis.family.name"</span> <span class="na">value=</span><span class="s">"STM32F4 Series"</span><span class="nt">/&gt;</span>
@@ -221,6 +236,7 @@
     <span class="nt">&lt;memory</span> <span class="na">section=</span><span class="s">"IROM1"</span> <span class="na">size=</span><span class="s">"0x100000"</span> <span class="na">start=</span><span class="s">"0x08000000"</span> <span class="na">startup=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/storageModule&gt;</span>
 </code></pre>
+</div>
 </div>
 
 

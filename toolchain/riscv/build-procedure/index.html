@@ -175,10 +175,14 @@
 
 <p>To download it, clone the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> Git repo, including submodules.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">rm</span><span class="kv"> -rf ~/Downloads/riscv-none-gcc-build.git
-</span><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git \
-</span>  ~/Downloads/riscv-none-gcc-build.git
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> rm <span class="nt">-rf</span> ~/Downloads/riscv-none-gcc-build.git
+<span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git <span class="se">\</span>
+  ~/Downloads/riscv-none-gcc-build.git
 </code></pre>
+</div>
 </div>
 
 <h2 id="check-the-script">Check the script</h2>
@@ -191,28 +195,40 @@
 
 <p>However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh preload-images
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh preload-images
+</code></pre>
+</div>
 </div>
 
 <p>The result should look similar to:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">docker</span><span class="kv"> images
-</span>REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> docker images
+<span class="go">REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
 ilegeul/debian      9-gnu-mcu-eclipse     ff8a853cf6cb        4 days ago          3.2GB
 ilegeul/debian32    9-gnu-mcu-eclipse     a22ccdf38f1f        4 days ago          3.2GB
 ilegeul/debian32    9                     7348339e67f5        4 days ago          116MB
 debian              9                     a2ff708b7413        2 weeks ago         100MB
 hello-world         latest                1815c82652c0        3 weeks ago         1.84kB
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="rebuild-the-docker-images">Rebuild the Docker images</h2>
 
 <p>If the download speed is limited, probably it is faster to rebuild the images locally. For this see the <code class="highlighter-rouge">build-images</code> command:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
+</code></pre>
+</div>
 </div>
 
 <h2 id="development">Development</h2>
@@ -247,8 +263,12 @@ hello-world         latest                1815c82652c0        3 weeks ago       
   <li>start the build script and pass <code class="highlighter-rouge">--use-gits</code></li>
 </ul>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --use-gits
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--use-gits</span>
+</code></pre>
+</div>
 </div>
 
 <p>When the result is acceptable, commit all repos and tag all with the same tag (like <code class="highlighter-rouge">v7.2.0-1-20171109</code>):</p>
@@ -280,21 +300,32 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <p>Before starting a multi-platform build, check if Docker is started.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--all</span>
+</code></pre>
+</div>
 </div>
 
 <p>On macOS, to prevent entering sleep, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash
-</span><span class="w">$ </span><span class="nc">exec</span><span class="kv"> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh --all
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> caffeinate bash
+<span class="gp">$</span> <span class="nb">exec </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--all</span>
+</code></pre>
+</div>
 </div>
 
 <p>Many, many hours later, the output of the build script is a set of 8 files and their SHA signatures in the <code class="highlighter-rouge">deploy</code> folder:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">ls</span><span class="kv"> -l deploy
-</span>total 784400
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">ls</span> <span class="nt">-l</span> deploy
+<span class="go">total 784400
 -rw-r--r--  1 ilg  staff  75678450 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg
 -rw-r--r--  1 ilg  staff       127 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg.sha
 -rw-r--r--  1 ilg  staff  75726500 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.tgz
@@ -311,7 +342,8 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 -rw-r--r--  1 ilg  staff       135 Jul  7 06:46 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32-setup.exe.sha
 -rw-r--r--  1 ilg  staff  43378400 Jul  7 06:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32.zip
 -rw-r--r--  1 ilg  staff       129 Jul  7 06:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32.zip.sha
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="subsequent-runs">Subsequent runs</h2>
@@ -320,8 +352,12 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <p>Instead of <code class="highlighter-rouge">--all</code>, you can use any combination of:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>--win32 --win64 --debian32 --debian64 --osx
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>--win32 --win64 --debian32 --debian64 --osx
 </code></pre>
+</div>
 </div>
 
 <p>Please note that, due to the specifics of the GCC build process, the Windows build requires the corresponding Debian build, so <code class="highlighter-rouge">--win32</code> alone is equivalent to <code class="highlighter-rouge">--debian32 --win32</code> and <code class="highlighter-rouge">--win64</code> alone is equivalent to <code class="highlighter-rouge">--debian64 --win64</code>.</p>
@@ -330,14 +366,22 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <p>To remove most build files, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh clean
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh clean
+</code></pre>
+</div>
 </div>
 
 <p>To also remove the repository and the output files, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh cleanall
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh cleanall
+</code></pre>
+</div>
 </div>
 
 <h2 id="install-hierarchy">Install hierarchy</h2>
@@ -346,8 +390,11 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <p>After install, this package should create structure like this (only the first two depth levels are shown):</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">tree</span><span class="kv"> -L 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
-</span>/Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> tree <span class="nt">-L</span> 2 /Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
+<span class="go">/Users/ilg/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/
 ├── README.md
 ├── bin
 │   ├── riscv-none-embed-addr2line
@@ -415,7 +462,8 @@ hello-world         latest                1815c82652c0        3 weeks ago       
     └── gdb
 
 24 directories, 41 files
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <p>No other files are installed in any system folders or other locations.</p>
@@ -432,9 +480,13 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <p>For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv-none-embed-gcc</span><span class="kv"> --version
-</span>riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
-</code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.1.1-1-20170702-0625/bin/riscv-none-embed-gcc <span class="nt">--version</span>
+<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits) 7.1.1 20170509
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="more-build-details">More build details</h2>

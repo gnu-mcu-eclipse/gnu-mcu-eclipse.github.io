@@ -126,7 +126,10 @@ Posted on January 29, 2017 by Liviu Ionescu.
 
 <p>Checking the Eclipse log revealed a Java SSL exception:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-01-28 18:48:05.200
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="go">!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-01-28 18:48:05.200
 !MESSAGE Unable to read repository at http://gnuarmeclipse.sourceforge.net/updates-test/content.xml.
 !STACK 0
 javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
@@ -146,9 +149,10 @@ javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
 	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
 	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
 	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
-	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-</code></pre>
+</span><span class="gp">	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$</span>DirectoryJob.run<span class="o">(</span>AbstractFileSystemBrowser.java:69<span class="o">)</span>
+<span class="go">	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+</span></code></pre>
+</div>
 </div>
 
 <p>The problem is caused by <strong>SourceForge mandating the use of strong encryption</strong>, while the Oracle JDK, due to export restrictions, is not able to handle strong encryption.</p>

@@ -229,7 +229,9 @@
 <p>It is recommended that reading preferences be done generically, to access multiple scopes:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>IProject project;
+<div class="highlight">
+<pre class="highlight">
+<code>IProject project;
 
 IScopeContext[] contexts;
 if (project != null) {
@@ -260,13 +262,16 @@ if (value != null) {
 }
 </code></pre>
 </div>
+</div>
 
 <h3 id="direct-access">Direct access</h3>
 
 <p>For writing preferences, it is recommended to access directly the specific scope:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>Preferences preferences = new ProjectScope(project).getNode(Activator.PLUGIN_ID);
+<div class="highlight">
+<pre class="highlight">
+<code>Preferences preferences = new ProjectScope(project).getNode(Activator.PLUGIN_ID);
 preferences.put(id, value);
 preferences.flush();
 
@@ -279,15 +284,19 @@ preferences.put(id, value);
 preferences.flush();
 </code></pre>
 </div>
+</div>
 
 <p>Without an explicit <strong>preferences.flush()</strong>, the file is written when Eclipse quits.</p>
 
 <p>Defaults can also be accessed directly:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>Preferences preferences = DefaultScope.INSTANCE.getNode(Activator.PLUGIN_ID);
+<div class="highlight">
+<pre class="highlight">
+<code>Preferences preferences = DefaultScope.INSTANCE.getNode(Activator.PLUGIN_ID);
 String value = preferences.get(id, defaultValue);
 </code></pre>
+</div>
 </div>
 
 <h2 id="jface-preferences">JFace preferences</h2>
@@ -299,31 +308,43 @@ String value = preferences.get(id, defaultValue);
 <p>The plug-in preferences store by default points to the InstanceScope:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>IPreferenceStore store = Activator.getInstance().getPreferenceStore();
+<div class="highlight">
+<pre class="highlight">
+<code>IPreferenceStore store = Activator.getInstance().getPreferenceStore();
 int i = store.getInt("...");
 String s = store.getString("...");
 </code></pre>
+</div>
 </div>
 
 <p>This translates loosely to a <a href="http://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fapi%2Forg%2Feclipse%2Fui%2Fpreferences%2FScopedPreferenceStore.html">ScopedPreferenceStore</a> with an InstanceScope with a node that matches the plug-in bundle.id.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>IPreferenceStore store = new ScopedPreferenceStore(InstanceScope.INSTANCE, Activator.PLUGIN_ID);
+<div class="highlight">
+<pre class="highlight">
+<code>IPreferenceStore store = new ScopedPreferenceStore(InstanceScope.INSTANCE, Activator.PLUGIN_ID);
 </code></pre>
+</div>
 </div>
 
 <p>For the Eclipse scope, use:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>IPreferenceStore store = new ScopedPreferenceStore(ConfigurationScope.INSTANCE, Activator.PLUGIN_ID);
+<div class="highlight">
+<pre class="highlight">
+<code>IPreferenceStore store = new ScopedPreferenceStore(ConfigurationScope.INSTANCE, Activator.PLUGIN_ID);
 </code></pre>
+</div>
 </div>
 
 <p>For the project scope, use:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>IPreferenceStore store = new ScopedPreferenceStore(new ProjectScope(project), Activator.PLUGIN_ID);
+<div class="highlight">
+<pre class="highlight">
+<code>IPreferenceStore store = new ScopedPreferenceStore(new ProjectScope(project), Activator.PLUGIN_ID);
 </code></pre>
+</div>
 </div>
 
 <h2 id="persistent-stores">Persistent stores</h2>
@@ -341,19 +362,25 @@ String s = store.getString("...");
 <p>The file format is similar to that used for Java properties:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>eclipse.preferences.version=1
+<div class="highlight">
+<pre class="highlight">
+<code>eclipse.preferences.version=1
 pluginId/key=value
 ...
 </code></pre>
+</div>
 </div>
 
 <p>When using the IPreferencesService, multiple intermediate nodes can be inserted:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>eclipse.preferences.version=1
+<div class="highlight">
+<pre class="highlight">
+<code>eclipse.preferences.version=1
 pluginId/nodeId/key=value
 ...
 </code></pre>
+</div>
 </div>
 
 <h3 id="project-store">Project store</h3>
@@ -361,8 +388,11 @@ pluginId/nodeId/key=value
 <p>The project preferences are stored in a file below the project .settings folder:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code> project/.settings/&lt;pluginId&gt;.prefs
+<div class="highlight">
+<pre class="highlight">
+<code> project/.settings/&lt;pluginId&gt;.prefs
 </code></pre>
+</div>
 </div>
 
 <h3 id="instance-workspace-store">Instance (workspace) store</h3>
@@ -370,8 +400,11 @@ pluginId/nodeId/key=value
 <p>The workspace preferences are stored is in a separate file named after the plug-in ID:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/&lt;pluginId&gt;.prefs
+<div class="highlight">
+<pre class="highlight">
+<code>workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/&lt;pluginId&gt;.prefs
 </code></pre>
+</div>
 </div>
 
 <h3 id="configuration-eclipse-store">Configuration (Eclipse) store</h3>
@@ -379,8 +412,11 @@ pluginId/nodeId/key=value
 <p>The Eclipse preferences are stored is in a separate file named after the plug-in ID:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>eclipse/configuration/.settings/&lt;pluginId&gt;.prefs
+<div class="highlight">
+<pre class="highlight">
+<code>eclipse/configuration/.settings/&lt;pluginId&gt;.prefs
 </code></pre>
+</div>
 </div>
 
 <h2 id="defaults">Defaults</h2>
@@ -418,8 +454,11 @@ pluginId/nodeId/key=value
 <p>The properties will refer to values from multiple plug-ins; this requires that each line must mention the plug-in, a ‘/’ separator and the key/value:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>org.eclipse.cdt.debug.core/org.eclipse.cdt.debug.corecDebug.default_expression_format=4
+<div class="highlight">
+<pre class="highlight">
+<code>org.eclipse.cdt.debug.core/org.eclipse.cdt.debug.corecDebug.default_expression_format=4
 </code></pre>
+</div>
 </div>
 
 <h3 id="as-product-defaults">As product defaults</h3>
@@ -427,8 +466,11 @@ pluginId/nodeId/key=value
 <p>Any defaults, for any plug-in, can be defined in the product related file, like:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>&lt;property name="preferenceCustomization" value="plugin_customization.ini" /&gt;
+<div class="highlight">
+<pre class="highlight">
+<code>&lt;property name="preferenceCustomization" value="plugin_customization.ini" /&gt;
 </code></pre>
+</div>
 </div>
 
 <p>The syntax for the properties is the same as above, plugin/key=value.</p>
@@ -440,8 +482,11 @@ pluginId/nodeId/key=value
 <p>The scope of these properties is the current plug-in; the syntax of this file requires only the key/value, no plug-in id.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>flashDeviceName=STM32F407VG
+<div class="highlight">
+<pre class="highlight">
+<code>flashDeviceName=STM32F407VG
 </code></pre>
+</div>
 </div>
 
 <h3 id="in-code">In code</h3>
@@ -449,7 +494,9 @@ pluginId/nodeId/key=value
 <p>To set the default values for preferences use the extension point <strong>org.eclipse.core.runtime.preferences</strong>.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>public class MyInitializer extends AbstractPreferenceInitializer {
+<div class="highlight">
+<pre class="highlight">
+<code>public class MyInitializer extends AbstractPreferenceInitializer {
 
   public MyInitializer() {
   }
@@ -462,6 +509,7 @@ pluginId/nodeId/key=value
 }
 </code></pre>
 </div>
+</div>
 
 <h3 id="access-to-defaults">Access to defaults</h3>
 
@@ -470,16 +518,22 @@ pluginId/nodeId/key=value
 <p>For example, to lookup an integer preference value for your plug-in, use:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>Platform.getPreferencesService().getInt(Activator.PLUGIN_ID, preferenceKey, defaultValue, null);
+<div class="highlight">
+<pre class="highlight">
+<code>Platform.getPreferencesService().getInt(Activator.PLUGIN_ID, preferenceKey, defaultValue, null);
 </code></pre>
+</div>
 </div>
 
 <p>Direct access to defaults is also possible via the DefaultScope.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>Preferences preferences = DefaultScope.INSTANCE.getNode(Activator.PLUGIN_ID);
+<div class="highlight">
+<pre class="highlight">
+<code>Preferences preferences = DefaultScope.INSTANCE.getNode(Activator.PLUGIN_ID);
 String value = preferences.get(preferenceKey, defaultValue);
 </code></pre>
+</div>
 </div>
 
 <h2 id="windows-path-syntax">Windows path syntax</h2>
@@ -487,9 +541,12 @@ String value = preferences.get(preferenceKey, defaultValue);
 <p>A word of cautions on Windows: the path may be defined either in the portable way, with forward slashes, or, if you prefer (the brain damaged MS-DOS syntax with) backslashes, they must be escaped by a second backslash (for Java, C and other portable environments, the backslash is used to define special characters, like \n, or to escape the next character). For example, the following definitions are equivalent:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>default.path.1287942917=${eclipse_home}/../gcc/bin
+<div class="highlight">
+<pre class="highlight">
+<code>default.path.1287942917=${eclipse_home}/../gcc/bin
 default.path.1287942917=${eclipse_home}\\..\\gcc\\bin
 </code></pre>
+</div>
 </div>
 
 <h2 id="references">References</h2>

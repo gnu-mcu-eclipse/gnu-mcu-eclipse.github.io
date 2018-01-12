@@ -178,8 +178,11 @@
 <p>This method uses the portable tool <a href="https://www.npmjs.com/package/xpm">xpm</a>, the <strong>xPack Package Manager</strong>, and can be used on Windows, macOS and GNU/Linux.</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">xpm</span><span class="kv"> install @gnu-mcu-eclipse/openocd --global
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm install @gnu-mcu-eclipse/openocd <span class="nt">--global</span>
+</code></pre>
+</div>
 </div>
 
 <p>This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:</p>
@@ -218,9 +221,12 @@
 <p>To check if OpenOCD starts, use the following command:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code>C:&gt;"C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse\OpenOCD\0.10.0-5-20171110-1117\bin\openocd" --version
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
-</code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">C:&gt;</span><span class="s2">"C:</span><span class="se">\U</span><span class="s2">sers</span><span class="se">\i</span><span class="s2">lg</span><span class="se">\A</span><span class="s2">ppData</span><span class="se">\R</span><span class="s2">oaming</span><span class="se">\G</span><span class="s2">NU MCU Eclipse</span><span class="se">\O</span><span class="s2">penOCD</span><span class="se">\0</span><span class="s2">.10.0-5-20171110-1117</span><span class="se">\b</span><span class="s2">in</span><span class="se">\o</span><span class="s2">penocd"</span> <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
+</span></code></pre>
+</div>
 </div>
 
 <h3 id="drivers">Drivers</h3>
@@ -261,11 +267,14 @@ GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-1
 <p>To recommended procedure to unpack the archive is:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-osx.tgz
-</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-osx.tgz
+<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
+</code></pre>
+</div>
 </div>
 
 <p>Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.</p>
@@ -273,9 +282,12 @@ GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-1
 <p>To check if OpenOCD starts, use:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd</span><span class="kv"> --version
-</span>GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
-</code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="gnulinux">GNU/Linux</h2>
@@ -292,11 +304,14 @@ GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-1
 <p>To install this package, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/openocd/${version}</code></p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">cd</span><span class="kv"> ${HOME}/opt
-</span><span class="w">$ </span><span class="nc">tar</span><span class="kv"> xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian64.tgz
-</span><span class="w">$ </span><span class="nc">chmod</span><span class="kv"> -R -w gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian64.tgz
+<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
+</code></pre>
+</div>
 </div>
 
 <p>Note: although perfectly possible to install it in any location, it is recommended to use this location, since by default the plug-in searches for the executable in this location.</p>
@@ -304,9 +319,12 @@ GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-1
 <p>To check if OpenOCD starts and is recent, use:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd</span><span class="kv"> --version
-</span>GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
-</code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
+</span></code></pre>
+</div>
 </div>
 
 <h3 id="udev">UDEV</h3>
@@ -314,10 +332,13 @@ GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-1
 <p>For the JTAG probes implemented as USB devices (actually most of them), the last installation step on GNU/Linux is to configure the <strong>UDEV</strong> subsystem. OpenOCD provides an UDEV rules file defining all the supported IDs; to install it, just copy the file to <code class="highlighter-rouge">/etc/udev/rules.d</code> and eventually notify the daemon:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> cp ${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/contrib/99-openocd.rules \
-</span>  /etc/udev/rules.d/
-<span class="w">$ </span><span class="nc">sudo</span><span class="kv"> udevadm control --reload-rules
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">sudo </span>cp <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/contrib/99-openocd.rules <span class="se">\</span>
+  /etc/udev/rules.d/
+<span class="gp">$</span> <span class="nb">sudo </span>udevadm control <span class="nt">--reload-rules</span>
+</code></pre>
+</div>
 </div>
 
 <p>Note: If you previously installed the J-Link binaries, the USB IDs were already added to UDEV. The above OpenOCD rules file also defines the J-Link ID. Apparently UDEV does not complain; if you encounter problems, just comment out the definition in the OpenOCD file.</p>
@@ -329,8 +350,13 @@ or are not effective, and when trying to access the JTAG probe,
 an error is issued:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code>libusb_open failed: LIBUSB_ERROR_ACCESS
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">libusb_open failed: LIBUSB_ERROR_ACCESS
+</span>
 </code></pre>
+</div>
 </div>
 
 <p>If this happens, first try to start openocd with sudo; if this works,
@@ -339,8 +365,11 @@ for regular work you also need to grant your user permission to use the USB.</p>
 <p>For example, on Ubuntu 15.10 you need to issue something like:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> usermod -aG plugdev $USER
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">sudo </span>usermod <span class="nt">-aG</span> plugdev <span class="nv">$USER</span>
+</code></pre>
+</div>
 </div>
 
 <p>Then restart and login again.</p>
@@ -353,9 +382,11 @@ when you have a functional solution post it on the project forum.</p>
 <p>To test if OpenOCD is able to connect to a specific board, you generally need to select the interface and the processor. As a shortcut, for some well known boards, there are ready made configuration files to set both the interface and the processor. For example, on macOS, to test a connection via ST/LINK v2 to the STM32F4DISCOERY board, you can use the sample below:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/openocd/0.8.0-201501181257/bin/openocd</span><span class="kv"> \
-</span>  -f board/stm32f4discovery.cfg
-GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.8.0-201501181257/bin/openocd <span class="se">\</span>
+  <span class="nt">-f</span> board/stm32f4discovery.cfg
+<span class="go">GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
 Licensed under GNU GPL v2
 For bug reports, read
 
@@ -368,7 +399,8 @@ Info : using stlink api v2
 Info : Target voltage: 2.905638
 Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
 ^C
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="openocd-debugging-plug-ins">OpenOCD Debugging plug-ins</h2>

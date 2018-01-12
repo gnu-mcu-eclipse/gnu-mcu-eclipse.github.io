@@ -137,8 +137,12 @@
 
 <p>With lots of architectures and systems supported, GCC recommends prefixing the binaries with a unique tuple:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;arch&gt;-&lt;vendor&gt;-&lt;os&gt;-&lt;libc/abi&gt;-
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>&lt;arch&gt;-&lt;vendor&gt;-&lt;os&gt;-&lt;libc/abi&gt;-
 </code></pre>
+</div>
 </div>
 
 <p>The current RISC-V prefixes for the Linux toolchains are <code class="highlighter-rouge">riscv64-unknown-linux-gnu-</code> and <code class="highlighter-rouge">riscv32-unknown-linux-gnu-</code> and for the non-Linux toolchains are <code class="highlighter-rouge">riscv64-unknown-elf-</code> and <code class="highlighter-rouge">riscv32-unknown-elf-</code>.</p>
@@ -151,8 +155,12 @@
 
 <p>So, giving away the confusing parts, a more appropriate prefix for the multilib toolchain dedicated for bare-metal embedded applications would have been:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>riscv-none-embed-
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>riscv-none-embed-
 </code></pre>
+</div>
 </div>
 
 <p>To reduce confusion, and to differentiate from the <code class="highlighter-rouge">riscv64-unknown-elf-gcc</code> which is tightly coupled with a  <code class="highlighter-rouge">libgloss</code> implemented with kernel traps, the <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> toolchain, starting with the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.2.0-1-20171109">7.2.0-1-20171109 release</a> adopted this name.</p>
@@ -254,7 +262,10 @@ registers to pass them in.</li>
 
 <p>The current list is:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>march=rv32i/mabi=ilp32
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>march=rv32i/mabi=ilp32
 march=rv32im/mabi=ilp32
 march=rv32iac/mabi=ilp32
 march=rv32imac/mabi=ilp32
@@ -262,6 +273,7 @@ march=rv32imafc/mabi=ilp32f
 march=rv64imac/mabi=lp64
 march=rv64imafdc/mabi=lp64d
 </code></pre>
+</div>
 </div>
 
 <p>(the actual list is defined in this <a href="https://github.com/riscv/riscv-gcc/blob/riscv-next/gcc/config/riscv/t-elf-multilib">file</a>).</p>

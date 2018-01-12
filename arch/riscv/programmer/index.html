@@ -286,122 +286,143 @@
 <h3 id="32-bits">32 bits</h3>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">./riscv-none-embed-gcc</span><span class="kv"> -march=rv32i -mabi=ilp32 -E -dM - &lt; /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
-</span>#define __GXX_ABI_VERSION 1011
-#define __STDC_VERSION__ 201112L
-#define __VERSION__ "7.1.1 20170509"
-#define __riscv 1
-#define __riscv_cmodel_medlow 1
-#define __riscv_float_abi_soft 1
-#define __riscv_xlen 32
-
-<span class="w">$ </span><span class="nc">./riscv-none-embed-gcc</span><span class="kv"> -march=rv32imac -mabi=ilp32 -E -dM - &lt; /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
-</span>#define __GXX_ABI_VERSION 1011
-#define __STDC_VERSION__ 201112L
-#define __VERSION__ "7.1.1 20170509"
-#define __riscv 1
-#define __riscv_atomic 1
-#define __riscv_cmodel_medlow 1
-#define __riscv_compressed 1
-#define __riscv_div 1
-#define __riscv_float_abi_soft 1
-#define __riscv_mul 1
-#define __riscv_muldiv 1
-#define __riscv_xlen 32
-
-<span class="w">$ </span><span class="nc">./riscv-none-embed-gcc</span><span class="kv"> -march=rv32imafdc -mabi=ilp32d -E -dM - &lt; /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
-</span>#define __FP_FAST_FMA 1
-#define __FP_FAST_FMAF 1
-#define __GXX_ABI_VERSION 1011
-#define __STDC_VERSION__ 201112L
-#define __VERSION__ "7.1.1 20170509"
-#define __riscv 1
-#define __riscv_atomic 1
-#define __riscv_cmodel_medlow 1
-#define __riscv_compressed 1
-#define __riscv_div 1
-#define __riscv_fdiv 1
-#define __riscv_flen 64
-#define __riscv_float_abi_double 1
-#define __riscv_fsqrt 1
-#define __riscv_mul 1
-#define __riscv_muldiv 1
-#define __riscv_xlen 32
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32i <span class="nt">-mabi</span><span class="o">=</span>ilp32 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+<span class="gp">#</span>define __GXX_ABI_VERSION 1011
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __VERSION__ <span class="s2">"7.1.1 20170509"</span>
+<span class="gp">#</span>define __riscv 1
+<span class="gp">#</span>define __riscv_cmodel_medlow 1
+<span class="gp">#</span>define __riscv_float_abi_soft 1
+<span class="gp">#</span>define __riscv_xlen 32
+<span class="go">
+</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32imac <span class="nt">-mabi</span><span class="o">=</span>ilp32 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+<span class="gp">#</span>define __GXX_ABI_VERSION 1011
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __VERSION__ <span class="s2">"7.1.1 20170509"</span>
+<span class="gp">#</span>define __riscv 1
+<span class="gp">#</span>define __riscv_atomic 1
+<span class="gp">#</span>define __riscv_cmodel_medlow 1
+<span class="gp">#</span>define __riscv_compressed 1
+<span class="gp">#</span>define __riscv_div 1
+<span class="gp">#</span>define __riscv_float_abi_soft 1
+<span class="gp">#</span>define __riscv_mul 1
+<span class="gp">#</span>define __riscv_muldiv 1
+<span class="gp">#</span>define __riscv_xlen 32
+<span class="go">
+</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32imafdc <span class="nt">-mabi</span><span class="o">=</span>ilp32d <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+<span class="gp">#</span>define __FP_FAST_FMA 1
+<span class="gp">#</span>define __FP_FAST_FMAF 1
+<span class="gp">#</span>define __GXX_ABI_VERSION 1011
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __VERSION__ <span class="s2">"7.1.1 20170509"</span>
+<span class="gp">#</span>define __riscv 1
+<span class="gp">#</span>define __riscv_atomic 1
+<span class="gp">#</span>define __riscv_cmodel_medlow 1
+<span class="gp">#</span>define __riscv_compressed 1
+<span class="gp">#</span>define __riscv_div 1
+<span class="gp">#</span>define __riscv_fdiv 1
+<span class="gp">#</span>define __riscv_flen 64
+<span class="gp">#</span>define __riscv_float_abi_double 1
+<span class="gp">#</span>define __riscv_fsqrt 1
+<span class="gp">#</span>define __riscv_mul 1
+<span class="gp">#</span>define __riscv_muldiv 1
+<span class="gp">#</span>define __riscv_xlen 32
 </code></pre>
+</div>
 </div>
 
 <h3 id="64-bits">64 bits</h3>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">./riscv-none-embed-gcc</span><span class="kv"> -march=rv64i -mabi=lp64 -E -dM - &lt; /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
-</span>#define _LP64 1
-#define __GXX_ABI_VERSION 1011
-#define __LP64__ 1
-#define __STDC_VERSION__ 201112L
-#define __VERSION__ "7.1.1 20170509"
-#define __riscv 1
-#define __riscv_cmodel_medlow 1
-#define __riscv_float_abi_soft 1
-#define __riscv_xlen 64
-
-<span class="w">$ </span><span class="nc">./riscv-none-embed-gcc</span><span class="kv"> -march=rv64imac -mabi=lp64 -E -dM - &lt; /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
-</span>#define _LP64 1
-#define __GXX_ABI_VERSION 1011
-#define __LP64__ 1
-#define __STDC_VERSION__ 201112L
-#define __VERSION__ "7.1.1 20170509"
-#define __riscv 1
-#define __riscv_atomic 1
-#define __riscv_cmodel_medlow 1
-#define __riscv_compressed 1
-#define __riscv_div 1
-#define __riscv_float_abi_soft 1
-#define __riscv_mul 1
-#define __riscv_muldiv 1
-#define __riscv_xlen 64
-
-<span class="w">$ </span><span class="nc">./riscv-none-embed-gcc</span><span class="kv"> -march=rv64imafdc -mabi=lp64d -E -dM - &lt; /dev/null | egrep -i 'risc|fp[^-]|version|abi|lp' | sort
-</span>#define _LP64 1
-#define __FP_FAST_FMA 1
-#define __FP_FAST_FMAF 1
-#define __GXX_ABI_VERSION 1011
-#define __LP64__ 1
-#define __STDC_VERSION__ 201112L
-#define __VERSION__ "7.1.1 20170509"
-#define __riscv 1
-#define __riscv_atomic 1
-#define __riscv_cmodel_medlow 1
-#define __riscv_compressed 1
-#define __riscv_div 1
-#define __riscv_fdiv 1
-#define __riscv_flen 64
-#define __riscv_float_abi_double 1
-#define __riscv_fsqrt 1
-#define __riscv_mul 1
-#define __riscv_muldiv 1
-#define __riscv_xlen 64
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64i <span class="nt">-mabi</span><span class="o">=</span>lp64 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+<span class="gp">#</span>define _LP64 1
+<span class="gp">#</span>define __GXX_ABI_VERSION 1011
+<span class="gp">#</span>define __LP64__ 1
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __VERSION__ <span class="s2">"7.1.1 20170509"</span>
+<span class="gp">#</span>define __riscv 1
+<span class="gp">#</span>define __riscv_cmodel_medlow 1
+<span class="gp">#</span>define __riscv_float_abi_soft 1
+<span class="gp">#</span>define __riscv_xlen 64
+<span class="go">
+</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64imac <span class="nt">-mabi</span><span class="o">=</span>lp64 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+<span class="gp">#</span>define _LP64 1
+<span class="gp">#</span>define __GXX_ABI_VERSION 1011
+<span class="gp">#</span>define __LP64__ 1
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __VERSION__ <span class="s2">"7.1.1 20170509"</span>
+<span class="gp">#</span>define __riscv 1
+<span class="gp">#</span>define __riscv_atomic 1
+<span class="gp">#</span>define __riscv_cmodel_medlow 1
+<span class="gp">#</span>define __riscv_compressed 1
+<span class="gp">#</span>define __riscv_div 1
+<span class="gp">#</span>define __riscv_float_abi_soft 1
+<span class="gp">#</span>define __riscv_mul 1
+<span class="gp">#</span>define __riscv_muldiv 1
+<span class="gp">#</span>define __riscv_xlen 64
+<span class="go">
+</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64imafdc <span class="nt">-mabi</span><span class="o">=</span>lp64d <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+<span class="gp">#</span>define _LP64 1
+<span class="gp">#</span>define __FP_FAST_FMA 1
+<span class="gp">#</span>define __FP_FAST_FMAF 1
+<span class="gp">#</span>define __GXX_ABI_VERSION 1011
+<span class="gp">#</span>define __LP64__ 1
+<span class="gp">#</span>define __STDC_VERSION__ 201112L
+<span class="gp">#</span>define __VERSION__ <span class="s2">"7.1.1 20170509"</span>
+<span class="gp">#</span>define __riscv 1
+<span class="gp">#</span>define __riscv_atomic 1
+<span class="gp">#</span>define __riscv_cmodel_medlow 1
+<span class="gp">#</span>define __riscv_compressed 1
+<span class="gp">#</span>define __riscv_div 1
+<span class="gp">#</span>define __riscv_fdiv 1
+<span class="gp">#</span>define __riscv_flen 64
+<span class="gp">#</span>define __riscv_float_abi_double 1
+<span class="gp">#</span>define __riscv_fsqrt 1
+<span class="gp">#</span>define __riscv_mul 1
+<span class="gp">#</span>define __riscv_muldiv 1
+<span class="gp">#</span>define __riscv_xlen 64
 </code></pre>
+</div>
 </div>
 
 <h3 id="misc">Misc</h3>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#define __riscv_xlen 32
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#define __riscv_xlen 32
 #define __riscv_xlen 64
-</span></code></pre>
+</span>
+</code></pre>
+</div>
 </div>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#define __riscv_cmodel_medlow 1
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#define __riscv_cmodel_medlow 1
 #define __riscv_cmodel_medany 1
-</span></code></pre>
+</span>
+</code></pre>
+</div>
 </div>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code><span class="cp">#define __riscv_float_abi_soft 1
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="cp">#define __riscv_float_abi_soft 1
 #define __riscv_float_abi_single 1
 #define __riscv_float_abi_double 1
-</span></code></pre>
+</span>
+</code></pre>
+</div>
 </div>
 
 <h2 id="the-gp-global-pointer-register">The <code class="highlighter-rouge">gp</code> (Global Pointer) register</h2>
@@ -411,30 +432,35 @@
 <p>The linker uses the <code class="highlighter-rouge">__global_pointer$</code> symbol definition to compare the memory addresses and, if within range, it replaces absolute/pc-relative addressing with gp-relative addressing, which makes the code more efficient. This process is also called <em>relaxing</em>, and can be disabled by <code class="highlighter-rouge">-Wl,--no-relax</code>.</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">cat</span><span class="kv"> main.c 
-</span>int i;
-int main()
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">cat </span>main.c 
+<span class="gp">int i;</span>
+<span class="go">int main()
 {
-  return i;
-}
+</span><span class="gp">  return i;</span>
+<span class="go">}
 
-<span class="w">$ </span><span class="nc">riscv-none-embed-gcc</span><span class="kv">  main.c --save-temps
-</span><span class="w">$ </span><span class="nc">cat</span><span class="kv"> main.s
-</span>...
-	lui	a5,%hi(i)
+</span><span class="gp">$</span> riscv-none-embed-gcc  main.c <span class="nt">--save-temps</span>
+<span class="gp">$</span> <span class="nb">cat </span>main.s
+<span class="c">...
+</span><span class="go">	lui	a5,%hi(i)
 	lw	a5,%lo(i)(a5)
-...
-<span class="w">$ </span><span class="nc">riscv-none-embed-objdump</span><span class="kv"> -d a.out
-</span>...
-   101b4:       8341a783                lw      a5,-1996(gp) # 11fdc &lt;i&gt;
-...
-</code></pre>
+</span><span class="c">...
+</span><span class="gp">$</span> riscv-none-embed-objdump <span class="nt">-d</span> a.out
+<span class="c">...
+</span><span class="gp">   101b4:       8341a783                lw      a5,-1996(gp) #</span> 11fdc &lt;i&gt;
+<span class="c">...
+</span></code></pre>
+</div>
 </div>
 
 <p>The <code class="highlighter-rouge">gp</code> register should be loaded during startup with the address of the <code class="highlighter-rouge">__global_pointer$</code> symbol and should not be changed later.</p>
 
 <div class="language-c highlighter-rouge">
-<pre class="highlight"><code>	<span class="p">.</span><span class="n">section</span> <span class="p">.</span><span class="n">reset_entry</span><span class="p">,</span><span class="s">"ax"</span><span class="p">,</span><span class="err">@</span><span class="n">progbits</span>
+<div class="highlight">
+<pre class="highlight">
+<code>	<span class="p">.</span><span class="n">section</span> <span class="p">.</span><span class="n">reset_entry</span><span class="p">,</span><span class="s">"ax"</span><span class="p">,</span><span class="err">@</span><span class="n">progbits</span>
 	<span class="p">.</span><span class="n">align</span>	<span class="mi">1</span>
 	<span class="p">.</span><span class="n">globl</span>	<span class="n">_reset_entry</span>
 	<span class="p">.</span><span class="n">type</span>	<span class="n">_reset_entry</span><span class="p">,</span> <span class="err">@</span><span class="n">function</span>
@@ -450,13 +476,17 @@ int main()
 	<span class="n">j</span> <span class="n">_start</span>
 </code></pre>
 </div>
+</div>
 
 <p>The 4K region can be anywhere in the addressed memory, but, for the optimisation to be effective, it should preferably cover the most intensely used RAM area. For standard newlib applications, this is the area where the <code class="highlighter-rouge">.sdata</code> section is allocated, since it includes variables like <code class="highlighter-rouge">_impure_ptr</code>, <code class="highlighter-rouge">__malloc_sbrk_base</code>, etc. Thus, the definition should be placed right before the <code class="highlighter-rouge">.sdata</code> section. For example:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>PROVIDE( __global_pointer$ = . + (4K / 2) );
+<div class="highlight">
+<pre class="highlight">
+<code>PROVIDE( __global_pointer$ = . + (4K / 2) );
 *(.sdata .sdata.*)
 </code></pre>
+</div>
 </div>
 
 <p>The region size is 4K because RISC-V immediate values are 12-bit signed values, which are +/- 2048 in decimal or +/- 0x800 in hex; since the values are signed, the <code class="highlighter-rouge">__global_pointer$</code> must point to the middle of the region.</p>

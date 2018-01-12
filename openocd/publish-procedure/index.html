@@ -179,20 +179,28 @@ In the documentation git, add new entries to the <a href="/openocd/change-log/">
 
 <p>Be sure the scripts in the <strong>openocd-build.git</strong> are up to date.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git \
-</span>  ~/Downloads/openocd-build.git
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/openocd-build.git <span class="se">\</span>
+  ~/Downloads/openocd-build.git
 </code></pre>
+</div>
 </div>
 
 <h2 id="build">Build</h2>
 
 <p>Important note: Before starting the build, double check if the repository is clean (all changes were committed), otherwise the build version will be stamped with <code class="highlighter-rouge">-dirty</code>.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh cleanall
-</span><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
-</span><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash 
-</span><span class="w">$ </span><span class="nc">exec</span><span class="kv"> bash ~/Downloads/openocd-build.git/scripts/build.sh --all
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
+<span class="gp">$</span> bash ~/Downloads/openocd-build.git/scripts/build.sh checkout-stable
+<span class="gp">$</span> caffeinate bash 
+<span class="gp">$</span> <span class="nb">exec </span>bash ~/Downloads/openocd-build.git/scripts/build.sh <span class="nt">--all</span>
+</code></pre>
+</div>
 </div>
 
 <h2 id="prepare-a-new-blog-post-to-announce-the-release">Prepare a new blog post to announce the release</h2>
@@ -210,7 +218,11 @@ In the documentation git, add new entries to the <a href="/openocd/change-log/">
 
 <p>Copy/paste the build report at the end of the post as</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>06e474fe8e5070c84a80c7ffcb697e616a5f2a60f6178cc0c1ccd330c3e052f2 ?
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">06e474fe8e5070c84a80c7ffcb697e616a5f2a60f6178cc0c1ccd330c3e052f2 ?
 gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian32.tgz
 
 1c96b1e906fcaab55d5e3842049d05f76cb917c4bd5fbe71da9a0838d6519127 ?
@@ -233,7 +245,9 @@ gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64-setup.exe
 
 0ec4539ca660d80f5ad1a6000f41852647ef93afc26a11d01f4bda5847277bfc ?
 gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-win64.zip
+</span>
 </code></pre>
+</div>
 </div>
 
 <h2 id="update-the-web">Update the web</h2>

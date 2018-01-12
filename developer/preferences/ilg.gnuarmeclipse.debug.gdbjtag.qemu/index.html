@@ -130,8 +130,12 @@
 
 <p>The QEMU setting are persistent for each workspace and the storage is located at:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.../workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/ilg.gnuarmeclipse.debug.gdbjtag.qemu.prefs
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>.../workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/ilg.gnuarmeclipse.debug.gdbjtag.qemu.prefs
 </code></pre>
+</div>
 </div>
 
 <p>The properties in this file define the device name and all other setting from the interface.</p>
@@ -139,7 +143,10 @@
 <h2 id="properties">Properties</h2>
 <p>The persistent properties are:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gdb.client.commands=set mem inaccessible-by-default off
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>gdb.client.commands=set mem inaccessible-by-default off
 gdb.client.executable=${cross_prefix}gdb${cross_suffix}
 gdb.client.other=
 gdb.qemu.boardName=STM32F4-Discovery
@@ -156,20 +163,29 @@ gdb.server.executable=${qemu_path}/${qemu_executable}
 gdb.server.other=
 </code></pre>
 </div>
+</div>
 
 <h2 id="launcher-defaults">Launcher defaults</h2>
 
 <p>The following defaults are available to configure the QEMU debug launcher:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ilg.gnuarmeclipse.debug.gdbjtag.qemu/gdb.server.executable=${qemu_path}/${qemu_executable}
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>ilg.gnuarmeclipse.debug.gdbjtag.qemu/gdb.server.executable=${qemu_path}/${qemu_executable}
 ilg.gnuarmeclipse.debug.gdbjtag.qemu/gdb.client.executable=${cross_prefix}gdb${cross_suffix}
 </code></pre>
+</div>
 </div>
 
 <p>Defining these properties will provide the desired default values to the <strong>Debugging</strong> or <strong>Startup</strong> tabs.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ilg.gnuarmeclipse.debug.gdbjtag.qemu/tab.main.checkProgram=false
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>ilg.gnuarmeclipse.debug.gdbjtag.qemu/tab.main.checkProgram=false
 </code></pre>
+</div>
 </div>
 
 <p>Setting <strong>tab.main.checkProgram</strong> to true will check the program name field and disable the Debug button if the program name is not valid.</p>
@@ -182,16 +198,24 @@ ilg.gnuarmeclipse.debug.gdbjtag.qemu/gdb.client.executable=${cross_prefix}gdb${c
 
 <p>The plug-in will use this definition as default for <strong>${qemu_executable}</strong>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ilg.gnuarmeclipse.debug.gdbjtag.qemu/executable.name=qemu-system-gnuarmeclipse
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>ilg.gnuarmeclipse.debug.gdbjtag.qemu/executable.name=qemu-system-gnuarmeclipse
 </code></pre>
+</div>
 </div>
 
 <h3 id="the-executable-location">The executable location</h3>
 
 <p>The plug-in will take a best effort approach to find a location to be used as default for <strong>${qemu_path}</strong>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ilg.gnuarmeclipse.debug.gdbjtag.qemu/install.folder=/Applications/GNU MCU Eclipse/QEMU/2.2.92-201504041609-dev/bin
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>ilg.gnuarmeclipse.debug.gdbjtag.qemu/install.folder=/Applications/GNU MCU Eclipse/QEMU/2.2.92-201504041609-dev/bin
 </code></pre>
+</div>
 </div>
 
 <p>If this preference is defined and the executable is there, the plug-in will use it.</p>
@@ -200,7 +224,10 @@ ilg.gnuarmeclipse.debug.gdbjtag.qemu/gdb.client.executable=${cross_prefix}gdb${c
 
 <p>Otherwise the plug-in will try a folder search.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>search.path=\
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>search.path=\
 ${user.home}/Applications/GNU MCU Eclipse/QEMU:\
 ${user.home}/local/GNU MCU Eclipse/QEMU:\
 ${user.home}/local/gnuarmeclipse/QEMU:\
@@ -208,6 +235,7 @@ ${user.home}/local/gnuarmeclipse/QEMU:\
 /opt/local:\
 /usr/local
 </code></pre>
+</div>
 </div>
 
 <p>If this preference is defined, the plug-in will use it as search path, otherwise the specific platform defaults available in the <strong>preferences.ini</strong> file are used.</p>

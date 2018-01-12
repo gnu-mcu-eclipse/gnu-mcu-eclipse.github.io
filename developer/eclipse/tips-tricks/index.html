@@ -141,9 +141,12 @@
 <h2 id="find-project-from-configuration">Find project from configuration</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>IConfiguration config;
+<div class="highlight">
+<pre class="highlight">
+<code>IConfiguration config;
 IProject project = (IProject) config.getManagedProject().getOwner();
 </code></pre>
+</div>
 </div>
 
 <h2 id="display-a-message-box-from-a-non-ui-thread">Display a message box from a non-UI thread</h2>
@@ -151,7 +154,9 @@ IProject project = (IProject) config.getManagedProject().getOwner();
 <p>The JFace MessageDialog is prefered over SWT MessageBox (which is extremely ugly on some platforms).</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>class ErrorMessageDialog implements Runnable {
+<div class="highlight">
+<pre class="highlight">
+<code>class ErrorMessageDialog implements Runnable {
 
     public int retCode = 0;
 
@@ -176,18 +181,22 @@ if (messageDialog.retCode == 2) {
 }
 </code></pre>
 </div>
+</div>
 
 <h2 id="run-code-in-ui-thread">Run code in UI thread</h2>
 
 <p>To schedule execution of a piece of code in the UI thread:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>Display.getDefault().asyncExec(new Runnable() {
+<div class="highlight">
+<pre class="highlight">
+<code>Display.getDefault().asyncExec(new Runnable() {
     public void run() {
         // Do something
     }
 });
 </code></pre>
+</div>
 </div>
 
 <h2 id="generate-an-unpacked-plug-in">Generate an unpacked plug-in</h2>
@@ -197,16 +206,22 @@ if (messageDialog.retCode == 2) {
 <p>For this add the following line to MANIFEST.MF file:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>Eclipse-BundleShape: dir
+<div class="highlight">
+<pre class="highlight">
+<code>Eclipse-BundleShape: dir
 </code></pre>
+</div>
 </div>
 
 <h2 id="get-the-path-of-folder-where-eclipse-is-installed">Get the path of folder where Eclipse is installed</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>URL url = Platform.getInstallLocation().getURL();
+<div class="highlight">
+<pre class="highlight">
+<code>URL url = Platform.getInstallLocation().getURL();
 IPath path = new Path(url.getPath());
 </code></pre>
+</div>
 </div>
 
 <h2 id="get-the-path-of-a-resource-in-another-plug-in">Get the path of a resource in another plug-in</h2>
@@ -214,7 +229,9 @@ IPath path = new Path(url.getPath());
 <p>If you need to access files from another plug-in, you need to get the absolute path:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>Bundle bundle = Platform.getBundle(bundleId);
+<div class="highlight">
+<pre class="highlight">
+<code>Bundle bundle = Platform.getBundle(bundleId);
 URL url = FileLocator.find(bundle, new Path(relativePath), null);
 String location;
 try {
@@ -225,26 +242,36 @@ try {
 }
 </code></pre>
 </div>
+</div>
 
 <h2 id="template-shared-defaults">Template shared defaults</h2>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>value = SharedDefaults.getInstance().getSharedDefaultsMap().get(id);
+<div class="highlight">
+<pre class="highlight">
+<code>value = SharedDefaults.getInstance().getSharedDefaultsMap().get(id);
 </code></pre>
+</div>
 </div>
 
 <p>The store requires an update action:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>SharedDefaults.getInstance().updateShareDefaultsMap(SharedDefaults.getInstance().getSharedDefaultsMap());
+<div class="highlight">
+<pre class="highlight">
+<code>SharedDefaults.getInstance().updateShareDefaultsMap(SharedDefaults.getInstance().getSharedDefaultsMap());
 </code></pre>
+</div>
 </div>
 
 <p>The preferences are stored in a file name <strong>shareddefaults.xml</strong> located in the workspace:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>workspace/.metadata/.plugins/org.eclipse.cdt.core/shareddefaults.xml
+<div class="highlight">
+<pre class="highlight">
+<code>workspace/.metadata/.plugins/org.eclipse.cdt.core/shareddefaults.xml
 </code></pre>
+</div>
 </div>
 
 <h2 id="custom-default-files">Custom default files</h2>
@@ -254,7 +281,9 @@ try {
 <p>The preferences are stored in separate files, stored in separate folders named after the plug-in ID:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>eclipse/configuration/&lt;plug-in-id&gt;/name.prefs
+<div class="highlight">
+<pre class="highlight">
+<code>eclipse/configuration/&lt;plug-in-id&gt;/name.prefs
 
 URL url = Platform.getInstallLocation().getURL();
 
@@ -269,13 +298,16 @@ prop.load(is);
 return prop.getProperty(property, "").trim();
 </code></pre>
 </div>
+</div>
 
 <h2 id="global-markers">Global markers</h2>
 
 <p>To create a marker that has global scope (not associated with any specific resource), you can use the workspace root (IWorkspace.getRoot()) as the resource.</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>public static void reportInfo(String message) {
+<div class="highlight">
+<pre class="highlight">
+<code>public static void reportInfo(String message) {
 try {
   IMarker marker = ResourcesPlugin.getWorkspace().getRoot()
             .createMarker(IMarker.PROBLEM);
@@ -288,14 +320,18 @@ try {
 }
 </code></pre>
 </div>
+</div>
 
 <h2 id="configuration-folders-within-pde">Configuration folders within PDE</h2>
 
 <p>When PDE launches a new instance of Eclipse from a debug session, each launch configuration gets a configuration folder:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>./metadata/.plugins/org.eclipse.pde.core/&lt;launch-name&gt;/
+<div class="highlight">
+<pre class="highlight">
+<code>./metadata/.plugins/org.eclipse.pde.core/&lt;launch-name&gt;/
 </code></pre>
+</div>
 </div>
 
 

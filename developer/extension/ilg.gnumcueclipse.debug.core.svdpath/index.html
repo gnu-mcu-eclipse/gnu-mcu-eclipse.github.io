@@ -134,15 +134,22 @@
 
 <p>The only function required is:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="n">IPath</span> <span class="nf">getSVDAbsolutePath</span><span class="o">(</span><span class="n">String</span> <span class="n">deviceVendorId</span><span class="o">,</span> <span class="n">String</span> <span class="n">deviceName</span><span class="o">);</span>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="kd">public</span> <span class="n">IPath</span> <span class="nf">getSVDAbsolutePath</span><span class="o">(</span><span class="n">String</span> <span class="n">deviceVendorId</span><span class="o">,</span> <span class="n">String</span> <span class="n">deviceName</span><span class="o">);</span>
 </code></pre>
+</div>
 </div>
 
 <h2 id="where-is-this-extension-point-used">Where is this extension point used?</h2>
 
 <p>The svdPath extension point is used in <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/blob/develop/bundles/ilg.gnumcueclipse.debug.gdbjtag/src/ilg/gnumcueclipse/debug/gdbjtag/data/SVDPathManagerProxy.java">ilg.gnumcueclipse.debug.gdbjtag.data/SVDPathManagerProxy.java</a>, called from <code class="highlighter-rouge">SVDUtils.getTree(String deviceVendorId, String deviceName)</code>:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// Try to get the SVD from a custom provider, like in DAVE.</span>
+<div class="language-java highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="c1">// Try to get the SVD from a custom provider, like in DAVE.</span>
 <span class="n">SVDPathManagerProxy</span> <span class="n">pathManager</span> <span class="o">=</span> <span class="n">SVDPathManagerProxy</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
 <span class="n">path</span> <span class="o">=</span> <span class="n">pathManager</span><span class="o">.</span><span class="na">getSVDAbsolutePath</span><span class="o">(</span><span class="n">deviceVendorId</span><span class="o">,</span> <span class="n">deviceName</span><span class="o">);</span>
 
@@ -167,6 +174,7 @@
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
+</div>
 </div>
 
 <p>As seen above, the extension point has precedence over any CMSIS-PACK definitions, so, if it is defined, and it returns a SVD path, the returned path is used to read the SVD file.</p>

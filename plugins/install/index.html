@@ -242,21 +242,29 @@
 
 <p>On some distributions, for example on Ubuntu 16.04 LTS, Java seems to be already installed in the standard distribution:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">java</span><span class="kv"> -version
-</span>openjdk version "1.8.0_121"
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> java <span class="nt">-version</span>
+<span class="go">openjdk version "1.8.0_121"
 OpenJDK Runtime Environment (build 1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13)
 OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode)
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <p>On other distributions, for example on Ubuntu 14.04 LTS, you can install the OpenJDK run-time and test if it was properly installed with the following commands:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">sudo</span><span class="kv"> apt-get -y install default-jdk
-</span><span class="w">$ </span><span class="nc">java</span><span class="kv"> -version
-</span>java version "1.7.0_85"
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install default-jdk
+<span class="gp">$</span> java <span class="nt">-version</span>
+<span class="go">java version "1.7.0_85"
 OpenJDK Runtime Environment (IcedTea 2.6.1) (7u85-2.6.1-5ubuntu0.14.04.1)
 OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <p>If you are behind a firewall, older Java virtual machines <a href="/blog/2016/12/02/plugins-install-issue/">fail to connect to SourceForge</a>. Update your Java JDK to <strong>8u101 or later</strong> and retry to install the plug-ins.</p>
@@ -469,7 +477,11 @@ assets
 
 <p>If Eclipse complains that some required items could not be found, most probably you are trying to install the plug-ins on an older Eclipse, or on another Eclipse package than the recommended <strong>Eclipse IDE for C/C++ Developers</strong>.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>Cannot complete the install because one or more required items could not be found.
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">Cannot complete the install because one or more required items could not be found.
   Software being installed: GNU ARM C/C++ J-Link Debugging 4.1.1.201606210758 (ilg.gnuarmeclipse.debug.gdbjtag.jlink.feature.group 4.1.1.201606210758)
   Missing requirement: GNU ARM C/C++ Core 3.1.1.201606210758 (ilg.gnuarmeclipse.core 3.1.1.201606210758) requires 'bundle org.eclipse.cdt 8.6.0' but it could not be found
   Cannot satisfy dependency:
@@ -478,7 +490,9 @@ assets
   Cannot satisfy dependency:
     From: GNU ARM C/C++ J-Link Debugging 4.1.1.201606210758 (ilg.gnuarmeclipse.debug.gdbjtag.jlink.feature.group 4.1.1.201606210758)
     To: ilg.gnuarmeclipse.debug.gdbjtag.jlink [4.1.1.201606210758]
+</span>
 </code></pre>
+</div>
 </div>
 
 <p>Reinstall the correct Eclipse package, or add CDT to the existing Eclipse (<strong>Programming Languages</strong> → <strong>C/C++ Development Tools</strong>).</p>
@@ -487,18 +501,22 @@ assets
 
 <p>Eclipse is incompatible with the GTK version 3 distributed with Ubuntu (confirmed even with Ubuntu 16LTS). To overcome this, disable the use of GTK 3, by adding the following line to your environment:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">export</span><span class="kv"> SWT_GTK3=0
-</span>```console
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">export </span><span class="nv">SWT_GTK3</span><span class="o">=</span>0
+<span class="go">```console
 
-<span class="ni">### </span><span class="nc">macOS</span><span class="kv"> com.apple.quarantine
-</span>
+</span><span class="gp">#</span><span class="c">## macOS com.apple.quarantine</span>
+<span class="go">
 On macOS Sierra and later, unsigned applications are marked as _quarantined_ and subject to a path randomization, which prevents Eclipse to maintain persistent preferences (for more details see [blog post](https://ilgthegeek.wordpress.com/2017/07/13/macos-com-apple-quarantine/)). To disable this, remove the `com.apple.quarantine` extended attribute from `Eclipse.app`:
 
 ```console
-<span class="w">$ </span><span class="nc">xattr</span><span class="kv"> Eclipse.app
-</span>com.apple.quarantine
-<span class="w">$ </span><span class="nc">xattr</span><span class="kv"> -d com.apple.quarantine Eclipse.app
-</span></code></pre>
+</span><span class="gp">$</span> xattr Eclipse.app
+<span class="go">com.apple.quarantine
+</span><span class="gp">$</span> xattr <span class="nt">-d</span> com.apple.quarantine Eclipse.app
+</code></pre>
+</div>
 </div>
 
 <h2 id="plug-ins-versions">Plug-ins versions</h2>

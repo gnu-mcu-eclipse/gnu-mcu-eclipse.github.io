@@ -169,18 +169,26 @@
 
 <p>Be sure the scripts in the <strong>windows-build-tools.git</strong> are up to date.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/windows-build-tools.git \
-</span>  ~/Downloads/windows-build-tools.git
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/windows-build-tools.git <span class="se">\</span>
+  ~/Downloads/windows-build-tools.git
 </code></pre>
+</div>
 </div>
 
 <h2 id="build">Build</h2>
 
 <p>Important note: Before starting the build, double check if the repository is clean (all changes were committed), otherwise the build version will be stamped with <code class="highlighter-rouge">-dirty</code>.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh cleanall
-</span><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh --all
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh cleanall
+<span class="gp">$</span> caffeinate bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh <span class="nt">--all</span>
+</code></pre>
+</div>
 </div>
 
 <h2 id="prepare-a-new-blog-post-to-announce-the-release">Prepare a new blog post to announce the release</h2>
@@ -195,12 +203,18 @@
 
 <p>Copy/paste the build report at the end of the post as</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>25b495b340d84b971736a5dfc2a639608c19b5d9d30d14e86e870c1ce461b855 ?
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">25b495b340d84b971736a5dfc2a639608c19b5d9d30d14e86e870c1ce461b855 ?
 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip
 
 da147a2cd378183af1d19ecb655637b5b1deedb691fac25657d9d0e2a102e1be ?
 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip
+</span>
 </code></pre>
+</div>
 </div>
 
 <h2 id="update-the-web">Update the web</h2>

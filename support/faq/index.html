@@ -265,9 +265,15 @@
   <p>I get the following when trying to install Cross Compiler</p>
 </blockquote>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>Cannot complete the install because one or more required items could not be found.
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">Cannot complete the install because one or more required items could not be found.
 Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 (ilg.gnuarmeclipse.managedbuild.cross.feature.group 1.15.2.201511061603)
+</span>
 </code></pre>
+</div>
 </div>
 
 <p>Your Eclipse does not include CDT. You need to install <strong>Eclipse IDE for C/C++ Developers</strong> or to manually add CDT to an existing Eclipse.</p>
@@ -290,8 +296,12 @@ Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 (ilg.
 
 <p>The syntax required by the OpenOCD <code class="highlighter-rouge">echo</code> command is a single string, in other words both echo and the message must be in the same string. To achieve this in a shell, the string must be quoted:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>-c 'echo "Started by GNU ARM Eclipse"'
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>-c 'echo "Started by GNU ARM Eclipse"'
 </code></pre>
+</div>
 </div>
 
 <p>Please note that this command is used by the plug-in to detect when the GDB server is initialised and ready to receive commands; it is not necessary when starting OpenCOD manually.</p>
@@ -472,20 +482,31 @@ Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 (ilg.
 
 <p>If you have lots of folders and re-entereing them is tedious, you can try to manually edit the <code class="highlighter-rouge">.cproject</code> file. For this, first close Eclipse, and edit <code class="highlighter-rouge">.cproject</code> with a separate editor. Search for the lines with “.include.files”; if below them you see the list of folders, you don’t have to re-enter them again; check if the <code class="highlighter-rouge">&lt;option&gt;</code> element has an <code class="highlighter-rouge">name=</code> attribute; if not, add it before the superClass attribute, with the following content:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;option id="...include.paths.NNN" name="Include paths (-I)" superClass="..."&gt;
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>&lt;option id="...include.paths.NNN" name="Include paths (-I)" superClass="..."&gt;
 </code></pre>
+</div>
 </div>
 
 <h2 id="i-tried-to-use-float-abi-hard-on-cortex-m4-but-the-linker-fails">I tried to use Float ABI: hard on Cortex-M4, but the linker fails</h2>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>Building target: test1.elf
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">Building target: test1.elf
 Invoking: Cross ARM C++ Linker
 /usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/bin/ld: error: test1.elf uses VFP register arguments
 /usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/libg.a(lib_a-impure.o) does not
 /usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/bin/ld: failed to merge target specific data of file
 /usr/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/libg.a(lib_a-impure.o)
-...
+</span>
+<span class="c">...
+</span>
 </code></pre>
+</div>
 </div>
 
 <p>Although on Cortex-M4 the only available FPU hardware is fpv4-sp-d16, the compiler does not have a default defined for this, and it is necessary to explicitly select <strong>FPU Type: fpv4-sp-d16</strong> in the C/C++ Settings page.</p>

@@ -137,7 +137,10 @@
 <p>The result of a successful build looks like this:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code>[INFO] ------------------------------------------------------------------------
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">[INFO] ------------------------------------------------------------------------
 [INFO] Building GNU MCU Eclipse plug-ins root 4.2.1-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO] 
@@ -195,7 +198,9 @@
 [INFO] Finished at: 2017-11-13T20:01:33+02:00
 [INFO] Final Memory: 171M/1483M
 [INFO] ------------------------------------------------------------------------
+</span>
 </code></pre>
+</div>
 </div>
 
 <p>The result are two p2 repositories:</p>
@@ -272,8 +277,11 @@
 <p>When starting debug sessions from within Eclipse, a copy of the run-time is kept under</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Eclipse GNU MCU Plug-ins
+<div class="highlight">
+<pre class="highlight">
+<code>${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Eclipse GNU MCU Plug-ins
 </code></pre>
+</div>
 </div>
 
 <p>For unknown reasons, some changes in the source code (like changing properties files) do not trigger a rebuild, and it is normally not possible to test these changes.</p>
@@ -287,10 +295,13 @@
 <p>Clone the CDT repository:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">cd</span><span class="kv"> .../"GNU MCU Eclipse"
-</span><span class="w">$ </span><span class="nc">mkdir</span><span class="kv"> -p originals
-</span><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git originals/org.eclipse.cdt.git
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">cd</span> .../<span class="s2">"GNU MCU Eclipse"</span>
+<span class="gp">$</span> mkdir <span class="nt">-p</span> originals
+<span class="gp">$</span> git clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git originals/org.eclipse.cdt.git
+</code></pre>
+</div>
 </div>
 
 <p>For regular tests, select the <code class="highlighter-rouge">CDT_9_2_1</code> tag.</p>

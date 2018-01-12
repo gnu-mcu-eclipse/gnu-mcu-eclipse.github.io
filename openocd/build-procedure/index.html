@@ -172,9 +172,13 @@
 
 <p>To download it, clone the <a href="https://github.com/gnu-mcu-eclipse/openocd-build">gnu-mcu-eclipse/openocd-build</a> Git repo.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/openocd-build.git \
-</span>  ~/Downloads/openocd-build.git
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/openocd-build.git <span class="se">\</span>
+  ~/Downloads/openocd-build.git
 </code></pre>
+</div>
 </div>
 
 <h2 id="check-the-script">Check the script</h2>
@@ -187,18 +191,26 @@
 
 <p>However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh preload-images
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/openocd-build.git/scripts/build.sh preload-images
+</code></pre>
+</div>
 </div>
 
 <p>The result should look similar to:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">docker</span><span class="kv"> images
-</span>REPOSITORY                  TAG                   IMAGE ID            CREATED             SIZE
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> docker images
+<span class="go">REPOSITORY                  TAG                   IMAGE ID            CREATED             SIZE
 ilegeul/centos32            6-xbb-tex-v1          84e5da687232        3 days ago          4.52GB
 ilegeul/centos              6-xbb-tex-v1          4e96fda659ab        3 days ago          4.71GB
 hello-world                 latest                1815c82652c0        6 months ago        1.84kB
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="development">Development</h2>
@@ -245,20 +257,31 @@ hello-world                 latest                1815c82652c0        6 months a
 
 <p>Before starting a multi-platform build, check if Docker is started.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh --all
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/openocd-build.git/scripts/build.sh <span class="nt">--all</span>
+</code></pre>
+</div>
 </div>
 
 <p>On macOS, to prevent entering sleep, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash ~/Downloads/openocd-build.git/scripts/build.sh --all
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> caffeinate bash ~/Downloads/openocd-build.git/scripts/build.sh <span class="nt">--all</span>
+</code></pre>
+</div>
 </div>
 
 <p>About half an hour later, the output of the build script is a set of 5 files in the output folder:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">ls</span><span class="kv"> -l deploy
-</span>total 31088
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">ls</span> <span class="nt">-l</span> deploy
+<span class="go">total 31088
 drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:41 centos32
 drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:26 centos64
 -rw-r--r--  1 ilg  staff        1 Jan  4 18:50 empty.sha
@@ -275,7 +298,8 @@ drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:26 centos64
 drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:21 osx
 drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:50 win32
 drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:37 win64
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="subsequent-runs">Subsequent runs</h2>
@@ -284,22 +308,34 @@ drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:37 win64
 
 <p>Instead of <code class="highlighter-rouge">--all</code>, you can use any combination of:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>--win32 --win64 --linux32 --linux64 --osx
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>--win32 --win64 --linux32 --linux64 --osx
 </code></pre>
+</div>
 </div>
 
 <h3 id="clean">clean</h3>
 
 <p>To remove most build files, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh clean
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/openocd-build.git/scripts/build.sh clean
+</code></pre>
+</div>
 </div>
 
 <p>To also remove the repository and the output files, use:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh cleanall
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/openocd-build.git/scripts/build.sh cleanall
+</code></pre>
+</div>
 </div>
 
 <h2 id="native-builds">Native builds</h2>
@@ -308,8 +344,12 @@ drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:37 win64
 
 <p>For such cases, simply start the script without any platform option:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/openocd-build.git/scripts/build.sh
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/openocd-build.git/scripts/build.sh
+</code></pre>
+</div>
 </div>
 
 <p>It is the responsibility of the user to meet all the prerequisites.</p>
@@ -320,8 +360,11 @@ drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:37 win64
 
 <p>After install, this package should create structure like this (only the first two depth levels are shown):</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">tree</span><span class="kv"> -L 2 ${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
-</span>├── bin
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> tree <span class="nt">-L</span> 2 <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
+<span class="go">├── bin
 │   └── openocd
 ├── doc
 │   ├── openocd.html
@@ -348,7 +391,8 @@ drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:37 win64
     └── tools
 
 16 directories, 9 files
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <p>No other files are installed in any system folders or other locations.</p>
@@ -363,12 +407,16 @@ drwxr-xr-x  1 ilg  staff    16384 Jan  4 18:37 win64
 
 <p>For a true test you need to first install the package and then run the program form the final location. For example on macOS the output should look like:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">${HOME}/opt/gnu-mcu-eclipse/openocd/0.10.0-3-20170826-0939-dev/bin/openocd</span><span class="kv"> --version
-</span>GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00138-g96c70022 (2017-08-26-12:40)
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-3-20170826-0939-dev/bin/openocd <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 64-bits Open On-Chip Debugger 0.10.0+dev-00138-g96c70022 (2017-08-26-12:40)
 Licensed under GNU GPL v2
 For bug reports, read
 	http://openocd.org/doc/doxygen/bugs.html
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="more-build-details">More build details</h2>

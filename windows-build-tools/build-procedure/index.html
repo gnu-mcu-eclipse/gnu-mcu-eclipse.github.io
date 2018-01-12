@@ -166,9 +166,12 @@
 <p>To download it, clone the <a href="https://github.com/gnu-mcu-eclipse/windows-build-tools">gnu-mcu-eclipse/windows-build-tools</a> Git repo.</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/windows-build-tools.git \
-</span>  ~/Downloads/windows-build-tools.git
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/windows-build-tools.git <span class="se">\</span>
+  ~/Downloads/windows-build-tools.git
 </code></pre>
+</div>
 </div>
 
 <h2 id="check-the-script">Check the script</h2>
@@ -182,19 +185,25 @@
 <p>However, since the images used for this build are relatively large, it is recommended to load them explicitly before starting the build:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/windows-build-tools.git/scripts/build.sh preload-images
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/windows-build-tools.git/scripts/build.sh preload-images
+</code></pre>
+</div>
 </div>
 
 <p>The result should look similar to:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">docker</span><span class="kv"> images
-</span>REPOSITORY                  TAG                   IMAGE ID            CREATED             SIZE
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> docker images
+<span class="go">REPOSITORY                  TAG                   IMAGE ID            CREATED             SIZE
 ilegeul/centos32            6-xbb-tex-v1          84e5da687232        3 days ago          4.52GB
 ilegeul/centos              6-xbb-tex-v1          4e96fda659ab        3 days ago          4.71GB
 hello-world                 latest                1815c82652c0        6 months ago        1.84kB
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="development">Development</h2>
@@ -233,22 +242,30 @@ hello-world                 latest                1815c82652c0        6 months a
 <p>Before starting a multi-platform build, check if Docker is started.</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/windows-build-tools.git/scripts/build.sh --all
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/windows-build-tools.git/scripts/build.sh <span class="nt">--all</span>
+</code></pre>
+</div>
 </div>
 
 <p>On macOS, to prevent entering sleep, use:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">caffeinate</span><span class="kv"> bash ~/Downloads/windows-build-tools.git/scripts/build.sh --all
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> caffeinate bash ~/Downloads/windows-build-tools.git/scripts/build.sh <span class="nt">--all</span>
+</code></pre>
+</div>
 </div>
 
 <p>After a few good minutes, the output of the build script is a set of files in the output folder:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">ls</span><span class="kv"> -l deploy 
-</span>total 6600
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">ls</span> <span class="nt">-l</span> deploy 
+<span class="go">total 6600
 -rw-r--r--   1 ilg  staff        1 Jan  3 21:26 empty.sha
 -rw-r--r--   1 ilg  staff  1577768 Jan  3 21:26 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip
 -rw-r--r--   1 ilg  staff      123 Jan  3 21:26 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip.sha
@@ -256,7 +273,8 @@ hello-world                 latest                1815c82652c0        6 months a
 -rw-r--r--   1 ilg  staff      123 Jan  3 21:23 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip.sha
 drwxr-xr-x  13 ilg  staff      416 Jan  3 21:23 win32
 drwxr-xr-x  13 ilg  staff      416 Jan  3 21:20 win64
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <h2 id="subsequent-runs">Subsequent runs</h2>
@@ -266,8 +284,11 @@ drwxr-xr-x  13 ilg  staff      416 Jan  3 21:20 win64
 <p>Instead of <code class="highlighter-rouge">--all</code>, you can use any combination of:</p>
 
 <div class="highlighter-rouge">
-<pre class="highlight"><code>--win32 --win64
+<div class="highlight">
+<pre class="highlight">
+<code>--win32 --win64
 </code></pre>
+</div>
 </div>
 
 <h3 id="clean">clean</h3>
@@ -275,15 +296,21 @@ drwxr-xr-x  13 ilg  staff      416 Jan  3 21:20 win64
 <p>To remove most build files, use:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/windows-build-tools.git/scripts/build.sh clean
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/windows-build-tools.git/scripts/build.sh clean
+</code></pre>
+</div>
 </div>
 
 <p>To also remove the repository and the output files, use:</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">bash</span><span class="kv"> ~/Downloads/windows-build-tools.git/scripts/build.sh cleanall
-</span></code></pre>
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/windows-build-tools.git/scripts/build.sh cleanall
+</code></pre>
+</div>
 </div>
 
 <h2 id="install-hierarchy">Install hierarchy</h2>
@@ -293,8 +320,10 @@ drwxr-xr-x  13 ilg  staff      416 Jan  3 21:20 win64
 <p>After install, this package should create structure like this (only the first two depth levels are shown):</p>
 
 <div class="language-console highlighter-rouge">
-<pre class="highlight"><code><span class="w">$ </span><span class="nc">tree</span><span class="kv"> -L 2 Build\ Tools/2.10-20180103-1919/
-</span>├── COPYING
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> tree <span class="nt">-L</span> 2 Build<span class="se">\ </span>Tools/2.10-20180103-1919/
+<span class="go">├── COPYING
 ├── INFO.txt
 ├── bin
 │   ├── busybox.exe
@@ -315,7 +344,8 @@ drwxr-xr-x  13 ilg  staff      416 Jan  3 21:20 win64
     └── make-4.1
 
 5 directories, 14 files
-</code></pre>
+</span></code></pre>
+</div>
 </div>
 
 <p>No other files are installed in any system folders or other locations.</p>

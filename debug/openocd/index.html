@@ -270,7 +270,7 @@
   <li>
     <p>the order of sections/fields reflect the order commands are sent to GDB; for example the above generates:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>monitor reset init
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>monitor reset init
 monitor halt
 ...
 monitor arm semihosting enable
@@ -281,8 +281,7 @@ monitor reset halt
 monitor halt
 ...
 continue
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>select the <strong>Common</strong> tab, set the <em>Save as:</em> field to <strong>Shared file</strong> and accept the current project name</p>
@@ -426,8 +425,12 @@ continue
 
 <p>The syntax required by the OpenOCD <code class="highlighter-rouge">echo</code> command is a single string, in other words both echo and the message must be in the same string. To achieve this in a shell, the string must be quoted:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>-c 'echo "Started by GNU MCU Eclipse"'
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>-c 'echo "Started by GNU MCU Eclipse"'
 </code></pre>
+</div>
 </div>
 
 <p>Note: this command is used by the plug-in to detect when the GDB server is initialised and ready to receive commands. It is not necessary when starting OpenCOD manually.</p>

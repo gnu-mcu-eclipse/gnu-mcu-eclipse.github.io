@@ -187,8 +187,14 @@
   <li>on macOS, remove the <code class="highlighter-rouge">com.apple.quarantine</code> attribute:</li>
 </ul>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code>xattr -d com.apple.quarantine Eclipse.app
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">xattr -d com.apple.quarantine Eclipse.app
+</span>
 </code></pre>
+</div>
 </div>
 <ul>
   <li>rename <code class="highlighter-rouge">Eclipse.app</code> to <code class="highlighter-rouge">Eclipse-com-cdt-47.app</code> (<code class="highlighter-rouge">eclipse</code> to <code class="highlighter-rouge">eclipse-com-cdt-47</code> on Windows)</li>
@@ -383,10 +389,14 @@
 
 <p>On Unix systems, the recommended method is using a command line:</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">cd</span><span class="kv"> .../GNU\ MCU\ Eclipse
-</span><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/eclipse-plugins.git eclipse-plugins.git
-</span><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone --recurse-submodules https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="nb">cd</span> .../GNU<span class="se">\ </span>MCU<span class="se">\ </span>Eclipse
+<span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/eclipse-plugins.git eclipse-plugins.git
+<span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
+</code></pre>
+</div>
 </div>
 
 <p>On Windows, the <code class="highlighter-rouge">git</code> command is available in the <a href="https://git-scm.com/download/win">Git for Windows</a> package, it should have been installed from the first step.</p>
@@ -501,8 +511,12 @@
 
 <p>The project <code class="highlighter-rouge">org.eclipse.epp.packages.git</code> is a fork of <code class="highlighter-rouge">https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git</code>.</p>
 
-<div class="language-console highlighter-rouge"><pre class="highlight"><code><span class="w">$ </span><span class="nc">git</span><span class="kv"> clone https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
-</span></code></pre>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> git clone https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
+</code></pre>
+</div>
 </div>
 
 <h2 id="cdt-wiki">CDT Wiki</h2>
