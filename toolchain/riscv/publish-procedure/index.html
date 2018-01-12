@@ -105,34 +105,40 @@
 <a href="#update-the-change-log"><span class="tocnumber">1</span> <span class="toctext">Update the Change log</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#build"><span class="tocnumber">2</span> <span class="toctext">Build</span></a>
+<a href="#update-info"><span class="tocnumber">2</span> <span class="toctext">Update INFO</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#prepare-a-new-blog-post-to-announce-the-release"><span class="tocnumber">3</span> <span class="toctext">Prepare a new blog post to announce the release</span></a>
+<a href="#commit-all-project-git"><span class="tocnumber">3</span> <span class="toctext">Commit all project git</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#update-the-release-post-with-the-sha-hashes"><span class="tocnumber">4</span> <span class="toctext">Update the release post with the SHA hashes</span></a>
+<a href="#edit-the-build-script"><span class="tocnumber">4</span> <span class="toctext">Edit the build script</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#publish-the-web"><span class="tocnumber">5</span> <span class="toctext">Publish the Web</span></a>
+<a href="#push-the-build-script-git"><span class="tocnumber">5</span> <span class="toctext">Push the build script git</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#create-a-new-github-release"><span class="tocnumber">6</span> <span class="toctext">Create a new GitHub release</span></a>
+<a href="#checkclonepull-build-scripts"><span class="tocnumber">6</span> <span class="toctext">Check/clone/pull build scripts</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#update-the-release-link"><span class="tocnumber">7</span> <span class="toctext">Update the release link</span></a>
+<a href="#build"><span class="tocnumber">7</span> <span class="toctext">Build</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#publish-the-web-1"><span class="tocnumber">8</span> <span class="toctext">Publish the Web</span></a>
+<a href="#prepare-a-new-blog-post"><span class="tocnumber">8</span> <span class="toctext">Prepare a new blog post</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#update-the-release-link-1"><span class="tocnumber">9</span> <span class="toctext">Update the release link</span></a>
+<a href="#update-the-sha-sums"><span class="tocnumber">9</span> <span class="toctext">Update the SHA sums</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#add-badge"><span class="tocnumber">10</span> <span class="toctext">Add badge</span></a>
+<a href="#update-the-web"><span class="tocnumber">10</span> <span class="toctext">Update the Web</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#share-on-facebook"><span class="tocnumber">11</span> <span class="toctext">Share on Facebook</span></a>
+<a href="#create-a-new-github-release"><span class="tocnumber">11</span> <span class="toctext">Create a new GitHub release</span></a>
+</li>
+<li class="toc_level-1 toc_section-12">
+<a href="#update-the-web-link"><span class="tocnumber">12</span> <span class="toctext">Update the web link</span></a>
+</li>
+<li class="toc_level-1 toc_section-13">
+<a href="#share-on-facebook"><span class="tocnumber">13</span> <span class="toctext">Share on Facebook</span></a>
 </li>
 </ul>
 </td>
@@ -145,27 +151,79 @@
 
 <p>Generally, apart from packing, there should be no local changes.</p>
 
-<p>Open the <code class="highlighter-rouge">gnu-mcu-eclipse/info/CHANGES.txt</code> file from the <code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build</code> project git, and copy its content to the documentation web.</p>
+<p>Open the <code class="highlighter-rouge">gnu-mcu-eclipse/info/CHANGES.txt</code> file from  <code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> project git, and copy entries to the web git.</p>
 
-<p>In the documentation git, add new entries to the <a href="/toolchain/riscv/change-log/">Change log</a> (<code class="highlighter-rouge">pages/toolchain/riscv/change-log.md</code>), grouped by days.</p>
+<p>In the web git, add new entries to the <a href="/toolchain/riscv/change-log/">Change log</a> (<code class="highlighter-rouge">pages/toolchain/riscv/change-log.md</code>), grouped by days.</p>
+
+<h2 id="update-info">Update INFO</h2>
+
+<p>Edit the <code class="highlighter-rouge">info/INFO.txt</code> file from <code class="highlighter-rouge">openocd-build.git</code> and update the latest commits.</p>
+
+<h2 id="commit-all-project-git">Commit all project git</h2>
+
+<p>Commit all</p>
+
+<ul>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse/riscv-binutils-gdb.git</code></li>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc.git</code></li>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse/riscv-newlib.git</code></li>
+</ul>
+
+<h2 id="edit-the-build-script">Edit the build script</h2>
+
+<p>Edit the <code class="highlighter-rouge">RELEASE_VERSION</code> variable to point to the actual release.</p>
+
+<h2 id="push-the-build-script-git">Push the build script git</h2>
+
+<p>Push <code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> to GitHub.</p>
+
+<p>Possibly push the helper project too.</p>
+
+<h2 id="checkclonepull-build-scripts">Check/clone/pull build scripts</h2>
+
+<p>Be sure the scripts in <code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> are up to date.</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git <span class="se">\</span>
+  ~/Downloads/openocd-build.git
+</code></pre>
+</div>
+</div>
 
 <h2 id="build">Build</h2>
 
-<p>Follow the steps in the separate <a href="/toolchain/riscv/build-procedure/">How to build</a> page.</p>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh cleanall
+<span class="gp">$</span> caffeinate bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--all</span>
+</code></pre>
+</div>
+</div>
 
-<h2 id="prepare-a-new-blog-post-to-announce-the-release">Prepare a new blog post to announce the release</h2>
+<p>For more details, see the <a href="/toolchain/riscv/build-procedure/">build</a> page.</p>
 
-<p>In the documentation git:</p>
+<h2 id="prepare-a-new-blog-post">Prepare a new blog post</h2>
+
+<p>In the web git:</p>
 
 <ul>
   <li>add a new file to <code class="highlighter-rouge">_posts/riscv-none-gcc/releases</code></li>
   <li>name the file like <code class="highlighter-rouge">2016-01-11-riscv-none-gcc-v7-1-1-2-20160110-released.md</code></li>
   <li>name the post like: <strong>GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702 released</strong>.</li>
+  <li>as <code class="highlighter-rouge">download_url</code> use the generic <code class="highlighter-rouge">https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/</code></li>
   <li>update the <code class="highlighter-rouge">date:</code> field with the current date</li>
-  <li>in the <strong>Binary files »</strong> link, use the Releases URL, like <code class="highlighter-rouge">https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/</code> (the page must exist, otherwise publishing will fail)</li>
 </ul>
 
-<h2 id="update-the-release-post-with-the-sha-hashes">Update the release post with the SHA hashes</h2>
+<p>Close <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/issues">issues</a> on the way. Refer to them as:</p>
+
+<ul>
+  <li><strong>[Issue:[#22](…)]</strong>.</li>
+</ul>
+
+<h2 id="update-the-sha-sums">Update the SHA sums</h2>
 
 <p>Copy/paste the build report at the end of the post as</p>
 
@@ -183,64 +241,46 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 </div>
 </div>
 
-<h2 id="publish-the-web">Publish the Web</h2>
+<h2 id="update-the-web">Update the Web</h2>
 
 <ul>
-  <li>git commit &amp; push the <code class="highlighter-rouge">gnu-mcu-eclipse.github.io-source</code> project; use something like <code class="highlighter-rouge">v7.1.1-1-20170702-0625 released</code> as message</li>
-  <li>wait for the Travis build to complete; occasionally links to not work, and might need to restart the build</li>
+  <li>commit the <code class="highlighter-rouge">gnu-mcu-eclipse.github.io-source</code> project; use a message like <strong>RISC-V Embedded GCC v7.1.1-1-20170702-0625 released</strong></li>
+  <li>wait for the Travis build to complete; occasionally links to not work, and might need to restart the build.</li>
+  <li>remember the post URL, since it must be updated in the release page</li>
 </ul>
 
 <p>Note: initially the link to binaries points to the parent releases folder, otherwise Travis will complain and do not publish the site to <code class="highlighter-rouge">gnu-mcu-eclipse.github.io</code>.</p>
 
 <h2 id="create-a-new-github-release">Create a new GitHub release</h2>
 
-<p>In the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/">gnu-mcu-eclipse/riscv-none-gcc</a> project:</p>
-
 <ul>
   <li>go to the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases">GitHub Releases</a> page</li>
   <li>click <strong>Draft a new release</strong></li>
   <li>name the tag like <strong>v7.1.1-1-20170702</strong> (mind the dashes in the middle!)</li>
-  <li>as description, copy the first paragraph from the Web release page</li>
-  <li><strong>attach binaries</strong> (drag and drop from the <code class="highlighter-rouge">deploy</code> folder will do it)</li>
+  <li>select the corresponding <code class="highlighter-rouge">-gme</code> branch</li>
+  <li>name the release like <strong>GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-1-20171109</strong></li>
+  <li>as description
+    <ul>
+      <li>add a downloads badge like <code class="highlighter-rouge">[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/riscv-none-gcc/v7.1.1-1-20170702/total.svg)]()</code>; use empty URL for now</li>
+      <li>copy the first paragraph from the Web release page</li>
+    </ul>
+  </li>
+  <li>add a link to the Web page <code class="highlighter-rouge">[Continue reading »]()</code>; use an empty URL for now</li>
+  <li>get URL from web and update the above links</li>
+  <li><strong>attach binaries</strong> and SHA (drag and drop from the archives folder will do it)</li>
   <li>click the <strong>Publish Release</strong> button</li>
 </ul>
 
 <p>Note: at this moment the system should send a notification to all clients watching this project.</p>
 
-<h2 id="update-the-release-link">Update the release link</h2>
+<h2 id="update-the-web-link">Update the web link</h2>
 
-<p>In the project web, the recent post:</p>
-
-<ul>
-  <li>update the <strong>Binary files »</strong> link to use the actual version, like <code class="highlighter-rouge">https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702</code> (copy/paste it from the browser).</li>
-</ul>
-
-<h2 id="publish-the-web-1">Publish the Web</h2>
+<p>In the web git:</p>
 
 <ul>
-  <li>git commit &amp; push the <code class="highlighter-rouge">gnu-mcu-eclipse.github.io-source</code> project; use something like <code class="highlighter-rouge">v7.1.1-1-20170702 update link</code> as message</li>
+  <li><code class="highlighter-rouge">download_url: https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v0.10.0-4-20171004</code></li>
+  <li>use something like <code class="highlighter-rouge">v0.10.0-4-20171004 update link</code> as message</li>
 </ul>
-
-<h2 id="update-the-release-link-1">Update the release link</h2>
-
-<p>In the release page:</p>
-
-<ul>
-  <li>add <strong>[Continue reading »]()</strong></li>
-  <li>get URL from web and update the link</li>
-</ul>
-
-<h2 id="add-badge">Add badge</h2>
-
-<p>In the release page, at the end:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/riscv-none-gcc/vv7.1.1-2-20170912/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/)
-</code></pre>
-</div>
-</div>
 
 <h2 id="share-on-facebook">Share on Facebook</h2>
 
@@ -248,15 +288,15 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
   <li>go to the new post and follow the Share link.</li>
   <li>DO NOT select <strong>On your own Timeline</strong>, but <strong>On a Page you manage</strong></li>
   <li>select GNU MCU Eclipse</li>
-  <li>posting as GNU ARM Eclipse</li>
-  <li>click <strong>Share link</strong></li>
+  <li>posting as GNU MCU Eclipse</li>
+  <li>click <strong>Post to Facebook</strong></li>
   <li>check the post in the <a href="https://www.facebook.com/gnu-mcu-eclipse">Facebook page</a></li>
 </ul>
 
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sun Nov 12 00:11:53 2017 UTC.</p>
+<p class="page-footer">Last modified on Fri Jan 12 22:10:17 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/publish-procedure/" data-layout="button"></div>
 
 

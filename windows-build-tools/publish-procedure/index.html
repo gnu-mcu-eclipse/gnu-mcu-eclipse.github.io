@@ -105,37 +105,37 @@
 <a href="#update-the-change-log"><span class="tocnumber">1</span> <span class="toctext">Update the Change log</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#update-the-changestxt-file"><span class="tocnumber">2</span> <span class="toctext">Update the CHANGES.txt file</span></a>
+<a href="#update-info"><span class="tocnumber">2</span> <span class="toctext">Update INFO</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#commit-to-the-project-git"><span class="tocnumber">3</span> <span class="toctext">Commit to the project git</span></a>
+<a href="#commit-the-project-git"><span class="tocnumber">3</span> <span class="toctext">Commit the project git</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#checkclonepull-build-scripts"><span class="tocnumber">4</span> <span class="toctext">Check/clone/pull build scripts</span></a>
+<a href="#push-the-build-script-git"><span class="tocnumber">4</span> <span class="toctext">Push the build script git</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#build"><span class="tocnumber">5</span> <span class="toctext">Build</span></a>
+<a href="#checkclonepull-build-scripts"><span class="tocnumber">5</span> <span class="toctext">Check/clone/pull build scripts</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#prepare-a-new-blog-post-to-announce-the-release"><span class="tocnumber">6</span> <span class="toctext">Prepare a new blog post to announce the release</span></a>
+<a href="#build"><span class="tocnumber">6</span> <span class="toctext">Build</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#update-the-release-post-with-the-sha-sums"><span class="tocnumber">7</span> <span class="toctext">Update the release post with the SHA sums</span></a>
+<a href="#prepare-a-new-blog-post"><span class="tocnumber">7</span> <span class="toctext">Prepare a new blog post</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#update-the-web"><span class="tocnumber">8</span> <span class="toctext">Update the web</span></a>
+<a href="#update-the-sha-sums"><span class="tocnumber">8</span> <span class="toctext">Update the SHA sums</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#push-the-project-git"><span class="tocnumber">9</span> <span class="toctext">Push the project git</span></a>
+<a href="#update-the-web"><span class="tocnumber">9</span> <span class="toctext">Update the web</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
 <a href="#create-the-release"><span class="tocnumber">10</span> <span class="toctext">Create the release</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#update-the-web-link-to-resources"><span class="tocnumber">11</span> <span class="toctext">Update the web link to resources</span></a>
+<a href="#update-the-web-link"><span class="tocnumber">11</span> <span class="toctext">Update the web link</span></a>
 </li>
 <li class="toc_level-1 toc_section-12">
-<a href="#copy-binaries-to-the-local-archive-folder"><span class="tocnumber">12</span> <span class="toctext">Copy binaries to the local archive folder</span></a>
+<a href="#copy-binaries-to-the-archive"><span class="tocnumber">12</span> <span class="toctext">Copy binaries to the archive</span></a>
 </li>
 <li class="toc_level-1 toc_section-13">
 <a href="#share-on-facebook"><span class="tocnumber">13</span> <span class="toctext">Share on Facebook</span></a>
@@ -149,25 +149,27 @@
 
 <h2 id="update-the-change-log">Update the Change log</h2>
 
-<p>Scan the documentation Git log and add new entries to the <a href="/windows-build-tools/change-log/">Change log</a> (<code class="highlighter-rouge">pages/windows-build-tools/change-log.md</code>), grouped by days.</p>
+<p>Open the <code class="highlighter-rouge">info/CHANGES.txt</code> file from <code class="highlighter-rouge">gnu-mcu-eclipse/windows-build-tools.git</code> and copy entries to the web git.</p>
 
-<p>Close issues on the way. Refer to them as:</p>
+<p>In the web git, add new entries to the <a href="/windows-build-tools/change-log/">Change log</a> (<code class="highlighter-rouge">pages/windows-build-tools/change-log.md</code>), grouped by days.</p>
 
-<ul>
-  <li><strong>[Issue:[#22](…)]</strong>.</li>
-</ul>
+<h2 id="update-info">Update INFO</h2>
 
-<h2 id="update-the-changestxt-file">Update the CHANGES.txt file</h2>
+<p>Edit the <code class="highlighter-rouge">info/INFO.txt</code> file from <code class="highlighter-rouge">windows-build-tools.git</code> and update the latest commits.</p>
 
-<p>Edit the <code class="highlighter-rouge">gnuarmeclipse/info/CHANGES.txt</code> file (copy the entries from the web change log).</p>
+<h2 id="commit-the-project-git">Commit the project git</h2>
 
-<h2 id="commit-to-the-project-git">Commit to the project git</h2>
+<p>In <code class="highlighter-rouge">gnu-mcu-eclipse/windows-build-tools</code>, commit all changes.</p>
 
-<p>In the <strong>gnuarmeclipse/windows-build-tools</strong> project, commit all changes.</p>
+<h2 id="push-the-build-script-git">Push the build script git</h2>
+
+<p>Push <code class="highlighter-rouge">gnu-mcu-eclipse/openocd-build.git</code> to GitHub.</p>
+
+<p>Possibly push the helper project too.</p>
 
 <h2 id="checkclonepull-build-scripts">Check/clone/pull build scripts</h2>
 
-<p>Be sure the scripts in the <strong>windows-build-tools.git</strong> are up to date.</p>
+<p>Be sure the scripts in <code class="highlighter-rouge">windows-build-tools.git</code> are up to date.</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
@@ -185,79 +187,92 @@
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh cleanall
-<span class="gp">$</span> caffeinate bash ~/Downloads/build-scripts.git/scripts/build-windows-build-tools.sh <span class="nt">--all</span>
+<code><span class="gp">$</span> bash ~/Downloads/windows-build-tools/scripts/build.sh cleanall
+<span class="gp">$</span> caffeinate bash ~/Downloads/windows-build-tools/scripts/build.sh <span class="nt">--all</span>
 </code></pre>
 </div>
 </div>
 
-<h2 id="prepare-a-new-blog-post-to-announce-the-release">Prepare a new blog post to announce the release</h2>
+<p>For more details, see the <a href="/windows-build-tools/build-procedure/">build</a> page.</p>
+
+<h2 id="prepare-a-new-blog-post">Prepare a new blog post</h2>
+
+<p>In the web git:</p>
 
 <ul>
   <li>add a new file to <code class="highlighter-rouge">_posts/windows-build-tools/releases</code></li>
   <li>name the file like <code class="highlighter-rouge">2016-10-28-windows-build-tools-v2-7-20161028-released.md</code></li>
   <li>name the post like: <strong>GNU MCU Eclipse Windows Build Tools v2.7-20161028 released</strong>.</li>
+  <li>as <code class="highlighter-rouge">download_url</code> use the generic <code class="highlighter-rouge">https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/</code> (will be updated later after the release is created)</li>
+  <li>update the <code class="highlighter-rouge">date:</code> field with the current date</li>
 </ul>
 
-<h2 id="update-the-release-post-with-the-sha-sums">Update the release post with the SHA sums</h2>
+<p>Close <a href="https://github.com/gnu-mcu-eclipse/openocd/issues">issues</a> on the way. Refer to them as:</p>
+
+<ul>
+  <li><strong>[Issue:[#22](…)]</strong>.</li>
+</ul>
+
+<h2 id="update-the-sha-sums">Update the SHA sums</h2>
 
 <p>Copy/paste the build report at the end of the post as</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code>
-<span class="go">25b495b340d84b971736a5dfc2a639608c19b5d9d30d14e86e870c1ce461b855 ?
+<code><span class="gp">#</span><span class="c"># Checksums</span>
+<span class="go">The SHA-256 hashes for the files are:
+
+25b495b340d84b971736a5dfc2a639608c19b5d9d30d14e86e870c1ce461b855 ?
 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win32.zip
 
 da147a2cd378183af1d19ecb655637b5b1deedb691fac25657d9d0e2a102e1be ?
 gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip
-</span>
-</code></pre>
+</span></code></pre>
 </div>
 </div>
 
 <h2 id="update-the-web">Update the web</h2>
 
 <ul>
-  <li>commit the <strong>gnuarmeclipse.github.io-source.git</strong> project; use a message like <strong>Windows Build Tools v2.7-20161028 released</strong></li>
-  <li>push the <strong>gnuarmeclipse.github.io-source.git</strong> project</li>
+  <li>commit the <code class="highlighter-rouge">gnu-mcu-eclipse.github.io-source.git</code> project; use a message like <strong>Windows Build Tools v2.7-20161028 released</strong></li>
+  <li>push the project</li>
+  <li>wait for the Travis build to complete; occasionally links to not work, and might need to restart the build</li>
+  <li>remember the post URL, since it must be updated in the release page</li>
 </ul>
 
-<h2 id="push-the-project-git">Push the project git</h2>
-
-<p>With SourceTree, push to the GitHub remote, the <strong>master</strong> branch.</p>
+<p>Note: initially the link to binaries points to the parent releases folder, otherwise Travis will complain and do not publish the site to <code class="highlighter-rouge">gnu-mcu-eclipse.github.io</code>.</p>
 
 <h2 id="create-the-release">Create the release</h2>
 
 <ul>
-  <li>for stable releases, be sure the <strong>master</strong> branch is up to date and set as default</li>
+  <li>for stable releases, be sure the <code class="highlighter-rouge">master</code> branch is up to date and set as default</li>
   <li>go to the <a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/releases">GitHub Releases</a> page</li>
   <li>click <strong>Draft a new release</strong></li>
   <li>name the tag like <strong>v2.7-20161028</strong></li>
-  <li>select the <strong>master</strong> branch</li>
+  <li>select the <code class="highlighter-rouge">master</code> branch</li>
   <li>name the release like <strong>GNU MCU Eclipse Windows Build Tools v2.7-20161028</strong></li>
   <li>as description
     <ul>
-      <li>add a downloads badge like <code class="highlighter-rouge">[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/windows-build-tools/v2.10-20180103/total.svg)]()</code>; use the</li>
+      <li>add a downloads badge like <code class="highlighter-rouge">[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/windows-build-tools/v2.10-20180103/total.svg)]()</code>; use empty URL for now</li>
       <li>copy the first paragraph from the Web release page</li>
     </ul>
   </li>
-  <li>add a link to the Web page <code class="highlighter-rouge">[Continue reading »]()</code></li>
+  <li>add a link to the Web page <code class="highlighter-rouge">[Continue reading »]()</code>; use an empty URL for now</li>
   <li>get URL from web and update the above links</li>
-  <li>attach binaries and SHA (drag and drop from the archives folder will do it)</li>
+  <li><strong>attach binaries</strong> and SHA (drag and drop from the archives folder will do it)</li>
   <li>click the <strong>Publish Release</strong> button</li>
 </ul>
 
 <p>Note: at this moment the system should send a notification to all clients watching this project.</p>
 
-<h2 id="update-the-web-link-to-resources">Update the web link to resources</h2>
+<h2 id="update-the-web-link">Update the web link</h2>
 
 <ul>
   <li><code class="highlighter-rouge">download_url: https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.10-20180103/</code></li>
 </ul>
 
-<h2 id="copy-binaries-to-the-local-archive-folder">Copy binaries to the local archive folder</h2>
+<h2 id="copy-binaries-to-the-archive">Copy binaries to the archive</h2>
 
 <ul>
   <li>go to <code class="highlighter-rouge">.../GNU MCU Eclipse/archive</code></li>
@@ -277,7 +292,7 @@ gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Wed Jan  3 21:32:52 2018 UTC.</p>
+<p class="page-footer">Last modified on Fri Jan 12 22:10:17 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/windows-build-tools/publish-procedure/" data-layout="button"></div>
 
 
