@@ -5,9 +5,27 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Jan 2018 22:12:54 +0000</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2018 22:12:54 +0000</lastBuildDate>
+    <pubDate>Sat, 13 Jan 2018 01:02:52 +0000</pubDate>
+    <lastBuildDate>Sat, 13 Jan 2018 01:02:52 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-2-20180111 released</title>
+        <description>&lt;p&gt;Version v7.2.0-2-20180111 is a maintenance release of &lt;strong&gt;GNU MCU Eclipse RISC-V Embedded GCC&lt;/strong&gt;; it updates to the latest RISC-V sources and the build process was improved, to support even older GNU/Linux machines and processors.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 12 Jan 2018 23:30:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>riscv</category>
+        
+        <category>riscv-none-gcc</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse OpenOCD v0.10.0-6-20180112 released</title>
@@ -182,32 +200,6 @@
         <category>releases</category>
         
         <category>openocd</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse plug-ins v4.1.1-201707111115 released</title>
-        <description>&lt;p&gt;Version 4.1.1-201707111115 is a major release; thanks to a contribution from &lt;a href=&quot;https://www.sifive.com&quot;&gt;SiFive&lt;/a&gt;, the project was enhanced with support for &lt;a href=&quot;https://riscv.org&quot;&gt;RISC-V&lt;/a&gt; devices and, to better reflect the multi-platform nature, was rebranded &lt;strong&gt;GNU MCU Eclipse&lt;/strong&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 11 Jul 2017 11:29:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/</guid>
-        
-        <category>GNU</category>
-        
-        <category>ARM</category>
-        
-        <category>RISC-V</category>
-        
-        <category>MCU</category>
-        
-        <category>Eclipse</category>
-        
-        
-        <category>releases</category>
-        
-        <category>plugins</category>
         
       </item>
     
