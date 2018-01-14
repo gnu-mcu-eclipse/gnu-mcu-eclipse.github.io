@@ -2,18 +2,19 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
   <title>How to install the RISC-V toolchain?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="How to install the RISC-V toolchain?" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
+  <meta property="og:title" content="How to install the RISC-V toolchain?">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -22,9 +23,9 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201707092118" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201707092118" media="print">
@@ -32,7 +33,7 @@
   <link rel="canonical" href="/toolchain/riscv/install/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -74,7 +75,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -111,45 +112,38 @@
 <a href="#riscv64-unknown-elf-gcc"><span class="tocnumber">3</span> <span class="toctext">riscv64-unknown-elf-gcc</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#download"><span class="tocnumber">4</span> <span class="toctext">Download</span></a>
+<a href="#the-xpack-install"><span class="tocnumber">4</span> <span class="toctext">The xPack install</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#windows"><span class="tocnumber">5</span> <span class="toctext">Windows</span></a>
+<a href="#manual-install"><span class="tocnumber">5</span> <span class="toctext">Manual install</span></a>
 <ul>
 <li class="toc_level-2 toc_section-6">
-<a href="#portable-archive"><span class="tocnumber">5.1</span> <span class="toctext">Portable archive</span></a>
+<a href="#windows"><span class="tocnumber">5.1</span> <span class="toctext">Windows</span></a>
 </li>
 <li class="toc_level-2 toc_section-7">
-<a href="#setup"><span class="tocnumber">5.2</span> <span class="toctext">Setup</span></a>
+<a href="#macos"><span class="tocnumber">5.2</span> <span class="toctext">macOS</span></a>
+</li>
+<li class="toc_level-2 toc_section-8">
+<a href="#gnulinux"><span class="tocnumber">5.3</span> <span class="toctext">GNU/Linux</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-8">
-<a href="#macos"><span class="tocnumber">6</span> <span class="toctext">macOS</span></a>
-<ul>
-<li class="toc_level-2 toc_section-9">
-<a href="#portable-archive-1"><span class="tocnumber">6.1</span> <span class="toctext">Portable archive</span></a>
+<li class="toc_level-1 toc_section-9">
+<a href="#toolchain-path"><span class="tocnumber">6</span> <span class="toctext">Toolchain path</span></a>
 </li>
-<li class="toc_level-2 toc_section-10">
-<a href="#install-package"><span class="tocnumber">6.2</span> <span class="toctext">Install package</span></a>
-</li>
-</ul>
+<li class="toc_level-1 toc_section-10">
+<a href="#uninstall"><span class="tocnumber">7</span> <span class="toctext">Uninstall</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#gnulinux"><span class="tocnumber">7</span> <span class="toctext">GNU/Linux</span></a>
-</li>
-<li class="toc_level-1 toc_section-12">
-<a href="#toolchain-path"><span class="tocnumber">8</span> <span class="toctext">Toolchain path</span></a>
-</li>
-<li class="toc_level-1 toc_section-13">
-<a href="#documentation"><span class="tocnumber">9</span> <span class="toctext">Documentation</span></a>
+<a href="#documentation"><span class="tocnumber">8</span> <span class="toctext">Documentation</span></a>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div><h2 id="overview">Overview</h2>
+</div>
+<h2 id="overview">Overview</h2>
 
 <p>The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><strong>GNU MCU Eclipse RISC-V Embedded GCC</strong></a>. This toolchain closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
 
@@ -174,245 +168,136 @@
 
 <p>Be sure you <strong>do</strong> select carefully the proper release file to  match the 32/64-bits platform you are using.</p>
 
-<h2 id="download">Download</h2>
+<h2 id="the-xpack-install">The xPack install</h2>
 
-<p>Due to portability reasons, the GNU MCU Eclipse plug-ins distributions <strong>do not</strong> include any toolchain binaries, but they can be downloaded from <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases">GNU MCU Eclipse RISC-V Embedded GCC</a>.</p>
-
-<p>
-<img src="/assets/images/2017/riscv-releases.png" alt="RISC-V Releases" />
-</p>
-
-<h2 id="windows">Windows</h2>
-
-<p>For Windows, the RISC-V Embedded GCC toolchain is released in two versions:</p>
-
-<ul>
-  <li>a portable archive that can be installed in any location</li>
-  <li>a Windows setup that can install the binaries in the standard system location</li>
-</ul>
-
-<p>Our preferred method is to install the binaries in the user home folder, but your mileage may vary.</p>
-
-<h3 id="portable-archive">Portable archive</h3>
-
-<p>To install the archive, the steps are:</p>
-
-<ul>
-  <li>download the latest <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-*-win*.zip</code> file for your platform; if you are using a modern 64-bits machine, use the <code class="highlighter-rouge">*-win64.zip</code> file, otherwise the <code class="highlighter-rouge">*-win32.zip</code> (however, the 32-bits toolchain executables also run on 64-bits platforms);</li>
-  <li>open the archive in the file explorer</li>
-  <li>extract the <code class="highlighter-rouge">GNU MCU Eclipse</code> folder in <code class="highlighter-rouge">%userprofile%\AppData\Local</code></li>
-</ul>
-
-<p>According to Microsoft, this is the recommended location for installing user specific packages, and the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.</p>
-
-<p>In addition, the GNU MCU Eclipse plug-ins also check the following locations (POSIX paths):</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>${user.home}/AppData/Roaming/GNU MCU Eclipse/RISC-V Embedded GCC;\
-${user.home}/AppData/Local/GNU MCU Eclipse/RISC-V Embedded GCC;\
-${user.home}/opt/GNU MCU Eclipse/RISC-V Embedded GCC;\
-${user.home}/opt/gnu-mcu-eclipse/riscv-none-gcc;\
-${user.home}/local/GNU MCU Eclipse/RISC-V Embedded GCC;\
-${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc;\
-C:/opt/GNU MCU Eclipse/RISC-V Embedded GCC;\
-C:/opt/gnu-mcu-eclipse/riscv-none-gcc;\
-C:/Program Files/GNU MCU Eclipse/RISC-V Embedded GCC;\
-C:/Program Files (x86)/GNU MCU Eclipse/RISC-V Embedded GCC;\
-D:/Program Files/GNU MCU Eclipse/RISC-V Embedded GCC;\
-D:/Program Files (x86)/GNU MCU Eclipse/RISC-V Embedded GCC
-</code></pre>
-</div>
-</div>
-
-<p>It is recommended to use one of these locations, since the plug-ins will automatically set the default toolchain path to the most recently installed toolchain found in these folders.</p>
-
-<h3 id="setup">Setup</h3>
-
-<p>If you decide to install the toolchain in a system location, you can use the common setup procedure:</p>
-
-<ul>
-  <li>download the latest <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-win*-setup.exe</code> file for your platform; if you are using a modern 64-bits machine, use the <code class="highlighter-rouge">*-win64-setup.exe</code> file, otherwise use the <code class="highlighter-rouge">*-win32-setup.exe</code> (however, the 32-bits toolchain executables also run on 64-bits platforms);</li>
-  <li>locate the file (usually in the <code class="highlighter-rouge">...\Downloads\</code>  folder) and double click it to start the installer</li>
-  <li>authenticate with the administrative password, to allow the installer write in system locations</li>
-  <li>select the desired language</li>
-  <li>
-    <p>confirm that you want to install the toolchain</p>
-
-    <p><img src="/assets/images/2017/riscv-setup.png" alt="MS_admin" /></p>
-  </li>
-  <li>accept the terms of the license agreement</li>
-  <li>
-    <p>accept the destination folder, usually a version specific sub-folder of <code class="highlighter-rouge">C:\Program Files\GNU MCU Eclipse\RISC-V Embedded GCC</code></p>
-
-    <blockquote>
-      <p>Note: It is highly recommended to <strong>do not change the install path</strong>.</p>
-    </blockquote>
-
-    <p><img src="/assets/images/2017/riscv-setup-folder.png" alt="The destination folder" /></p>
-  </li>
-  <li>wait a few moments for the installer to copy all files</li>
-  <li>
-    <p>test if the compiler is functional; use the actual install path:</p>
-
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">C:\&gt;</span><span class="s2">"C:</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\G</span><span class="s2">NU MCU Eclipse</span><span class="se">\R</span><span class="s2">ISC-V Embedded GCC</span><span class="se">\7</span><span class="s2">.2.0-1-20171109-1926</span><span class="se">\b</span><span class="s2">in</span><span class="se">\r</span><span class="s2">iscv-none-embed-gcc.exe"</span> <span class="nt">--version</span>
-<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
-</span></code></pre></div>    </div>
-  </li>
-</ul>
-
-<p>The complete toolchain documentation is available in the <code class="highlighter-rouge">...\share\doc\pdf\</code> folder.</p>
-
-<p>If you’ll ever need to remove the toolchain, there is an <strong>uninstall.exe</strong> program available in the toolchain root folder.</p>
-
-<p>For Windows, the next step would be to install the <a href="/windows-build-tools/">build tools (make &amp; rm)</a>.</p>
-
-<h2 id="macos">macOS</h2>
-
-<p>For macOS, the RISC-V Embedded GCC toolchain is released in two versions:</p>
-
-<ul>
-  <li>a portable archive that can be installed in any location</li>
-  <li>an installable package that can install the binaries in the standard system location</li>
-</ul>
-
-<p>Our preferred method is to install the binaries in the user home folder, but your mileage may vary.</p>
-
-<h3 id="portable-archive-1">Portable archive</h3>
-
-<p>To install the archive, the steps are:</p>
-
-<ul>
-  <li>download the latest macOS tarball file (for example <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-osx.tgz</code>)</li>
-  <li>locate the file (usually in the <code class="highlighter-rouge">${HOME}/Downloads</code> folder)</li>
-  <li>
-    <p>decide on a location to install the toolchain; the recommended folder is <code class="highlighter-rouge">${HOME}/opt/</code></p>
-
-    <blockquote>
-      <p>Note: It is highly recommended to use this path, since the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.</p>
-    </blockquote>
-
-    <p>In addition, the GNU MCU Eclipse plug-ins also check the following locations:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>${user.home}/opt/gnu-mcu-eclipse/riscv-none-gcc:\
-${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
-/usr/opt/gnu-mcu-eclipse/riscv-none-gcc:\
-/usr/local/gnu-mcu-eclipse/riscv-none-gcc:\
-/opt/gnu-mcu-eclipse/riscv-none-gcc:\
-/Applications/GNU MCU Eclipse/RISC-V Embedded GCC
-</code></pre></div>    </div>
-  </li>
-  <li>unpack the archive in the destination folder</li>
-  <li>
-    <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926</code></p>
-
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-osx.tgz
-<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>test if the compiler is functional; use the actual install path:</p>
-
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc <span class="nt">--version</span>
-<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
-</span></code></pre></div>    </div>
-  </li>
-</ul>
-
-<h3 id="install-package">Install package</h3>
-
-<p>For those preferring to install the toolchain in the system location, there is also an install package (<code class="highlighter-rouge">.pkg</code>).</p>
-
-<p>Run the install as usual.</p>
-
-<p>
-<img src="/assets/images/2017/riscv-mac-installer.png" alt="Install the RISC-V GCC package" />
-</p>
-
-<p>The package is installed in:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">/Applications/GNU MCU Eclipse/RISC-V Embedded GCC/*</code></li>
-</ul>
-
-<p>To check if the compiler starts, use:</p>
+<p>This method uses the portable tool <a href="https://www.npmjs.com/package/xpm">xpm</a>, the <strong>xPack Package Manager</strong>, and can be used on Windows, macOS and GNU/Linux.</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> /Applications/GNU<span class="se">\ </span>ARM<span class="se">\ </span>Eclipse/RISC-V<span class="se">\ </span>Embedded<span class="se">\ </span>GCC/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc <span class="nt">--version</span>
+<code><span class="gp">$</span> xpm install @gnu-mcu-eclipse/risc-none-gcc <span class="nt">--global</span>
+</code></pre>
+</div>
+</div>
+
+<p>This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:</p>
+
+<ul>
+  <li>Windows: <code class="highlighter-rouge">%APPDATA%\xPacks</code> (<code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks</code>)</li>
+  <li>macOS: <code class="highlighter-rouge">${HOME}/Library/xPacks</code>
+</li>
+  <li>GNU/Linux: <code class="highlighter-rouge">${HOME}/opt/xPacks</code>
+</li>
+</ul>
+
+<p>Note: This location is configurable using the environment variable <code class="highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the <a href="https://xpack.github.io/xpm/files/folders/">xpm folders</a> page.</p>
+
+<h2 id="manual-install">Manual install</h2>
+
+<p>For all platforms, the <strong>RISC-V Embedded GCC</strong> toolchain is released as a portable archive that can be installed in any location.</p>
+
+<p>The archives can be downloaded from <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases">GitHub Releases</a>.</p>
+
+<p>
+<img src="/assets/images/2017/riscv-releases.png" alt="RISC-V Releases">
+</p>
+
+<h3 id="windows">Windows</h3>
+
+<p>The Windows versions of <strong>RISC-V Embedded GCC</strong> are packed as ZIP files. Download the latest version named like:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-win64.zip</code></li>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-win32.zip</code></li>
+</ul>
+
+<p>Select the <code class="highlighter-rouge">-win64</code> file for Windows x64 machines and the <code class="highlighter-rouge">-win32</code> file for Windows x32 machines.</p>
+
+<p>Unpack the archive and copy it into the <code class="highlighter-rouge">%userprofile%\AppData\Roaming\GNU MCU Eclipse</code> (for example <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse</code>) folder; according to Microsoft, this is the recommended location for installing user specific packages;</p>
+
+<blockquote>
+  <p>Note: although perfectly possible to install the toolchain in any folder, it is highly recommended to use this path, since the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.</p>
+</blockquote>
+
+<p>For Windows, the next step would be to install the <a href="/windows-build-tools/">build tools (make &amp; rm)</a>.</p>
+
+<h3 id="macos">macOS</h3>
+
+<p>The macOS version of <strong>RISC-V Embedded GCC</strong> is packed as a TGZ archive. Download the latest version named like:</p>
+
+<ul>
+  <li> <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-osx.tgz</code>
+</li>
+</ul>
+
+<p>To install the toolchain, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/</code>:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-osx.tgz
+<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230
+</code></pre>
+</div>
+</div>
+
+<blockquote>
+  <p>Note: although perfectly possible to install the toolchain in any folder, it is highly recommended to use this path, since the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.</p>
+</blockquote>
+
+<p>Test if the compiler is functional; use the actual install path:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230/bin/riscv-none-embed-gcc <span class="nt">--version</span>
 <span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
 </span></code></pre>
 </div>
 </div>
 
-<blockquote>
-  <p><strong>DO NOT add the toolchain path to the user or system path!</strong></p>
-</blockquote>
+<h3 id="gnulinux">GNU/Linux</h3>
 
-<p>The complete toolchain documentation is available in the <code class="highlighter-rouge">.../share/doc/pdf/</code> folder.</p>
-
-<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">riscv-none-gcc/7.2.0-1-20171109-1926</code> folder, there are no other components stored in any system folders.</p>
-
-<h2 id="gnulinux">GNU/Linux</h2>
-
-<p>For GNU/Linux, the RISC-V Embedded GCC toolchain is released as a portable archive, that can be installed in any location.</p>
-
-<p>The following steps were performed on <strong>Ubuntu 16.04 LTSx64</strong> (please adjust them accordingly for other distributions):</p>
+<p>The GNU/Linux versions of <strong>RISC-V Embedded GCC</strong> are packed as TGZ archives. Download the latest version named like:</p>
 
 <ul>
-  <li>download the latest <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-*-debian*.tgz</code> file for your platform; if you are using a modern 64-bits machine, use the <code class="highlighter-rouge">*-debian64.zip</code> file, otherwise use the <code class="highlighter-rouge">*-debian32.zip</code> (however, with some extra care to install the 32-bits libraries, the 32-bits toolchain executables can also run on 64-bits platforms);</li>
-  <li>locate the file (usually in the <code class="highlighter-rouge">${HOME}/Downloads/</code> folder)</li>
-  <li>decide on a location to install the toolchain; the recommended folder is <code class="highlighter-rouge">${HOME}/opt/</code></li>
-  <li>
-    <p>unpack the archive in the destination folder</p>
-
-    <blockquote>
-      <p>Note: It is highly recommended to use this path, since the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.</p>
-    </blockquote>
-
-    <p>In addition, the GNU MCU Eclipse plug-ins also check the following locations:</p>
-
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>${user.home}/opt/gnu-mcu-eclipse/riscv-none-gcc:\
-${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
-/usr/opt/gnu-mcu-eclipse/riscv-none-gcc:\
-/usr/local/gnu-mcu-eclipse/riscv-none-gcc:\
-/opt/gnu-mcu-eclipse/riscv-none-gcc
-</code></pre></div>    </div>
-  </li>
-  <li>unpack the archive in the destination folder</li>
-  <li>
-    <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926</code></p>
-
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-1-20171109-1926-debian64.tgz
-<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>test if the compiler is functional; use the actual install path:</p>
-
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-1-20171109-1926/bin/riscv-none-embed-gcc <span class="nt">--version</span>
-<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
-</span></code></pre></div>    </div>
-  </li>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-centos64.tgz</code></li>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-centos32.tgz</code></li>
 </ul>
 
+<p>As the name implies, these are CentOS <code class="highlighter-rouge">tar.gz</code> archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-centos64</code> file for 64-bits machines and the <code class="highlighter-rouge">-centos32</code> file for 32-bits machines.</p>
+
+<p>To install the toolchain, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/</code>:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-debian64.tgz
+<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230
+</code></pre>
+</div>
+</div>
+
 <blockquote>
-  <p><strong>DO NOT add the toolchain path to the user or system path!</strong></p>
+  <p>Note: although perfectly possible to install the toolchain in any folder, it is highly recommended to use this path, since the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.</p>
 </blockquote>
 
-<p>The complete toolchain documentation is available in the <code class="highlighter-rouge">.../share/doc/pdf/</code> folder.</p>
+<p>Test if the compiler is functional; use the actual install path:</p>
 
-<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">riscv-none-gcc/7.2.0-1-20171109-1926</code> folder, there are no other components stored in any system folders.</p>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230/bin/riscv-none-embed-gcc <span class="nt">--version</span>
+<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
+</span></code></pre>
+</div>
+</div>
 
 <h2 id="toolchain-path">Toolchain path</h2>
-
-<p>To be sure you did not miss this recommendation, here it is again:</p>
 
 <blockquote>
   <p><strong>DO NOT add the toolchain path to the user or system path!</strong></p>
@@ -421,6 +306,10 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 <p>If there would be only one single version of one single toolchain in existence, then it wouldn’t be a problem, but as soon as you start real world applications, you will face at least the need to keep multiple versions of the same toolchain installed, if not multiple toolchains, and this is when your trouble starts.</p>
 
 <p>The GNU MCU Eclipse plug-in has an advanced <a href="/toolchain/path/">toolchain path management</a> (presented in more detail in the separate page). Use it!</p>
+
+<h2 id="uninstall">Uninstall</h2>
+
+<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">riscv-none-gcc/7.2.0-2-20180111-2230</code> folder, there are no other components stored in any system folders.</p>
 
 <h2 id="documentation">Documentation</h2>
 
@@ -460,8 +349,8 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 
 
 
-<hr class="page-footer"/>
-<p class="page-footer">Last modified on Thu Jan  4 18:49:58 2018 UTC.</p>
+<hr class="page-footer">
+<p class="page-footer">Last modified on Sun Jan 14 18:12:48 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/install/" data-layout="button"></div>
 
 
@@ -480,7 +369,7 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -490,10 +379,14 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -503,7 +396,8 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -571,38 +465,44 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -670,7 +570,7 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -692,7 +592,7 @@ ${user.home}/local/gnu-mcu-eclipse/riscv-none-gcc:\
     <ul>
   <li>© 2017 Liviu Ionescu</li>
   <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
