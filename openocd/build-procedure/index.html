@@ -151,7 +151,10 @@
 <a href="#test"><span class="tocnumber">11</span> <span class="toctext">Test</span></a>
 </li>
 <li class="toc_level-1 toc_section-16">
-<a href="#more-build-details"><span class="tocnumber">12</span> <span class="toctext">More build details</span></a>
+<a href="#debug"><span class="tocnumber">12</span> <span class="toctext">Debug</span></a>
+</li>
+<li class="toc_level-1 toc_section-17">
+<a href="#more-build-details"><span class="tocnumber">13</span> <span class="toctext">More build details</span></a>
 </li>
 </ul>
 </td>
@@ -206,8 +209,8 @@
 <pre class="highlight">
 <code><span class="gp">$</span> docker images
 <span class="go">REPOSITORY                  TAG                   IMAGE ID            CREATED             SIZE
-ilegeul/centos32            6-xbb-tex-v1          84e5da687232        3 days ago          4.52GB
-ilegeul/centos              6-xbb-tex-v1          4e96fda659ab        3 days ago          4.71GB
+ilegeul/centos32            6-xbb-v1              f695dd6cb46e        7 days ago          2.92GB
+ilegeul/centos              6-xbb-v1              294dd5ee82f3        7 days ago          3.09GB
 hello-world                 latest                1815c82652c0        6 months ago        1.84kB
 </span></code></pre>
 </div>
@@ -215,7 +218,7 @@ hello-world                 latest                1815c82652c0        6 months a
 
 <h2 id="development">Development</h2>
 
-<p>When preparing official release, follow the following steps.</p>
+<p>When preparing official release, observe the following steps.</p>
 
 <h3 id="update-git-repos">Update git repos</h3>
 
@@ -419,13 +422,31 @@ For bug reports, read
 </div>
 </div>
 
+<h2 id="debug">Debug</h2>
+
+<p>To run debug sessions on macOS, it is necessary to build images that include the debugging info:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> bash ~/Downloads/openocd-build.git/scripts/build.sh <span class="nt">--without-pdf</span> <span class="nt">--no-strip</span> <span class="nt">--debug</span>
+</code></pre>
+</div>
+</div>
+
+<p>With Xcode, create a new Cross-platform, External Build System project. Select a folder below <code class="highlighter-rouge">xcode</code>.</p>
+
+<p>In the External Build Tool Configuration, use the <code class="highlighter-rouge">build/osx/openocd</code> folder.</p>
+
+<p>Add the <code class="highlighter-rouge">openocd.git</code> folder to the sources.</p>
+
 <h2 id="more-build-details">More build details</h2>
 
 <p>The script is quite complex, and an attempt to explain its functionality would require some effort. For the final authoritative details, please refer to the comments available in the <a href="https://github.com/gnu-mcu-eclipse/openocd-build/blob/master/scripts/build.sh">script</a>.</p>
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Thu Jan  4 18:18:30 2018 UTC.</p>
+<p class="page-footer">Last modified on Tue Jan 23 14:50:23 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/build-procedure/" data-layout="button"></div>
 
 

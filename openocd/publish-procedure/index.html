@@ -129,25 +129,34 @@
 <a href="#build"><span class="tocnumber">9</span> <span class="toctext">Build</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#prepare-a-new-blog-post"><span class="tocnumber">10</span> <span class="toctext">Prepare a new blog post</span></a>
+<a href="#test"><span class="tocnumber">10</span> <span class="toctext">Test</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#update-the-sha-sums"><span class="tocnumber">11</span> <span class="toctext">Update the SHA sums</span></a>
+<a href="#prepare-a-new-blog-post"><span class="tocnumber">11</span> <span class="toctext">Prepare a new blog post</span></a>
 </li>
 <li class="toc_level-1 toc_section-12">
-<a href="#update-the-web"><span class="tocnumber">12</span> <span class="toctext">Update the web</span></a>
+<a href="#update-the-sha-sums"><span class="tocnumber">12</span> <span class="toctext">Update the SHA sums</span></a>
 </li>
 <li class="toc_level-1 toc_section-13">
-<a href="#create-a-new-github-release"><span class="tocnumber">13</span> <span class="toctext">Create a new GitHub release</span></a>
+<a href="#update-the-xpack"><span class="tocnumber">13</span> <span class="toctext">Update the xPack</span></a>
 </li>
 <li class="toc_level-1 toc_section-14">
-<a href="#update-the-web-link"><span class="tocnumber">14</span> <span class="toctext">Update the web link</span></a>
+<a href="#update-the-web"><span class="tocnumber">14</span> <span class="toctext">Update the web</span></a>
 </li>
 <li class="toc_level-1 toc_section-15">
-<a href="#copy-binaries-to-archive"><span class="tocnumber">15</span> <span class="toctext">Copy binaries to archive</span></a>
+<a href="#create-a-new-github-release"><span class="tocnumber">15</span> <span class="toctext">Create a new GitHub release</span></a>
 </li>
 <li class="toc_level-1 toc_section-16">
-<a href="#share-on-facebook"><span class="tocnumber">16</span> <span class="toctext">Share on Facebook</span></a>
+<a href="#update-the-web-link"><span class="tocnumber">16</span> <span class="toctext">Update the web link</span></a>
+</li>
+<li class="toc_level-1 toc_section-17">
+<a href="#publish-the-xpack"><span class="tocnumber">17</span> <span class="toctext">Publish the xPack</span></a>
+</li>
+<li class="toc_level-1 toc_section-18">
+<a href="#copy-binaries-to-archive"><span class="tocnumber">18</span> <span class="toctext">Copy binaries to archive</span></a>
+</li>
+<li class="toc_level-1 toc_section-19">
+<a href="#share-on-facebook"><span class="tocnumber">19</span> <span class="toctext">Share on Facebook</span></a>
 </li>
 </ul>
 </td>
@@ -221,6 +230,10 @@
 
 <p>For more details, see the <a href="/openocd/build-procedure/">build</a> page.</p>
 
+<h2 id="test">Test</h2>
+
+<p>Test the binaries on all platforms.</p>
+
 <h2 id="prepare-a-new-blog-post">Prepare a new blog post</h2>
 
 <p>In the web git:</p>
@@ -268,6 +281,18 @@ gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win64.zip
 </div>
 </div>
 
+<h2 id="update-the-xpack">Update the xPack</h2>
+
+<p>Update the <code class="highlighter-rouge">gnu-mcu-eclipse/openocd-xpack.git</code> project to the new version.</p>
+
+<ul>
+  <li>update <code class="highlighter-rouge">baseUrl:</code></li>
+  <li>from the blog post, copy the SHA &amp; file names</li>
+  <li>commit all changes, use a message like <code class="highlighter-rouge">0.10.0-5.1</code> (without <code class="highlighter-rouge">v</code>)</li>
+  <li><code class="highlighter-rouge">npm version 0.10.0-5.1</code></li>
+  <li>don’t publish yet, wait for the release</li>
+</ul>
+
 <h2 id="update-the-web">Update the web</h2>
 
 <ul>
@@ -307,8 +332,16 @@ gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win64.zip
 <p>In the web git:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">download_url: https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-4-20171004</code></li>
+  <li><code class="highlighter-rouge">download_url: https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-4-20171004/</code></li>
   <li>commit with a message like <code class="highlighter-rouge">v0.10.0-5-20171110 update link</code></li>
+</ul>
+
+<h2 id="publish-the-xpack">Publish the xPack</h2>
+
+<p>In the <code class="highlighter-rouge">gnu-mcu-eclipse/openocd-xpack.git</code> project:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">npm publish</code></li>
 </ul>
 
 <h2 id="copy-binaries-to-archive">Copy binaries to archive</h2>
@@ -331,7 +364,7 @@ gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win64.zip
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Jan 12 22:10:17 2018 UTC.</p>
+<p class="page-footer">Last modified on Tue Jan 23 14:50:23 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/openocd/publish-procedure/" data-layout="button"></div>
 
 
