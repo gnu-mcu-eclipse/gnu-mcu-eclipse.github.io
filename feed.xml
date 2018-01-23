@@ -5,9 +5,27 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 Jan 2018 12:15:34 +0000</pubDate>
-    <lastBuildDate>Tue, 23 Jan 2018 12:15:34 +0000</lastBuildDate>
+    <pubDate>Tue, 23 Jan 2018 13:13:15 +0000</pubDate>
+    <lastBuildDate>Tue, 23 Jan 2018 13:13:15 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released</title>
+        <description>&lt;p&gt;Version v0.10.0-7-20180123 is a maintenance release; the main change was to add semihosting support for RISC-V targetss.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 23 Jan 2018 10:58:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>openocd</category>
+        
+        <category>semihosting</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-2-20180111 released</title>
@@ -184,22 +202,6 @@
         <category>releases</category>
         
         <category>riscv-none-gcc</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse OpenOCD v0.10.0-3-20170826* released</title>
-        <description>&lt;p&gt;Version v0.10.0-3-20170826-1813-dev is a maintenance release; it updates to the latest RISC-V &lt;a href=&quot;https://github.com/riscv/riscv-openocd/releases/tag/v20170818&quot;&gt;v20170818&lt;/a&gt; release and to the original &lt;a href=&quot;https://github.com/gnu-mcu-eclipse/openocd/commit/1025be363e2bf42f1613083223a2322cc3a9bd4c&quot;&gt;1025be3&lt;/a&gt; commit from June 2nd, 2017.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 26 Aug 2017 19:34:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/</guid>
-        
-        
-        <category>releases</category>
-        
-        <category>openocd</category>
         
       </item>
     

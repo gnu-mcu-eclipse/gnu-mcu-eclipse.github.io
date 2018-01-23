@@ -2,37 +2,41 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>How to publish the RISC-V Embedded GCC binaries?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <title>GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released</title>
+  <meta name="description" content="Version v0.10.0-7-20180123 is a maintenance release; the main change was to add semihosting support for RISC-V targetss.">
 
-  <meta property="og:title" content="How to publish the RISC-V Embedded GCC binaries?" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
-
-
-  <meta property="article:published_time" content="2017-07-07">
+  <meta property="og:title" content="GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
+  <meta property="article:published_time" content="2018-01-23">
+
+
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="openocd">
+  <meta property="article:section" content="semihosting">
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201707092118" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201707092118" media="print">
 
-  <link rel="canonical" href="/toolchain/riscv/publish-procedure/">
+  <link rel="canonical" href="/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -74,7 +78,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -88,9 +92,23 @@
 <div id="site-body">
 <section id="main-content">
 
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/">←</a></td>
+    <td><a href="/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-2-20180111 released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-<h1 class="page-title">How to publish the RISC-V Embedded GCC binaries?</h1>
 
+<h1 class="post-title">GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released</h1>
+
+
+<p class="post-meta">
+Posted on January 23, 2018 by Liviu Ionescu.
+</p>
 
 <div id="toc-container">
 <table class="toc" id="toc">
@@ -102,202 +120,157 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#update-the-change-log"><span class="tocnumber">1</span> <span class="toctext">Update the Change log</span></a>
+<a href="#changes"><span class="tocnumber">1</span> <span class="toctext">Changes</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#update-info"><span class="tocnumber">2</span> <span class="toctext">Update INFO</span></a>
+<a href="#semihosting"><span class="tocnumber">2</span> <span class="toctext">Semihosting</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#commit-all-project-git"><span class="tocnumber">3</span> <span class="toctext">Commit all project git</span></a>
+<a href="#differences-from-risc-v-releases"><span class="tocnumber">3</span> <span class="toctext">Differences from RISC-V releases</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#edit-the-build-script"><span class="tocnumber">4</span> <span class="toctext">Edit the build script</span></a>
+<a href="#known-problems"><span class="tocnumber">4</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#push-the-build-script-git"><span class="tocnumber">5</span> <span class="toctext">Push the build script git</span></a>
+<a href="#build-notes"><span class="tocnumber">5</span> <span class="toctext">Build notes</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#checkclonepull-build-scripts"><span class="tocnumber">6</span> <span class="toctext">Check/clone/pull build scripts</span></a>
+<a href="#binaries"><span class="tocnumber">6</span> <span class="toctext">Binaries</span></a>
+<ul>
+<li class="toc_level-2 toc_section-7">
+<a href="#easy-install"><span class="tocnumber">6.1</span> <span class="toctext">Easy install</span></a>
 </li>
-<li class="toc_level-1 toc_section-7">
-<a href="#build"><span class="tocnumber">7</span> <span class="toctext">Build</span></a>
+</ul>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#prepare-a-new-blog-post"><span class="tocnumber">8</span> <span class="toctext">Prepare a new blog post</span></a>
-</li>
-<li class="toc_level-1 toc_section-9">
-<a href="#update-the-sha-sums"><span class="tocnumber">9</span> <span class="toctext">Update the SHA sums</span></a>
-</li>
-<li class="toc_level-1 toc_section-10">
-<a href="#update-the-web"><span class="tocnumber">10</span> <span class="toctext">Update the Web</span></a>
-</li>
-<li class="toc_level-1 toc_section-11">
-<a href="#create-a-new-github-release"><span class="tocnumber">11</span> <span class="toctext">Create a new GitHub release</span></a>
-</li>
-<li class="toc_level-1 toc_section-12">
-<a href="#update-the-web-link"><span class="tocnumber">12</span> <span class="toctext">Update the web link</span></a>
-</li>
-<li class="toc_level-1 toc_section-13">
-<a href="#share-on-facebook"><span class="tocnumber">13</span> <span class="toctext">Share on Facebook</span></a>
+<a href="#checksums"><span class="tocnumber">7</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div><p>The RISC-V Embedded GCC binaries are published on GitHub <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/">Releases</a>.</p>
+</div>
+<p>Version v0.10.0-7-20180123 is a maintenance release; the main change was to add semihosting support for RISC-V targetss.</p>
 
-<h2 id="update-the-change-log">Update the Change log</h2>
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/releases">Binary files »</a>
+</p>
 
-<p>Generally, apart from packing, there should be no local changes.</p>
-
-<p>Open the <code class="highlighter-rouge">gnu-mcu-eclipse/info/CHANGES.txt</code> file from  <code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> project git, and copy entries to the web git.</p>
-
-<p>In the web git, add new entries to the <a href="/toolchain/riscv/change-log/">Change log</a> (<code class="highlighter-rouge">pages/toolchain/riscv/change-log.md</code>), grouped by days.</p>
-
-<h2 id="update-info">Update INFO</h2>
-
-<p>Edit the <code class="highlighter-rouge">info/INFO.txt</code> file from <code class="highlighter-rouge">openocd-build.git</code> and update the latest commits.</p>
-
-<h2 id="commit-all-project-git">Commit all project git</h2>
-
-<p>Commit all</p>
+<h2 id="changes">Changes</h2>
 
 <ul>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse/riscv-binutils-gdb.git</code></li>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc.git</code></li>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse/riscv-newlib.git</code></li>
+  <li>rework the semihosting suport; remove dependency for ARM; add 64-bits support</li>
 </ul>
 
-<h2 id="edit-the-build-script">Edit the build script</h2>
+<h2 id="semihosting">Semihosting</h2>
 
-<p>Edit the <code class="highlighter-rouge">RELEASE_VERSION</code> variable to point to the actual release.</p>
+<p>To activate semihosting, use:</p>
 
-<h2 id="push-the-build-script-git">Push the build script git</h2>
-
-<p>Push <code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> to GitHub.</p>
-
-<p>Possibly push the helper project too.</p>
-
-<h2 id="checkclonepull-build-scripts">Check/clone/pull build scripts</h2>
-
-<p>Be sure the scripts in <code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> are up to date.</p>
-
-<div class="language-console highlighter-rouge">
+<div class="highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git <span class="se">\</span>
-  ~/Downloads/openocd-build.git
+<code>arm semihosting enable
 </code></pre>
 </div>
 </div>
 
-<h2 id="build">Build</h2>
+<p>The Eclipse OpenOCD debug plug-in has a check button in the Startup tab.</p>
 
-<div class="language-console highlighter-rouge">
+<p>To pass command line options to the target application:</p>
+
+<div class="highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh cleanall
-<span class="gp">$</span> caffeinate bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--all</span>
+<code>arm semihosting_cmdline argv0 argv1 argv2 argv3 ...
 </code></pre>
 </div>
 </div>
 
-<p>For more details, see the <a href="/toolchain/riscv/build-procedure/">build</a> page.</p>
+<p>In the Eclipse OpenOCD debug plug-in, add the command prefixed with <code class="highlighter-rouge">monitor</code>:</p>
 
-<h2 id="prepare-a-new-blog-post">Prepare a new blog post</h2>
+<p>
+<img src="/assets/images/2018/openocd-riscv-semihosting.png" alt="Semihosting">
+</p>
 
-<p>In the web git:</p>
-
-<ul>
-  <li>add a new file to <code class="highlighter-rouge">_posts/riscv-none-gcc/releases</code></li>
-  <li>name the file like <code class="highlighter-rouge">2016-01-11-riscv-none-gcc-v7-1-1-2-20160110-released.md</code></li>
-  <li>name the post like: <strong>GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702 released</strong>.</li>
-  <li>as <code class="highlighter-rouge">download_url</code> use the generic <code class="highlighter-rouge">https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/</code></li>
-  <li>update the <code class="highlighter-rouge">date:</code> field with the current date</li>
-</ul>
-
-<p>Close <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/issues">issues</a> on the way. Refer to them as:</p>
+<h2 id="differences-from-risc-v-releases">Differences from RISC-V releases</h2>
 
 <ul>
-  <li><strong>[Issue:[#22](…)]</strong>.</li>
+  <li>some of the <code class="highlighter-rouge">remote_bitbang.c</code> patches were reversed</li>
+  <li>some of the additional GDB error processing were reversed, since they affect not RISC-V targets.</li>
 </ul>
 
-<h2 id="update-the-sha-sums">Update the SHA sums</h2>
+<h2 id="known-problems">Known problems</h2>
 
-<p>Copy/paste the build report at the end of the post as</p>
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="build-notes">Build notes</h2>
+
+<p>The build environment uses CentOS 6 Docker containers.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for Windows, macOS and GNU/Linux are provided.</p>
+
+<h3 id="easy-install">Easy install</h3>
+
+<p>OpenOCD is also available as an <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/openocd">xPack</a> and can be conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">#</span><span class="c"># Checksums</span>
-<span class="go">The SHA-256 hashes for the files are:
-
-a723d8c6870d1808882ea2eaa630a8c60c5cb6bd25dc238091d2f9738298c44a ?
-gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
-
-</span><span class="c">...
-</span></code></pre>
+<code><span class="gp">$</span> xpm install @gnu-mcu-eclipse/openocd@0.10.0-7.1 <span class="nt">--global</span>
+</code></pre>
 </div>
 </div>
 
-<h2 id="update-the-web">Update the Web</h2>
+<p>To install the latest version available, use:</p>
 
-<ul>
-  <li>commit the <code class="highlighter-rouge">gnu-mcu-eclipse.github.io-source</code> project; use a message like <strong>RISC-V Embedded GCC v7.1.1-1-20170702-0625 released</strong></li>
-  <li>wait for the Travis build to complete; occasionally links to not work, and might need to restart the build.</li>
-  <li>remember the post URL, since it must be updated in the release page</li>
-</ul>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm install @gnu-mcu-eclipse/openocd <span class="nt">--global</span>
+</code></pre>
+</div>
+</div>
 
-<p>Note: initially the link to binaries points to the parent releases folder, otherwise Travis will complain and do not publish the site to <code class="highlighter-rouge">gnu-mcu-eclipse.github.io</code>.</p>
+<h2 id="checksums">Checksums</h2>
 
-<h2 id="create-a-new-github-release">Create a new GitHub release</h2>
+<p>The SHA-256 hashes for the files are:</p>
 
-<ul>
-  <li>go to the <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases">GitHub Releases</a> page</li>
-  <li>click <strong>Draft a new release</strong></li>
-  <li>name the tag like <strong>v7.1.1-1-20170702</strong> (mind the dashes in the middle!)</li>
-  <li>select the corresponding <code class="highlighter-rouge">-gme</code> branch</li>
-  <li>name the release like <strong>GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-1-20171109</strong></li>
-  <li>as description
-    <ul>
-      <li>add a downloads badge like <code class="highlighter-rouge">[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/riscv-none-gcc/v7.1.1-1-20170702/total.svg)]()</code>; use empty URL for now</li>
-      <li>copy the first paragraph from the Web release page</li>
-    </ul>
-  </li>
-  <li>add a link to the Web page <code class="highlighter-rouge">[Continue reading »]()</code>; use an empty URL for now</li>
-  <li>get URL from web and update the above links</li>
-  <li><strong>attach binaries</strong> and SHA (drag and drop from the archives folder will do it)</li>
-  <li>click the <strong>Publish Release</strong> button</li>
-</ul>
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>c90f2d64d6ee7a32ccad1afc47c9f3376745e3de1fb933adef528be84da48ff0 ?
+gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-centos32.tgz
 
-<p>Note: at this moment the system should send a notification to all clients watching this project.</p>
+60c9792fd2959348553d825bed608198b5221548f0a3e58f79525082bd9520a5 ?
+gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-centos64.tgz
 
-<h2 id="update-the-web-link">Update the web link</h2>
+5f35ff7cf1db7a342f4347ffedd799e462ab94a69f91e39b09f883212d341cf2 ?
+gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-osx.tgz
 
-<p>In the web git:</p>
+a6a5597cd20613ff0b7f1f5ae87ff3da5194a9712abf409406817a6837c65654 ?
+gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-win32.zip
 
-<ul>
-  <li><code class="highlighter-rouge">download_url: https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v0.10.0-4-20171004</code></li>
-  <li>use something like <code class="highlighter-rouge">v0.10.0-4-20171004 update link</code> as message</li>
-</ul>
-
-<h2 id="share-on-facebook">Share on Facebook</h2>
-
-<ul>
-  <li>go to the new post and follow the Share link.</li>
-  <li>DO NOT select <strong>On your own Timeline</strong>, but <strong>On a Page you manage</strong></li>
-  <li>select GNU MCU Eclipse</li>
-  <li>posting as GNU MCU Eclipse</li>
-  <li>click <strong>Post to Facebook</strong></li>
-  <li>check the post in the <a href="https://www.facebook.com/gnu-mcu-eclipse">Facebook page</a></li>
-</ul>
+a9831431aadf274e47a4e3fdf8b6f201a6d9dc32318bdcf2e256d4a41aa104ac ?
+gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-win64.zip
+</code></pre>
+</div>
+</div>
 
 
+<hr class="post-footer">
+<p class="post-footer">
+Posted in
 
-<hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Jan 12 22:10:17 2018 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/publish-procedure/" data-layout="button"></div>
+<strong>releases</strong>, <strong>openocd</strong>, <strong>semihosting</strong>.
+Last modified on Tue Jan 23 13:08:31 2018 UTC.
+</p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/" data-layout="button"></div>
+
 
 
 </section>
@@ -315,7 +288,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -325,10 +298,14 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -338,7 +315,8 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -406,38 +384,44 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -505,7 +489,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -527,7 +511,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
     <ul>
   <li>© 2017 Liviu Ionescu</li>
   <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
