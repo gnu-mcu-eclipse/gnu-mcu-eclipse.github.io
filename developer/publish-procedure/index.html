@@ -138,48 +138,42 @@
 <a href="#publish-on-the-main-bintray-updates-site"><span class="tocnumber">12</span> <span class="toctext">Publish on the main Bintray updates site</span></a>
 </li>
 <li class="toc_level-1 toc_section-13">
-<a href="#publish-on-the-main-risc-v-update-site"><span class="tocnumber">13</span> <span class="toctext">Publish on the main RISC-V update site</span></a>
+<a href="#test-the-update-site"><span class="tocnumber">13</span> <span class="toctext">Test the update site</span></a>
 </li>
 <li class="toc_level-1 toc_section-14">
-<a href="#test-the-update-site"><span class="tocnumber">14</span> <span class="toctext">Test the update site</span></a>
+<a href="#clean-the-mess-in-the-local-archive-folder"><span class="tocnumber">14</span> <span class="toctext">Clean the mess in the local archive folder</span></a>
 </li>
 <li class="toc_level-1 toc_section-15">
-<a href="#clean-the-mess-in-the-local-archive-folder"><span class="tocnumber">15</span> <span class="toctext">Clean the mess in the local archive folder</span></a>
+<a href="#merge-develop-into-master"><span class="tocnumber">15</span> <span class="toctext">Merge develop into master</span></a>
 </li>
 <li class="toc_level-1 toc_section-16">
-<a href="#merge-develop-into-master"><span class="tocnumber">16</span> <span class="toctext">Merge develop into master</span></a>
+<a href="#publish-the-web"><span class="tocnumber">16</span> <span class="toctext">Publish the Web</span></a>
 </li>
 <li class="toc_level-1 toc_section-17">
-<a href="#publish-the-web"><span class="tocnumber">17</span> <span class="toctext">Publish the Web</span></a>
+<a href="#create-a-new-github-release"><span class="tocnumber">17</span> <span class="toctext">Create a new GitHub release</span></a>
 </li>
 <li class="toc_level-1 toc_section-18">
-<a href="#create-a-new-github-release"><span class="tocnumber">18</span> <span class="toctext">Create a new GitHub release</span></a>
+<a href="#update-the-release-link"><span class="tocnumber">18</span> <span class="toctext">Update the release link</span></a>
 </li>
 <li class="toc_level-1 toc_section-19">
-<a href="#publish-the-web-1"><span class="tocnumber">19</span> <span class="toctext">Publish the Web</span></a>
-</li>
-<li class="toc_level-1 toc_section-20">
-<a href="#update-the-release-link"><span class="tocnumber">20</span> <span class="toctext">Update the release link</span></a>
-</li>
-<li class="toc_level-1 toc_section-21">
-<a href="#eclipse-packaging"><span class="tocnumber">21</span> <span class="toctext">Eclipse Packaging</span></a>
+<a href="#eclipse-packaging"><span class="tocnumber">19</span> <span class="toctext">Eclipse Packaging</span></a>
 <ul>
+<li class="toc_level-2 toc_section-20">
+<a href="#build-1"><span class="tocnumber">19.1</span> <span class="toctext">Build</span></a>
+</li>
+<li class="toc_level-2 toc_section-21">
+<a href="#create-the-epp-github-release"><span class="tocnumber">19.2</span> <span class="toctext">Create the EPP GitHub release</span></a>
+</li>
 <li class="toc_level-2 toc_section-22">
-<a href="#build-1"><span class="tocnumber">21.1</span> <span class="toctext">Build</span></a>
-</li>
-<li class="toc_level-2 toc_section-23">
-<a href="#create-the-epp-github-release"><span class="tocnumber">21.2</span> <span class="toctext">Create the EPP GitHub release</span></a>
-</li>
-<li class="toc_level-2 toc_section-24">
-<a href="#update-the-main-release"><span class="tocnumber">21.3</span> <span class="toctext">Update the main release</span></a>
+<a href="#update-the-main-release"><span class="tocnumber">19.3</span> <span class="toctext">Update the main release</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-25">
-<a href="#share-on-facebook"><span class="tocnumber">22</span> <span class="toctext">Share on Facebook</span></a>
+<li class="toc_level-1 toc_section-23">
+<a href="#share-on-facebook"><span class="tocnumber">20</span> <span class="toctext">Share on Facebook</span></a>
 </li>
-<li class="toc_level-1 toc_section-26">
-<a href="#update-the-eclipse-marketplace-records"><span class="tocnumber">23</span> <span class="toctext">Update the Eclipse Marketplace records</span></a>
+<li class="toc_level-1 toc_section-24">
+<a href="#update-the-eclipse-marketplace-records"><span class="tocnumber">21</span> <span class="toctext">Update the Eclipse Marketplace records</span></a>
 </li>
 </ul>
 </td>
@@ -256,6 +250,8 @@ logout
 </div>
 </div>
 
+<p>Do not close the terminal before copy/paste the list to the ChangeLog page!.</p>
+
 <h2 id="install-on-a-separate-eclipse">Install on a separate Eclipse</h2>
 
 <p>Test if the new build can be used as an update site, by installing from <code class="highlighter-rouge">updates-test</code> on a separate Eclipse (not the one used for development).</p>
@@ -275,7 +271,7 @@ logout
       <li>temporarily update the site URL to the test site <code class="highlighter-rouge">&lt;gnumcueclipse.repository&gt;http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test&lt;/gnumcueclipse.repository&gt;</code></li>
     </ul>
   </li>
-  <li>remove the <code class="highlighter-rouge">archive</code> folder</li>
+  <li><strong>remove</strong> the <code class="highlighter-rouge">archive</code> folder</li>
   <li>run the <code class="highlighter-rouge">org.eclipse.epp.packages.git/scripts/build.mac.command</code> script</li>
   <li>check if the retrieved plug-ins versions match the expected versions; if not, check if the update site was published correctly and the URL is right;</li>
   <li>the result should be in the <code class="highlighter-rouge">archive</code> folder, including the computed <code class="highlighter-rouge">.sha</code> values.</li>
@@ -439,12 +435,6 @@ logout
 </div>
 </div>
 
-<p>Do not close the terminal before copy/paste the list to the ChangeLog page!.</p>
-
-<h2 id="publish-on-the-main-risc-v-update-site">Publish on the main RISC-V update site</h2>
-
-<p>Use the <code class="highlighter-rouge">publish-riscv-v4-neon-updates.command</code> script.</p>
-
 <h2 id="test-the-update-site">Test the update site</h2>
 
 <p>Using a test Eclipse, install the plug-ins from the update site.</p>
@@ -507,15 +497,6 @@ logout
 
 <p>Note: at this moment the system should send a notification to all clients watching this project.</p>
 
-<h2 id="publish-the-web-1">Publish the Web</h2>
-
-<ul>
-  <li>Git Push &amp; Sync the <strong>gnu-mcu-eclipse.github.io-source</strong> project; use something like <code class="highlighter-rouge">v3.2.1-201701141320 released</code> as message</li>
-  <li>wait for the Travis build to complete; occasionally links to not work, and might need to restart the build</li>
-</ul>
-
-<p>Note: the release must exist, otherwise Travis will complain and do not publish the site to <strong>gnu-mcu-eclipse.github.io</strong>.</p>
-
 <h2 id="update-the-release-link">Update the release link</h2>
 
 <p>From the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a> page, get the URL.</p>
@@ -537,7 +518,7 @@ logout
       <li>update the site URL to the release site <code class="highlighter-rouge">&lt;gnumcueclipse.repository&gt;http://gnu-mcu-eclipse.netlify.com/v4-neon-updates&lt;/gnumcueclipse.repository&gt;</code></li>
     </ul>
   </li>
-  <li>remove the <code class="highlighter-rouge">archive</code> folder</li>
+  <li><strong>remove</strong> the <code class="highlighter-rouge">archive</code> folder</li>
   <li>run the <code class="highlighter-rouge">org.eclipse.epp.packages.git/scripts/build.mac.command</code> script</li>
   <li>check if the retrieved plug-ins versions match the expected versions; if not, check if the update site was published correctly and the URL is right</li>
   <li>the result should be in the <code class="highlighter-rouge">archive</code> folder, including the computed <code class="highlighter-rouge">.sha</code> values</li>
@@ -567,7 +548,11 @@ logout
 
 <h3 id="update-the-main-release">Update the main release</h3>
 
-<p>Add a reference to the package. Copy from a previous release.</p>
+<ul>
+  <li>go to the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a> page</li>
+  <li>copy the text related to the EPP package from a previous release</li>
+  <li>paste to the current release, updating the link</li>
+</ul>
 
 <h2 id="share-on-facebook">Share on Facebook</h2>
 
@@ -592,7 +577,7 @@ logout
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Wed Jan 10 13:20:08 2018 UTC.</p>
+<p class="page-footer">Last modified on Thu Jan 25 19:43:43 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/publish-procedure/" data-layout="button"></div>
 
 
