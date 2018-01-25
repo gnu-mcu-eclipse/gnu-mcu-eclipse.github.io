@@ -9,14 +9,14 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
 
-  <title>GNU ARM Eclipse plug-ins v1.1.7-201312221905 released</title>
-  <meta name="description" content="The main change is the addition of the J-Link debugging plug-in, that supports the SEGGER J-Link JTAG/SWD probe, including extra features, like transparent i...">
+  <title>GNU MCU Eclipse plug-ins v4.3.2-201801250917 released</title>
+  <meta name="description" content="Version 4.3.2-201801250917 is a maintenance release; the main addition is support for semihosting in the SiFive RISC-V project template.">
 
-  <meta property="og:title" content="GNU ARM Eclipse plug-ins v1.1.7-201312221905 released" />
+  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.3.2-201801250917 released" />
   <meta property="og:site_name" content="GNU MCU Eclipse" />
 
 
-  <meta property="article:published_time" content="2013-12-22">
+  <meta property="article:published_time" content="2018-01-25">
 
 
   <meta property="article:section" content="releases" />
@@ -24,11 +24,9 @@
 
   <meta property="article:tag" content="gnu" />
   <meta property="article:tag" content="arm" />
+  <meta property="article:tag" content="risc-v" />
+  <meta property="article:tag" content="mcu" />
   <meta property="article:tag" content="eclipse" />
-  <meta property="article:tag" content="segger" />
-  <meta property="article:tag" content="j-link" />
-  <meta property="article:tag" content="debugging" />
-  <meta property="article:tag" content="plug-in" />
 
 
   <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
@@ -38,7 +36,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201707092118" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201707092118" media="print">
 
-  <link rel="canonical" href="/blog/2013/12/22/plugins-v1.1.7-201312221905-released/">
+  <link rel="canonical" href="/blog/2018/01/25/plugins-v4.3.2-201801250917-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
@@ -99,43 +97,133 @@
 
 <table id="post-navigation">
   <tr>
-    <td><a href="/blog/2013/11/22/plugins-v1.1.6-201311220955-released/">←</a></td>
-    <td><a href="/blog/2013/11/22/plugins-v1.1.6-201311220955-released/">GNU ARM Eclipse plug-ins v1.1.6-201311220955 released</a></td>
+    <td><a href="/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/">←</a></td>
+    <td><a href="/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/">GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released</a></td>
     <td></td>
-    <td><a href="/blog/2013/12/24/plugins-v1.1.7-201312241058-released/">GNU ARM Eclipse plug-ins v1.1.7-201312241058 released</a></td>
-    <td><a href="/blog/2013/12/24/plugins-v1.1.7-201312241058-released/">→</a></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
 
 
-<h1 class="post-title">GNU ARM Eclipse plug-ins v1.1.7-201312221905 released</h1>
+<h1 class="post-title">GNU MCU Eclipse plug-ins v4.3.2-201801250917 released</h1>
 
 
 <p class="post-meta">
-Posted on December 22, 2013 by Liviu Ionescu.
+Posted on January 25, 2018 by Liviu Ionescu.
 </p>
 
-<p>The main change is <strong>the addition of the J-Link debugging plug-in</strong>, that supports the SEGGER J-Link JTAG/SWD probe, including extra features, like transparent integration of the GDB server, integration of the Serial Wire Viewer (SWV) window as a standard Eclipse console, a functional restart button, and <a href="/debug/jlink/">more</a>.</p>
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#semihosting-for-risc-v-projects"><span class="tocnumber">1</span> <span class="toctext">Semihosting for RISC-V projects</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#new-features"><span class="tocnumber">2</span> <span class="toctext">New features</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#addressed-bugs"><span class="tocnumber">3</span> <span class="toctext">Addressed bugs</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#template-changes"><span class="tocnumber">4</span> <span class="toctext">Template changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#other-changes"><span class="tocnumber">5</span> <span class="toctext">Other changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#known-problems"><span class="tocnumber">6</span> <span class="toctext">Known problems</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><p>Version 4.3.2-201801250917 is a maintenance release; the main addition is <strong>support for semihosting in the SiFive RISC-V project template</strong>.</p>
 
-<p><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/tag/v1.1.7-201312221905">Binary files »</a></p>
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/">Binary files »</a>
+</p>
 
-<p>New features:</p>
+<h2 id="semihosting-for-risc-v-projects">Semihosting for RISC-V projects</h2>
+
+<p>The SiFive RISC-V project template was extended to support semihositing for two purposes:</p>
 
 <ul>
-  <li>[feature-request:#23] the <em><strong>echo</strong></em> command was added to the Cross Build Tools archive to prevent the <em>missing command</em> error that affected the Windows versions of the plug-in when new projects were created</li>
-  <li>[feature-request:#22] the STM32F4 template automatically sets the PLL_M definition as HSE_VALUE/1000000.</li>
+  <li>as a destination for the <code class="highlighter-rouge">trace::printf()</code> infrastructure</li>
+  <li>for fully semihosted projects, intended for running unit tests on RISC-V hardware.</li>
 </ul>
 
-<p>Bugs fixed:</p>
+<p>To run applications that use semihosting, a recent OpenOCD is required; <strong>GNU MCU Eclipse OpenOCD</strong> supports semihosting since version <a href="/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/">v0.10.0-7-20180123</a>.</p>
+
+<p>To activate semihosting in OpenOCD, use:</p>
+
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>arm semihosting enable
+</code></pre>
+</div>
+</div>
+
+<p>The Eclipse OpenOCD debug plug-in has a check button in the Startup tab.</p>
+
+<p>To pass command line options to the target application:</p>
+
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>arm semihosting_cmdline argv0 argv1 argv2 argv3 ...
+</code></pre>
+</div>
+</div>
+
+<p>In the Eclipse OpenOCD debug plug-in, add the command prefixed with <code class="highlighter-rouge">monitor</code>:</p>
+
+<p>
+<img src="/assets/images/2018/openocd-riscv-semihosting.png" alt="Semihosting" />
+</p>
+
+<h2 id="new-features">New features</h2>
 
 <ul>
-  <li>[support-requests:#33] the STM32F4 template use of FMC/FSMC was fixed.</li>
+  <li>none</li>
 </ul>
 
-<p>Other changes:</p>
+<h2 id="addressed-bugs">Addressed bugs</h2>
 
 <ul>
-  <li>the STM32F4 template includes a conditional definition for Olimex STM32-E407 green led.</li>
+  <li>none</li>
+</ul>
+
+<h2 id="template-changes">Template changes</h2>
+
+<ul>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/269">#269</a>] The STM32F7 template did not generate code to set the <code class="highlighter-rouge">PLLR</code> register for larger devices, which resulted in an assertion error during runtime; code to initialise <code class="highlighter-rouge">PLLR</code> was conditionally added to the initialisation routine.</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/268">#268</a>] Support for semihosting trace was added to the SiFive template</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/272">#272</a>] For SiFive projects that use semihosing, the <code class="highlighter-rouge">arm semihosting</code> option is automatically enabled in the OpenOCD launcher</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/273">#273</a>] Support for full semihosting was added to the SiFive template</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/274">#274</a>] To slightly optimise the build time, unused device files in the SiFive template are excluded from build</li>
+  <li>a J-Link launcher was added to the SiFive template for the projects running on the Arty board; at the time of this release, support for E31ARTY is already available from SEGGER, with support for E51ARTY planned</li>
+  <li>the SiFive template was thoroughly tested and proved to build correctly in all possible combinations, so the <em>Experimental</em> label was removed.</li>
+</ul>
+
+<h2 id="other-changes">Other changes</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>none</li>
 </ul>
 
 
@@ -145,9 +233,9 @@ Posted in
 
 <strong>releases</strong>, <strong>plugins</strong> and tagged
 
-<strong>gnu</strong>, <strong>arm</strong>, <strong>eclipse</strong>, <strong>segger</strong>, <strong>j-link</strong>, <strong>debugging</strong>, <strong>plug-in</strong>.
-</br>Last modified on Sat Jul  1 21:06:50 2017 UTC.
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2013/12/22/plugins-v1.1.7-201312221905-released/" data-layout="button"></div>
+<strong>gnu</strong>, <strong>arm</strong>, <strong>risc-v</strong>, <strong>mcu</strong>, <strong>eclipse</strong>.
+</br>Last modified on Thu Jan 25 19:02:01 2018 UTC.
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/01/25/plugins-v4.3.2-201801250917-released/" data-layout="button"></div>
 </p>
 
 

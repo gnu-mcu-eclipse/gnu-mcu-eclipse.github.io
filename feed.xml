@@ -5,9 +5,35 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 Jan 2018 15:02:11 +0000</pubDate>
-    <lastBuildDate>Tue, 23 Jan 2018 15:02:11 +0000</lastBuildDate>
+    <pubDate>Thu, 25 Jan 2018 19:10:11 +0000</pubDate>
+    <lastBuildDate>Thu, 25 Jan 2018 19:10:11 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse plug-ins v4.3.2-201801250917 released</title>
+        <description>&lt;p&gt;Version 4.3.2-201801250917 is a maintenance release; the main addition is &lt;strong&gt;support for semihosting in the SiFive RISC-V project template&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 25 Jan 2018 17:07:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/01/25/plugins-v4.3.2-201801250917-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/01/25/plugins-v4.3.2-201801250917-released/</guid>
+        
+        <category>GNU</category>
+        
+        <category>ARM</category>
+        
+        <category>RISC-V</category>
+        
+        <category>MCU</category>
+        
+        <category>Eclipse</category>
+        
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released</title>
@@ -186,22 +212,6 @@
         <category>releases</category>
         
         <category>openocd</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-2-20170912-* released</title>
-        <description>&lt;p&gt;Version v7.1.1-2-20170912-2255 is a new release of &lt;strong&gt;GNU MCU Eclipse RISC-V Embedded GCC&lt;/strong&gt;; after the initial version of the &lt;code class=&quot;highlighter-rouge&quot;&gt;riscv64-unknown-elf&lt;/code&gt; toolchain was released, it was discovered that it was intended more to applications that include a kernel-like environment, and less to bare-metal environments. This second release is intended to provide a temporary fix to this problem and make the toolchain more suitable for embedded bare-metal applications; for this it was necessary to to update to the latest newlib 2.5 release which uses ‘underscore’ syscall functions and to &lt;strong&gt;remove the mandatory use of libgloss&lt;/strong&gt;. Hopefully the official toolchain distribution will follow shortly and use the same approach.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 13 Sep 2017 07:28:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/</guid>
-        
-        
-        <category>releases</category>
-        
-        <category>riscv-none-gcc</category>
         
       </item>
     
