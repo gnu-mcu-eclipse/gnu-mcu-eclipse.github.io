@@ -114,47 +114,33 @@
 <a href="#preload-the-docker-images"><span class="tocnumber">4</span> <span class="toctext">Preload the Docker images</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#rebuild-the-docker-images"><span class="tocnumber">5</span> <span class="toctext">Rebuild the Docker images</span></a>
+<a href="#update-the-script"><span class="tocnumber">5</span> <span class="toctext">Update the script</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#development"><span class="tocnumber">6</span> <span class="toctext">Development</span></a>
-<ul>
-<li class="toc_level-2 toc_section-7">
-<a href="#update-git-repos"><span class="tocnumber">6.1</span> <span class="toctext">Update git repos</span></a>
+<a href="#build-all-distribution-files"><span class="tocnumber">6</span> <span class="toctext">Build all distribution files</span></a>
 </li>
+<li class="toc_level-1 toc_section-7">
+<a href="#subsequent-runs"><span class="tocnumber">7</span> <span class="toctext">Subsequent runs</span></a>
+<ul>
 <li class="toc_level-2 toc_section-8">
-<a href="#prepare-release"><span class="tocnumber">6.2</span> <span class="toctext">Prepare release</span></a>
+<a href="#separate-platform-specific-builds"><span class="tocnumber">7.1</span> <span class="toctext">Separate platform specific builds</span></a>
+</li>
+<li class="toc_level-2 toc_section-9">
+<a href="#clean"><span class="tocnumber">7.2</span> <span class="toctext">clean</span></a>
 </li>
 </ul>
-</li>
-<li class="toc_level-1 toc_section-9">
-<a href="#update-the-script"><span class="tocnumber">7</span> <span class="toctext">Update the script</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#build-all-distribution-files"><span class="tocnumber">8</span> <span class="toctext">Build all distribution files</span></a>
+<a href="#install-hierarchy"><span class="tocnumber">8</span> <span class="toctext">Install hierarchy</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#subsequent-runs"><span class="tocnumber">9</span> <span class="toctext">Subsequent runs</span></a>
-<ul>
-<li class="toc_level-2 toc_section-12">
-<a href="#separate-platform-specific-builds"><span class="tocnumber">9.1</span> <span class="toctext">Separate platform specific builds</span></a>
+<a href="#uninstall"><span class="tocnumber">9</span> <span class="toctext">Uninstall</span></a>
 </li>
-<li class="toc_level-2 toc_section-13">
-<a href="#clean"><span class="tocnumber">9.2</span> <span class="toctext">clean</span></a>
+<li class="toc_level-1 toc_section-12">
+<a href="#test"><span class="tocnumber">10</span> <span class="toctext">Test</span></a>
 </li>
-</ul>
-</li>
-<li class="toc_level-1 toc_section-14">
-<a href="#install-hierarchy"><span class="tocnumber">10</span> <span class="toctext">Install hierarchy</span></a>
-</li>
-<li class="toc_level-1 toc_section-15">
-<a href="#uninstall"><span class="tocnumber">11</span> <span class="toctext">Uninstall</span></a>
-</li>
-<li class="toc_level-1 toc_section-16">
-<a href="#test"><span class="tocnumber">12</span> <span class="toctext">Test</span></a>
-</li>
-<li class="toc_level-1 toc_section-17">
-<a href="#more-build-details"><span class="tocnumber">13</span> <span class="toctext">More build details</span></a>
+<li class="toc_level-1 toc_section-13">
+<a href="#more-build-details"><span class="tocnumber">11</span> <span class="toctext">More build details</span></a>
 </li>
 </ul>
 </td>
@@ -209,64 +195,42 @@
 <div class="highlight">
 <pre class="highlight">
 <code><span class="gp">$</span> docker images
-<span class="go">REPOSITORY          TAG                   IMAGE ID            CREATED             SIZE
-ilegeul/debian      9-gnu-mcu-eclipse     ff8a853cf6cb        4 days ago          3.2GB
-ilegeul/debian32    9-gnu-mcu-eclipse     a22ccdf38f1f        4 days ago          3.2GB
-ilegeul/debian32    9                     7348339e67f5        4 days ago          116MB
-debian              9                     a2ff708b7413        2 weeks ago         100MB
-hello-world         latest                1815c82652c0        3 weeks ago         1.84kB
-</span></code></pre>
-</div>
-</div>
+<span class="go">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ilegeul/centos32    6-xbb-v1            f695dd6cb46e        2 weeks ago         2.92GB
+ilegeul/centos      6-xbb-v1            294dd5ee82f3        2 weeks ago         3.09GB
+hello-world         latest              f2a91732366c        2 months ago        1.85kB
+</span><span class="gp">bash-3.2$</span><span class="sb">```</span>
+<span class="go">
+</span><span class="gp">#</span><span class="c"># Development</span>
+<span class="go">
+</span><span class="gp">#</span><span class="c">## Update git repos</span>
+<span class="go">
+The GNU MCU Eclipse RISC-V GCC is following closely the official [RISC-V releases](https://github.com/riscv/riscv-gnu-toolchain/releases).
 
-<h2 id="rebuild-the-docker-images">Rebuild the Docker images</h2>
+The procedure is to first merge the remote branches to the local branches.
 
-<p>If the download speed is limited, probably it is faster to rebuild the images locally. For this see the <code class="highlighter-rouge">build-images</code> command:</p>
+Currently, the following branches are used
 
-<div class="language-console highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh build-images
-</code></pre>
-</div>
-</div>
+* `riscv-gcc-7.2.0`
+* `riscv-newlib-2.5.0`
+* `riscv-binutils-2.29`
 
-<h2 id="development">Development</h2>
+The GNU MCU Eclipse branches have similar names, but suffixed with `-gme`.
 
-<h3 id="update-git-repos">Update git repos</h3>
+After merging the remote branches, merge the result into the `-gme` branch.
 
-<p>The GNU MCU Eclipse RISC-V GCC is following closely the official <a href="https://github.com/riscv/riscv-gnu-toolchain/releases">RISC-V releases</a>.</p>
+</span><span class="gp">#</span><span class="c">## Prepare release</span>
+<span class="go">
+By default, the build script uses tagged commits and downloads the corresponding archives.
 
-<p>The procedure is to first merge the remote branches to the local branches.</p>
+While preparing the release it is important to be able to use live Git versions. For this, 
 
-<p>Currently, the following branches are used</p>
+* update the commit ids to the desired ones 
+* commit and push
+* start the build script and pass `--use-gits`
 
-<ul>
-  <li><code class="highlighter-rouge">riscv-gcc-7.2.0</code></li>
-  <li><code class="highlighter-rouge">riscv-newlib-2.5.0</code></li>
-  <li><code class="highlighter-rouge">riscv-binutils-2.29</code></li>
-</ul>
-
-<p>The GNU MCU Eclipse branches have similar names, but suffixed with <code class="highlighter-rouge">-gme</code>.</p>
-
-<p>After merging the remote branches, merge the result into the <code class="highlighter-rouge">-gme</code> branch.</p>
-
-<h3 id="prepare-release">Prepare release</h3>
-
-<p>By default, the build script uses tagged commits and downloads the corresponding archives.</p>
-
-<p>While preparing the release it is important to be able to use live Git versions. For this,</p>
-
-<ul>
-  <li>update the commit ids to the desired ones</li>
-  <li>commit and push</li>
-  <li>start the build script and pass <code class="highlighter-rouge">--use-gits</code></li>
-</ul>
-
-<div class="language-console highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--use-gits</span>
+```console
+</span><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--use-gits</span>
 </code></pre>
 </div>
 </div>
@@ -313,33 +277,26 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> caffeinate bash
-<span class="gp">$</span> <span class="nb">exec </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--all</span>
+<code><span class="gp">$</span> caffeinate bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--all</span>
 </code></pre>
 </div>
 </div>
 
-<p>Many, many hours later, the output of the build script is a set of 8 files and their SHA signatures in the <code class="highlighter-rouge">deploy</code> folder:</p>
+<p>Many, many hours later, the output of the build script is a set of 5 files and their SHA signatures in the <code class="highlighter-rouge">deploy</code> folder:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code><span class="gp">$</span> <span class="nb">ls</span> <span class="nt">-l</span> deploy
 <span class="go">total 784400
--rw-r--r--  1 ilg  staff  75678450 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg
--rw-r--r--  1 ilg  staff       127 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.pkg.sha
 -rw-r--r--  1 ilg  staff  75726500 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.tgz
 -rw-r--r--  1 ilg  staff       127 Jul  5 14:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1143-osx.tgz.sha
--rw-r--r--  1 ilg  staff  52436506 Jul  5 21:39 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-debian64.tgz
--rw-r--r--  1 ilg  staff       132 Jul  5 21:39 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-debian64.tgz.sha
--rw-r--r--  1 ilg  staff  27642907 Jul  6 01:25 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64-setup.exe
--rw-r--r--  1 ilg  staff       135 Jul  6 01:25 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64-setup.exe.sha
+-rw-r--r--  1 ilg  staff  52436506 Jul  5 21:39 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-centos64.tgz
+-rw-r--r--  1 ilg  staff       132 Jul  5 21:39 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-centos64.tgz.sha
 -rw-r--r--  1 ilg  staff  53128553 Jul  6 01:23 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64.zip
 -rw-r--r--  1 ilg  staff       129 Jul  6 01:23 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170705-1528-win64.zip.sha
--rw-r--r--  1 ilg  staff  51726488 Jul  7 04:52 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-debian32.tgz
--rw-r--r--  1 ilg  staff       132 Jul  7 04:52 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-debian32.tgz.sha
--rw-r--r--  1 ilg  staff  21844885 Jul  7 06:46 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32-setup.exe
--rw-r--r--  1 ilg  staff       135 Jul  7 06:46 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32-setup.exe.sha
+-rw-r--r--  1 ilg  staff  51726488 Jul  7 04:52 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-centos32.tgz
+-rw-r--r--  1 ilg  staff       132 Jul  7 04:52 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-centos32.tgz.sha
 -rw-r--r--  1 ilg  staff  43378400 Jul  7 06:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32.zip
 -rw-r--r--  1 ilg  staff       129 Jul  7 06:44 gnu-mcu-eclipse-riscv-none-gcc-7.1.1-2-20170706-2356-win32.zip.sha
 </span></code></pre>
@@ -355,12 +312,12 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 <div class="highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code>--win32 --win64 --debian32 --debian64 --osx
+<code>--win32 --win64 --linux32 --linux64 --osx
 </code></pre>
 </div>
 </div>
 
-<p>Please note that, due to the specifics of the GCC build process, the Windows build requires the corresponding Debian build, so <code class="highlighter-rouge">--win32</code> alone is equivalent to <code class="highlighter-rouge">--debian32 --win32</code> and <code class="highlighter-rouge">--win64</code> alone is equivalent to <code class="highlighter-rouge">--debian64 --win64</code>.</p>
+<p>Please note that, due to the specifics of the GCC build process, the Windows build requires the corresponding Debian build, so <code class="highlighter-rouge">--win32</code> alone is equivalent to <code class="highlighter-rouge">--linux32 --win32</code> and <code class="highlighter-rouge">--win64</code> alone is equivalent to <code class="highlighter-rouge">--linux64 --win64</code>.</p>
 
 <h3 id="clean">clean</h3>
 
@@ -470,9 +427,7 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 <h2 id="uninstall">Uninstall</h2>
 
-<p>To uninstall RISC-V Embedded GCC from a Windows machine, use the <code class="highlighter-rouge">uninstall.exe</code> program.</p>
-
-<p>On macOS and GNU/Linux, the GNU MCU Eclipse RISC-V Embedded GCC install folder is self-contained and removing it is enough for completely removing the application.</p>
+<p>The binaries are distributed as portable archives, that do not need to run a setup and do not require an uninstall.</p>
 
 <h2 id="test">Test</h2>
 
@@ -495,7 +450,7 @@ hello-world         latest                1815c82652c0        3 weeks ago       
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sun Nov 12 10:38:47 2017 UTC.</p>
+<p class="page-footer">Last modified on Tue Jan 30 12:03:29 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/build-procedure/" data-layout="button"></div>
 
 

@@ -116,26 +116,23 @@
 <li class="toc_level-2 toc_section-5">
 <a href="#portable-archive"><span class="tocnumber">4.1</span> <span class="toctext">Portable archive</span></a>
 </li>
-<li class="toc_level-2 toc_section-6">
-<a href="#setup"><span class="tocnumber">4.2</span> <span class="toctext">Setup</span></a>
-</li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-7">
+<li class="toc_level-1 toc_section-6">
 <a href="#macos"><span class="tocnumber">5</span> <span class="toctext">macOS</span></a>
 <ul>
-<li class="toc_level-2 toc_section-8">
+<li class="toc_level-2 toc_section-7">
 <a href="#macports"><span class="tocnumber">5.1</span> <span class="toctext">MacPorts</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-9">
+<li class="toc_level-1 toc_section-8">
 <a href="#gnulinux"><span class="tocnumber">6</span> <span class="toctext">GNU/Linux</span></a>
 </li>
-<li class="toc_level-1 toc_section-10">
+<li class="toc_level-1 toc_section-9">
 <a href="#toolchain-path"><span class="tocnumber">7</span> <span class="toctext">Toolchain path</span></a>
 </li>
-<li class="toc_level-1 toc_section-11">
+<li class="toc_level-1 toc_section-10">
 <a href="#gdb-712"><span class="tocnumber">8</span> <span class="toctext">GDB 7.12</span></a>
 </li>
 </ul>
@@ -145,7 +142,7 @@
 </table>
 </div><h2 id="overview">Overview</h2>
 
-<p>The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-arm-embedded-toolchain"><strong>GCC ARM Embedded Toolchain</strong></a> (formerly GNU Tools for ARM Embedded Processors); for <strong>GNU/Linux</strong> target applications, the <strong><a href="http://www.linaro.org/downloads/">Linaro</a></strong> family of toolchains provides a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).</p>
+<p>The build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-arm-embedded-toolchain"><strong>GNU ARM Embedded Toolchain</strong></a> (formerly GNU Tools for ARM Embedded Processors); for <strong>GNU/Linux</strong> target applications, the <strong><a href="http://www.linaro.org/downloads/">Linaro</a></strong> family of toolchains provides a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).</p>
 
 <blockquote>
   <p>Important notes: 
@@ -162,7 +159,7 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 </ul>
 
 <blockquote>
-  <p>Note: Be sure you select the proper toolchain for the target platform, otherwise builds will not succeed, or the generated applications will fail to run. <strong>Do not</strong> try to use the GCC ARM Embedded to build  GNU/Linux applications, because the executables will not run on anything than bare metal, and <strong>do not try to use the Linaro toolchains for bare metal applications</strong>.</p>
+  <p>Note: Be sure you select the proper toolchain for the target platform, otherwise builds will not succeed, or the generated applications will fail to run. <strong>Do not</strong> try to use the GNU ARM Embedded to build  GNU/Linux applications, because the executables will not run on anything than bare metal, and <strong>do not try to use the Linaro toolchains for bare metal applications</strong>.</p>
 </blockquote>
 
 <p>The installation details described below assume the selection of the GCC ARM Embedded toolchain. For other toolchains, please follow the specific installation instructions.</p>
@@ -186,7 +183,7 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
   <li>a Windows setup that can install the binaries in the standard system location</li>
 </ul>
 
-<p>Our prefered method is to install the binaries in the user home folder, but your mileage may vary.</p>
+<p>Our preferred method is to install the binaries in the user home folder, but your mileage may vary.</p>
 
 <h3 id="portable-archive">Portable archive</h3>
 
@@ -195,68 +192,15 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 <ul>
   <li>download the latest <code class="highlighter-rouge">gcc-arm-none-eabi-6-2017-q1-update-*-win*.zip</code> file</li>
   <li>open the archive in the file explorer</li>
-  <li>extract the <code class="highlighter-rouge">GNU MCU Eclipse</code> folder in <code class="highlighter-rouge">%userprofile%\AppData\Local</code></li>
+  <li>extract the <code class="highlighter-rouge">gcc-arm-none-eabi-6-2017-q1-update</code> folder in <code class="highlighter-rouge">%userprofile%\AppData\Roaming\GNU Tools ARM Embedded</code></li>
 </ul>
 
 <p>According to Microsoft, this is the recommended location for installing user specific packages, and the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.</p>
 
-<p>In addition, the GNU MCU Eclipse plug-ins also check the following locations (POSIX paths):</p>
-
-<div class="language-console highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code><span class="gp">$</span><span class="o">{</span>user.home<span class="o">}</span>/AppData/Local/GNU Tools ARM Embedded<span class="p">;</span><span class="se">\</span>
-<span class="k">${</span><span class="nv">user</span><span class="p">.home</span><span class="k">}</span>/opt/GNU Tools ARM Embedded<span class="p">;</span><span class="se">\</span>
-<span class="k">${</span><span class="nv">user</span><span class="p">.home</span><span class="k">}</span>/opt/gnu-tools-arm-embedded<span class="p">;</span><span class="se">\</span>
-<span class="k">${</span><span class="nv">user</span><span class="p">.home</span><span class="k">}</span>/local/GNU Tools ARM Embedded<span class="p">;</span><span class="se">\</span>
-<span class="k">${</span><span class="nv">user</span><span class="p">.home</span><span class="k">}</span>/local/gnu-tools-arm-embedded<span class="p">;</span><span class="se">\</span>
-C:/opt/GNU Tools ARM Embedded<span class="p">;</span><span class="se">\</span>
-C:/opt/gnu-tools-arm-embedded<span class="p">;</span><span class="se">\</span>
-C:/Program Files/GNU Tools ARM Embedded<span class="p">;</span><span class="se">\</span>
-C:/Program Files <span class="o">(</span>x86<span class="o">)</span>/GNU Tools ARM Embedded<span class="p">;</span><span class="se">\</span>
-D:/Program Files/GNU Tools ARM Embedded<span class="p">;</span><span class="se">\</span>
-D:/Program Files <span class="o">(</span>x86<span class="o">)</span>/GNU Tools ARM Embedded
-</code></pre>
-</div>
-</div>
-
-<p>It is recommended to use one of these locations, since the plug-ins will automatically set the default toolchain path to the most recently installed toolchain found in these folders.</p>
-
-<h3 id="setup">Setup</h3>
-
-<p>If you decide to install the toolchain in a system location, you can use the common setup procedure:</p>
-
 <ul>
-  <li>download the latest Windows installer <strong>.exe</strong> file (currently <code class="highlighter-rouge">gcc-arm-none-eabi-6-2017-q1-update-win32.exe</code>, about 84 MB)</li>
-  <li>locate the file (usually in the <code class="highlighter-rouge">...\Downloads\</code>  folder) and double click it to start the installer</li>
-  <li>
-    <p>authenticate with the administrative password, to allow the installer write in system locations</p>
-
-    <p><img src="/assets/images/2014/01/MS_admin.png" alt="MS_admin" /></p>
-  </li>
-  <li>select the desired language</li>
-  <li>confirm that you want to install the toolchain</li>
-  <li>accept the terms of the license agreement</li>
-  <li>
-    <p>accept the destination folder, usually a version specific sub-folder of <code class="highlighter-rouge">C:\Program Files\</code></p>
-
-    <blockquote>
-      <p>Note: It is highly recommended to <strong>do not change the install path</strong></p>
-    </blockquote>
-
-    <p><img src="/assets/images/2014/01/MS_destination_location.png" alt="The destination folder" /></p>
-  </li>
-  <li>wait a few moments for the installer to copy files</li>
-  <li>
-    <p>in the final window be sure you <strong>disable adding the toolchain path to the environment</strong></p>
-
-    <p><img src="/assets/images/2014/01/MS_finish.png" alt="Disable adding toolchain path to environment" /></p>
-  </li>
   <li>read the <code class="highlighter-rouge">readme.txt</code> file</li>
-  <li>
-    <p>test if the compiler is functional; use the actual install path:</p>
-
-    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">C:\&gt;</span><span class="s2">"C:</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\G</span><span class="s2">NU Tools ARM Embedded</span><span class="se">\4</span><span class="s2">.8 2014q2</span><span class="se">\b</span><span class="s2">in</span><span class="se">\a</span><span class="s2">rm-none-eabi-gcc.exe"</span> <span class="nt">--version</span>
+  <li>test if the compiler is functional; use the actual install path:
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">C:\&gt;</span><span class="s2">"C:</span><span class="se">\U</span><span class="s2">sers</span><span class="se">\i</span><span class="s2">lg</span><span class="se">\A</span><span class="s2">ppData</span><span class="se">\R</span><span class="s2">oaming</span><span class="se">\G</span><span class="s2">NU Tools ARM Embedded</span><span class="se">\g</span><span class="s2">cc-arm-none-eabi-4.8 2014q2</span><span class="se">\b</span><span class="s2">in</span><span class="se">\a</span><span class="s2">rm-none-eabi-gcc.exe"</span> <span class="nt">--version</span>
 <span class="go">arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-branch revision 211358]
 </span></code></pre></div>    </div>
   </li>
@@ -264,9 +208,9 @@ D:/Program Files <span class="o">(</span>x86<span class="o">)</span>/GNU Tools A
 
 <p>The complete toolchain documentation is available in the <code class="highlighter-rouge">...\share\doc\pdf\</code> folder.</p>
 
-<p>If you’ll ever need to remove the toolchain, there is an <strong>uninstall.exe</strong> program available in the toolchain root folder.</p>
-
 <p>For Windows, the next step would be to install the <a href="/windows-build-tools/">build tools (make &amp; rm)</a>.</p>
+
+<p>If you insist on using the setup version, be sure you <strong>DO NOT add the toolchain path to the user or system path!</strong></p>
 
 <h2 id="macos">macOS</h2>
 
@@ -410,7 +354,7 @@ ${user.home}/local:\
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Nov 10 12:24:01 2017 UTC.</p>
+<p class="page-footer">Last modified on Tue Jan 30 12:04:01 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/arm/install/" data-layout="button"></div>
 
 
