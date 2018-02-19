@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+
+  <title>Prerequisites for building binaries</title>
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+
+  <meta property="og:title" content="Prerequisites for building binaries" />
+  <meta property="og:site_name" content="GNU MCU Eclipse" />
+
+
+  <meta property="article:published_time" content="2017-07-06">
+
+
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201707092118" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201707092118" media="print">
+
+  <link rel="canonical" href="/developer/build-binaries-prerequisites-xbb/">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/manifest.json">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-16', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<header>
+  <div class="inner">
+    <h1><a href="/">GNU MCU Eclipse</a></h1>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <div id="buttons">
+      <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
+    </div>
+  </div>
+</header>
+
+
+<div id="content-wrapper">
+<div class="inner clearfix">
+
+<div id="site-body">
+<section id="main-content">
+
+
+<h1 class="page-title">Prerequisites for building binaries</h1>
+
+
+<p>The main trick that makes the multi-platform build possible is <a href="https://www.docker.com">Docker</a>.</p>
+
+<p>The second generation of the build scripts use the <a href="https://github.com/xpack/xpack-build-box">xPack Build Box (XBB)</a>, a set of Docker containers based on CentOS 6 (separate 32/64-bits containers). The more conservative CentOS 6 was preferred to avoid problems when attempting to run the executables on older versions.</p>
+
+<p>The Windows binaries are also generated on the same Docker containers, using <a href="http://mingw-w64.org">mingw-w64</a>.</p>
+
+<h3 id="gnulinux">GNU/Linux</h3>
+
+<p>Any GNU/Linux distribution that is able to run Docker should be ok; it is not necessary to have a physical machine, virtual machines are perfectly fine. For better results, dedicate 3-4 cores and 4-8 GB of RAM.</p>
+
+<p>The procedure was tested on:</p>
+
+<ul>
+  <li>Ubuntu 16.04 LTS, running as a virtual machine in Parallels Desktop on macOS 10.12.</li>
+  <li>Ubuntu 17.10, running as a virtual machine in VirtualBox on macOS 10.13.</li>
+</ul>
+
+<p>The build scripts do most of the actual work in the Docker container, and, apart from Docker, the host machine has no other special requirements.</p>
+
+<h4 id="install-docker">Install Docker</h4>
+
+<p>For any GNU/Linux distribution, follow the <a href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-using-the-repository">specific instructions</a>.</p>
+
+<p>The steps to install Docker on an Ubuntu system are basically:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get update
+<span class="go">
+</span><span class="gp">$</span> <span class="nb">sudo </span>apt-get install apt-transport-https ca-certificates  curl software-properties-common
+<span class="go">
+</span><span class="gp">$</span> curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
+<span class="go">
+</span><span class="gp">$</span> <span class="nb">sudo </span>add-apt-repository  <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu  </span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span><span class="s2">  stable"</span>
+<span class="go">
+</span><span class="gp">$</span> <span class="nb">sudo </span>apt-get update
+<span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install docker-ce
+</code></pre></div></div>
+
+<p>To check if the install is functional, run the <em>Hello World</em> image, for the moment as <code class="highlighter-rouge">sudo</code>:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>docker run hello-world
+<span class="go">Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+b04784fba78d: Pull complete 
+Digest: sha256:f3b3b28a45160805bb16542c9531888519430e9e6d6ffc09d72261b0d26ff74f
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+</span><span class="c">...
+</span></code></pre></div></div>
+
+<h4 id="configure-docker-to-run-as-a-regular-user">Configure Docker to run as a regular user</h4>
+
+<p>To allow Docker to run as a regular user, you need to be a member of the <code class="highlighter-rouge">docker</code> group.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>groupadd docker
+<span class="gp">$</span> <span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
+<span class="gp">$</span> <span class="nb">sudo </span>service docker restart
+</code></pre></div></div>
+
+<p>The above script are for Ubuntu and the Debian family. For other distributions, the last line may differ, for example for Arch Linux use:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> systemctl restart docker
+</code></pre></div></div>
+
+<p>To make these changes effective, logout and login.</p>
+
+<p>To check if the configuration change is functional, run the same <em>Hello World</em> image without sudo:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> docker run hello-world
+<span class="go">
+Hello from Docker!
+</span><span class="c">...
+</span></code></pre></div></div>
+
+<h3 id="macos">macOS</h3>
+
+<p>For development build, the procedure is executed on the latest macOS version (currently 10.13).</p>
+
+<p>For production builds it is recommended to use a slightly older version. macOS 10.10 is a good compromise, since it still allows to install the additional build tools via Homebrew.</p>
+
+<p>It is not mandatory to have a physical macOS 10.10 machine, a virtual machine is also perfectly fine. Both Parallels and VirtualBox were checked and work without problems.</p>
+
+<h4 id="install-the-command-line-tools">Install the Command Line Tools</h4>
+
+<p>The macOS compiler and other development tools are packed in a separate Xcode add-on. The best place to get it is from the <a href="https://developer.apple.com/xcode/downloads/">Developer</a> site, although this might require enrolling to the developer program (free of charge).</p>
+
+<p>The recommended way is to first install Xcode, then the Command Line Tools.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> xcode-select <span class="nt">-p</span>
+<span class="go">/Applications/Xcode.app/Contents/Developer
+</span><span class="gp">$</span> gcc <span class="nt">--version</span>
+<span class="go">Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+</span></code></pre></div></div>
+
+<p>It is also possible to install the Command Line Tools separately via a command line:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> xcode-select <span class="nt">--install</span>
+<span class="gp">$</span> xcode-select <span class="nt">-p</span>
+<span class="go">/Library/Developer/CommandLineTools
+</span><span class="gp">$</span> gcc <span class="nt">--version</span>
+<span class="go">Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.1.0 (clang-802.0.42)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+</span></code></pre></div></div>
+
+<h4 id="install-a-custom-instance-of-homebrew">Install a custom instance of Homebrew</h4>
+
+<p>The build process is quite complex, and requires tools not available in the standard Apple macOS distribution. These tools can be installed with Homebrew. To keep these tools separate, a custom instance of Homebrew is installed in <code class="highlighter-rouge">${HOME}/opt/homebrew/xbb</code>.</p>
+
+<p>In a separate run, the <strong><a href="http://www.tug.org/mactex/">MacTex</a></strong> tools are also installed in <code class="highlighter-rouge">${HOME}/opt/texlive</code>. Alternatively you can install MacTex in <code class="highlighter-rouge">/usr/local</code> using the official distribution, but this will add lots of programs to the system path, and this is a bad thing.</p>
+
+<p>The entire process can be automated with two scripts, available from GitHub:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span> git clone https://github.com/xpack/xpack-build-box.git <span class="se">\</span>
+    <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/Downloads/xpack-build-box.git
+<span class="gp">$</span> caffeinate bash <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/Downloads/xpack-build-box.git/macos/install-homebrew-xbb.sh
+<span class="gp">$</span> caffeinate bash <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/Downloads/xpack-build-box.git/macos/install-texlive.sh
+</code></pre></div></div>
+
+<p>The scripts run with user credentials, no <code class="highlighter-rouge">sudo</code> access is required. Please be aware that both scripts take quite some time to complete.</p>
+
+<h4 id="install-docker-1">Install Docker</h4>
+
+<p>On macOS, Docker can be installed by following the official <a href="https://docs.docker.com/docker-for-mac/install/">Install Docker on macOS</a> instructions.</p>
+
+<p>Due to the specifics of macOS, Docker cannot run native; instead, it uses a GNU/Linux virtual machine running in Apple HyperKit (Apple’s virtualization framework).</p>
+
+<p>For better results, dedicate 3-4 cores and 4-8 GB of RAM to Docker.</p>
+
+<h3 id="docker-images">Docker images</h3>
+
+<p>The Docker images are available from <a href="https://hub.docker.com/u/ilegeul/">Docker Hub</a>. They were build using the Dockerfiles available from <a href="https://github.com/xpack/xpack-build-box/tree/master/centos">XBB (xPack Build Box)</a>.</p>
+
+<p>If not already loaded, Docker will load the images at first usage. The images are relatively large, around 3 GB.</p>
+
+<p>It is possible to separately load the Docker images, using the script <code class="highlighter-rouge">preload-images</code> command of each script.</p>
+
+<p>More details in each script documentation page.</p>
+
+
+<hr class="page-footer"/>
+<p class="page-footer">Last modified on Mon Feb 19 17:32:51 2018 UTC.</p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/build-binaries-prerequisites-xbb/" data-layout="button"></div>
+
+
+</section>
+
+<aside id="sidebar">
+
+<h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
+
+<ul>
+  <li><a href="/blog/2018/01/25/plugins-v4.3.2-201801250917-released/">GNU MCU Eclipse plug-ins v4.3.2-201801250917 released</a></li>
+  <li><a href="/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/">GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released</a></li>
+  <li><a href="/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-2-20180111 released</a></li>
+  <li><a href="/blog/2018/01/12/openocd-v0-10-0-6-20180112-released/">GNU MCU Eclipse OpenOCD v0.10.0-6-20180112 released</a></li>
+  <li><a href="/blog/2018/01/10/plugins-v4.3.1-201801092051-released/">GNU MCU Eclipse plug-ins v4.3.1-201801092051 released</a></li>
+</ul>
+
+
+<hr />
+
+<h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
+
+<h4 id="features"><a href="/plugins/features/">Features</a></h4>
+
+<h4 id="downloads"><a href="/downloads/">Downloads</a></h4>
+
+<ul>
+  <li><a href="/downloads/">Overview</a></li>
+  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+</ul>
+
+<h4 id="install"><a href="/install/">Install</a></h4>
+
+<ul>
+  <li><a href="/install/">Overview</a></li>
+  <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
+  <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
+  <li><a href="/debug/install/">Debugging binaries</a>
+    <ul>
+      <li><a href="/debug/install/">Overview</a></li>
+      <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
+      <li><a href="/openocd/install/">OpenOCD install</a></li>
+      <li><a href="/qemu/install/">QEMU install</a></li>
+    </ul>
+  </li>
+  <li><a href="/plugins/install/">Eclipse plug-ins install</a></li>
+</ul>
+
+<h4 id="important">Important</h4>
+
+<ul>
+  <li><a href="/install/">Install order</a></li>
+  <li><a href="/eclipse/workspace/preferences/">Workspace preferences</a></li>
+  <li><a href="/toolchain/path/">Toolchain path</a></li>
+  <li><a href="/eclipse/project/portability/">Project portability</a></li>
+</ul>
+
+<h4 id="tutorials">Tutorials</h4>
+
+<ul>
+  <li><a href="/tutorials/blinky-arm/">Create a Blinky ARM test project</a></li>
+  <li><a href="/tutorials/hello-arm/">Create a Hello ARM test project</a></li>
+</ul>
+
+<h4 id="how-to-use">How to use</h4>
+
+<ul>
+  <li><a href="/plugins/mbs/">The managed build plug-in</a></li>
+  <li><a href="/plugins/packs-manager/">The packs manager (CMSIS)</a></li>
+  <li><a href="/eclipse/project/assign-device/">Assign a device</a></li>
+</ul>
+
+<h4 id="templates"><a href="/templates/">Templates</a></h4>
+
+<ul>
+  <li><a href="/templates/">Overview</a></li>
+  <li><a href="/templates/cortexm/">Cortex-M template</a></li>
+  <li><a href="/templates/stm32f/">STM32Fxx template</a></li>
+  <li><a href="/templates/klxx/">Freescale KLxx templates</a></li>
+</ul>
+
+<h4 id="debugging"><a href="/debug/">Debugging</a></h4>
+
+<ul>
+  <li><a href="/debug/">Overview</a></li>
+  <li><a href="/debug/jlink/">The SEGGER J-Link plug-in</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/qemu/">The QEMU plug-in</a></li>
+  <li><a href="/debug/peripheral-registers/">The peripheral registers view (CMSIS)</a></li>
+</ul>
+
+<h4 id="gnu-mcu-risc-v-gcc"><a href="/toolchain/riscv/">GNU MCU RISC-V GCC</a></h4>
+
+<ul>
+  <li><a href="/toolchain/riscv/">Overview</a></li>
+  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
+  <li><a href="/toolchain/riscv/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/riscv/publish-procedure/">How to publish</a></li>
+  <li><a href="/toolchain/riscv/releases/">Releases</a></li>
+  <li><a href="/toolchain/riscv/support/">Support</a></li>
+</ul>
+
+<h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
+
+<ul>
+  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li><a href="/qemu/install/">QEMU Install</a></li>
+  <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
+  <li><a href="/qemu/options/">Command line options</a></li>
+  <li><a href="/qemu/build-procedure/">How to build</a></li>
+  <li><a href="/qemu/publish-procedure/">How to publish</a></li>
+  <li><a href="/qemu/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
+
+<ul>
+  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li><a href="/openocd/install/">OpenOCD Install</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
+  <li><a href="/openocd/build-procedure/">How to build</a></li>
+  <li><a href="/openocd/publish-procedure/">How to publish</a></li>
+  <li><a href="/openocd/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+</ul>
+
+<h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
+
+<ul>
+  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
+  <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
+  <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
+  <li><a href="/windows-build-tools/releases/">Releases</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
+
+<ul>
+  <li><a href="/arch/riscv/">Overview</a></li>
+  <li><a href="/arch/riscv/arty-reflash/">Flashing the Arty boards</a></li>
+  <li><a href="/arch/riscv/ftdi-jtag-drivers/">FTDI JTAG drivers</a></li>
+</ul>
+
+<h4 id="advanced">Advanced</h4>
+
+<ul>
+  <li><a href="/advanced/headless-builds/">Headless builds</a></li>
+</ul>
+
+<h4 id="support"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
+</ul>
+
+<h4 id="developer"><a href="/developer/">Developer</a></h4>
+
+<ul>
+  <li><a href="/developer/">Overview</a></li>
+  <li><a href="/developer/build-procedure/">How to build</a></li>
+  <li><a href="/developer/publish-procedure/">How to publish</a></li>
+  <li><a href="/developer/change-log">Change log</a></li>
+  <li><a href="/developer/contribute/">Contribute</a></li>
+</ul>
+
+<h4 id="hardware">Hardware</h4>
+
+<ul>
+  <li><a href="/developer/j-link-stm32-boards/">J-Link and STM32 boards</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+</ul>
+
+<h4 id="licenses">Licenses</h4>
+
+<ul>
+  <li><a href="/licenses/plug-ins/">Eclipse plug-ins</a></li>
+  <li><a href="/licenses/tools/">Tools</a></li>
+</ul>
+
+<h4 id="finance">Finance</h4>
+
+<ul>
+  <li><a href="/finance/sponsorship/">Sponsorship &amp; donations</a></li>
+</ul>
+
+<h4 id="about"><a href="/about/">About</a></h4>
+
+<hr />
+<p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NXKFN7DJH8DJ6">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="Pay Pal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</aside>
+
+
+</div>
+</div>
+
+<div class="inner clearfix">
+<div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2017 Liviu Ionescu</li>
+  <li>Hosted on GitHub Pages</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  </li>
+</ul>
+
+  </div>
+  <a href="http://github.com/gnu-mcu-eclipse" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/support/">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -445,6 +445,10 @@
 <lastmod>2017-02-04T13:44:00+00:00</lastmod>
 </url>
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/developer/build-binaries-prerequisites-xbb/</loc>
+<lastmod>2018-02-19T17:32:51+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/build-binaries-prerequisites/</loc>
 <lastmod>2017-10-14T22:57:19+00:00</lastmod>
 </url>
@@ -463,6 +467,10 @@
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/build-procedure/</loc>
 <lastmod>2017-11-13T21:21:39+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/toolchain/arm/build-procedure/</loc>
+<lastmod>2018-02-19T17:32:51+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/build-procedure/</loc>
@@ -511,6 +519,10 @@
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/change-log/</loc>
 <lastmod>2016-12-27T16:43:46+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/toolchain/arm/change-log/</loc>
+<lastmod>2018-02-19T17:32:51+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/change-log/</loc>
@@ -697,6 +709,10 @@
 <lastmod>2017-07-01T21:06:50+00:00</lastmod>
 </url>
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/toolchain/arm/</loc>
+<lastmod>2018-02-19T17:32:51+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/</loc>
 <lastmod>2017-11-12T10:38:47+00:00</lastmod>
 </url>
@@ -785,6 +801,10 @@
 <lastmod>2017-10-14T22:57:19+00:00</lastmod>
 </url>
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/toolchain/arm/publish-procedure/</loc>
+<lastmod>2018-02-19T17:32:51+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/publish-procedure/</loc>
 <lastmod>2018-01-12T22:10:17+00:00</lastmod>
 </url>
@@ -813,6 +833,10 @@
 <lastmod>2017-07-01T21:06:50+00:00</lastmod>
 </url>
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/toolchain/arm/releases/</loc>
+<lastmod>2018-02-19T17:32:51+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/releases/</loc>
 <lastmod>2017-07-06T21:53:38+00:00</lastmod>
 </url>
@@ -831,6 +855,10 @@
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/templates/stm32f/</loc>
 <lastmod>2017-07-01T21:06:50+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/toolchain/arm/support/</loc>
+<lastmod>2018-02-19T17:32:51+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/support/</loc>
