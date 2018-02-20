@@ -2,18 +2,19 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
   <title>How to install GNU MCU Eclipse?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="How to install GNU MCU Eclipse?" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
+  <meta property="og:title" content="How to install GNU MCU Eclipse?">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
   <meta property="article:published_time" content="2015-09-16">
@@ -22,9 +23,9 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201707092118" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201707092118" media="print">
@@ -32,7 +33,7 @@
   <link rel="canonical" href="/install/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -74,7 +75,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -105,40 +106,44 @@
 <a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#toolchain"><span class="tocnumber">2</span> <span class="toctext">Toolchain</span></a>
+<a href="#xpm---the-xpack-manager"><span class="tocnumber">2</span> <span class="toctext">xpm - the xPack Manager</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#windows-build-tools"><span class="tocnumber">3</span> <span class="toctext">Windows Build Tools</span></a>
+<a href="#toolchains"><span class="tocnumber">3</span> <span class="toctext">Toolchain(s)</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#segger-j-link"><span class="tocnumber">4</span> <span class="toctext">SEGGER J-Link</span></a>
+<a href="#windows-build-tools"><span class="tocnumber">4</span> <span class="toctext">Windows Build Tools</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#openocd"><span class="tocnumber">5</span> <span class="toctext">OpenOCD</span></a>
+<a href="#segger-j-link"><span class="tocnumber">5</span> <span class="toctext">SEGGER J-Link</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#qemu"><span class="tocnumber">6</span> <span class="toctext">QEMU</span></a>
+<a href="#openocd"><span class="tocnumber">6</span> <span class="toctext">OpenOCD</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#java"><span class="tocnumber">7</span> <span class="toctext">Java</span></a>
+<a href="#qemu"><span class="tocnumber">7</span> <span class="toctext">QEMU</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#eclipse--cdt"><span class="tocnumber">8</span> <span class="toctext">Eclipse &amp; CDT</span></a>
+<a href="#java"><span class="tocnumber">8</span> <span class="toctext">Java</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#plug-ins"><span class="tocnumber">9</span> <span class="toctext">Plug-ins</span></a>
+<a href="#eclipse--cdt"><span class="tocnumber">9</span> <span class="toctext">Eclipse &amp; CDT</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#workspace-preferences"><span class="tocnumber">10</span> <span class="toctext">Workspace preferences</span></a>
+<a href="#plug-ins"><span class="tocnumber">10</span> <span class="toctext">Plug-ins</span></a>
+</li>
+<li class="toc_level-1 toc_section-11">
+<a href="#workspace-preferences"><span class="tocnumber">11</span> <span class="toctext">Workspace preferences</span></a>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div><h2 id="overview">Overview</h2>
+</div>
+<h2 id="overview">Overview</h2>
 
-<p>Although GNU MCU Eclipse is not yet a packed suite to be installed in a single step, the separate steps are relatively easy to perform, and installing the plug-ins and the tools can be successfully completed even by non-experienced users.</p>
+<p>For more flexibility and upgradeability, GNU MCU Eclipse is not packed as a all-inclusive suite to be installed in a single step. However, the separate steps are relatively easy to perform, and installing the plug-ins and the tools can be successfully completed even by non-experienced users.</p>
 
 <blockquote>
   <p>Note for beginners: If performed for the first time, it is recommended to follow the steps <strong>by the book</strong> and avoid <em>poetic licenses</em>, since they might lead to tricky situations and subtle functional problems.</p>
@@ -146,17 +151,45 @@
 
 <p>The recommended sequence is described below.</p>
 
-<h2 id="toolchain">Toolchain</h2>
+<h2 id="xpm---the-xpack-manager">xpm - the xPack Manager</h2>
+
+<p><code class="highlighter-rouge">xpm</code> is a new tool, currently under development, intended to manage software packages (xPacks) including to install binary distributions.</p>
+
+<p>Currently <code class="highlighter-rouge">xpm</code> is not mandatory, but it is a useful addition since it provides a convenient way to install and later update the RISC-V toolchain, OpenOCD and the Windows Build Tools.</p>
+
+<p><code class="highlighter-rouge">xpm</code> is built on top of <a href="https://nodejs.org/">node.js</a> and is highly portable; the install steps are described in the <a href="https://www.npmjs.com/package/xpm">xpm</a> page.</p>
+
+<h2 id="toolchains">Toolchain(s)</h2>
 
 <p>This is generally a mandatory step for all platforms, since most platforms do not come by default with an embedded GCC toolchain (ARM or RISC-V).</p>
 
 <p>Please follow the steps in the <a href="/toolchain/arm/install">ARM Toolchain install</a> or <a href="/toolchain/riscv/install">RISC-V Toolchain install</a> page.</p>
+
+<p>For RISC-V, the shortcut is:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm install @gnu-mcu-eclipse/riscv-none-gcc <span class="nt">--global</span>
+</code></pre>
+</div>
+</div>
 
 <h2 id="windows-build-tools">Windows Build Tools</h2>
 
 <p>This step is Windows specific, and it is highly recommended to use the GNU MCU Eclipse Windows Build Tools, and avoid other <code class="highlighter-rouge">make.exe</code> programs, even if they apparently work, since subtle differences in path processing exists between different versions of <code class="highlighter-rouge">make</code>.</p>
 
 <p>Please follow the steps in the <a href="/windows-build-tools/install/">How to install the Windows Build Tools</a> page.</p>
+
+<p>The shortcut is:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm install @gnu-mcu-eclipse/windows-build-tools <span class="nt">--global</span>
+</code></pre>
+</div>
+</div>
 
 <p>POSIX platforms generally include <code class="highlighter-rouge">make</code> in the system distribution, or might require to install some developer packages (for example on macOS you need to install the Xcode Command Line Tools).</p>
 
@@ -167,6 +200,14 @@
 <h2 id="openocd">OpenOCD</h2>
 
 <p>For the unfortunate developers who do not have a J-Link available, the alternative is to follow the steps in the <a href="/openocd/install">How to install the OpenOCD binaries</a> page.</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm install @gnu-mcu-eclipse/openocd <span class="nt">--global</span>
+</code></pre>
+</div>
+</div>
 
 <p>OpenOCD might be needed when using development boards with integrated debuggers, like STM32F4-DISCOVERY boards, although the recommended solution is to prepare a <a href="/developer/j-link-stm32-boards">custom cable</a> and connect them to J-Link.</p>
 
@@ -209,8 +250,8 @@
 <p>As the last install step, but actually a step to be performed after creating each and any Eclipse workspace, it is highly recommended to follow the steps in the <a href="/eclipse/workspace/preferences">Workspace preferences</a> page.</p>
 
 
-<hr class="page-footer"/>
-<p class="page-footer">Last modified on Wed Jul 19 14:39:30 2017 UTC.</p>
+<hr class="page-footer">
+<p class="page-footer">Last modified on Tue Feb 20 16:24:03 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/install/" data-layout="button"></div>
 
 
@@ -229,7 +270,7 @@
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -239,10 +280,14 @@
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -252,7 +297,8 @@
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -306,6 +352,17 @@
   <li><a href="/debug/peripheral-registers/">The peripheral registers view (CMSIS)</a></li>
 </ul>
 
+<h4 id="gnu-mcu-arm-gcc"><a href="/toolchain/riscv/">GNU MCU ARM GCC</a></h4>
+
+<ul>
+  <li><a href="/toolchain/arm/">Overview</a></li>
+  <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/arm/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/arm/publish-procedure/">How to publish</a></li>
+  <li><a href="/toolchain/arm/releases/">Releases</a></li>
+  <li><a href="/toolchain/arm/support/">Support</a></li>
+</ul>
+
 <h4 id="gnu-mcu-risc-v-gcc"><a href="/toolchain/riscv/">GNU MCU RISC-V GCC</a></h4>
 
 <ul>
@@ -320,38 +377,44 @@
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -419,7 +482,7 @@
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -441,7 +504,7 @@
     <ul>
   <li>© 2017 Liviu Ionescu</li>
   <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
