@@ -390,7 +390,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/</loc>
-<lastmod>2018-01-13T13:52:19+00:00</lastmod>
+<lastmod>2018-04-01T08:35:52+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/</loc>
@@ -399,6 +399,10 @@
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2018/01/25/plugins-v4.3.2-201801250917-released/</loc>
 <lastmod>2018-01-30T15:23:56+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2018/03/31/arm-none-eabi-gcc-v6-3-1-1-1-released/</loc>
+<lastmod>2018-04-01T17:04:11+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/about/</loc>
@@ -630,7 +634,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/plugins/install/</loc>
-<lastmod>2018-01-12T22:08:57+00:00</lastmod>
+<lastmod>2018-04-01T08:36:31+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/install/</loc>
@@ -786,7 +790,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/arch/riscv/programmer/</loc>
-<lastmod>2017-11-12T10:38:47+00:00</lastmod>
+<lastmod>2018-04-01T08:35:14+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/publish-procedure/</loc>
@@ -910,6 +914,10 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/page10/</loc>
+<lastmod>2018-01-10T12:25:30+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/page11/</loc>
 <lastmod>2018-01-10T12:25:30+00:00</lastmod>
 </url>
 </urlset>

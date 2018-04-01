@@ -5,9 +5,27 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Feb 2018 16:27:41 +0000</pubDate>
-    <lastBuildDate>Tue, 20 Feb 2018 16:27:41 +0000</lastBuildDate>
+    <pubDate>Sun, 01 Apr 2018 17:15:56 +0000</pubDate>
+    <lastBuildDate>Sun, 01 Apr 2018 17:15:56 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse ARM Embedded GCC v6.3.1-1.1 20180331 released</title>
+        <description>&lt;p&gt;Version v6.3.1-1.1 20180331 is the first release of &lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 31 Mar 2018 09:00:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/03/31/arm-none-eabi-gcc-v6-3-1-1-1-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/03/31/arm-none-eabi-gcc-v6-3-1-1-1-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>arm</category>
+        
+        <category>arm-none-eabi-gcc</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse plug-ins v4.3.2-201801250917 released</title>
@@ -196,22 +214,6 @@
         <category>releases</category>
         
         <category>riscv-none-gcc</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse OpenOCD v0.10.0-4-20171004* released</title>
-        <description>&lt;p&gt;Version v0.10.0-4-20171004-0812-dev is a maintenance release; the main change was to revert some of the RISC-V patches that caused problems for other targets.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 04 Oct 2017 08:20:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/10/04/openocd-v0-10-0-4-20171004-dev-released/</guid>
-        
-        
-        <category>releases</category>
-        
-        <category>openocd</category>
         
       </item>
     
