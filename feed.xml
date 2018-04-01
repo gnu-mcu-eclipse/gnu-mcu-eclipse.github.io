@@ -5,9 +5,27 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Apr 2018 17:15:56 +0000</pubDate>
-    <lastBuildDate>Sun, 01 Apr 2018 17:15:56 +0000</lastBuildDate>
+    <pubDate>Sun, 01 Apr 2018 18:27:19 +0000</pubDate>
+    <lastBuildDate>Sun, 01 Apr 2018 18:27:19 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse ARM Embedded GCC v7.2.1-1.1 20180401 released</title>
+        <description>&lt;p&gt;Version v7.2.1-1.1 20180401 is a new release of &lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 01 Apr 2018 18:18:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/04/01/arm-none-eabi-gcc-v7-2-1-1-1-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/04/01/arm-none-eabi-gcc-v7-2-1-1-1-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>arm</category>
+        
+        <category>arm-none-eabi-gcc</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse ARM Embedded GCC v6.3.1-1.1 20180331 released</title>
@@ -198,22 +216,6 @@
         <category>releases</category>
         
         <category>openocd</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-1-20171109 released</title>
-        <description>&lt;p&gt;Version v7.2.0-1-20171109 is a new release of &lt;strong&gt;GNU MCU Eclipse RISC-V Embedded GCC&lt;/strong&gt;; the main improvement is in GDB, which no longer returns the 4096 CSRs together with the general registers. In contrast to the &lt;code class=&quot;highlighter-rouge&quot;&gt;riscv64-unknown-elf&lt;/code&gt; toolchain, this toolchain is clearly intended for bare-metal embedded applications; for this it was necessary to  update to the latest newlib 2.5 release which uses ‘underscore’ syscall functions and to &lt;strong&gt;remove the mandatory use of libgloss&lt;/strong&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 09 Nov 2017 07:28:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/11/09/riscv-none-gcc-v7-2-0-1-20171109-released/</guid>
-        
-        
-        <category>releases</category>
-        
-        <category>riscv-none-gcc</category>
         
       </item>
     
