@@ -2,37 +2,45 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>Using J-Link with the STM32 boards</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <title>GNU MCU Eclipse plug-ins v4.3.3-201804191501 released</title>
+  <meta name="description" content="Version 4.3.3-201804191501 is a maintenance release; the main changes are bug fixes and enhancements.">
 
-  <meta property="og:title" content="Using J-Link with the STM32 boards" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
-
-
-  <meta property="article:published_time" content="2015-09-10">
+  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.3.3-201804191501 released">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
+  <meta property="article:published_time" content="2018-04-19">
 
 
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="plugins">
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta property="article:tag" content="gnu">
+  <meta property="article:tag" content="arm">
+  <meta property="article:tag" content="risc-v">
+  <meta property="article:tag" content="mcu">
+  <meta property="article:tag" content="eclipse">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201707092118" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201707092118" media="print">
 
-  <link rel="canonical" href="/developer/j-link-stm32-boards/">
+  <link rel="canonical" href="/blog/2018/04/19/plugins-v4.3.3-201804191501-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -74,7 +82,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -88,9 +96,23 @@
 <div id="site-body">
 <section id="main-content">
 
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2018/04/01/arm-none-eabi-gcc-v7-2-1-1-1-released/">←</a></td>
+    <td><a href="/blog/2018/04/01/arm-none-eabi-gcc-v7-2-1-1-1-released/">GNU MCU Eclipse ARM Embedded GCC v7.2.1-1.1 20180401 released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-<h1 class="page-title">Using J-Link with the STM32 boards</h1>
 
+<h1 class="post-title">GNU MCU Eclipse plug-ins v4.3.3-201804191501 released</h1>
+
+
+<p class="post-meta">
+Posted on April 19, 2018 by Liviu Ionescu.
+</p>
 
 <div id="toc-container">
 <table class="toc" id="toc">
@@ -102,122 +124,85 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
+<a href="#new-features"><span class="tocnumber">1</span> <span class="toctext">New features</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#convert-the-st-link-on-board-into-a-j-link"><span class="tocnumber">2</span> <span class="toctext">Convert the ST-LINK on-board into a J-Link</span></a>
+<a href="#addressed-bugs"><span class="tocnumber">2</span> <span class="toctext">Addressed bugs</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#the-custom-j-link-to-st-cable"><span class="tocnumber">3</span> <span class="toctext">The custom J-Link to ST cable</span></a>
+<a href="#template-changes"><span class="tocnumber">3</span> <span class="toctext">Template changes</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#the-st-6-pin-swd-connector"><span class="tocnumber">4</span> <span class="toctext">The ST 6-pin SWD connector</span></a>
+<a href="#other-changes"><span class="tocnumber">4</span> <span class="toctext">Other changes</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#the-j-link-20-pin-jtagswd-connector"><span class="tocnumber">5</span> <span class="toctext">The J-Link 20-pin JTAG/SWD connector</span></a>
-</li>
-<li class="toc_level-1 toc_section-6">
-<a href="#the-target-detect-strap"><span class="tocnumber">6</span> <span class="toctext">The target detect strap</span></a>
-</li>
-<li class="toc_level-1 toc_section-7">
-<a href="#jumpers"><span class="tocnumber">7</span> <span class="toctext">Jumpers</span></a>
-</li>
-<li class="toc_level-1 toc_section-8">
-<a href="#conclusion"><span class="tocnumber">8</span> <span class="toctext">Conclusion</span></a>
+<a href="#known-problems"><span class="tocnumber">5</span> <span class="toctext">Known problems</span></a>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div><p>This page explains how to build a cable to connect the J-Link to STM32 DISCOVERY and NUCLEO boards.</p>
+</div>
+<p>Version 4.3.3-201804191501 is a maintenance release; the main changes are bug fixes and enhancements.</p>
 
-<h2 id="overview">Overview</h2>
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/">Binary files »</a>
+</p>
 
-<p>As most vendors do, ST also designed the cheap STM32 DISCOVERY and NUCLEO boards to include an on-board programmer. The protocol used by this programmer is ST-LINK/V2, an ST protocol. Unfortunately ST does not provide a portable GDB server to support the ST-LINK/V2 protocol, and using these STM32 boards out of the box on GNU/Linux or macOS is not possible.</p>
-
-<p>For a few limited tests, the OpenOCD plug-in can be used, but the reliability of OpenOCD is not appropriate for professional use.</p>
-
-<p>Preferably the J-Link debug plug-in would be used, but, for costs reasons, ST did not provide the standard JTAG connector, so it is currently not possible to connect to these boards with an external J-Link probe.</p>
-
-<h2 id="convert-the-st-link-on-board-into-a-j-link">Convert the ST-LINK on-board into a J-Link</h2>
-
-<p>In a very inspired move to address this issue, SEGGER provided an upgrade path, and most of the ST bemo boards can now be converted to J-Link; please follow the SEGGER <a href="https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/">Converting ST-LINK on-board into a J-Link</a> page.</p>
-
-<p>After the firmware upgrade, you’ll be able to connect the J-Link GDB server via the existing board USB port. However, please note that not all J-Link features are available via this solution, which is somehow a J-Link Lite version.</p>
-
-<p>For a fully featured J-Link solution, a little harware is required.</p>
-
-<h2 id="the-custom-j-link-to-st-cable">The custom J-Link to ST cable</h2>
-
-<p>For those equipped with a soldering iron, it is relatively easy to adapt the existing 6-pin connector to J-Link.</p>
-
-<p>The solution is a custom ribbon cable, to connect the 6-pin to the 20-pin J-Link, and a short strap to bring Vcc to pin 1 of the 6-pin connector, so that J-Link can detect the board is up and running.</p>
-
-<p>The bill of materials includes:</p>
+<h2 id="new-features">New features</h2>
 
 <ul>
-  <li>a 6 wire ribbon cable, about 15 cm (6”) long</li>
-  <li>a 6-pin 2.54mm (0.1”) female, single raw, in-line connector, to match the STM board header</li>
-  <li>a 20-pin 2.54mm (0.1”) female, dual raw (2x10), in-line connector, to match the J-Link male connector</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/289">#289</a>] The initial approach to identify the toolchain was to store the full name in <code class="highlighter-rouge">.cproject</code>, and from it to compute the numeric ID; this does not allow to renaim the toolchain in the future; to overcome this, the numeric toolchain ID is now stored in <code class="highlighter-rouge">.cproject</code> and future versions will prefer it to the full name;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/288">#288</a>] Support for the new <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc">GNU MCU Eclipse ARM Embedded GCC</a> toolchain was added, including the logic to select the path based on the xPack version;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/270">#270</a>] Modern GCC versions allows to define the path of additional system folders, via the <code class="highlighter-rouge">-isystem</code> command line option; the managed build <strong>Settings</strong> pages were extended with an widget to define the list of system folders;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/280">#280</a>] The debug plug-ins validation logic prevent the debug configuration to be saved if mandatory fields are missing, by disabling the <strong>Apply</strong> button, but they did not display any reason why the button is disabled; to help the user understand which fields are field, an error message was added;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/281">#281</a>] The RISC-V <strong>Settings</strong> page was updated; the ` -mstrict-align<code class="highlighter-rouge"> was added as a combo, the </code>-mtune=generic<code class="highlighter-rouge"> was deprecated, and </code>-mtune=size` was added;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/283">#283</a>] Recent macOS and GNU/Linux versions of SEGGER J-Link were extended with GUI versions for the JLinkGDBServer, and the command line binaries were renamed <code class="highlighter-rouge">JLinkGDBServerCL</code>; the default in the J-Link debug plug-in was changed to reflect this new program name;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/285">#285</a>] Due to sever availability, sometimes the CMSIS packs update process fails, and a message box is displayed allowing the user to retry or ignore; to improve user experience, an <strong>Ignore All</strong> button was added;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/275">#275</a>] The RISC-V Settings page was improved; <code class="highlighter-rouge">ilp32e</code>  was added to the list of accepted ABIs.</li>
 </ul>
 
-<p>Solder the ribbon cable to the 6-pin connector, and be sure you mark the first pin with a different colour, to later help you plug the connector in the proper position.</p>
-
-<h2 id="the-st-6-pin-swd-connector">The ST 6-pin SWD connector</h2>
-
-<p>The signals on this 6-pin are:</p>
+<h2 id="addressed-bugs">Addressed bugs</h2>
 
 <ul>
-  <li>1 - Vcc → 1 (brown)</li>
-  <li>2 - JTCK/SWCLK → 9 (red)</li>
-  <li>3 - GND → any of 4,<strong>6</strong>,8,10,12,14,16,18,20 (orange)</li>
-  <li>4 - JTMS/SWDIO → 7 (yellow)</li>
-  <li>5 - NRST → 15 (green)</li>
-  <li>6 - SWO → 13 (blue)</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/291">#291</a>] Non managed projects still displayed the <strong>Toolchain</strong> tabs in the <strong>Settings</strong> page, although they cannot make use of the definitions; the <strong>Toolchain</strong> tab is now shown only for managed projects;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/290">#290</a>] The <strong>Devices</strong> tab was displayed in the <strong>Settings</strong> page even for projects not using ARM devices; the <strong>Devices</strong> tab is now shown only for ARM managed projects;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/287">#287</a>] In certain conditions, checking for the <code class="highlighter-rouge">package.json</code> file while processing the peripheral definitions triggered an exception; fixed;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/286">#286</a>] In certain conditions, the new logic used to identify SVD vs XSVD files failed when the SVD file used Unicode BOM, and the Peripherals View was empty; fixed;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/278">#278</a>] In certain conditions, the logic behind the peripheral view triggered some NLS warnings in console; fixed;</li>
 </ul>
 
-<h2 id="the-j-link-20-pin-jtagswd-connector">The J-Link 20-pin JTAG/SWD connector</h2>
-
-<p>The signals on the 20-pin are split into two groups, the even number pins are on one raw, and, except pin 2, all are connected to GND, and the odd number pins are:</p>
+<h2 id="template-changes">Template changes</h2>
 
 <ul>
-  <li>1 - Viref → 1 (brown)</li>
-  <li>3 - nRST</li>
-  <li>5 - TDI</li>
-  <li>7 - TMS/SWDIO → 4 (yellow)</li>
-  <li>9 - TCK/SWCLK → 2 (red)</li>
-  <li>11 - RTCK</li>
-  <li>13 - TDO/SWO → 6 (blue)</li>
-  <li>15 - RESET → 5 (green)</li>
-  <li>17 - DBGQ</li>
-  <li>19 - 5V out</li>
-  <li>2 - NC</li>
-  <li>4 - GND</li>
-  <li>6 - GND → 3 (orange)</li>
-  <li>8,10,12,12,16,18,20 - GND</li>
+  <li>The SiFive templates were updated to the latest versions of the xPacks; the templates are also available for command line usage as <a href="https://www.npmjs.com/package/@sifive/templates">@sifive/templates</a>.</li>
 </ul>
 
-<p>The correspondence between the two connectors is represented on each connector by the second number.</p>
+<h2 id="other-changes">Other changes</h2>
 
-<h2 id="the-target-detect-strap">The target detect strap</h2>
+<ul>
+  <li>none</li>
+</ul>
 
-<p>After building the ribbon cable, the ST board needs a strap to connect the pin 1 of the 6-pin connector to Vcc, to signal J-Link that the target board is present and powered.</p>
+<h2 id="known-problems">Known problems</h2>
 
-<h2 id="jumpers">Jumpers</h2>
-
-<p>The ST boards have a pair of jumpers, that need to be installed, for the programming signals to be connected from the 6-pin connector to the target processor.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>The recommended solution is to upgrade the flash, and you’ll be able to connect the J-Link GDB server via the existing board USB port.</p>
-
-<p>For those who need a full J-Link connection, with this cable it is possible to connect to the ST board with an external J-Link probe, to program the flash and run debugging sessions.</p>
+<ul>
+  <li>none.</li>
+</ul>
 
 
-<hr class="page-footer"/>
-<p class="page-footer">Last modified on Mon Jul 17 21:16:33 2017 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/j-link-stm32-boards/" data-layout="button"></div>
+<hr class="post-footer">
+<p class="post-footer">
+Posted in
+
+<strong>releases</strong>, <strong>plugins</strong> and tagged
+
+<strong>gnu</strong>, <strong>arm</strong>, <strong>risc-v</strong>, <strong>mcu</strong>, <strong>eclipse</strong>.
+Last modified on Thu Apr 19 17:17:16 2018 UTC.
+</p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/04/19/plugins-v4.3.3-201804191501-released/" data-layout="button"></div>
+
 
 
 </section>
@@ -235,7 +220,7 @@
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -245,10 +230,14 @@
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -258,7 +247,8 @@
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -337,38 +327,44 @@
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -436,7 +432,7 @@
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -458,7 +454,7 @@
     <ul>
   <li>© 2017 Liviu Ionescu</li>
   <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
