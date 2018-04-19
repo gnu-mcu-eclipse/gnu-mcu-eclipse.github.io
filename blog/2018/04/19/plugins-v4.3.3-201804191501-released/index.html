@@ -147,17 +147,17 @@ Posted on April 19, 2018 by Liviu Ionescu.
 <p>Version 4.3.3-201804191501 is a maintenance release; the main changes are bug fixes and enhancements.</p>
 
 <p>
-<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/">Binary files »</a>
+<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/tag/v4.3.3-201804191501/">Binary files »</a>
 </p>
 
 <h2 id="new-features">New features</h2>
 
 <ul>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/289">#289</a>] The initial approach to identify the toolchain was to store the full name in <code class="highlighter-rouge">.cproject</code>, and from it to compute the numeric ID; this does not allow to renaim the toolchain in the future; to overcome this, the numeric toolchain ID is now stored in <code class="highlighter-rouge">.cproject</code> and future versions will prefer it to the full name;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/289">#289</a>] The initial approach to identify the toolchain was to store the full name in <code class="highlighter-rouge">.cproject</code>, and from it to compute the numeric ID; this does not allow to rename the toolchain in the future; to overcome this, the numeric toolchain ID is now stored in <code class="highlighter-rouge">.cproject</code> and future versions will prefer it to the full name;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/288">#288</a>] Support for the new <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc">GNU MCU Eclipse ARM Embedded GCC</a> toolchain was added, including the logic to select the path based on the xPack version;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/270">#270</a>] Modern GCC versions allows to define the path of additional system folders, via the <code class="highlighter-rouge">-isystem</code> command line option; the managed build <strong>Settings</strong> pages were extended with an widget to define the list of system folders;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/280">#280</a>] The debug plug-ins validation logic prevent the debug configuration to be saved if mandatory fields are missing, by disabling the <strong>Apply</strong> button, but they did not display any reason why the button is disabled; to help the user understand which fields are field, an error message was added;</li>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/281">#281</a>] The RISC-V <strong>Settings</strong> page was updated; the ` -mstrict-align<code class="highlighter-rouge"> was added as a combo, the </code>-mtune=generic<code class="highlighter-rouge"> was deprecated, and </code>-mtune=size` was added;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/281">#281</a>] The RISC-V <strong>Settings</strong> page was updated; the <code class="highlighter-rouge">-mstrict-align</code> was added as a combo, the <code class="highlighter-rouge">-mtune=generic</code> was deprecated, and <code class="highlighter-rouge">-mtune=size</code> was added;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/283">#283</a>] Recent macOS and GNU/Linux versions of SEGGER J-Link were extended with GUI versions for the JLinkGDBServer, and the command line binaries were renamed <code class="highlighter-rouge">JLinkGDBServerCL</code>; the default in the J-Link debug plug-in was changed to reflect this new program name;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/285">#285</a>] Due to sever availability, sometimes the CMSIS packs update process fails, and a message box is displayed allowing the user to retry or ignore; to improve user experience, an <strong>Ignore All</strong> button was added;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/275">#275</a>] The RISC-V Settings page was improved; <code class="highlighter-rouge">ilp32e</code>  was added to the list of accepted ABIs.</li>
@@ -166,7 +166,7 @@ Posted on April 19, 2018 by Liviu Ionescu.
 <h2 id="addressed-bugs">Addressed bugs</h2>
 
 <ul>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/291">#291</a>] Non managed projects still displayed the <strong>Toolchain</strong> tabs in the <strong>Settings</strong> page, although they cannot make use of the definitions; the <strong>Toolchain</strong> tab is now shown only for managed projects;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/291">#291</a>] Non managed projects still displayed the <strong>Toolchain</strong> tabs in the <strong>Settings</strong> page, although the definitions are not relevant for them; the <strong>Toolchain</strong> tab is now shown only for managed projects;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/290">#290</a>] The <strong>Devices</strong> tab was displayed in the <strong>Settings</strong> page even for projects not using ARM devices; the <strong>Devices</strong> tab is now shown only for ARM managed projects;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/287">#287</a>] In certain conditions, checking for the <code class="highlighter-rouge">package.json</code> file while processing the peripheral definitions triggered an exception; fixed;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/286">#286</a>] In certain conditions, the new logic used to identify SVD vs XSVD files failed when the SVD file used Unicode BOM, and the Peripherals View was empty; fixed;</li>
@@ -176,7 +176,7 @@ Posted on April 19, 2018 by Liviu Ionescu.
 <h2 id="template-changes">Template changes</h2>
 
 <ul>
-  <li>The SiFive templates were updated to the latest versions of the xPacks; the templates are also available for command line usage as <a href="https://www.npmjs.com/package/@sifive/templates">@sifive/templates</a>.</li>
+  <li>The SiFive templates were updated to the latest versions of the C/C++ xPacks; the same templates are now also available for command line usage as <a href="https://www.npmjs.com/package/@sifive/templates">@sifive/templates</a>.</li>
 </ul>
 
 <h2 id="other-changes">Other changes</h2>
@@ -199,7 +199,7 @@ Posted in
 <strong>releases</strong>, <strong>plugins</strong> and tagged
 
 <strong>gnu</strong>, <strong>arm</strong>, <strong>risc-v</strong>, <strong>mcu</strong>, <strong>eclipse</strong>.
-Last modified on Thu Apr 19 17:17:16 2018 UTC.
+Last modified on Thu Apr 19 18:04:31 2018 UTC.
 </p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/04/19/plugins-v4.3.3-201804191501-released/" data-layout="button"></div>
 
