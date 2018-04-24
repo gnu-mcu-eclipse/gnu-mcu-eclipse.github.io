@@ -153,19 +153,27 @@
 
 <h2 id="xpm---the-xpack-manager">xpm - the xPack Manager</h2>
 
-<p><code class="highlighter-rouge">xpm</code> is a new tool, currently under development, intended to manage software packages (xPacks) including to install binary distributions.</p>
+<p><code class="highlighter-rouge">xpm</code> is a new tool, currently under development, intended to manage software packages (xPacks), including to install binary distributions. It is built on top of <a href="https://nodejs.org/">Node.js</a> and is highly portable; the install steps are described in <a href="https://www.npmjs.com/package/xpm">the xpm page</a>.</p>
 
-<p>Currently <code class="highlighter-rouge">xpm</code> is not mandatory, but it is a useful addition since it provides a convenient way to install and later update the RISC-V toolchain, OpenOCD and the Windows Build Tools.</p>
-
-<p><code class="highlighter-rouge">xpm</code> is built on top of <a href="https://nodejs.org/">node.js</a> and is highly portable; the install steps are described in the <a href="https://www.npmjs.com/package/xpm">xpm</a> page.</p>
+<p>Currently <code class="highlighter-rouge">xpm</code> is not mandatory, but it is a useful addition since it provides a convenient way to install and later upgrade the ARM and RISC-V toolchains, OpenOCD and the Windows Build Tools.</p>
 
 <h2 id="toolchains">Toolchain(s)</h2>
 
-<p>This is generally a mandatory step for all platforms, since most platforms do not come by default with an embedded GCC toolchain (ARM or RISC-V).</p>
+<p>This is generally mandatory, since most platforms do not come by default with an embedded GCC toolchain (ARM or RISC-V).</p>
 
 <p>Please follow the steps in the <a href="/toolchain/arm/install">ARM Toolchain install</a> or <a href="/toolchain/riscv/install">RISC-V Toolchain install</a> page.</p>
 
-<p>For RISC-V, the shortcut is:</p>
+<p>For ARM, the easy install method is:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm install @gnu-mcu-eclipse/arm-none-eabi-gcc <span class="nt">--global</span>
+</code></pre>
+</div>
+</div>
+
+<p>For RISC-V, the easy install method is:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
@@ -181,7 +189,7 @@
 
 <p>Please follow the steps in the <a href="/windows-build-tools/install/">How to install the Windows Build Tools</a> page.</p>
 
-<p>The shortcut is:</p>
+<p>The easy install method is:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
@@ -200,6 +208,8 @@
 <h2 id="openocd">OpenOCD</h2>
 
 <p>For the unfortunate developers who do not have a J-Link available, the alternative is to follow the steps in the <a href="/openocd/install">How to install the OpenOCD binaries</a> page.</p>
+
+<p>The easy install method is:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
@@ -251,7 +261,7 @@
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Tue Feb 20 16:24:03 2018 UTC.</p>
+<p class="page-footer">Last modified on Tue Apr 24 19:09:26 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/install/" data-layout="button"></div>
 
 
