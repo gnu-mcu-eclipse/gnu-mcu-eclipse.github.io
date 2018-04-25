@@ -103,39 +103,45 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
+<a href="#easy-install"><span class="tocnumber">1</span> <span class="toctext">Easy install</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#target-vs-host-platform"><span class="tocnumber">2</span> <span class="toctext">Target vs host platform</span></a>
+<a href="#overview"><span class="tocnumber">2</span> <span class="toctext">Overview</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#riscv64-unknown-elf-gcc"><span class="tocnumber">3</span> <span class="toctext">riscv64-unknown-elf-gcc</span></a>
+<a href="#target-vs-host-platform"><span class="tocnumber">3</span> <span class="toctext">Target vs host platform</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#the-xpack-install"><span class="tocnumber">4</span> <span class="toctext">The xPack install</span></a>
+<a href="#riscv64-unknown-elf-gcc"><span class="tocnumber">4</span> <span class="toctext">riscv64-unknown-elf-gcc</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#manual-install"><span class="tocnumber">5</span> <span class="toctext">Manual install</span></a>
-<ul>
-<li class="toc_level-2 toc_section-6">
-<a href="#windows"><span class="tocnumber">5.1</span> <span class="toctext">Windows</span></a>
+<a href="#the-xpack-install"><span class="tocnumber">5</span> <span class="toctext">The xPack install</span></a>
 </li>
+<li class="toc_level-1 toc_section-6">
+<a href="#manual-install"><span class="tocnumber">6</span> <span class="toctext">Manual install</span></a>
+<ul>
 <li class="toc_level-2 toc_section-7">
-<a href="#macos"><span class="tocnumber">5.2</span> <span class="toctext">macOS</span></a>
+<a href="#windows"><span class="tocnumber">6.1</span> <span class="toctext">Windows</span></a>
 </li>
 <li class="toc_level-2 toc_section-8">
-<a href="#gnulinux"><span class="tocnumber">5.3</span> <span class="toctext">GNU/Linux</span></a>
+<a href="#macos"><span class="tocnumber">6.2</span> <span class="toctext">macOS</span></a>
+</li>
+<li class="toc_level-2 toc_section-9">
+<a href="#gnulinux"><span class="tocnumber">6.3</span> <span class="toctext">GNU/Linux</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-9">
-<a href="#toolchain-path"><span class="tocnumber">6</span> <span class="toctext">Toolchain path</span></a>
-</li>
 <li class="toc_level-1 toc_section-10">
-<a href="#uninstall"><span class="tocnumber">7</span> <span class="toctext">Uninstall</span></a>
+<a href="#toolchain-path"><span class="tocnumber">7</span> <span class="toctext">Toolchain path</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#documentation"><span class="tocnumber">8</span> <span class="toctext">Documentation</span></a>
+<a href="#select-the-xpack-version"><span class="tocnumber">8</span> <span class="toctext">Select the xPack version</span></a>
+</li>
+<li class="toc_level-1 toc_section-12">
+<a href="#uninstall"><span class="tocnumber">9</span> <span class="toctext">Uninstall</span></a>
+</li>
+<li class="toc_level-1 toc_section-13">
+<a href="#documentation"><span class="tocnumber">10</span> <span class="toctext">Documentation</span></a>
 </li>
 </ul>
 </td>
@@ -143,6 +149,18 @@
 </tbody>
 </table>
 </div>
+<h2 id="easy-install">Easy install</h2>
+
+<p>For RISC-V, the recommended method to install the latest version of the toolchain is:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm install @gnu-mcu-eclipse/riscv-none-gcc <span class="nt">--global</span>
+</code></pre>
+</div>
+</div>
+
 <h2 id="overview">Overview</h2>
 
 <p>The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><strong>GNU MCU Eclipse RISC-V Embedded GCC</strong></a>. This toolchain closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
@@ -309,13 +327,23 @@
 
 <p>The GNU MCU Eclipse plug-in has an advanced <a href="/toolchain/path/">toolchain path management</a> (presented in more detail in the separate page). Use it!</p>
 
+<h2 id="select-the-xpack-version">Select the xPack version</h2>
+
+<p>The recommended method for selecting the toolchain path is via the <strong>xPack…</strong> button, and selecting the xPack version.</p>
+
+<p>
+<img src="/assets/images/2018/global-riscv-toolchains-paths-xpack.png" alt="Global Tools Paths">
+</p>
+
 <h2 id="uninstall">Uninstall</h2>
 
-<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">riscv-none-gcc/7.2.0-2-20180111-2230</code> folder, there are no other components stored in any system folders.</p>
+<p>Should you ever need to remove the toolchain, only remove the xPack folder, there are no other components stored in any system folders.</p>
+
+<p>If installed manually, remove the <code class="highlighter-rouge">riscv-none-gcc/7.2.0-2-20180111-2230</code> folder.</p>
 
 <h2 id="documentation">Documentation</h2>
 
-<p>The GNU MCU Eclipse RISC-V Embedded GCC includes the standard documentation, in html, info, man and pdf format.</p>
+<p>The GNU MCU Eclipse RISC-V Embedded GCC distribution includes the standard documentation, in info, man and pdf format.</p>
 
 <p>The documentation is located in the <code class="highlighter-rouge">share/doc</code> folder, for example the pdf files are:</p>
 
@@ -352,7 +380,7 @@
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Tue Apr 24 19:20:38 2018 UTC.</p>
+<p class="page-footer">Last modified on Wed Apr 25 18:00:12 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/install/" data-layout="button"></div>
 
 

@@ -350,7 +350,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/07/11/plugins-v4.1.1-201707111115-released/</loc>
-<lastmod>2017-07-11T21:50:40+00:00</lastmod>
+<lastmod>2018-04-25T17:56:43+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2017/08/26/openocd-v0-10-0-3-20170826-dev-released/</loc>
@@ -454,7 +454,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/tutorials/blinky-arm/</loc>
-<lastmod>2018-02-20T16:24:03+00:00</lastmod>
+<lastmod>2018-04-25T17:59:20+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/build-binaries-prerequisites-xbb/</loc>
@@ -602,11 +602,11 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/support/faq/</loc>
-<lastmod>2017-12-29T08:52:08+00:00</lastmod>
+<lastmod>2018-04-25T17:56:10+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/plugins/features/</loc>
-<lastmod>2017-09-29T09:53:57+00:00</lastmod>
+<lastmod>2018-04-25T18:00:42+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/support/forum/</loc>
@@ -646,15 +646,15 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/install/</loc>
-<lastmod>2017-10-14T22:57:19+00:00</lastmod>
+<lastmod>2018-04-25T17:59:20+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/arm/install/</loc>
-<lastmod>2018-04-24T19:09:26+00:00</lastmod>
+<lastmod>2018-04-25T18:00:12+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/install/</loc>
-<lastmod>2018-04-24T19:20:38+00:00</lastmod>
+<lastmod>2018-04-25T18:00:12+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/install/</loc>
@@ -674,7 +674,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/debug/jlink/</loc>
-<lastmod>2017-07-01T21:06:50+00:00</lastmod>
+<lastmod>2018-04-25T17:59:20+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/templates/klxx/</loc>
@@ -690,7 +690,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/debug/openocd/</loc>
-<lastmod>2018-01-04T18:49:58+00:00</lastmod>
+<lastmod>2018-04-25T17:59:20+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/options/</loc>
@@ -742,7 +742,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/path/</loc>
-<lastmod>2017-08-14T09:14:10+00:00</lastmod>
+<lastmod>2018-04-25T18:00:12+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/finance/paypal-success/</loc>
@@ -826,7 +826,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/debug/qemu/</loc>
-<lastmod>2017-07-01T21:06:50+00:00</lastmod>
+<lastmod>2018-04-25T17:59:20+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/redirected/</loc>

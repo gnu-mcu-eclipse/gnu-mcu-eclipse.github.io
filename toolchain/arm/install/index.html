@@ -143,7 +143,16 @@
 <a href="#toolchain-path"><span class="tocnumber">6</span> <span class="toctext">Toolchain path</span></a>
 </li>
 <li class="toc_level-1 toc_section-13">
-<a href="#gdb-712"><span class="tocnumber">7</span> <span class="toctext">GDB 7.12</span></a>
+<a href="#select-the-xpack-version"><span class="tocnumber">7</span> <span class="toctext">Select the xPack version</span></a>
+</li>
+<li class="toc_level-1 toc_section-14">
+<a href="#uninstall"><span class="tocnumber">8</span> <span class="toctext">Uninstall</span></a>
+</li>
+<li class="toc_level-1 toc_section-15">
+<a href="#documentation"><span class="tocnumber">9</span> <span class="toctext">Documentation</span></a>
+</li>
+<li class="toc_level-1 toc_section-16">
+<a href="#gdb-712"><span class="tocnumber">10</span> <span class="toctext">GDB 7.12</span></a>
 </li>
 </ul>
 </td>
@@ -528,16 +537,66 @@ ${user.home}/local:\
 
 <p>The GNU MCU Eclipse plug-in has an advanced <a href="/toolchain/path/">toolchain path management</a> (presented in more detail in the separate page). Use it!</p>
 
+<h2 id="select-the-xpack-version">Select the xPack version</h2>
+
+<p>The recommended method for selecting the toolchain path is via the <strong>xPack…</strong> button, and selecting the xPack version.</p>
+
+<p>
+<img src="/assets/images/2018/global-arm-toolchains-paths-xpack.png" alt="Global Tools Paths">
+</p>
+
+<h2 id="uninstall">Uninstall</h2>
+
+<p>Should you ever need to remove the toolchain, only remove the xPack folder, there are no other components stored in any system folders.</p>
+
+<p>If installed manually, remove the <code class="highlighter-rouge">arm-none-eabi-gcc/7-2017-q4-major-</code> folder.</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>The GNU MCU Eclipse ARM Embedded GCC distribution includes the standard documentation, in info, man and pdf format.</p>
+
+<p>The documentation is located in the <code class="highlighter-rouge">share/doc</code> folder, for example the pdf files are:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> tree share/doc/pdf
+<span class="go">share/doc/pdf
+├── annotate.pdf
+├── as.pdf
+├── bfd.pdf
+├── binutils.pdf
+├── gcc
+│   ├── cpp.pdf
+│   ├── cppinternals.pdf
+│   ├── gcc.pdf
+│   ├── gccinstall.pdf
+│   └── gccint.pdf
+├── gdb.pdf
+├── gprof.pdf
+├── ld.pdf
+├── libc.pdf
+├── libiberty.pdf
+├── libm.pdf
+├── porting.pdf
+├── refcard.pdf
+└── stabs.pdf
+
+1 directory, 18 files
+</span></code></pre>
+</div>
+</div>
+
 <h2 id="gdb-712">GDB 7.12</h2>
 
 <p>GDB 7.12 distributed with the initial GCC 6.2 (<code class="highlighter-rouge">gcc-arm-none-eabi-6_2-2016q4-20161216</code>) has several issues (crashes on macOS and is incompatible with Neon.2).</p>
 
-<p>The recommendation is to use the update version <code class="highlighter-rouge">gcc-arm-none-eabi-6-2017-q1-update</code>, or later.</p>
+<p>The recommendation is to use the update version <code class="highlighter-rouge">gcc-arm-none-eabi-6-2017-q1-update</code>, or later (the current version is 8.x).</p>
 
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Tue Apr 24 19:09:26 2018 UTC.</p>
+<p class="page-footer">Last modified on Wed Apr 25 18:00:12 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/arm/install/" data-layout="button"></div>
 
 

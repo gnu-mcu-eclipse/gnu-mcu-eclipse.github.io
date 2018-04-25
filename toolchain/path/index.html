@@ -206,14 +206,24 @@
 <p>The default (and the recommended) setting, is to use the global toolchain path.</p>
 
 <p>
-<img src="/assets/images/2017/toolchain-properties.png" alt="Toolchains Properties" />
+<img src="/assets/images/2018/toolchain-properties.png" alt="Toolchains Properties" />
 </p>
 
 <p>The displayed path is associated with the selected toolchain. To change the toolchain path use the hyperlinks; it is recommended to use the global page, but, if needed, the toolchain path can also be configured per workspace or even per project.</p>
 
 <p>
-<img src="/assets/images/2017/global-arm-toolchains-paths.png" alt="Global Tools Paths" />
+<img src="/assets/images/2018/global-arm-toolchains-paths.png" alt="Global Tools Paths" />
 </p>
+
+<p>Clicking the <strong>xPack…</strong> button allows to enter the path by selecting the xPack version. (The button is enabled only for toolchains that are distributed as xPacks).</p>
+
+<p>
+<img src="/assets/images/2018/global-arm-toolchains-paths-xpack.png" alt="Global Tools Paths" />
+</p>
+
+<blockquote>
+  <p>macOS note: due to a weird decision of the Eclipse macOS developers, the file system browser does not show file/folders starting with a dot; thus, the <code class="highlighter-rouge">.content/bin</code> final part of the path must be entered manually.</p>
+</blockquote>
 
 <p>Using the global toolchain path does not store any data in the project configuration files, but in the Eclipse folders, so the project portability is not affected.</p>
 
@@ -254,7 +264,7 @@
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Mon Aug 14 09:14:10 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Apr 25 18:00:12 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/path/" data-layout="button"></div>
 
 

@@ -158,7 +158,7 @@
 <p>The main features of the GNU MCU Eclipse family of plug-ins are:</p>
 
 <ul>
-  <li>create/build/manage embedded ARM and AArch64 applications, using the managed project features of Eclipse CDT, i.e. without having to manually create and maintain makefiles</li>
+  <li>create/build/manage embedded ARM/AArch64/RISC-V applications, using the managed project features of Eclipse CDT, i.e. without having to manually create and maintain makefiles</li>
   <li>provide ready to run templates for some ARM Cortex-M processors</li>
   <li>provide debugging support via JTAG/SWD</li>
   <li>provide a special view to examine and modify peripheral registers during debug sessions</li>
@@ -179,12 +179,13 @@
 
 <h2 id="supported-toolchains">Supported toolchains</h2>
 
-<p>The build plug-in supports most existing toolchains currently available for both 32 and 64-bits ARM processors.</p>
+<p>The build plug-in supports most existing toolchains currently available for both 32 and 64-bits ARM and RISC-V processors.</p>
 
 <h3 id="arm-toolchains">ARM toolchains</h3>
 
 <ul>
-  <li><a href="http://launchpad.net/gcc-arm-embedded"><strong>GNU Tools for ARM Embedded Processors</strong></a> (arm-none-eabi-*)</li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc"><strong>GNU MCU Eclipse ARM Embedded GCC</strong></a> (arm-none-eabi-*)</li>
+  <li><a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm"><strong>GNU ARM Embedded Toolchain</strong></a> (arm-none-eabi-*)</li>
   <li><strong><a href="http://launchpad.net/gcc-linaro">Linaro</a> </strong>ARMv7 <strong>bare-metal EABI</strong> (arm-none-eabi-*)</li>
   <li><strong><a href="http://launchpad.net/gcc-linaro">Linaro</a> </strong>ARMv7 <strong>big-endian bare-metal EABI</strong> (armeb-none-eabi-*)</li>
   <li><strong><a href="http://launchpad.net/gcc-linaro">Linaro</a> </strong>ARMv7 <strong>Linux GNU EABI HF</strong> (arm-linux-gnueabihf-*)</li>
@@ -332,7 +333,7 @@
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Sep 29 09:53:57 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Apr 25 18:00:42 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/features/" data-layout="button"></div>
 
 

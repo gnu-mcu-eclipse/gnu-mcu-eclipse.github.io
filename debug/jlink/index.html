@@ -236,14 +236,15 @@
 
 <ul>
   <li>
-    <p>in the <em>Eclipse</em> menu, go to <strong>(Window →) Preferences</strong> → <strong>Run/Debug</strong> → <strong>SEGGER J-Link</strong></p>
+    <p>in the <em>Eclipse</em> menu, go to <strong>(Window →) Preferences</strong> → <strong>MCU</strong> → <strong>Global SEGGER J-Link Path</strong> (or <strong>Workspace SEGGER J-Link Path</strong>)</p>
 
-    <p><img src="/assets/images/2015/03/JLinkPreferences.png" alt="J-Link preferences page" /></p>
+    <p><img src="/assets/images/2018/jlink-preferences.png" alt="J-Link preferences page" /></p>
   </li>
   <li>click the <strong>Restore Defaults</strong> button</li>
   <li>the plug-in will suggest the default values computed when Eclipse started; if a new version of SEGGER was installed while Eclipse was active, restart Eclipse and click again the Restore Defaults button</li>
   <li>check the <strong>Executable</strong> field; it must define the name of the command line J-Link GDB server executable; in most cases it should be set correctly; if not, edit it to match the correct name;</li>
-  <li>check the <strong>Folder</strong> field; it must point to the actual folder where the J-Link tools were installed on your platform, for example <code class="highlighter-rouge">/Applications/SEGGER/JLink_V614b</code> on macOS</li>
+  <li><strong>macOS notice:</strong> somewhere around version 6.30, SEGGER changed the name of the executable to <code class="highlighter-rouge">JLinkGDBServerCLExe</code>, the plug-in was updated to this new name, but older installs will continue to default to <code class="highlighter-rouge">JLinkGDBServer</code>; if needed, update it to the new name;</li>
+  <li>check the <strong>Folder</strong> field; it must point to the actual folder where the J-Link tools were installed on your platform, for example <code class="highlighter-rouge">/Applications/SEGGER/JLink</code> is a link to the latest version installed on macOS</li>
   <li>click the <strong>OK</strong> button</li>
   <li><strong>Windows warning:</strong> please note that on Windows there are two GDB server executables, one with a UI and one to be used as a command line (<code class="highlighter-rouge">JLinkGDBServerCL.exe</code>); you obviously need to configure the executable field to point to <code class="highlighter-rouge">JLinkGDBServerCL.exe</code>.</li>
 </ul>
@@ -460,7 +461,7 @@
 
 <h3 id="missing-or-wrong-jlink_path">Missing or wrong jlink_path</h3>
 
-<p>The first failure to start a debug session is missing to enter the J-Link path. Without it, the launching sequence will complain <em>Cannot run program “/JLinkGDBServer&amp;”</em>.</p>
+<p>The first failure to start a debug session is missing to enter the J-Link path. Without it, the launching sequence will complain <em>Cannot run program “/JLinkGDBServer”</em>.</p>
 
 <p>
 <img src="/assets/images/2013/12/JLinkCannotRun.png" alt="Cannot run the JLinkGDBServer" />
@@ -488,11 +489,11 @@
 
 <h3 id="error-while-launching-command-gdb-version">Error while launching command: gdb –version</h3>
 
-<p>If you kept the GDB client executable defined as <code class="highlighter-rouge">${cross\_prefix}gdb${cross\_suffix}</code>, the above error means that the macros could not be substituted with the correct prefix/suffix. There can be several reasons for this. One might be that you did not associate the debug launcher to a project. Check the <strong>Main</strong> tab and be sure the field <strong>Project:</strong> refer to the correct project. Next time when you create the debug configuration, be sure you follow the above suggestions (select .elf, <strong>Debug Configurations</strong>, double click on <strong>GDB SEGGER J-Link Debugging</strong>. Another reason is presented below.</p>
+<p>If you kept the GDB client executable defined as <code class="highlighter-rouge">${cross_prefix}gdb${cross_suffix}</code>, the above error means that the macros could not be substituted with the correct prefix/suffix. There can be several reasons for this. One might be that you did not associate the debug launcher to a project. Check the <strong>Main</strong> tab and be sure the field <strong>Project:</strong> refer to the correct project. Next time when you create the debug configuration, be sure you follow the above suggestions (select .elf, <strong>Debug Configurations</strong>, double click on <strong>GDB SEGGER J-Link Debugging</strong>. Another reason is presented below.</p>
 
 <h3 id="using-a-different-build-plug-in-or-not-supported-compiler">Using a different build plug-in or not supported compiler</h3>
 
-<p>Another reason for not being able to start the debug session is that your project was not build with the GNU MCU Eclipse managed build plug-in. If you are using another build plug-in, or an exotic/obsolete toolchain, you need to replace <code class="highlighter-rouge">${cross\_prefix}gdb${cross\_suffix}</code> with the actual name of the gdb client available in your toolchain, since the <code class="highlighter-rouge">${cross_*}</code> macros are available only in projects managed by the GNU MCU Eclipse build plug-in.</p>
+<p>Another reason for not being able to start the debug session is that your project was not build with the GNU MCU Eclipse managed build plug-in. If you are using another build plug-in, or an exotic/obsolete toolchain, you need to replace <code class="highlighter-rouge">${cross_prefix}gdb${cross_suffix}</code> with the actual name of the gdb client available in your toolchain, since the <code class="highlighter-rouge">${cross_*}</code> macros are available only in projects managed by the GNU MCU Eclipse build plug-in.</p>
 
 <h2 id="more-info">
 <strong>More info</strong>
@@ -502,7 +503,7 @@
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Apr 25 17:59:20 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/debug/jlink/" data-layout="button"></div>
 
 
