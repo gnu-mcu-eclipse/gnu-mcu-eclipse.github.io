@@ -293,7 +293,7 @@
   <li>the only field that usually requires attention is the <strong>Device name</strong>, which must identify the processor family; if you assigned the device to the project, this field is automatically filled-in; usually this name is the family name; if you do not know it for your processor, follow the link at the right and copy/paste the string from the <a href="http://www.segger.com/supported-devices.html">SEGGER web page</a>;</li>
   <li>for portability reasons, the GDB server and GDB client executables are defined using variables; it is highly recommended to keep these definitions;</li>
   <li>the <code class="highlighter-rouge">${cross_prefix}</code> and the <code class="highlighter-rouge">${cross_suffix}</code> variables are defined automatically using the toolchain definitions; unless you are debugging a project-less ELF, leave them as is;</li>
-  <li>the values of the <code class="highlighter-rouge">${jlink_path}</code> and <code class="highlighter-rouge">${jlink_gdbserver}</code> can be manually edited in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Run/Debug</strong> <strong>→</strong> <strong>SEGGER J-Link</strong> configuration page (if you do not find this page, upgrade the plug-ins);</li>
+  <li>the values of the <code class="highlighter-rouge">${jlink_path}</code> and <code class="highlighter-rouge">${jlink_gdbserver}</code> can be manually edited in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>MCU</strong> → <strong>Global SEGGER J-Link Path</strong> configuration page (if you do not find this page, upgrade the plug-ins);</li>
   <li>the <strong>Connect to running target</strong> option allow to start a debug session without performing any reset or program download, so that the target will continue to run unaffected, until explicitly halted by the debugger (Note: this option requires the latest plug-in and SEGGER versions);</li>
   <li>
     <p>click the third tab, named <strong>Startup</strong>, which contains specific J-Link options used to configure the debug session.</p>
@@ -503,7 +503,7 @@
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Wed Apr 25 17:59:20 2018 UTC.</p>
+<p class="page-footer">Last modified on Wed Apr 25 18:46:52 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/debug/jlink/" data-layout="button"></div>
 
 

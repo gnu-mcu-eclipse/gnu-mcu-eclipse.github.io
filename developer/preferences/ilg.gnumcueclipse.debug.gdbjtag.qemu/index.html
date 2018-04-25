@@ -194,7 +194,7 @@ ilg.gnumcueclipse.debug.gdbjtag.qemu/gdb.client.executable=${cross_prefix}gdb${c
 
 <h2 id="install-defaults">Install defaults</h2>
 
-<p>Defining these two properties will provide default values to the corresponding fields in the <strong>Run/Debug</strong> → <strong>QEMU</strong> preferences page. The same variables are visible in the <strong>Run/Debug</strong> → <strong>String Substitution</strong> page.</p>
+<p>Defining these two properties will provide default values to the corresponding fields in the <strong>MCU</strong> → <strong>Global QEMU Path</strong> preferences page. The same variables are visible in the <strong>Run/Debug</strong> → <strong>String Substitution</strong> page.</p>
 
 <h3 id="the-executable-name">The executable name</h3>
 
@@ -242,13 +242,13 @@ ${user.home}/local/gnuarmeclipse/QEMU:\
 
 <p>If this preference is defined, the plug-in will use it as search path, otherwise the specific platform defaults available in the <code class="highlighter-rouge">preferences.ini</code> file are used.</p>
 
-<p>For each folder in the path, the plug-in tries to identify subfolders which look like <code class="highlighter-rouge">folder/\*/bin/${qemu_executable}</code>; if multiple such subfolders are found (in case multiple versions), the list of names is ordered lexicographically and the last one is used.</p>
+<p>For each folder in the path, the plug-in tries to identify subfolders which look like <code class="highlighter-rouge">folder/bin/${qemu_executable}</code>; if multiple such subfolders are found (in case multiple versions), the list of names is ordered lexicographically and the last one is used.</p>
 
 <p>If not found, another test for <code class="highlighter-rouge">folder/bin/${qemu_executable}</code> is made.</p>
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
+<p class="page-footer">Last modified on Wed Apr 25 18:46:52 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/preferences/ilg.gnumcueclipse.debug.gdbjtag.qemu/" data-layout="button"></div>
 
 
