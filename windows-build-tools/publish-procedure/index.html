@@ -102,40 +102,40 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#update-the-change-log"><span class="tocnumber">1</span> <span class="toctext">Update the Change log</span></a>
+<a href="#update-changelog"><span class="tocnumber">1</span> <span class="toctext">Update CHANGELOG</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#update-info"><span class="tocnumber">2</span> <span class="toctext">Update INFO</span></a>
+<a href="#commit-the-project-git"><span class="tocnumber">2</span> <span class="toctext">Commit the project git</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#commit-the-project-git"><span class="tocnumber">3</span> <span class="toctext">Commit the project git</span></a>
+<a href="#push-the-build-script-git"><span class="tocnumber">3</span> <span class="toctext">Push the build script git</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#push-the-build-script-git"><span class="tocnumber">4</span> <span class="toctext">Push the build script git</span></a>
+<a href="#checkclonepull-build-scripts"><span class="tocnumber">4</span> <span class="toctext">Check/clone/pull build scripts</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#checkclonepull-build-scripts"><span class="tocnumber">5</span> <span class="toctext">Check/clone/pull build scripts</span></a>
+<a href="#build"><span class="tocnumber">5</span> <span class="toctext">Build</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#build"><span class="tocnumber">6</span> <span class="toctext">Build</span></a>
+<a href="#prepare-a-new-blog-post"><span class="tocnumber">6</span> <span class="toctext">Prepare a new blog post</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#prepare-a-new-blog-post"><span class="tocnumber">7</span> <span class="toctext">Prepare a new blog post</span></a>
+<a href="#update-the-sha-sums"><span class="tocnumber">7</span> <span class="toctext">Update the SHA sums</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#update-the-sha-sums"><span class="tocnumber">8</span> <span class="toctext">Update the SHA sums</span></a>
+<a href="#update-the-web"><span class="tocnumber">8</span> <span class="toctext">Update the web</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#update-the-web"><span class="tocnumber">9</span> <span class="toctext">Update the web</span></a>
+<a href="#create-the-release"><span class="tocnumber">9</span> <span class="toctext">Create the release</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#create-the-release"><span class="tocnumber">10</span> <span class="toctext">Create the release</span></a>
+<a href="#update-the-web-link"><span class="tocnumber">10</span> <span class="toctext">Update the web link</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#update-the-web-link"><span class="tocnumber">11</span> <span class="toctext">Update the web link</span></a>
+<a href="#copy-binaries-to-the-archive"><span class="tocnumber">11</span> <span class="toctext">Copy binaries to the archive</span></a>
 </li>
 <li class="toc_level-1 toc_section-12">
-<a href="#copy-binaries-to-the-archive"><span class="tocnumber">12</span> <span class="toctext">Copy binaries to the archive</span></a>
+<a href="#update-the-xpack"><span class="tocnumber">12</span> <span class="toctext">Update the xPack</span></a>
 </li>
 <li class="toc_level-1 toc_section-13">
 <a href="#share-on-facebook"><span class="tocnumber">13</span> <span class="toctext">Share on Facebook</span></a>
@@ -147,23 +147,19 @@
 </table>
 </div><p>The Windows Build Tools binaries are published on GitHub  <a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/releases">Releases</a>).</p>
 
-<h2 id="update-the-change-log">Update the Change log</h2>
+<h2 id="update-changelog">Update CHANGELOG</h2>
 
-<p>Open the <code class="highlighter-rouge">info/CHANGES.txt</code> file from <code class="highlighter-rouge">gnu-mcu-eclipse/windows-build-tools.git</code> and copy entries to the web git.</p>
+<p>Open the <code class="highlighter-rouge">CHANGELOG.txt</code> file from <code class="highlighter-rouge">gnu-mcu-eclipse/windows-build-tools.git</code> and copy entries to the web git.</p>
 
 <p>In the web git, add new entries to the <a href="/windows-build-tools/change-log/">Change log</a> (<code class="highlighter-rouge">pages/windows-build-tools/change-log.md</code>), grouped by days.</p>
 
-<h2 id="update-info">Update INFO</h2>
-
-<p>Edit the <code class="highlighter-rouge">info/INFO.txt</code> file from <code class="highlighter-rouge">windows-build-tools.git</code> and update the latest commits.</p>
-
 <h2 id="commit-the-project-git">Commit the project git</h2>
 
-<p>In <code class="highlighter-rouge">gnu-mcu-eclipse/windows-build-tools</code>, commit all changes.</p>
+<p>In <code class="highlighter-rouge">gnu-mcu-eclipse/windows-build-tools.git</code>, commit all changes.</p>
 
 <h2 id="push-the-build-script-git">Push the build script git</h2>
 
-<p>Push <code class="highlighter-rouge">gnu-mcu-eclipse/openocd-build.git</code> to GitHub.</p>
+<p>Push <code class="highlighter-rouge">gnu-mcu-eclipse/windows-build-tools.git</code> to GitHub.</p>
 
 <p>Possibly push the helper project too.</p>
 
@@ -279,6 +275,10 @@ gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip
   <li>move the latest binaries and SHA to <code class="highlighter-rouge">releases/build-tools</code></li>
 </ul>
 
+<h2 id="update-the-xpack">Update the xPack</h2>
+
+<p>See the <a href="https://github.com/gnu-mcu-eclipse/windows-build-tools-xpack#how-to-publish">Maintainer info</a> in the separate project.</p>
+
 <h2 id="share-on-facebook">Share on Facebook</h2>
 
 <ul>
@@ -292,7 +292,7 @@ gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Fri Jan 12 22:10:17 2018 UTC.</p>
+<p class="page-footer">Last modified on Sat Apr 28 19:54:23 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/windows-build-tools/publish-procedure/" data-layout="button"></div>
 
 
