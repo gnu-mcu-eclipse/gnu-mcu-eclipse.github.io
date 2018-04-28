@@ -5,9 +5,37 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 Apr 2018 18:49:10 +0000</pubDate>
-    <lastBuildDate>Wed, 25 Apr 2018 18:49:10 +0000</lastBuildDate>
+    <pubDate>Sat, 28 Apr 2018 19:16:43 +0000</pubDate>
+    <lastBuildDate>Sat, 28 Apr 2018 19:16:43 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse Windows Build Tools v2.11-20180428 released</title>
+        <description>&lt;p&gt;Version 2.11-20180428 is a maintenance release of the GNU MCU Eclipse Windows Build Tools.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 28 Apr 2018 17:59:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/04/28/windows-build-tools-v2-11-20180428-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/04/28/windows-build-tools-v2-11-20180428-released/</guid>
+        
+        <category>windows</category>
+        
+        <category>build</category>
+        
+        <category>make</category>
+        
+        <category>rm</category>
+        
+        <category>mkdir</category>
+        
+        <category>busybox</category>
+        
+        
+        <category>releases</category>
+        
+        <category>windows-build-tools</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse plug-ins v4.3.3-201804191501 released</title>
@@ -200,32 +228,6 @@
         <category>releases</category>
         
         <category>windows-build-tools</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse plug-ins v4.2.1-201711101735 released</title>
-        <description>&lt;p&gt;Version 4.2.1-201711101735 is a major release; thanks to a contribution from &lt;a href=&quot;https://www.sifive.com&quot;&gt;SiFive&lt;/a&gt;, the project was enhanced with a template plug-in to create projects for the SiFive boards.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 10 Nov 2017 18:36:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2017/11/10/plugins-v4.2.1-201711101735-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2017/11/10/plugins-v4.2.1-201711101735-released/</guid>
-        
-        <category>GNU</category>
-        
-        <category>ARM</category>
-        
-        <category>RISC-V</category>
-        
-        <category>MCU</category>
-        
-        <category>Eclipse</category>
-        
-        
-        <category>releases</category>
-        
-        <category>plugins</category>
         
       </item>
     
