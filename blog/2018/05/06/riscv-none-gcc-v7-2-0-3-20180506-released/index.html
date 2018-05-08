@@ -140,7 +140,10 @@ Posted on May 6, 2018 by Liviu Ionescu.
 </tbody>
 </table>
 </div>
-<p>Version v7.2.0-3-20180506 is a maintenance release of <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong>; it updates to the latest RISC-V sources and the build process was improved, to support even older GNU/Linux machines and processors.</p>
+<p>Version v7.2.0-3-20180506 is a maintenance release of <strong>GNU MCU Eclipse 
+RISC-V Embedded GCC</strong>; it updates to the latest RISC-V sources and the 
+build process was improved, to add <code class="highlighter-rouge">gdb-py</code> and to support even older 
+GNU/Linux machines and processors.</p>
 
 <p>
 <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.2.0-3-20180506/">Binary files »</a>
@@ -148,7 +151,9 @@ Posted on May 6, 2018 by Liviu Ionescu.
 
 <h2 id="compliance">Compliance</h2>
 
-<p>All <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> releases are based on the official <a href="https://github.com/riscv/riscv-gcc">RISC-V source files</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
+<p>All <strong>GNU MCU Eclipse RISC-V Embedded GCC</strong> releases are based on the 
+official <a href="https://github.com/riscv/riscv-gcc">RISC-V source files</a> 
+maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
 
 <p>By the date of this release, the <code class="highlighter-rouge">riscv-gcc-7.3.0</code> branch is not yet 
 stable, thus the current version is still based on GCC 7.2, using the 
@@ -170,7 +175,8 @@ from Feb 27th, 2018</li>
 
 <h2 id="improvements">Improvements</h2>
 
-<p>All architectures, ABIs and libraries supported by the <code class="highlighter-rouge">riscv64-unknown-elf</code> toolchain are also supported, with the following improvements:</p>
+<p>All architectures, ABIs and libraries supported by the <code class="highlighter-rouge">riscv64-unknown-elf</code> 
+toolchain are also supported, with the following improvements:</p>
 
 <ul>
   <li>a newer <code class="highlighter-rouge">newlib</code> was included, which supports the ‘underscore’ syscall functions</li>
@@ -184,13 +190,20 @@ from Feb 27th, 2018</li>
 
 <p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
 
-<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bits), and run on any distribution based on CentOS 6 or later.</p>
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bits), 
+and run on any distribution based on CentOS 6 or later.</p>
 
-<p>The Windows binaries were built with mingw-w64, and run on any reasonably recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
 
-<p>Instructions on how to install the binaries are available in the <a href="https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/">How to install the RISC-V toolchain?</a> page.</p>
+<p>Instructions on how to install the binaries are available in the 
+<a href="https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/">How to install the RISC-V toolchain?</a> 
+page.</p>
 
-<p>The toolchain is also available as an <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc">xPack</a> and can be conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+<p>The toolchain is also available as an 
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc">xPack</a> 
+and can be conveniently installed with 
+<a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
@@ -202,7 +215,10 @@ from Feb 27th, 2018</li>
 
 <p>This installs the latest available version.</p>
 
-<p>For better control and repeatability, the build scripts use Docker containers; all files required during builds are available as a separate <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> project.</p>
+<p>For better control and repeatability, the build scripts use Docker 
+containers; all files required during builds are available as a separate 
+<a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> 
+project.</p>
 
 <h2 id="known-problems">Known problems</h2>
 
@@ -243,7 +259,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.2.0-3-20180506-1300-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>riscv</strong>, <strong>riscv-none-gcc</strong>.
-Last modified on Mon May  7 13:13:07 2018 UTC.
+Last modified on Tue May  8 17:30:45 2018 UTC.
 </p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/05/06/riscv-none-gcc-v7-2-0-3-20180506-released/" data-layout="button"></div>
 
