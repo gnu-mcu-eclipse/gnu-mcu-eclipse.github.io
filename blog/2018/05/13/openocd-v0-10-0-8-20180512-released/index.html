@@ -2,46 +2,41 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>Article - The GNU ARM Eclipse project has a new look and a new home at GitHub</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <title>GNU MCU Eclipse OpenOCD v0.10.0-8-20180512 released</title>
+  <meta name="description" content="Version v0.10.0-8-20180512 is a maintenance release; it updates to the latest commits.">
 
-  <meta property="og:title" content="Article - The GNU ARM Eclipse project has a new look and a new home at GitHub" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
-
-
-  <meta property="article:published_time" content="2015-09-28">
+  <meta property="og:title" content="GNU MCU Eclipse OpenOCD v0.10.0-8-20180512 released">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
-
-  <meta property="article:tag" content="gnu" />
-  <meta property="article:tag" content="arm" />
-  <meta property="article:tag" content="eclipse" />
-  <meta property="article:tag" content="github," />
-  <meta property="article:tag" content="sourceforge" />
-  <meta property="article:tag" content="jekyll" />
-  <meta property="article:tag" content="gnuarmeclipse" />
-  <meta property="article:tag" content="openocd" />
-  <meta property="article:tag" content="qemu" />
+  <meta property="article:published_time" content="2018-05-13">
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="openocd">
+  <meta property="article:section" content="semihosting">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201707092118" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201707092118" media="print">
 
-  <link rel="canonical" href="/articles/arm-com-2015-09/">
+  <link rel="canonical" href="/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -83,7 +78,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -97,9 +92,23 @@
 <div id="site-body">
 <section id="main-content">
 
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2018/05/06/riscv-none-gcc-v7-2-0-3-20180506-released/">←</a></td>
+    <td><a href="/blog/2018/05/06/riscv-none-gcc-v7-2-0-3-20180506-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-3-20180506 released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-<h1 class="page-title">Article - The GNU ARM Eclipse project has a new look and a new home at GitHub</h1>
 
+<h1 class="post-title">GNU MCU Eclipse OpenOCD v0.10.0-8-20180512 released</h1>
+
+
+<p class="post-meta">
+Posted on May 13, 2018 by Liviu Ionescu.
+</p>
 
 <div id="toc-container">
 <table class="toc" id="toc">
@@ -111,122 +120,114 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
+<a href="#changes"><span class="tocnumber">1</span> <span class="toctext">Changes</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#new-look"><span class="tocnumber">2</span> <span class="toctext">New look</span></a>
+<a href="#known-problems"><span class="tocnumber">2</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#new-project-home-on-github"><span class="tocnumber">3</span> <span class="toctext">New project home on GitHub</span></a>
+<a href="#build-notes"><span class="tocnumber">3</span> <span class="toctext">Build notes</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#binaries"><span class="tocnumber">4</span> <span class="toctext">Binaries</span></a>
 <ul>
-<li class="toc_level-2 toc_section-4">
-<a href="#repositories"><span class="tocnumber">3.1</span> <span class="toctext">Repositories</span></a>
-</li>
 <li class="toc_level-2 toc_section-5">
-<a href="#binary-files-as-releases"><span class="tocnumber">3.2</span> <span class="toctext">Binary files as Releases</span></a>
-</li>
-<li class="toc_level-2 toc_section-6">
-<a href="#issues-trackers"><span class="tocnumber">3.3</span> <span class="toctext">Issues trackers</span></a>
-</li>
-<li class="toc_level-2 toc_section-7">
-<a href="#notifications-via-watched-projects"><span class="tocnumber">3.4</span> <span class="toctext">Notifications via watched projects</span></a>
+<a href="#easy-install"><span class="tocnumber">4.1</span> <span class="toctext">Easy install</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-8">
-<a href="#more-info"><span class="tocnumber">4</span> <span class="toctext">More info</span></a>
+<li class="toc_level-1 toc_section-6">
+<a href="#checksums"><span class="tocnumber">5</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div><p>
-<small>(This article was published in the <a href="http://community.arm.com/groups/tools/blog/2015/09/29/the-gnu-arm-eclipse-project-has-a-new-look-and-a-new-home">ARM Connected Community </a> blog, on 29.08.2015 and republished in <a href="https://embdev.net/topic/378409">EmbDev</a>,
-<a href="http://www.eevblog.com/forum/microcontrollers/the-gnu-arm-eclipse-project-has-a-new-look-and-a-new-home-at-github/msg771376/#msg771376">EEVBlog</a>,
-<a href="https://my.st.com/public/STe2ecommunities/mcu/Lists/STM32Java/Flat.aspx?RootFolder=%2fpublic%2fSTe2ecommunities%2fmcu%2fLists%2fSTM32Java%2fThe%20GNU%20ARM%20Eclipse%20project%20has%20a%20new%20look%20and%20a%20new%20home%20at%20GitHub&amp;FolderCTID=0x01200200770978C69A1141439FE559EB459D758000F9A0E3A95BA69146A17C2E80209ADC21">ST Forum</a>
-and <a href="http://stm32duino.com/viewtopic.php?f=41&amp;t=638">STM32Duino</a>
-on Oct 6, 2015, and <a href="http://www.element14.com/community/groups/open-source-software/blog/2015/10/08/the-gnu-arm-eclipse-project-has-a-new-look-and-a-new-home-at-github">Element 14</a> on Oct 8, 2015).</small>
-</p>
-
-<h2 id="overview">Overview</h2>
-
-<p>The <strong><a href="https://github.com/gnuarmeclipse">GNU ARM Eclipse project</a></strong> includes a set of open source Eclipse plug-ins and tools to create/build/debug/manage <strong>ARM</strong> (32-bits) and <strong>AArch64</strong> (64-bits) applications and static/shared libraries, using the latest <strong>GNU ARM GCC</strong> toolchains. </p>
-
-<h2 id="new-look">New look</h2>
-
-<p>Starting with September 2015, the <a href="http://gnuarmeclipse.github.io">GNU ARM Eclipse web</a> site has a completely new look:</p>
+</div>
+<p>Version v0.10.0-8-20180512 is a maintenance release; it updates to the latest commits.</p>
 
 <p>
-<img src="/assets/images/2015/github-io-gae-home.png" alt="GNU ARM Eclipse Home Page" />
+<a href="https://github.com/gnu-mcu-eclipse/openocd/releases/">Binary files »</a>
 </p>
 
-<p>Apart from the aspect (definitely cool!), the main functional change is the addition of the right sidebar, to facilitate access to the project documentation.</p>
-
-<p>The new site no longer uses WordPress; instead, it is entirely static and was generated with <a href="http://jekyllrb.com">Jekyll</a>.</p>
-
-<h2 id="new-project-home-on-github">New project home on GitHub</h2>
-
-<p>With <strong>GitHub</strong> gaining more and more traction, the <strong>GNU ARM Eclipse</strong> project was migrated from <a href="https://sourceforge.net/projects/gnuarmeclipse/">SourceForge</a> to <a href="https://github.com/gnuarmeclipse">GitHub</a>.</p>
-
-<p>
-<img src="/assets/images/2015/github-gae-header.png" alt="GNU ARM Eclipse GitHub Home" />
-</p>
-
-<h3 id="repositories">Repositories</h3>
-
-<p>The migration of repositories was easy, each project was pushed into its own repository.</p>
-
-<p>The current project repositories are:</p>
+<h2 id="changes">Changes</h2>
 
 <ul>
-  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins">plug-ins</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools">windows-build-tools</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd">openocd</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu">qemu</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/build-scripts">build-scripts</a></li>
+  <li>none functionally relevant</li>
 </ul>
 
-<p>
-<img src="/assets/images/2015/github-gae-projects.png" alt="GNU ARM Eclipse GitHub Projects" />
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="build-notes">Build notes</h2>
+
+<p>The build environment uses CentOS 6 Docker containers.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for Windows, macOS and GNU/Linux are provided.</p>
+
+<h3 id="easy-install">Easy install</h3>
+
+<p>OpenOCD is also available as an <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/openocd">xPack</a> and can be conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm install <span class="nt">--global</span> @gnu-mcu-eclipse/openocd@0.10.0-8.1
+</code></pre>
+</div>
+</div>
+
+<p>To install the latest version available, use:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm install <span class="nt">--global</span> @gnu-mcu-eclipse/openocd 
+</code></pre>
+</div>
+</div>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>6d1baccebc2dd8667556b61e5b93aa83587d0d52430235bb954b364e5cc903e3 ?
+gnu-mcu-eclipse-openocd-0.10.0-8-20180512-1921-centos32.tgz
+
+44775b886139ae761b3ceca630651efeced43cbd7ad5683cdb70c5a4e6d83119 ?
+gnu-mcu-eclipse-openocd-0.10.0-8-20180512-1921-centos64.tgz
+
+f3fff5c6b72b680a7995d285f442185bff83e3a31842fa2a4f21c5a23dee24f3 ?
+gnu-mcu-eclipse-openocd-0.10.0-8-20180512-1921-macos.tgz
+
+7a2bc7b751127535b967a73215788d3a66633e2b33e4edd02bb9d70a1cde7ed9 ?
+gnu-mcu-eclipse-openocd-0.10.0-8-20180512-1921-win32.zip
+
+1be649d32a2e0895c84da6570d427dee2ed89f48ca6a3547d0d08e311c536ad4 ?
+gnu-mcu-eclipse-openocd-0.10.0-8-20180512-1921-win64.zip
+</code></pre>
+</div>
+</div>
+
+
+<hr class="post-footer">
+<p class="post-footer">
+Posted in
+
+<strong>releases</strong>, <strong>openocd</strong>, <strong>semihosting</strong>.
+Last modified on Sun May 13 09:19:21 2018 UTC.
 </p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/" data-layout="button"></div>
 
-<h3 id="binary-files-as-releases">Binary files as Releases</h3>
-
-<p>The migration of binary files was a bit more complicated, and, due to current GitHub limitations, is incomplete. The main problem was raised by the two Eclipse update sites, which require a certain folder structure, and since GitHub currently does not support adding folders to releases, the Eclipse update sites will remain hosted on SourceForge (at http://gnuarmeclipse.sourceforge.net/updates).</p>
-
-<p>Except the Eclipse update sites, all future binary files will be published as GitHub Releases, attached to the respective project repositories.</p>
-
-<p>The archive of past releases was also migrated from SourceForge to GitHub.</p>
-
-<p>
-<img src="/assets/images/2015/github-gae-releases.png" alt="GNU ARM Eclipse GitHub Releases" />
-</p>
-
-<h3 id="issues-trackers">Issues trackers</h3>
-
-<p>The SourceForge trackers were replaced by the GitHub Issues trackers, one for each project.</p>
-
-<p>It is planned to preserve the content of the old SourceForge trackers, even if now they are locked and new tickets cannot be created there.</p>
-
-<h3 id="notifications-via-watched-projects">Notifications via watched projects</h3>
-
-<p>For those interested in receiving notifications, the recommended way is to subscribe to the GitHub projects, by clicking the <strong>Watch</strong> button and selecting <strong>Watching</strong>).</p>
-
-<p>
-<img src="/assets/images/2015/github-gae-watching.png" alt="GNU ARM Eclipse GitHub Watching" />
-</p>
-
-<p>In addition to the <strong>gnuarmeclipse/plug-ins</strong> project, it is also recommended to subscribe to the <strong>gnuarmeclipse/gnuarmeclipse.github.io</strong> project, to receive notifications for new Web posts.</p>
-
-<h2 id="more-info">More info</h2>
-
-<p>For more details about the <strong>GNU ARM Eclipse</strong> project, please refer to the project site <a href="http://gnuarmeclipse.github.io/">http://gnuarmeclipse.github.io/</a>.</p>
-
-
-<hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/articles/arm-com-2015-09/" data-layout="button"></div>
 
 
 </section>
@@ -244,7 +245,7 @@ on Oct 6, 2015, and <a href="http://www.element14.com/community/groups/open-sour
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -254,10 +255,14 @@ on Oct 6, 2015, and <a href="http://www.element14.com/community/groups/open-sour
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -267,7 +272,8 @@ on Oct 6, 2015, and <a href="http://www.element14.com/community/groups/open-sour
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -346,38 +352,44 @@ on Oct 6, 2015, and <a href="http://www.element14.com/community/groups/open-sour
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -445,7 +457,7 @@ on Oct 6, 2015, and <a href="http://www.element14.com/community/groups/open-sour
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -467,7 +479,7 @@ on Oct 6, 2015, and <a href="http://www.element14.com/community/groups/open-sour
     <ul>
   <li>© 2017 Liviu Ionescu</li>
   <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
