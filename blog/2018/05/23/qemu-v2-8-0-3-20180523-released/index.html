@@ -128,13 +128,16 @@ Posted on May 23, 2018 by Liviu Ionescu.
 <a href="#known-problems"><span class="tocnumber">2</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#build-notes"><span class="tocnumber">3</span> <span class="toctext">Build notes</span></a>
+<a href="#binaries"><span class="tocnumber">3</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#binaries"><span class="tocnumber">4</span> <span class="toctext">Binaries</span></a>
+<a href="#build-notes"><span class="tocnumber">4</span> <span class="toctext">Build notes</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#checksums"><span class="tocnumber">5</span> <span class="toctext">Checksums</span></a>
+<a href="#install"><span class="tocnumber">5</span> <span class="toctext">Install</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#checksums"><span class="tocnumber">6</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
@@ -151,19 +154,31 @@ Posted on May 23, 2018 by Liviu Ionescu.
 
 <p>No functional changes since the previous release.</p>
 
+<p>This release basically prepares the ground for a new major release, planned to update to the latest QEMU sources.</p>
+
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
   <li>Ctrl-C does not interrupt the execution if the <code class="highlighter-rouge">--nographic</code> option is used.</li>
 </ul>
 
-<h2 id="build-notes">Build notes</h2>
-
-<p>The build environment uses CentOS 6 Docker containers.</p>
-
 <h2 id="binaries">Binaries</h2>
 
-<p>Binaries for Windows, macOS and GNU/Linux are provided.</p>
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<h2 id="build-notes">Build notes</h2>
+
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bits), 
+and run on any distribution based on CentOS 6 or later.</p>
+
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
+
+<h2 id="install">Install</h2>
+
+<p>Instructions on how to install the binaries are available in the 
+<a href="https://gnu-mcu-eclipse.github.io/qemu/install/">How to install the QEMU binaries?</a> 
+page.</p>
 
 <h2 id="checksums">Checksums</h2>
 
@@ -201,7 +216,7 @@ Posted in
 <strong>releases</strong>, <strong>qemu</strong> and tagged
 
 <strong>emulator</strong>, <strong>macos</strong>, <strong>linux</strong>, <strong>windows</strong>.
-</br>Last modified on Wed May 23 16:07:30 2018 UTC.
+</br>Last modified on Wed May 23 16:16:39 2018 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/05/23/qemu-v2-8-0-3-20180523-released/" data-layout="button"></div>
 </p>
 
