@@ -147,7 +147,7 @@
 
 <p>The current RISC-V prefixes for the Linux toolchains are <code class="highlighter-rouge">riscv64-unknown-linux-gnu-</code> and <code class="highlighter-rouge">riscv32-unknown-linux-gnu-</code> and for the non-Linux toolchains are <code class="highlighter-rouge">riscv64-unknown-elf-</code> and <code class="highlighter-rouge">riscv32-unknown-elf-</code>.</p>
 
-<p>Well, don’t be confused by this unfortunate names. The <strong>64</strong> or <strong>32</strong> prefix attached to the architecture does not mean that the toolchain runs on 64-bits or 32-bits platforms only. It does not mean either that the compiler produces 64-bits or 32-bits RISC-V binaries. Actually, the compilers produce both 32/64-bits binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>. The only difference are defaults, when the compiler are invoked without the <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code> explicitly set on the command line.</p>
+<p>Well, don’t be confused by this unfortunate names. The <strong>64</strong> or <strong>32</strong> prefix attached to the architecture does not mean that the toolchain runs on 64-bit or 32-bit platforms only. It does not mean either that the compiler produces 64-bit or 32-bit RISC-V binaries. Actually, the compilers produce both 32/64-bit binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>. The only difference are defaults, when the compiler are invoked without the <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code> explicitly set on the command line.</p>
 
 <p>The <strong>unknown</strong> part of the tuple also does not bring any useful information. If it refers to the OS, it could have been easily skipped. Not to mention that for bare metal toolchains, <strong>none</strong> would have been a shorter and more usual name.</p>
 
@@ -174,7 +174,7 @@
 <ul>
   <li>RV32I: A load-store ISA with 32, 32-bit general-purpose integer registers.</li>
   <li>RV32E: An embedded flavor of RV32I with only 16 integer registers.</li>
-  <li>RV64I: A 64-bit flavor of RV32I where the general-purpose integer registers are 64-bits wide.</li>
+  <li>RV64I: A 64-bit flavor of RV32I where the general-purpose integer registers are 64-bit wide.</li>
 </ul>
 
 <p>In addition to these base ISAs, a handful of extensions have been 
@@ -211,9 +211,9 @@ together are treated as a single ABI string. The integer ABIs follow the
 standard ABI naming scheme:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">ilp32</code>: “int”, “long”, and pointers are all 32-bits long. “long long” is 
+  <li><code class="highlighter-rouge">ilp32</code>: “int”, “long”, and pointers are all 32-bit long. “long long” is 
 a 64-bit type, “char” is 8-bit, and “short” is 16-bit.</li>
-  <li><code class="highlighter-rouge">lp64</code>: “long” and pointers are 64-bits long, while “int” is a 32-bit type. 
+  <li><code class="highlighter-rouge">lp64</code>: “long” and pointers are 64-bit long, while “int” is a 32-bit type. 
 The other types remain the same as ilp32.</li>
 </ul>
 
@@ -296,7 +296,7 @@ march=rv64imafdc/mabi=lp64d
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sun Nov 12 10:38:47 2017 UTC.</p>
+<p class="page-footer">Last modified on Mon Jun  4 19:50:15 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/" data-layout="button"></div>
 
 

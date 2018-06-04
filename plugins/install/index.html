@@ -227,11 +227,11 @@
 
 <h3 id="win-xp---a-word-of-caution">Win XP - a word of caution</h3>
 
-<p>For the old-timers, a word of caution about Windows XP: recent Java distributions (from 7 up) are <a href="http://www.oracle.com/technetwork/java/javase/config-417990.html">no longer certified for XP</a>, so, even if they might seem to work, you are on thin ice. If possible, avoid using XP at all; otherwise use only the 32-bits version, with 32-bits Java and Eclipse.</p>
+<p>For the old-timers, a word of caution about Windows XP: recent Java distributions (from 7 up) are <a href="http://www.oracle.com/technetwork/java/javase/config-417990.html">no longer certified for XP</a>, so, even if they might seem to work, you are on thin ice. If possible, avoid using XP at all; otherwise use only the 32-bit version, with 32-bit Java and Eclipse.</p>
 
 <h3 id="win-xp-64">Win XP 64</h3>
 
-<p>The warning is even more important for Win XP 64, which, in certain configurations, has difficulties to start 32-bits applications (like the JLink GDB Server or OpenOCD). Although generally Win XP 64 is not recommended at all, if you really need to use it, preferably experiment with a 32-bits Java and a 32-bits Eclipse.</p>
+<p>The warning is even more important for Win XP 64, which, in certain configurations, has difficulties to start 32-bit applications (like the JLink GDB Server or OpenOCD). Although generally Win XP 64 is not recommended at all, if you really need to use it, preferably experiment with a 32-bit Java and a 32-bit Eclipse.</p>
 
 <p>However please note that no support requests referring to Win XP 64 will be processed.</p>
 
@@ -240,7 +240,7 @@
 <p>The recommended package is the latest version from the official <a href="http://www.oracle.com/technetwork/java/javase/index.html">Oracle <strong>Java SE</strong> page</a>. The <strong>OpenJDK Java</strong> used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8 (the Java Runtime Environment), but, as said before, better use the latest JDK (currently 1.8.151). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.</p>
 
 <blockquote>
-  <p>Important note: Java may be distributed in separate 32/64-bits packages. Unless you have older applications requiring 32-bits Java, on 64-bits systems it is recommended to install the 64-bits JDK. Anyway, Oracle JDK 9 might not even be available for 32-bits.</p>
+  <p>Important note: Java may be distributed in separate 32/64-bit packages. Unless you have older applications requiring 32-bit Java, on 64-bit systems it is recommended to install the 64-bit JDK. Anyway, Oracle JDK 9 might not even be available for 32-bit.</p>
 </blockquote>
 
 <p>On some distributions, for example on Ubuntu 16.04 LTS, Java seems to be already installed in the standard distribution:</p>
@@ -265,7 +265,7 @@ OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode)
 <span class="gp">$</span> java <span class="nt">-version</span>
 <span class="go">java version "1.7.0_85"
 OpenJDK Runtime Environment (IcedTea 2.6.1) (7u85-2.6.1-5ubuntu0.14.04.1)
-OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
+OpenJDK 64-bit Server VM (build 24.85-b03, mixed mode)
 </span></code></pre>
 </div>
 </div>
@@ -289,7 +289,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 </p>
 
 <blockquote>
-  <p>Important note: there are different binaries for 32-bits (<code class="highlighter-rouge">_x86</code>) and 64-bits (<code class="highlighter-rouge">x86-64</code>). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure <code class="highlighter-rouge">Java was started but returned exit code=13</code> message is issued.</p>
+  <p>Important note: there are different binaries for 32-bit (<code class="highlighter-rouge">_x86</code>) and 64-bit (<code class="highlighter-rouge">x86-64</code>). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure <code class="highlighter-rouge">Java was started but returned exit code=13</code> message is issued.</p>
 </blockquote>
 
 <p>On macOS, after un-archiving, remove the <code class="highlighter-rouge">com.apple.quarantine</code> extended attribute, otherwise the application will run from a randomised path and you won’t be able to store persistent changes.</p>
@@ -304,7 +304,7 @@ OpenJDK 64-bits Server VM (build 24.85-b03, mixed mode)
 
 <h4 id="the-plug-ins-install-way">The plug-ins install way</h4>
 
-<p>If you prefer to do this in more steps, go to the <a href="http://www.eclipse.org/downloads/eclipse-packages">Eclipse packages</a> and get the <strong>Eclipse IDE for C/C++ Developers</strong> archive appropriate for your platform, preferably the 64-bits version.</p>
+<p>If you prefer to do this in more steps, go to the <a href="http://www.eclipse.org/downloads/eclipse-packages">Eclipse packages</a> and get the <strong>Eclipse IDE for C/C++ Developers</strong> archive appropriate for your platform, preferably the 64-bit version.</p>
 
 <p>Links to older versions are available in the <strong>More Downloads</strong> section, at the bottom.</p>
 
@@ -600,7 +600,7 @@ assets
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sun Apr  1 08:36:31 2018 UTC.</p>
+<p class="page-footer">Last modified on Mon Jun  4 19:50:15 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/install/" data-layout="button"></div>
 
 

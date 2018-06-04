@@ -176,8 +176,8 @@
 
 <h2 id="overview">Overview</h2>
 
-<p>The GNU MCU Eclipse ARM build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bits ARM GNU toolchain you prefer, but, for better results, the recommended toolchains for <strong>bare metal</strong> target applications are <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc"><strong>GNU MCU Eclipse ARM Embedded GCC</strong></a> and
-<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm"><strong>GNU ARM Embedded Toolchain</strong></a> (formerly GNU Tools for ARM Embedded Processors); for <strong>GNU/Linux</strong> target applications, the <strong><a href="http://www.linaro.org/downloads/">Linaro</a></strong> toolchains provide a large selection of choices, for various specific needs (little/big endian, 32/64-bits, etc).</p>
+<p>The GNU MCU Eclipse ARM build plug-in is highly configurable in terms of executable names and location, so you can use any 32/64-bit ARM GNU toolchain you prefer, but, for better results, the recommended toolchains for <strong>bare metal</strong> target applications are <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc"><strong>GNU MCU Eclipse ARM Embedded GCC</strong></a> and
+<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm"><strong>GNU ARM Embedded Toolchain</strong></a> (formerly GNU Tools for ARM Embedded Processors); for <strong>GNU/Linux</strong> target applications, the <strong><a href="http://www.linaro.org/downloads/">Linaro</a></strong> toolchains provide a large selection of choices, for various specific needs (little/big endian, 32/64-bit, etc).</p>
 
 <blockquote>
   <p>Important notes: 
@@ -206,7 +206,7 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 <p>The main benefits for the users are:</p>
 
 <ul>
-  <li>convenience: binaries for <strong>all</strong> major platforms are provided (Windows 64/32-bits, GNU/Linux 64/32-bits, macOS);</li>
+  <li>convenience: binaries for <strong>all</strong> major platforms are provided (Windows 64/32-bit, GNU/Linux 64/32-bit, macOS);</li>
   <li>uniform and portable install: the toolchain is also available as a binary xPack, and can be easily installed with <code class="highlighter-rouge">xpm</code>;</li>
   <li>improved support for <strong>Continuous Integration</strong> usage: as for any xPack, the toolchain can be easily used in test environments.</li>
 </ul>
@@ -298,7 +298,7 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 <div class="highlight">
 <pre class="highlight">
 <code><span class="gp">$</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/7.2.1-1.1-20180401-0515/bin/arm-none-eabi-gcc <span class="nt">--version</span>
-<span class="go">arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bits)
+<span class="go">arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bit)
 </span></code></pre>
 </div>
 </div>
@@ -312,7 +312,7 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
   <li><code class="highlighter-rouge">gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos32.tgz</code></li>
 </ul>
 
-<p>As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-centos64</code> file for 64-bits machines and the <code class="highlighter-rouge">-centos32</code> file for 32-bits machines.</p>
+<p>As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-centos64</code> file for 64-bit machines and the <code class="highlighter-rouge">-centos32</code> file for 32-bit machines.</p>
 
 <p>To install the toolchain, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/</code>:</p>
 
@@ -337,7 +337,7 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 <div class="highlight">
 <pre class="highlight">
 <code><span class="gp">$</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/7.2.1-1.1-20180401-0515/bin/arm-none-eabi-gcc <span class="nt">--version</span>
-<span class="go">arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bits)
+<span class="go">arm-none-eabi-gcc (GNU MCU Eclipse ARM Embedded GCC, 64-bit)
 </span></code></pre>
 </div>
 </div>
@@ -458,10 +458,10 @@ ${user.home}/local:\
 
 <ul>
   <li>
-    <p>starting with version 6.x, GNU/Linux toolchains are 64-bits applications, and should work directly on most modern distributions;</p>
+    <p>starting with version 6.x, GNU/Linux toolchains are 64-bit applications, and should work directly on most modern distributions;</p>
   </li>
   <li>
-    <p>in older versions, the toolchain executables are 32-bits apps; when running on 64-bits machines, be sure you install the following 32-bits libraries (for different versions check the toolchain README for the actual list):</p>
+    <p>in older versions, the toolchain executables are 32-bit apps; when running on 64-bit machines, be sure you install the following 32-bit libraries (for different versions check the toolchain README for the actual list):</p>
 
     <div class="language-console highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install lib32z1 lib32ncurses5 lib32bz2-1.0
@@ -475,7 +475,7 @@ ${user.home}/local:\
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>on Ubuntu 12 LTSx64 all 32-bits libraries were packed in ia32-libs, so you can also use, but be prepared to get a lot of useless libraries:</p>
+    <p>on Ubuntu 12 LTSx64 all 32-bit libraries were packed in ia32-libs, so you can also use, but be prepared to get a lot of useless libraries:</p>
 
     <div class="language-console highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install ia32-libs
@@ -596,7 +596,7 @@ ${user.home}/local:\
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Wed Apr 25 18:00:12 2018 UTC.</p>
+<p class="page-footer">Last modified on Mon Jun  4 19:50:15 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/arm/install/" data-layout="button"></div>
 
 

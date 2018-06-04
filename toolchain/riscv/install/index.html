@@ -163,7 +163,7 @@
 
 <h2 id="overview">Overview</h2>
 
-<p>The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bits RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><strong>GNU MCU Eclipse RISC-V Embedded GCC</strong></a>. This toolchain closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
+<p>The Eclipse RISC-V build plug-in is highly configurable in terms of toolchain executable names and location, so you can use any 32/64-bit RISC-V GNU toolchain you prefer, but, for better results, the recommended toolchain for <strong>bare metal</strong> target applications is <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/"><strong>GNU MCU Eclipse RISC-V Embedded GCC</strong></a>. This toolchain closely follows the official <a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
 
 <h2 id="target-vs-host-platform">Target vs host platform</h2>
 
@@ -182,9 +182,9 @@
 
 <h2 id="riscv64-unknown-elf-gcc">riscv64-unknown-elf-gcc</h2>
 
-<p>After installing the toolchain, you’ll end up with lots of programs prefixed by <code class="highlighter-rouge">riscv-none-embed-</code>. For those used to the RISC-V original toolchains, there is no <code class="highlighter-rouge">riscv64-</code> or <code class="highlighter-rouge">riscv32-</code> prefix since it is actually not needed, the toolchain produces both 32/64-bits binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>.</p>
+<p>After installing the toolchain, you’ll end up with lots of programs prefixed by <code class="highlighter-rouge">riscv-none-embed-</code>. For those used to the RISC-V original toolchains, there is no <code class="highlighter-rouge">riscv64-</code> or <code class="highlighter-rouge">riscv32-</code> prefix since it is actually not needed, the toolchain produces both 32/64-bit binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>.</p>
 
-<p>Be sure you <strong>do</strong> select carefully the proper release file to  match the 32/64-bits platform you are using.</p>
+<p>Be sure you <strong>do</strong> select carefully the proper release file to  match the 32/64-bit platform you are using.</p>
 
 <h2 id="the-xpack-install">The xPack install</h2>
 
@@ -273,7 +273,7 @@
 <div class="highlight">
 <pre class="highlight">
 <code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230/bin/riscv-none-embed-gcc <span class="nt">--version</span>
-<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
+<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit)
 </span></code></pre>
 </div>
 </div>
@@ -287,7 +287,7 @@
   <li><code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-centos32.tgz</code></li>
 </ul>
 
-<p>As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-centos64</code> file for 64-bits machines and the <code class="highlighter-rouge">-centos32</code> file for 32-bits machines.</p>
+<p>As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-centos64</code> file for 64-bit machines and the <code class="highlighter-rouge">-centos32</code> file for 32-bit machines.</p>
 
 <p>To install the toolchain, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/</code>:</p>
 
@@ -312,7 +312,7 @@
 <div class="highlight">
 <pre class="highlight">
 <code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230/bin/riscv-none-embed-gcc <span class="nt">--version</span>
-<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bits)
+<span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit)
 </span></code></pre>
 </div>
 </div>
@@ -380,7 +380,7 @@
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Wed Apr 25 18:00:12 2018 UTC.</p>
+<p class="page-footer">Last modified on Mon Jun  4 19:50:15 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/install/" data-layout="button"></div>
 
 
