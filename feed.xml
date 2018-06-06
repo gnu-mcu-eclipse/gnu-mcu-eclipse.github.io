@@ -5,9 +5,28 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Jun 2018 20:54:14 +0000</pubDate>
-    <lastBuildDate>Mon, 04 Jun 2018 20:54:14 +0000</lastBuildDate>
+    <pubDate>Wed, 06 Jun 2018 22:23:27 +0000</pubDate>
+    <lastBuildDate>Wed, 06 Jun 2018 22:23:27 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-4-20180606 released</title>
+        <description>&lt;p&gt;Version v7.2.0-4-20180606 is a maintenance release of &lt;strong&gt;GNU MCU Eclipse 
+RISC-V Embedded GCC&lt;/strong&gt;; it builds the libraries with &lt;code class=&quot;highlighter-rouge&quot;&gt;-mcmodel=medany&lt;/code&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 06 Jun 2018 22:11:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/06/07/riscv-none-gcc-v7-2-0-4-20180606-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/06/07/riscv-none-gcc-v7-2-0-4-20180606-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>riscv</category>
+        
+        <category>riscv-none-gcc</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse QEMU v2.8.0-3-20180523 released</title>
@@ -203,24 +222,6 @@ GNU/Linux machines and processors.&lt;/p&gt;
         <category>openocd</category>
         
         <category>semihosting</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-2-20180111 released</title>
-        <description>&lt;p&gt;Version v7.2.0-2-20180111 is a maintenance release of &lt;strong&gt;GNU MCU Eclipse RISC-V Embedded GCC&lt;/strong&gt;; it updates to the latest RISC-V sources and the build process was improved, to support even older GNU/Linux machines and processors.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 12 Jan 2018 23:30:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/</guid>
-        
-        
-        <category>releases</category>
-        
-        <category>riscv</category>
-        
-        <category>riscv-none-gcc</category>
         
       </item>
     
