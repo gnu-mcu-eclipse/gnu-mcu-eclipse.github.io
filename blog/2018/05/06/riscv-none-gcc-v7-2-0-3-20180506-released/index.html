@@ -223,7 +223,20 @@ project.</p>
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>none</li>
+  <li>due to a missing option in the build script, the libraries are not
+functional for 64-bit devices, the build fails (fixed in 7.2.0-4):</li>
+</ul>
+
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>locale.c:(.text.__locale_ctype_ptr+0x8): relocation truncated to fit: R_RISCV_HI20 against `.LANCHOR0'
+</code></pre>
+</div>
+</div>
+
+<ul>
+  <li>the <code class="highlighter-rouge">libnosys</code> library does not export the correct underscore symbols.</li>
 </ul>
 
 <h2 id="checksums">Checksums</h2>
@@ -259,7 +272,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.2.0-3-20180506-1300-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>riscv</strong>, <strong>riscv-none-gcc</strong>.
-Last modified on Mon Jun  4 19:50:15 2018 UTC.
+Last modified on Wed Jun  6 22:33:12 2018 UTC.
 </p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/05/06/riscv-none-gcc-v7-2-0-3-20180506-released/" data-layout="button"></div>
 
