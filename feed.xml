@@ -5,9 +5,37 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jun 2018 22:34:45 +0000</pubDate>
-    <lastBuildDate>Wed, 06 Jun 2018 22:34:45 +0000</lastBuildDate>
+    <pubDate>Sat, 21 Jul 2018 12:29:38 +0000</pubDate>
+    <lastBuildDate>Sat, 21 Jul 2018 12:29:38 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse plug-ins v4.4.1.201807211108 released</title>
+        <description>&lt;p&gt;Version 4.4.1.201807211108 is a new release; the main addition is support for 
+&lt;a href=&quot;https://jumper.io&quot;&gt;Jumper Virtual Lab&lt;/a&gt;; it also provides several bug fixes and 
+enhancements.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 21 Jul 2018 11:22:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/07/21/plugins-v4.4.1.201807211108-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/07/21/plugins-v4.4.1.201807211108-released/</guid>
+        
+        <category>GNU</category>
+        
+        <category>ARM</category>
+        
+        <category>MCU</category>
+        
+        <category>Eclipse</category>
+        
+        <category>Jumper</category>
+        
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-4-20180606 released</title>
@@ -204,24 +232,6 @@ GNU/Linux machines and processors.&lt;/p&gt;
         <category>releases</category>
         
         <category>plugins</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released</title>
-        <description>&lt;p&gt;Version v0.10.0-7-20180123 is a maintenance release; the main change was to &lt;strong&gt;add semihosting support for RISC-V targets&lt;/strong&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 23 Jan 2018 10:58:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/</guid>
-        
-        
-        <category>releases</category>
-        
-        <category>openocd</category>
-        
-        <category>semihosting</category>
         
       </item>
     

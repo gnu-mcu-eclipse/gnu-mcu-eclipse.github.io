@@ -9,17 +9,24 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
 
-  <title>How to build the ARM Embedded GCC binaries?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <title>GNU MCU Eclipse plug-ins v4.4.1.201807211108 released</title>
+  <meta name="description" content="Version 4.4.1.201807211108 is a new release; the main addition is support for Jumper Virtual Lab; it also provides several bug fixes and enhancements.">
 
-  <meta property="og:title" content="How to build the ARM Embedded GCC binaries?" />
+  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.4.1.201807211108 released" />
   <meta property="og:site_name" content="GNU MCU Eclipse" />
 
 
-  <meta property="article:published_time" content="2018-02-16">
+  <meta property="article:published_time" content="2018-07-21">
 
 
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="plugins" />
 
+  <meta property="article:tag" content="gnu" />
+  <meta property="article:tag" content="arm" />
+  <meta property="article:tag" content="mcu" />
+  <meta property="article:tag" content="eclipse" />
+  <meta property="article:tag" content="jumper" />
 
 
   <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
@@ -29,7 +36,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="/toolchain/arm/build-procedure/">
+  <link rel="canonical" href="/blog/2018/07/21/plugins-v4.4.1.201807211108-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
@@ -88,22 +95,115 @@
 <div id="site-body">
 <section id="main-content">
 
-
-<h1 class="page-title">How to build the ARM Embedded GCC binaries?</h1>
-
-
-<p>The GNU MCU Eclipse ARM Embedded GCC build scripts provide a single tool to create multi-platform binaries, generating the Windows 32, Windows 64, GNU/Linux 32, GNU/Linux 64 and macOS distribution packages.</p>
-
-<p>The script was developed on macOS, but it also runs on any recent GNU/Linux distribution.</p>
-
-<h2 id="how-to-build">How to build?</h2>
-
-<p>For the final authoritative details, please refer to the separate <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/">arm-none-eabi-gcc-build</a> project.</p>
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2018/06/07/riscv-none-gcc-v7-2-0-4-20180606-released/">←</a></td>
+    <td><a href="/blog/2018/06/07/riscv-none-gcc-v7-2-0-4-20180606-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-4-20180606 released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
 
-<hr class="page-footer"/>
-<p class="page-footer">Last modified on Thu Apr 19 18:52:57 2018 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/arm/build-procedure/" data-layout="button"></div>
+<h1 class="post-title">GNU MCU Eclipse plug-ins v4.4.1.201807211108 released</h1>
+
+
+<p class="post-meta">
+Posted on July 21, 2018 by Liviu Ionescu.
+</p>
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#new-features"><span class="tocnumber">1</span> <span class="toctext">New features</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#addressed-bugs"><span class="tocnumber">2</span> <span class="toctext">Addressed bugs</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#template-changes"><span class="tocnumber">3</span> <span class="toctext">Template changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#other-changes"><span class="tocnumber">4</span> <span class="toctext">Other changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#known-problems"><span class="tocnumber">5</span> <span class="toctext">Known problems</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div><p>Version 4.4.1.201807211108 is a new release; the main addition is support for 
+<a href="https://jumper.io">Jumper Virtual Lab</a>; it also provides several bug fixes and 
+enhancements.</p>
+
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/">Binary files »</a>
+</p>
+
+<h2 id="new-features">New features</h2>
+
+<ul>
+  <li>6a8d2319 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/296">#296</a>] 
+A new debug plug-in was added, supporting the Jumper Virtual Lab</li>
+  <li>8b756983 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/300">#300</a>] 
+In the QEMU debug plug-in, enable the xPack buttons in the preferences/properties, 
+to select the path via the xPack version.</li>
+</ul>
+
+<h2 id="addressed-bugs">Addressed bugs</h2>
+
+<ul>
+  <li>4822665d - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/291">#291</a>] 
+the condition to enable the tab Toolchains was too restrictive; re-enable it
+non managed projects</li>
+  <li>f79e2f4a - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/290">#290</a>] 
+the condition to enable the tab Devices was too restrictive; re-enable it
+non managed projects</li>
+  <li>701fe9da - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/304">#304</a>] 
+improve test for GME toolchain</li>
+</ul>
+
+<h2 id="template-changes">Template changes</h2>
+
+<ul>
+  <li>d97036d7 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/310">#310</a>] 
+add license info to linker scripts</li>
+</ul>
+
+<h2 id="other-changes">Other changes</h2>
+
+<ul>
+  <li>e32a28a4 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/306">#306</a>] 
+README.md: Add information about other update sites</li>
+</ul>
+
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>none.</li>
+</ul>
+
+
+<hr class="post-footer"/>
+<p class="post-footer">
+Posted in
+
+<strong>releases</strong>, <strong>plugins</strong> and tagged
+
+<strong>gnu</strong>, <strong>arm</strong>, <strong>mcu</strong>, <strong>eclipse</strong>, <strong>jumper</strong>.
+</br>Last modified on Sat Jul 21 12:01:54 2018 UTC.
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/07/21/plugins-v4.4.1.201807211108-released/" data-layout="button"></div>
+</p>
 
 
 </section>
