@@ -5,9 +5,27 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Jul 2018 13:21:52 +0000</pubDate>
-    <lastBuildDate>Sat, 21 Jul 2018 13:21:52 +0000</lastBuildDate>
+    <pubDate>Wed, 25 Jul 2018 10:03:14 +0000</pubDate>
+    <lastBuildDate>Wed, 25 Jul 2018 10:03:14 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released</title>
+        <description>&lt;p&gt;Version v7.3.1-1.1 20180724 is a new release of &lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 24 Jul 2018 09:09:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>arm</category>
+        
+        <category>arm-none-eabi-gcc</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse plug-ins v4.4.1-201807211108 released</title>
@@ -206,32 +224,6 @@ GNU/Linux machines and processors.&lt;/p&gt;
         <category>arm</category>
         
         <category>arm-none-eabi-gcc</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse plug-ins v4.3.2-201801250917 released</title>
-        <description>&lt;p&gt;Version 4.3.2-201801250917 is a maintenance release; the main addition is &lt;strong&gt;support for semihosting in the SiFive RISC-V project template&lt;/strong&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 25 Jan 2018 17:07:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2018/01/25/plugins-v4.3.2-201801250917-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/01/25/plugins-v4.3.2-201801250917-released/</guid>
-        
-        <category>GNU</category>
-        
-        <category>ARM</category>
-        
-        <category>RISC-V</category>
-        
-        <category>MCU</category>
-        
-        <category>Eclipse</category>
-        
-        
-        <category>releases</category>
-        
-        <category>plugins</category>
         
       </item>
     

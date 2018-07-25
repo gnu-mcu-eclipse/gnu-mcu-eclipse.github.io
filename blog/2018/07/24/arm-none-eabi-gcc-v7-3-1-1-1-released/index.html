@@ -2,39 +2,41 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>The GNU ARM Eclipse project has a new home and a new look (GitHub)</title>
-  <meta name="description" content="The GNU ARM Eclipse project was migrated from SourceForge to GitHub.">
+  <title>GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released</title>
+  <meta name="description" content="Version v7.3.1-1.1 20180724 is a new release of GNU MCU Eclipse ARM Embedded GCC.">
 
-  <meta property="og:title" content="The GNU ARM Eclipse project has a new home and a new look (GitHub)" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
-
-
-  <meta property="article:published_time" content="2015-09-14">
+  <meta property="og:title" content="GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
-  <meta property="article:section" content="news" />
-  <meta property="article:section" content="web" />
+  <meta property="article:published_time" content="2018-07-24">
+
+
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="arm">
+  <meta property="article:section" content="arm-none-eabi-gcc">
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="/blog/2015/09/14/web-new-look/">
+  <link rel="canonical" href="/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -76,7 +78,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -92,20 +94,20 @@
 
 <table id="post-navigation">
   <tr>
-    <td><a href="/blog/2015/08/19/plugins-v2.9.3-201508190739-released/">←</a></td>
-    <td><a href="/blog/2015/08/19/plugins-v2.9.3-201508190739-released/">GNU ARM Eclipse plug-ins v2.9.3-201508190739 released</a></td>
+    <td><a href="/blog/2018/07/21/plugins-v4.4.1-201807211108-released/">←</a></td>
+    <td><a href="/blog/2018/07/21/plugins-v4.4.1-201807211108-released/">GNU MCU Eclipse plug-ins v4.4.1-201807211108 released</a></td>
     <td></td>
-    <td><a href="/blog/2015/09/29/arm-connected-community-article/">ARM Connected Community article, September 2015</a></td>
-    <td><a href="/blog/2015/09/29/arm-connected-community-article/">→</a></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
 
 
-<h1 class="post-title">The GNU ARM Eclipse project has a new home and a new look (GitHub)</h1>
+<h1 class="post-title">GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released</h1>
 
 
 <p class="post-meta">
-Posted on September 14, 2015 by Liviu Ionescu.
+Posted on July 24, 2018 by Liviu Ionescu.
 </p>
 
 <div id="toc-container">
@@ -118,143 +120,102 @@ Posted on September 14, 2015 by Liviu Ionescu.
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#migration-to-github"><span class="tocnumber">1</span> <span class="toctext">Migration to GitHub</span></a>
-<ul>
-<li class="toc_level-2 toc_section-2">
-<a href="#repositories"><span class="tocnumber">1.1</span> <span class="toctext">Repositories</span></a>
+<a href="#compliance"><span class="tocnumber">1</span> <span class="toctext">Compliance</span></a>
 </li>
-<li class="toc_level-2 toc_section-3">
-<a href="#binary-files-as-releases"><span class="tocnumber">1.2</span> <span class="toctext">Binary files as Releases</span></a>
+<li class="toc_level-1 toc_section-2">
+<a href="#binaries"><span class="tocnumber">2</span> <span class="toctext">Binaries</span></a>
 </li>
-<li class="toc_level-2 toc_section-4">
-<a href="#issues-trackers"><span class="tocnumber">1.3</span> <span class="toctext">Issues trackers</span></a>
+<li class="toc_level-1 toc_section-3">
+<a href="#known-problems"><span class="tocnumber">3</span> <span class="toctext">Known problems</span></a>
 </li>
-<li class="toc_level-2 toc_section-5">
-<a href="#notifications-as-watched-projects"><span class="tocnumber">1.4</span> <span class="toctext">Notifications as watched projects</span></a>
-</li>
-</ul>
-</li>
-<li class="toc_level-1 toc_section-6">
-<a href="#the-web-has-a-new-look"><span class="tocnumber">2</span> <span class="toctext">The Web has a new look</span></a>
-</li>
-<li class="toc_level-1 toc_section-7">
-<a href="#http-redirects"><span class="tocnumber">3</span> <span class="toctext">HTTP Redirects</span></a>
-</li>
-<li class="toc_level-1 toc_section-8">
-<a href="#old-sites"><span class="tocnumber">4</span> <span class="toctext">Old sites</span></a>
+<li class="toc_level-1 toc_section-4">
+<a href="#checksums"><span class="tocnumber">4</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div><p>The GNU ARM Eclipse project was migrated from <a href="https://sourceforge.net/projects/gnuarmeclipse/">SourceForge</a> to <a href="https://github.com/gnuarmeclipse">GitHub</a>.</p>
-
-<h2 id="migration-to-github">Migration to GitHub</h2>
-
-<p>There are many reasons behind this decision (GitHub looks definitely cool!), but the main one is probably to reduce dependencies on custom DNS domains, like <code class="highlighter-rouge">livius.net</code>, which might not be available on long term.</p>
+</div>
+<p>Version v7.3.1-1.1 20180724 is a new release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong>.</p>
 
 <p>
-<img src="/assets/images/2015/github-gae-header.png" alt="GNU ARM Eclipse GitHub Home" />
+<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/">Binary files »</a>
 </p>
 
-<h3 id="repositories">Repositories</h3>
+<h2 id="compliance">Compliance</h2>
 
-<p>Migrating the repositories was the easiest part, each project was pushed into its own repository.</p>
+<p>This release follows the official <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a>  <strong>7-2018-q2-update</strong> release from June 27, 2018 and it is based on the <code class="highlighter-rouge">gcc-arm-none-eabi-7-2018-q2-update-src.tar.bz2</code> source invariant.</p>
 
-<p>The current project repositories are:</p>
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), and run on any distribution based on CentOS 6 or later.</p>
+
+<p>The macOS binary was built on a macOS 10.10.5 and must run on any newer macOS system.</p>
+
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
+
+<p>Instructions on how to install the binaries are available in the <a href="https://gnu-mcu-eclipse.github.io/toolchain/arm/install/">How to install the ARM toolchain?</a> page.</p>
+
+<p>The toolchain is also available as an <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/arm-none-eabi-gcc">xPack</a> and can be conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm install @gnu-mcu-eclipse/arm-none-eabi-gcc <span class="nt">--global</span>
+</code></pre>
+</div>
+</div>
+
+<p>This installs the latest available version.</p>
+
+<p>For better control and repeatability, the build scripts use Docker containers; all files required during builds are available as a separate <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build">gnu-mcu-eclipse/arm-none-eabi-gcc-build</a> project.</p>
+
+<h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins">plug-ins</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools">windows-build-tools</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd">openocd</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu">qemu</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/build-scripts">build-scripts</a></li>
+  <li>none</li>
 </ul>
 
-<p>
-<img src="/assets/images/2015/github-gae-projects.png" alt="GNU ARM Eclipse GitHub Projects" />
-</p>
+<h2 id="checksums">Checksums</h2>
 
-<h3 id="binary-files-as-releases">Binary files as Releases</h3>
+<p>The SHA-256 hashes for the files are:</p>
 
-<p>Migration of binary files was a bit more complicated, and, due to GitHub current limitations, is not complete. The main problem was raised by the Eclipse update sites, which require a certain folder structure, and since GitHub does not support adding folders to releases, the Eclipse update sites will remain hosted on SourceForge.</p>
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">ecb558466dc75ed61ec6bf223eceea726a03d4a647577e04991820a4d96415cc 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-centos32.tgz
 
-<p>Note: We reported this problem to GitHub support, and in a future version they might allow to add folders to releases, but details are not available.</p>
+d521ec54ac79e7abcdf1a88b7e74cea2155e355e9b3d2eacaa915c5827687af3 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-centos64.tgz
 
-<p>Apart from the Eclipse update sites, all other binary files will be published as GitHub Releases, attached to the respective project repositories.</p>
+0e6d07f8c01cd95d1ac0f19a4e362d0598ad879cc6a22da02809f4d9249b9dc1 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-macos.tgz
 
-<p>The archive of past releases was also migrated from SourceForge to GitHub.</p>
+c742d58e498928e5209d905d33c1778e7fb482d87ce7e1b214334d2313e51bf7 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-win32.zip
 
-<p>
-<img src="/assets/images/2015/github-gae-releases.png" alt="GNU ARM Eclipse GitHub Releases" />
-</p>
-
-<h3 id="issues-trackers">Issues trackers</h3>
-
-<p>The SourceForge trackers were replaced by the GitHub Issues trackers.</p>
-
-<p>The content of the old trackers was not moved to GitHub, since this is much too time consuming, but it is planned to still keep the old trackers themselves available, even if they are locked and new tickets cannot be created there. It is still possible to comment on existing tickets.</p>
-
-<h3 id="notifications-as-watched-projects">Notifications as watched projects</h3>
-
-<p>In the past, release notifications were handled by a WordPress plug-in, by subscribing to the project blog.</p>
-
-<p>Currently the only GitHub equivalent is to <strong>Watch</strong> projects, which will enable a notification for each project release.</p>
-
-<p>For those interested in receiving notifications, the recommendation is to subscribe to GitHub, by clicking the <strong>Watch</strong> button and selecting <strong>Watching</strong>).</p>
-
-<p>
-<img src="/assets/images/2015/github-gae-releases.png" alt="GNU ARM Eclipse GitHub Releases" />
-</p>
-
-<p>Be sure you subscribe to <strong>Watch</strong> the <strong>gnuarmeclipse/gnuarmeclipse.github.io</strong> project to receive notifications for Web posts.</p>
-
-<h2 id="the-web-has-a-new-look">The Web has a new look</h2>
-
-<p>Finally, the most delicate issue, was to migrate the old documentation sites from the livius.net domain to a public domain.</p>
-
-<p>Since GitHub solution for providing documentation sites is <a href="https://pages.github.com">GitHub Pages</a>, and this service makes the sites available in the <code class="highlighter-rouge">github.io</code> domain, it was considered acceptable to migrate the WordPress and MediaWiki sites to GitHub Pages.</p>
-
-<p>
-<img src="/assets/images/2015/github-io-gae-home.png" alt="GNU ARM Eclipse Home Page" />
-</p>
-
-<p>GitHub Pages uses <a href="http://jekyllrb.com">Jekyll</a> to generate static web sites, and the most convenient input format for Jekyll is <a href="http://daringfireball.net/projects/markdown/syntax">markdown</a>, so the migration involved conversion from WordPress internal representation, to markdown. Given the differences, this conversion was not easy, and was done partly with scripts, partly manually. Similarly for MediaWiki, although the conversion from the MediaWiki format to markdown was easier.</p>
-
-<p>Given the complexity of this migration, we are aware that it is very likely that lots of mistakes are still present in the pages; we would appreciate any help in fixing them (use the <a href="https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io-source/issues">Web Issues</a> tracker for this).</p>
-
-<p>The web site has two dedicated projects:</p>
-
-<ul>
-  <li><a href="https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io">gnuarmeclipse.github.io</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/gnu-mcu-eclipse.github.io-source">gnuarmeclipse.github.io-source</a></li>
-</ul>
-
-<p>The first one stores the actual static pages of the Web site and the second stores the Jekyll source files for generating the Web site.</p>
-
-<h2 id="http-redirects">HTTP Redirects</h2>
-
-<p>We are aware that a lot of links to the previous sites are in use. To avoid breaking them, many redirects were installed from the <code class="highlighter-rouge">gnuarmeclipse.livius.net/*</code> to <code class="highlighter-rouge">gnuarmeclipse.github.io</code>. All other pages not matching the rules in these redirects will be served by the new <code class="highlighter-rouge">gnuarmeclipse.livius.net/redirected/</code> page, so both blog and wiki references should not be broken, but land in the new site.</p>
-
-<h2 id="old-sites">Old sites</h2>
-
-<p>The previous WordPress and MediaWiki sites were moved back to SourceForge and, for historical reasons, will be preserved there, but will no longer be maintained:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/blog/</code></li>
-  <li><code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/wiki/</code></li>
-</ul>
+92cebc992bea624f19f17246bd496b35db1d8dccf4baa1b7f786f2b6e2c3b17d 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-7.3.1-1.1-20180724-0637-win64.zip
+</span>
+</code></pre>
+</div>
+</div>
 
 
-<hr class="post-footer"/>
+<hr class="post-footer">
 <p class="post-footer">
 Posted in
 
-<strong>news</strong>, <strong>web</strong>.
-</br>Last modified on Fri Sep 29 09:53:57 2017 UTC.
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2015/09/14/web-new-look/" data-layout="button"></div>
+<strong>releases</strong>, <strong>arm</strong>, <strong>arm-none-eabi-gcc</strong>.
+Last modified on Wed Jul 25 09:13:45 2018 UTC.
 </p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/" data-layout="button"></div>
+
 
 
 </section>
@@ -272,7 +233,7 @@ Posted in
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -282,10 +243,14 @@ Posted in
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -295,7 +260,8 @@ Posted in
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -374,38 +340,44 @@ Posted in
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -473,7 +445,7 @@ Posted in
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -495,7 +467,7 @@ Posted in
     <ul>
   <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
