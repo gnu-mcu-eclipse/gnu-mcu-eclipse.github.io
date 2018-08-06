@@ -533,6 +533,19 @@ assets
 </div>
 </div>
 
+<p>You might need to place this definition before:</p>
+
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>--launcher.appendVmargs
+</code></pre>
+</div>
+</div>
+
+<p>This requirement is anecdotal and appears on some forums; the Eclipse 
+documentation does not mention it.</p>
+
 <h3 id="macos-comapplequarantine">macOS com.apple.quarantine</h3>
 
 <p>On macOS Sierra and later, unsigned applications are marked as <em>quarantined</em> and subject to a path randomization, which prevents Eclipse to maintain persistent preferences (for more details see <a href="https://ilgthegeek.wordpress.com/2017/07/13/macos-com-apple-quarantine/">blog post</a>). To disable this, remove the <code class="highlighter-rouge">com.apple.quarantine</code> extended attribute from <code class="highlighter-rouge">Eclipse.app</code>:</p>
@@ -600,7 +613,7 @@ assets
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Mon Jun  4 19:50:15 2018 UTC.</p>
+<p class="page-footer">Last modified on Mon Aug  6 06:35:18 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/install/" data-layout="button"></div>
 
 
