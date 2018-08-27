@@ -190,8 +190,14 @@ README.md: Add information about other update sites</li>
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>none.</li>
+  <li>due to some changes in the newlib packed with GCC 7.3.x, 
+the definition of the <code class="highlighter-rouge">_EXFUN</code> macro changed 
+and the semihosting projects fail to build with a compile error in 
+<code class="highlighter-rouge">system/src/newlib/_syscalls.c</code>. The problem is in the project template
+<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/317">#317</a>, and
+a fix will be available in the next release of GNU MCU Eclipse plug-ins.</li>
 </ul>
+
 
 
 <hr class="post-footer"/>
@@ -201,7 +207,7 @@ Posted in
 <strong>releases</strong>, <strong>plugins</strong> and tagged
 
 <strong>gnu</strong>, <strong>arm</strong>, <strong>mcu</strong>, <strong>eclipse</strong>, <strong>jumper</strong>.
-</br>Last modified on Sat Jul 21 12:55:31 2018 UTC.
+</br>Last modified on Mon Aug 27 15:42:23 2018 UTC.
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/07/21/plugins-v4.4.1-201807211108-released/" data-layout="button"></div>
 </p>
 
