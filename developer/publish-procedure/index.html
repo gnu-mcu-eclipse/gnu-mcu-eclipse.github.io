@@ -211,6 +211,8 @@
 
 <p>For this, run the <code class="highlighter-rouge">scripts/publish-v4-neon-updates-experimental.command</code> (this is a script that can be executed directly in the macOS Finder).</p>
 
+<p>Install from <code class="highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-experimental</code>.</p>
+
 <h2 id="publish-pre-release-on-the-bintray-test-site">Publish pre-release on the Bintray test site</h2>
 
 <p>If the new release has no problems, publish it on the test site, and allow some time for testers to use it.</p>
@@ -254,7 +256,7 @@ logout
 
 <h2 id="install-on-a-separate-eclipse">Install on a separate Eclipse</h2>
 
-<p>Test if the new build can be used as an update site, by installing from <code class="highlighter-rouge">updates-test</code> on a separate Eclipse (not the one used for development).</p>
+<p>Test if the new build can be used as an update site, by installing from <code class="highlighter-rouge">v4-neon-updates-test</code> on a separate Eclipse (not the one used for development).</p>
 
 <h2 id="build-a-test-version-of-the-eclipse-packages">Build a test version of the Eclipse packages</h2>
 
@@ -262,9 +264,9 @@ logout
 
 <ul>
   <li>clone the <code class="highlighter-rouge">gnu-mcu-eclipse/org.eclipse.epp.packages</code> project</li>
-  <li>select the latest original branch (like <code class="highlighter-rouge">OXYGEN</code>)</li>
+  <li>select the <code class="highlighter-rouge">master</code> branch</li>
   <li>merge from upstream</li>
-  <li>merge into the corresponding local branch (like <code class="highlighter-rouge">oxygen-gme</code>)</li>
+  <li>merge into the local GME branch (like <code class="highlighter-rouge">master-gme</code>)</li>
   <li>edit <code class="highlighter-rouge">org.eclipse.epp.packages.git/releng/org.eclipse.epp.config/parent/pom.xml</code>
     <ul>
       <li>update the latest version <code class="highlighter-rouge">&lt;gnumcueclipse.version&gt;4.3.1&lt;/gnumcueclipse.version&gt;</code></li>
@@ -531,14 +533,13 @@ logout
   <li>be sure the <code class="highlighter-rouge">org.eclipse.epp.packages.git</code> is up to date and pushed</li>
   <li>go to the <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases">GitHub Releases</a> page</li>
   <li>click <strong>Draft a new release</strong></li>
-  <li>name the tag like <strong>v4.3.1-20180110-o2</strong>; mind the <code class="highlighter-rouge">-</code> in the middle, the short date and the o2 which is a shortcut for Oxygen.2</li>
-  <li>select the corresponding GME branch, like <strong>oxygen-gme</strong></li>
-  <li>name the release like <strong>GNU MCU Eclipse IDE for C/C++ Developers Oxygen.2 20170711</strong>; mind the short date</li>
+  <li>name the tag like <strong>v4.4.2-20180930-2018-09</strong>; mind the <code class="highlighter-rouge">-</code> in the middle, the short date and the 2018-09 which is is the official Eclipse release name</li>
+  <li>select the corresponding GME branch, like <strong>master-gme</strong></li>
+  <li>name the release like <strong>GNU MCU Eclipse IDE for C/C++ Developers 2018-09 20180930</strong>; mind the short date</li>
   <li>as first line of the description, copy the download badge
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/org.eclipse.epp.packages/v4.3.1-20180110-o2/total.svg)](https://gnu-mcu-eclipse.github.io/blog/2018/01/10/plugins-v4.3.1-201801092051-released/)
 </code></pre></div>    </div>
   </li>
-  <li>update the tag (v4.3.1-20180110-o2)</li>
   <li>update the URL to the actual release post</li>
   <li>copy the description from a previous release, and update</li>
   <li>copy the SHA numbers from the maven console</li>
@@ -577,7 +578,7 @@ logout
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Sat Jul 21 12:39:17 2018 UTC.</p>
+<p class="page-footer">Last modified on Sun Sep 30 10:10:16 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/publish-procedure/" data-layout="button"></div>
 
 
