@@ -442,7 +442,11 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/2018/08/30/plugins-v4.4.2-201809300659-released/</loc>
-<lastmod>2018-09-30T09:20:49+00:00</lastmod>
+<lastmod>2018-10-16T20:14:40+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/</loc>
+<lastmod>2018-10-16T20:05:51+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/about/</loc>
@@ -558,7 +562,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/openocd/change-log/</loc>
-<lastmod>2018-06-04T19:50:15+00:00</lastmod>
+<lastmod>2018-10-16T20:05:51+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/change-log/</loc>
@@ -670,7 +674,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/openocd/install/</loc>
-<lastmod>2018-07-25T10:39:24+00:00</lastmod>
+<lastmod>2018-10-16T20:14:40+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/plugins/install/</loc>
@@ -730,7 +734,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/arch/riscv/</loc>
-<lastmod>2018-06-04T19:50:15+00:00</lastmod>
+<lastmod>2018-10-16T20:24:23+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/debug/</loc>
