@@ -102,43 +102,37 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#update-the-change-log"><span class="tocnumber">1</span> <span class="toctext">Update the Change log</span></a>
+<a href="#commit-all-project-git"><span class="tocnumber">1</span> <span class="toctext">Commit all project git</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#update-info"><span class="tocnumber">2</span> <span class="toctext">Update INFO</span></a>
+<a href="#edit-the-build-script"><span class="tocnumber">2</span> <span class="toctext">Edit the build script</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#commit-all-project-git"><span class="tocnumber">3</span> <span class="toctext">Commit all project git</span></a>
+<a href="#push-the-build-script-git"><span class="tocnumber">3</span> <span class="toctext">Push the build script git</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#edit-the-build-script"><span class="tocnumber">4</span> <span class="toctext">Edit the build script</span></a>
+<a href="#checkclonepull-build-scripts"><span class="tocnumber">4</span> <span class="toctext">Check/clone/pull build scripts</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#push-the-build-script-git"><span class="tocnumber">5</span> <span class="toctext">Push the build script git</span></a>
+<a href="#build"><span class="tocnumber">5</span> <span class="toctext">Build</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#checkclonepull-build-scripts"><span class="tocnumber">6</span> <span class="toctext">Check/clone/pull build scripts</span></a>
+<a href="#prepare-a-new-blog-post"><span class="tocnumber">6</span> <span class="toctext">Prepare a new blog post</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#build"><span class="tocnumber">7</span> <span class="toctext">Build</span></a>
+<a href="#update-the-sha-sums"><span class="tocnumber">7</span> <span class="toctext">Update the SHA sums</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#prepare-a-new-blog-post"><span class="tocnumber">8</span> <span class="toctext">Prepare a new blog post</span></a>
+<a href="#update-the-web"><span class="tocnumber">8</span> <span class="toctext">Update the Web</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#update-the-sha-sums"><span class="tocnumber">9</span> <span class="toctext">Update the SHA sums</span></a>
+<a href="#create-a-new-github-release"><span class="tocnumber">9</span> <span class="toctext">Create a new GitHub release</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#update-the-web"><span class="tocnumber">10</span> <span class="toctext">Update the Web</span></a>
+<a href="#update-the-web-link"><span class="tocnumber">10</span> <span class="toctext">Update the web link</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#create-a-new-github-release"><span class="tocnumber">11</span> <span class="toctext">Create a new GitHub release</span></a>
-</li>
-<li class="toc_level-1 toc_section-12">
-<a href="#update-the-web-link"><span class="tocnumber">12</span> <span class="toctext">Update the web link</span></a>
-</li>
-<li class="toc_level-1 toc_section-13">
-<a href="#share-on-facebook"><span class="tocnumber">13</span> <span class="toctext">Share on Facebook</span></a>
+<a href="#share-on-facebook"><span class="tocnumber">11</span> <span class="toctext">Share on Facebook</span></a>
 </li>
 </ul>
 </td>
@@ -146,18 +140,6 @@
 </tbody>
 </table>
 </div><p>The RISC-V Embedded GCC binaries are published on GitHub <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/">Releases</a>.</p>
-
-<h2 id="update-the-change-log">Update the Change log</h2>
-
-<p>Generally, apart from packing, there should be no local changes.</p>
-
-<p>Open the <code class="highlighter-rouge">gnu-mcu-eclipse/info/CHANGES.txt</code> file from  <code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> project git, and copy entries to the web git.</p>
-
-<p>In the web git, add new entries to the <a href="/toolchain/riscv/change-log/">Change log</a> (<code class="highlighter-rouge">pages/toolchain/riscv/change-log.md</code>), grouped by days.</p>
-
-<h2 id="update-info">Update INFO</h2>
-
-<p>Edit the <code class="highlighter-rouge">info/INFO.txt</code> file from <code class="highlighter-rouge">openocd-build.git</code> and update the latest commits.</p>
 
 <h2 id="commit-all-project-git">Commit all project git</h2>
 
@@ -171,7 +153,7 @@
 
 <h2 id="edit-the-build-script">Edit the build script</h2>
 
-<p>Edit the <code class="highlighter-rouge">RELEASE_VERSION</code> variable to point to the actual release.</p>
+<p>Edit the <code class="highlighter-rouge">VERSION</code> variable to point to the actual release.</p>
 
 <h2 id="push-the-build-script-git">Push the build script git</h2>
 
@@ -203,7 +185,8 @@
 </div>
 </div>
 
-<p>For more details, see the <a href="/toolchain/riscv/build-procedure/">build</a> page.</p>
+<p>For more details, see the 
+<a href="/toolchain/riscv/build-procedure/">build</a> page.</p>
 
 <h2 id="prepare-a-new-blog-post">Prepare a new blog post</h2>
 
@@ -217,7 +200,8 @@
   <li>update the <code class="highlighter-rouge">date:</code> field with the current date</li>
 </ul>
 
-<p>Close <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/issues">issues</a> on the way. Refer to them as:</p>
+<p>Close <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/issues">issues</a> on 
+the way. Refer to them as:</p>
 
 <ul>
   <li><strong>[Issue:[#22](…)]</strong>.</li>
@@ -244,12 +228,16 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 <h2 id="update-the-web">Update the Web</h2>
 
 <ul>
-  <li>commit the <code class="highlighter-rouge">gnu-mcu-eclipse.github.io-source</code> project; use a message like <strong>RISC-V Embedded GCC v7.1.1-1-20170702-0625 released</strong></li>
-  <li>wait for the Travis build to complete; occasionally links to not work, and might need to restart the build.</li>
+  <li>commit the <code class="highlighter-rouge">gnu-mcu-eclipse.github.io-source</code> project; use a message 
+like <strong>RISC-V Embedded GCC v7.1.1-1-20170702-0625 released</strong></li>
+  <li>wait for the Travis build to complete; occasionally links to not work, 
+and might need to restart the build.</li>
   <li>remember the post URL, since it must be updated in the release page</li>
 </ul>
 
-<p>Note: initially the link to binaries points to the parent releases folder, otherwise Travis will complain and do not publish the site to <code class="highlighter-rouge">gnu-mcu-eclipse.github.io</code>.</p>
+<p>Note: initially the link to binaries points to the parent releases folder, 
+otherwise Travis will complain and do not publish the site to 
+<code class="highlighter-rouge">gnu-mcu-eclipse.github.io</code>.</p>
 
 <h2 id="create-a-new-github-release">Create a new GitHub release</h2>
 
@@ -271,7 +259,8 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
   <li>click the <strong>Publish Release</strong> button</li>
 </ul>
 
-<p>Note: at this moment the system should send a notification to all clients watching this project.</p>
+<p>Note: at this moment the system should send a notification to all clients 
+watching this project.</p>
 
 <h2 id="update-the-web-link">Update the web link</h2>
 
@@ -296,7 +285,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 
 
 <hr class="page-footer"/>
-<p class="page-footer">Last modified on Tue Feb 20 16:24:03 2018 UTC.</p>
+<p class="page-footer">Last modified on Fri Oct 19 20:14:50 2018 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/riscv/publish-procedure/" data-layout="button"></div>
 
 
