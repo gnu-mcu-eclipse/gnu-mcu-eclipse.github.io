@@ -10,19 +10,19 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released</title>
-  <meta name="description" content="Version v0.10.0-7-20180123 is a maintenance release; the main change was to add semihosting support for RISC-V targets.">
+  <title>GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released</title>
+  <meta name="description" content="Version v8.1.0-2-20181019 is a maintenance release of GNU MCU Eclipse RISC-V Embedded GCC.">
 
-  <meta property="og:title" content="GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released">
+  <meta property="og:title" content="GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released">
   <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
-  <meta property="article:published_time" content="2018-01-23">
+  <meta property="article:published_time" content="2018-10-19">
 
 
   <meta property="article:section" content="releases">
-  <meta property="article:section" content="openocd">
-  <meta property="article:section" content="semihosting">
+  <meta property="article:section" content="riscv">
+  <meta property="article:section" content="riscv-none-gcc">
 
 
 
@@ -33,7 +33,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/">
+  <link rel="canonical" href="/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
@@ -94,20 +94,20 @@
 
 <table id="post-navigation">
   <tr>
-    <td><a href="/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/">←</a></td>
-    <td><a href="/blog/2018/01/13/riscv-none-gcc-v7-2-0-2-20180111-released/">GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-2-20180111 released</a></td>
+    <td><a href="/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/">←</a></td>
+    <td><a href="/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/">GNU MCU Eclipse OpenOCD v0.10.0-9-20181016 released</a></td>
     <td></td>
-    <td><a href="/blog/2018/01/25/plugins-v4.3.2-201801250917-released/">GNU MCU Eclipse plug-ins v4.3.2-201801250917 released</a></td>
-    <td><a href="/blog/2018/01/25/plugins-v4.3.2-201801250917-released/">→</a></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
 
 
-<h1 class="post-title">GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released</h1>
+<h1 class="post-title">GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released</h1>
 
 
 <p class="post-meta">
-Posted on January 23, 2018 by Liviu Ionescu.
+Posted on October 19, 2018 by Liviu Ionescu.
 </p>
 
 <div id="toc-container">
@@ -120,30 +120,19 @@ Posted on January 23, 2018 by Liviu Ionescu.
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#changes"><span class="tocnumber">1</span> <span class="toctext">Changes</span></a>
+<a href="#compliance"><span class="tocnumber">1</span> <span class="toctext">Compliance</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#semihosting"><span class="tocnumber">2</span> <span class="toctext">Semihosting</span></a>
+<a href="#improvements"><span class="tocnumber">2</span> <span class="toctext">Improvements</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#differences-from-risc-v-releases"><span class="tocnumber">3</span> <span class="toctext">Differences from RISC-V releases</span></a>
+<a href="#binaries"><span class="tocnumber">3</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
 <a href="#known-problems"><span class="tocnumber">4</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#build-notes"><span class="tocnumber">5</span> <span class="toctext">Build notes</span></a>
-</li>
-<li class="toc_level-1 toc_section-6">
-<a href="#binaries"><span class="tocnumber">6</span> <span class="toctext">Binaries</span></a>
-<ul>
-<li class="toc_level-2 toc_section-7">
-<a href="#easy-install"><span class="tocnumber">6.1</span> <span class="toctext">Easy install</span></a>
-</li>
-</ul>
-</li>
-<li class="toc_level-1 toc_section-8">
-<a href="#checksums"><span class="tocnumber">7</span> <span class="toctext">Checksums</span></a>
+<a href="#checksums"><span class="tocnumber">5</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
@@ -151,114 +140,119 @@ Posted on January 23, 2018 by Liviu Ionescu.
 </tbody>
 </table>
 </div>
-<p>Version v0.10.0-7-20180123 is a maintenance release; the main change was to <strong>add semihosting support for RISC-V targets</strong>.</p>
+<p>Version v8.1.0-2-20181019 is a maintenance release of <strong>GNU MCU Eclipse 
+RISC-V Embedded GCC</strong>.</p>
 
 <p>
-<a href="https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-7-20180123/">Binary files »</a>
+<a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/">Binary files »</a>
 </p>
 
-<h2 id="changes">Changes</h2>
+<h2 id="compliance">Compliance</h2>
+
+<p>This release closely follows the official 
+<a href="https://github.com/riscv/riscv-gcc">RISC-V distribution</a> maintained by 
+<a href="https://www.sifive.com">SiFive</a>.</p>
+
+<p>It is more or less similar to the 20180928 release, except support for 
+SiFive specific CLIC interrupts, which was not included.</p>
+
+<p>The following commits were used:</p>
 
 <ul>
-  <li>rework the semihosting support</li>
-  <li>remove dependency from ARM specific structures and make semihosting code standalone</li>
-  <li>add 64-bit support</li>
+  <li>the <a href="https://github.com/riscv/riscv-gcc">riscv/riscv-gcc</a> project, 
+branch <code class="highlighter-rouge">riscv-gcc-8.1.0</code>, commit
+<a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/commit/3c148a7e6ea1379e3a8e8b5350ec03a72e5d4137">3c148a7e6ea</a>
+from from July 3rd, 2018</li>
+  <li>the <a href="https://github.com/riscv/riscv-binutils-gdb">riscv/riscv-binutils-gdb</a> 
+project, branch <code class="highlighter-rouge">riscv-binutils-2.30</code>, commit 
+<a href="https://github.com/gnu-mcu-eclipse/riscv-binutils-gdb/commit/0d2fb1b7ff9b94e40352306f1f8857b863c6f787">0d2fb1b7ff</a>
+from Aug 11th, 2018</li>
+  <li>the <a href="https://github.com/riscv/riscv-newlib">riscv/riscv-newlib</a> project,
+commit <a href="https://github.com/gnu-mcu-eclipse/riscv-newlib/commit/77e11e1800f57cac7f5468b2bd064100a44755d4">77e11e180</a>
+from July 12th, 2018</li>
 </ul>
 
-<h2 id="semihosting">Semihosting</h2>
+<p>GDB is a bit special, since it is only partly upstreamed and the RISC-V repos 
+are no longer updated, so the current build uses 
+<code class="highlighter-rouge">git://sourceware.org/git/binutils-gdb.git</code>, the <code class="highlighter-rouge">7dd36a6f1c</code> commit from 
+Aug 23rd, 2018 (same as the SiFive release).</p>
 
-<p>To activate semihosting, use:</p>
+<h2 id="improvements">Improvements</h2>
 
-<div class="highlighter-rouge">
+<p>All architectures, ABIs and libraries supported by the <code class="highlighter-rouge">riscv64-unknown-elf</code> 
+toolchain are also supported, with the following improvements:</p>
+
+<ul>
+  <li>a newer <code class="highlighter-rouge">newlib</code> was included, which supports the ‘underscore’ syscall functions</li>
+  <li>the mandatory reference to <code class="highlighter-rouge">libgloss</code> in the linker configuration was removed</li>
+  <li>the <code class="highlighter-rouge">march=rv32imaf/mabi=ilp32f</code> library was added to the list of multilibs</li>
+  <li>support for <code class="highlighter-rouge">newlib-nano</code> was added</li>
+  <li>the standard documentation, in PDF and HTML, was added</li>
+</ul>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+and run on any distribution based on CentOS 6 or later.</p>
+
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
+
+<p>Instructions on how to install the binaries are available in the 
+<a href="https://gnu-mcu-eclipse.github.io/toolchain/riscv/install/">How to install the RISC-V toolchain?</a> 
+page.</p>
+
+<p>The toolchain is also available as an 
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc">xPack</a> 
+and can be conveniently installed with 
+<a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+
+<div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code>arm semihosting enable
+<code><span class="gp">$</span> xpm install <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
 </code></pre>
 </div>
 </div>
 
-<p>The Eclipse OpenOCD debug plug-in has a check button in the Startup tab.</p>
+<p>This installs the latest available version.</p>
 
-<p>To pass command line options to the target application:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>arm semihosting_cmdline argv0 argv1 argv2 argv3 ...
-</code></pre>
-</div>
-</div>
-
-<p>In the Eclipse OpenOCD debug plug-in, add the command prefixed with <code class="highlighter-rouge">monitor</code>:</p>
-
-<p>
-<img src="/assets/images/2018/openocd-riscv-semihosting.png" alt="Semihosting">
-</p>
-
-<h2 id="differences-from-risc-v-releases">Differences from RISC-V releases</h2>
-
-<ul>
-  <li>some of the <code class="highlighter-rouge">remote_bitbang.c</code> patches were reversed</li>
-  <li>some of the additional GDB error processing were reversed, since they affect not RISC-V targets.</li>
-</ul>
+<p>For better control and repeatability, the build scripts use Docker 
+containers; all files required during builds are available as a separate 
+<a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> 
+project.</p>
 
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>none</li>
+  <li>none.</li>
 </ul>
-
-<h2 id="build-notes">Build notes</h2>
-
-<p>The build environment uses CentOS 6 Docker containers.</p>
-
-<h2 id="binaries">Binaries</h2>
-
-<p>Binaries for Windows, macOS and GNU/Linux are provided.</p>
-
-<h3 id="easy-install">Easy install</h3>
-
-<p>OpenOCD is also available as an <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/openocd">xPack</a> and can be conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
-
-<div class="language-console highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code><span class="gp">$</span> xpm install <span class="nt">--global</span> @gnu-mcu-eclipse/openocd@0.10.0-7.1
-</code></pre>
-</div>
-</div>
-
-<p>To install the latest version available, use:</p>
-
-<div class="language-console highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code><span class="gp">$</span> xpm install <span class="nt">--global</span> @gnu-mcu-eclipse/openocd
-</code></pre>
-</div>
-</div>
 
 <h2 id="checksums">Checksums</h2>
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="highlighter-rouge">
+<div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code>c90f2d64d6ee7a32ccad1afc47c9f3376745e3de1fb933adef528be84da48ff0 ?
-gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-centos32.tgz
+<code>
+<span class="go">9938d66410f1eaf797fc717d678bfca219e0fbc53589f05e7d9339d1ebf150ea ?
+gnu-mcu-eclipse-riscv-none-gcc-8.1.0-2-20181019-0952-centos32.tgz
 
-60c9792fd2959348553d825bed608198b5221548f0a3e58f79525082bd9520a5 ?
-gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-centos64.tgz
+6a165c9dee9d4f49cf137a18352a69b9627dc224fc841b01dcf9f0c66eed4bf0 ?
+gnu-mcu-eclipse-riscv-none-gcc-8.1.0-2-20181019-0952-centos64.tgz
 
-5f35ff7cf1db7a342f4347ffedd799e462ab94a69f91e39b09f883212d341cf2 ?
-gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-osx.tgz
+996eae452610113ead3bb35fa768046fc50f2861798cbdcbf00c79058c582d80 ?
+gnu-mcu-eclipse-riscv-none-gcc-8.1.0-2-20181019-0952-macos.tgz
 
-a6a5597cd20613ff0b7f1f5ae87ff3da5194a9712abf409406817a6837c65654 ?
-gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-win32.zip
+02e43e075ff829cc4b02361d30a51c816c11a1c7f4d44a5c087a8e5a2e9998a4 ?
+gnu-mcu-eclipse-riscv-none-gcc-8.1.0-2-20181019-0952-win32.zip
 
-a9831431aadf274e47a4e3fdf8b6f201a6d9dc32318bdcf2e256d4a41aa104ac ?
-gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-win64.zip
+bd2cd40a13175f8bfd01595d55f565d8a433ef92341e4afe18a9b521a91cdc74 ?
+gnu-mcu-eclipse-riscv-none-gcc-8.1.0-2-20181019-0952-win64.zip
+</span>
 </code></pre>
 </div>
 </div>
@@ -268,10 +262,10 @@ gnu-mcu-eclipse-openocd-0.10.0-7-20180123-1217-win64.zip
 <p class="post-footer">
 Posted in
 
-<strong>releases</strong>, <strong>openocd</strong>, <strong>semihosting</strong>.
-Last modified on Wed Jul 25 10:39:24 2018 UTC.
+<strong>releases</strong>, <strong>riscv</strong>, <strong>riscv-none-gcc</strong>.
+Last modified on Fri Oct 19 20:01:59 2018 UTC.
 </p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/" data-layout="button"></div>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/" data-layout="button"></div>
 
 
 

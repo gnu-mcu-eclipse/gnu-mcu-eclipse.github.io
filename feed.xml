@@ -5,9 +5,28 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Oct 2018 20:50:29 +0000</pubDate>
-    <lastBuildDate>Tue, 16 Oct 2018 20:50:29 +0000</lastBuildDate>
+    <pubDate>Fri, 19 Oct 2018 20:05:09 +0000</pubDate>
+    <lastBuildDate>Fri, 19 Oct 2018 20:05:09 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released</title>
+        <description>&lt;p&gt;Version v8.1.0-2-20181019 is a maintenance release of &lt;strong&gt;GNU MCU Eclipse 
+RISC-V Embedded GCC&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 19 Oct 2018 11:42:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>riscv</category>
+        
+        <category>riscv-none-gcc</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse OpenOCD v0.10.0-9-20181016 released</title>
@@ -205,32 +224,6 @@ GNU/Linux machines and processors.&lt;/p&gt;
         <category>releases</category>
         
         <category>windows-build-tools</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse plug-ins v4.3.3-201804191501 released</title>
-        <description>&lt;p&gt;Version 4.3.3-201804191501 is a maintenance release; the main changes are bug fixes and enhancements.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 19 Apr 2018 15:38:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2018/04/19/plugins-v4.3.3-201804191501-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/04/19/plugins-v4.3.3-201804191501-released/</guid>
-        
-        <category>GNU</category>
-        
-        <category>ARM</category>
-        
-        <category>RISC-V</category>
-        
-        <category>MCU</category>
-        
-        <category>Eclipse</category>
-        
-        
-        <category>releases</category>
-        
-        <category>plugins</category>
         
       </item>
     
