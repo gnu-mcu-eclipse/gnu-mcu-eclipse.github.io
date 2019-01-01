@@ -160,14 +160,14 @@ $ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get update
 <span class="go">
-</span><span class="gp">$</span> <span class="nb">sudo </span>apt-get install apt-transport-https ca-certificates  curl software-properties-common
+</span><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nb">install </span>apt-transport-https ca-certificates  curl software-properties-common
 <span class="go">
 </span><span class="gp">$</span> curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
 <span class="go">
 </span><span class="gp">$</span> <span class="nb">sudo </span>add-apt-repository  <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu  </span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span><span class="s2">  stable"</span>
 <span class="go">
 </span><span class="gp">$</span> <span class="nb">sudo </span>apt-get update
-<span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install docker-ce
+<span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>docker-ce
 </code></pre></div></div>
 
 <p>To check if the install is functional, run the <em>Hello World</em> image, for the moment as <code class="highlighter-rouge">sudo</code>:</p>
@@ -213,7 +213,7 @@ Hello from Docker!
 
 <p>However, a very few of them might need to be installed explicitly. On Ubuntu the command is:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install curl git automake libtool patch <span class="nb">tar </span>unzip
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>curl git automake libtool patch <span class="nb">tar </span>unzip
 </code></pre></div></div>
 
 <p>The script checks for them; if the script fails, install them and re-run.</p>
@@ -243,11 +243,11 @@ Hello from Docker!
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2019/01/01/plugins-v4.5.1-201901011057-released/">GNU MCU Eclipse plug-ins v4.5.1-201901011057 released</a></li>
   <li><a href="/blog/2018/10/20/openocd-v0-10-0-10-20181020-released/">GNU MCU Eclipse OpenOCD v0.10.0-10-20181020 released</a></li>
   <li><a href="/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released</a></li>
   <li><a href="/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/">GNU MCU Eclipse OpenOCD v0.10.0-9-20181016 released</a></li>
   <li><a href="/blog/2018/08/30/plugins-v4.4.2-201809300659-released/">GNU MCU Eclipse plug-ins v4.4.2-201809300659 released</a></li>
-  <li><a href="/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/">GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released</a></li>
 </ul>
 
 

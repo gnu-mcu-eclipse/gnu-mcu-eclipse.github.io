@@ -119,14 +119,14 @@
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get update
 <span class="go">
-</span><span class="gp">$</span> <span class="nb">sudo </span>apt-get install apt-transport-https ca-certificates  curl software-properties-common
+</span><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nb">install </span>apt-transport-https ca-certificates  curl software-properties-common
 <span class="go">
 </span><span class="gp">$</span> curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
 <span class="go">
 </span><span class="gp">$</span> <span class="nb">sudo </span>add-apt-repository  <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu  </span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span><span class="s2">  stable"</span>
 <span class="go">
 </span><span class="gp">$</span> <span class="nb">sudo </span>apt-get update
-<span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install docker-ce
+<span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>docker-ce
 </code></pre></div></div>
 
 <p>To check if the install is functional, run the <em>Hello World</em> image, for the moment as <code class="highlighter-rouge">sudo</code>:</p>
@@ -211,7 +211,7 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 
 <p>The entire process can be automated with two scripts, available from GitHub:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
 <span class="gp">$</span> git clone https://github.com/xpack/xpack-build-box.git <span class="se">\</span>
     <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/Downloads/xpack-build-box.git
 <span class="gp">$</span> caffeinate bash <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/Downloads/xpack-build-box.git/macos/install-homebrew-xbb.sh
@@ -251,11 +251,11 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2019/01/01/plugins-v4.5.1-201901011057-released/">GNU MCU Eclipse plug-ins v4.5.1-201901011057 released</a></li>
   <li><a href="/blog/2018/10/20/openocd-v0-10-0-10-20181020-released/">GNU MCU Eclipse OpenOCD v0.10.0-10-20181020 released</a></li>
   <li><a href="/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released</a></li>
   <li><a href="/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/">GNU MCU Eclipse OpenOCD v0.10.0-9-20181016 released</a></li>
   <li><a href="/blog/2018/08/30/plugins-v4.4.2-201809300659-released/">GNU MCU Eclipse plug-ins v4.4.2-201809300659 released</a></li>
-  <li><a href="/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/">GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released</a></li>
 </ul>
 
 

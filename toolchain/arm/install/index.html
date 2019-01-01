@@ -169,7 +169,7 @@
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm install <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
 </code></pre>
 </div>
 </div>
@@ -218,7 +218,7 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm install <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
 </code></pre>
 </div>
 </div>
@@ -280,10 +280,10 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
+<code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-osx.tgz
-<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/7.2.1-1.1-20180401-0515
+<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/7.2.1-1.1-20180401-0515
 </code></pre>
 </div>
 </div>
@@ -319,10 +319,10 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
+<code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-debian64.tgz
-<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/7.2.1-1.1-20180401-0515
+<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/7.2.1-1.1-20180401-0515
 </code></pre>
 </div>
 </div>
@@ -422,10 +422,10 @@ ${user.home}/local:\
     <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-7-2017-q4-major</code></p>
 
     <div class="language-console highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
+<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">tar </span>xjf ~/Downloads/gcc-arm-none-eabi-7-2017-q4-major-mac.tar.bz2
-<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-7-2017-q4-major
+<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-7-2017-q4-major
 </code></pre></div>    </div>
   </li>
   <li>
@@ -464,21 +464,21 @@ ${user.home}/local:\
     <p>in older versions, the toolchain executables are 32-bit apps; when running on 64-bit machines, be sure you install the following 32-bit libraries (for different versions check the toolchain README for the actual list):</p>
 
     <div class="language-console highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install lib32z1 lib32ncurses5 lib32bz2-1.0
+<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>lib32z1 lib32ncurses5 lib32bz2-1.0
 </code></pre></div>    </div>
   </li>
   <li>
     <p>on Ubuntu 15.04 the following libraries are required:</p>
 
     <div class="language-console highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install lib32ncurses5
+<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>lib32ncurses5
 </code></pre></div>    </div>
   </li>
   <li>
     <p>on Ubuntu 12 LTSx64 all 32-bit libraries were packed in ia32-libs, so you can also use, but be prepared to get a lot of useless libraries:</p>
 
     <div class="language-console highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> install ia32-libs
+<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>ia32-libs
 </code></pre></div>    </div>
   </li>
   <li>
@@ -499,10 +499,10 @@ ${user.home}/local:\
     </blockquote>
 
     <div class="language-console highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> mkdir <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
+<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">tar </span>xjf ~/Downloads/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2
-<span class="gp">$</span> chmod <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-7-2017-q4-major
+<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-7-2017-q4-major
 </code></pre></div>    </div>
   </li>
   <li>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-7-2017-q4-major</code>
@@ -607,11 +607,11 @@ ${user.home}/local:\
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2019/01/01/plugins-v4.5.1-201901011057-released/">GNU MCU Eclipse plug-ins v4.5.1-201901011057 released</a></li>
   <li><a href="/blog/2018/10/20/openocd-v0-10-0-10-20181020-released/">GNU MCU Eclipse OpenOCD v0.10.0-10-20181020 released</a></li>
   <li><a href="/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released</a></li>
   <li><a href="/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/">GNU MCU Eclipse OpenOCD v0.10.0-9-20181016 released</a></li>
   <li><a href="/blog/2018/08/30/plugins-v4.4.2-201809300659-released/">GNU MCU Eclipse plug-ins v4.4.2-201809300659 released</a></li>
-  <li><a href="/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/">GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released</a></li>
 </ul>
 
 

@@ -293,7 +293,7 @@
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32i <span class="nt">-mabi</span><span class="o">=</span>ilp32 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+<code><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32i <span class="nt">-mabi</span><span class="o">=</span>ilp32 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define __GXX_ABI_VERSION 1011
 <span class="gp">#</span>define __STDC_VERSION__ 201112L
 <span class="gp">#</span>define __VERSION__ <span class="s2">"7.1.1 20170509"</span>
@@ -302,7 +302,7 @@
 <span class="gp">#</span>define __riscv_float_abi_soft 1
 <span class="gp">#</span>define __riscv_xlen 32
 <span class="go">
-</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32imac <span class="nt">-mabi</span><span class="o">=</span>ilp32 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32imac <span class="nt">-mabi</span><span class="o">=</span>ilp32 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define __GXX_ABI_VERSION 1011
 <span class="gp">#</span>define __STDC_VERSION__ 201112L
 <span class="gp">#</span>define __VERSION__ <span class="s2">"7.1.1 20170509"</span>
@@ -316,7 +316,7 @@
 <span class="gp">#</span>define __riscv_muldiv 1
 <span class="gp">#</span>define __riscv_xlen 32
 <span class="go">
-</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32imafdc <span class="nt">-mabi</span><span class="o">=</span>ilp32d <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32imafdc <span class="nt">-mabi</span><span class="o">=</span>ilp32d <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define __FP_FAST_FMA 1
 <span class="gp">#</span>define __FP_FAST_FMAF 1
 <span class="gp">#</span>define __GXX_ABI_VERSION 1011
@@ -343,7 +343,7 @@
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64i <span class="nt">-mabi</span><span class="o">=</span>lp64 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+<code><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64i <span class="nt">-mabi</span><span class="o">=</span>lp64 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define _LP64 1
 <span class="gp">#</span>define __GXX_ABI_VERSION 1011
 <span class="gp">#</span>define __LP64__ 1
@@ -354,7 +354,7 @@
 <span class="gp">#</span>define __riscv_float_abi_soft 1
 <span class="gp">#</span>define __riscv_xlen 64
 <span class="go">
-</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64imac <span class="nt">-mabi</span><span class="o">=</span>lp64 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64imac <span class="nt">-mabi</span><span class="o">=</span>lp64 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define _LP64 1
 <span class="gp">#</span>define __GXX_ABI_VERSION 1011
 <span class="gp">#</span>define __LP64__ 1
@@ -370,7 +370,7 @@
 <span class="gp">#</span>define __riscv_muldiv 1
 <span class="gp">#</span>define __riscv_xlen 64
 <span class="go">
-</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64imafdc <span class="nt">-mabi</span><span class="o">=</span>lp64d <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | sort
+</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64imafdc <span class="nt">-mabi</span><span class="o">=</span>lp64d <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define _LP64 1
 <span class="gp">#</span>define __FP_FAST_FMA 1
 <span class="gp">#</span>define __FP_FAST_FMAF 1
@@ -509,11 +509,11 @@
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2019/01/01/plugins-v4.5.1-201901011057-released/">GNU MCU Eclipse plug-ins v4.5.1-201901011057 released</a></li>
   <li><a href="/blog/2018/10/20/openocd-v0-10-0-10-20181020-released/">GNU MCU Eclipse OpenOCD v0.10.0-10-20181020 released</a></li>
   <li><a href="/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released</a></li>
   <li><a href="/blog/2018/10/16/openocd-v0-10-0-9-20181016-released/">GNU MCU Eclipse OpenOCD v0.10.0-9-20181016 released</a></li>
   <li><a href="/blog/2018/08/30/plugins-v4.4.2-201809300659-released/">GNU MCU Eclipse plug-ins v4.4.2-201809300659 released</a></li>
-  <li><a href="/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/">GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released</a></li>
 </ul>
 
 
