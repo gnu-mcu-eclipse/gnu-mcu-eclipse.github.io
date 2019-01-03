@@ -5,9 +5,31 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Jan 2019 20:06:04 +0000</pubDate>
-    <lastBuildDate>Tue, 01 Jan 2019 20:06:04 +0000</lastBuildDate>
+    <pubDate>Thu, 03 Jan 2019 18:49:35 +0000</pubDate>
+    <lastBuildDate>Thu, 03 Jan 2019 18:49:35 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.1 20190102 released</title>
+        <description>&lt;p&gt;Version v8.2.1-1.1 20190102 is a new release of &lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 03 Jan 2019 17:39:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/</guid>
+        
+        
+        <category>releases</category>
+        
+        <category>arm</category>
+        
+        <category>arm-none-eabi-gcc</category>
+        
+        <category>gcc</category>
+        
+        <category>binaries</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse plug-ins v4.5.1-201901011632 released</title>
@@ -203,24 +225,6 @@ RISC-V Embedded GCC&lt;/strong&gt;; it builds the libraries with &lt;code class=
         <category>releases</category>
         
         <category>qemu</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse OpenOCD v0.10.0-8-20180512 released</title>
-        <description>&lt;p&gt;Version v0.10.0-8-20180512 is a maintenance release; it updates to the latest commits.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 13 May 2018 09:12:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/05/13/openocd-v0-10-0-8-20180512-released/</guid>
-        
-        
-        <category>releases</category>
-        
-        <category>openocd</category>
-        
-        <category>semihosting</category>
         
       </item>
     

@@ -10,16 +10,21 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>Eclipse tips &amp; tricks</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
+  <title>GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.1 20190102 released</title>
+  <meta name="description" content="Version v8.2.1-1.1 20190102 is a new release of GNU MCU Eclipse ARM Embedded GCC.">
 
-  <meta property="og:title" content="Eclipse tips &amp; tricks">
+  <meta property="og:title" content="GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.1 20190102 released">
   <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
-  <meta property="article:published_time" content="2015-09-10">
+  <meta property="article:published_time" content="2019-01-03">
 
 
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="arm">
+  <meta property="article:section" content="arm-none-eabi-gcc">
+  <meta property="article:section" content="gcc">
+  <meta property="article:section" content="binaries">
 
 
 
@@ -30,7 +35,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="/developer/eclipse/tips-tricks/">
+  <link rel="canonical" href="/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
@@ -89,9 +94,23 @@
 <div id="site-body">
 <section id="main-content">
 
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2019/01/01/plugins-v4.5.1-201901011632-released/">←</a></td>
+    <td><a href="/blog/2019/01/01/plugins-v4.5.1-201901011632-released/">GNU MCU Eclipse plug-ins v4.5.1-201901011632 released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-<h1 class="page-title">Eclipse tips &amp; tricks</h1>
 
+<h1 class="post-title">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.1 20190102 released</h1>
+
+
+<p class="post-meta">
+Posted on January 3, 2019 by Liviu Ionescu.
+</p>
 
 <div id="toc-container">
 <table class="toc" id="toc">
@@ -103,34 +122,16 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#find-project-from-configuration"><span class="tocnumber">1</span> <span class="toctext">Find project from configuration</span></a>
+<a href="#compliance"><span class="tocnumber">1</span> <span class="toctext">Compliance</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#display-a-message-box-from-a-non-ui-thread"><span class="tocnumber">2</span> <span class="toctext">Display a message box from a non-UI thread</span></a>
+<a href="#binaries"><span class="tocnumber">2</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#run-code-in-ui-thread"><span class="tocnumber">3</span> <span class="toctext">Run code in UI thread</span></a>
+<a href="#known-problems"><span class="tocnumber">3</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#generate-an-unpacked-plug-in"><span class="tocnumber">4</span> <span class="toctext">Generate an unpacked plug-in</span></a>
-</li>
-<li class="toc_level-1 toc_section-5">
-<a href="#get-the-path-of-folder-where-eclipse-is-installed"><span class="tocnumber">5</span> <span class="toctext">Get the path of folder where Eclipse is installed</span></a>
-</li>
-<li class="toc_level-1 toc_section-6">
-<a href="#get-the-path-of-a-resource-in-another-plug-in"><span class="tocnumber">6</span> <span class="toctext">Get the path of a resource in another plug-in</span></a>
-</li>
-<li class="toc_level-1 toc_section-7">
-<a href="#template-shared-defaults"><span class="tocnumber">7</span> <span class="toctext">Template shared defaults</span></a>
-</li>
-<li class="toc_level-1 toc_section-8">
-<a href="#custom-default-files"><span class="tocnumber">8</span> <span class="toctext">Custom default files</span></a>
-</li>
-<li class="toc_level-1 toc_section-9">
-<a href="#global-markers"><span class="tocnumber">9</span> <span class="toctext">Global markers</span></a>
-</li>
-<li class="toc_level-1 toc_section-10">
-<a href="#configuration-folders-within-pde"><span class="tocnumber">10</span> <span class="toctext">Configuration folders within PDE</span></a>
+<a href="#checksums"><span class="tocnumber">4</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
@@ -138,206 +139,99 @@
 </tbody>
 </table>
 </div>
-<h2 id="find-project-from-configuration">Find project from configuration</h2>
+<p>Version v8.2.1-1.1 20190102 is a new release of <strong>GNU MCU Eclipse ARM Embedded GCC</strong>.</p>
 
-<div class="highlighter-rouge">
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/">Binary files »</a>
+</p>
+
+<h2 id="compliance">Compliance</h2>
+
+<p>This release follows the official 
+<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a> 
+<strong>8-2018-q4-major</strong> release from December 20, 2018 and it is based on the 
+<code class="highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2</code> source invariant.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+and run on any distribution based on CentOS 6 or later.</p>
+
+<p>The macOS binary was built on a macOS 10.10.5 and must run on any newer 
+macOS system.</p>
+
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
+
+<p>Instructions on how to install the binaries are available in the 
+<a href="https://gnu-mcu-eclipse.github.io/toolchain/arm/install/">How to install the ARM toolchain?</a>
+page.</p>
+
+<p>The toolchain is also available as an 
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/arm-none-eabi-gcc">xPack</a> 
+and can be conveniently installed with 
+<a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+
+<div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code>IConfiguration config;
-IProject project = (IProject) config.getManagedProject().getOwner();
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
 </code></pre>
 </div>
 </div>
 
-<h2 id="display-a-message-box-from-a-non-ui-thread">Display a message box from a non-UI thread</h2>
+<p>This installs the latest available version.</p>
 
-<p>The JFace MessageDialog is prefered over SWT MessageBox (which is extremely ugly on some platforms).</p>
+<p>For better control and repeatability, the build scripts use Docker containers; 
+all files required during builds are available as a separate 
+<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build">gnu-mcu-eclipse/arm-none-eabi-gcc-build</a>
+project.</p>
 
-<div class="highlighter-rouge">
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code>class ErrorMessageDialog implements Runnable {
+<code>
+<span class="go">aa15729b8cd8e44a528e16b2119a6ad26c8dd55aa88c514570ecbb38bfcb0f9e 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos32.tgz
 
-    public int retCode = 0;
+1922394f8055d10d13288c233ae89a970c0e5f5ba307274e01c7d07ba916efe9 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos64.tgz
 
-    @Override
-    public void run() {
-        String[] buttons = new String[] { "Retry", "Ignore", "Abort" };
-        MessageDialog dialog = new MessageDialog(shell,
-                "Read error", null, sourceUrl.toString() + "\n"
-                        + e.getMessage(), MessageDialog.ERROR,
-                buttons, 0);
-        retCode = dialog.open();
-    }
-}
+9ca37228d8bf200505ffddd82111b8a444f9825720a14738dabb71bf3aa59c9f 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-macos.tgz
 
-ErrorMessageDialog messageDialog = new ErrorMessageDialog();
-Display.getDefault().syncExec(messageDialog);
+610f1d659cdd9ec27afc881736fcc60dc37dbdc25585a00ce0118630dc9d550e 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win32.zip
 
-if (messageDialog.retCode == 2) {
-    throw e; // Abort
-} else if (messageDialog.retCode == 1) {
-    return false; // Ignore
-}
-</code></pre>
-</div>
-</div>
-
-<h2 id="run-code-in-ui-thread">Run code in UI thread</h2>
-
-<p>To schedule execution of a piece of code in the UI thread:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>Display.getDefault().asyncExec(new Runnable() {
-    public void run() {
-        // Do something
-    }
-});
-</code></pre>
-</div>
-</div>
-
-<h2 id="generate-an-unpacked-plug-in">Generate an unpacked plug-in</h2>
-
-<p>If you need to access files from another plug-in, you need to leave it unpacked:</p>
-
-<p>For this add the following line to MANIFEST.MF file:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>Eclipse-BundleShape: dir
-</code></pre>
-</div>
-</div>
-
-<h2 id="get-the-path-of-folder-where-eclipse-is-installed">Get the path of folder where Eclipse is installed</h2>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>URL url = Platform.getInstallLocation().getURL();
-IPath path = new Path(url.getPath());
-</code></pre>
-</div>
-</div>
-
-<h2 id="get-the-path-of-a-resource-in-another-plug-in">Get the path of a resource in another plug-in</h2>
-
-<p>If you need to access files from another plug-in, you need to get the absolute path:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>Bundle bundle = Platform.getBundle(bundleId);
-URL url = FileLocator.find(bundle, new Path(relativePath), null);
-String location;
-try {
-    location = FileLocator.resolve(url).getPath();
-} catch (IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-}
-</code></pre>
-</div>
-</div>
-
-<h2 id="template-shared-defaults">Template shared defaults</h2>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>value = SharedDefaults.getInstance().getSharedDefaultsMap().get(id);
-</code></pre>
-</div>
-</div>
-
-<p>The store requires an update action:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>SharedDefaults.getInstance().updateShareDefaultsMap(SharedDefaults.getInstance().getSharedDefaultsMap());
-</code></pre>
-</div>
-</div>
-
-<p>The preferences are stored in a file name <strong>shareddefaults.xml</strong> located in the workspace:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>workspace/.metadata/.plugins/org.eclipse.cdt.core/shareddefaults.xml
-</code></pre>
-</div>
-</div>
-
-<h2 id="custom-default-files">Custom default files</h2>
-
-<p>Deprecated: since this is not exactly standard and leads to many small files, it will be migrated to regular preferences.</p>
-
-<p>The preferences are stored in separate files, stored in separate folders named after the plug-in ID:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>eclipse/configuration/&lt;plug-in-id&gt;/name.prefs
-
-URL url = Platform.getInstallLocation().getURL();
-
-IPath path = new Path(url.getPath());
-File file = path.append("configuration")
-        .append(Activator.PLUGIN_ID).append(TOOLCHAIN).toFile();
-InputStream is = new FileInputStream(file);
-
-Properties prop = new Properties();
-prop.load(is);
-...
-return prop.getProperty(property, "").trim();
-</code></pre>
-</div>
-</div>
-
-<h2 id="global-markers">Global markers</h2>
-
-<p>To create a marker that has global scope (not associated with any specific resource), you can use the workspace root (IWorkspace.getRoot()) as the resource.</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>public static void reportInfo(String message) {
-try {
-  IMarker marker = ResourcesPlugin.getWorkspace().getRoot()
-            .createMarker(IMarker.PROBLEM);
-  marker.setAttribute(IMarker.MESSAGE, message);
-  marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
-  marker.setAttribute(IMarker.LOCATION, "-");
-  } catch (CoreException e) {
-    System.out.println(message);
-  }
-}
-</code></pre>
-</div>
-</div>
-
-<h2 id="configuration-folders-within-pde">Configuration folders within PDE</h2>
-
-<p>When PDE launches a new instance of Eclipse from a debug session, each launch configuration gets a configuration folder:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>./metadata/.plugins/org.eclipse.pde.core/&lt;launch-name&gt;/
+c89031994b14840567a4c6cff31f10d5b51c2999a674fa75c8d09d1fe8c47d1b 
+?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win64.zip
+</span>
 </code></pre>
 </div>
 </div>
 
 
-<hr class="page-footer">
-<p class="page-footer">Last modified on Sat Oct  3 17:33:27 2015 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/eclipse/tips-tricks/" data-layout="button"></div>
+<hr class="post-footer">
+<p class="post-footer">
+Posted in
+
+<strong>releases</strong>, <strong>arm</strong>, <strong>arm-none-eabi-gcc</strong>, <strong>gcc</strong>, <strong>binaries</strong>.
+Last modified on Thu Jan  3 18:46:51 2019 UTC.
+</p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/" data-layout="button"></div>
+
 
 
 </section>
