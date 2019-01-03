@@ -158,7 +158,14 @@
 
 <p><code class="highlighter-rouge">xpm</code> is a new tool, currently under development, intended to manage software packages (xPacks), including to install binary distributions. It is built on top of <a href="https://nodejs.org/">Node.js</a> and is highly portable; the install steps are described in <a href="https://www.npmjs.com/package/xpm">the xpm page</a>.</p>
 
-<p>Currently <code class="highlighter-rouge">xpm</code> is not mandatory, but it is a useful addition since it provides a convenient way to install and later upgrade the ARM and RISC-V toolchains, OpenOCD and the Windows Build Tools.</p>
+<blockquote>
+  <p>Warning for GNU/Linux users: your distribution may already have a <code class="highlighter-rouge">node</code> binary installed; if
+it is not &gt;= 8.x, <code class="highlighter-rouge">xpm</code> will complain and do not start; anyway, we strongly
+recommend to avoid the distribution binary and install at least 
+the LTS package from Node.js.</p>
+</blockquote>
+
+<p>Currently <code class="highlighter-rouge">xpm</code> is not mandatory, but it is a useful addition since it provides a convenient way to install and later upgrade the ARM and RISC-V toolchains, OpenOCD, QEMU and the Windows Build Tools.</p>
 
 <h2 id="toolchains">Toolchain(s)</h2>
 
@@ -285,7 +292,7 @@
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Wed Jul 25 10:39:24 2018 UTC.</p>
+<p class="page-footer">Last modified on Thu Jan  3 18:58:42 2019 UTC.</p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/install/" data-layout="button"></div>
 
 
