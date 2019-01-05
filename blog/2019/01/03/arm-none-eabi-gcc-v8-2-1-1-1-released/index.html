@@ -191,9 +191,9 @@ project.</p>
 
 <h2 id="known-problems">Known problems</h2>
 
-<ul>
-  <li>none</li>
-</ul>
+<p>The latest Binutils, also used in Arm Embedded GCC, have a problem when running on 32-bit machines, and <code class="highlighter-rouge">objdump</code> fails to generate .hex files. The bug affects both Windows and GNU/Linux machines. 64-bit builds are not affected. The bug is documented as <a href="https://bugs.launchpad.net/gcc-arm-embedded/+bug/1810274">1810274</a>.</p>
+
+<p>The current workaround is to override <code class="highlighter-rouge">arm-none-eabi-objdump</code> with an older binary.</p>
 
 <h2 id="checksums">Checksums</h2>
 
@@ -228,7 +228,7 @@ c89031994b14840567a4c6cff31f10d5b51c2999a674fa75c8d09d1fe8c47d1b
 Posted in
 
 <strong>releases</strong>, <strong>arm</strong>, <strong>arm-none-eabi-gcc</strong>, <strong>gcc</strong>, <strong>binaries</strong>.
-Last modified on Thu Jan  3 18:57:37 2019 UTC.
+Last modified on Sat Jan  5 14:03:59 2019 UTC.
 </p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/" data-layout="button"></div>
 
