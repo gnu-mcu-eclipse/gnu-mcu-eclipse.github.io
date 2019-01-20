@@ -2,44 +2,43 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>GNU ARM Eclipse plug-ins update sites migrated to Bintray</title>
-  <meta name="description" content="After serving almost 6 million downloaded files, the Eclipse update sites were migrated from the venerable SourceForge to the new Bintray site.">
+  <title>GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.2 20190119 released</title>
+  <meta name="description" content="Version v8.2.1-1.2 20190119 is a maintenance release of GNU MCU Eclipse ARM Embedded GCC that fixes the 32-bit objcopy bug present in the previous release.">
 
-  <meta property="og:title" content="GNU ARM Eclipse plug-ins update sites migrated to Bintray" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
-
-
-  <meta property="article:published_time" content="2017-05-02">
+  <meta property="og:title" content="GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.2 20190119 released">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
-  <meta property="article:section" content="news" />
-  <meta property="article:section" content="project" />
-
-  <meta property="article:tag" content="featured" />
-  <meta property="article:tag" content="sourceforge" />
-  <meta property="article:tag" content="bintray" />
-  <meta property="article:tag" content="downloads" />
-  <meta property="article:tag" content="update" />
+  <meta property="article:published_time" content="2019-01-19">
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="arm">
+  <meta property="article:section" content="arm-none-eabi-gcc">
+  <meta property="article:section" content="gcc">
+  <meta property="article:section" content="binaries">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
 
-  <link rel="canonical" href="/blog/2017/05/02/sourceforge-to-bintray-migration/">
+  <link rel="canonical" href="/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -81,7 +80,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -97,20 +96,20 @@
 
 <table id="post-navigation">
   <tr>
-    <td><a href="/blog/2017/04/25/plugins-v3.4.1-201704251808-released/">←</a></td>
-    <td><a href="/blog/2017/04/25/plugins-v3.4.1-201704251808-released/">GNU ARM Eclipse plug-ins v3.4.1-201704251808 released</a></td>
+    <td><a href="/blog/2019/01/18/openocd-v0-10-0-11-20190118-released/">←</a></td>
+    <td><a href="/blog/2019/01/18/openocd-v0-10-0-11-20190118-released/">GNU MCU Eclipse OpenOCD v0.10.0-11-20190118 released</a></td>
     <td></td>
-    <td><a href="/blog/2017/06/29/windows-build-tools-v2-9-20170629-released/">GNU MCU Eclipse Windows Build Tools v2.9-20170629 released</a></td>
-    <td><a href="/blog/2017/06/29/windows-build-tools-v2-9-20170629-released/">→</a></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
 
 
-<h1 class="post-title">GNU ARM Eclipse plug-ins update sites migrated to Bintray</h1>
+<h1 class="post-title">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.2 20190119 released</h1>
 
 
 <p class="post-meta">
-Posted on May 2, 2017 by Liviu Ionescu.
+Posted on January 19, 2019 by Liviu Ionescu.
 </p>
 
 <div id="toc-container">
@@ -123,87 +122,120 @@ Posted on May 2, 2017 by Liviu Ionescu.
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#rationale"><span class="tocnumber">1</span> <span class="toctext">Rationale</span></a>
+<a href="#compliance"><span class="tocnumber">1</span> <span class="toctext">Compliance</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#github"><span class="tocnumber">2</span> <span class="toctext">GitHub</span></a>
+<a href="#binaries"><span class="tocnumber">2</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#bintray-servers"><span class="tocnumber">3</span> <span class="toctext">Bintray servers</span></a>
+<a href="#known-problems"><span class="tocnumber">3</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#sourceforge-redirects"><span class="tocnumber">4</span> <span class="toctext">SourceForge redirects</span></a>
-</li>
-<li class="toc_level-1 toc_section-5">
-<a href="#expected-issues"><span class="tocnumber">5</span> <span class="toctext">Expected issues</span></a>
-</li>
-<li class="toc_level-1 toc_section-6">
-<a href="#update"><span class="tocnumber">6</span> <span class="toctext">Update</span></a>
+<a href="#checksums"><span class="tocnumber">4</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</div><p>After serving almost 6 million downloaded files, the <strong>Eclipse update sites</strong> were <strong>migrated</strong> from the venerable SourceForge <strong>to the new Bintray site</strong>.</p>
-
-<h2 id="rationale">Rationale</h2>
-
-<p>After several security incidents, by the end of 2016, SourceForge decided to change the security certificates and to mandate the use of HTTPS. This resulted in a large number of complains from users behind firewalls, who were no longer able to access the Eclipse update sites, and had to manually download archives and install locally. Although not at all the fault of GNU ARM Eclipse (the root of the problem seems to be in the Oracle Java libraries), the SourceForge desire to use stronger encryption was in the end perceived as a bad user experience by GNU ARM Eclipse users, a situation that we cannot accept.</p>
-
-<h2 id="github">GitHub</h2>
-
-<p>The main development site used by the project is and will remain GitHub, but since GitHub Releases currently do not support subfolders, publishing the Eclipse update sites on GitHub Releases is not an option. Publishing on GitHub Pages or even directly as a Git project might have been technically possible, but neither are intended for high volume downloads and do not provide any analytics.</p>
-
-<h2 id="bintray-servers">Bintray servers</h2>
-
-<p><a href="https://bintray.com/">Bintray</a> is a modern solution for software distribution, with many new features compared to the traditional SourceForge <code class="highlighter-rouge">rsync</code> approach.</p>
-
-<p>The Bintray page to manage the downloads is <a href="https://bintray.com/gnu-mcu-eclipse">https://bintray.com/gnu-mcu-eclipse</a>, with several separate repositories, each with its own statistics.</p>
-
-<p>The new internal URL addresses used for downloads are:</p>
-
-<ul>
-  <li><a href="https://dl.bintray.com/gnu-mcu-eclipse/updates">https://dl.bintray.com/gnu-mcu-eclipse/updates</a></li>
-  <li><a href="https://dl.bintray.com/gnu-mcu-eclipse/updates-test">https://dl.bintray.com/gnu-mcu-eclipse/updates-test</a></li>
-</ul>
-
-<h2 id="sourceforge-redirects">SourceForge redirects</h2>
-
-<p>For compatibility reasons, the old URLs will continue to be active and maintained, being redirected to the same Bintray locations:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates</code></li>
-  <li><code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates-test</code></li>
-</ul>
-
-<h2 id="expected-issues">Expected issues</h2>
-
-<p>This change is expected to have no negative consequences on existing Eclipse installations. Enterprise networks with absurd security limitations which prevented direct access to the update site and required manual downloads of the release archives may (or may not…) have a better chance for normal Eclipse install/update.</p>
-
-<p>The change in the public URL should be seamless, with all future plug-ins versions to automatically point to the new URLs.</p>
-
-<h2 id="update">Update</h2>
-
-<p>Starting with Eclipse plug-ins v4.x, the <strong>Eclipse update sites URLs</strong> were <a href="/blog/2017/07/09/sourceforge-to-netlify-migration/">migrated to Netlify</a>.</p>
+</div>
+<p>Version v8.2.1-1.2 20190119 is a maintenance release of 
+<strong>GNU MCU Eclipse ARM Embedded GCC</strong> that fixes the 32-bit objcopy bug 
+present in the previous release.</p>
 
 <p>
-<em>
-<strong>Many thanks to all those who use this project!</strong>
-</em>
+<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.2/">Binary files »</a>
 </p>
 
+<h2 id="compliance">Compliance</h2>
 
-<hr class="post-footer"/>
+<p>This release follows the official 
+<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a> 
+<strong>8-2018-q4-major</strong> release from December 20, 2018 and it is based on the 
+<code class="highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2</code> source invariant.</p>
+
+<p>The patch to fix <code class="highlighter-rouge">objcopy</code> is from <a href="https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;a=commitdiff;h=a9859e01726d085db79cff88550fdb38e2434e42;hp=171b8e19575654ab32321eb99f3fd112663ae7fa">git</a>.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+and run on any distribution based on CentOS 6 or later.</p>
+
+<p>The macOS binary was built on a macOS 10.10.5 and must run on any newer 
+macOS system.</p>
+
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
+
+<p>Instructions on how to install the binaries are available in the 
+<a href="https://gnu-mcu-eclipse.github.io/toolchain/arm/install/">How to install the ARM toolchain?</a>
+page.</p>
+
+<p>The toolchain is also available as an 
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/arm-none-eabi-gcc">xPack</a> 
+and can be conveniently installed with 
+<a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
+</code></pre>
+</div>
+</div>
+
+<p>This installs the latest available version.</p>
+
+<p>For better control and repeatability, the build scripts use Docker containers; 
+all files required during builds are available as a separate 
+<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build">gnu-mcu-eclipse/arm-none-eabi-gcc-build</a>
+project.</p>
+
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>none.</li>
+</ul>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">b52328f55ac1477c09dfb9132f2763b5c449560bfbfbeed7c0e5071bcd938def ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.2-20190119-1237-centos32.tgz
+
+2e3b920552fcebe65c56013e36e479e225079842f284522a8bedac7eaea19435 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.2-20190119-1237-centos64.tgz
+
+b6c38190f3e8769eaf3a95668e7664138516e4695df81b252605b94c112680d1 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.2-20190119-1237-macos.tgz
+
+5867fe4874f028b79b22d39a32b8db71b2fae7f2c7087d641404b1b8840ae891 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.2-20190119-1237-win32.zip
+
+f9c2653801319ec8156aca2fd6fa3462206959f421e672d29488878e9370799e ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.2-20190119-1237-win64.zip
+</span>
+</code></pre>
+</div>
+</div>
+
+
+<hr class="post-footer">
 <p class="post-footer">
 Posted in
 
-<strong>news</strong>, <strong>project</strong> and tagged
-
-<strong>featured</strong>, <strong>sourceforge</strong>, <strong>bintray</strong>, <strong>downloads</strong>, <strong>update</strong>.
-</br>Last modified on Fri Sep 29 10:28:44 2017 UTC.
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2017/05/02/sourceforge-to-bintray-migration/" data-layout="button"></div>
+<strong>releases</strong>, <strong>arm</strong>, <strong>arm-none-eabi-gcc</strong>, <strong>gcc</strong>, <strong>binaries</strong>.
+Last modified on Sun Jan 20 14:25:37 2019 UTC.
 </p>
+<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/" data-layout="button"></div>
+
 
 
 </section>
@@ -221,7 +253,7 @@ Posted in
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -231,10 +263,14 @@ Posted in
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -244,7 +280,8 @@ Posted in
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -323,38 +360,44 @@ Posted in
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -422,7 +465,7 @@ Posted in
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -444,7 +487,7 @@ Posted in
     <ul>
   <li>© 2018 Liviu Ionescu</li>
   <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>

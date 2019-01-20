@@ -193,7 +193,8 @@ project.</p>
 
 <p>The latest Binutils, also used in Arm Embedded GCC, have a problem when running on 32-bit machines, and <code class="highlighter-rouge">objdump</code> fails to generate .hex files. The bug affects both Windows and GNU/Linux machines. 64-bit builds are not affected. The bug is documented as <a href="https://bugs.launchpad.net/gcc-arm-embedded/+bug/1810274">1810274</a>.</p>
 
-<p>The current workaround is to override <code class="highlighter-rouge">arm-none-eabi-objdump</code> with an older binary.</p>
+<p>The current solution is to upgrade to 8.2.1-1.2; the workaround is to 
+override <code class="highlighter-rouge">arm-none-eabi-objdump</code> with an older binary.</p>
 
 <h2 id="checksums">Checksums</h2>
 
@@ -203,20 +204,20 @@ project.</p>
 <div class="highlight">
 <pre class="highlight">
 <code>
-<span class="go">aa15729b8cd8e44a528e16b2119a6ad26c8dd55aa88c514570ecbb38bfcb0f9e 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos32.tgz
+<span class="go">aa15729b8cd8e44a528e16b2119a6ad26c8dd55aa88c514570ecbb38bfcb0f9e ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos32.tgz
 
-1922394f8055d10d13288c233ae89a970c0e5f5ba307274e01c7d07ba916efe9 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos64.tgz
+1922394f8055d10d13288c233ae89a970c0e5f5ba307274e01c7d07ba916efe9 ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-centos64.tgz
 
-9ca37228d8bf200505ffddd82111b8a444f9825720a14738dabb71bf3aa59c9f 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-macos.tgz
+9ca37228d8bf200505ffddd82111b8a444f9825720a14738dabb71bf3aa59c9f ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-macos.tgz
 
-610f1d659cdd9ec27afc881736fcc60dc37dbdc25585a00ce0118630dc9d550e 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win32.zip
+610f1d659cdd9ec27afc881736fcc60dc37dbdc25585a00ce0118630dc9d550e ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win32.zip
 
-c89031994b14840567a4c6cff31f10d5b51c2999a674fa75c8d09d1fe8c47d1b 
-?gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win64.zip
+c89031994b14840567a4c6cff31f10d5b51c2999a674fa75c8d09d1fe8c47d1b ?
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.1-20190102-1122-win64.zip
 </span>
 </code></pre>
 </div>
@@ -228,7 +229,7 @@ c89031994b14840567a4c6cff31f10d5b51c2999a674fa75c8d09d1fe8c47d1b
 Posted in
 
 <strong>releases</strong>, <strong>arm</strong>, <strong>arm-none-eabi-gcc</strong>, <strong>gcc</strong>, <strong>binaries</strong>.
-Last modified on Sat Jan  5 14:03:59 2019 UTC.
+Last modified on Sun Jan 20 14:25:37 2019 UTC.
 </p>
 <div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/" data-layout="button"></div>
 
@@ -241,11 +242,11 @@ Last modified on Sat Jan  5 14:03:59 2019 UTC.
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.2 20190119 released</a></li>
   <li><a href="/blog/2019/01/18/openocd-v0-10-0-11-20190118-released/">GNU MCU Eclipse OpenOCD v0.10.0-11-20190118 released</a></li>
   <li><a href="/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.1 20190102 released</a></li>
   <li><a href="/blog/2019/01/01/plugins-v4.5.1-201901011632-released/">GNU MCU Eclipse plug-ins v4.5.1-201901011632 released</a></li>
   <li><a href="/blog/2018/10/20/openocd-v0-10-0-10-20181020-released/">GNU MCU Eclipse OpenOCD v0.10.0-10-20181020 released</a></li>
-  <li><a href="/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released</a></li>
 </ul>
 
 
