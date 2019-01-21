@@ -2,18 +2,19 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
   <title>The J-Link debugging Eclipse plug-in</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="The J-Link debugging Eclipse plug-in" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
+  <meta property="og:title" content="The J-Link debugging Eclipse plug-in">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -22,17 +23,17 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
 
   <link rel="canonical" href="/debug/jlink/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -74,7 +75,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -187,7 +188,8 @@
 </tr>
 </tbody>
 </table>
-</div><h2 id="quicklinks">Quicklinks</h2>
+</div>
+<h2 id="quicklinks">Quicklinks</h2>
 
 <p>If you already know what are the features of the new plug-in and only want to know how to install/use it, you can directly skip to:</p>
 
@@ -238,15 +240,17 @@
   <li>
     <p>in the <em>Eclipse</em> menu, go to <strong>(Window →) Preferences</strong> → <strong>MCU</strong> → <strong>Global SEGGER J-Link Path</strong> (or <strong>Workspace SEGGER J-Link Path</strong>)</p>
 
-    <p><img src="/assets/images/2018/jlink-preferences.png" alt="J-Link preferences page" /></p>
+    <p><img src="/assets/images/2018/jlink-preferences.png" alt="J-Link preferences page"></p>
   </li>
   <li>click the <strong>Restore Defaults</strong> button</li>
   <li>the plug-in will suggest the default values computed when Eclipse started; if a new version of SEGGER was installed while Eclipse was active, restart Eclipse and click again the Restore Defaults button</li>
   <li>check the <strong>Executable</strong> field; it must define the name of the command line J-Link GDB server executable; in most cases it should be set correctly; if not, edit it to match the correct name;</li>
-  <li><strong>macOS notice:</strong> somewhere around version 6.30, SEGGER changed the name of the executable to <code class="highlighter-rouge">JLinkGDBServerCLExe</code>, the plug-in was updated to this new name, but older installs will continue to default to <code class="highlighter-rouge">JLinkGDBServer</code>; if needed, update it to the new name;</li>
+  <li>
+<strong>macOS notice:</strong> somewhere around version 6.30, SEGGER changed the name of the executable to <code class="highlighter-rouge">JLinkGDBServerCLExe</code>, the plug-in was updated to this new name, but older installs will continue to default to <code class="highlighter-rouge">JLinkGDBServer</code>; if needed, update it to the new name;</li>
   <li>check the <strong>Folder</strong> field; it must point to the actual folder where the J-Link tools were installed on your platform, for example <code class="highlighter-rouge">/Applications/SEGGER/JLink</code> is a link to the latest version installed on macOS</li>
   <li>click the <strong>OK</strong> button</li>
-  <li><strong>Windows warning:</strong> please note that on Windows there are two GDB server executables, one with a UI and one to be used as a command line (<code class="highlighter-rouge">JLinkGDBServerCL.exe</code>); you obviously need to configure the executable field to point to <code class="highlighter-rouge">JLinkGDBServerCL.exe</code>.</li>
+  <li>
+<strong>Windows warning:</strong> please note that on Windows there are two GDB server executables, one with a UI and one to be used as a command line (<code class="highlighter-rouge">JLinkGDBServerCL.exe</code>); you obviously need to configure the executable field to point to <code class="highlighter-rouge">JLinkGDBServerCL.exe</code>.</li>
 </ul>
 
 <p>By default, the GDB server is defined as <code class="highlighter-rouge">${jlink\_path}/${jlink\_gdbserver}</code>; these two macros are automatically set by the above preference page; for portability reasons, it is recommended to keep this definition in all your debug configurations, and also to have a single place to update the path when a new version of the J-Link tools is released.</p>
@@ -256,7 +260,7 @@
 <p>Although not absolutely mandatory, it is recommended to associate a device to the project, so that creating the debugger launch configuration will automatically fill-in the device name.</p>
 
 <p>
-<img src="/assets/images/2013/10/Devices.png" alt="Assigning a device to the project" />
+<img src="/assets/images/2013/10/Devices.png" alt="Assigning a device to the project">
 </p>
 
 <p>Follow the steps in the separate page <a href="/eclipse/project/assign-device/">Associate a device to the project</a> and return to this page to continue.</p>
@@ -272,23 +276,23 @@
   <li>
     <p>in the <em>Eclipse</em> menu, go to <strong>Run</strong> → <strong>Debug Configurations…</strong> or select the down arrow at the right of the bug icon.</p>
 
-    <p><img src="/assets/images/2013/12/DebugConfigurations.png" alt="Debug Configurations" /></p>
+    <p><img src="/assets/images/2013/12/DebugConfigurations.png" alt="Debug Configurations"></p>
   </li>
   <li>
     <p>double click the<strong> GDB SEGGER J-Link Debugging</strong> group, or select it and click the top leftmost <strong>New</strong> button.</p>
 
-    <p><img src="/assets/images/2013/12/JLinkDebugConfiguration.png" alt="J-Link Debug Configurations" /></p>
+    <p><img src="/assets/images/2013/12/JLinkDebugConfiguration.png" alt="J-Link Debug Configurations"></p>
   </li>
   <li>a multi-tab page will be displayed;</li>
   <li>
     <p>if you started this procedure with the project selected and the project was previously built, the first tab, named <strong>Main</strong>, should be already filled in with the project name (for example blink1) and the application file name and location (for example <code class="highlighter-rouge">Debug/blink1.elf</code>).</p>
 
-    <p><img src="/assets/images/2013/12/DebugMainTab.png" alt="The Main tab" /></p>
+    <p><img src="/assets/images/2013/12/DebugMainTab.png" alt="The Main tab"></p>
   </li>
   <li>
     <p>click the second tab, named <strong>Debugger</strong>, which contains the configuration options required to start the GDB server and the GDB client.</p>
 
-    <p><img src="/assets/images/2013/12/JLinkDebuggerTab.png" alt="J-Link Debugger Tab" /></p>
+    <p><img src="/assets/images/2013/12/JLinkDebuggerTab.png" alt="J-Link Debugger Tab"></p>
   </li>
   <li>the only field that usually requires attention is the <strong>Device name</strong>, which must identify the processor family; if you assigned the device to the project, this field is automatically filled-in; usually this name is the family name; if you do not know it for your processor, follow the link at the right and copy/paste the string from the <a href="http://www.segger.com/supported-devices.html">SEGGER web page</a>;</li>
   <li>for portability reasons, the GDB server and GDB client executables are defined using variables; it is highly recommended to keep these definitions;</li>
@@ -298,19 +302,20 @@
   <li>
     <p>click the third tab, named <strong>Startup</strong>, which contains specific J-Link options used to configure the debug session.</p>
 
-    <p><img src="/assets/images/2013/12/JLingStartupTab.png" alt="The J-Link Startup tab" /></p>
+    <p><img src="/assets/images/2013/12/JLingStartupTab.png" alt="The J-Link Startup tab"></p>
   </li>
   <li>if you built the project with retargetting support for ITM/SWO, enter the CPU frequency and the desired SWO sampling frequency; for this to work with J-Link, the SWO sampling frequency must be a submultiple of 6MHz (6000000, 3000000, 2000000, 1500000, 1000000, etc) and the CPU frequency must be a multiple of the SWO sampling frequency (these apparently very complicated requirements end up as a pre-scaler value in an ARM register);</li>
   <li>for most applications running from flash, leave the <strong>Pre-run reset and halt</strong> enabled, this will issue a new reset after programming the flash and just before starting execution. Due to some complicated technical details, when the debugger tries to reset some cores, execution cannot be halted immediately, and part of the initialisation routine is executed. Then the flash is written with the new application, it is not correct to directly start execution, since part of a foreign initialisation sequence, that is not part of the current application, was executed; to be sure the application starts correctly, it is necessary to issue a new reset. Please note that this does <strong>not</strong> apply <strong>for</strong> applications <strong>running from RAM</strong>, since the reset may damage the RAM content;</li>
   <li>although not mandatory, it is recommended to change the location where the launcher file is stored; for this,
     <ul>
       <li>select the <strong>Common</strong> tab,</li>
-      <li>set the <em>Save as:</em> field to <strong>Shared file</strong></li>
+      <li>set the <em>Save as:</em> field to <strong>Shared file</strong>
+</li>
       <li>accept the current project name.</li>
       <li>click the <strong>Apply</strong> button</li>
     </ul>
 
-    <p><img src="/assets/images/2013/12/SharedDebug.png" alt="Shared debug configuration" /></p>
+    <p><img src="/assets/images/2013/12/SharedDebug.png" alt="Shared debug configuration"></p>
   </li>
   <li>click the <strong>Close</strong> button</li>
 </ul>
@@ -318,7 +323,7 @@
 <p>With the above settings, the debug configuration will be saved in the project, not in the workspace storage.</p>
 
 <p>
-<img src="/assets/images/2013/12/ProjectSharedDebug.png" alt="Debug configuration stored in the project" />
+<img src="/assets/images/2013/12/ProjectSharedDebug.png" alt="Debug configuration stored in the project">
 </p>
 
 <h2 id="start-a-debug-session">Start a debug session</h2>
@@ -334,7 +339,8 @@
 <p>With all the above steps completed properly, you can start the debug session:</p>
 
 <ul>
-  <li>in the <em>Eclipse</em> menu, go to <strong>Run</strong> → <strong>Debug Configurations…</strong></li>
+  <li>in the <em>Eclipse</em> menu, go to <strong>Run</strong> → <strong>Debug Configurations…</strong>
+</li>
   <li>if necessary, expand the <strong>GDB SEGGER J-Link Debugging</strong> group</li>
   <li>select the newly defined configuration</li>
   <li>click the <strong>Debug</strong> button</li>
@@ -343,19 +349,19 @@
 <p>Alternatively, on subsequent runs, you can use the bug specific icon. By default this will start the previously used debug launch configuration; to start a different configuration, use the down arrow button:</p>
 
 <p>
-<img src="/assets/images/2013/12/StartDebugArrow.png" alt="Down arrow debug" />
+<img src="/assets/images/2013/12/StartDebugArrow.png" alt="Down arrow debug">
 </p>
 
 <p>This will open a new window where you can select the desired debug configuration:</p>
 
 <p>
-<img src="/assets/images/2013/12/DebugSelection.png" alt="Select the debug configuration" />
+<img src="/assets/images/2013/12/DebugSelection.png" alt="Select the debug configuration">
 </p>
 
 <p>If everything is ok, after a few seconds required to start the server, to allow it to connect to the target, start the gdb client, download the application and start the debugging session, you should see something like this:</p>
 
 <p>
-<img src="/assets/images/2013/12/DebugSessionClient.png" alt="The new debug session, with three consoles" />
+<img src="/assets/images/2013/12/DebugSessionClient.png" alt="The new debug session, with three consoles">
 </p>
 
 <p>The new debug session, with three consoles.</p>
@@ -388,13 +394,13 @@
 <p>To see the console of any process, select the process in the top left window. For example the server console might look like this:</p>
 
 <p>
-<img src="/assets/images/2013/12/DebugSessionServer.png" alt="The GDB server console" />
+<img src="/assets/images/2013/12/DebugSessionServer.png" alt="The GDB server console">
 </p>
 
 <p>Similarly for the tracing console:</p>
 
 <p>
-<img src="/assets/images/2013/12/DebugSessionSWO.png" alt="The tracing console" />
+<img src="/assets/images/2013/12/DebugSessionSWO.png" alt="The tracing console">
 </p>
 
 <h2 id="show-console-when-standard-outerror-change">Show console when standard out/error change</h2>
@@ -404,7 +410,7 @@
 <p>This mode can be identified by the status of the buttons on the right side of the Debugging view.</p>
 
 <p>
-<img src="/assets/images/2013/12/ShowConsole.png" alt="Show console when standard out/err changes" />
+<img src="/assets/images/2013/12/ShowConsole.png" alt="Show console when standard out/err changes">
 </p>
 
 <p>To make the display stable on the desired console, disable both buttons. To switch between consoles, select them either in the top left Debug view, or using the right button, as shown above.</p>
@@ -414,7 +420,7 @@
 <p>Apparently not a big deal, but quite useful for repeated debug sessions, <strong>the Restart button</strong> can be used at any time during a debug session, and the result is that a reset is dispatched to the target board via the JTAG/SWD interface and the debug session is restarted.</p>
 
 <p>
-<img src="/assets/images/2013/12/RestartButton.png" alt="The restart button" />
+<img src="/assets/images/2013/12/RestartButton.png" alt="The restart button">
 </p>
 
 <p>Note: Due to some bugs in Eclipse, the implementation of his simple button has encountered several problems. Depending on the version you are using, the first time you click this button you might get a message box informing that the button was not enabled. Ignore this message, close the message box and click the button again, this time it’ll be effective.</p>
@@ -432,7 +438,7 @@
 <p>To make this possible, enable the <strong>Connect to running target</strong> option in the <strong>Debugger</strong> tab:</p>
 
 <p>
-<img src="/assets/images/2015/03/ConnectToRunning.png" alt="Connect to running target" />
+<img src="/assets/images/2015/03/ConnectToRunning.png" alt="Connect to running target">
 </p>
 
 <p>With this option, the J-Link plug-in will no longer reset the target and will no longer download the code into the target’s memory, leaving the target virtually unaffected, even after the debug session is started.</p>
@@ -452,7 +458,7 @@
 <p>To add more commands to the GDB initialisation sequence, use the <em>Commands:</em> field in the <em>GDB Client Setup</em> section:</p>
 
 <p>
-<img src="/assets/images/2015/launch-jlink-debugger-client.png" alt="Launch J-Link debugger client" />
+<img src="/assets/images/2015/launch-jlink-debugger-client.png" alt="Launch J-Link debugger client">
 </p>
 
 <p>All commands listed here are passed to the GDB client. By convention, commands prefixed with <code class="highlighter-rouge">mon</code> will be further passed from the GDB client to the GDB server, in this case the J-Link GDB server.</p>
@@ -464,7 +470,7 @@
 <p>The first failure to start a debug session is missing to enter the J-Link path. Without it, the launching sequence will complain <em>Cannot run program “/JLinkGDBServer”</em>.</p>
 
 <p>
-<img src="/assets/images/2013/12/JLinkCannotRun.png" alt="Cannot run the JLinkGDBServer" />
+<img src="/assets/images/2013/12/JLinkCannotRun.png" alt="Cannot run the JLinkGDBServer">
 </p>
 
 <p>Define the <strong>jlink_path</strong> as instructed above and the session should start properly.</p>
@@ -474,7 +480,7 @@
 <p>If the devices that you selected in the plug-in does not match the device physically connected, the GDB server session fails and the entire debug session is cancelled. You can identify this case by studying the GDB server log.</p>
 
 <p>
-<img src="/assets/images/2013/12/WrongDevice.png" alt="Wrong device" />
+<img src="/assets/images/2013/12/WrongDevice.png" alt="Wrong device">
 </p>
 
 <p>Select the device properly and the session should start properly.</p>
@@ -502,9 +508,13 @@
 <p>Although the plug-in takes care of most of the configuration options, and provides reasonable defaults for the usual cases, it is recommended to read the SEGGER manuals, available from the Doc folder in the installation location or directly from the <a href="http://www.segger.com/jlink-software.html">SEGGER J-Link page</a>.</p>
 
 
-<hr class="page-footer"/>
+<hr class="page-footer">
 <p class="page-footer">Last modified on Wed Apr 25 18:46:52 2018 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/debug/jlink/" data-layout="button"></div>
+<ul class="share-buttons">
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/debug/jlink/" data-layout="button"></div></li>
+</ul>
+
 
 
 </section>
@@ -522,7 +532,7 @@
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -532,10 +542,14 @@
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -545,7 +559,8 @@
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -624,38 +639,44 @@
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -723,7 +744,7 @@
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -743,9 +764,11 @@
 <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2018 Liviu Ionescu</li>
-  <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>© 2019 Liviu Ionescu</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
+  <li>
+<a href="http://twitter.com/gnu_mcu_eclipse" class="twitter-follow-button" data-show-count="false">Follow @gnu_mcu_eclipse</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>

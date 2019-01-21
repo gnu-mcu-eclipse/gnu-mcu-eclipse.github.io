@@ -2,18 +2,19 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
   <title>The OpenOCD debugging Eclipse plug-in</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="The OpenOCD debugging Eclipse plug-in" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
+  <meta property="og:title" content="The OpenOCD debugging Eclipse plug-in">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -22,17 +23,17 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
 
   <link rel="canonical" href="/debug/openocd/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -74,7 +75,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -178,7 +179,8 @@
 </tr>
 </tbody>
 </table>
-</div><h2 id="why-a-new-plug-in">Why a new plug-in?</h2>
+</div>
+<h2 id="why-a-new-plug-in">Why a new plug-in?</h2>
 
 <p>By default, Eclipse supports OpenOCD via the GDB Hardware Debugging plug-in, which starts OpenOCD not as a separate daemon, but as a pipe end. This is functional, but restricts it even further.</p>
 
@@ -217,7 +219,7 @@
   <li>
     <p>in the <em>Eclipse</em> menu, go to <strong>(Window →) Preferences</strong> → <strong>MCU</strong> → <strong>Global OpenOCD Path</strong> (or <strong>Workspace OpenOCD Path</strong>)</p>
 
-    <p><img src="/assets/images/2018/preferences-mcu-openocd-path.png" alt="OpenOCD preferences page" /></p>
+    <p><img src="/assets/images/2018/preferences-mcu-openocd-path.png" alt="OpenOCD preferences page"></p>
   </li>
   <li>click the <strong>Restore Defaults</strong> button</li>
   <li>the plug-in will suggest the default values computed when Eclipse started; if a new version of OpenOCD was installed while Eclipse was active, restart Eclipse and click again the Restore Defaults button</li>
@@ -240,20 +242,21 @@
   <li>
     <p>double click on the <strong>GDB OpenOCD Debugging</strong> group, or select it and click the top leftmost <strong>New</strong> button</p>
 
-    <p><img src="/assets/images/2013/12/OpenOCDDebugConfigs.png" alt="OpenOCD debug configurations" /></p>
+    <p><img src="/assets/images/2013/12/OpenOCDDebugConfigs.png" alt="OpenOCD debug configurations"></p>
   </li>
   <li>a multi-tab page will be displayed</li>
   <li>
     <p>if you started this procedure with the executable file selected, the first tab, named <strong>Main</strong>, should be already filled in with the project name (for example blink1) and the application file name and location (for example <code class="highlighter-rouge">Debug/blink1.elf</code>).</p>
 
-    <p><img src="/assets/images/2013/12/OpenOCDMainTab.png" alt="The OpenOCD Main tab" /></p>
+    <p><img src="/assets/images/2013/12/OpenOCDMainTab.png" alt="The OpenOCD Main tab"></p>
   </li>
   <li>
     <p>click the second tab, named <strong>Debugger</strong>, which contains the configuration options required to start the GDB server and the GDB client</p>
 
-    <p><img src="/assets/images/2018/openocd-debugger-tab.png" alt="OpenOCD Debugger tab" /></p>
+    <p><img src="/assets/images/2018/openocd-debugger-tab.png" alt="OpenOCD Debugger tab"></p>
   </li>
-  <li>the only field that usually requires attention is the OpenOCD Setup <strong>Other options:</strong>, where you should add one or more configuration scripts; for example, for the STM32F4DISCOVERY board, the field should read <code class="highlighter-rouge">-f board/stm32f4discovery.cfg</code></li>
+  <li>the only field that usually requires attention is the OpenOCD Setup <strong>Other options:</strong>, where you should add one or more configuration scripts; for example, for the STM32F4DISCOVERY board, the field should read <code class="highlighter-rouge">-f board/stm32f4discovery.cfg</code>
+</li>
 </ul>
 
 <blockquote>
@@ -261,16 +264,18 @@
 </blockquote>
 
 <ul>
-  <li>Windows notice: due to a platform specific issue, on Windows it is not possible to disable the <em>Allocate console for OpenOCD</em></li>
+  <li>Windows notice: due to a platform specific issue, on Windows it is not possible to disable the <em>Allocate console for OpenOCD</em>
+</li>
   <li>
     <p>click the third tab, named <strong>Startup</strong>, which contains some specific OpenOCD options used to configure the debug session; defaults are generally enough</p>
 
-    <p><img src="/assets/images/2013/12/OpenOCDStartupTab.png" alt="The OpenOCD Startup tab" /></p>
+    <p><img src="/assets/images/2013/12/OpenOCDStartupTab.png" alt="The OpenOCD Startup tab"></p>
   </li>
   <li>
     <p>the order of sections/fields reflect the order commands are sent to GDB; for example the above generates:</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>monitor reset init
+    <div class="highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>monitor reset init
 monitor halt
 ...
 monitor arm semihosting enable
@@ -286,12 +291,12 @@ continue
   <li>
     <p>select the <strong>Common</strong> tab, set the <em>Save as:</em> field to <strong>Shared file</strong> and accept the current project name</p>
 
-    <p><img src="/assets/images/2013/12/OpenOCDCommonTab.png" alt="Shared debug configuration" /></p>
+    <p><img src="/assets/images/2013/12/OpenOCDCommonTab.png" alt="Shared debug configuration"></p>
   </li>
   <li>
     <p>this will arrange for the debug configuration to be saved in the project, not in the workspace storage</p>
 
-    <p><img src="/assets/images/2013/12/OpenOCDSharedDebug.png" alt="Debug configuration stored in the project" /></p>
+    <p><img src="/assets/images/2013/12/OpenOCDSharedDebug.png" alt="Debug configuration stored in the project"></p>
   </li>
   <li>click the <strong>Apply</strong> button</li>
   <li>click the <strong>Close</strong> button</li>
@@ -310,7 +315,8 @@ continue
 <p>With all the above steps completed properly, you can start the debug session:</p>
 
 <ul>
-  <li>in the <em>Eclipse</em> menu, go to <strong>Run</strong> → <strong>Debug Configurations…</strong></li>
+  <li>in the <em>Eclipse</em> menu, go to <strong>Run</strong> → <strong>Debug Configurations…</strong>
+</li>
   <li>if necessary, expand the<strong> GDB OpenOCD Debugging</strong> group</li>
   <li>select the newly defined configuration</li>
   <li>click the <strong>Debug</strong> button</li>
@@ -319,19 +325,19 @@ continue
 <p>Alternatively, for later sessions, you can use the bug specific icon. Do not press it directly, since it will not behave as expected; instead, click the down arrow button:</p>
 
 <p>
-<img src="/assets/images/2013/12/OpenOCDStartDebugArrow.png" alt="Down arrow debug" />
+<img src="/assets/images/2013/12/OpenOCDStartDebugArrow.png" alt="Down arrow debug">
 </p>
 
 <p>This will open a new window where you can select the desired debug configuration:</p>
 
 <p>
-<img src="/assets/images/2013/12/DebugSelection.png" alt="Select the debug configuration" />
+<img src="/assets/images/2013/12/DebugSelection.png" alt="Select the debug configuration">
 </p>
 
 <p>If everything is ok, after a few seconds required to start the server, to allow it to connect to the target, start the gdb client, download the application and start the debugging session, you should see something like this:</p>
 
 <p>
-<img src="/assets/images/2013/12/OpenOCDConsoles.png" alt="The new debug session, with two consoles" />
+<img src="/assets/images/2013/12/OpenOCDConsoles.png" alt="The new debug session, with two consoles">
 </p>
 
 <p>Since the first breakpoint was set in the <strong>Debugger</strong> tab to <strong>main</strong>, the execution stopped right at the beginning of the <code class="highlighter-rouge">main()</code> function, which in this case is a tracing <code class="highlighter-rouge">printf()</code>.</p>
@@ -362,13 +368,13 @@ continue
 <p>To see the console of any process, select the process in the top left window. For example the gdb client console might look like this:</p>
 
 <p>
-<img src="/assets/images/2013/12/OpenOCDclientConsole.png" alt="The GDB client console" />
+<img src="/assets/images/2013/12/OpenOCDclientConsole.png" alt="The GDB client console">
 </p>
 
 <p>The semihosting tracing messages are displayed in the same window as the OpenOCD output:</p>
 
 <p>
-<img src="/assets/images/2013/12/OpenOCDTraceConsole.png" alt="The tracing console" />
+<img src="/assets/images/2013/12/OpenOCDTraceConsole.png" alt="The tracing console">
 </p>
 
 <h2 id="show-console-when-standard-outerror-change">Show console when standard out/error change</h2>
@@ -378,7 +384,7 @@ continue
 <p>This mode can be identified by the status of the buttons on the right side of the Debugging view.</p>
 
 <p>
-<img src="/assets/images/2013/12/OpenOCDShowConsole.png" alt="Show console when standard out/err changes" />
+<img src="/assets/images/2013/12/OpenOCDShowConsole.png" alt="Show console when standard out/err changes">
 </p>
 
 <p>To make the display stable on the desired console, disable both buttons. To switch between consoles, select them either in the top left Debug view, or using the right button, as shown above.</p>
@@ -388,7 +394,7 @@ continue
 <p>Apparently not a big deal, but quite useful for repeated debug sessions, <strong>the Restart button</strong> can be used at any time during a debug session, and the result is that a reset is dispatched to the target board via the JTAG/SWD interface and the debug session is restarted.</p>
 
 <p>
-<img src="/assets/images/2013/12/RestartButton.png" alt="The restart button" />
+<img src="/assets/images/2013/12/RestartButton.png" alt="The restart button">
 </p>
 
 <p>Note: Due to some bugs in Eclipse, the implementation of his simple button has encountered several problems. Depending on the version you are using, the first time you click this button you might get a message box informing that the button was not enabled. Ignore this message, close the message box and click the button again, this time it’ll be effective.</p>
@@ -406,7 +412,7 @@ continue
 <p>The first failure to start a debug session is missing to enter the OpenOCD path. Without it, the launching sequence will complain <em>Cannot run program “/openocd”</em>.</p>
 
 <p>
-<img src="/assets/images/2013/12/OpenOCDCannotRun.png" alt="Cannot run OpenOCD" />
+<img src="/assets/images/2013/12/OpenOCDCannotRun.png" alt="Cannot run OpenOCD">
 </p>
 
 <p>Define the <strong>openocd_path</strong> as instructed above and the session should start properly.</p>
@@ -464,9 +470,13 @@ continue
 <p>Although the plug-in takes care of most of the configuration options, and provides reasonable defaults for the usual cases, it is recommended to read the OpenOCD manuals, available in the <strong>doc</strong> folder of your install location.</p>
 
 
-<hr class="page-footer"/>
+<hr class="page-footer">
 <p class="page-footer">Last modified on Thu May  3 11:09:29 2018 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/debug/openocd/" data-layout="button"></div>
+<ul class="share-buttons">
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/debug/openocd/" data-layout="button"></div></li>
+</ul>
+
 
 
 </section>
@@ -484,7 +494,7 @@ continue
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -494,10 +504,14 @@ continue
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -507,7 +521,8 @@ continue
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -586,38 +601,44 @@ continue
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -685,7 +706,7 @@ continue
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -705,9 +726,11 @@ continue
 <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2018 Liviu Ionescu</li>
-  <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>© 2019 Liviu Ionescu</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
+  <li>
+<a href="http://twitter.com/gnu_mcu_eclipse" class="twitter-follow-button" data-show-count="false">Follow @gnu_mcu_eclipse</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>

@@ -2,18 +2,19 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
   <title>How to use the managed build plug-ins?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="How to use the managed build plug-ins?" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
+  <meta property="og:title" content="How to use the managed build plug-ins?">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -22,17 +23,17 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
 
   <link rel="canonical" href="/plugins/mbs/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -74,7 +75,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -144,7 +145,7 @@ This program built for i386-apple-darwin11.3.0
 <p>To create a new project, go to <em>Eclipse</em> menu, <strong>File</strong> → <strong>New</strong> (or the button in the upper left corner), and select <strong>C Project</strong> or <strong>C++ Project</strong>:</p>
 
 <p>
-<img src="/assets/images/2013/10/NewCProject.png" alt="NewCProject" />
+<img src="/assets/images/2013/10/NewCProject.png" alt="NewCProject">
 </p>
 
 <p>For more details on creating projects, please see the <strong><a href="/tutorials/blinky-arm/" title="Create a test project tutorial">Create test project tutorial</a></strong> separate page.</p>
@@ -154,7 +155,7 @@ This program built for i386-apple-darwin11.3.0
 <p>To benefit from the additional information made available by the new packs technology, it is recommended to assign a a device name to the project, in fact to each build configuration.</p>
 
 <p>
-<img src="/assets/images/2013/10/Devices.png" alt="Assigning a device to the project" />
+<img src="/assets/images/2013/10/Devices.png" alt="Assigning a device to the project">
 </p>
 
 <h3 id="configure-the-target-processor">Configure the target processor</h3>
@@ -164,7 +165,7 @@ This program built for i386-apple-darwin11.3.0
 <p>When using other processors, it is necessary to inform the plug-in of the details, in the Target Processor settings page.</p>
 
 <p>
-<img src="/assets/images/2013/10/TargetProcessor.png" alt="Setting the target processor" />
+<img src="/assets/images/2013/10/TargetProcessor.png" alt="Setting the target processor">
 </p>
 
 <p>In addition to the ARM family, various other configuration details can be set here, like floating point and unaligned access.</p>
@@ -176,7 +177,7 @@ This program built for i386-apple-darwin11.3.0
 <p>When the new projects are created with the GNU MCU Eclipse templates, the toolchain path is already configured. Only when importing projects into a fresh workspace, the toolchain path needs to be configured manually for the first build.</p>
 
 <p>
-<img src="/assets/images/2014/02/ToolchainsProperties.png" alt="Toolchain properties" />
+<img src="/assets/images/2014/02/ToolchainsProperties.png" alt="Toolchain properties">
 </p>
 
 <p>Since this setting refer to the global toolchain path, it will be remembered for all projects using the same toolchain.</p>
@@ -228,14 +229,17 @@ This program built for i386-apple-darwin11.3.0
 <p>To create a new project, go to <em>Eclipse</em> menu, <strong>File</strong> → <strong>New</strong> (or the button in the upper left corner), and select the <strong>C Project</strong> and in the C Project window:</p>
 
 <ul>
-  <li>in the <em>Project name:</em> field enter the name of the new project, for example <strong>staticLib</strong></li>
-  <li>in the <em>Project type:</em> section expand the <strong>Static Library</strong> type and select <strong>Empty Project</strong></li>
-  <li>in the <em>Toolchains:</em> section select <strong>Cross ARM GCC</strong></li>
+  <li>in the <em>Project name:</em> field enter the name of the new project, for example <strong>staticLib</strong>
+</li>
+  <li>in the <em>Project type:</em> section expand the <strong>Static Library</strong> type and select <strong>Empty Project</strong>
+</li>
+  <li>in the <em>Toolchains:</em> section select <strong>Cross ARM GCC</strong>
+</li>
   <li>click the <strong>Next &gt;</strong> button</li>
 </ul>
 
 <p>
-<img src="/assets/images/2013/10/StaticCLib.png" alt="Create a static library C project" />
+<img src="/assets/images/2013/10/StaticCLib.png" alt="Create a static library C project">
 </p>
 
 <p>In the <em>Select Configurations</em> page</p>
@@ -249,7 +253,7 @@ This program built for i386-apple-darwin11.3.0
 <p>When building static libraries, after all source files are compiled, instead of the link step, the make process calls the archiver to pack all objects together.</p>
 
 <p>
-<img src="/assets/images/2013/10/ConfigureArchiver.png" alt="Configure the archiver" />
+<img src="/assets/images/2013/10/ConfigureArchiver.png" alt="Configure the archiver">
 </p>
 
 <p>Due to the specifics of building libraries, there are no secondary targets (no binary, listing or size).</p>
@@ -262,9 +266,13 @@ This program built for i386-apple-darwin11.3.0
 
 
 
-<hr class="page-footer"/>
+<hr class="page-footer">
 <p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/mbs/" data-layout="button"></div>
+<ul class="share-buttons">
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/mbs/" data-layout="button"></div></li>
+</ul>
+
 
 
 </section>
@@ -282,7 +290,7 @@ This program built for i386-apple-darwin11.3.0
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -292,10 +300,14 @@ This program built for i386-apple-darwin11.3.0
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -305,7 +317,8 @@ This program built for i386-apple-darwin11.3.0
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -384,38 +397,44 @@ This program built for i386-apple-darwin11.3.0
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -483,7 +502,7 @@ This program built for i386-apple-darwin11.3.0
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -503,9 +522,11 @@ This program built for i386-apple-darwin11.3.0
 <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2018 Liviu Ionescu</li>
-  <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>© 2019 Liviu Ionescu</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
+  <li>
+<a href="http://twitter.com/gnu_mcu_eclipse" class="twitter-follow-button" data-show-count="false">Follow @gnu_mcu_eclipse</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>

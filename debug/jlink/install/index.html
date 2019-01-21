@@ -2,18 +2,19 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
   <title>How to install the SEGGER J-Link?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="How to install the SEGGER J-Link?" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
+  <meta property="og:title" content="How to install the SEGGER J-Link?">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -22,17 +23,17 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
 
   <link rel="canonical" href="/debug/jlink/install/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -74,7 +75,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -140,18 +141,22 @@
 </tr>
 </tbody>
 </table>
-</div><h2 id="why-j-link">Why J-Link?</h2>
+</div>
+<h2 id="why-j-link">Why J-Link?</h2>
 
 <p>In case you wonder why GNU MCU Eclipse decided to provide support to SEGGER J-Link, the short answer is: <strong>because of <a href="http://www.segger.com/j-link-edu.html">J-Link EDU</a> and of SWO.</strong> The long answer may include the following:</p>
 
 <ul>
-  <li><strong>wide processor support</strong> (there is probably no unsupported ARM processor in the entire galaxy, and if you find one in a remote quadrant, I’m pretty sure it’ll be shortly added to the list)</li>
-  <li>it is a true <strong>multi-platform</strong> solution, providing drivers for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong></li>
+  <li>
+<strong>wide processor support</strong> (there is probably no unsupported ARM processor in the entire galaxy, and if you find one in a remote quadrant, I’m pretty sure it’ll be shortly added to the list)</li>
+  <li>it is a true <strong>multi-platform</strong> solution, providing drivers for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong>
+</li>
   <li>it comes with a <strong>standard GDB server</strong> implementation, compatible with existing ARM toolchains</li>
   <li>in addition to the classical <strong>JTAG</strong> protocol, it implements the new <strong>SWD</strong> protocol</li>
   <li>when SWD is selected, it is capable to sample the <strong>SWO</strong> pin, for trace messages and other ARM specific debugging</li>
   <li>it is fast, up to <strong>15 MHz</strong> for <strong>JTAG</strong> clock and up to <strong>7.5 MHz SWO</strong> sampling frequency for the new <strong>V9</strong> hardware (12 MHz JTAG / 6 MHz SWO for V8, and even up to <strong>100 MHz SWO</strong> for the high-performance <strong>ULTRA+, PRO</strong> models)</li>
-  <li>it supports all possible target voltages, from <strong>1.2V to 5V</strong></li>
+  <li>it supports all possible target voltages, from <strong>1.2V to 5V</strong>
+</li>
   <li>in addition to the regular debugging functionality, it is also able to write the internal flash, and, even more, it uses a smart flash writing algorithm, to avoid useless writes if the flash blocks did not change</li>
   <li>it is a mature, proven product, with a great support team</li>
   <li>it provides an entire range of probes, <a href="http://www.segger.com/jlink_base.html">J-Link</a>, <a href="http://www.segger.com/jlink-pro.html">J-Link Pro</a>, including a <strong>special priced version for educational use</strong>, the <a href="http://www.segger.com/j-link-edu.html">J-Link EDU</a> (available from many distributors, for example from <a href="http://uk.farnell.com/segger/8-08-90-j-link-edu/jtag-emulator-j-link-edu-usb/dp/2098545">Farnell</a>)</li>
@@ -188,7 +193,7 @@
 <p>The result of the install is a folder (a new folder for each new version installed), and a set of driver files installed in the system folders, overwritten with each new install.</p>
 
 <p>
-<img src="/assets/images/2014/01/Segger-win.png" alt="SEGGER Windows distribution" />
+<img src="/assets/images/2014/01/Segger-win.png" alt="SEGGER Windows distribution">
 </p>
 
 <p>Please note that on Windows, SEGGER provides both graphical interface and <strong>command line versions</strong> (having the names suffixed with <code class="highlighter-rouge">CL</code>) for most of their tools. For the J-Link plug-in it is recommended to use only the command line version of the  J-Link GDB server (<code class="highlighter-rouge">JLinkGDBServerCL.exe</code>).</p>
@@ -208,7 +213,7 @@
 <p>Be sure to update the path in Eclipse preferences page to point to the latest SEGGER J-Link software.</p>
 
 <p>
-<img src="/assets/images/2014/01/Segger-OSX.png" alt="SEGGER macOS distribution" />
+<img src="/assets/images/2014/01/Segger-OSX.png" alt="SEGGER macOS distribution">
 </p>
 
 <h3 id="usb">USB</h3>
@@ -312,9 +317,13 @@ Waiting for GDB connection...
 
 
 
-<hr class="page-footer"/>
+<hr class="page-footer">
 <p class="page-footer">Last modified on Mon Jun  4 19:50:15 2018 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/debug/jlink/install/" data-layout="button"></div>
+<ul class="share-buttons">
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/debug/jlink/install/" data-layout="button"></div></li>
+</ul>
+
 
 
 </section>
@@ -332,7 +341,7 @@ Waiting for GDB connection...
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -342,10 +351,14 @@ Waiting for GDB connection...
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -355,7 +368,8 @@ Waiting for GDB connection...
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -434,38 +448,44 @@ Waiting for GDB connection...
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -533,7 +553,7 @@ Waiting for GDB connection...
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -553,9 +573,11 @@ Waiting for GDB connection...
 <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2018 Liviu Ionescu</li>
-  <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>© 2019 Liviu Ionescu</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
+  <li>
+<a href="http://twitter.com/gnu_mcu_eclipse" class="twitter-follow-button" data-show-count="false">Follow @gnu_mcu_eclipse</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>

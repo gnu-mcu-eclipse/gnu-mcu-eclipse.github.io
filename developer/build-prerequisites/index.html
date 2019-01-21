@@ -2,18 +2,19 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
   <title>Build prerequisites</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="Build prerequisites" />
-  <meta property="og:site_name" content="GNU MCU Eclipse" />
+  <meta property="og:title" content="Build prerequisites">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
   <meta property="article:published_time" content="2015-09-10">
@@ -22,17 +23,17 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
 
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
 
-  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201807041643" media="screen">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201807041643" media="print">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
 
   <link rel="canonical" href="/developer/build-prerequisites/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -74,7 +75,7 @@
 <header>
   <div class="inner">
     <h1><a href="/">GNU MCU Eclipse</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM & RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
     </div>
@@ -153,7 +154,8 @@
 </tr>
 </tbody>
 </table>
-</div><h2 id="install--configure-eclipse">Install &amp; Configure Eclipse</h2>
+</div>
+<h2 id="install--configure-eclipse">Install &amp; Configure Eclipse</h2>
 
 <h3 id="install-git-for-windows">Install Git for Windows</h3>
 
@@ -172,8 +174,10 @@
 <h3 id="prepare-folders">Prepare folders</h3>
 
 <ul>
-  <li>in a place of you choice, create a folder <code class="highlighter-rouge">GNU MCU Eclipse</code></li>
-  <li>inside it create two more folders, <code class="highlighter-rouge">Eclipses</code> and <code class="highlighter-rouge">Eclipse Workspaces</code></li>
+  <li>in a place of you choice, create a folder <code class="highlighter-rouge">GNU MCU Eclipse</code>
+</li>
+  <li>inside it create two more folders, <code class="highlighter-rouge">Eclipses</code> and <code class="highlighter-rouge">Eclipse Workspaces</code>
+</li>
 </ul>
 
 <h3 id="install-eclipse-ide-for-eclipse-committers">Install Eclipse IDE for Eclipse Committers</h3>
@@ -198,7 +202,8 @@
 </div>
 <ul>
   <li>rename <code class="highlighter-rouge">Eclipse.app</code> to <code class="highlighter-rouge">Eclipse-com-cdt-47.app</code> (<code class="highlighter-rouge">eclipse</code> to <code class="highlighter-rouge">eclipse-com-cdt-47</code> on Windows)</li>
-  <li>move it to <code class="highlighter-rouge">.../GNU MCU Eclipse/Eclipses</code></li>
+  <li>move it to <code class="highlighter-rouge">.../GNU MCU Eclipse/Eclipses</code>
+</li>
   <li>create link on the desktop:
     <ul>
       <li>on Windows, create a shortcut for <code class="highlighter-rouge">eclipse.exe</code>, rename it <code class="highlighter-rouge">e47-gme.lnk</code> and copy it to the desktop or a place of your choice</li>
@@ -212,23 +217,32 @@
 
 <ul>
   <li>create a new workspace, preferably in a separate folder, like <code class="highlighter-rouge">Eclipse Workspaces/w-gme-47</code> (note: be sure you create the workspace where you need it to be, since moving later is generally not supported by Eclipse; if you need this, preferably create a new workspace)</li>
-  <li>check <strong>Use this as default…</strong></li>
-  <li>check if you installed the right Eclipse; go to the <em>Eclipse</em> menu → <strong>Help</strong> (<strong>Eclipse</strong> on macOS) → <strong>About Eclipse</strong> and the first line should read <strong>Eclipse IDE for Eclipse Committers</strong></li>
-  <li><strong>Help</strong> → <strong>Install New Software</strong></li>
+  <li>check <strong>Use this as default…</strong>
+</li>
+  <li>check if you installed the right Eclipse; go to the <em>Eclipse</em> menu → <strong>Help</strong> (<strong>Eclipse</strong> on macOS) → <strong>About Eclipse</strong> and the first line should read <strong>Eclipse IDE for Eclipse Committers</strong>
+</li>
+  <li>
+<strong>Help</strong> → <strong>Install New Software</strong>
+</li>
   <li>Work with: <code class="highlighter-rouge">Oxygen - http://download.eclipse.org/releases/oxygen</code>
     <ul>
       <li>In <strong>Programming Languages</strong>
         <ul>
-          <li>select <strong>C/C++ Development Tools</strong></li>
-          <li>select <strong>C/C++ Development Tools SDK</strong></li>
+          <li>select <strong>C/C++ Development Tools</strong>
+</li>
+          <li>select <strong>C/C++ Development Tools SDK</strong>
+</li>
           <li>optional: Autotools, LLVM-Family, Unit Testing, Docker Container Launch Support…</li>
         </ul>
       </li>
       <li>In <strong>Mobile and Device Development</strong>
         <ul>
-          <li>select <strong>C/C++ GCC Cross Compile Support</strong></li>
-          <li>select <strong>C/C++ GDB Hardware Debugging</strong></li>
-          <li>select <strong>C/C++ Memory View Enhancements</strong></li>
+          <li>select <strong>C/C++ GCC Cross Compile Support</strong>
+</li>
+          <li>select <strong>C/C++ GDB Hardware Debugging</strong>
+</li>
+          <li>select <strong>C/C++ Memory View Enhancements</strong>
+</li>
         </ul>
       </li>
       <li>click the <strong>Next</strong> button</li>
@@ -251,21 +265,27 @@
   <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Plug-in Development</strong> → <strong>Target Platform</strong>
     <ul>
       <li>click the <strong>Add…</strong> button</li>
-      <li>select <strong>Nothing: Start with an empty target</strong></li>
+      <li>select <strong>Nothing: Start with an empty target</strong>
+</li>
       <li>Next
         <ul>
-          <li>Enter name: <code class="highlighter-rouge">9.2.1 Neon</code></li>
-          <li>click <strong>Add…</strong> → <strong>Directory</strong> → <strong>Next &gt;</strong></li>
-          <li>click <strong>Browse…</strong> → <code class="highlighter-rouge">cdt-9.2.1</code></li>
+          <li>Enter name: <code class="highlighter-rouge">9.2.1 Neon</code>
+</li>
+          <li>click <strong>Add…</strong> → <strong>Directory</strong> → <strong>Next &gt;</strong>
+</li>
+          <li>click <strong>Browse…</strong> → <code class="highlighter-rouge">cdt-9.2.1</code>
+</li>
           <li>click the <strong>Finish</strong> button</li>
         </ul>
       </li>
       <li>click the <strong>Reload</strong> button</li>
-      <li>click the <strong>Finish</strong></li>
+      <li>click the <strong>Finish</strong>
+</li>
     </ul>
   </li>
   <li>enable only the <strong>Running Platform as Active</strong> (mandatory!)</li>
-  <li>click <strong>Apply and Close</strong></li>
+  <li>click <strong>Apply and Close</strong>
+</li>
 </ul>
 
 <p>Selecting the running platform is required when starting Eclipse to Run or Debug, without it the core plug-ins will not be available.</p>
@@ -276,39 +296,51 @@
       <li>click the <strong>Add Baseline…</strong> button</li>
       <li>select <strong>A target platform</strong>
         <ul>
-          <li>Enter name: <code class="highlighter-rouge">9.2.1 Neon</code></li>
-          <li>enable <code class="highlighter-rouge">9.2.1 Neon</code></li>
+          <li>Enter name: <code class="highlighter-rouge">9.2.1 Neon</code>
+</li>
+          <li>enable <code class="highlighter-rouge">9.2.1 Neon</code>
+</li>
           <li>click the <strong>Refresh</strong> button</li>
           <li>click the <strong>Finish</strong> button</li>
         </ul>
       </li>
     </ul>
   </li>
-  <li>click <strong>Apply and Close</strong></li>
+  <li>click <strong>Apply and Close</strong>
+</li>
 </ul>
 
 <h3 id="create-and-configure-the-workspace">Create and configure the workspace</h3>
 
 <ul>
   <li>change the workspace preferences</li>
-  <li>go to the <em>Eclipse</em> menu → <strong>(Window →) Preferences…</strong></li>
-  <li><strong>General</strong> → <strong>Workspace</strong>
+  <li>go to the <em>Eclipse</em> menu → <strong>(Window →) Preferences…</strong>
+</li>
+  <li>
+<strong>General</strong> → <strong>Workspace</strong>
     <ul>
-      <li>disable <strong>Build automatically</strong></li>
-      <li>enable <strong>Refresh on access</strong></li>
-      <li>enable <strong>Save automatically before rebuild</strong></li>
-      <li>set <strong>Text file encoding: UTF-8</strong></li>
+      <li>disable <strong>Build automatically</strong>
+</li>
+      <li>enable <strong>Refresh on access</strong>
+</li>
+      <li>enable <strong>Save automatically before rebuild</strong>
+</li>
+      <li>set <strong>Text file encoding: UTF-8</strong>
+</li>
       <li>click the <strong>Apply</strong> button</li>
     </ul>
   </li>
-  <li><strong>General</strong> → <strong>Editors</strong> → <strong>Text Editors</strong>
+  <li>
+<strong>General</strong> → <strong>Editors</strong> → <strong>Text Editors</strong>
     <ul>
       <li>enable <strong>Show Print Margin</strong> (80)</li>
-      <li>enable <strong>Show Line Numbers</strong></li>
+      <li>enable <strong>Show Line Numbers</strong>
+</li>
       <li>click the <strong>Apply</strong> button</li>
     </ul>
   </li>
-  <li><strong>General</strong> → <strong>Editors</strong> → <strong>File Associations</strong>
+  <li>
+<strong>General</strong> → <strong>Editors</strong> → <strong>File Associations</strong>
     <ul>
       <li>click <strong>Add</strong> and add *.inf, *.sh, *.command, *.ini, *.liquid, *.launch</li>
       <li>for each, click the <strong>Add</strong> button in the Associate editors area</li>
@@ -316,30 +348,43 @@
       <li>click the <strong>Apply and Close</strong> button</li>
     </ul>
   </li>
-  <li>go to the <em>Eclipse</em> menu → <strong>(Window →) Preferences…</strong></li>
-  <li><strong>Run/Debug</strong> → <strong>Console</strong>
+  <li>go to the <em>Eclipse</em> menu → <strong>(Window →) Preferences…</strong>
+</li>
+  <li>
+<strong>Run/Debug</strong> → <strong>Console</strong>
     <ul>
       <li>disable Limit console output</li>
       <li>click the <strong>Apply</strong> button</li>
     </ul>
   </li>
-  <li><strong>Java</strong> → <strong>Editor</strong> → <strong>Folding</strong>
+  <li>
+<strong>Java</strong> → <strong>Editor</strong> → <strong>Folding</strong>
     <ul>
-      <li>disable <strong>Header Comments</strong></li>
-      <li>disable <strong>Imports</strong></li>
+      <li>disable <strong>Header Comments</strong>
+</li>
+      <li>disable <strong>Imports</strong>
+</li>
       <li>click the <strong>Apply</strong> button</li>
     </ul>
   </li>
-  <li><strong>XML</strong> → <strong>XML Files</strong> → <strong>Editor</strong>
+  <li>
+<strong>XML</strong> → <strong>XML Files</strong> → <strong>Editor</strong>
     <ul>
       <li>Line width 72</li>
-      <li>enable <strong>Split multiple attributes…</strong></li>
-      <li>disable <strong>Align final bracket…</strong></li>
-      <li>enable <strong>Preserve whitespace..</strong></li>
-      <li>enable <strong>Clear all blank lines</strong></li>
-      <li>disable <strong>Format comments</strong></li>
-      <li>enable <strong>Insert whitespace before closing…</strong></li>
-      <li>enable <strong>Indent using tabs</strong></li>
+      <li>enable <strong>Split multiple attributes…</strong>
+</li>
+      <li>disable <strong>Align final bracket…</strong>
+</li>
+      <li>enable <strong>Preserve whitespace..</strong>
+</li>
+      <li>enable <strong>Clear all blank lines</strong>
+</li>
+      <li>disable <strong>Format comments</strong>
+</li>
+      <li>enable <strong>Insert whitespace before closing…</strong>
+</li>
+      <li>enable <strong>Indent using tabs</strong>
+</li>
       <li>click the <strong>Apply</strong> button</li>
     </ul>
   </li>
@@ -359,12 +404,15 @@
 <ul>
   <li>download <strong>Eclipse IDE for C/C++ Developers</strong> (<code class="highlighter-rouge">eclipse-cpp-oxygen-1a-macosx-cocoa-x86_64.dmg</code>)</li>
   <li>unpack the archive</li>
-  <li>rename <em>_Eclipse_</em> to <strong>Eclipse-cdt-47.app</strong></li>
+  <li>rename <em>_Eclipse_</em> to <strong>Eclipse-cdt-47.app</strong>
+</li>
   <li>on macOS, make a Finder alias of the <strong>Eclipse.app</strong>, rename it <strong>E47 CDT test</strong> and move it to a place of your choice (the Desktop, for example); remove the <code class="highlighter-rouge">com.apple.quarantine</code> attribute.</li>
   <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>C/C++</strong> → <strong>Appearance</strong>
     <ul>
-      <li>disable <strong>Show source roots at top of project</strong></li>
-      <li>click the <strong>Apply and Close</strong></li>
+      <li>disable <strong>Show source roots at top of project</strong>
+</li>
+      <li>click the <strong>Apply and Close</strong>
+</li>
     </ul>
   </li>
   <li>in Project Explorer, click the down pointing triangle → <strong>Filters and Customizations…</strong>
@@ -380,7 +428,8 @@
 <ul>
   <li>download <strong>Eclipse IDE for C/C++ Developers</strong> (<code class="highlighter-rouge">eclipse-cpp-neon-3-macosx-cocoa-x86_64.tar.gz</code>)</li>
   <li>unpack the archive</li>
-  <li>rename <em>_Eclipse_</em> to <strong>Eclipse-cdt-46.app</strong></li>
+  <li>rename <em>_Eclipse_</em> to <strong>Eclipse-cdt-46.app</strong>
+</li>
   <li>on macOS, make a Finder alias of the <strong>Eclipse.app</strong>, rename it <strong>E46 CDT test</strong> and move it to a place of your choice (the Desktop, for example); remove the <code class="highlighter-rouge">com.apple.quarantine</code> attribute.</li>
   <li>(workspace preferences: same as before)</li>
 </ul>
@@ -406,27 +455,39 @@
 <p>Import projects using the generic importer:</p>
 
 <ul>
-  <li><em>Eclipse</em> menu → <strong>File</strong> → <strong>Import</strong></li>
+  <li>
+<em>Eclipse</em> menu → <strong>File</strong> → <strong>Import</strong>
+</li>
   <li>Select
     <ul>
-      <li>General → <strong>Existing Projects into Workspace</strong></li>
-      <li>click <strong>Next</strong></li>
+      <li>General → <strong>Existing Projects into Workspace</strong>
+</li>
+      <li>click <strong>Next</strong>
+</li>
     </ul>
   </li>
   <li>Import Projects
     <ul>
-      <li>Root Directory: <code class="highlighter-rouge">.../GNU MCU Eclipse/eclipse-plugins.git</code></li>
-      <li>enable <strong>Search for nested projects</strong></li>
-      <li>disable <strong>Add project(s) to working set</strong></li>
-      <li>click <strong>Finish</strong></li>
+      <li>Root Directory: <code class="highlighter-rouge">.../GNU MCU Eclipse/eclipse-plugins.git</code>
+</li>
+      <li>enable <strong>Search for nested projects</strong>
+</li>
+      <li>disable <strong>Add project(s) to working set</strong>
+</li>
+      <li>click <strong>Finish</strong>
+</li>
     </ul>
   </li>
   <li>Import Projects
     <ul>
-      <li>Root Directory: <code class="highlighter-rouge">.../GNU MCU Eclipse/org.eclipse.epp.packages.git</code></li>
-      <li>enable <strong>Search for nested projects</strong></li>
-      <li>disable <strong>Add project(s) to working set</strong></li>
-      <li>click <strong>Finish</strong></li>
+      <li>Root Directory: <code class="highlighter-rouge">.../GNU MCU Eclipse/org.eclipse.epp.packages.git</code>
+</li>
+      <li>enable <strong>Search for nested projects</strong>
+</li>
+      <li>disable <strong>Add project(s) to working set</strong>
+</li>
+      <li>click <strong>Finish</strong>
+</li>
     </ul>
   </li>
 </ul>
@@ -439,15 +500,19 @@
 <ul>
   <li><strong>GNU MCU Eclipse bundles</strong></li>
   <li><strong>GNU MCU Eclipse features</strong></li>
-  <li><strong>GNU MCU Eclipse plugins root</strong> (with the <code class="highlighter-rouge">gnumcueclipse-plugins</code> project)</li>
-  <li><strong>GNU MCU Eclipse repositories</strong> (with the <code class="highlighter-rouge">ilg.gnumcueclipse.repository</code> and <code class="highlighter-rouge">ilg.gnumcueclipse.riscv.repository</code> projects)</li>
-  <li><strong>GNU MCU Eclipse EPP packages root</strong> (with the <code class="highlighter-rouge">org.eclipse.epp*</code> projects)</li>
+  <li>
+<strong>GNU MCU Eclipse plugins root</strong> (with the <code class="highlighter-rouge">gnumcueclipse-plugins</code> project)</li>
+  <li>
+<strong>GNU MCU Eclipse repositories</strong> (with the <code class="highlighter-rouge">ilg.gnumcueclipse.repository</code> and <code class="highlighter-rouge">ilg.gnumcueclipse.riscv.repository</code> projects)</li>
+  <li>
+<strong>GNU MCU Eclipse EPP packages root</strong> (with the <code class="highlighter-rouge">org.eclipse.epp*</code> projects)</li>
 </ul>
 
 <p>In the Java Perspective, the Package Explorer:</p>
 
 <ul>
-  <li>click the down pointing triangle icon and select <strong>Top Level Elements</strong> → <strong>Working Sets</strong></li>
+  <li>click the down pointing triangle icon and select <strong>Top Level Elements</strong> → <strong>Working Sets</strong>
+</li>
   <li>click the down pointing triangle icon and select  <strong>Configure Working Sets…</strong>
     <ul>
       <li>click the <strong>New…</strong> button</li>
@@ -467,14 +532,21 @@
 
 <ul>
   <li>in the <code class="highlighter-rouge">GNU MCU Eclipse plugins root</code> set, select the <code class="highlighter-rouge">gnumcueclipse-plugins</code> project</li>
-  <li><em>Eclipse</em> menu → <strong>Run</strong> → <strong>Run Configurations…</strong></li>
+  <li>
+<em>Eclipse</em> menu → <strong>Run</strong> → <strong>Run Configurations…</strong>
+</li>
   <li>double click the <strong>Maven Build</strong> entry</li>
-  <li><strong>Name:</strong> <code class="highlighter-rouge">GME clean verify</code></li>
+  <li>
+<strong>Name:</strong> <code class="highlighter-rouge">GME clean verify</code>
+</li>
   <li>in the Main tab
     <ul>
-      <li>Base directory: click the Workspace… button and select the <code class="highlighter-rouge">gnumcueclipse-plugins</code></li>
-      <li>Goals: <code class="highlighter-rouge">clean verify</code></li>
-      <li>optionally, if warnings are issued, add a new parameter, name <code class="highlighter-rouge">tycho.localArtifacts</code>, value <code class="highlighter-rouge">ignore</code></li>
+      <li>Base directory: click the Workspace… button and select the <code class="highlighter-rouge">gnumcueclipse-plugins</code>
+</li>
+      <li>Goals: <code class="highlighter-rouge">clean verify</code>
+</li>
+      <li>optionally, if warnings are issued, add a new parameter, name <code class="highlighter-rouge">tycho.localArtifacts</code>, value <code class="highlighter-rouge">ignore</code>
+</li>
     </ul>
   </li>
   <li>click the <strong>Apply</strong> button</li>
@@ -490,14 +562,21 @@
 
 <ul>
   <li>in the <code class="highlighter-rouge">GNU MCU Eclipse EPP packages root</code> set, select the <code class="highlighter-rouge">org.eclipse.epp-buildall</code> project</li>
-  <li><em>Eclipse</em> menu → <strong>Run</strong> → <strong>Run Configurations…</strong></li>
+  <li>
+<em>Eclipse</em> menu → <strong>Run</strong> → <strong>Run Configurations…</strong>
+</li>
   <li>double click the <strong>Maven Build</strong> entry</li>
-  <li><strong>Name:</strong> <code class="highlighter-rouge">GME EPP clean verify -Pcpp</code></li>
+  <li>
+<strong>Name:</strong> <code class="highlighter-rouge">GME EPP clean verify -Pcpp</code>
+</li>
   <li>in the Main tab
     <ul>
-      <li>Base directory: click the Workspace… button and select the <code class="highlighter-rouge">org.eclipse.epp-buildall</code></li>
-      <li>Goals: <code class="highlighter-rouge">clean verify</code></li>
-      <li>Profiles: <code class="highlighter-rouge">epp.package.cpp</code></li>
+      <li>Base directory: click the Workspace… button and select the <code class="highlighter-rouge">org.eclipse.epp-buildall</code>
+</li>
+      <li>Goals: <code class="highlighter-rouge">clean verify</code>
+</li>
+      <li>Profiles: <code class="highlighter-rouge">epp.package.cpp</code>
+</li>
     </ul>
   </li>
   <li>click the <strong>Apply</strong> button</li>
@@ -525,9 +604,13 @@
 
 
 
-<hr class="page-footer"/>
+<hr class="page-footer">
 <p class="page-footer">Last modified on Thu Sep 27 05:53:19 2018 UTC.</p>
-<div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/build-prerequisites/" data-layout="button"></div>
+<ul class="share-buttons">
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/build-prerequisites/" data-layout="button"></div></li>
+</ul>
+
 
 
 </section>
@@ -545,7 +628,7 @@
 </ul>
 
 
-<hr />
+<hr>
 
 <h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
 
@@ -555,10 +638,14 @@
 
 <ul>
   <li><a href="/downloads/">Overview</a></li>
-  <li><a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
-  <li><a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
-  <li><a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
-  <li><a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -568,7 +655,8 @@
   <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
-  <li><a href="/debug/install/">Debugging binaries</a>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
@@ -647,38 +735,44 @@
 <h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
 
 <ul>
-  <li><a href="/qemu/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
   <li><a href="/qemu/install/">QEMU Install</a></li>
   <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
   <li><a href="/qemu/options/">Command line options</a></li>
   <li><a href="/qemu/build-procedure/">How to build</a></li>
   <li><a href="/qemu/publish-procedure/">How to publish</a></li>
   <li><a href="/qemu/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
 
 <ul>
-  <li><a href="/openocd/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
   <li><a href="/openocd/install/">OpenOCD Install</a></li>
   <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
   <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
   <li><a href="/openocd/build-procedure/">How to build</a></li>
   <li><a href="/openocd/publish-procedure/">How to publish</a></li>
   <li><a href="/openocd/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
 </ul>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
 <ul>
-  <li><a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
   <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
   <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
-  <li><a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
@@ -746,7 +840,7 @@
 
 <h4 id="about"><a href="/about/">About</a></h4>
 
-<hr />
+<hr>
 <p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -766,9 +860,11 @@
 <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2018 Liviu Ionescu</li>
-  <li>Hosted on GitHub Pages</li>
-  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS" /></a></li>
+  <li>© 2019 Liviu Ionescu</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
+  <li>
+<a href="http://twitter.com/gnu_mcu_eclipse" class="twitter-follow-button" data-show-count="false">Follow @gnu_mcu_eclipse</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
   <li>
     <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   </li>
