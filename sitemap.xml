@@ -477,6 +477,10 @@
 <lastmod>2019-02-03T19:56:42+00:00</lastmod>
 </url>
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2019/02/11/qemu-v2-8-0-4-20190211-released/</loc>
+<lastmod>2019-02-11T09:08:37+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/about/</loc>
 <lastmod>2019-01-21T22:53:39+00:00</lastmod>
 </url>
@@ -590,7 +594,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/change-log/</loc>
-<lastmod>2018-06-04T19:50:15+00:00</lastmod>
+<lastmod>2019-02-11T09:08:37+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/riscv/change-log/</loc>
@@ -694,7 +698,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/</loc>
-<lastmod>2019-01-21T22:53:39+00:00</lastmod>
+<lastmod>2019-02-11T06:21:34+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/</loc>
@@ -730,7 +734,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/install/</loc>
-<lastmod>2019-01-30T14:44:28+00:00</lastmod>
+<lastmod>2019-02-11T06:20:01+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/j-link-stm32-boards/</loc>

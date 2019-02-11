@@ -5,9 +5,34 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Feb 2019 19:58:59 +0000</pubDate>
-    <lastBuildDate>Sun, 03 Feb 2019 19:58:59 +0000</lastBuildDate>
+    <pubDate>Mon, 11 Feb 2019 09:11:14 +0000</pubDate>
+    <lastBuildDate>Mon, 11 Feb 2019 09:11:14 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse QEMU v2.8.0-4-20190211 released</title>
+        <description>&lt;p&gt;Version 2.8.0-4-20190211 is a maintenance release, to fix a bug in the 
+STM32F GPIO emulation.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 11 Feb 2019 07:51:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2019/02/11/qemu-v2-8-0-4-20190211-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2019/02/11/qemu-v2-8-0-4-20190211-released/</guid>
+        
+        <category>emulator</category>
+        
+        <category>macos</category>
+        
+        <category>linux</category>
+        
+        <category>windows</category>
+        
+        
+        <category>releases</category>
+        
+        <category>qemu</category>
+        
+      </item>
     
       <item>
         <title>GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.3 20190202 released</title>
@@ -203,24 +228,6 @@ several bug fixes and enhancements.&lt;/p&gt;
         <category>releases</category>
         
         <category>plugins</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse ARM Embedded GCC v7.3.1-1.1 20180724 released</title>
-        <description>&lt;p&gt;Version v7.3.1-1.1 20180724 is a new release of &lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 24 Jul 2018 09:09:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2018/07/24/arm-none-eabi-gcc-v7-3-1-1-1-released/</guid>
-        
-        
-        <category>releases</category>
-        
-        <category>arm</category>
-        
-        <category>arm-none-eabi-gcc</category>
         
       </item>
     

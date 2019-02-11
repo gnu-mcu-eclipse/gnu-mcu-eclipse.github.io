@@ -10,17 +10,23 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>ilg.gnuarmeclipse.managedbuild.cross - persistent values &amp; toolchain ids</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
+  <title>GNU MCU Eclipse QEMU v2.8.0-4-20190211 released</title>
+  <meta name="description" content="Version 2.8.0-4-20190211 is a maintenance release, to fix a bug in the STM32F GPIO emulation.">
 
-  <meta property="og:title" content="ilg.gnuarmeclipse.managedbuild.cross - persistent values &amp; toolchain ids">
+  <meta property="og:title" content="GNU MCU Eclipse QEMU v2.8.0-4-20190211 released">
   <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
-  <meta property="article:published_time" content="2015-09-10">
+  <meta property="article:published_time" content="2019-02-11">
 
 
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="qemu">
 
+  <meta property="article:tag" content="emulator">
+  <meta property="article:tag" content="macos">
+  <meta property="article:tag" content="linux">
+  <meta property="article:tag" content="windows">
 
 
   <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
@@ -30,7 +36,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
 
-  <link rel="canonical" href="/developer/preferences/ilg.gnuarmeclipse.managedbuild.cross/">
+  <link rel="canonical" href="/blog/2019/02/11/qemu-v2-8-0-4-20190211-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
@@ -89,9 +95,23 @@
 <div id="site-body">
 <section id="main-content">
 
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2019/02/02/arm-none-eabi-gcc-v8-2-1-1-3-released/">←</a></td>
+    <td><a href="/blog/2019/02/02/arm-none-eabi-gcc-v8-2-1-1-3-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.3 20190202 released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-<h1 class="page-title">ilg.gnuarmeclipse.managedbuild.cross - persistent values &amp; toolchain ids</h1>
 
+<h1 class="post-title">GNU MCU Eclipse QEMU v2.8.0-4-20190211 released</h1>
+
+
+<p class="post-meta">
+Posted on February 11, 2019 by Liviu Ionescu.
+</p>
 
 <div id="toc-container">
 <table class="toc" id="toc">
@@ -103,19 +123,25 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#the-build-tools-path"><span class="tocnumber">1</span> <span class="toctext">The build tools path</span></a>
+<a href="#bug-fixes"><span class="tocnumber">1</span> <span class="toctext">Bug fixes</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#the-default-toolchain"><span class="tocnumber">2</span> <span class="toctext">The default toolchain</span></a>
+<a href="#known-problems"><span class="tocnumber">2</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#toolchain-paths"><span class="tocnumber">3</span> <span class="toctext">Toolchain paths</span></a>
+<a href="#binaries"><span class="tocnumber">3</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#toolchain-ids"><span class="tocnumber">4</span> <span class="toctext">Toolchain IDs</span></a>
+<a href="#build-notes"><span class="tocnumber">4</span> <span class="toctext">Build notes</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#defaults"><span class="tocnumber">5</span> <span class="toctext">Defaults</span></a>
+<a href="#easy-install"><span class="tocnumber">5</span> <span class="toctext">Easy install</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#manual-install"><span class="tocnumber">6</span> <span class="toctext">Manual install</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#checksums"><span class="tocnumber">7</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
@@ -123,167 +149,118 @@
 </tbody>
 </table>
 </div>
-<h2 id="the-build-tools-path">The build tools path</h2>
+<p>Version 2.8.0-4-20190211 is a maintenance release, to fix a bug in the 
+STM32F GPIO emulation.</p>
 
-<p>The build tools path preference is:</p>
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/releases/tag/v2.8.0-4-20190211/">Binary files »</a>
+</p>
 
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>buildTools.path=C:/Program Files/GNU MCU Eclipse/Build Tools/bin
-</code></pre>
-</div>
-</div>
+<h2 id="bug-fixes">Bug fixes</h2>
 
-<p>This value can be stored in all persistent scopes (Eclipse, workspace, project).</p>
-
-<h2 id="the-default-toolchain">The default toolchain</h2>
-
-<p>The default toolchain preference is:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>toolchain.name=GNU Tools for ARM Embedded Processors
-</code></pre>
-</div>
-</div>
-
-<p>It is stored in the Eclipse scope.</p>
-
-<h2 id="toolchain-paths">Toolchain paths</h2>
-
-<p>The toolchain path preferences are:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>toolchain.path.1287942917=/usr/local/gcc-arm-none-eabi-4_8-2014q2/bin
-</code></pre>
-</div>
-</div>
-
-<p>The toolchain ID is described below.</p>
-
-<p>Currently these preferences are stored in the Eclipse scope.</p>
-
-<h2 id="toolchain-ids">Toolchain IDs</h2>
-
-<p>The numerical value in the path property is the toolchain ID, computed as the absolute value of the <strong>Java hash of the name string</strong>.</p>
-
-<p>The list of supported toolchains and their IDs:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>ID</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GNU Tools for ARM Embedded Processors</td>
-      <td>1287942917</td>
-    </tr>
-    <tr>
-      <td>Sourcery CodeBench Lite for ARM EABI</td>
-      <td>730666677</td>
-    </tr>
-    <tr>
-      <td>Sourcery CodeBench Lite for ARM GNU/Linux</td>
-      <td>132202943</td>
-    </tr>
-    <tr>
-      <td>devkitPro ARM EABI</td>
-      <td>599899493</td>
-    </tr>
-    <tr>
-      <td>Yagarto, Summon, etc. ARM EABI</td>
-      <td>1195655929</td>
-    </tr>
-    <tr>
-      <td>Linaro ARMv7 bare-metal EABI</td>
-      <td>976189281</td>
-    </tr>
-    <tr>
-      <td>Linaro ARMv7 big-endian bare-metal EABI</td>
-      <td>1341156853</td>
-    </tr>
-    <tr>
-      <td>Linaro ARMv7 Linux GNU EABI HF</td>
-      <td>280381241</td>
-    </tr>
-    <tr>
-      <td>Linaro ARMv7 big-endian Linux GNU EABI HF</td>
-      <td>1733862821</td>
-    </tr>
-    <tr>
-      <td>Linaro AArch64 bare-metal ELF</td>
-      <td>1871385609</td>
-    </tr>
-    <tr>
-      <td>Linaro AArch64 big-endian bare-metal ELF</td>
-      <td>2048201829</td>
-    </tr>
-    <tr>
-      <td>Linaro AArch64 Linux GNU</td>
-      <td>1246627524</td>
-    </tr>
-    <tr>
-      <td>Linaro AArch64 big-endian Linux GNU</td>
-      <td>681852136</td>
-    </tr>
-    <tr>
-      <td>Custom</td>
-      <td>2029746065</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Note: in March 2015, the name of the <strong>Linaro ARMv7 big-endian Linux GNU EABI HF</strong> toolchain was updated to be consistent with the other names (lower case big-endian instead of Big-Endian).</p>
-
-<h2 id="defaults">Defaults</h2>
-
-<p>All persistent values can be given defaults, for example:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code>ilg.gnuarmeclipse.managedbuild.cross/buildTools.path=C:/Program Files/GNU MCU Eclipse/Build Tools/bin
-
-ilg.gnuarmeclipse.managedbuild.cross/toolchain.name=GNU Tools for ARM Embedded Processors
-ilg.gnuarmeclipse.managedbuild.cross/toolchain.path.1287942917=/usr/local/gcc-arm-none-eabi-4_8-2014q2/bin
-</code></pre>
-</div>
-</div>
-
-<p>Defaults only properties:</p>
-
-<div class="highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code># One of the following will be set to toolchain.search.path.1287942917.
-toolchain.search.path.windows.1287942917=${user.home}/AppData/Local/Programs/GNU Tools ARM Embedded;c:/Program Files/GNU Tools ARM Embedded;c:/Program Files (x86)/GNU Tools ARM Embedded
-toolchain.search.path.linux.1287942917=${user.home}/local:/usr/local
-toolchain.search.path.osx.1287942917=${user.home}/Applications/GNU Tools ARM Embedded:${user.home}/local:/usr/local
-
-# Set to false to disable the folder check.
-global.toolchain.path.strict=true
-global.buildTools.path.strict=true
-workspace.toolchain.path.strict=true
-workspace.buildTools.path.strict=true
-</code></pre>
-</div>
-</div>
-
-
-<hr class="page-footer">
-<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
-<ul class="share-buttons">
-  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
-  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/preferences/ilg.gnuarmeclipse.managedbuild.cross/" data-layout="button"></div></li>
+<ul>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/62">#62</a>] in certain
+conditions, like half-word or byte accesses, clearing the STM32F GPIO pins
+was not effective; the problem was identified as an erroneous persistence
+of the BRR/BSRR registers, and was fixed by disabling the persistence.</li>
 </ul>
 
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>Ctrl-C does not interrupt the execution if the <code class="highlighter-rouge">--nographic</code> option is used.</li>
+</ul>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<h2 id="build-notes">Build notes</h2>
+
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+and run on any distribution based on CentOS 6 or later.</p>
+
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
+
+<h2 id="easy-install">Easy install</h2>
+
+<p>QEMU is also available as an 
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/qemu">xPack</a> and can be 
+conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/qemu@2.8.0-4.1
+</code></pre>
+</div>
+</div>
+
+<p>To install the latest version available, use:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/qemu
+</code></pre>
+</div>
+</div>
+
+<p>Note: The method to select the path based on the xPack version was already 
+added to the Eclipse plug-in, but for now is only available in the version 
+published on the test site 
+(http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test/).</p>
+
+<h2 id="manual-install">Manual install</h2>
+
+<p>Instructions on how to install the binaries are available in the 
+<a href="https://gnu-mcu-eclipse.github.io/qemu/install/">How to install the QEMU binaries?</a> 
+page.</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">177286aa8a5196e0b2a232c9a0ac8d4bfa7fd7ecfb70e374a4708449ee590f15 ?
+gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-centos32.tgz
+
+1db493e73d4f7bb7d7553db3e855183fd1f918dcabb92459bc76c65fa45ca526 ?
+gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-centos64.tgz
+
+b79a60284245c5c1cec5b49ea12d8fc8263fa5c71be1ffe63b326c0f9687da4e ?
+gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-macos.tgz
+
+6a6c831fadf15dff56d386b54b686e269c45413b5c932be1595af755785b87ed ?
+gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win32.zip
+
+a770a0cd726de338b983493141794ea6cb375eee58cbe66ff075d65e451d83a8 ?
+gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip
+</span>
+</code></pre>
+</div>
+</div>
+
+
+
+<hr class="post-footer">
+<div class="post-footer">
+Posted in
+
+<strong>releases</strong>, <strong>qemu</strong> and tagged
+
+<strong>emulator</strong>, <strong>macos</strong>, <strong>linux</strong>, <strong>windows</strong>.
+Last modified on Mon Feb 11 09:08:37 2019 UTC.
+<ul class="share-buttons">
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/02/11/qemu-v2-8-0-4-20190211-released/" data-layout="button"></div></li>
+</ul>
+
+</div>
 
 
 </section>
