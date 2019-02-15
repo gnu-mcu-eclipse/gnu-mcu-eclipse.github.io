@@ -100,8 +100,8 @@
     <td><a href="/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/">←</a></td>
     <td><a href="/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.2 20190119 released</a></td>
     <td></td>
-    <td><a href="/blog/2019/02/05/arm-none-eabi-gcc-v8-2-1-1-4-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.4 20190214 released</a></td>
-    <td><a href="/blog/2019/02/05/arm-none-eabi-gcc-v8-2-1-1-4-released/">→</a></td>
+    <td><a href="/blog/2019/02/11/qemu-v2-8-0-4-20190211-released/">GNU MCU Eclipse QEMU v2.8.0-4-20190211 released</a></td>
+    <td><a href="/blog/2019/02/11/qemu-v2-8-0-4-20190211-released/">→</a></td>
   </tr>
 </table>
 
@@ -137,9 +137,12 @@ Posted on February 2, 2019 by Liviu Ionescu.
 <li class="toc_level-2 toc_section-5">
 <a href="#lto--debugging-on-windows"><span class="tocnumber">4.1</span> <span class="toctext">LTO &amp; debugging on Windows</span></a>
 </li>
+<li class="toc_level-2 toc_section-6">
+<a href="#lto--paths-with-spaces-on-windows"><span class="tocnumber">4.2</span> <span class="toctext">LTO &amp; paths with spaces on Windows</span></a>
+</li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-6">
+<li class="toc_level-1 toc_section-7">
 <a href="#checksums"><span class="tocnumber">5</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
@@ -229,7 +232,13 @@ project.</p>
 debugging information (<code class="highlighter-rouge">-g</code>/<code class="highlighter-rouge">-g3</code>) prevents <code class="highlighter-rouge">-flto</code> to properly link. 
 For Release configurations it is not a problem to remove the debug
 options, but for Debug configurations this is unusable. The workaround 
-is to revert to the previous 7-2018-q2-update release, or to temporarily disable <code class="highlighter-rouge">-flto</code>.</p>
+is to revert to the previous 7-2018-q2-update release, or to temporarily disable <code class="highlighter-rouge">-flto</code>. (<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89183">89183</a>)</p>
+
+<h3 id="lto--paths-with-spaces-on-windows">LTO &amp; paths with spaces on Windows</h3>
+
+<p>When installing on Windows in locations with spaces in folder names,
+the link step fails for builds using LTO.
+(<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89249">89249</a>)</p>
 
 <h2 id="checksums">Checksums</h2>
 
@@ -264,7 +273,7 @@ gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.3-20190202-1016-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>arm</strong>, <strong>arm-none-eabi-gcc</strong>, <strong>gcc</strong>, <strong>binaries</strong>, <strong>lto</strong>.
-Last modified on Sun Feb  3 19:56:42 2019 UTC.
+Last modified on Fri Feb 15 08:57:50 2019 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/02/02/arm-none-eabi-gcc-v8-2-1-1-3-released/" data-layout="button"></div></li>
@@ -280,8 +289,8 @@ Last modified on Sun Feb  3 19:56:42 2019 UTC.
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2019/02/14/arm-none-eabi-gcc-v8-2-1-1-4-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.4 20190214 released</a></li>
   <li><a href="/blog/2019/02/11/qemu-v2-8-0-4-20190211-released/">GNU MCU Eclipse QEMU v2.8.0-4-20190211 released</a></li>
-  <li><a href="/blog/2019/02/05/arm-none-eabi-gcc-v8-2-1-1-4-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.4 20190214 released</a></li>
   <li><a href="/blog/2019/02/02/arm-none-eabi-gcc-v8-2-1-1-3-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.3 20190202 released</a></li>
   <li><a href="/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.2 20190119 released</a></li>
   <li><a href="/blog/2019/01/18/openocd-v0-10-0-11-20190118-released/">GNU MCU Eclipse OpenOCD v0.10.0-11-20190118 released</a></li>
