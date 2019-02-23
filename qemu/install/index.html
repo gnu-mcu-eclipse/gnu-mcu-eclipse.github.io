@@ -169,11 +169,6 @@ xPacks repository, which is a platform dependent folder:</p>
 <code class="highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the 
 <a href="https://xpack.github.io/xpm/files/folders/">xpm folders</a> page.</p>
 
-<p>Note 2: The method to select the path based on the xPack version was 
-already added to the Eclipse plug-in, but for now is only available 
-in the version published on the test site
-(http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test/).</p>
-
 <h2 id="manual-install">Manual install</h2>
 
 <p>The all platforms, <strong>GNU MCU Eclipse QEMU</strong> is released as a portable 
@@ -183,7 +178,7 @@ archive that can be installed in any location.</p>
 <a href="https://github.com/gnu-mcu-eclipse/qemu/releases">GitHub Releases</a> page.</p>
 
 <p>
-<img src="/assets/images/2015/github-gae-qemu-release-2-3.png" alt="The QEMU Releases page">
+<img src="/assets/images/2019/github-qemu-release.png" alt="The QEMU Releases page">
 </p>
 
 <h3 id="windows">Windows</h3>
@@ -192,8 +187,8 @@ archive that can be installed in any location.</p>
 Download the latest version named like:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-win32.zip</code></li>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-win64.zip</code></li>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win32.zip</code></li>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip</code></li>
 </ul>
 
 <p>Select the <code class="highlighter-rouge">-win64</code> file for Windows x64 machines and the <code class="highlighter-rouge">-win32</code> file 
@@ -202,8 +197,8 @@ for Windows x32 machines.</p>
 <p>Unpack the archive and copy it into the 
 <code class="highlighter-rouge">%userprofile%\AppData\Roaming\GNU MCU Eclipse</code> (for example 
 <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse</code>) folder; according 
-to Microsoft, this is the recommended location for installing user 
-specific packages;</p>
+to Microsoft, <code class="highlighter-rouge">AppData\Roaming</code> is the recommended location for installing 
+user specific packages;</p>
 
 <blockquote>
   <p>Note: although perfectly possible to install QEMU in any folder, it 
@@ -214,7 +209,7 @@ searches for the executable in this location.</p>
 <p>The result is a structure like:</p>
 
 <p>
-<img src="/assets/images/2015/windows-install-folders.png" alt="QEMU Windows folders layout">
+<img src="/assets/images/2019/windows-qemu-install-folders.png" alt="QEMU Windows folders layout">
 </p>
 
 <p>To check if QEMU starts, use the following command:</p>
@@ -222,9 +217,9 @@ searches for the executable in this location.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">C:\&gt;</span><span class="s2">"</span><span class="se">\P</span><span class="s2">rogram Files</span><span class="se">\G</span><span class="s2">NU MCU Eclipse</span><span class="se">\Q</span><span class="s2">EMU</span><span class="se">\2</span><span class="s2">.8.0-3-20180523</span><span class="se">\b</span><span class="s2">in</span><span class="se">\q</span><span class="s2">emu-system-gnuarmeclipse.exe"</span> <span class="nt">--version</span>
-<span class="go">GNU MCU Eclipse 32-bit QEMU emulator version 2.8.0-3
-Copyright (c) 2003-2008 Fabrice Bellard
+<code><span class="gp">C:\Users\ilg&gt;</span><span class="s2">"C:</span><span class="se">\U</span><span class="s2">sers</span><span class="se">\i</span><span class="s2">lg</span><span class="se">\A</span><span class="s2">ppData</span><span class="se">\R</span><span class="s2">oaming</span><span class="se">\G</span><span class="s2">NU MCU Eclipse</span><span class="se">\Q</span><span class="s2">EMU</span><span class="se">\2</span><span class="s2">.8.0-4-20190211-0633</span><span class="se">\b</span><span class="s2">in</span><span class="se">\q</span><span class="s2">emu-system-gnuarmeclipse.exe"</span> <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0-4 (v2.8.0-3-20180523-6-gee07085299-dirty)
+Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 </span></code></pre>
 </div>
 </div>
@@ -239,20 +234,20 @@ Copyright (c) 2003-2008 Fabrice Bellard
 Download the latest version named like:</p>
 
 <ul>
-  <li> <code class="highlighter-rouge">gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-macos.tgz</code>
+  <li> <code class="highlighter-rouge">gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-macos.tgz</code>
 </li>
 </ul>
 
 <p>To install QEMU, unpack the archive and copy it to 
-<code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/qemu/</code>:</p>
+<code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/qemu/${version}</code>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
 <span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-macos.tgz
-<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> gnu-mcu-eclipse/qemu/2.8.0-3-20180523-0703
+<span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-macos.tgz
+<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> gnu-mcu-eclipse/qemu/2.8.0-4-20190211-0633
 </code></pre>
 </div>
 </div>
@@ -268,8 +263,8 @@ for the executable in this location.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnuarmeclipse/qemu/2.8.0-3-20180523-0703/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
-<span class="go">GNU MCU Eclipse 64-bit QEMU emulator version 2.8.0-3
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/qemu/2.8.0-4-20190211-0633/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0-4 (v2.8.0-3-20180523-6-gee07085299-dirty)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 </span></code></pre>
 </div>
@@ -281,8 +276,8 @@ Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 archives. Download the latest version named like:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-centos64.tgz</code></li>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-centos32.tgz</code></li>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-centos32.tgz</code></li>
+  <li><code class="highlighter-rouge">gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-centos64.tgz</code></li>
 </ul>
 
 <p>As the name implies, these are CentOS <code class="highlighter-rouge">tar.gz</code> archives, but can be 
@@ -297,8 +292,8 @@ for 64-bit machines and the <code class="highlighter-rouge">-centos32</code> fil
 <pre class="highlight">
 <code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
 <span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-3-20180523-0703-debian64.tgz
-<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> gnu-mcu-eclipse/qemu/2.8.0-3-20180523-0703
+<span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-centos64.tgz
+<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> gnu-mcu-eclipse/qemu/2.8.0-4-20190211-0633
 </code></pre>
 </div>
 </div>
@@ -314,8 +309,8 @@ for the executable in this location.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnuarmeclipse/qemu/2.8.0-3-20180523-0703/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
-<span class="go">GNU MCU Eclipse 64-bit QEMU emulator version 2.8.0-3
+<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/qemu/2.8.0-4-20190211-0633/bin/qemu-system-gnuarmeclipse <span class="nt">--version</span>
+<span class="go">GNU MCU Eclipse 64-bits QEMU emulator version 2.8.0-4 (v2.8.0-3-20180523-6-gee07085299-dirty)
 Copyright (c) 2003-2016 Fabrice Bellard and the QEMU Project developers
 </span></code></pre>
 </div>
@@ -333,7 +328,7 @@ need to be installed <a href="/plugins/install/">as usual</a>.
 Be sure that the <strong>GNU MCU C/C++ QEMU Debugging</strong> plug-ins are selected.</p>
 
 <p>
-<img src="/assets/images/2015/install-new-software-updates-qemu.png" alt="Install the QEMU plug-ins">
+<img src="/assets/images/2019/install-new-software-updates-qemu.png" alt="Install the QEMU plug-ins">
 </p>
 
 <h2 id="update-qemu-path">Update QEMU path</h2>
@@ -366,7 +361,7 @@ page, where the entire procedure is explained.</p>
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Mon Aug 20 13:05:59 2018 UTC.</p>
+<p class="page-footer">Last modified on Sat Feb 23 17:47:22 2019 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/qemu/install/" data-layout="button"></div></li>
@@ -493,7 +488,7 @@ page, where the entire procedure is explained.</p>
   <li><a href="/toolchain/riscv/support/">Support</a></li>
 </ul>
 
-<h4 id="gnu-arm-qemu-home"><a href="/qemu/">GNU ARM QEMU Home</a></h4>
+<h4 id="gnu-mcu-qemu-home"><a href="/qemu/">GNU MCU QEMU Home</a></h4>
 
 <ul>
   <li>
