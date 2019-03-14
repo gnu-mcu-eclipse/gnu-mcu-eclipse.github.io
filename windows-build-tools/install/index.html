@@ -136,15 +136,21 @@
 </div>
 <h2 id="overview">Overview</h2>
 
-<p>If your development platform is Windows, you need to install two additional command line programs, <code class="highlighter-rouge">make</code> and <code class="highlighter-rouge">rm</code>, required by the Eclipse external builder.</p>
+<p>If your development platform is Windows, you need to install two 
+additional command line programs, <code class="highlighter-rouge">make</code> and <code class="highlighter-rouge">rm</code>, required by the 
+Eclipse external builder.</p>
 
-<p>Unfortunately, most current toolchains do not provide these two programs in their windows distribution.</p>
+<p>Unfortunately, most current toolchains do not provide these two 
+programs in their windows distribution.</p>
 
-<p>On macOS and GNU/Linux these programs are part of the standard distributions, either directly or in separate Developer packages, so the following steps do not apply.</p>
+<p>On macOS and GNU/Linux these programs are part of the standard 
+distributions, either directly or in separate Developer packages, 
+so the following steps do not apply.</p>
 
 <h2 id="the-xpack-install">The xPack install</h2>
 
-<p>This method uses the portable tool <a href="https://www.npmjs.com/package/xpm">xpm</a>, the <strong>xPack Package Manager</strong>, and can be used on Windows, macOS and GNU/Linux.</p>
+<p>This method uses the portable tool <a href="https://www.npmjs.com/package/xpm">xpm</a>, 
+the <strong>xPack Package Manager</strong>, and can be used on Windows, macOS and GNU/Linux.</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
@@ -154,13 +160,16 @@
 </div>
 </div>
 
-<p>This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder:</p>
+<p>This will always install the latest available version, in the central 
+xPacks repository, which is a platform dependent folder:</p>
 
 <ul>
   <li>Windows: <code class="highlighter-rouge">%APPDATA%\xPacks</code> (<code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks</code>)</li>
 </ul>
 
-<p>Note: This location is configurable using the environment variable <code class="highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the <a href="https://xpack.github.io/xpm/files/folders/">xpm folders</a> page.</p>
+<p>Note: This location is configurable using the environment variable 
+<code class="highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the 
+<a href="https://xpack.github.io/xpm/files/folders/">xpm folders</a> page.</p>
 
 <p>The actual binaries are extracted from the distribution archive in a 
 folder named <code class="highlighter-rouge">.content</code>, located in the versioned xPack folder. On some
@@ -176,7 +185,10 @@ require additional settings to make them visible.</p>
 
 <h3 id="download-the-archive">Download the archive</h3>
 
-<p>The Windows versions of <strong>GNU MCU Eclipse Windows Build Tools</strong> are packed as ZIP files. Go to the <a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/releases">GitHub Releases</a> page and download the latest version named like:</p>
+<p>The Windows versions of <strong>GNU MCU Eclipse Windows Build Tools</strong> are packed 
+as ZIP files. Go to the 
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/releases">GitHub Releases</a> 
+page and download the latest version named like:</p>
 
 <ul>
   <li><code class="highlighter-rouge">gnu-mcu-eclipse-build-tools-2.10-20180103-1919-win64.zip</code></li>
@@ -187,9 +199,12 @@ require additional settings to make them visible.</p>
 
 <p>Unpack the archive and copy it into the <code class="highlighter-rouge">%userprofile%\AppData\Roaming\GNU MCU Eclipse</code> (for example <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse</code>) folder.</p>
 
-<blockquote>
-  <p>Note: although perfectly possible to install the build tools in any folder, it is highly recommended to use this path, since by default the plug-in searches for the executable in this location.</p>
-</blockquote>
+<p>Note: although perfectly possible to install the build tools in any folder, 
+it is highly recommended to use this path, since by default the plug-in 
+searches for the executable in this location.</p>
+
+<p>Note: For manual installs, the recommended install location is different from
+the xPack install folder.</p>
 
 <h3 id="check-version">Check version</h3>
 
@@ -227,7 +242,7 @@ There is NO WARRANTY, to the extent permitted by law.
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Thu Mar 14 19:48:04 2019 UTC.</p>
+<p class="page-footer">Last modified on Thu Mar 14 20:13:51 2019 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/windows-build-tools/install/" data-layout="button"></div></li>

@@ -213,7 +213,8 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 
 <h3 id="the-xpack-install">The xPack install</h3>
 
-<p>This method uses the portable tool <a href="https://www.npmjs.com/package/xpm">xpm</a>, the <strong>xPack Package Manager</strong>, and can be used on Windows, macOS and GNU/Linux.</p>
+<p>This method uses the portable tool <a href="https://www.npmjs.com/package/xpm">xpm</a>, 
+the <strong>xPack Package Manager</strong>, and can be used on Windows, macOS and GNU/Linux.</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
@@ -223,7 +224,8 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 </div>
 </div>
 
-<p>This will always install the latest available version, in the central xPacks repository, which is a platform dependent folder in the user home:</p>
+<p>This will always install the latest available version, in the central 
+xPacks repository, which is a platform dependent folder in the user home:</p>
 
 <ul>
   <li>Windows: <code class="highlighter-rouge">%APPDATA%\xPacks</code> (or <code class="highlighter-rouge">%userprofile%\AppData\Roaming\xPacks</code>, like <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks</code>)</li>
@@ -233,9 +235,10 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 </li>
 </ul>
 
-<p>This location is also known by Eclipse, so it can automatically identify the installed toolchains.</p>
+<p>This location is also known by Eclipse, so it can automatically identify the 
+installed toolchains.</p>
 
-<p>Note 1: This location is configurable using the environment variable 
+<p>Note: This location is configurable using the environment variable 
 <code class="highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the 
 <a href="https://xpack.github.io/xpm/files/folders/">xpm folders</a> page.</p>
 
@@ -251,13 +254,18 @@ require additional settings to make them visible.</p>
 
 <h3 id="manual-install">Manual install</h3>
 
-<p>For all platforms, the <strong>GNU MCU Eclipse ARM Embedded GCC</strong> toolchain is released as a portable archive that can be installed in any location.</p>
+<p>For all platforms, the <strong>GNU MCU Eclipse ARM Embedded GCC</strong> toolchain is 
+released as a portable archive that can be installed in any location.</p>
 
-<p>The archives can be downloaded from <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases">GitHub Releases</a>.</p>
+<p>The archives can be downloaded from 
+<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases">GitHub Releases</a>.</p>
 
 <p>
 <img src="/assets/images/2018/arm-toolchain-releases.png" alt="ARM toolchain releases">
 </p>
+
+<p>Note: For manual installs, the recommended install location is different from
+the xPack install folder.</p>
 
 <h4 id="windows">Windows</h4>
 
@@ -608,7 +616,7 @@ ${user.home}/local:\
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Thu Mar 14 19:48:04 2019 UTC.</p>
+<p class="page-footer">Last modified on Thu Mar 14 20:13:51 2019 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/arm/install/" data-layout="button"></div></li>
