@@ -235,7 +235,14 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
 
 <p>This location is also known by Eclipse, so it can automatically identify the installed toolchains.</p>
 
-<p>Note: This location is configurable using the environment variable <code class="highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the <a href="https://xpack.github.io/xpm/files/folders/">xpm folders</a> page.</p>
+<p>Note 1: This location is configurable using the environment variable 
+<code class="highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the 
+<a href="https://xpack.github.io/xpm/files/folders/">xpm folders</a> page.</p>
+
+<p>The actual binaries are extracted from the distribution archive in a 
+folder named <code class="highlighter-rouge">.content</code>, located in the versioned xPack folder. On some
+platforms, dotted files are hidden by default, so the file explorer might
+require additional settings to make them visible.</p>
 
 <blockquote>
   <p>Windows antivirus warning: aggressive antiviruses may prevent
@@ -601,7 +608,7 @@ ${user.home}/local:\
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Sun Feb 24 20:21:51 2019 UTC.</p>
+<p class="page-footer">Last modified on Thu Mar 14 19:48:04 2019 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/arm/install/" data-layout="button"></div></li>
