@@ -134,7 +134,7 @@ Posted on April 22, 2019 by Liviu Ionescu.
 <a href="#known-problems"><span class="tocnumber">3</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#download"><span class="tocnumber">4</span> <span class="toctext">Download</span></a>
+<a href="#binaries"><span class="tocnumber">4</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
 <a href="#checksums"><span class="tocnumber">5</span> <span class="toctext">Checksums</span></a>
@@ -165,13 +165,36 @@ Posted on April 22, 2019 by Liviu Ionescu.
   <li>none so far</li>
 </ul>
 
-<h2 id="download">Download</h2>
+<h2 id="binaries">Binaries</h2>
 
-<p>The new Windows Build Tools can be downloaded from the <a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/releases/tag/v2.12-20190422/">GitHub Release</a> page.</p>
+<p>Only binaries for <strong>Windows</strong> are provided.</p>
 
-<p>Separate archive files are provided for Windows 32/64-bit systems.</p>
+<p>They were built with mingw-w64, and run on any reasonably 
+recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
 
-<p>Note: by design, installing the xPack binaries does not require administrative rights, thus only portable archives are provided; Windows setups are no longer supported.</p>
+<p>Instructions on how to install the binaries are available in the 
+<a href="https://gnu-mcu-eclipse.github.io/windows-build-tools/install/">How to install the Windows Build Tools?</a>
+page.</p>
+
+<p>The build tools are also available as an 
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/windows-build-tools">xPack</a> 
+and can be conveniently installed with 
+<a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/windows-build-tools
+</code></pre>
+</div>
+</div>
+
+<p>This installs the latest available version.</p>
+
+<p>For better control and repeatability, the build scripts use Docker containers; 
+all files required during builds are available as a separate 
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools">gnu-mcu-eclipse/windows-build-tools</a>
+project.</p>
 
 <h2 id="checksums">Checksums</h2>
 
@@ -199,7 +222,7 @@ Posted in
 <strong>releases</strong>, <strong>windows-build-tools</strong> and tagged
 
 <strong>windows</strong>, <strong>build</strong>, <strong>make</strong>, <strong>rm</strong>, <strong>mkdir</strong>, <strong>busybox</strong>.
-Last modified on Mon Apr 22 16:15:54 2019 UTC.
+Last modified on Mon Apr 22 16:56:42 2019 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/04/22/windows-build-tools-v2-12-20190422-released/" data-layout="button"></div></li>
