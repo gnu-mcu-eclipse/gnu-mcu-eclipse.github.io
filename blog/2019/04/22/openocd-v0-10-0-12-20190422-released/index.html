@@ -10,16 +10,18 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>How to install the SEGGER J-Link?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
+  <title>GNU MCU Eclipse OpenOCD v0.10.0-12 20190422 released</title>
+  <meta name="description" content="Version v0.10.0-12-20190422 is a maintenance release; it updates to the latest upstream master.">
 
-  <meta property="og:title" content="How to install the SEGGER J-Link?">
+  <meta property="og:title" content="GNU MCU Eclipse OpenOCD v0.10.0-12 20190422 released">
   <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
-  <meta property="article:published_time" content="2015-09-11">
+  <meta property="article:published_time" content="2019-04-22">
 
 
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="openocd">
 
 
 
@@ -30,7 +32,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
 
-  <link rel="canonical" href="/debug/jlink/install/">
+  <link rel="canonical" href="/blog/2019/04/22/openocd-v0-10-0-12-20190422-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
@@ -89,9 +91,23 @@
 <div id="site-body">
 <section id="main-content">
 
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2019/04/22/windows-build-tools-v2-12-20190422-released/">←</a></td>
+    <td><a href="/blog/2019/04/22/windows-build-tools-v2-12-20190422-released/">GNU MCU Eclipse Windows Build Tools v2.12-20190422 released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-<h1 class="page-title">How to install the SEGGER J-Link?</h1>
 
+<h1 class="post-title">GNU MCU Eclipse OpenOCD v0.10.0-12 20190422 released</h1>
+
+
+<p class="post-meta">
+Posted on April 22, 2019 by Liviu Ionescu.
+</p>
 
 <div id="toc-container">
 <table class="toc" id="toc">
@@ -103,38 +119,19 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#why-j-link"><span class="tocnumber">1</span> <span class="toctext">Why J-Link?</span></a>
+<a href="#changes"><span class="tocnumber">1</span> <span class="toctext">Changes</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#overview"><span class="tocnumber">2</span> <span class="toctext">Overview</span></a>
+<a href="#known-problems"><span class="tocnumber">2</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#documentation"><span class="tocnumber">3</span> <span class="toctext">Documentation</span></a>
+<a href="#build-notes"><span class="tocnumber">3</span> <span class="toctext">Build notes</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#windows"><span class="tocnumber">4</span> <span class="toctext">Windows</span></a>
+<a href="#binaries"><span class="tocnumber">4</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#macos"><span class="tocnumber">5</span> <span class="toctext">macOS</span></a>
-<ul>
-<li class="toc_level-2 toc_section-6">
-<a href="#usb"><span class="tocnumber">5.1</span> <span class="toctext">USB</span></a>
-</li>
-</ul>
-</li>
-<li class="toc_level-1 toc_section-7">
-<a href="#gnulinux"><span class="tocnumber">6</span> <span class="toctext">GNU/Linux</span></a>
-<ul>
-<li class="toc_level-2 toc_section-8">
-<a href="#udev"><span class="tocnumber">6.1</span> <span class="toctext">UDEV</span></a>
-</li>
-</ul>
-</li>
-<li class="toc_level-1 toc_section-9">
-<a href="#testing"><span class="tocnumber">7</span> <span class="toctext">Testing</span></a>
-</li>
-<li class="toc_level-1 toc_section-10">
-<a href="#the-j-link-plug-in"><span class="tocnumber">8</span> <span class="toctext">The J-Link plug-in</span></a>
+<a href="#checksums"><span class="tocnumber">5</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
@@ -142,188 +139,106 @@
 </tbody>
 </table>
 </div>
-<h2 id="why-j-link">Why J-Link?</h2>
-
-<p>In case you wonder why GNU MCU Eclipse decided to provide support to SEGGER J-Link, the short answer is: <strong>because of <a href="http://www.segger.com/j-link-edu.html">J-Link EDU</a> and of SWO.</strong> The long answer may include the following:</p>
-
-<ul>
-  <li>
-<strong>wide processor support</strong> (there is probably no unsupported ARM processor in the entire galaxy, and if you find one in a remote quadrant, I’m pretty sure it’ll be shortly added to the list)</li>
-  <li>it is a true <strong>multi-platform</strong> solution, providing drivers for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong>
-</li>
-  <li>it comes with a <strong>standard GDB server</strong> implementation, compatible with existing ARM toolchains</li>
-  <li>in addition to the classical <strong>JTAG</strong> protocol, it implements the new <strong>SWD</strong> protocol</li>
-  <li>when SWD is selected, it is capable to sample the <strong>SWO</strong> pin, for trace messages and other ARM specific debugging</li>
-  <li>it is fast, up to <strong>15 MHz</strong> for <strong>JTAG</strong> clock and up to <strong>7.5 MHz SWO</strong> sampling frequency for the new <strong>V9</strong> hardware (12 MHz JTAG / 6 MHz SWO for V8, and even up to <strong>100 MHz SWO</strong> for the high-performance <strong>ULTRA+, PRO</strong> models)</li>
-  <li>it supports all possible target voltages, from <strong>1.2V to 5V</strong>
-</li>
-  <li>in addition to the regular debugging functionality, it is also able to write the internal flash, and, even more, it uses a smart flash writing algorithm, to avoid useless writes if the flash blocks did not change</li>
-  <li>it is a mature, proven product, with a great support team</li>
-  <li>it provides an entire range of probes, <a href="http://www.segger.com/jlink_base.html">J-Link</a>, <a href="http://www.segger.com/jlink-pro.html">J-Link Pro</a>, including a <strong>special priced version for educational use</strong>, the <a href="http://www.segger.com/j-link-edu.html">J-Link EDU</a> (available from many distributors, for example from <a href="http://uk.farnell.com/segger/8-08-90-j-link-edu/jtag-emulator-j-link-edu-usb/dp/2098545">Farnell</a>)</li>
-</ul>
-
-<p>The J-Link was present on the JTAG market for many years, but, considering the initial prices, only the big companies could afford them. After a fierce fight against Chinese clones, sold for a fraction of the price, in 2012 <a href="http://www.segger.com/">SEGGER</a> decided to introduce a low price version, <a href="http://www.segger.com/j-link-edu.html">J-Link EDU</a>, restricted to educational and non-commercial usage, making it the JTAG probe of choice for open source GNU ARM development.</p>
-
-<h2 id="overview">Overview</h2>
-
-<p>J-Link comes not only with a GDB server, but with a complete set of drivers and utilities, packed by SEGGER separately for each platform. The same distribution includes drivers for all J-Link probes, so installation is quite simple. The J-Link binaries are available from the <a href="http://www.segger.com/jlink-software.html">SEGGER site</a>.</p>
-
-<p>There are different sections, grouped by platform (Windows, macOS, Linux, Linux ARM); go to the platform of your choice.</p>
-
-<p>Click the <strong>Download</strong> button close to the <strong>Software and documentation pack</strong> appropriate for your development platform. For Linux there are separate 32/64-bit versions, packed with different tools (DEB, RPM, TGZ); select the package that better matches your system.</p>
-
-<p>Accept the terms of the software agreement and download the software.</p>
-
-<h2 id="documentation">Documentation</h2>
-
-<p>The J-Link GDB server is documented in the <a href="https://www.segger.com/downloads/jlink/UM08001_JLink.pdf">UM08001</a> manual, available from the <a href="http://www.segger.com/jlink-software.html">SEGGER J-Link page</a>.</p>
-
-<h2 id="windows">Windows</h2>
-
-<p>The Windows file is a ZIP archive, named like <code class="highlighter-rouge">Setup_JLinkARM_V480.zip</code>. After unpacking it, a Windows executable file is obtained, named like <code class="highlighter-rouge">Setup_JLinkARM_V480.exe</code>.</p>
-
-<ul>
-  <li>double click it to start the installation process</li>
-  <li>enter the administrative password</li>
-  <li>accept the license</li>
-  <li>accept the destination folder (<code class="highlighter-rouge">C:\Program Files\SEGGER\JLinkARM_V480</code>)</li>
-  <li>accept the default USB driver</li>
-</ul>
-
-<p>The result of the install is a folder (a new folder for each new version installed), and a set of driver files installed in the system folders, overwritten with each new install.</p>
+<p>Version v0.10.0-12-20190422 is a maintenance release; it updates to the 
+latest upstream master.</p>
 
 <p>
-<img src="/assets/images/2014/01/Segger-win.png" alt="SEGGER Windows distribution">
+<a href="https://github.com/gnu-mcu-eclipse/openocd/releases/tag/v0.10.0-12-20190422/">Binary files »</a>
 </p>
 
-<p>Please note that on Windows, SEGGER provides both graphical interface and <strong>command line versions</strong> (having the names suffixed with <code class="highlighter-rouge">CL</code>) for most of their tools. For the J-Link plug-in it is recommended to use only the command line version of the  J-Link GDB server (<code class="highlighter-rouge">JLinkGDBServerCL.exe</code>).</p>
-
-<h2 id="macos">macOS</h2>
-
-<p>The macOS download is an macOS package installer, like <code class="highlighter-rouge">JLink_MacOSX_V480.pkg</code>.</p>
+<h2 id="changes">Changes</h2>
 
 <ul>
-  <li>double click it to start the installation process</li>
-  <li>accept the license</li>
-  <li>enter the administrative password, required to write in the global <code class="highlighter-rouge">/Applications</code> folder</li>
+  <li>none functionally relevant</li>
 </ul>
 
-<p>The result of the install is a folder like <code class="highlighter-rouge">/Applications/SEGGER/JLink_V641b/</code> (a different folder for each version) where all executables and libraries are stored; please note that, as for many macOS applications, no other driver files are installed in the system folders, but some symbolic links are created in the <code class="highlighter-rouge">/usr/local/bin</code> folder.</p>
+<h2 id="known-problems">Known problems</h2>
 
-<p>Be sure to update the path in Eclipse preferences page to point to the latest SEGGER J-Link software.</p>
+<ul>
+  <li>none.</li>
+</ul>
 
-<p>
-<img src="/assets/images/2014/01/Segger-OSX.png" alt="SEGGER macOS distribution">
-</p>
+<h2 id="build-notes">Build notes</h2>
 
-<h3 id="usb">USB</h3>
+<p>The build environment uses CentOS 6 Docker containers.</p>
 
-<p>On macOS, the USB subsystem automatically identifies and allows access to USB devices, without the need to maintain a manual list similar to the one used by UDEV in GNU/Linux. No other drivers or system configurations are required.</p>
+<h2 id="binaries">Binaries</h2>
 
-<h2 id="gnulinux">GNU/Linux</h2>
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
 
-<p>As already mentioned, there are multiple packages available for GNU/Linux on the SEGGER download site, built as Debian/Red Hat packages, in 32/64-bit versions, or plain TGZ archives. Select the one appropriate for you system and use the specific tools to install the package. For example, on Ubuntu, to install the 64-bit .deb file, use the following command:</p>
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+and run on any distribution based on CentOS 6 or later.</p>
+
+<p>The macOS binary was built on a macOS 10.10.5 and must run on any newer 
+macOS system.</p>
+
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
+
+<p>Instructions on how to install the binaries are available in the 
+<a href="/openocd/install/">How to install OpenOCD?</a>
+page.</p>
+
+<p>OpenOCD is also available as an 
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/openocd">xPack</a> and can 
+be conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">sudo </span>dpkg <span class="nt">-i</span> ~/Downloads/jlink_5.2.7_x86_64.deb
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/openocd@0.10.0-12.1
 </code></pre>
 </div>
 </div>
 
-<p>The J-Link executables are installed in <code class="highlighter-rouge">/usr/bin</code>.</p>
-
-<p>In case you have a 64-bit machine and install the 32-bit SEGGER package, you might need several 32-bit libraries, depending on distribution.</p>
-
-<h3 id="udev">UDEV</h3>
-
-<p>The install procedure automatically adds <strong>/etc/udev/rules.d/99-jlink.rules</strong> to define the USB IDs of the J-Link devices. No other drivers are required.</p>
-
-<h2 id="testing">Testing</h2>
-
-<p>To test if J-Link is able to connect to a specific board, you generally need to specify the interface (JTAG or SWD) and the device name. By default, J-Link GDBServer will try JTAG but if only SWD is wired (which is very common on custom hardware), you would need to specify the interface (-if SWD). The device name is needed for targets which require special handling on connect (e.g. due to silicon bugs which make auto-detection impossible). For a list of available device names, please refer to the SEGGER <a href="http://www.segger.com/jlink_supported_devices.html">Supported devices</a> page. Below is an example how to test a JTAG connection to a STM32F103 evaluation board (-device STM32F103RB) on macOS.</p>
+<p>To install the latest version available, use:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> /Applications/SEGGER/JLink/JLinkGDBServer <span class="nt">-if</span> JTAG <span class="nt">-device</span> STM32F103RB
-<span class="go">SEGGER J-Link GDB Server V4.80 Command Line Version
-
-JLinkARM.dll V4.80 (DLL compiled Dec 20 2013 19:44:31)
-
------GDB Server start settings-----
-GDBInit file:                  none
-GDB Server Listening port:     2331
-SWO raw output listening port: 2332
-Terminal I/O port:             2333
-Accept remote connection:      yes
-Generate logfile:              on
-Verify download:               on
-Init regs on start:            on
-Silent mode:                   off
-Single run mode:               off
-------J-Link related settings------
-J-Link script:                 none
-Target interface:              JTAG
-Host interface:                USB
-Target endian:                 little
-Target interface speed:        0kHz
-
-Connecting to J-Link...
-J-Link is connected.
-Firmware: J-Link ARM V8 compiled Nov 25 2013 19:20:08
-Hardware: V8.00
-S/N: XXXXXXXXX
-OEM: SEGGER-EDU
-Feature(s): FlashBP, GDB
-Checking target voltage...
-Listening on TCP/IP port 2331
-Connecting to target...
-J-Link found 2 JTAG devices, Total IRLen = 9
-JTAG ID: 0x3BA00477 (Cortex-M3)
-Connected to target
-Waiting for GDB connection...
-^C
-</span></code></pre>
-</div>
-</div>
-
-<p>On Windows, to start the GDB server, use back-slashes in the path and the CL (command line) version:</p>
-
-<div class="language-console highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code><span class="gp">C:\&gt;</span>C:<span class="se">\P</span>rogram Files<span class="se">\S</span>EGGER<span class="se">\J</span>LinkARM_V480<span class="se">\J</span>LinkGDBServerCL
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/openocd 
 </code></pre>
 </div>
 </div>
 
-<p>On Ubuntu the command is simple:</p>
+<h2 id="checksums">Checksums</h2>
 
-<div class="language-console highlighter-rouge">
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> /usr/bin/JLinkGDBServer
+<code>d8267cbd463a7a7691b573f95fd920c3d7cdf59747ce2571cb334b3247265106 
+gnu-mcu-eclipse-openocd-0.10.0-12-20190422-2015-centos32.tgz
+
+9a601ded65cc5a8c3537f5bc8e14b2c71c01188d4cd2e5192833fcd6950e992f 
+gnu-mcu-eclipse-openocd-0.10.0-12-20190422-2015-centos64.tgz
+
+bd06c5fb26ed506eb98444504d218ce759c26c09f837925f16d2981f7e2e5c08 
+gnu-mcu-eclipse-openocd-0.10.0-12-20190422-2015-macos.tgz
+
+48317eaec7ea8e100a676fc7e2d99a476760317d5a20d774c77ba7a1d2260dfc 
+gnu-mcu-eclipse-openocd-0.10.0-12-20190422-2015-win32.zip
+
+96cf095435c2fbed4616a903b294d758f3b1df14c6ba36224fa05fdc7ce93c1b 
+gnu-mcu-eclipse-openocd-0.10.0-12-20190422-2015-win64.zip
 </code></pre>
 </div>
 </div>
 
-<p>In all cases, the result should be similar to the one obtained on macOS.</p>
 
-<h2 id="the-j-link-plug-in">The J-Link plug-in</h2>
+<hr class="post-footer">
+<div class="post-footer">
+Posted in
 
-<p>If you successfully installed SEGGER binaries, you can proceed to the page documenting how to use the GNU MCU Eclipse <a href="/debug/jlink/" title="The J-Link hardware debugging Eclipse plug-in">J-Link debugging plug-in</a>.</p>
-
-
-
-<hr class="page-footer">
-<p class="page-footer">Last modified on Mon Jun  4 19:50:15 2018 UTC.</p>
+<strong>releases</strong>, <strong>openocd</strong>.
+Last modified on Tue Apr 23 17:14:06 2019 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
-  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/debug/jlink/install/" data-layout="button"></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/04/22/openocd-v0-10-0-12-20190422-released/" data-layout="button"></div></li>
 </ul>
 
+</div>
 
 
 </section>
