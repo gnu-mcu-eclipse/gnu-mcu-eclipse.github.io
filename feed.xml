@@ -5,15 +5,15 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 May 2019 06:20:01 +0000</pubDate>
-    <lastBuildDate>Mon, 13 May 2019 06:20:01 +0000</lastBuildDate>
+    <pubDate>Mon, 13 May 2019 06:31:57 +0000</pubDate>
+    <lastBuildDate>Mon, 13 May 2019 06:31:57 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</title>
         <description>&lt;p&gt;Version v8.2.1-1.6 20190510 is a maintenance release of 
-&lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt; that fixes the bugs affecting Windows 
-LTO builds, present in the previous release.&lt;/p&gt;
+&lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt; that (finally) fixes the bugs 
+affecting Windows LTO builds, present in the previous release.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 10 May 2019 03:05:00 +0000</pubDate>

@@ -11,7 +11,7 @@
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
   <title>GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</title>
-  <meta name="description" content="Version v8.2.1-1.6 20190510 is a maintenance release of GNU MCU Eclipse ARM Embedded GCC that fixes the bugs affecting Windows LTO builds, present in the pre...">
+  <meta name="description" content="Version v8.2.1-1.6 20190510 is a maintenance release of GNU MCU Eclipse ARM Embedded GCC that (finally) fixes the bugs affecting Windows LTO builds, present ...">
 
   <meta property="og:title" content="GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released">
   <meta property="og:site_name" content="GNU MCU Eclipse">
@@ -150,8 +150,8 @@ Posted on May 10, 2019 by Liviu Ionescu.
 </table>
 </div>
 <p>Version v8.2.1-1.6 20190510 is a maintenance release of 
-<strong>GNU MCU Eclipse ARM Embedded GCC</strong> that fixes the bugs affecting Windows 
-LTO builds, present in the previous release.</p>
+<strong>GNU MCU Eclipse ARM Embedded GCC</strong> that (finally) fixes the bugs 
+affecting Windows LTO builds, present in the previous release.</p>
 
 <p>
 <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.6/">Binary files »</a>
@@ -162,7 +162,9 @@ LTO builds, present in the previous release.</p>
 <p>This release follows the official 
 <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a> 
 <strong>8-2018-q4-major</strong> release from December 20, 2018 and it is based on the 
-<code class="highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2</code> source invariant.</p>
+<code class="highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2</code> source invariant,
+which include GCC 8.2.1. GDB was built with the latest available 
+sources (8.3.50).</p>
 
 <h2 id="changes">Changes</h2>
 
@@ -192,10 +194,11 @@ to find it and be able to process archives with LTO objects</li>
 </li>
 </ul>
 
-<p>GDB was built with the latest Git commit bda678b9 from 2019-05-09, 
+<p>Due to a large number of fixes needed, GDB was built with the 
+latest Git commit bda678b9 from 2019-05-09, 
 corresponding to GDB 8.3.50, to fix
 the bugs affecting C++ LTO projects
-<a href="https://sourceware.org/bugzilla/show_bug.cgi?id=24145">24145</a></p>
+<a href="https://sourceware.org/bugzilla/show_bug.cgi?id=24145">24145</a>.</p>
 
 <h2 id="python-3">Python 3</h2>
 
@@ -244,12 +247,16 @@ project.</p>
 
 <h2 id="tests">Tests</h2>
 
-<p>The binaries were testes on Windows 10 32/64-bit, Ubuntu 18 LTS 64-bit,
+<p>The binaries were testes on Windows 10 Pro 32/64-bit, Ubuntu 18 LTS 64-bit,
 Xubuntu 18 LTS 32-bit and macOS 10.13.</p>
 
-<p>The tests consist in building and debugging some<br>
+<p>The tests consist in building and debugging some 
 <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/tree/master/tests/eclipse">simple Eclipse projects</a>
 available in the build project.</p>
+
+<p>Since the source code used for GCC is identical to the one used by ARM, the
+long and complex tests performed by ARM to validate their release were not
+executed again.</p>
 
 <h2 id="known-problems">Known problems</h2>
 
@@ -290,7 +297,7 @@ gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>arm</strong>, <strong>arm-none-eabi-gcc</strong>, <strong>gcc</strong>, <strong>binaries</strong>, <strong>lto</strong>.
-Last modified on Mon May 13 06:17:51 2019 UTC.
+Last modified on Mon May 13 06:29:35 2019 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/" data-layout="button"></div></li>
