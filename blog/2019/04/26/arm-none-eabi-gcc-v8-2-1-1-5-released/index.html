@@ -100,8 +100,8 @@
     <td><a href="/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/">←</a></td>
     <td><a href="/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.1 20190425 released</a></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</a></td>
+    <td><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">→</a></td>
   </tr>
 </table>
 
@@ -123,22 +123,30 @@ Posted on April 26, 2019 by Liviu Ionescu.
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#compliance"><span class="tocnumber">1</span> <span class="toctext">Compliance</span></a>
+<a href="#deprecated"><span class="tocnumber">1</span> <span class="toctext">Deprecated</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#changes"><span class="tocnumber">2</span> <span class="toctext">Changes</span></a>
+<a href="#compliance"><span class="tocnumber">2</span> <span class="toctext">Compliance</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#python-3"><span class="tocnumber">3</span> <span class="toctext">Python 3</span></a>
+<a href="#changes"><span class="tocnumber">3</span> <span class="toctext">Changes</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#binaries"><span class="tocnumber">4</span> <span class="toctext">Binaries</span></a>
+<a href="#python-3"><span class="tocnumber">4</span> <span class="toctext">Python 3</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#known-problems"><span class="tocnumber">5</span> <span class="toctext">Known problems</span></a>
+<a href="#binaries"><span class="tocnumber">5</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#checksums"><span class="tocnumber">6</span> <span class="toctext">Checksums</span></a>
+<a href="#known-problems"><span class="tocnumber">6</span> <span class="toctext">Known problems</span></a>
+<ul>
+<li class="toc_level-2 toc_section-7">
+<a href="#windows-paths-with-spaces"><span class="tocnumber">6.1</span> <span class="toctext">Windows paths with spaces</span></a>
+</li>
+</ul>
+</li>
+<li class="toc_level-1 toc_section-8">
+<a href="#checksums"><span class="tocnumber">7</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
@@ -153,6 +161,10 @@ LTO builds, present in the previous release.</p>
 <p>
 <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.5/">Binary files »</a>
 </p>
+
+<h2 id="deprecated">Deprecated</h2>
+
+<p>Use v8.2.1-1.6.</p>
 
 <h2 id="compliance">Compliance</h2>
 
@@ -241,9 +253,11 @@ project.</p>
 
 <h2 id="known-problems">Known problems</h2>
 
-<ul>
-  <li>none (so far)</li>
-</ul>
+<h3 id="windows-paths-with-spaces">Windows paths with spaces</h3>
+
+<p>Installing the toolchain in locations which use spaces in the path is still problematic.</p>
+
+<p>Temporarily move the toolchain to paths which do not use spaces, or, even better, install it via <code class="highlighter-rouge">xpm</code>, which uses safe paths.</p>
 
 <h2 id="checksums">Checksums</h2>
 
@@ -278,7 +292,7 @@ gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.5-20190426-0353-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>arm</strong>, <strong>arm-none-eabi-gcc</strong>, <strong>gcc</strong>, <strong>binaries</strong>, <strong>lto</strong>.
-Last modified on Sun Apr 28 21:08:56 2019 UTC.
+Last modified on Mon May 13 06:17:51 2019 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/" data-layout="button"></div></li>
@@ -294,11 +308,11 @@ Last modified on Sun Apr 28 21:08:56 2019 UTC.
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</a></li>
   <li><a href="/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released</a></li>
   <li><a href="/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.1 20190425 released</a></li>
   <li><a href="/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/">GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</a></li>
   <li><a href="/blog/2019/04/22/openocd-v0-10-0-12-20190422-released/">GNU MCU Eclipse OpenOCD v0.10.0-12 20190422 released</a></li>
-  <li><a href="/blog/2019/04/22/windows-build-tools-v2-12-20190422-released/">GNU MCU Eclipse Windows Build Tools v2.12 20190422 released</a></li>
 </ul>
 
 

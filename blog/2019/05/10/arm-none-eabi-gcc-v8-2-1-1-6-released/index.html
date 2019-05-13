@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
+
+  <title>GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</title>
+  <meta name="description" content="Version v8.2.1-1.6 20190510 is a maintenance release of GNU MCU Eclipse ARM Embedded GCC that fixes the bugs affecting Windows LTO builds, present in the pre...">
+
+  <meta property="og:title" content="GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
+
+
+  <meta property="article:published_time" content="2019-05-10">
+
+
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="arm">
+  <meta property="article:section" content="arm-none-eabi-gcc">
+  <meta property="article:section" content="gcc">
+  <meta property="article:section" content="binaries">
+  <meta property="article:section" content="lto">
+
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
+
+  <link rel="canonical" href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/manifest.json">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-16', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<header>
+  <div class="inner">
+    <h1><a href="/">GNU MCU Eclipse</a></h1>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
+    <div id="buttons">
+      <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
+    </div>
+  </div>
+</header>
+
+
+<div id="content-wrapper">
+<div class="inner clearfix">
+
+<div id="site-body">
+<section id="main-content">
+
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/">←</a></td>
+    <td><a href="/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+
+<h1 class="post-title">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</h1>
+
+
+<p class="post-meta">
+Posted on May 10, 2019 by Liviu Ionescu.
+</p>
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#compliance"><span class="tocnumber">1</span> <span class="toctext">Compliance</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#changes"><span class="tocnumber">2</span> <span class="toctext">Changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#python-3"><span class="tocnumber">3</span> <span class="toctext">Python 3</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#binaries"><span class="tocnumber">4</span> <span class="toctext">Binaries</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#tests"><span class="tocnumber">5</span> <span class="toctext">Tests</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#known-problems"><span class="tocnumber">6</span> <span class="toctext">Known problems</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#checksums"><span class="tocnumber">7</span> <span class="toctext">Checksums</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Version v8.2.1-1.6 20190510 is a maintenance release of 
+<strong>GNU MCU Eclipse ARM Embedded GCC</strong> that fixes the bugs affecting Windows 
+LTO builds, present in the previous release.</p>
+
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc/releases/tag/v8.2.1-1.6/">Binary files »</a>
+</p>
+
+<h2 id="compliance">Compliance</h2>
+
+<p>This release follows the official 
+<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a> 
+<strong>8-2018-q4-major</strong> release from December 20, 2018 and it is based on the 
+<code class="highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2</code> source invariant.</p>
+
+<h2 id="changes">Changes</h2>
+
+<p>Compared to the ARM distribution, the build procedure is more or less the 
+same and there should be no functional differences, except the following 
+bug fixes:</p>
+
+<ul>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/4">#4</a>]
+the Windows paths with spaces bug apparently was caused by an old version of 
+and with the new version (5.0.4) the 
+<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89249">89249</a> 
+<code class="highlighter-rouge">gcc.c</code> patch is no longer needed;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/3">#3</a>]
+due to a problem in the GCC configure script and the specifics of the static
+build, LTO was not effective on Windows, and the initial workaround proved 
+not effective either; in the new build environment the configure script is
+enables LTO and it is functional on windows too;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/issues/1">#1</a>]
+the <code class="highlighter-rouge">liblto_plugin</code> copied/linked to the <code class="highlighter-rouge">lib/bdf-plugins</code> for <code class="highlighter-rouge">ar</code>
+to find it and be able to process archives with LTO objects</li>
+  <li>a patch was applied to binutils to fix the 32-bit objcopy bug 
+<a href="https://sourceware.org/bugzilla/show_bug.cgi?id=24065">24065</a>
+</li>
+  <li>a patch was applied to gcc to fix the Windows LTO with -g bug
+<a href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=89183">89183</a>
+</li>
+</ul>
+
+<p>GDB was built with the latest Git commit bda678b9 from 2019-05-09, 
+corresponding to GDB 8.3.50, to fix
+the bugs affecting C++ LTO projects
+<a href="https://sourceware.org/bugzilla/show_bug.cgi?id=24145">24145</a></p>
+
+<h2 id="python-3">Python 3</h2>
+
+<p>Experimental support was added for Python 3 in GDB. Unfortunately compiling
+GDB with mingw-w64 requires an update to the new Python 3
+API, not yet available at the moment of this release.</p>
+
+<p>Also support for 32-bit machines might not be fully functional.</p>
+
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+and run on any distribution based on CentOS 6 or later.</p>
+
+<p>The macOS binary was built on a macOS 10.10.5 and must run on any newer 
+macOS system.</p>
+
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
+
+<p>Instructions on how to install the binaries are available in the 
+<a href="/toolchain/arm/install/">How to install the ARM toolchain?</a>
+page.</p>
+
+<p>The toolchain is also available as an 
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/arm-none-eabi-gcc">xPack</a> 
+and can be conveniently installed with 
+<a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
+</code></pre>
+</div>
+</div>
+
+<p>This installs the latest available version.</p>
+
+<p>For better control and repeatability, the build scripts use Docker containers; 
+all files required during builds are available as a separate 
+<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build">gnu-mcu-eclipse/arm-none-eabi-gcc-build</a>
+project.</p>
+
+<h2 id="tests">Tests</h2>
+
+<p>The binaries were testes on Windows 10 32/64-bit, Ubuntu 18 LTS 64-bit,
+Xubuntu 18 LTS 32-bit and macOS 10.13.</p>
+
+<p>The tests consist in building and debugging some<br>
+<a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc-build/tree/master/tests/eclipse">simple Eclipse projects</a>
+available in the build project.</p>
+
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>none (so far)</li>
+</ul>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">a4fc37f897ff50a3e3807e87db60ccb0844f37eb618f0935ece94a581fd98eec 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-centos32.tgz
+
+e85df3bdc9b8e9c91e00924feb6f7f9909c94af08bd7e097d4ab857e0facc316 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-centos64.tgz
+
+63cdda07c539d2a43df89d7ec17b2ab4119ebfe4a5c46295c2bc1821755b093b 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-macos.tgz
+
+780cda157454dd073132c52aa46f2d43b1f325a1f38a82c3283de76492899fb1 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-win32.zip
+
+a88823b4cbb9e060975f14e1e839eace1cf0cb26386f99d52e692b15455ec3dd 
+gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-win64.zip
+</span>
+</code></pre>
+</div>
+</div>
+
+
+<hr class="post-footer">
+<div class="post-footer">
+Posted in
+
+<strong>releases</strong>, <strong>arm</strong>, <strong>arm-none-eabi-gcc</strong>, <strong>gcc</strong>, <strong>binaries</strong>, <strong>lto</strong>.
+Last modified on Mon May 13 06:17:51 2019 UTC.
+<ul class="share-buttons">
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/" data-layout="button"></div></li>
+</ul>
+
+</div>
+
+
+</section>
+
+<aside id="sidebar">
+
+<h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
+
+<ul>
+  <li><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</a></li>
+  <li><a href="/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released</a></li>
+  <li><a href="/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.1 20190425 released</a></li>
+  <li><a href="/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/">GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</a></li>
+  <li><a href="/blog/2019/04/22/openocd-v0-10-0-12-20190422-released/">GNU MCU Eclipse OpenOCD v0.10.0-12 20190422 released</a></li>
+</ul>
+
+
+<hr>
+
+<h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
+
+<h4 id="features"><a href="/plugins/features/">Features</a></h4>
+
+<h4 id="downloads"><a href="/downloads/">Downloads</a></h4>
+
+<ul>
+  <li><a href="/downloads/">Overview</a></li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+</ul>
+
+<h4 id="install"><a href="/install/">Install</a></h4>
+
+<ul>
+  <li><a href="/install/">Overview</a></li>
+  <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
+  <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
+    <ul>
+      <li><a href="/debug/install/">Overview</a></li>
+      <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
+      <li><a href="/openocd/install/">OpenOCD install</a></li>
+      <li><a href="/qemu/install/">QEMU install</a></li>
+    </ul>
+  </li>
+  <li><a href="/plugins/install/">Eclipse plug-ins install</a></li>
+</ul>
+
+<h4 id="important">Important</h4>
+
+<ul>
+  <li><a href="/install/">Install order</a></li>
+  <li><a href="/eclipse/workspace/preferences/">Workspace preferences</a></li>
+  <li><a href="/toolchain/path/">Toolchain path</a></li>
+  <li><a href="/eclipse/project/portability/">Project portability</a></li>
+</ul>
+
+<h4 id="tutorials">Tutorials</h4>
+
+<ul>
+  <li><a href="/tutorials/blinky-arm/">Create a Blinky ARM test project</a></li>
+  <li><a href="/tutorials/hello-arm/">Create a Hello ARM test project</a></li>
+</ul>
+
+<h4 id="how-to-use">How to use</h4>
+
+<ul>
+  <li><a href="/plugins/mbs/">The managed build plug-in</a></li>
+  <li><a href="/plugins/packs-manager/">The packs manager (CMSIS)</a></li>
+  <li><a href="/eclipse/project/assign-device/">Assign a device</a></li>
+</ul>
+
+<h4 id="templates"><a href="/templates/">Templates</a></h4>
+
+<ul>
+  <li><a href="/templates/">Overview</a></li>
+  <li><a href="/templates/cortexm/">Cortex-M template</a></li>
+  <li><a href="/templates/stm32f/">STM32Fxx template</a></li>
+  <li><a href="/templates/klxx/">Freescale KLxx templates</a></li>
+</ul>
+
+<h4 id="debugging"><a href="/debug/">Debugging</a></h4>
+
+<ul>
+  <li><a href="/debug/">Overview</a></li>
+  <li><a href="/debug/jlink/">The SEGGER J-Link plug-in</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/qemu/">The QEMU plug-in</a></li>
+  <li><a href="/debug/peripheral-registers/">The peripheral registers view (CMSIS)</a></li>
+</ul>
+
+<h4 id="gnu-mcu-arm-gcc"><a href="/toolchain/arm/">GNU MCU ARM GCC</a></h4>
+
+<ul>
+  <li><a href="/toolchain/arm/">Overview</a></li>
+  <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/arm/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/arm/publish-procedure/">How to publish</a></li>
+  <li><a href="/toolchain/arm/releases/">Releases</a></li>
+  <li><a href="/toolchain/arm/support/">Support</a></li>
+</ul>
+
+<h4 id="gnu-mcu-risc-v-gcc"><a href="/toolchain/riscv/">GNU MCU RISC-V GCC</a></h4>
+
+<ul>
+  <li><a href="/toolchain/riscv/">Overview</a></li>
+  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
+  <li><a href="/toolchain/riscv/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/riscv/publish-procedure/">How to publish</a></li>
+  <li><a href="/toolchain/riscv/releases/">Releases</a></li>
+  <li><a href="/toolchain/riscv/support/">Support</a></li>
+</ul>
+
+<h4 id="gnu-mcu-qemu-home"><a href="/qemu/">GNU MCU QEMU Home</a></h4>
+
+<ul>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
+  <li><a href="/qemu/install/">QEMU Install</a></li>
+  <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
+  <li><a href="/qemu/options/">Command line options</a></li>
+  <li><a href="/qemu/build-procedure/">How to build</a></li>
+  <li><a href="/qemu/publish-procedure/">How to publish</a></li>
+  <li><a href="/qemu/releases/">Releases</a></li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
+
+<ul>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
+  <li><a href="/openocd/install/">OpenOCD Install</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
+  <li><a href="/openocd/build-procedure/">How to build</a></li>
+  <li><a href="/openocd/publish-procedure/">How to publish</a></li>
+  <li><a href="/openocd/releases/">Releases</a></li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+</ul>
+
+<h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
+
+<ul>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
+  <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
+  <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
+  <li><a href="/windows-build-tools/releases/">Releases</a></li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
+
+<ul>
+  <li><a href="/arch/riscv/">Overview</a></li>
+  <li><a href="/arch/riscv/arty-reflash/">Flashing the Arty boards</a></li>
+  <li><a href="/arch/riscv/ftdi-jtag-drivers/">FTDI JTAG drivers</a></li>
+</ul>
+
+<h4 id="advanced">Advanced</h4>
+
+<ul>
+  <li><a href="/advanced/headless-builds/">Headless builds</a></li>
+</ul>
+
+<h4 id="support"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
+</ul>
+
+<h4 id="developer"><a href="/developer/">Developer</a></h4>
+
+<ul>
+  <li><a href="/developer/">Overview</a></li>
+  <li><a href="/developer/build-procedure/">How to build</a></li>
+  <li><a href="/developer/publish-procedure/">How to publish</a></li>
+  <li><a href="/developer/change-log">Change log</a></li>
+  <li><a href="/developer/contribute/">Contribute</a></li>
+</ul>
+
+<h4 id="hardware">Hardware</h4>
+
+<ul>
+  <li><a href="/developer/j-link-stm32-boards/">J-Link and STM32 boards</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+</ul>
+
+<h4 id="licenses">Licenses</h4>
+
+<ul>
+  <li><a href="/licenses/plug-ins/">Eclipse plug-ins</a></li>
+  <li><a href="/licenses/tools/">Tools</a></li>
+</ul>
+
+<h4 id="finance">Finance</h4>
+
+<ul>
+  <li><a href="/finance/sponsorship/">Sponsorship &amp; donations</a></li>
+</ul>
+
+<h4 id="about"><a href="/about/">About</a></h4>
+
+<hr>
+<p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NXKFN7DJH8DJ6">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="Pay Pal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</aside>
+
+
+</div>
+</div>
+
+<div class="inner clearfix">
+<div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2019 Liviu Ionescu</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
+  <li>
+<a href="http://twitter.com/gnu_mcu_eclipse" class="twitter-follow-button" data-show-count="false">Follow @gnu_mcu_eclipse</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
+  <li>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  </li>
+</ul>
+
+  </div>
+  <a href="http://github.com/gnu-mcu-eclipse" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/support/">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
