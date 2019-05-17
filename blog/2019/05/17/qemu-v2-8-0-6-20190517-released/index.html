@@ -10,14 +10,14 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</title>
-  <meta name="description" content="Version 2.8.0-5 20190424 is a maintenance release, to fix several bugs.">
+  <title>GNU MCU Eclipse QEMU v2.8.0-6 20190517 released</title>
+  <meta name="description" content="Version 2.8.0-6 20190517 is a maintenance release, to fix the bug affecting the graphical mode in GNU/Linux, introduced in the previous release.">
 
-  <meta property="og:title" content="GNU MCU Eclipse QEMU v2.8.0-5 20190424 released">
+  <meta property="og:title" content="GNU MCU Eclipse QEMU v2.8.0-6 20190517 released">
   <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
-  <meta property="article:published_time" content="2019-04-24">
+  <meta property="article:published_time" content="2019-05-17">
 
 
   <meta property="article:section" content="releases">
@@ -36,7 +36,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
 
-  <link rel="canonical" href="/blog/2019/04/24/qemu-v2-8-0-6-20190517-released/">
+  <link rel="canonical" href="/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
@@ -97,20 +97,20 @@
 
 <table id="post-navigation">
   <tr>
-    <td><a href="/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/">←</a></td>
-    <td><a href="/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/">GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</a></td>
+    <td><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">←</a></td>
+    <td><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</a></td>
     <td></td>
-    <td><a href="/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.1 20190425 released</a></td>
-    <td><a href="/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/">→</a></td>
+    <td></td>
+    <td></td>
   </tr>
 </table>
 
 
-<h1 class="post-title">GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</h1>
+<h1 class="post-title">GNU MCU Eclipse QEMU v2.8.0-6 20190517 released</h1>
 
 
 <p class="post-meta">
-Posted on April 24, 2019 by Liviu Ionescu.
+Posted on May 17, 2019 by Liviu Ionescu.
 </p>
 
 <div id="toc-container">
@@ -149,26 +149,21 @@ Posted on April 24, 2019 by Liviu Ionescu.
 </tbody>
 </table>
 </div>
-<p>Version 2.8.0-5 20190424 is a maintenance release, to fix several bugs.</p>
+<p>Version 2.8.0-6 20190517 is a maintenance release, to fix the bug 
+affecting the graphical mode in GNU/Linux, introduced in the previous release.</p>
 
 <p>
-<a href="https://github.com/gnu-mcu-eclipse/qemu/releases/tag/v2.8.0-5-20190424/">Binary files »</a>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/releases/tag/v2.8.0-6-20190517/">Binary files »</a>
 </p>
 
 <h2 id="bug-fixes">Bug fixes</h2>
 
 <ul>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/66">#66</a>] for some STM32 
-devices, the USART SR reset value was wrong; fixed.</li>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/63">#63</a>] the command
-line option to set the total memory size (<code class="highlighter-rouge">-memory size=kb</code>) was ignored;
-fixed.</li>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/43">#43</a>] the values 
-returned by the semihosting command <code class="highlighter-rouge">SYS_HEAPINFO</code> were not accurate;
-since these values cannot be computed, now the command returns all 0.</li>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/39">#39</a>] in certain
-conditions, when referring an unknown board, the program crashed;
-fixed, now an error message is issued.</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/68">#68</a>] in the 
+previous version, due to a build error, the SDL2 library did not include
+X11 support, and QEMU was not able to start in graphical mode when
+running on GNU/Linux; X11 support was added to the build environment 
+and the included SDL2 was fixed.</li>
 </ul>
 
 <h2 id="known-problems">Known problems</h2>
@@ -198,7 +193,7 @@ conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code cl
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/qemu@2.8.0-5.1
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/qemu@2.8.0-6.1
 </code></pre>
 </div>
 </div>
@@ -232,20 +227,20 @@ page.</p>
 <div class="highlight">
 <pre class="highlight">
 <code>
-<span class="go">fe599df8d544942bb463668049aa734f3e5bb8c9e4404390d978120b7b78ecf2 
-gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-centos32.tgz
+<span class="go">e5d2e1beffc0b19d422c90ec98c4bd76e6e4036d6b2e1625cd8d93f6ac6f046a 
+gnu-mcu-eclipse-qemu-2.8.0-6-20190517-1329-centos32.tgz
 
-dd9d31233eeb9fb116dfd4e4d9bc49e12e683f498a13bdd680b37c2d9111f3dd 
-gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-centos64.tgz
+ab94e8d71f54e1d28fdae63b5f0d0cbd792234de371e3883583aaf920d9f64cf 
+gnu-mcu-eclipse-qemu-2.8.0-6-20190517-1329-centos64.tgz
 
-a3d87dff41417bb469d2993c6d33943a21e97113ba0545ce2978b7bdcc32c4bc 
-gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-macos.tgz
+85c787c9d20751ba03b0557d47c268b5f06fde3dfb245b83fe1b44f45362a7b1 
+gnu-mcu-eclipse-qemu-2.8.0-6-20190517-1329-macos.tgz
 
-cc4cd29ae9cd676a7b2309f3f82e7f885e0de0419af744b57bcb2ab4629d4ca7 
-gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-win32.zip
+4bf582db378aeaa40f324c34f80356b36c4016365607f3c7d820182de853f76f 
+gnu-mcu-eclipse-qemu-2.8.0-6-20190517-1329-win32.zip
 
-ca23c5b7af40d58ee0b3e0a29295bdd443d318cdb7d9b9cf2220e4801c555164 
-gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-win64.zip
+894c25c79cdc9b0017e3d977725496192f37f6d536d4107e8e07a9cf4fbf9d22 
+gnu-mcu-eclipse-qemu-2.8.0-6-20190517-1329-win64.zip
 </span>
 </code></pre>
 </div>
@@ -260,10 +255,10 @@ Posted in
 <strong>releases</strong>, <strong>qemu</strong> and tagged
 
 <strong>emulator</strong>, <strong>macos</strong>, <strong>linux</strong>, <strong>windows</strong>.
-Last modified on Fri May 17 15:56:53 2019 UTC.
+Last modified on Fri May 17 16:05:35 2019 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
-  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/04/24/qemu-v2-8-0-6-20190517-released/" data-layout="button"></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/" data-layout="button"></div></li>
 </ul>
 
 </div>
@@ -276,10 +271,10 @@ Last modified on Fri May 17 15:56:53 2019 UTC.
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/">GNU MCU Eclipse QEMU v2.8.0-6 20190517 released</a></li>
   <li><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</a></li>
   <li><a href="/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released</a></li>
   <li><a href="/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.1 20190425 released</a></li>
-  <li><a href="/blog/2019/04/24/qemu-v2-8-0-6-20190517-released/">GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</a></li>
   <li><a href="/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/">GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</a></li>
 </ul>
 
