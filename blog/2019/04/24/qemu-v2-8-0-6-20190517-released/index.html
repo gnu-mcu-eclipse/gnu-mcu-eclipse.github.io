@@ -10,29 +10,23 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>GNU ARM Eclipse plug-ins v2.9.1.201508011813 released</title>
-  <meta name="description" content="Version 2.9.1-201508011813 is a new release; the main improvement is the new version of the GNU ARM Eclipse QEMU emulator (including a graphical LED emulator...">
+  <title>GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</title>
+  <meta name="description" content="Version 2.8.0-5 20190424 is a maintenance release, to fix several bugs.">
 
-  <meta property="og:title" content="GNU ARM Eclipse plug-ins v2.9.1.201508011813 released">
+  <meta property="og:title" content="GNU MCU Eclipse QEMU v2.8.0-5 20190424 released">
   <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
-  <meta property="article:published_time" content="2015-08-01">
+  <meta property="article:published_time" content="2019-04-24">
 
 
   <meta property="article:section" content="releases">
-  <meta property="article:section" content="plugins">
+  <meta property="article:section" content="qemu">
 
-  <meta property="article:tag" content="gnu">
-  <meta property="article:tag" content="arm">
-  <meta property="article:tag" content="eclipse">
-  <meta property="article:tag" content="cmsis-packs">
-  <meta property="article:tag" content="cortex-m">
-  <meta property="article:tag" content="eclipse">
-  <meta property="article:tag" content="gcc">
-  <meta property="article:tag" content="hal">
-  <meta property="article:tag" content="qemu">
-  <meta property="article:tag" content="stm32f4">
+  <meta property="article:tag" content="emulator">
+  <meta property="article:tag" content="macos">
+  <meta property="article:tag" content="linux">
+  <meta property="article:tag" content="windows">
 
 
   <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
@@ -42,7 +36,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
 
-  <link rel="canonical" href="/blog/2015/08/01/plugins-v2.9.1-201508011813-released/">
+  <link rel="canonical" href="/blog/2019/04/24/qemu-v2-8-0-6-20190517-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
@@ -103,20 +97,20 @@
 
 <table id="post-navigation">
   <tr>
-    <td><a href="/blog/2015/07/15/windows-build-tools-v2.6-20150715-released/">←</a></td>
-    <td><a href="/blog/2015/07/15/windows-build-tools-v2.6-20150715-released/">GNU ARM Eclipse Windows Build Tools v2.6-20150715* released</a></td>
+    <td><a href="/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/">←</a></td>
+    <td><a href="/blog/2019/04/24/qemu-v2-8-0-5-20190424-released/">GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</a></td>
     <td></td>
-    <td><a href="/blog/2015/08/02/qemu-v2-3-50-20150801-released/">GNU ARM Eclipse QEMU v2.3.50-20150801*-dev released</a></td>
-    <td><a href="/blog/2015/08/02/qemu-v2-3-50-20150801-released/">→</a></td>
+    <td><a href="/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.1 20190425 released</a></td>
+    <td><a href="/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/">→</a></td>
   </tr>
 </table>
 
 
-<h1 class="post-title">GNU ARM Eclipse plug-ins v2.9.1.201508011813 released</h1>
+<h1 class="post-title">GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</h1>
 
 
 <p class="post-meta">
-Posted on August 1, 2015 by Liviu Ionescu.
+Posted on April 24, 2019 by Liviu Ionescu.
 </p>
 
 <div id="toc-container">
@@ -129,16 +123,25 @@ Posted on August 1, 2015 by Liviu Ionescu.
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#new-features"><span class="tocnumber">1</span> <span class="toctext">New features</span></a>
+<a href="#bug-fixes"><span class="tocnumber">1</span> <span class="toctext">Bug fixes</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#addressed-bugs"><span class="tocnumber">2</span> <span class="toctext">Addressed bugs</span></a>
+<a href="#known-problems"><span class="tocnumber">2</span> <span class="toctext">Known problems</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#template-issues"><span class="tocnumber">3</span> <span class="toctext">Template issues</span></a>
+<a href="#binaries"><span class="tocnumber">3</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#known-problems"><span class="tocnumber">4</span> <span class="toctext">Known problems</span></a>
+<a href="#build-notes"><span class="tocnumber">4</span> <span class="toctext">Build notes</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#easy-install"><span class="tocnumber">5</span> <span class="toctext">Easy install</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#manual-install"><span class="tocnumber">6</span> <span class="toctext">Manual install</span></a>
+</li>
+<li class="toc_level-1 toc_section-7">
+<a href="#checksums"><span class="tocnumber">7</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
@@ -146,74 +149,121 @@ Posted on August 1, 2015 by Liviu Ionescu.
 </tbody>
 </table>
 </div>
-<p>Version 2.9.1-201508011813 is a new release; the main improvement is the new version of the <a href="/qemu">GNU ARM Eclipse QEMU</a> emulator (including a graphical LED emulator), paired with a new version of the QEMU Debugging plug-in; also embedded applications can now be executed in Run mode, not only in Debug mode.</p>
+<p>Version 2.8.0-5 20190424 is a maintenance release, to fix several bugs.</p>
 
 <p>
-<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/tag/v2.9.1.201508011813">Binary files »</a>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/releases/tag/v2.8.0-5-20190424/">Binary files »</a>
 </p>
 
-<h2 id="new-features">New features</h2>
+<h2 id="bug-fixes">Bug fixes</h2>
 
 <ul>
-  <li>
-<a href="/blog/2015/04/04/qemu-v2-2-92-20150404-released/">GNU ARM Eclipse QEMU 2.2.92-20150404*-dev released</a>;
-<img src="/assets/images/2015/board-stm32f4-discovery-leds.png" alt="The STM32F4-Discovery 4 LEDs">
-</li>
-  <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/wiki/Release-v2.6-20150715">GNU ARM Eclipse Build Tools 2.6-20150715* released</a>;</li>
-  <li>a new version of the <strong>QEMU Debugging plug-in</strong> was added; the board and device definitions are copied from the project CMSIS configuration, if available;
-<img src="/assets/images/2015/launch-qemu-debugger.png" alt="The QEMU Debugger tab">
-</li>
-  <li>[feature-requests:#104] all debug launch configurations can also be started in <strong>Run mode</strong>; the difference is that breakpoint support is disabled, so execution will proceed without halting in breakpoints;
-<img src="/assets/images/2015/menu-run-qemu.png" alt="Accessing QEMU Run configurations">
-</li>
-  <li>[feature-requests:#95] support for new ARM architectures (<strong>arm7ve</strong>, <strong>armv8-a+crc</strong>) and CPUs (<strong>cortex-a12</strong>, <strong>cortex-m0.small-multiply</strong>, <strong>cortex-m0plus.small-multiply</strong>, <strong>cortex-m1.small-multiply</strong>) was added; to match the capabilities of GCC 4.9;</li>
-  <li>support for <strong>editing the toolchain path</strong> for any supported toolchain was added; previously only the default toolchain path was editable;
-<img src="/assets/images/2015/preferences-c-build-global-tools-paths.png" alt="Global toolchain path editor">
-</li>
-  <li>support for <strong>configuring the toolchain for non-managed projects</strong> was added; previously the indexer for non-managed projects could not be configured to match the actual build configuration;
-<img src="/assets/images/2015/properties-c-settings-make.png" alt="The simplified settings for makefile projects">
-</li>
-  <li>[support-requests:#155] the STM32F4 template was updated to use <strong>HAL v1.6</strong>;</li>
-  <li>the <strong>STM32F446xx</strong> was added to the STM32F4 template;</li>
-  <li>the QEMU build script was updated to use Docker; the build procedure was extended to download most of the required libraries and build them from sources.</li>
-</ul>
-
-<h2 id="addressed-bugs">Addressed bugs</h2>
-
-<ul>
-  <li>[bugs:#188] the <strong>CMSIS Packs Manager</strong>  failed to download from Nordic URLs, which redirected to another server; the download code was improved to process HTTP redirects;</li>
-  <li>[bugs:#186] non relevant setting are no longer shown in non-manged projects;</li>
-  <li>[bugs:#184] editing the path for other toolchains than the default one was not possible; added.</li>
-</ul>
-
-<h2 id="template-issues">Template issues</h2>
-
-<ul>
-  <li>[feature-requests:#97] the <strong>VTOR register</strong> is now explicitly set during initialisations, to be sure it matches the address of the vectors;</li>
-  <li>in the <strong>blinky</strong> projects, the first cycle is a full second with the LED turned on, as a visual feedback that the LED polarity is configured correctly.</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/66">#66</a>] for some STM32 
+devices, the USART SR reset value was wrong; fixed.</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/63">#63</a>] the command
+line option to set the total memory size (<code class="highlighter-rouge">-memory size=kb</code>) was ignored;
+fixed.</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/43">#43</a>] the values 
+returned by the semihosting command <code class="highlighter-rouge">SYS_HEAPINFO</code> were not accurate;
+since these values cannot be computed, now the command returns all 0.</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/39">#39</a>] in certain
+conditions, when referring an unknown board, the program crashed;
+fixed, now an error message is issued.</li>
 </ul>
 
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>none so far</li>
+  <li>Ctrl-C does not interrupt the execution if the <code class="highlighter-rouge">--nographic</code> option is used.</li>
 </ul>
 
-<p>Notes: for QEMU problems, please see the <a href="/blog/2015/04/04/qemu-v2-2-92-20150404-released/">separate post</a>.</p>
+<h2 id="binaries">Binaries</h2>
+
+<p>Binaries for <strong>Windows</strong>, <strong>macOS</strong> and <strong>GNU/Linux</strong> are provided.</p>
+
+<h2 id="build-notes">Build notes</h2>
+
+<p>The GNU/Linux binaries were built on two CentOS 6 Docker images (32/64-bit), 
+and run on any distribution based on CentOS 6 or later.</p>
+
+<p>The Windows binaries were built with mingw-w64, and run on any reasonably 
+recent <strong>i686</strong> and <strong>x86_64</strong> Windows machines.</p>
+
+<h2 id="easy-install">Easy install</h2>
+
+<p>QEMU is also available as an 
+<a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/qemu">xPack</a> and can be 
+conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/qemu@2.8.0-5.1
+</code></pre>
+</div>
+</div>
+
+<p>To install the latest version available, use:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/qemu
+</code></pre>
+</div>
+</div>
+
+<p>Note: The method to select the path based on the xPack version was already 
+added to the Eclipse plug-in, but for now is only available in the version 
+published on the test site 
+(http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test/).</p>
+
+<h2 id="manual-install">Manual install</h2>
+
+<p>Instructions on how to install the binaries are available in the 
+<a href="/qemu/install/">How to install the QEMU binaries?</a> 
+page.</p>
+
+<h2 id="checksums">Checksums</h2>
+
+<p>The SHA-256 hashes for the files are:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>
+<span class="go">fe599df8d544942bb463668049aa734f3e5bb8c9e4404390d978120b7b78ecf2 
+gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-centos32.tgz
+
+dd9d31233eeb9fb116dfd4e4d9bc49e12e683f498a13bdd680b37c2d9111f3dd 
+gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-centos64.tgz
+
+a3d87dff41417bb469d2993c6d33943a21e97113ba0545ce2978b7bdcc32c4bc 
+gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-macos.tgz
+
+cc4cd29ae9cd676a7b2309f3f82e7f885e0de0419af744b57bcb2ab4629d4ca7 
+gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-win32.zip
+
+ca23c5b7af40d58ee0b3e0a29295bdd443d318cdb7d9b9cf2220e4801c555164 
+gnu-mcu-eclipse-qemu-2.8.0-5-20190424-0724-win64.zip
+</span>
+</code></pre>
+</div>
+</div>
+
 
 
 <hr class="post-footer">
 <div class="post-footer">
 Posted in
 
-<strong>releases</strong>, <strong>plugins</strong> and tagged
+<strong>releases</strong>, <strong>qemu</strong> and tagged
 
-<strong>gnu</strong>, <strong>arm</strong>, <strong>eclipse</strong>, <strong>cmsis-packs</strong>, <strong>cortex-m</strong>, <strong>eclipse</strong>, <strong>gcc</strong>, <strong>hal</strong>, <strong>qemu</strong>, <strong>stm32f4</strong>.
-Last modified on Sat Jul  1 21:06:50 2017 UTC.
+<strong>emulator</strong>, <strong>macos</strong>, <strong>linux</strong>, <strong>windows</strong>.
+Last modified on Fri May 17 15:56:53 2019 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
-  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2015/08/01/plugins-v2.9.1-201508011813-released/" data-layout="button"></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/04/24/qemu-v2-8-0-6-20190517-released/" data-layout="button"></div></li>
 </ul>
 
 </div>

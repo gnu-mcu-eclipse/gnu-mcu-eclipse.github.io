@@ -5,8 +5,8 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 May 2019 06:31:57 +0000</pubDate>
-    <lastBuildDate>Mon, 13 May 2019 06:31:57 +0000</lastBuildDate>
+    <pubDate>Fri, 17 May 2019 16:03:12 +0000</pubDate>
+    <lastBuildDate>Fri, 17 May 2019 16:03:12 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -77,6 +77,30 @@ RISC-V Embedded GCC&lt;/strong&gt;.&lt;/p&gt;
         <category>riscv</category>
         
         <category>riscv-none-gcc</category>
+        
+      </item>
+    
+      <item>
+        <title>GNU MCU Eclipse QEMU v2.8.0-5 20190424 released</title>
+        <description>&lt;p&gt;Version 2.8.0-5 20190424 is a maintenance release, to fix several bugs.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 24 Apr 2019 19:39:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2019/04/24/qemu-v2-8-0-6-20190517-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2019/04/24/qemu-v2-8-0-6-20190517-released/</guid>
+        
+        <category>emulator</category>
+        
+        <category>macos</category>
+        
+        <category>linux</category>
+        
+        <category>windows</category>
+        
+        
+        <category>releases</category>
+        
+        <category>qemu</category>
         
       </item>
     
@@ -223,30 +247,6 @@ bugs present in the previous release.&lt;/p&gt;
         <category>binaries</category>
         
         <category>lto</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.2 20190119 released</title>
-        <description>&lt;p&gt;Version v8.2.1-1.2 20190119 is a maintenance release of 
-&lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt; that fixes the 32-bit objcopy bug 
-present in the previous release.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 19 Jan 2019 18:46:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2019/01/19/arm-none-eabi-gcc-v8-2-1-1-2-released/</guid>
-        
-        
-        <category>releases</category>
-        
-        <category>arm</category>
-        
-        <category>arm-none-eabi-gcc</category>
-        
-        <category>gcc</category>
-        
-        <category>binaries</category>
         
       </item>
     
