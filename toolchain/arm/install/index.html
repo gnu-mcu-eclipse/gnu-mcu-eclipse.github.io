@@ -211,6 +211,13 @@ GDB 7.12, distributed with GCC 6.x, requires Neon.3 or higher, otherwise the sus
   <li>improved support for <strong>Continuous Integration</strong> usage: as for any xPack, the toolchain can be easily used in test environments.</li>
 </ul>
 
+<blockquote>
+  <p>Note: to benefit of the new toolchain advantages,
+  it is recommended that old projects, which were configured to use the 
+  <strong>GNU ARM Embedded Toolchain</strong>, to be reconfigured to use
+  <strong>GNU MCU Eclipse ARM Embedded GCC</strong>.</p>
+</blockquote>
+
 <h3 id="the-xpack-install">The xPack install</h3>
 
 <p>This method uses the portable tool <a href="https://www.npmjs.com/package/xpm">xpm</a>, 
@@ -264,8 +271,10 @@ released as a portable archive that can be installed in any location.</p>
 <img src="/assets/images/2018/arm-toolchain-releases.png" alt="ARM toolchain releases">
 </p>
 
-<p>Note: For manual installs, the recommended install location is different from
+<blockquote>
+  <p>Note: For manual installs, the recommended install location is different from
 the xPack install folder.</p>
+</blockquote>
 
 <h4 id="windows">Windows</h4>
 
@@ -332,7 +341,7 @@ the xPack install folder.</p>
   <li><code class="highlighter-rouge">gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos32.tgz</code></li>
 </ul>
 
-<p>As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-centos64</code> file for 64-bit machines and the <code class="highlighter-rouge">-centos32</code> file for 32-bit machines.</p>
+<p>As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions. Select the <code class="highlighter-rouge">-centos64</code> file for 64-bit machines and the <code class="highlighter-rouge">-centos32</code> file for 32-bit machines.</p>
 
 <p>To install the toolchain, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/</code>:</p>
 
@@ -341,7 +350,7 @@ the xPack install folder.</p>
 <pre class="highlight">
 <code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-debian64.tgz
+<span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-arm-none-eabi-gcc-7.2.1-1.1-20180401-0515-centos64.tgz
 <span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gnu-mcu-eclipse/arm-none-eabi-gcc/7.2.1-1.1-20180401-0515
 </code></pre>
 </div>
@@ -366,9 +375,9 @@ the xPack install folder.</p>
 
 <h3 id="download">Download</h3>
 
-<p>The toolchain can also be downloaded from <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads">GNU ARM Embedded Toolchain</a>.</p>
+<p>The toolchain can also be downloaded from <a href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads">GNU ARM Embedded Toolchain</a>.</p>
 
-<p>Versions from <code class="highlighter-rouge">4_7</code> up to <code class="highlighter-rouge">7-2017-q4-major</code> were tested and are known to work properly.</p>
+<p>Versions from <code class="highlighter-rouge">4_7</code> up to <code class="highlighter-rouge">8-2018-q4-major</code> were tested and are known to work properly.</p>
 
 <p>
 <img src="/assets/images/2017/arm-downloads.png" alt="ARM Downloads">
@@ -390,9 +399,9 @@ the xPack install folder.</p>
 <p>To install the archive, the steps are:</p>
 
 <ul>
-  <li>download the latest <code class="highlighter-rouge">gcc-arm-none-eabi-7-2017-q4-major-*-win*.zip</code> file</li>
+  <li>download the latest <code class="highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-*-win*.zip</code> file</li>
   <li>open the archive in the file explorer</li>
-  <li>extract the <code class="highlighter-rouge">gcc-arm-none-eabi-7-2017-q4-major</code> folder in <code class="highlighter-rouge">%userprofile%\AppData\Roaming\GNU Tools ARM Embedded</code>
+  <li>extract the <code class="highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major</code> folder in <code class="highlighter-rouge">%userprofile%\AppData\Roaming\GNU Tools ARM Embedded</code>
 </li>
 </ul>
 
@@ -402,8 +411,8 @@ the xPack install folder.</p>
   <li>read the <code class="highlighter-rouge">readme.txt</code> file</li>
   <li>test if the compiler is functional; use the actual install path:
     <div class="language-console highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="gp">C:\&gt;</span><span class="s2">"%APPDATA%</span><span class="se">\G</span><span class="s2">NU Tools ARM Embedded</span><span class="se">\g</span><span class="s2">cc-arm-none-eabi-7-2017-q4-major-win32</span><span class="se">\b</span><span class="s2">in</span><span class="se">\a</span><span class="s2">rm-none-eabi-gcc.exe"</span> <span class="nt">--version</span>
-<span class="go">arm-none-eabi-gcc.exe (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM/embedded-7-branch revision 255204]
+<div class="highlight"><pre class="highlight"><code><span class="gp">C:\&gt;</span><span class="s2">"%APPDATA%</span><span class="se">\G</span><span class="s2">NU Tools ARM Embedded</span><span class="se">\g</span><span class="s2">cc-arm-none-eabi-8-2018-q4-major-win32</span><span class="se">\b</span><span class="s2">in</span><span class="se">\a</span><span class="s2">rm-none-eabi-gcc.exe"</span> <span class="nt">--version</span>
+<span class="go">arm-none-eabi-gcc.exe (GNU Tools for Arm Embedded Processors 8-2018-q4-major) 8.2.1 20181213 (release) [gcc-8-branch revision 267074]
 </span></code></pre></div>    </div>
   </li>
 </ul>
@@ -419,7 +428,7 @@ the xPack install folder.</p>
 <p>For macOS, the GNU ARM Embedded Toolchain is released as a portable archive, that can be installed in any location.</p>
 
 <ul>
-  <li>download the latest macOS install tarball file from <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads">ARMDeveloper</a>  (currently <code class="highlighter-rouge">gcc-arm-none-eabi-7-2017-q4-major-mac.tar.bz2</code>, about 99 MB)</li>
+  <li>download the latest macOS install tarball file from <a href="https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads">ARMDeveloper</a>  (currently <code class="highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-mac.tar.bz2</code>, about 99 MB)</li>
   <li>locate the file (usually in the <code class="highlighter-rouge">${HOME}/Downloads</code> folder)</li>
   <li>
     <p>decide on a location to install the toolchain; the recommended folder is <code class="highlighter-rouge">${HOME}/opt/</code></p>
@@ -439,21 +448,21 @@ ${user.home}/local:\
   </li>
   <li>unpack the archive in the destination folder</li>
   <li>
-    <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-7-2017-q4-major</code></p>
+    <p>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-8-2018-q4-major</code></p>
 
     <div class="language-console highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xjf ~/Downloads/gcc-arm-none-eabi-7-2017-q4-major-mac.tar.bz2
-<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-7-2017-q4-major
+<span class="gp">$</span> <span class="nb">tar </span>xjf ~/Downloads/gcc-arm-none-eabi-8-2018-q4-major-mac.tar.bz2
+<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-8-2018-q4-major
 </code></pre></div>    </div>
   </li>
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
     <div class="language-console highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-7-2017-q4-major/bin/arm-none-eabi-gcc <span class="nt">--version</span>
-<span class="go">arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM/embedded-7-branch revision 255204]
+<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-gcc <span class="nt">--version</span>
+<span class="go">arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 8-2018-q4-major) 8.2.1 20181213 (release) [gcc-8-branch revision 267074]
 </span></code></pre></div>    </div>
 
     <blockquote>
@@ -464,7 +473,7 @@ ${user.home}/local:\
 
 <p>The complete toolchain documentation is available in the <code class="highlighter-rouge">.../share/doc/pdf/</code> folder.</p>
 
-<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-7-2017-q4-major</code>, there are no other components stored in any system folders.</p>
+<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-8-2018-q4-major</code>, there are no other components stored in any system folders.</p>
 
 <h4 id="macports">MacPorts</h4>
 
@@ -502,7 +511,7 @@ ${user.home}/local:\
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>download the latest Linux install tarball file from <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads">ARMDeveloper</a> (currently <code class="highlighter-rouge">gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2</code>, more than 95 MB)</p>
+    <p>download the latest Linux install tarball file from <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads">ARMDeveloper</a> (currently <code class="highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-linux.tar.bz2</code>, more than 95 MB)</p>
 
     <blockquote>
       <p>Note: DO NOT install the ARM GCC package that comes with your distribution, especially if it is newer than the one provided by Launchpad, since generally it is not supported, and debugging sessions might fail.</p>
@@ -521,18 +530,18 @@ ${user.home}/local:\
     <div class="language-console highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
 <span class="gp">$</span> <span class="nb">cd</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xjf ~/Downloads/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2
-<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-7-2017-q4-major
+<span class="gp">$</span> <span class="nb">tar </span>xjf ~/Downloads/gcc-arm-none-eabi-8-2018-q4-major-linux.tar.bz2
+<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-8-2018-q4-major
 </code></pre></div>    </div>
   </li>
-  <li>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-7-2017-q4-major</code>
+  <li>the result should be a folder like <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-eabi-8-2018-q4-major</code>
 </li>
   <li>
     <p>test if the compiler is functional; use the actual install path:</p>
 
     <div class="language-console highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-7-2017-q4-major/bin/arm-none-eabi-gcc <span class="nt">--version</span>
-<span class="go">arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM/embedded-7-branch revision 255204]
+<div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="s2">"</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span><span class="s2">"</span>/opt/gcc-arm-none-eabi-8-2018-q4-major/bin/arm-none-eabi-gcc <span class="nt">--version</span>
+<span class="go">arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 8-2018-q4-major) 8.2.1 20181213 (release) [gcc-8-branch revision 267074]
 </span></code></pre></div>    </div>
 
     <blockquote>
@@ -543,7 +552,7 @@ ${user.home}/local:\
 
 <p>The complete toolchain documentation is available in the <code class="highlighter-rouge">.../share/doc/pdf/</code> folder.</p>
 
-<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-7-2017-q4-major</code>, there are no other components stored in any system folders.</p>
+<p>If you’ll ever need to remove the toolchain, only remove the <code class="highlighter-rouge">${HOME}/opt/gcc-arm-none-8-2018-q4-major</code>, there are no other components stored in any system folders.</p>
 
 <h2 id="toolchain-path">Toolchain path</h2>
 
@@ -565,11 +574,18 @@ ${user.home}/local:\
 <img src="/assets/images/2018/global-arm-toolchains-paths-xpack.png" alt="Global Tools Paths">
 </p>
 
+<blockquote>
+  <p>Note: this button is enabled only for the <strong>GNU MCU Eclipse ARM Embedded GCC</strong>
+  toolchain; if you are certain that the xPack was installed, but the
+  button is disabled, check for the toolchain name, you might have
+  selected the old <strong>GNU ARM Embedded Toolchain</strong>, which has no xPack available.</p>
+</blockquote>
+
 <h2 id="uninstall">Uninstall</h2>
 
 <p>Should you ever need to remove the toolchain, only remove the xPack folder, there are no other components stored in any system folders.</p>
 
-<p>If installed manually, remove the <code class="highlighter-rouge">arm-none-eabi-gcc/7-2017-q4-major-</code> folder.</p>
+<p>If installed manually, remove the <code class="highlighter-rouge">arm-none-eabi-gcc/7.2.1-1.1-20180401-0515</code> folder.</p>
 
 <h2 id="documentation">Documentation</h2>
 
@@ -616,7 +632,7 @@ ${user.home}/local:\
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Thu Mar 14 20:13:51 2019 UTC.</p>
+<p class="page-footer">Last modified on Tue May 21 07:07:34 2019 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/toolchain/arm/install/" data-layout="button"></div></li>
