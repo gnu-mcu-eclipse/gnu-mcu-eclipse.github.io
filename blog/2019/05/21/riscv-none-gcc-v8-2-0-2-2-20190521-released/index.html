@@ -129,10 +129,13 @@ Posted on May 21, 2019 by Liviu Ionescu.
 <a href="#binaries"><span class="tocnumber">3</span> <span class="toctext">Binaries</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#known-problems"><span class="tocnumber">4</span> <span class="toctext">Known problems</span></a>
+<a href="#tests"><span class="tocnumber">4</span> <span class="toctext">Tests</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#checksums"><span class="tocnumber">5</span> <span class="toctext">Checksums</span></a>
+<a href="#known-problems"><span class="tocnumber">5</span> <span class="toctext">Known problems</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#checksums"><span class="tocnumber">6</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
 </td>
@@ -224,10 +227,23 @@ containers; all files required during builds are available as a separate
 <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build">gnu-mcu-eclipse/riscv-none-gcc-build</a> 
 project.</p>
 
+<h2 id="tests">Tests</h2>
+
+<p>The binaries were testes on Windows 10 Pro 32/64-bit, Ubuntu 18 LTS 64-bit,
+Xubuntu 18 LTS 32-bit and macOS 10.13.</p>
+
+<p>The tests consist in building and debugging some 
+<a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build/tree/master/tests/eclipse">simple Eclipse projects</a>
+available in the build project.</p>
+
+<p>Since the source code used for GCC is identical to the one used by SiFive, the
+long and complex tests performed by SiFive to validate their release were not
+executed again.</p>
+
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>none.</li>
+  <li>none (so far).</li>
 </ul>
 
 <h2 id="checksums">Checksums</h2>
@@ -263,7 +279,7 @@ gnu-mcu-eclipse-riscv-none-gcc-8.2.0-2.2-20190521-0004-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>riscv</strong>, <strong>riscv-none-gcc</strong>.
-Last modified on Wed May 22 13:01:45 2019 UTC.
+Last modified on Wed May 22 13:59:30 2019 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/" data-layout="button"></div></li>
