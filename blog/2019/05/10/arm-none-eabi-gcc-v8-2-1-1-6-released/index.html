@@ -100,8 +100,8 @@
     <td><a href="/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/">←</a></td>
     <td><a href="/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released</a></td>
     <td></td>
-    <td><a href="/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/">GNU MCU Eclipse QEMU v2.8.0-6 20190517 released</a></td>
-    <td><a href="/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/">→</a></td>
+    <td><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-7-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.7 20190524 released</a></td>
+    <td><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-7-released/">→</a></td>
   </tr>
 </table>
 
@@ -139,8 +139,13 @@ Posted on May 10, 2019 by Liviu Ionescu.
 </li>
 <li class="toc_level-1 toc_section-6">
 <a href="#known-problems"><span class="tocnumber">6</span> <span class="toctext">Known problems</span></a>
+<ul>
+<li class="toc_level-2 toc_section-7">
+<a href="#illegal-links-in-libexec-for-linux"><span class="tocnumber">6.1</span> <span class="toctext">Illegal links in libexec for Linux</span></a>
 </li>
-<li class="toc_level-1 toc_section-7">
+</ul>
+</li>
+<li class="toc_level-1 toc_section-8">
 <a href="#checksums"><span class="tocnumber">7</span> <span class="toctext">Checksums</span></a>
 </li>
 </ul>
@@ -260,9 +265,13 @@ executed again.</p>
 
 <h2 id="known-problems">Known problems</h2>
 
-<ul>
-  <li>none (so far).</li>
-</ul>
+<h3 id="illegal-links-in-libexec-for-linux">Illegal links in <code class="highlighter-rouge">libexec</code> for Linux</h3>
+
+<p>Although the current release is fully functional, due to a problem with 
+the GCC make, the build created links with illegal names in the <code class="highlighter-rouge">libexec</code> 
+folders. The current code used to unpack the archives does not complain, 
+but future versions may include more thorough checks and fail. A new 
+release to fix this issue will be available soon.</p>
 
 <h2 id="checksums">Checksums</h2>
 
@@ -297,7 +306,7 @@ gnu-mcu-eclipse-arm-none-eabi-gcc-8.2.1-1.6-20190510-1829-win64.zip
 Posted in
 
 <strong>releases</strong>, <strong>arm</strong>, <strong>arm-none-eabi-gcc</strong>, <strong>gcc</strong>, <strong>binaries</strong>, <strong>lto</strong>.
-Last modified on Wed May 22 13:59:30 2019 UTC.
+Last modified on Fri May 24 15:56:35 2019 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/" data-layout="button"></div></li>
@@ -315,9 +324,9 @@ Last modified on Wed May 22 13:59:30 2019 UTC.
 <ul>
   <li><a href="/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.2 20190521 released</a></li>
   <li><a href="/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/">GNU MCU Eclipse QEMU v2.8.0-6 20190517 released</a></li>
+  <li><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-7-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.7 20190524 released</a></li>
   <li><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</a></li>
   <li><a href="/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released</a></li>
-  <li><a href="/blog/2019/04/25/riscv-none-gcc-v8-2-0-2-1-20190425-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.1 20190425 released</a></li>
 </ul>
 
 
