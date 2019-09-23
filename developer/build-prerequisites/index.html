@@ -124,29 +124,35 @@
 <a href="#start-the-new-eclipse"><span class="tocnumber">1.6</span> <span class="toctext">Start the new Eclipse</span></a>
 </li>
 <li class="toc_level-2 toc_section-8">
-<a href="#install-base-api"><span class="tocnumber">1.7</span> <span class="toctext">Install base API</span></a>
+<a href="#set-java-18-as-default"><span class="tocnumber">1.7</span> <span class="toctext">Set Java 1.8 as default</span></a>
 </li>
 <li class="toc_level-2 toc_section-9">
-<a href="#create-and-configure-the-workspace"><span class="tocnumber">1.8</span> <span class="toctext">Create and configure the workspace</span></a>
+<a href="#install-cdt-plug-ins"><span class="tocnumber">1.8</span> <span class="toctext">Install CDT plug-ins</span></a>
 </li>
 <li class="toc_level-2 toc_section-10">
-<a href="#install-several-eclipse-cdt-instances"><span class="tocnumber">1.9</span> <span class="toctext">Install several Eclipse CDT instances</span></a>
+<a href="#install-base-api"><span class="tocnumber">1.9</span> <span class="toctext">Install base API</span></a>
+</li>
+<li class="toc_level-2 toc_section-11">
+<a href="#create-and-configure-the-workspace"><span class="tocnumber">1.10</span> <span class="toctext">Create and configure the workspace</span></a>
+</li>
+<li class="toc_level-2 toc_section-12">
+<a href="#install-several-eclipse-cdt-instances"><span class="tocnumber">1.11</span> <span class="toctext">Install several Eclipse CDT instances</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-11">
+<li class="toc_level-1 toc_section-13">
 <a href="#clone-the-repositories"><span class="tocnumber">2</span> <span class="toctext">Clone the repositories</span></a>
 </li>
-<li class="toc_level-1 toc_section-12">
+<li class="toc_level-1 toc_section-14">
 <a href="#import-the-projects"><span class="tocnumber">3</span> <span class="toctext">Import the projects</span></a>
 </li>
-<li class="toc_level-1 toc_section-13">
+<li class="toc_level-1 toc_section-15">
 <a href="#configure-the-working-sets"><span class="tocnumber">4</span> <span class="toctext">Configure the working sets</span></a>
 </li>
-<li class="toc_level-1 toc_section-14">
+<li class="toc_level-1 toc_section-16">
 <a href="#create-the-maven-run-configurations"><span class="tocnumber">5</span> <span class="toctext">Create the Maven run configurations</span></a>
 </li>
-<li class="toc_level-1 toc_section-15">
+<li class="toc_level-1 toc_section-17">
 <a href="#cdt-wiki"><span class="tocnumber">6</span> <span class="toctext">CDT Wiki</span></a>
 </li>
 </ul>
@@ -159,34 +165,46 @@
 
 <h3 id="install-git-for-windows">Install Git for Windows</h3>
 
-<p>On Windows, the <code class="highlighter-rouge">git</code> command is available in the <a href="https://git-scm.com/download/win">Git for Windows</a> package.</p>
+<p>On Windows, the <code class="highlighter-rouge">git</code> command is available in the 
+<a href="https://git-scm.com/download/win">Git for Windows</a> package.</p>
 
-<p>It also comes with a minimal POSIX environment. To access it, start the <code class="highlighter-rouge">bash.exe</code> program.</p>
+<p>It also comes with a minimal POSIX environment. To access it, start
+the <code class="highlighter-rouge">bash.exe</code> program.</p>
 
 <h3 id="install-sourcetree">Install SourceTree</h3>
 
-<p>For a convenient access to Git, it is recommended to install <a href="https://www.sourcetreeapp.com/">SourceTree</a>, available for macOS and Windows.</p>
+<p>For a convenient access to Git, it is recommended to install 
+<a href="https://www.sourcetreeapp.com/">SourceTree</a>, available for macOS and Windows.</p>
+
+<p>For GNU/Linux, either use the GitKraken, or directly the command line Git.</p>
 
 <h3 id="install-java">Install Java</h3>
 
-<p>Install Sun JDK 1.8 or later (required since Eclipse 4.6); JRE is not enough, without JDK you will not be able to run debug sessions.</p>
+<p>Install the latest Oracle JDK 1.8 available (currently 221); JRE is not enough,
+without JDK you will not be able to run debug sessions.</p>
+
+<p>Note: OpenJDK 12 fails; apparently OpenJDK 9 introduced some subtle changes
+and the old Maven builds fail.</p>
 
 <h3 id="prepare-folders">Prepare folders</h3>
 
 <ul>
-  <li>in a place of you choice, create a folder <code class="highlighter-rouge">GNU MCU Eclipse</code>
+  <li>in a place of you choice, create a folder <code class="highlighter-rouge">gnu-mcu-eclipse.github</code>
 </li>
-  <li>inside it create two more folders, <code class="highlighter-rouge">Eclipses</code> and <code class="highlighter-rouge">Eclipse Workspaces</code>
-</li>
+  <li>inside it create a folder <code class="highlighter-rouge">develop</code>.</li>
 </ul>
 
 <h3 id="install-eclipse-ide-for-eclipse-committers">Install Eclipse IDE for Eclipse Committers</h3>
 
-<p>This instance of Eclipse will be used for actual development.</p>
+<p>This instance of Eclipse will be used for actual development. The latest
+version known to work is 2018-12.</p>
 
 <ul>
-  <li>go to <a href="http://www.eclipse.org/downloads/">Eclipse download site</a> and follow the <a href="https://www.eclipse.org/downloads/eclipse-packages/">download packages</a> link</li>
-  <li>download <strong>Eclipse IDE for Eclipse Committers</strong>, preferably the 64-bit version (for example eclipse-committers-oxygen-1a-macosx-cocoa-x86_64.dmg)</li>
+  <li>go to <a href="http://www.eclipse.org/downloads/">Eclipse download site</a>
+and follow the
+<a href="https://www.eclipse.org/downloads/eclipse-packages/">download packages</a> link</li>
+  <li>download <strong>Eclipse IDE for Eclipse Committers</strong>, preferably the 64-bit version
+(for example <code class="highlighter-rouge">eclipse-committers-2018-12-R-macosx-cocoa-x86_64</code>)</li>
   <li>unpack the archive</li>
   <li>on macOS, remove the <code class="highlighter-rouge">com.apple.quarantine</code> attribute:</li>
 </ul>
@@ -194,75 +212,129 @@
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code>
-<span class="go">xattr -d com.apple.quarantine Eclipse.app
-</span>
+<code><span class="gp">$</span> xattr <span class="nt">-dr</span> com.apple.quarantine Eclipse.app
 </code></pre>
 </div>
 </div>
+
 <ul>
-  <li>rename <code class="highlighter-rouge">Eclipse.app</code> to <code class="highlighter-rouge">Eclipse-com-cdt-47.app</code> (<code class="highlighter-rouge">eclipse</code> to <code class="highlighter-rouge">eclipse-com-cdt-47</code> on Windows)</li>
-  <li>move it to <code class="highlighter-rouge">.../GNU MCU Eclipse/Eclipses</code>
+  <li>move it to <code class="highlighter-rouge">.../gnu-mcu-eclipse.github/develop</code>
 </li>
-  <li>create link on the desktop:
-    <ul>
-      <li>on Windows, create a shortcut for <code class="highlighter-rouge">eclipse.exe</code>, rename it <code class="highlighter-rouge">e47-gme.lnk</code> and copy it to the desktop or a place of your choice</li>
-      <li>on macOS, create a Finder alias for <code class="highlighter-rouge">Eclipse.app</code>, rename it <code class="highlighter-rouge">E47 GME</code> and move it to a place of your choice</li>
-      <li>on GNU/Linux, create a soft link for <code class="highlighter-rouge">eclipse</code>, rename it <code class="highlighter-rouge">E47 GME</code> and move it to a place of your choice</li>
-    </ul>
-  </li>
+  <li>rename <code class="highlighter-rouge">Eclipse.app</code> to <code class="highlighter-rouge">Eclipse-committers-2018-12.app</code> (similarly for
+other platforms)</li>
+</ul>
+
+<p>Notes:</p>
+
+<ul>
+  <li>Oxygen 3a fails on JDK 10 or higher with missing
+<code class="highlighter-rouge">javax/annotation/PostConstruct</code>
+(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=533390">533390</a>)</li>
+  <li>Photon fails to build 2018-12 (4.10) with OpenJDK 12</li>
 </ul>
 
 <h3 id="start-the-new-eclipse">Start the new Eclipse</h3>
 
 <ul>
-  <li>create a new workspace, preferably in a separate folder, like <code class="highlighter-rouge">Eclipse Workspaces/w-gme-47</code> (note: be sure you create the workspace where you need it to be, since moving later is generally not supported by Eclipse; if you need this, preferably create a new workspace)</li>
+  <li>in the <code class="highlighter-rouge">.../gnu-mcu-eclipse.github/develop</code> folder create a new workspace
+named <code class="highlighter-rouge">eclipse-committers-2018-12-workspace</code>
+(note: be sure you create the workspace where you need it to be, since
+moving later is generally not supported by Eclipse; if you need this,
+preferably create a new workspace)</li>
   <li>check <strong>Use this as default…</strong>
 </li>
-  <li>check if you installed the right Eclipse; go to the <em>Eclipse</em> menu → <strong>Help</strong> (<strong>Eclipse</strong> on macOS) → <strong>About Eclipse</strong> and the first line should read <strong>Eclipse IDE for Eclipse Committers</strong>
+  <li>check if you installed the right Eclipse; go to the <em>Eclipse</em> menu →
+<strong>Help</strong> (<strong>Eclipse</strong> on macOS) → <strong>About Eclipse</strong> and the first line
+should read <strong>Eclipse IDE for Eclipse Committers</strong>
 </li>
-  <li>
-<strong>Help</strong> → <strong>Install New Software</strong>
-</li>
-  <li>Work with: <code class="highlighter-rouge">Oxygen - http://download.eclipse.org/releases/oxygen</code>
+</ul>
+
+<h3 id="set-java-18-as-default">Set Java 1.8 as default</h3>
+
+<ul>
+  <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Java</strong> → <strong>Installed JREs</strong>
     <ul>
-      <li>In <strong>Programming Languages</strong>
+      <li>Add → Standard VM
         <ul>
-          <li>select <strong>C/C++ Development Tools</strong>
-</li>
-          <li>select <strong>C/C++ Development Tools SDK</strong>
-</li>
-          <li>optional: Autotools, LLVM-Family, Unit Testing, Docker Container Launch Support…</li>
+          <li>JRE Home: select the <code class="highlighter-rouge">/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home</code> folder</li>
+          <li>JRE name: jdk 1.8 221</li>
         </ul>
       </li>
-      <li>In <strong>Mobile and Device Development</strong>
-        <ul>
-          <li>select <strong>C/C++ GCC Cross Compile Support</strong>
-</li>
-          <li>select <strong>C/C++ GDB Hardware Debugging</strong>
-</li>
-          <li>select <strong>C/C++ Memory View Enhancements</strong>
-</li>
-        </ul>
-      </li>
-      <li>click the <strong>Next</strong> button</li>
-      <li>accept the terms of the license agreement</li>
-      <li>click the <strong>Finish</strong> button</li>
+      <li>click the <strong>Apply</strong> button</li>
     </ul>
   </li>
-  <li>wait for the new plug-ins to be installed</li>
+  <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Java</strong> → <strong>Compiler</strong>
+    <ul>
+      <li>Compiler compliance level: select 1.8</li>
+      <li>click the <strong>Apply</strong> button</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="install-cdt-plug-ins">Install CDT plug-ins</h3>
+
+<ul>
+  <li>
+<strong>Help</strong> → <strong>Install New Software</strong>
+    <ul>
+      <li>Work with: <code class="highlighter-rouge">2018-12 - http://download.eclipse.org/releases/2018-12</code>
+        <ul>
+          <li>In <strong>Application Development Framework</strong>
+            <ul>
+              <li>optional <strong>Eclipse Project SDK</strong>
+</li>
+            </ul>
+          </li>
+          <li>In <strong>Mobile and Device Development</strong>
+            <ul>
+              <li>select <strong>C/C++ GCC Cross Compile Support</strong>
+</li>
+              <li>select <strong>C/C++ GDB Hardware Debugging</strong>
+</li>
+              <li>select <strong>C/C++ Memory View Enhancements</strong>
+</li>
+            </ul>
+          </li>
+          <li>In <strong>Programming Languages</strong>
+            <ul>
+              <li>optional <strong>C/C++ Autotools</strong>
+</li>
+              <li>select <strong>C/C++ Development Tools</strong>
+</li>
+              <li>select <strong>C/C++ Development Tools SDK</strong>
+</li>
+              <li>optional <strong>C/C++ Docker Container Launch Support</strong>
+</li>
+              <li>optional <strong>C/C++ LLVM-Family</strong>
+</li>
+              <li>optional <strong>C/C++ Unit Testing Support</strong>
+</li>
+            </ul>
+          </li>
+          <li>click the <strong>Next</strong> button</li>
+          <li>accept the terms of the license agreement</li>
+          <li>click the <strong>Finish</strong> button</li>
+        </ul>
+      </li>
+      <li>wait for the new plug-ins to be installed (in background, see status line)</li>
+    </ul>
+  </li>
   <li>restart</li>
 </ul>
 
-<p>Note: without the CDT sources available in the SDK, the extension point schemas will not be available so attempts to add new elements to the extensions will not be possible, and only ‘Generic’ elements will be offered</p>
+<p>Note: without the CDT sources available in the SDK, the extension point
+schemas will not be available so attempts to add new elements to the
+extensions will not be possible, and only ‘Generic’ elements will be offered.</p>
 
 <h3 id="install-base-api">Install base API</h3>
 
 <ul>
-  <li>go to <a href="http://www.eclipse.org/cdt/downloads.php">http://www.eclipse.org/cdt/downloads.php</a>, and download <code class="highlighter-rouge">cdt-9.2.1.zip</code> (for compatibility with Ecipse 4.6 Neon.3)</li>
+  <li>go to <a href="http://www.eclipse.org/cdt/downloads.php">http://www.eclipse.org/cdt/downloads.php</a>, and download <code class="highlighter-rouge">cdt-9.2.1.zip</code>
+(for compatibility with Eclipse 4.6 Neon.3)</li>
   <li>unpack the archive</li>
-  <li>move the new folder to in the Eclipses folder</li>
-  <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Plug-in Development</strong> → <strong>Target Platform</strong>
+  <li>move the new folder to in the <code class="highlighter-rouge">develop</code> folder</li>
+  <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Plug-in Development</strong>
+→ <strong>Target Platform</strong>
     <ul>
       <li>click the <strong>Add…</strong> button</li>
       <li>select <strong>Nothing: Start with an empty target</strong>
@@ -288,10 +360,12 @@
 </li>
 </ul>
 
-<p>Selecting the running platform is required when starting Eclipse to Run or Debug, without it the core plug-ins will not be available.</p>
+<p>Selecting the running platform is required when starting Eclipse to Run or
+Debug, without it the core plug-ins will not be available.</p>
 
 <ul>
-  <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Plug-in Development</strong> → <strong>API Baselines</strong>
+  <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Plug-in Development</strong>
+→ <strong>API Baselines</strong>
     <ul>
       <li>click the <strong>Add Baseline…</strong> button</li>
       <li>select <strong>A target platform</strong>
@@ -313,101 +387,120 @@
 <h3 id="create-and-configure-the-workspace">Create and configure the workspace</h3>
 
 <ul>
-  <li>change the workspace preferences</li>
-  <li>go to the <em>Eclipse</em> menu → <strong>(Window →) Preferences…</strong>
+  <li>change the workspace preferences
+    <ul>
+      <li>go to the <em>Eclipse</em> menu → <strong>(Window →) Preferences…</strong>
 </li>
-  <li>
+      <li>
 <strong>General</strong> → <strong>Workspace</strong>
-    <ul>
-      <li>disable <strong>Build automatically</strong>
+        <ul>
+          <li>enable <strong>Refresh on access</strong>
 </li>
-      <li>enable <strong>Refresh on access</strong>
+          <li>set <strong>Text file encoding: UTF-8</strong>
 </li>
-      <li>enable <strong>Save automatically before rebuild</strong>
-</li>
-      <li>set <strong>Text file encoding: UTF-8</strong>
-</li>
-      <li>click the <strong>Apply</strong> button</li>
-    </ul>
-  </li>
-  <li>
+          <li>click the <strong>Apply</strong> button</li>
+        </ul>
+      </li>
+      <li>
 <strong>General</strong> → <strong>Editors</strong> → <strong>Text Editors</strong>
-    <ul>
-      <li>enable <strong>Show Print Margin</strong> (80)</li>
-      <li>enable <strong>Show Line Numbers</strong>
+        <ul>
+          <li>enable <strong>Show Print Margin</strong> (80)</li>
+          <li>enable <strong>Show Line Numbers</strong>
 </li>
-      <li>click the <strong>Apply</strong> button</li>
-    </ul>
-  </li>
-  <li>
+          <li>click the <strong>Apply</strong> button</li>
+        </ul>
+      </li>
+      <li>
 <strong>General</strong> → <strong>Editors</strong> → <strong>File Associations</strong>
-    <ul>
-      <li>click <strong>Add</strong> and add *.inf, *.sh, *.command, *.ini, *.liquid, *.launch</li>
-      <li>for each, click the <strong>Add</strong> button in the Associate editors area</li>
-      <li>associate with the Text Editor</li>
+        <ul>
+          <li>click <strong>Add</strong> and add *.inf, *.sh, *.command, *.ini, *.liquid, *.launch</li>
+          <li>for each, click the <strong>Add</strong> button in the Associate editors area</li>
+          <li>associate with the Text Editor</li>
+          <li>click the <strong>Apply and Close</strong> button</li>
+        </ul>
+      </li>
+      <li>go to the <em>Eclipse</em> menu → <strong>(Window →) Preferences…</strong>
+</li>
+      <li>
+<strong>Run/Debug</strong> → <strong>Console</strong>
+        <ul>
+          <li>disable Limit console output</li>
+          <li>click the <strong>Apply</strong> button</li>
+        </ul>
+      </li>
+      <li>
+<strong>Java</strong> → <strong>Editor</strong> → <strong>Folding</strong>
+        <ul>
+          <li>disable <strong>Header Comments</strong>
+</li>
+          <li>disable <strong>Imports</strong>
+</li>
+          <li>click the <strong>Apply</strong> button</li>
+        </ul>
+      </li>
+      <li>
+<strong>XML</strong> → <strong>XML Files</strong> → <strong>Editor</strong>
+        <ul>
+          <li>Line width 72</li>
+          <li>enable <strong>Split multiple attributes…</strong>
+</li>
+          <li>disable <strong>Align final bracket…</strong>
+</li>
+          <li>enable <strong>Preserve whitespace in tags with PCDATA content</strong>
+</li>
+          <li>enable <strong>Clear all blank lines</strong>
+</li>
+          <li>disable <strong>Format comments</strong>
+</li>
+          <li>enable <strong>Insert whitespace before closing…</strong>
+</li>
+          <li>enable <strong>Indent using tabs</strong>
+</li>
+          <li>click the <strong>Apply</strong> button</li>
+        </ul>
+      </li>
       <li>click the <strong>Apply and Close</strong> button</li>
     </ul>
   </li>
-  <li>go to the <em>Eclipse</em> menu → <strong>(Window →) Preferences…</strong>
-</li>
-  <li>
-<strong>Run/Debug</strong> → <strong>Console</strong>
-    <ul>
-      <li>disable Limit console output</li>
-      <li>click the <strong>Apply</strong> button</li>
-    </ul>
-  </li>
-  <li>
-<strong>Java</strong> → <strong>Editor</strong> → <strong>Folding</strong>
-    <ul>
-      <li>disable <strong>Header Comments</strong>
-</li>
-      <li>disable <strong>Imports</strong>
-</li>
-      <li>click the <strong>Apply</strong> button</li>
-    </ul>
-  </li>
-  <li>
-<strong>XML</strong> → <strong>XML Files</strong> → <strong>Editor</strong>
-    <ul>
-      <li>Line width 72</li>
-      <li>enable <strong>Split multiple attributes…</strong>
-</li>
-      <li>disable <strong>Align final bracket…</strong>
-</li>
-      <li>enable <strong>Preserve whitespace..</strong>
-</li>
-      <li>enable <strong>Clear all blank lines</strong>
-</li>
-      <li>disable <strong>Format comments</strong>
-</li>
-      <li>enable <strong>Insert whitespace before closing…</strong>
-</li>
-      <li>enable <strong>Indent using tabs</strong>
-</li>
-      <li>click the <strong>Apply</strong> button</li>
-    </ul>
-  </li>
-  <li>click the <strong>Apply and Close</strong> button</li>
 </ul>
 
 <h3 id="install-several-eclipse-cdt-instances">Install several Eclipse CDT instances</h3>
 
 <p>These separate instances of Eclipse will be used to test the plug-in.</p>
 
-<p>Go to <a href="http://www.eclipse.org/downloads/">Eclipse download site</a> and follow the <a href="https://www.eclipse.org/downloads/eclipse-packages/">download packages</a> link.</p>
+<p>Go to <a href="http://www.eclipse.org/downloads/">Eclipse download site</a> and follow
+the <a href="https://www.eclipse.org/downloads/eclipse-packages/">download packages</a>
+link.</p>
 
-<h4 id="eclipse-47-oxygen">Eclipse 4.7 Oxygen</h4>
+<h4 id="eclipse-cdt-2019-06">Eclipse CDT 2019-06</h4>
 
-<p>Install <strong>Eclipse IDE for C/C++ Developers</strong>.</p>
+<p>From
+<a href="https://www.eclipse.org/downloads/eclipse-packages/">Eclipse download packages</a>
+install <strong>Eclipse IDE for C/C++ Developers</strong>.</p>
 
 <ul>
-  <li>download <strong>Eclipse IDE for C/C++ Developers</strong> (<code class="highlighter-rouge">eclipse-cpp-oxygen-1a-macosx-cocoa-x86_64.dmg</code>)</li>
-  <li>unpack the archive</li>
-  <li>rename <em>_Eclipse_</em> to <strong>Eclipse-cdt-47.app</strong>
+  <li>download <strong>Eclipse IDE for C/C++ Developers</strong>
+(<code class="highlighter-rouge">eclipse-cpp-2019-06-R-macosx-cocoa-x86_64.dmg</code>)</li>
+  <li>unpack the archive into the <code class="highlighter-rouge">develop</code> folder</li>
+  <li>on macOS, remove the <code class="highlighter-rouge">com.apple.quarantine</code> attribute:</li>
+</ul>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xattr <span class="nt">-dr</span> com.apple.quarantine Eclipse.app
+</code></pre>
+</div>
+</div>
+
+<ul>
+  <li>rename <code class="highlighter-rouge">Eclipse.app</code> to <code class="highlighter-rouge">Eclipse-cdt-2019-06.app</code>
 </li>
-  <li>on macOS, make a Finder alias of the <strong>Eclipse.app</strong>, rename it <strong>E47 CDT test</strong> and move it to a place of your choice (the Desktop, for example); remove the <code class="highlighter-rouge">com.apple.quarantine</code> attribute.</li>
-  <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>C/C++</strong> → <strong>Appearance</strong>
+  <li>start Eclipse, use an workspace named <code class="highlighter-rouge">eclipse-committers-photon-workspace</code>
+</li>
+  <li>enable Use this as the default</li>
+  <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>C/C++</strong> →
+<strong>Appearance</strong>
     <ul>
       <li>disable <strong>Show source roots at top of project</strong>
 </li>
@@ -415,23 +508,13 @@
 </li>
     </ul>
   </li>
-  <li>in Project Explorer, click the down pointing triangle → <strong>Filters and Customizations…</strong>
+  <li>in Project Explorer, click the down pointing triangle →
+<strong>Filters and Customizations…</strong>
     <ul>
       <li>disable <code class="highlighter-rouge">.*</code> resources</li>
       <li>click the OK button</li>
     </ul>
   </li>
-</ul>
-
-<h4 id="eclipse-46-neon3">Eclipse 4.6 Neon.3</h4>
-
-<ul>
-  <li>download <strong>Eclipse IDE for C/C++ Developers</strong> (<code class="highlighter-rouge">eclipse-cpp-neon-3-macosx-cocoa-x86_64.tar.gz</code>)</li>
-  <li>unpack the archive</li>
-  <li>rename <em>_Eclipse_</em> to <strong>Eclipse-cdt-46.app</strong>
-</li>
-  <li>on macOS, make a Finder alias of the <strong>Eclipse.app</strong>, rename it <strong>E46 CDT test</strong> and move it to a place of your choice (the Desktop, for example); remove the <code class="highlighter-rouge">com.apple.quarantine</code> attribute.</li>
-  <li>(workspace preferences: same as before)</li>
 </ul>
 
 <h2 id="clone-the-repositories">Clone the repositories</h2>
@@ -441,20 +524,29 @@
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">cd</span> .../GNU<span class="se">\ </span>MCU<span class="se">\ </span>Eclipse
+<code><span class="gp">$</span> <span class="nb">cd</span> .../gnu-mcu-eclipse.github
 <span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/eclipse-plugins.git eclipse-plugins.git
 <span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
 </code></pre>
 </div>
 </div>
 
-<p>On Windows, the <code class="highlighter-rouge">git</code> command is available in the <a href="https://git-scm.com/download/win">Git for Windows</a> package, it should have been installed from the first step.</p>
+<p>On Windows, the <code class="highlighter-rouge">git</code> command is available in the
+<a href="https://git-scm.com/download/win">Git for Windows</a> package, it should
+have been installed from the first step.</p>
 
 <h2 id="import-the-projects">Import the projects</h2>
 
-<p>Import projects using the generic importer:</p>
+<p>In the commiters Eclipse, import projects using the generic importer:</p>
 
 <ul>
+  <li>
+<em>Eclipse</em> menu → <strong>Project</strong>
+    <ul>
+      <li>disable <strong>Build Automatically</strong>
+</li>
+    </ul>
+  </li>
   <li>
 <em>Eclipse</em> menu → <strong>File</strong> → <strong>Import</strong>
 </li>
@@ -468,9 +560,11 @@
   </li>
   <li>Import Projects
     <ul>
-      <li>Root Directory: <code class="highlighter-rouge">.../GNU MCU Eclipse/eclipse-plugins.git</code>
+      <li>Root Directory: <code class="highlighter-rouge">.../gnu-mcu-eclipse.github/eclipse-plugins.git</code>
 </li>
       <li>enable <strong>Search for nested projects</strong>
+</li>
+      <li>disable <strong>Copy projects into workspace</strong>
 </li>
       <li>disable <strong>Add project(s) to working set</strong>
 </li>
@@ -480,9 +574,11 @@
   </li>
   <li>Import Projects
     <ul>
-      <li>Root Directory: <code class="highlighter-rouge">.../GNU MCU Eclipse/org.eclipse.epp.packages.git</code>
+      <li>Root Directory: <code class="highlighter-rouge">.../gnu-mcu-eclipse.github/org.eclipse.epp.packages.git</code>
 </li>
       <li>enable <strong>Search for nested projects</strong>
+</li>
+      <li>disable <strong>Copy projects into workspace</strong>
 </li>
       <li>disable <strong>Add project(s) to working set</strong>
 </li>
@@ -493,37 +589,30 @@
 </ul>
 
 <p>(From EPP disable most projects, except cpp &amp; common)</p>
+
 <h2 id="configure-the-working-sets">Configure the working sets</h2>
 
 <p>In the Java Perspective, create Working Sets</p>
 
 <ul>
-  <li><strong>GNU MCU Eclipse bundles</strong></li>
-  <li><strong>GNU MCU Eclipse features</strong></li>
-  <li>
-<strong>GNU MCU Eclipse plugins root</strong> (with the <code class="highlighter-rouge">gnumcueclipse-plugins</code> project)</li>
-  <li>
-<strong>GNU MCU Eclipse repositories</strong> (with the <code class="highlighter-rouge">ilg.gnumcueclipse.repository</code> and <code class="highlighter-rouge">ilg.gnumcueclipse.riscv.repository</code> projects)</li>
-  <li>
-<strong>GNU MCU Eclipse EPP packages root</strong> (with the <code class="highlighter-rouge">org.eclipse.epp*</code> projects)</li>
-</ul>
-
-<p>In the Java Perspective, the Package Explorer:</p>
-
-<ul>
-  <li>click the down pointing triangle icon and select <strong>Top Level Elements</strong> → <strong>Working Sets</strong>
+  <li>down arrow → <strong>Top Level Elements</strong> → <strong>Working Sets</strong>
 </li>
-  <li>click the down pointing triangle icon and select  <strong>Configure Working Sets…</strong>
+  <li>down arrow → <strong>Select Working Sets…</strong> → <strong>New…</strong>)
     <ul>
-      <li>click the <strong>New…</strong> button</li>
-      <li>click the <strong>Resource</strong> category</li>
-      <li>Give the set a name (for example <code class="highlighter-rouge">GNU MCU Eclipse bundles</code>)</li>
-      <li>select the desired projects</li>
-      <li>click the <strong>Finish</strong> button</li>
-      <li>repeat for all desires sets</li>
+      <li>
+<strong>GNU MCU Eclipse plugins root</strong> (with the <code class="highlighter-rouge">gnumcueclipse-plugins</code> project)</li>
+      <li>
+<strong>GNU MCU Eclipse repositories</strong> (with the <code class="highlighter-rouge">ilg.gnumcueclipse.repository</code>
+project)</li>
+      <li>
+<strong>GNU MCU Eclipse EPP packages root</strong> (with the <code class="highlighter-rouge">org.eclipse.epp*</code> projects)</li>
+      <li>
+<strong>GNU MCU Eclipse features</strong> (with all <code class="highlighter-rouge">*.feature</code> projects)</li>
+      <li>
+<strong>GNU MCU Eclipse bundles</strong> (empty for now)</li>
+      <li>click the <strong>OK</strong> button</li>
     </ul>
   </li>
-  <li>click the <strong>OK</strong> button</li>
 </ul>
 
 <h2 id="create-the-maven-run-configurations">Create the Maven run configurations</h2>
@@ -531,7 +620,8 @@
 <p>To start the plug-ins Maven build from Eclipse</p>
 
 <ul>
-  <li>in the <code class="highlighter-rouge">GNU MCU Eclipse plugins root</code> set, select the <code class="highlighter-rouge">gnumcueclipse-plugins</code> project</li>
+  <li>in the <code class="highlighter-rouge">GNU MCU Eclipse plugins root</code> set, select the <code class="highlighter-rouge">gnumcueclipse-plugins</code>
+project</li>
   <li>
 <em>Eclipse</em> menu → <strong>Run</strong> → <strong>Run Configurations…</strong>
 </li>
@@ -541,18 +631,21 @@
 </li>
   <li>in the Main tab
     <ul>
-      <li>Base directory: click the Workspace… button and select the <code class="highlighter-rouge">gnumcueclipse-plugins</code>
+      <li>Base directory: click the Workspace… button and select the
+<code class="highlighter-rouge">gnumcueclipse-plugins</code>
 </li>
       <li>Goals: <code class="highlighter-rouge">clean verify</code>
 </li>
-      <li>optionally, if warnings are issued, add a new parameter, name <code class="highlighter-rouge">tycho.localArtifacts</code>, value <code class="highlighter-rouge">ignore</code>
+      <li>optionally, if warnings are issued, add a new parameter, name
+<code class="highlighter-rouge">tycho.localArtifacts</code>, value <code class="highlighter-rouge">ignore</code>
 </li>
     </ul>
   </li>
   <li>click the <strong>Apply</strong> button</li>
   <li>in the JRE tab
     <ul>
-      <li>Execution environment JavaSE-1.8</li>
+      <li>select Execution environment <strong>JavaSE-1.8</strong> (to ensure compatibility
+with older environments)</li>
     </ul>
   </li>
   <li>click the <strong>Apply</strong> button</li>
@@ -561,7 +654,8 @@
 <p>To start the EPP Maven build from Eclipse</p>
 
 <ul>
-  <li>in the <code class="highlighter-rouge">GNU MCU Eclipse EPP packages root</code> set, select the <code class="highlighter-rouge">org.eclipse.epp-buildall</code> project</li>
+  <li>in the <code class="highlighter-rouge">GNU MCU Eclipse EPP packages root</code> set, select the
+<code class="highlighter-rouge">org.eclipse.simrel</code> project</li>
   <li>
 <em>Eclipse</em> menu → <strong>Run</strong> → <strong>Run Configurations…</strong>
 </li>
@@ -571,7 +665,8 @@
 </li>
   <li>in the Main tab
     <ul>
-      <li>Base directory: click the Workspace… button and select the <code class="highlighter-rouge">org.eclipse.epp-buildall</code>
+      <li>Base directory: click the Workspace… button and select
+the <code class="highlighter-rouge">org.eclipse.simrel</code>
 </li>
       <li>Goals: <code class="highlighter-rouge">clean verify</code>
 </li>
@@ -582,30 +677,23 @@
   <li>click the <strong>Apply</strong> button</li>
   <li>in the JRE tab
     <ul>
-      <li>Execution environment JavaSE-1.8</li>
+      <li>Execution environment <strong>JavaSE 8 (1.8.9_221)</strong>
+</li>
     </ul>
   </li>
   <li>click the <strong>Apply</strong> button</li>
 </ul>
 
-<p>The project <code class="highlighter-rouge">org.eclipse.epp.packages.git</code> is a fork of <code class="highlighter-rouge">https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git</code>.</p>
-
-<div class="language-console highlighter-rouge">
-<div class="highlight">
-<pre class="highlight">
-<code><span class="gp">$</span> git clone https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
-</code></pre>
-</div>
-</div>
+<p>The project <code class="highlighter-rouge">org.eclipse.epp.packages.git</code> is a fork of
+<code class="highlighter-rouge">https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git</code>.</p>
 
 <h2 id="cdt-wiki">CDT Wiki</h2>
 
 <p>For more details, see <a href="https://wiki.eclipse.org/CDT">https://wiki.eclipse.org/CDT</a>, especially the <a href="https://wiki.eclipse.org/Getting_started_with_CDT_development">Getting started with CDT development</a> page.</p>
 
 
-
 <hr class="page-footer">
-<p class="page-footer">Last modified on Thu Sep 27 05:53:19 2018 UTC.</p>
+<p class="page-footer">Last modified on Mon Sep 23 15:15:35 2019 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/build-prerequisites/" data-layout="button"></div></li>
@@ -620,11 +708,11 @@
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2019/09/23/plugins-v4.6.1-201909231407-released/">GNU MCU Eclipse plug-ins v4.6.1-201909231407 released</a></li>
   <li><a href="/blog/2019/05/24/arm-none-eabi-gcc-v8-2-1-1-7-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.7 20190524 released</a></li>
   <li><a href="/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.2 20190521 released</a></li>
   <li><a href="/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/">GNU MCU Eclipse QEMU v2.8.0-6 20190517 released</a></li>
   <li><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</a></li>
-  <li><a href="/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released</a></li>
 </ul>
 
 

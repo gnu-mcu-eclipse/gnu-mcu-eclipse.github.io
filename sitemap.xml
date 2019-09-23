@@ -521,6 +521,10 @@
 <lastmod>2019-05-24T16:15:17+00:00</lastmod>
 </url>
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2019/09/23/plugins-v4.6.1-201909231407-released/</loc>
+<lastmod>2019-09-23T15:21:15+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/about/</loc>
 <lastmod>2019-01-21T22:53:39+00:00</lastmod>
 </url>
@@ -574,7 +578,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/build-prerequisites/</loc>
-<lastmod>2018-09-27T05:53:19+00:00</lastmod>
+<lastmod>2019-09-23T15:15:35+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/build-procedure/</loc>
@@ -598,7 +602,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/build-procedure/</loc>
-<lastmod>2018-04-19T18:52:06+00:00</lastmod>
+<lastmod>2019-09-23T15:15:35+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/change-log/2013/</loc>
@@ -654,7 +658,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/change-log/</loc>
-<lastmod>2019-01-01T17:45:48+00:00</lastmod>
+<lastmod>2019-09-23T15:16:18+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/contribute/</loc>
@@ -670,7 +674,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/development-environment/</loc>
-<lastmod>2018-06-04T19:50:15+00:00</lastmod>
+<lastmod>2019-09-23T15:15:35+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/qemu/download/</loc>
@@ -1046,6 +1050,10 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/blog/page13/</loc>
+<lastmod>2018-01-10T12:25:30+00:00</lastmod>
+</url>
+<url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/page14/</loc>
 <lastmod>2018-01-10T12:25:30+00:00</lastmod>
 </url>
 </urlset>

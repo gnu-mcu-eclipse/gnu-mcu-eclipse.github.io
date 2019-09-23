@@ -219,60 +219,73 @@
 <ul>
   <li>
 <strong>Run</strong> → <strong>Debug Configurations…</strong>
-</li>
-  <li>double-click <strong>Eclipse Application</strong>
-</li>
-  <li>
-<strong>Name:</strong> <code class="highlighter-rouge">Eclipse GNU MCU Plug-ins</code>
-</li>
-  <li>Location: <code class="highlighter-rouge">${workspace_loc}/../runtime-e47</code>
-</li>
-  <li>Tab: <strong>Plug-ins</strong>
     <ul>
-      <li>Launch with: <strong>plug-ins selected below</strong>; the Workspace list should include all <code class="highlighter-rouge">ilg.gnumcueclipse.*</code> plug-ins; the Target Platform list should include all Eclipse, not only CDT, plug-ins; if the Eclipse plug-ins are not in the list, then the Preferences → Plug-in Development -&gt; Target Platform is not Running Platform, and must be changed. The alternative to use <strong>all workspace and enabled plug-ins</strong> might work in some configurations, and can also be used, but if dependencies are not met, manual selection is required.</li>
-      <li>click the <strong>Validate Plug-ins</strong> button; most probably the <code class="highlighter-rouge">org.apache.xmlrpc</code> plug-in will complain about <code class="highlighter-rouge">javax.xml.bind</code>; either install it, or disable the plug-in; validate again and disable a few more plug-ins (<code class="highlighter-rouge">org.eclipse.mylyn.bugzilla.core</code>, <code class="highlighter-rouge">org.eclipse.mylyn.bugzilla.ui</code>, <code class="highlighter-rouge">org.eclipse.mylyn.builds.ui</code>, <code class="highlighter-rouge">org.eclipse.mylyn.commons.xmlrpc</code>, <code class="highlighter-rouge">org.eclipse.mylyn.hudson.ui</code>).</li>
-    </ul>
-  </li>
-  <li>click <strong>Apply</strong>
+      <li>double-click <strong>Eclipse Application</strong>
 </li>
-  <li>Tab: <strong>Arguments</strong>
-    <ul>
-      <li>Program arguments:
+      <li>
+<strong>Name:</strong> <code class="highlighter-rouge">GME Plug-ins</code>
+</li>
+      <li>Location: <code class="highlighter-rouge">${workspace_loc}/../runtime-GMEPlug-ins-2018-12</code>
+</li>
+      <li>Tab: <strong>Plug-ins</strong>
         <ul>
-          <li><code class="highlighter-rouge">-consoleLog</code></li>
-          <li>
+          <li>Launch with: <strong>plug-ins selected below</strong>; the Workspace list should
+include all <code class="highlighter-rouge">ilg.gnumcueclipse.*</code> plug-ins, not the EPP ones; the
+Target Platform list should include all Eclipse, not only CDT,
+plug-ins; if the Eclipse plug-ins are not in the list, then the
+Preferences → Plug-in Development → Target Platform is not Running
+Platform, and must be changed. The alternative to use <strong>all workspace
+and enabled plug-ins</strong> might work in some configurations, and can also
+be used, but if dependencies are not met, manual selection is required.</li>
+          <li>click the <strong>Validate Plug-ins</strong> button; disable the offending 
+plug-ins; validate again and repeat until success.</li>
+        </ul>
+      </li>
+      <li>click <strong>Apply</strong>
+</li>
+      <li>Tab: <strong>Arguments</strong>
+        <ul>
+          <li>Program arguments:
+            <ul>
+              <li><code class="highlighter-rouge">-consoleLog</code></li>
+              <li>
 <code class="highlighter-rouge">-debug "${workspace_loc}/../../eclipse-plugins.git/debug.options"</code> (<code class="highlighter-rouge">-debug "${workspace_loc}\..\..\eclipse-plugins.git\debug.options"</code> on Windows)</li>
-        </ul>
-      </li>
-      <li>VM arguments:
-        <ul>
-          <li>
+            </ul>
+          </li>
+          <li>VM arguments:
+            <ul>
+              <li>
 <code class="highlighter-rouge">-ea</code> (to enable assertions)</li>
-          <li>
+              <li>
 <code class="highlighter-rouge">-Dorg.eclipse.swt.internal.carbon.smallFonts</code> (only on macOS)</li>
-          <li>
+              <li>
 <code class="highlighter-rouge">-Xdock:icon=../Resources/Eclipse.icns</code> (only on macOS)</li>
+            </ul>
+          </li>
+          <li>enable <strong>Use the -XstartOnFirstThread argument when launching with SWT</strong>
+</li>
         </ul>
       </li>
-      <li>enable <strong>Use the -XstartOnFirstThread argument when launching with SWT</strong>
-</li>
+      <li>click the <strong>Apply</strong> button</li>
+      <li>click the <strong>Debug</strong> button</li>
     </ul>
   </li>
-  <li>click the <strong>Apply</strong> button</li>
-  <li>click the <strong>Debug</strong> button</li>
 </ul>
 
 <p>Clear all errors in the <strong>Problems</strong> tab.</p>
 
-<p>Be sure the target platform is the Running Platform, otherwise starting the debug session fails.</p>
+<p>Be sure the target platform is the Running Platform, otherwise starting
+the debug session fails.</p>
 
 <h2 id="debug-options">Debug options</h2>
 
-<p>As seen before, the debug options are grouped in a file and passed to Eclipse using the <code class="highlighter-rouge">-debug &lt;file&gt;</code> option.</p>
+<p>As seen before, the debug options are grouped in a file and passed to
+Eclipse using the <code class="highlighter-rouge">-debug &lt;file&gt;</code> option.</p>
 
 <h2 id="plug-ins-cache">Plug-ins cache</h2>
 
-<p>When starting debug sessions from within Eclipse, a copy of the run-time is kept under</p>
+<p>When starting debug sessions from within Eclipse, a copy of the run-time
+is kept under</p>
 
 <div class="highlighter-rouge">
 <div class="highlight">
@@ -282,20 +295,25 @@
 </div>
 </div>
 
-<p>For unknown reasons, some changes in the source code (like changing properties files) do not trigger a rebuild, and it is normally not possible to test these changes.</p>
+<p>For unknown reasons, some changes in the source code (like changing
+properties files) do not trigger a rebuild, and it is normally not
+possible to test these changes.</p>
 
-<p>The workaround I found was to remove this folder, and Eclipse will recreate it before the next run.</p>
+<p>The workaround I found was to remove this folder, and Eclipse will
+recreate it before the next run.</p>
 
 <h2 id="debug-with-cdt-sources">Debug with CDT sources</h2>
 
-<p>A more elaborated configuration is required when willing to run debug sessions using CDT source files from the Git repository, for example to debug issues inside CDT.</p>
+<p>A more elaborated configuration is required when willing to run debug
+sessions using CDT source files from the Git repository, for example
+to debug issues inside CDT.</p>
 
 <p>Clone the CDT repository:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">cd</span> .../<span class="s2">"GNU MCU Eclipse"</span>
+<code><span class="gp">$</span> <span class="nb">cd</span> .../gnu-mcu-eclipse.github
 <span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> originals
 <span class="gp">$</span> git clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git originals/org.eclipse.cdt.git
 </code></pre>
@@ -336,7 +354,7 @@
 <ul>
   <li>in the <em>Eclipse</em> menu → <strong>Run</strong> → <strong>Debug Configurations…</strong>
 </li>
-  <li>duplicate <code class="highlighter-rouge">Eclipse GNU MCU Plug-ins</code> into <code class="highlighter-rouge">Eclipse GNU MCU Plug-ins with CDT</code>
+  <li>duplicate <code class="highlighter-rouge">GME Plug-ins</code> into <code class="highlighter-rouge">GME Plug-ins with CDT</code>
 </li>
   <li>in teh <strong>Plug-ins</strong> tab, click the <strong>Add Working Sets..</strong> button
     <ul>
@@ -351,7 +369,7 @@
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Thu Apr 19 18:52:06 2018 UTC.</p>
+<p class="page-footer">Last modified on Mon Sep 23 15:15:35 2019 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/developer/build-procedure/" data-layout="button"></div></li>
@@ -366,11 +384,11 @@
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
+  <li><a href="/blog/2019/09/23/plugins-v4.6.1-201909231407-released/">GNU MCU Eclipse plug-ins v4.6.1-201909231407 released</a></li>
   <li><a href="/blog/2019/05/24/arm-none-eabi-gcc-v8-2-1-1-7-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.7 20190524 released</a></li>
   <li><a href="/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.2 20190521 released</a></li>
   <li><a href="/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/">GNU MCU Eclipse QEMU v2.8.0-6 20190517 released</a></li>
   <li><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</a></li>
-  <li><a href="/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.5 20190426 released</a></li>
 </ul>
 
 

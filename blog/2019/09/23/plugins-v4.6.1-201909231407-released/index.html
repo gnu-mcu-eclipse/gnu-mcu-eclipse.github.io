@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
+
+  <title>GNU MCU Eclipse plug-ins v4.6.1-201909231407 released</title>
+  <meta name="description" content="Version 4.6.1-201909231407 is a new release; the main changes are theaddition of support forthe new xPack Dev Tools and performancefixes for the CMSIS Packs ...">
+
+  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.6.1-201909231407 released">
+  <meta property="og:site_name" content="GNU MCU Eclipse">
+
+
+  <meta property="article:published_time" content="2019-09-23">
+
+
+  <meta property="article:section" content="releases">
+  <meta property="article:section" content="plugins">
+
+  <meta property="article:tag" content="gnu">
+  <meta property="article:tag" content="arm">
+  <meta property="article:tag" content="risc-v">
+  <meta property="article:tag" content="mcu">
+  <meta property="article:tag" content="eclipse">
+
+
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+
+  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
+
+  <link rel="canonical" href="/blog/2019/09/23/plugins-v4.6.1-201909231407-released/">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/manifest.json">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-16767008-16', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<header>
+  <div class="inner">
+    <h1><a href="/">GNU MCU Eclipse</a></h1>
+    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
+    <div id="buttons">
+      <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
+    </div>
+  </div>
+</header>
+
+
+<div id="content-wrapper">
+<div class="inner clearfix">
+
+<div id="site-body">
+<section id="main-content">
+
+<table id="post-navigation">
+  <tr>
+    <td><a href="/blog/2019/05/24/arm-none-eabi-gcc-v8-2-1-1-7-released/">←</a></td>
+    <td><a href="/blog/2019/05/24/arm-none-eabi-gcc-v8-2-1-1-7-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.7 20190524 released</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+
+<h1 class="post-title">GNU MCU Eclipse plug-ins v4.6.1-201909231407 released</h1>
+
+
+<p class="post-meta">
+Posted on September 23, 2019 by Liviu Ionescu.
+</p>
+
+<div id="toc-container">
+<table class="toc" id="toc">
+<tbody>
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a href="#new-features"><span class="tocnumber">1</span> <span class="toctext">New features</span></a>
+</li>
+<li class="toc_level-1 toc_section-2">
+<a href="#addressed-bugs"><span class="tocnumber">2</span> <span class="toctext">Addressed bugs</span></a>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a href="#cmsis-packs-default-location"><span class="tocnumber">3</span> <span class="toctext">CMSIS Packs default location</span></a>
+</li>
+<li class="toc_level-1 toc_section-4">
+<a href="#other-changes"><span class="tocnumber">4</span> <span class="toctext">Other changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-5">
+<a href="#template-changes"><span class="tocnumber">5</span> <span class="toctext">Template changes</span></a>
+</li>
+<li class="toc_level-1 toc_section-6">
+<a href="#known-problems"><span class="tocnumber">6</span> <span class="toctext">Known problems</span></a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Version 4.6.1-201909231407 is a new release; the main changes are the
+addition of support for
+the new <a href="https://xpack.github.io">xPack Dev Tools</a> and performance
+fixes for the <strong>CMSIS Packs</strong> manager.</p>
+
+<p>
+<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/">Binary files »</a>
+</p>
+
+<h2 id="new-features">New features</h2>
+
+<ul>
+  <li>c424f652 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/351">#351</a>] add support for multiple xpack names and add the new names in the <code class="highlighter-rouge">@xpack-dev-tools</code> scope</li>
+  <li>60359ef5 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/362">#362</a>] Show version date in Packs View</li>
+  <li>69ec486e - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/359">#359</a>] Add support for TrustZon (<code class="highlighter-rouge">--mcmse</code>)</li>
+</ul>
+
+<h2 id="addressed-bugs">Addressed bugs</h2>
+
+<ul>
+  <li>a90aeb0f - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/335">#335</a>] Retrieving the <strong>package size</strong> for some CMSIS packages (like Silicon Labs) failed due to the server sending the file in chunks and requiring a more complex processing; fixed.</li>
+  <li>7342e6d4 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/336">#336</a>] In certain conditions, computing the cluster address in the <strong>Peripheral registers</strong> view failed since the increment was not identified properly fixed.</li>
+  <li>e6de2688 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/347">#347</a>] Due to a problem in CDT, using <strong>libraries with spaces in names</strong> failed the build; fixed, and the issue was reported to Eclipse maintainers (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=551089">551089</a>)</li>
+  <li>142eee35 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/341">#341</a>] When initialising the CMSIS Packages plugin, if the location was changed from the default, the <code class="highlighter-rouge">Packages</code> folder was still created in the default location; fixed.</li>
+  <li>22bd0c77 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/346">#346</a>] The size reserved for the xPack version was too small on GNU/Linux; fixed.</li>
+  <li>8410a731 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/343">#343</a>] Due to a typo in SvdUtils, the ‘t’ prefix (for tera) was not recognised; fixed.</li>
+  <li>0eff481e - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/340">#340</a>] In order to accept more legal content in the IP address field of the J-Link Debug plug-in, the validator was removed and any characters are now allowed.</li>
+</ul>
+
+<h2 id="cmsis-packs-default-location">CMSIS Packs default location</h2>
+
+<ul>
+  <li>4345cd17 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/357">#357</a>]: the default location of CMSIS Packs was changed from the current workspace folder to a unique folder in the user folder.</li>
+</ul>
+
+<p>The new location is platform dependent:</p>
+
+<ul>
+  <li>macOS: <code class="highlighter-rouge">${HOME}/Library/CMSIS-Packs</code>
+</li>
+  <li>Linux: <code class="highlighter-rouge">${HOME}/opt/cmsis-packs</code>
+</li>
+  <li>Windows: <code class="highlighter-rouge">%APPDATA%\CMSIS-Packs</code>
+</li>
+</ul>
+
+<h2 id="other-changes">Other changes</h2>
+
+<ul>
+  <li>2b053de3 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/338">#338</a>] the list of accepted devices/architectures was (<code class="highlighter-rouge">-mcpu</code> &amp; <code class="highlighter-rouge">-march</code>) was updated for GCC 8.x;</li>
+  <li>94409173 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/358">#358</a>] the list of accepted compiler standards (<code class="highlighter-rouge">-std=</code>) was updated for GCC 9;</li>
+  <li>7ee535e6 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/360">#360</a>] the <strong>Refresh All</strong> action in the Packs view was optimised and the pack size is retrieved only for the latest version;</li>
+  <li>903b4537 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/361">#361</a>] the CMSIS Packs manager now accepts to install recent packages up to CMSIS Packs v1.6.0 specs;</li>
+  <li>69090d90 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/355">#355</a>] given the change in processing ABI warnings in GCC, the project templates no longer pass <code class="highlighter-rouge">-Wabi</code> to the created projects.</li>
+</ul>
+
+<h2 id="template-changes">Template changes</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h2 id="known-problems">Known problems</h2>
+
+<ul>
+  <li>none</li>
+</ul>
+
+
+<hr class="post-footer">
+<div class="post-footer">
+Posted in
+
+<strong>releases</strong>, <strong>plugins</strong> and tagged
+
+<strong>gnu</strong>, <strong>arm</strong>, <strong>risc-v</strong>, <strong>mcu</strong>, <strong>eclipse</strong>.
+Last modified on Mon Sep 23 15:21:15 2019 UTC.
+<ul class="share-buttons">
+  <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/09/23/plugins-v4.6.1-201909231407-released/" data-layout="button"></div></li>
+</ul>
+
+</div>
+
+
+</section>
+
+<aside id="sidebar">
+
+<h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
+
+<ul>
+  <li><a href="/blog/2019/09/23/plugins-v4.6.1-201909231407-released/">GNU MCU Eclipse plug-ins v4.6.1-201909231407 released</a></li>
+  <li><a href="/blog/2019/05/24/arm-none-eabi-gcc-v8-2-1-1-7-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.7 20190524 released</a></li>
+  <li><a href="/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/">GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.2 20190521 released</a></li>
+  <li><a href="/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/">GNU MCU Eclipse QEMU v2.8.0-6 20190517 released</a></li>
+  <li><a href="/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/">GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.6 20190510 released</a></li>
+</ul>
+
+
+<hr>
+
+<h4 id="gnu-mcu-eclipse-home"><a href="/">GNU MCU Eclipse Home</a></h4>
+
+<h4 id="features"><a href="/plugins/features/">Features</a></h4>
+
+<h4 id="downloads"><a href="/downloads/">Downloads</a></h4>
+
+<ul>
+  <li><a href="/downloads/">Overview</a></li>
+  <li>
+<a href="/plugins/download/">Plug-ins</a> (<a href="/developer/releases/">releases</a>)</li>
+  <li>
+<a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
+  <li>
+<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+  <li>
+<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+</ul>
+
+<h4 id="install"><a href="/install/">Install</a></h4>
+
+<ul>
+  <li><a href="/install/">Overview</a></li>
+  <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
+  <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
+  <li>
+<a href="/debug/install/">Debugging binaries</a>
+    <ul>
+      <li><a href="/debug/install/">Overview</a></li>
+      <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
+      <li><a href="/openocd/install/">OpenOCD install</a></li>
+      <li><a href="/qemu/install/">QEMU install</a></li>
+    </ul>
+  </li>
+  <li><a href="/plugins/install/">Eclipse plug-ins install</a></li>
+</ul>
+
+<h4 id="important">Important</h4>
+
+<ul>
+  <li><a href="/install/">Install order</a></li>
+  <li><a href="/eclipse/workspace/preferences/">Workspace preferences</a></li>
+  <li><a href="/toolchain/path/">Toolchain path</a></li>
+  <li><a href="/eclipse/project/portability/">Project portability</a></li>
+</ul>
+
+<h4 id="tutorials">Tutorials</h4>
+
+<ul>
+  <li><a href="/tutorials/blinky-arm/">Create a Blinky ARM test project</a></li>
+  <li><a href="/tutorials/hello-arm/">Create a Hello ARM test project</a></li>
+</ul>
+
+<h4 id="how-to-use">How to use</h4>
+
+<ul>
+  <li><a href="/plugins/mbs/">The managed build plug-in</a></li>
+  <li><a href="/plugins/packs-manager/">The packs manager (CMSIS)</a></li>
+  <li><a href="/eclipse/project/assign-device/">Assign a device</a></li>
+</ul>
+
+<h4 id="templates"><a href="/templates/">Templates</a></h4>
+
+<ul>
+  <li><a href="/templates/">Overview</a></li>
+  <li><a href="/templates/cortexm/">Cortex-M template</a></li>
+  <li><a href="/templates/stm32f/">STM32Fxx template</a></li>
+  <li><a href="/templates/klxx/">Freescale KLxx templates</a></li>
+</ul>
+
+<h4 id="debugging"><a href="/debug/">Debugging</a></h4>
+
+<ul>
+  <li><a href="/debug/">Overview</a></li>
+  <li><a href="/debug/jlink/">The SEGGER J-Link plug-in</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/qemu/">The QEMU plug-in</a></li>
+  <li><a href="/debug/peripheral-registers/">The peripheral registers view (CMSIS)</a></li>
+</ul>
+
+<h4 id="gnu-mcu-arm-gcc"><a href="/toolchain/arm/">GNU MCU ARM GCC</a></h4>
+
+<ul>
+  <li><a href="/toolchain/arm/">Overview</a></li>
+  <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/arm/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/arm/publish-procedure/">How to publish</a></li>
+  <li><a href="/toolchain/arm/releases/">Releases</a></li>
+  <li><a href="/toolchain/arm/support/">Support</a></li>
+</ul>
+
+<h4 id="gnu-mcu-risc-v-gcc"><a href="/toolchain/riscv/">GNU MCU RISC-V GCC</a></h4>
+
+<ul>
+  <li><a href="/toolchain/riscv/">Overview</a></li>
+  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
+  <li><a href="/toolchain/riscv/build-procedure/">How to build</a></li>
+  <li><a href="/toolchain/riscv/publish-procedure/">How to publish</a></li>
+  <li><a href="/toolchain/riscv/releases/">Releases</a></li>
+  <li><a href="/toolchain/riscv/support/">Support</a></li>
+</ul>
+
+<h4 id="gnu-mcu-qemu-home"><a href="/qemu/">GNU MCU QEMU Home</a></h4>
+
+<ul>
+  <li>
+<a href="/qemu/">Overview</a> (read me first!)</li>
+  <li><a href="/qemu/install/">QEMU Install</a></li>
+  <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
+  <li><a href="/qemu/options/">Command line options</a></li>
+  <li><a href="/qemu/build-procedure/">How to build</a></li>
+  <li><a href="/qemu/publish-procedure/">How to publish</a></li>
+  <li><a href="/qemu/releases/">Releases</a></li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
+
+<ul>
+  <li>
+<a href="/openocd/">Overview</a> (read me first!)</li>
+  <li><a href="/openocd/install/">OpenOCD Install</a></li>
+  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
+  <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
+  <li><a href="/openocd/build-procedure/">How to build</a></li>
+  <li><a href="/openocd/publish-procedure/">How to publish</a></li>
+  <li><a href="/openocd/releases/">Releases</a></li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
+</ul>
+
+<h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
+
+<ul>
+  <li>
+<a href="/windows-build-tools/">Overview</a> (read me first!)</li>
+  <li><a href="/windows-build-tools/install/">Windows Build Tools Install</a></li>
+  <li><a href="/windows-build-tools/build-procedure/">How to build</a></li>
+  <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
+  <li><a href="/windows-build-tools/releases/">Releases</a></li>
+  <li>
+<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+</ul>
+
+<h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
+
+<ul>
+  <li><a href="/arch/riscv/">Overview</a></li>
+  <li><a href="/arch/riscv/arty-reflash/">Flashing the Arty boards</a></li>
+  <li><a href="/arch/riscv/ftdi-jtag-drivers/">FTDI JTAG drivers</a></li>
+</ul>
+
+<h4 id="advanced">Advanced</h4>
+
+<ul>
+  <li><a href="/advanced/headless-builds/">Headless builds</a></li>
+</ul>
+
+<h4 id="support"><a href="/support/">Support</a></h4>
+
+<ul>
+  <li><a href="/support/">Overview</a></li>
+  <li><a href="/support/known-issues/">Known issues</a></li>
+  <li><a href="/support/faq/">FAQ</a></li>
+  <li><a href="/support/sourceforge/">SourceForge tickets</a></li>
+  <li><a href="/support/forum/">Forum</a></li>
+  <li><a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/1/">Report plug-ins issue</a></li>
+</ul>
+
+<h4 id="developer"><a href="/developer/">Developer</a></h4>
+
+<ul>
+  <li><a href="/developer/">Overview</a></li>
+  <li><a href="/developer/build-procedure/">How to build</a></li>
+  <li><a href="/developer/publish-procedure/">How to publish</a></li>
+  <li><a href="/developer/change-log">Change log</a></li>
+  <li><a href="/developer/contribute/">Contribute</a></li>
+</ul>
+
+<h4 id="hardware">Hardware</h4>
+
+<ul>
+  <li><a href="/developer/j-link-stm32-boards/">J-Link and STM32 boards</a></li>
+</ul>
+
+<h4 id="latest-articles">Latest Articles</h4>
+
+<ul>
+  <li><a href="/articles/arm-com-2015-12-09/">GNU ARM Eclipse now available from Eclipse Marketplace</a></li>
+  <li><a href="/articles/arm-com-2015-11/">GNU ARM Eclipse: Cortex-M7 support added</a></li>
+  <li><a href="/articles/arm-com-2015-09/">GNU ARM Eclipse has a new look and a new home</a></li>
+  <li><a href="/articles/arm-com-2014-07/">GNU ARM Eclipse: open source tools with (experimental) CMSIS Pack support</a></li>
+</ul>
+
+<h4 id="licenses">Licenses</h4>
+
+<ul>
+  <li><a href="/licenses/plug-ins/">Eclipse plug-ins</a></li>
+  <li><a href="/licenses/tools/">Tools</a></li>
+</ul>
+
+<h4 id="finance">Finance</h4>
+
+<ul>
+  <li><a href="/finance/sponsorship/">Sponsorship &amp; donations</a></li>
+</ul>
+
+<h4 id="about"><a href="/about/">About</a></h4>
+
+<hr>
+<p>This site uses the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NXKFN7DJH8DJ6">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="Pay Pal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+</aside>
+
+
+</div>
+</div>
+
+<div class="inner clearfix">
+<div class="site-footer">
+  <div class="site-footer-links left">
+    <ul>
+  <li>© 2019 Liviu Ionescu</li>
+  <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
+  <li>
+<a href="http://twitter.com/gnu_mcu_eclipse" class="twitter-follow-button" data-show-count="false">Follow @gnu_mcu_eclipse</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
+  <li>
+    <div class="fb-like" data-href="https://facebook.com/gnu-mcu-eclipse/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  </li>
+</ul>
+
+  </div>
+  <a href="http://github.com/gnu-mcu-eclipse" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </a>
+  <div class="site-footer-links right">
+    <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/">News</a></li>
+  <li><a href="/downloads/">Downloads</a></li>
+  <li><a href="/support/">Support</a></li>
+  <li><a href="/about/">About</a></li>
+</ul>
+
+  </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
