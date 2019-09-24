@@ -124,25 +124,28 @@ Posted on September 23, 2019 by Liviu Ionescu.
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#new-features"><span class="tocnumber">1</span> <span class="toctext">New features</span></a>
+<a href="#the-xpack-dev-tools-scope"><span class="tocnumber">1</span> <span class="toctext">The @xpack-dev-tools scope</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#addressed-bugs"><span class="tocnumber">2</span> <span class="toctext">Addressed bugs</span></a>
+<a href="#other-new-features"><span class="tocnumber">2</span> <span class="toctext">Other new features</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#cmsis-packs-default-location"><span class="tocnumber">3</span> <span class="toctext">CMSIS Packs default location</span></a>
+<a href="#addressed-bugs"><span class="tocnumber">3</span> <span class="toctext">Addressed bugs</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#other-changes"><span class="tocnumber">4</span> <span class="toctext">Other changes</span></a>
+<a href="#cmsis-packs-default-location"><span class="tocnumber">4</span> <span class="toctext">CMSIS Packs default location</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#template-changes"><span class="tocnumber">5</span> <span class="toctext">Template changes</span></a>
+<a href="#other-changes"><span class="tocnumber">5</span> <span class="toctext">Other changes</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#known-problems"><span class="tocnumber">6</span> <span class="toctext">Known problems</span></a>
+<a href="#template-changes"><span class="tocnumber">6</span> <span class="toctext">Template changes</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#eclipse-packages"><span class="tocnumber">7</span> <span class="toctext">Eclipse packages</span></a>
+<a href="#known-problems"><span class="tocnumber">7</span> <span class="toctext">Known problems</span></a>
+</li>
+<li class="toc_level-1 toc_section-8">
+<a href="#eclipse-packages"><span class="tocnumber">8</span> <span class="toctext">Eclipse packages</span></a>
 </li>
 </ul>
 </td>
@@ -159,12 +162,35 @@ fixes for the <strong>CMSIS Packs</strong> manager.</p>
 <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/tag/v4.6.1-201909231407/">Binary files »</a>
 </p>
 
-<h2 id="new-features">New features</h2>
+<h2 id="the-xpack-dev-tools-scope">The <code class="highlighter-rouge">@xpack-dev-tools</code> scope</h2>
 
 <ul>
-  <li>c424f652 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/351">#351</a>] add support for multiple xpack names and add the new names in the <code class="highlighter-rouge">@xpack-dev-tools</code> scope</li>
+  <li>c424f652 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/351">#351</a>]
+in the initial implementation, the binary tools were grouped in the
+<code class="highlighter-rouge">@gnu-mcu-eclipse</code> scope; since most of them were not related to Eclipse, they
+were moved to a separate <code class="highlighter-rouge">@xpack-dev-tools</code> scope; the Eclipse plug-ins were
+updated to support multiple xPack names and add the new names in the
+<code class="highlighter-rouge">@xpack-dev-tools</code> scope were added to each plug-in.</li>
+</ul>
+
+<p>The commands to install the new xPack are:</p>
+
+<div class="language-console highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest
+<span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/openocd@latest
+<span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest
+<span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/riscv-none-embed-gcc@latest
+</code></pre>
+</div>
+</div>
+
+<h2 id="other-new-features">Other new features</h2>
+
+<ul>
   <li>60359ef5 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/362">#362</a>] Show version date in Packs View</li>
-  <li>69ec486e - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/359">#359</a>] Add support for TrustZon (<code class="highlighter-rouge">--mcmse</code>)</li>
+  <li>69ec486e - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/359">#359</a>] Add support for TrustZone (<code class="highlighter-rouge">--mcmse</code>)</li>
 </ul>
 
 <h2 id="addressed-bugs">Addressed bugs</h2>
@@ -182,7 +208,12 @@ fixes for the <strong>CMSIS Packs</strong> manager.</p>
 <h2 id="cmsis-packs-default-location">CMSIS Packs default location</h2>
 
 <ul>
-  <li>4345cd17 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/357">#357</a>]: the default location of CMSIS Packs was changed from the current workspace folder to a unique folder in the user folder.</li>
+  <li>4345cd17 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/357">#357</a>]:
+in the initial implementation, the default location of CMSIS Packs was
+in the same folder as the workspace; when using multiple Eclipse
+workspaces, in different locations, this resulted in multiple CMSIS Packs
+folders; to avoid this, the default location of CMSIS Packs was changed
+from the current workspace folder to a unique folder in the user folder.</li>
 </ul>
 
 <p>The new location is platform dependent:</p>
@@ -195,6 +226,14 @@ fixes for the <strong>CMSIS Packs</strong> manager.</p>
   <li>Windows: <code class="highlighter-rouge">%APPDATA%\CMSIS-Packs</code>
 </li>
 </ul>
+
+<p>It is also possible to change these defaults by using the <code class="highlighter-rouge">CMSIS_PACKS_FOLDER</code>
+environment variable.</p>
+
+<p>The new default applies when installing new Eclipse environments; for
+compatibility reasons, if an
+existing environment contains a <code class="highlighter-rouge">Packages</code> folder in the same location as
+the workspace, then it will be used as before.</p>
 
 <h2 id="other-changes">Other changes</h2>
 
@@ -221,15 +260,20 @@ fixes for the <strong>CMSIS Packs</strong> manager.</p>
 <h2 id="eclipse-packages">Eclipse packages</h2>
 
 <p>For convenience, this version of the plug-ins is also available as
-Eclipse packages:</p>
+an Eclipse package:</p>
 
 <ul>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/tag/v4.6.1-20190923-2019-03">GNU MCU Eclipse IDE for C/C++ Developers 2019-03 20190923</a> which pack together the <strong>2019-03</strong> version (Eclipse 4.11) of the  <strong>Eclipse IDE for C/C++ Developers</strong> standard distribution with the <strong>GNU MCU Eclipse plug-ins</strong>;</li>
+<a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/tag/v4.6.1-20190923-2019-09">GNU MCU Eclipse IDE for C/C++ Developers 2019-09 20190923</a> which pack together the <strong>2019-09</strong> version (Eclipse 4.13) of the  <strong>Eclipse IDE for C/C++ Developers</strong> standard distribution with the <strong>GNU MCU Eclipse plug-ins</strong>.</li>
+</ul>
+
+<p>For historical reasons, packages using the previous Eclipses are also available:</p>
+
+<ul>
   <li>
 <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/tag/v4.6.1-20190923-2019-06">GNU MCU Eclipse IDE for C/C++ Developers 2019-06 20190923</a> which pack together the <strong>2019-06</strong> version (Eclipse 4.12) of the  <strong>Eclipse IDE for C/C++ Developers</strong> standard distribution with the <strong>GNU MCU Eclipse plug-ins</strong>;</li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/tag/v4.6.1-20190923-2019-09">GNU MCU Eclipse IDE for C/C++ Developers 2019-09 20190923</a> which pack together the <strong>2019-09</strong> version (Eclipse 4.13) of the  <strong>Eclipse IDE for C/C++ Developers</strong> standard distribution with the <strong>GNU MCU Eclipse plug-ins</strong>.</li>
+<a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/tag/v4.6.1-20190923-2019-03">GNU MCU Eclipse IDE for C/C++ Developers 2019-03 20190923</a> which pack together the <strong>2019-03</strong> version (Eclipse 4.11) of the  <strong>Eclipse IDE for C/C++ Developers</strong> standard distribution with the <strong>GNU MCU Eclipse plug-ins</strong>;</li>
 </ul>
 
 
@@ -240,7 +284,7 @@ Posted in
 <strong>releases</strong>, <strong>plugins</strong> and tagged
 
 <strong>gnu</strong>, <strong>arm</strong>, <strong>risc-v</strong>, <strong>mcu</strong>, <strong>eclipse</strong>.
-Last modified on Mon Sep 23 17:20:00 2019 UTC.
+Last modified on Tue Sep 24 12:58:13 2019 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2019/09/23/plugins-v4.6.1-201909231407-released/" data-layout="button"></div></li>
