@@ -109,37 +109,40 @@
 <a href="#xpm---the-xpack-manager"><span class="tocnumber">2</span> <span class="toctext">xpm - the xPack Manager</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#toolchains"><span class="tocnumber">3</span> <span class="toctext">Toolchain(s)</span></a>
+<a href="#xpack-dev-tools"><span class="tocnumber">3</span> <span class="toctext">xPack Dev Tools</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#windows-build-tools"><span class="tocnumber">4</span> <span class="toctext">Windows Build Tools</span></a>
+<a href="#toolchains"><span class="tocnumber">4</span> <span class="toctext">Toolchain(s)</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#segger-j-link"><span class="tocnumber">5</span> <span class="toctext">SEGGER J-Link</span></a>
+<a href="#windows-build-tools"><span class="tocnumber">5</span> <span class="toctext">Windows Build Tools</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#openocd"><span class="tocnumber">6</span> <span class="toctext">OpenOCD</span></a>
+<a href="#segger-j-link"><span class="tocnumber">6</span> <span class="toctext">SEGGER J-Link</span></a>
 </li>
 <li class="toc_level-1 toc_section-7">
-<a href="#qemu"><span class="tocnumber">7</span> <span class="toctext">QEMU</span></a>
+<a href="#openocd"><span class="tocnumber">7</span> <span class="toctext">OpenOCD</span></a>
 </li>
 <li class="toc_level-1 toc_section-8">
-<a href="#jumper-virtual-lab"><span class="tocnumber">8</span> <span class="toctext">Jumper Virtual Lab</span></a>
+<a href="#qemu"><span class="tocnumber">8</span> <span class="toctext">QEMU</span></a>
 </li>
 <li class="toc_level-1 toc_section-9">
-<a href="#java"><span class="tocnumber">9</span> <span class="toctext">Java</span></a>
+<a href="#jumper-virtual-lab"><span class="tocnumber">9</span> <span class="toctext">Jumper Virtual Lab</span></a>
 </li>
 <li class="toc_level-1 toc_section-10">
-<a href="#eclipse--cdt"><span class="tocnumber">10</span> <span class="toctext">Eclipse &amp; CDT</span></a>
+<a href="#java"><span class="tocnumber">10</span> <span class="toctext">Java</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#plug-ins"><span class="tocnumber">11</span> <span class="toctext">Plug-ins</span></a>
+<a href="#eclipse--cdt"><span class="tocnumber">11</span> <span class="toctext">Eclipse &amp; CDT</span></a>
 </li>
 <li class="toc_level-1 toc_section-12">
-<a href="#workspace-preferences"><span class="tocnumber">12</span> <span class="toctext">Workspace preferences</span></a>
+<a href="#plug-ins"><span class="tocnumber">12</span> <span class="toctext">Plug-ins</span></a>
 </li>
 <li class="toc_level-1 toc_section-13">
-<a href="#cmsis-packages"><span class="tocnumber">13</span> <span class="toctext">CMSIS packages</span></a>
+<a href="#workspace-preferences"><span class="tocnumber">13</span> <span class="toctext">Workspace preferences</span></a>
+</li>
+<li class="toc_level-1 toc_section-14">
+<a href="#cmsis-packages"><span class="tocnumber">14</span> <span class="toctext">CMSIS packages</span></a>
 </li>
 </ul>
 </td>
@@ -149,43 +152,73 @@
 </div>
 <h2 id="overview">Overview</h2>
 
-<p>For more flexibility and upgradeability, GNU MCU Eclipse is not packed as a all-inclusive suite to be installed in a single step. However, the separate steps are relatively easy to perform, and installing the plug-ins and the tools can be successfully completed even by non-experienced users.</p>
+<p>For more flexibility and upgradeability, GNU MCU Eclipse is not packed
+as a all-inclusive suite to be installed in a single step. However,
+the separate steps are relatively easy to perform, and installing
+the plug-ins and the tools can be successfully completed even by
+non-experienced users.</p>
 
 <blockquote>
-  <p>Note for beginners: If performed for the first time, it is recommended to follow the steps <strong>by the book</strong> and avoid <em>poetic licenses</em>, since they might lead to tricky situations and subtle functional problems.</p>
+  <p>Note for beginners: If performed for the first time, it is
+recommended to follow the steps <strong>by the book</strong> and avoid
+<em>poetic licenses</em>, since they might lead to tricky situations
+and subtle functional problems.</p>
 </blockquote>
 
 <p>The recommended sequence is described below.</p>
 
 <h2 id="xpm---the-xpack-manager">xpm - the xPack Manager</h2>
 
-<p><code class="highlighter-rouge">xpm</code> is a new tool, currently under development, intended to manage software packages (xPacks), including to install binary distributions. It is built on top of <a href="https://nodejs.org/">Node.js</a> and is highly portable; the install steps are described in <a href="https://www.npmjs.com/package/xpm">the xpm page</a>.</p>
+<p><code class="highlighter-rouge">xpm</code> is a new tool, currently under development, intended to manage
+software packages (xPacks), including to install binary distributions.
+It is built on top of <a href="https://nodejs.org/">Node.js</a> and is highly
+portable; the install steps are described in the xpm 
+<a href="https://xpack.github.io/xpm/install/">install page</a>.</p>
 
 <blockquote>
-  <p>Warning for GNU/Linux users: your distribution may already have a <code class="highlighter-rouge">node</code> binary installed; if
+  <p>Warning for GNU/Linux users: your distribution may already have
+a <code class="highlighter-rouge">node</code> binary installed; if
 it is not &gt;= 8.x, <code class="highlighter-rouge">xpm</code> will complain and do not start; anyway, we strongly
-recommend to avoid the distribution binary and install at least 
+recommend to avoid the distribution binary and install at least
 the LTS package from Node.js.</p>
 </blockquote>
 
 <blockquote>
-  <p>Warning for Windows users: binary packages are .zip files containing .exe files; some aggressive antivirus programs may quarantine those files, or even modify the content of the archives, thus changing the checksum and thus preventing the packages to be installed; either configure or temporarily disable the antivirus if necessary.</p>
+  <p>Warning for Windows users: binary packages are .zip files containing
+.exe files; some aggressive antivirus programs may quarantine those
+files, or even modify the content of the archives, thus changing the
+checksum and thus preventing the packages to be installed; either
+configure or temporarily disable the antivirus if necessary.</p>
 </blockquote>
 
-<p>Currently <code class="highlighter-rouge">xpm</code> is not mandatory, but it is a useful addition since it provides a convenient way to install and later upgrade the ARM and RISC-V toolchains, OpenOCD, QEMU and the Windows Build Tools.</p>
+<p>Currently <code class="highlighter-rouge">xpm</code> is not mandatory, but it is a useful addition since
+it provides a convenient way to install and later upgrade the ARM
+and RISC-V toolchains, OpenOCD, QEMU and the Windows Build Tools.</p>
+
+<h2 id="xpack-dev-tools">xPack Dev Tools</h2>
+
+<p>In mid-2019, the main binary tools were moved from the GNU MCU Eclipse
+project to xPack project, and all new releases are available via the
+<code class="highlighter-rouge">@xpack-dev-tools</code> scope.</p>
+
+<p>All previous releases are still available in the <code class="highlighter-rouge">@gnu-mcu-eclipse</code> scope,
+but were deprecated and are not recommended for new projects.</p>
 
 <h2 id="toolchains">Toolchain(s)</h2>
 
-<p>This is generally mandatory, since most platforms do not come by default with an embedded GCC toolchain (ARM or RISC-V).</p>
+<p>This is generally mandatory, since most platforms do not come by default
+with an embedded GCC toolchain (ARM or RISC-V).</p>
 
-<p>Please follow the steps in the <a href="/toolchain/arm/install">ARM Toolchain install</a> or <a href="/toolchain/riscv/install">RISC-V Toolchain install</a> page.</p>
+<p>Please follow the steps in the 
+<a href="https://xpack.github.io/arm-none-eabi-gcc/install/">ARM Toolchain install</a> or
+<a href="https://xpack.github.io/riscv-none-embed-gcc/install/">RISC-V Toolchain install</a> page.</p>
 
 <p>For ARM, the easy install method is:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest
 </code></pre>
 </div>
 </div>
@@ -195,16 +228,20 @@ the LTS package from Node.js.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/riscv-none-embed-gcc@latest
 </code></pre>
 </div>
 </div>
 
 <h2 id="windows-build-tools">Windows Build Tools</h2>
 
-<p>This step is Windows specific, and it is highly recommended to use the GNU MCU Eclipse Windows Build Tools, and avoid other <code class="highlighter-rouge">make.exe</code> programs, even if they apparently work, since subtle differences in path processing exists between different versions of <code class="highlighter-rouge">make</code>.</p>
+<p>This step is Windows specific, and it is highly recommended to use the
+GNU MCU Eclipse Windows Build Tools, and avoid other <code class="highlighter-rouge">make.exe</code> programs,
+even if they apparently work, since subtle differences in path processing
+exists between different versions of <code class="highlighter-rouge">make</code>.</p>
 
-<p>Please follow the steps in the <a href="/windows-build-tools/install/">How to install the Windows Build Tools</a> page.</p>
+<p>Please follow the steps in the
+<a href="/windows-build-tools/install/">How to install the Windows Build Tools</a> page.</p>
 
 <p>The easy install method is:</p>
 
@@ -216,49 +253,65 @@ the LTS package from Node.js.</p>
 </div>
 </div>
 
-<p>POSIX platforms generally include <code class="highlighter-rouge">make</code> in the system distribution, or might require to install some developer packages (for example on macOS you need to install the Xcode Command Line Tools).</p>
+<p>POSIX platforms generally include <code class="highlighter-rouge">make</code> in the system distribution,
+or might require to install some developer packages (for example on
+macOS you need to install the Xcode Command Line Tools).</p>
 
 <h2 id="segger-j-link">SEGGER J-Link</h2>
 
-<p>SEGGER J-Link is the recommended debugger and, if available, please follow the steps in the <a href="/debug/jlink/install">How to install the SEGGER J-Link</a> page.</p>
+<p>SEGGER J-Link is the recommended debugger and, if available, please
+follow the steps in the
+<a href="/debug/jlink/install">How to install the SEGGER J-Link</a> page.</p>
 
 <h2 id="openocd">OpenOCD</h2>
 
-<p>For the unfortunate developers who do not have a J-Link available, the alternative is to follow the steps in the <a href="/openocd/install">How to install the OpenOCD binaries</a> page.</p>
+<p>For the unfortunate developers who do not have a J-Link available,
+the alternative is to follow the steps in the
+<a href="https://xpack.github.io/openocd/install/">How to install the OpenOCD binaries</a> page.</p>
 
 <p>The easy install method is:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/openocd
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/openocd@latest
 </code></pre>
 </div>
 </div>
 
-<p>OpenOCD might be needed when using development boards with integrated debuggers, like STM32F4-DISCOVERY boards, although the recommended solution is to prepare a <a href="/developer/j-link-stm32-boards">custom cable</a> and connect them to J-Link.</p>
+<p>OpenOCD might be needed when using development boards with integrated
+debuggers, like STM32F4-DISCOVERY boards, although the recommended
+solution is to prepare a
+<a href="/developer/j-link-stm32-boards">custom cable</a>
+and connect them to J-Link.</p>
 
 <p>OpenOCD is also needed when using RISC-V boards with integrated debuggers.</p>
 
 <h2 id="qemu">QEMU</h2>
 
-<p>QEMU is a hardware emulator that can be successfully used to run simple <em>blinky</em> applications, and the default tutorial requires QEMU, so it is highly recommended to install it.</p>
+<p>QEMU is a hardware emulator that can be successfully used to run
+simple <em>blinky</em> applications, and the default tutorial requires
+QEMU, so it is highly recommended to install it.</p>
 
 <p>The easy install method is:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/qemu
+<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest
 </code></pre>
 </div>
 </div>
 
-<p>For more details, please follow the steps in the <a href="/qemu/install/">How to install the QEMU binaries</a> page.</p>
+<p>For more details, please follow the steps in the
+<a href="https://xpack.github.io/qemu-arm/install/">How to install the QEMU binaries</a> page.</p>
 
 <h2 id="jumper-virtual-lab">Jumper Virtual Lab</h2>
 
-<p><a href="https://jumper.io">Jumper Virtual lab</a> is an emulator that provides a fast and easy way to execute firmware files on a virtual device running on the development machine. Jumper’s Eclipse plug-in uses the debug framework provided by the GNU MCU Eclipse plug-ins.</p>
+<p><a href="https://jumper.io">Jumper Virtual lab</a> is an emulator that provides a
+fast and easy way to execute firmware files on a virtual device running
+on the development machine. Jumper’s Eclipse plug-in uses the debug
+framework provided by the GNU MCU Eclipse plug-ins.</p>
 
 <p>To install the Jumper Virtual Lab, use the following links:</p>
 
@@ -267,49 +320,67 @@ the LTS package from Node.js.</p>
   <li><a href="https://docs.jumper.io/docs/install.html">How to install</a></li>
 </ul>
 
-<p><em>Jumper Virtual lab</em> is a product of Jumper Labs Ltd, a third party company not directly related to GNU MCU Eclipse. For questions and further info, please contact Jumper Labs via their support channels.</p>
+<p><em>Jumper Virtual lab</em> is a product of Jumper Labs Ltd, a third party
+company not directly related to GNU MCU Eclipse. For questions and
+further info, please contact Jumper Labs via their support channels.</p>
 
 <h2 id="java">Java</h2>
 
 <p>As a prerequisite for Eclipse, Java is required.</p>
 
-<p>Java is no longer a very <em>hot</em> technology, so it is generally not available by default on most platforms and requires separate installation.</p>
+<p>Java is no longer a very <em>hot</em> technology, so it is generally not available
+by default on most platforms and requires separate installation.</p>
 
-<p>More details are available in the <a href="/plugins/install/">How to install the GNU MCU Eclipse plug-ins</a> page.</p>
+<p>More details are available in the 
+<a href="/plugins/install/">How to install the GNU MCU Eclipse plug-ins</a> page.</p>
 
 <h2 id="eclipse--cdt">Eclipse &amp; CDT</h2>
 
-<p>Eclipse is the development platform where the GNU MCU Eclipse plug-ins run. Generally it is not available by default on most platforms and requires separate installation.</p>
+<p>Eclipse is the development platform where the GNU MCU Eclipse plug-ins run.
+Generally it is not available by default on most platforms and requires
+separate installation.</p>
 
-<p>The simple way is to download <strong>GNU MCU Eclipse IDE for C/C++ Developers</strong> from <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/">GitHub Releases</a> and you get at once both Eclipse CDT and the MCU plug-ins.</p>
+<p>The simple way is to download <strong>GNU MCU Eclipse IDE for C/C++ Developers</strong>
+from <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/">GitHub Releases</a>
+and you get at once both Eclipse CDT and the MCU plug-ins.</p>
 
-<p>If you prefer the manual way, be sure you install the <strong>Eclipse IDE for C/C++ Developers</strong>, not other package, since otherwise you’ll have to manually install CDT.</p>
+<p>If you prefer the manual way, be sure you install the
+<strong>Eclipse IDE for C/C++ Developers</strong>, not other package, since otherwise
+you’ll have to manually install CDT.</p>
 
-<p>More details are available in the <a href="/plugins/install/">How to install the GNU MCU Eclipse plug-ins</a> page.</p>
+<p>More details are available in the
+<a href="/plugins/install/">How to install the GNU MCU Eclipse plug-ins</a> page.</p>
 
 <blockquote>
-  <p>Note: on GNU/Linux be sure you manually install the Eclipse; <strong>DO NOT</strong> try to install it via the Synaptics package manager, or similar, since usually you get an older version and the CDT plug-ins are not included.</p>
+  <p>Note: on GNU/Linux be sure you manually install the Eclipse;
+<strong>DO NOT</strong> try to install it via the Synaptics package manager, or
+similar, since usually you get an older version and the CDT plug-ins
+are not included.</p>
 </blockquote>
 
 <h2 id="plug-ins">Plug-ins</h2>
 
-<p>Once the Java &amp; Eclipse are functional, please proceed with plug-ins install, as explains in the  <a href="/plugins/install/">How to install the GNU MCU Eclipse plug-ins</a> page.</p>
+<p>Once the Java &amp; Eclipse are functional, please proceed with plug-ins
+install, as explains in the
+<a href="/plugins/install/">How to install the GNU MCU Eclipse plug-ins</a> page.</p>
 
 <h2 id="workspace-preferences">Workspace preferences</h2>
 
-<p>It is highly recommended that this step be performed after creating each and any Eclipse workspace; for this please follow the steps in the <a href="/eclipse/workspace/preferences">Workspace preferences</a> page.</p>
+<p>It is highly recommended that this step be performed after creating
+each and any Eclipse workspace; for this please follow the steps in the
+<a href="/eclipse/workspace/preferences">Workspace preferences</a> page.</p>
 
 <h2 id="cmsis-packages">CMSIS packages</h2>
 
-<p>To assist the debugger in finding the peripheral registers definitions, 
-please check the 
+<p>To assist the debugger in finding the peripheral registers definitions,
+please check the
 <a href="/plugins/packs-manager/">The CMSIS Packs manager</a>
-page, and install the CMSIS packs for the family of devices used by your 
+page, and install the CMSIS packs for the family of devices used by your
 projects.</p>
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Tue Apr 23 17:13:15 2019 UTC.</p>
+<p class="page-footer">Last modified on Mon Sep 30 22:08:09 2019 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/install/" data-layout="button"></div></li>

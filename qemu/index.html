@@ -10,10 +10,10 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>The GNU MCU Eclipse QEMU</title>
+  <title>DEPRECATED &gt; The GNU MCU Eclipse QEMU</title>
   <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="The GNU MCU Eclipse QEMU">
+  <meta property="og:title" content="DEPRECATED &gt; The GNU MCU Eclipse QEMU">
   <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
@@ -90,7 +90,7 @@
 <section id="main-content">
 
 
-<h1 class="page-title">The GNU MCU Eclipse QEMU</h1>
+<h1 class="page-title">DEPRECATED &gt; The GNU MCU Eclipse QEMU</h1>
 
 
 <div id="toc-container">
@@ -103,63 +103,66 @@
 </div>
 <ul>
 <li class="toc_level-1 toc_section-1">
-<a href="#quicklinks"><span class="tocnumber">1</span> <span class="toctext">Quicklinks</span></a>
+<a href="#deprecation-notice"><span class="tocnumber">1</span> <span class="toctext">Deprecation notice</span></a>
 </li>
 <li class="toc_level-1 toc_section-2">
-<a href="#why-qemu"><span class="tocnumber">2</span> <span class="toctext">Why QEMU?</span></a>
+<a href="#quicklinks"><span class="tocnumber">2</span> <span class="toctext">Quicklinks</span></a>
 </li>
 <li class="toc_level-1 toc_section-3">
-<a href="#why-gnu-mcu-eclipse-qemu"><span class="tocnumber">3</span> <span class="toctext">Why GNU MCU Eclipse QEMU?</span></a>
+<a href="#why-qemu"><span class="tocnumber">3</span> <span class="toctext">Why QEMU?</span></a>
 </li>
 <li class="toc_level-1 toc_section-4">
-<a href="#overview"><span class="tocnumber">4</span> <span class="toctext">Overview</span></a>
+<a href="#why-gnu-mcu-eclipse-qemu"><span class="tocnumber">4</span> <span class="toctext">Why GNU MCU Eclipse QEMU?</span></a>
 </li>
 <li class="toc_level-1 toc_section-5">
-<a href="#benefits"><span class="tocnumber">5</span> <span class="toctext">Benefits</span></a>
+<a href="#overview"><span class="tocnumber">5</span> <span class="toctext">Overview</span></a>
 </li>
 <li class="toc_level-1 toc_section-6">
-<a href="#supported-boards-and-mcus"><span class="tocnumber">6</span> <span class="toctext">Supported boards and MCUs</span></a>
-<ul>
-<li class="toc_level-2 toc_section-7">
-<a href="#compatibility--peripherals"><span class="tocnumber">6.1</span> <span class="toctext">Compatibility &amp; peripherals</span></a>
+<a href="#benefits"><span class="tocnumber">6</span> <span class="toctext">Benefits</span></a>
 </li>
+<li class="toc_level-1 toc_section-7">
+<a href="#supported-boards-and-mcus"><span class="tocnumber">7</span> <span class="toctext">Supported boards and MCUs</span></a>
+<ul>
 <li class="toc_level-2 toc_section-8">
-<a href="#systick"><span class="tocnumber">6.2</span> <span class="toctext">SysTick</span></a>
+<a href="#compatibility--peripherals"><span class="tocnumber">7.1</span> <span class="toctext">Compatibility &amp; peripherals</span></a>
+</li>
+<li class="toc_level-2 toc_section-9">
+<a href="#systick"><span class="tocnumber">7.2</span> <span class="toctext">SysTick</span></a>
 </li>
 </ul>
 </li>
-<li class="toc_level-1 toc_section-9">
-<a href="#limitations"><span class="tocnumber">7</span> <span class="toctext">Limitations</span></a>
-</li>
 <li class="toc_level-1 toc_section-10">
-<a href="#documentation"><span class="tocnumber">8</span> <span class="toctext">Documentation</span></a>
+<a href="#limitations"><span class="tocnumber">8</span> <span class="toctext">Limitations</span></a>
 </li>
 <li class="toc_level-1 toc_section-11">
-<a href="#download"><span class="tocnumber">9</span> <span class="toctext">Download</span></a>
+<a href="#documentation"><span class="tocnumber">9</span> <span class="toctext">Documentation</span></a>
 </li>
 <li class="toc_level-1 toc_section-12">
-<a href="#install"><span class="tocnumber">10</span> <span class="toctext">Install</span></a>
+<a href="#download"><span class="tocnumber">10</span> <span class="toctext">Download</span></a>
 </li>
 <li class="toc_level-1 toc_section-13">
-<a href="#testing"><span class="tocnumber">11</span> <span class="toctext">Testing</span></a>
+<a href="#install"><span class="tocnumber">11</span> <span class="toctext">Install</span></a>
 </li>
 <li class="toc_level-1 toc_section-14">
-<a href="#future-development"><span class="tocnumber">12</span> <span class="toctext">Future development</span></a>
+<a href="#testing"><span class="tocnumber">12</span> <span class="toctext">Testing</span></a>
 </li>
 <li class="toc_level-1 toc_section-15">
-<a href="#updates"><span class="tocnumber">13</span> <span class="toctext">Updates</span></a>
+<a href="#future-development"><span class="tocnumber">13</span> <span class="toctext">Future development</span></a>
 </li>
 <li class="toc_level-1 toc_section-16">
-<a href="#change-log"><span class="tocnumber">14</span> <span class="toctext">Change log</span></a>
+<a href="#updates"><span class="tocnumber">14</span> <span class="toctext">Updates</span></a>
 </li>
 <li class="toc_level-1 toc_section-17">
-<a href="#build-details"><span class="tocnumber">15</span> <span class="toctext">Build details</span></a>
+<a href="#change-log"><span class="tocnumber">15</span> <span class="toctext">Change log</span></a>
 </li>
 <li class="toc_level-1 toc_section-18">
-<a href="#releases"><span class="tocnumber">16</span> <span class="toctext">Releases</span></a>
+<a href="#build-details"><span class="tocnumber">16</span> <span class="toctext">Build details</span></a>
 </li>
 <li class="toc_level-1 toc_section-19">
-<a href="#other-links"><span class="tocnumber">17</span> <span class="toctext">Other links</span></a>
+<a href="#releases"><span class="tocnumber">17</span> <span class="toctext">Releases</span></a>
+</li>
+<li class="toc_level-1 toc_section-20">
+<a href="#other-links"><span class="tocnumber">18</span> <span class="toctext">Other links</span></a>
 </li>
 </ul>
 </td>
@@ -167,6 +170,19 @@
 </tbody>
 </table>
 </div>
+<h2 id="deprecation-notice">Deprecation notice</h2>
+
+<p>In mid-2019, the QEMU binaries were moved from the GNU MCU Eclipse
+project to the xPack project. The new home page is:</p>
+
+<ul>
+  <li><a href="https://xpack.github.io/qemu-arm/">https://xpack.github.io/qemu-arm/</a></li>
+</ul>
+
+<p>All previous releases are still available in the <code class="highlighter-rouge">@gnu-mcu-eclipse</code> scope,
+but were deprecated and are not recommended for new projects.
+___</p>
+
 <h2 id="quicklinks">Quicklinks</h2>
 
 <p>If you already know the general facts about QEMU, you can directly skip to:</p>
@@ -357,7 +373,7 @@ both located in the doc folder in the install location. The official QEMU site a
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Sat Jul  1 21:06:50 2017 UTC.</p>
+<p class="page-footer">Last modified on Mon Sep 30 22:08:09 2019 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/qemu/" data-layout="button"></div></li>
