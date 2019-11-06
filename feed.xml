@@ -5,9 +5,36 @@
     <description>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Nov 2019 08:33:22 +0000</pubDate>
-    <lastBuildDate>Wed, 06 Nov 2019 08:33:22 +0000</lastBuildDate>
+    <pubDate>Wed, 06 Nov 2019 08:39:42 +0000</pubDate>
+    <lastBuildDate>Wed, 06 Nov 2019 08:39:42 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>GNU MCU Eclipse plug-ins v4.7.1-201911052135 released</title>
+        <description>&lt;p&gt;Version 4.7.1-201911052135 is a maintenance release; the main change is an
+enhancement in the logic to update the list of CMSIS Packs.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 06 Nov 2019 08:36:00 +0000</pubDate>
+        <link>http://gnu-mcu-eclipse.github.io/blog/2019/11/06/plugins-v4.7.1-201911052135-released/</link>
+        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2019/11/06/plugins-v4.7.1-201911052135-released/</guid>
+        
+        <category>GNU</category>
+        
+        <category>ARM</category>
+        
+        <category>RISC-V</category>
+        
+        <category>MCU</category>
+        
+        <category>Eclipse</category>
+        
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+      </item>
     
       <item>
         <title>The GNU MCU Eclipse project has new forums</title>
@@ -33,35 +60,6 @@ to a dedicated section in the
         <category>project</category>
         
         <category>support</category>
-        
-      </item>
-    
-      <item>
-        <title>GNU MCU Eclipse plug-ins v4.6.1-201909231407 released</title>
-        <description>&lt;p&gt;Version 4.6.1-201909231407 is a new release; the main changes are the
-addition of support for
-the new &lt;a href=&quot;https://xpack.github.io&quot;&gt;xPack Dev Tools&lt;/a&gt; and performance
-fixes for the &lt;strong&gt;CMSIS Packs&lt;/strong&gt; manager.&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 23 Sep 2019 15:20:00 +0000</pubDate>
-        <link>http://gnu-mcu-eclipse.github.io/blog/2019/09/23/plugins-v4.7.1-201911052135-released/</link>
-        <guid isPermaLink="true">http://gnu-mcu-eclipse.github.io/blog/2019/09/23/plugins-v4.7.1-201911052135-released/</guid>
-        
-        <category>GNU</category>
-        
-        <category>ARM</category>
-        
-        <category>RISC-V</category>
-        
-        <category>MCU</category>
-        
-        <category>Eclipse</category>
-        
-        
-        <category>releases</category>
-        
-        <category>plugins</category>
         
       </item>
     
