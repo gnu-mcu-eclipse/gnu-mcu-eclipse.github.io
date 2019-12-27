@@ -140,8 +140,8 @@
 
 <ul>
   <li><a href="/debug/jlink/install/" title="SEGGER J-Link Install">SEGGER J-Link install</a></li>
-  <li><a href="/openocd/install/" title="OpenOCD install">OpenOCD install</a></li>
-  <li><a href="/qemu/install/" title="QEMU Install">QEMU install</a></li>
+  <li><a href="https://xpack.github.io/openocd/install/" title="The xPack OpenOCD install">OpenOCD install</a></li>
+  <li><a href="https://xpack.github.io/qemu-arm//install/" title="The xPack QEMU Arm Install">QEMU install</a></li>
 </ul>
 
 <h2 id="overview">Overview</h2>
@@ -173,7 +173,7 @@
 <ul>
   <li>the <strong>SEGGER J-Link</strong> probe &amp; GDB server, as <strong>a highly professional solution</strong>, supporting both JTAG and SWD, plus SWO trace output;</li>
   <li>the <strong>OpenOCD</strong> application as <strong>an universal tool</strong>, supporting most cheap JTAG probes, but with limitations (currently it does not support SWD and implicitly no SWO, it is slower, configuration might be sometimes cryptical, there are many driver incompatibilities on Windows, etc);</li>
-  <li>the <a href="/qemu/" title="The GNU MCU Eclipse QEMU">GNU MCU Eclipse QEMU</a> emulator, supporting several Cortex-M boards.</li>
+  <li>the <a href="https://xpack.github.io/qemu-arm/" title="The xPack QEMU Arm">xPack QEMU Arm</a> emulator, supporting several Cortex-M boards.</li>
 </ul>
 
 <p>For an explanation why the SEGGER J-Link was selected, please go to the <a href="/debug/jlink/" title="The J-Link hardware debugging Eclipse plug-in">J-Link Debugging</a> page and read the introduction section.</p>
@@ -205,8 +205,8 @@
 
 <ul>
   <li><a href="/debug/jlink/install/" title="SEGGER J-Link Install">SEGGER J-Link install</a></li>
-  <li><a href="/openocd/install/" title="OpenOCD install">OpenOCD install</a></li>
-  <li><a href="/qemu/install/" title="QEMU Install">QEMU install</a></li>
+  <li><a href="https://xpack.github.io/openocd/install/" title="The xPack OpenOCD install">xPack OpenOCD install</a></li>
+  <li><a href="https://xpack.github.io/qemu-arm//install/" title="The xPack QEMU Arm Install">xPack QEMU Arm install</a></li>
 </ul>
 
 <p>Normally if you already have a J-Link probe (or an OpenSDA J-Link compatible evaluation board), there is no absolute need to install OpenOCD, but it is sometimes useful to have a back-up solution in case you want to compare different behaviours, so the recommendation is to have both installed.</p>
@@ -253,7 +253,7 @@
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Thu Jan  4 18:49:58 2018 UTC.</p>
+<p class="page-footer">Last modified on Fri Dec 27 09:39:55 2019 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/debug/install/" data-layout="button"></div></li>
@@ -291,9 +291,9 @@
   <li>
 <a href="/windows-build-tools/download/">Windows Build Tools</a> (<a href="/windows-build-tools/releases/">releases</a>)</li>
   <li>
-<a href="/qemu/download/">QEMU</a> (<a href="/qemu/releases/">releases</a>)</li>
+<a href="/qemu/download/">xPack QEMU Arm</a> (<a href="https://xpack.github.io/qemu-arm/releases/">releases</a>)</li>
   <li>
-<a href="/openocd/download/">OpenOCD</a> (<a href="/openocd/releases/">releases</a>)</li>
+<a href="/openocd/download/">xPack OpenOCD</a> (<a href="https://xpack.github.io/openocd/releases/">releases</a>)</li>
 </ul>
 
 <h4 id="install"><a href="/install/">Install</a></h4>
@@ -308,8 +308,8 @@
     <ul>
       <li><a href="/debug/install/">Overview</a></li>
       <li><a href="/debug/jlink/install/">SEGGER J-Link install</a></li>
-      <li><a href="/openocd/install/">OpenOCD install</a></li>
-      <li><a href="/qemu/install/">QEMU install</a></li>
+      <li><a href="https://xpack.github.io/openocd/install/">xPack OpenOCD install</a></li>
+      <li><a href="https://xpack.github.io/qemu-arm/install/">xPack QEMU Arm install</a></li>
     </ul>
   </li>
   <li><a href="/plugins/install/">Eclipse plug-ins install</a></li>
@@ -358,57 +358,13 @@
   <li><a href="/debug/peripheral-registers/">The peripheral registers view (CMSIS)</a></li>
 </ul>
 
-<h4 id="gnu-mcu-arm-gcc"><a href="/toolchain/arm/">GNU MCU ARM GCC</a></h4>
+<h4 id="xpack-gnu-arm-embedded-gcc"><a href="https://xpack.github.io/arm-none-eabi-gcc/">xPack GNU Arm Embedded GCC</a></h4>
 
-<ul>
-  <li><a href="/toolchain/arm/">Overview</a></li>
-  <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
-  <li><a href="/toolchain/arm/build-procedure/">How to build</a></li>
-  <li><a href="/toolchain/arm/publish-procedure/">How to publish</a></li>
-  <li><a href="/toolchain/arm/releases/">Releases</a></li>
-  <li><a href="/toolchain/arm/support/">Support</a></li>
-</ul>
+<h4 id="xpack-gnu-risc-v-embedded-gcc"><a href="https://xpack.github.io/riscv-none-embed-gcc/">xPack GNU RISC-V Embedded GCC</a></h4>
 
-<h4 id="gnu-mcu-risc-v-gcc"><a href="/toolchain/riscv/">GNU MCU RISC-V GCC</a></h4>
+<h4 id="xpack-qemu-arm"><a href="https://xpack.github.io/qemu-arm/">xPack QEMU Arm</a></h4>
 
-<ul>
-  <li><a href="/toolchain/riscv/">Overview</a></li>
-  <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
-  <li><a href="/toolchain/riscv/build-procedure/">How to build</a></li>
-  <li><a href="/toolchain/riscv/publish-procedure/">How to publish</a></li>
-  <li><a href="/toolchain/riscv/releases/">Releases</a></li>
-  <li><a href="/toolchain/riscv/support/">Support</a></li>
-</ul>
-
-<h4 id="gnu-mcu-qemu-home"><a href="/qemu/">GNU MCU QEMU Home</a></h4>
-
-<ul>
-  <li>
-<a href="/qemu/">Overview</a> (read me first!)</li>
-  <li><a href="/qemu/install/">QEMU Install</a></li>
-  <li><a href="/debug/qemu/">Eclipse plug-in</a></li>
-  <li><a href="/qemu/options/">Command line options</a></li>
-  <li><a href="/qemu/build-procedure/">How to build</a></li>
-  <li><a href="/qemu/publish-procedure/">How to publish</a></li>
-  <li><a href="/qemu/releases/">Releases</a></li>
-  <li>
-<a href="https://github.com/gnu-mcu-eclipse/qemu/issues/1/">Support</a> (report issue)</li>
-</ul>
-
-<h4 id="gnu-mcu-openocd-home"><a href="/openocd/">GNU MCU OpenOCD Home</a></h4>
-
-<ul>
-  <li>
-<a href="/openocd/">Overview</a> (read me first!)</li>
-  <li><a href="/openocd/install/">OpenOCD Install</a></li>
-  <li><a href="/debug/openocd/">The OpenOCD plug-in</a></li>
-  <li><a href="/debug/openocd/riscv/">RISC-V specifics</a></li>
-  <li><a href="/openocd/build-procedure/">How to build</a></li>
-  <li><a href="/openocd/publish-procedure/">How to publish</a></li>
-  <li><a href="/openocd/releases/">Releases</a></li>
-  <li>
-<a href="https://github.com/gnu-mcu-eclipse/openocd/issues/1/">Support</a>  (report issue)</li>
-</ul>
+<h4 id="xpack-openocd"><a href="https://xpack.github.io/openocd/">xPack OpenOCD</a></h4>
 
 <h4 id="windows-build-tools-home"><a href="/windows-build-tools/">Windows Build Tools Home</a></h4>
 
