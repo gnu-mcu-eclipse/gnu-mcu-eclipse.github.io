@@ -10,10 +10,10 @@
 
   <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
 
-  <title>GNU MCU Eclipse plug-ins v4.7.2-202001271018 released</title>
-  <meta name="description" content="Version 4.7.2-202001271018 is a maintenance release; the main change isthe update to https for the CMSIS Packs index URL.">
+  <title>GNU MCU Eclipse plug-ins v4.7.2-202001271244 released</title>
+  <meta name="description" content="Version 4.7.2-202001271244 is a maintenance release to fix the issue relatedto the change introduced by the update to https for the CMSIS Pack index.">
 
-  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.7.2-202001271018 released">
+  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.7.2-202001271244 released">
   <meta property="og:site_name" content="GNU MCU Eclipse">
 
 
@@ -37,7 +37,7 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
 
-  <link rel="canonical" href="/blog/2020/01/27/plugins-v4.7.2-202001271018-released/">
+  <link rel="canonical" href="/blog/2020/01/27/plugins-v4.7.2-202001271244-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
@@ -107,7 +107,7 @@
 </table>
 
 
-<h1 class="post-title">GNU MCU Eclipse plug-ins v4.7.2-202001271018 released</h1>
+<h1 class="post-title">GNU MCU Eclipse plug-ins v4.7.2-202001271244 released</h1>
 
 
 <p class="post-meta">
@@ -138,8 +138,8 @@ Posted on January 27, 2020 by Liviu Ionescu.
 </tbody>
 </table>
 </div>
-<p>Version 4.7.2-202001271018 is a maintenance release; the main change is
-the update to https for the CMSIS Packs index URL.</p>
+<p>Version 4.7.2-202001271244 is a maintenance release to fix the issue related
+to the change introduced by the update to https for the CMSIS Pack index.</p>
 
 <p>
 <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/">Binary files »</a>
@@ -148,15 +148,12 @@ the update to https for the CMSIS Packs index URL.</p>
 <h2 id="changes">Changes</h2>
 
 <ul>
-  <li>69478ced - [#373] rework other redirects</li>
-  <li>
-    <p>4a6e7df8 - [#373] process redirects for index</p>
-  </li>
   <li>97dd134b, 4a6e7df8 - [#373] in early January 2020, Keil/Arm relocated the
 server storing the CMSIS Packs index to the cloud and
 changed the URL to https, leaving a http redirect in the previous location.
-Unfortunately the Java HttpURLConnection class used to download the
-index does not handle redirections from http to https, and attempts to refresh
+The Java HttpURLConnection class used to download the
+index does handle some redirections, but those from http to https are not
+supported, and attempts to refresh
 the index failed. The new URL was updated in the
 C/C++ &gt; MCU Packages &gt; Reposiotries preferences page, and also redirection
 was implementd in code.</li>
@@ -180,10 +177,10 @@ Posted in
 <strong>releases</strong>, <strong>plugins</strong> and tagged
 
 <strong>gnu</strong>, <strong>arm</strong>, <strong>risc-v</strong>, <strong>mcu</strong>, <strong>eclipse</strong>.
-Last modified on Mon Jan 27 11:56:41 2020 UTC.
+Last modified on Mon Jan 27 13:04:17 2020 UTC.
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
-  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2020/01/27/plugins-v4.7.2-202001271018-released/" data-layout="button"></div></li>
+  <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/blog/2020/01/27/plugins-v4.7.2-202001271244-released/" data-layout="button"></div></li>
 </ul>
 
 </div>
@@ -196,7 +193,7 @@ Last modified on Mon Jan 27 11:56:41 2020 UTC.
 <h4 id="latest-news"><a href="/blog/">Latest News</a></h4>
 
 <ul>
-  <li><a href="/blog/2020/01/27/plugins-v4.7.2-202001271018-released/">GNU MCU Eclipse plug-ins v4.7.2-202001271018 released</a></li>
+  <li><a href="/blog/2020/01/27/plugins-v4.7.2-202001271244-released/">GNU MCU Eclipse plug-ins v4.7.2-202001271244 released</a></li>
   <li><a href="/blog/2019/11/06/plugins-v4.7.1-201911052135-released/">GNU MCU Eclipse plug-ins v4.7.1-201911052135 released</a></li>
   <li><a href="/blog/2019/09/25/new-forums/">The GNU MCU Eclipse project has new forums</a></li>
   <li><a href="/blog/2019/09/23/plugins-v4.6.1-201909231407-released/">GNU MCU Eclipse plug-ins v4.6.1-201909231407 released</a></li>
