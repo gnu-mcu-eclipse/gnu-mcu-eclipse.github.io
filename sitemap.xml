@@ -537,6 +537,10 @@
 <lastmod>2020-01-27T13:32:53+00:00</lastmod>
 </url>
 <url>
+<loc>http://gnu-mcu-eclipse.github.io/blog/2020/07/28/plugins-v5.1.1-202007271621-released/</loc>
+<lastmod>2020-07-28T14:16:12+00:00</lastmod>
+</url>
+<url>
 <loc>http://gnu-mcu-eclipse.github.io/about/</loc>
 <lastmod>2019-01-21T22:53:39+00:00</lastmod>
 </url>
@@ -670,11 +674,11 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/change-log/</loc>
-<lastmod>2019-04-24T06:28:56+00:00</lastmod>
+<lastmod>2020-07-28T14:34:43+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/change-log/</loc>
-<lastmod>2020-01-27T12:12:43+00:00</lastmod>
+<lastmod>2020-07-28T14:34:27+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/contribute/</loc>
@@ -942,7 +946,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/toolchain/arm/publish-procedure/</loc>
-<lastmod>2019-09-30T22:08:09+00:00</lastmod>
+<lastmod>2020-07-28T14:41:19+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/openocd/publish-procedure/</loc>
@@ -950,7 +954,7 @@
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/windows-build-tools/publish-procedure/</loc>
-<lastmod>2020-01-27T12:09:28+00:00</lastmod>
+<lastmod>2020-07-28T14:28:10+00:00</lastmod>
 </url>
 <url>
 <loc>http://gnu-mcu-eclipse.github.io/developer/publish-procedure/</loc>
