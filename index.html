@@ -8,13 +8,13 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
 
   <title>GNU MCU → Eclipse Embedded CDT!</title>
   <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
   <meta property="og:title" content="GNU MCU → Eclipse Embedded CDT!">
-  <meta property="og:site_name" content="GNU MCU Eclipse">
+  <meta property="og:site_name" content="Eclipse Embedded CDT">
 
 
   <meta property="article:published_time" content="2015-09-07">
@@ -74,7 +74,7 @@
 
 <header>
   <div class="inner">
-    <h1><a href="/">GNU MCU Eclipse</a></h1>
+    <h1><a href="/">Eclipse Embedded CDT</a></h1>
     <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
@@ -101,7 +101,7 @@ starting with <strong>v5.1.1</strong>, all future
 will be available from the Eclipse Foundation.</p>
 </blockquote>
 
-<p><strong>GNU MCU Eclipse</strong> is an open source project that includes a family
+<p><strong>Eclipse Embedded CDT</strong> is an open source project that includes a family
 of Eclipse plug-ins and tools for multi-platform embedded ARM and RISC-V
 development, based on GNU toolchains. This project is hosted on
 <a href="https://github.com/gnu-mcu-eclipse">GitHub</a>. The former project was
@@ -118,11 +118,11 @@ more details, see the <a href="/arch/riscv/">RISC-V Corner</a> and
 <a href="https://xpack.github.io/riscv-none-embed-gcc/">xPack GNU RISC-V Embedded GCC</a>
 page.</p>
 
-<h2 id="the-gnu-mcu-eclipse-plug-ins">The GNU MCU Eclipse plug-ins</h2>
+<h2 id="the-eclipse-embedded-cdt-plug-ins">The Eclipse Embedded CDT plug-ins</h2>
 
 <p><img src="/assets/images/2017/gme-64.png" alt="GME logo" class="right-align-image">These plug-ins provide Eclipse CDT (C/C++ Development Tooling) extensions for GNU embedded toolchains like <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-arm-embedded-toolchain">GNU Tools for ARM Embedded Processors</a>, <strong>Linaro</strong>, <a href="https://xpack.github.io/riscv-none-embed-gcc/">xPack GNU RISC-V Embedded GCC</a>, etc.</p>
 
-<p>In short, the GNU MCU Eclipse plug-ins allow to create, build, debug and in general to <strong>manage ARM &amp; RISC-V projects</strong> (executables and static/shared libraries, in both 32 and 64-bit versions) with the Eclipse framework (currently tested up to Eclipse 4.10 2018-12). The plug-ins run on Windows, macOS and GNU/Linux. For more details please visit the <a href="/plugins/features/">Features</a> page.</p>
+<p>In short, the Eclipse Embedded CDT plug-ins allow to create, build, debug and in general to <strong>manage ARM &amp; RISC-V projects</strong> (executables and static/shared libraries, in both 32 and 64-bit versions) with the Eclipse framework (currently tested up to Eclipse 4.10 2018-12). The plug-ins run on Windows, macOS and GNU/Linux. For more details please visit the <a href="/plugins/features/">Features</a> page.</p>
 
 <p><img src="/assets/images/2017/intro-new-riscv-project.png" alt="Create new STM32F4 C++ project"></p>
 
@@ -134,27 +134,41 @@ page.</p>
   <li>
     <p><strong>xPack Windows Build Tools</strong></p>
 
-    <p>The <strong>xPack Windows Build Tools</strong> project includes the additional tools required to perform builds on Windows (<strong>make</strong> &amp; <strong>rm</strong>).</p>
+    <p>The <a href="https://xpack.github.io/windows-build-tools/"><strong>xPack Windows Build Tools</strong></a>
+project includes the additional tools required to perform builds on Windows
+(<strong>make</strong> &amp; <strong>rm</strong>).</p>
   </li>
   <li>
     <p><strong>xPack GNU Arm Embedded GCC</strong></p>
 
-    <p>The <strong>xPack GNU Arm Embedded GCC</strong> project is an alternate binary distribution that complements the official <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a> maintained by Arm. Binaries for Windows, macOS and GNU/Linux are available.</p>
+    <p>The <a href="https://xpack.github.io/arm-none-eabi-gcc/"><strong>xPack GNU Arm Embedded GCC</strong></a>
+project is an alternate binary distribution that complements the official
+<a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a> maintained by Arm. Binaries for Windows, macOS and GNU/Linux are available.</p>
   </li>
   <li>
     <p><strong>xPack GNU RISC-V Embedded GCC</strong></p>
 
-    <p>The <strong>xPack GNU RISC-V Embedded GCC</strong> project is a new distribution of the bare metal version of <a href="https://github.com/riscv/riscv-gcc">RISC-V GCC</a>, maintained by <a href="https://www.sifive.com">SiFive</a>. Binaries for Windows, macOS and GNU/Linux are available.</p>
+    <p>The <a href="https://xpack.github.io/riscv-none-embed-gcc/"><strong>xPack GNU RISC-V Embedded GCC</strong></a>
+project is a new distribution of the bare metal version of
+<a href="https://github.com/riscv/riscv-gcc">RISC-V GCC</a>, maintained by
+<a href="https://www.sifive.com">SiFive</a>. Binaries for Windows, macOS and GNU/Linux
+are available.</p>
   </li>
   <li>
     <p><strong>xPack OpenOCD</strong></p>
 
-    <p>The <strong>xPack OpenOCD</strong> project is a new distribution of <a href="http://openocd.org/">OpenOCD</a>, customised for a better/more convenient integration with the <strong>GNU ARM OpenOCD Debugging</strong> plug-in. Binaries for Windows, macOS and GNU/Linux are available.</p>
+    <p>The <a href="https://xpack.github.io/openocd/"><strong>xPack OpenOCD</strong></a> project is a
+new distribution of <a href="http://openocd.org/">OpenOCD</a>, customised for a
+better/more convenient integration with the <strong>OpenOCD Debugging</strong> plug-in.
+Binaries for Windows, macOS and GNU/Linux are available.</p>
   </li>
   <li>
     <p><strong>xPack QEMU Arm</strong></p>
 
-    <p>The <strong>xPack QEMU Arm</strong> project is a fork of <a href="http://wiki.qemu.org/Main_Page">QEMU</a> (an open source machine emulator), intended to provide support for Cortex-M emulation in GNU MCU Eclipse. Binaries for Windows, macOS and GNU/Linux are available.</p>
+    <p>The <a href="https://xpack.github.io/qemu-arm/"><strong>xPack QEMU Arm</strong></a> project is a
+fork of <a href="http://wiki.qemu.org/Main_Page">QEMU</a> (an open source machine emulator),
+intended to provide support for Cortex-M emulation in GNU MCU Eclipse.
+Binaries for Windows, macOS and GNU/Linux are available.</p>
 
     <p><img src="/assets/images/2015/stm32f4-discovery-leds.png" alt="The STM32F4-Discovery 4 LEDs"></p>
   </li>
@@ -162,14 +176,14 @@ page.</p>
 
 <h2 id="let-us-know-if-you-enjoyed-it">Let us know if you enjoyed it!</h2>
 
-<p>We definitely enjoyed working on the project! If you successfully 
-installed <strong>GNU MCU Eclipse</strong> and enjoyed using it, please let us know; 
+<p>We definitely enjoyed working on the project! If you successfully
+installed <strong>Eclipse Embedded CDT</strong> and enjoyed using it, please let us know;
 here are some advices:</p>
 
 <ul>
-  <li>the best way to praise us would be to <strong>donate</strong> - if you want to speed 
-up development and future versions to include more and more great 
-features, please consider donating; any contribution, small or 
+  <li>the best way to praise us would be to <strong>donate</strong> - if you want to speed
+up development and future versions to include more and more great
+features, please consider donating; any contribution, small or
 generous, will be highly appreciated;</li>
   <li>
 <strong>star</strong> the project using the
@@ -186,7 +200,7 @@ get notifications on new releases;</li>
 
 <hr class="page-footer">
 <p class="page-footer">
-Last modified on Tue Jul 28 15:40:57 2020 UTC.
+Last modified on Mon Aug  3 12:52:31 2020 UTC.
 </p>
 
 
@@ -394,7 +408,7 @@ Last modified on Tue Jul 28 15:40:57 2020 UTC.
 <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2019 Liviu Ionescu</li>
+  <li>© 2020 Liviu Ionescu</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
 <a href="http://twitter.com/gnu_mcu_eclipse" class="twitter-follow-button" data-show-count="false">Follow @gnu_mcu_eclipse</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

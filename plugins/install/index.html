@@ -8,13 +8,13 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="GNU MCU Eclipse" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
 
-  <title>How to install the GNU MCU Eclipse plug-ins?</title>
+  <title>How to install the Eclipse Embedded CDT plug-ins</title>
   <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
 
-  <meta property="og:title" content="How to install the GNU MCU Eclipse plug-ins?">
-  <meta property="og:site_name" content="GNU MCU Eclipse">
+  <meta property="og:title" content="How to install the Eclipse Embedded CDT plug-ins">
+  <meta property="og:site_name" content="Eclipse Embedded CDT">
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -74,7 +74,7 @@
 
 <header>
   <div class="inner">
-    <h1><a href="/">GNU MCU Eclipse</a></h1>
+    <h1><a href="/">Eclipse Embedded CDT</a></h1>
     <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
     <div id="buttons">
       <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
@@ -90,7 +90,7 @@
 <section id="main-content">
 
 
-<h1 class="page-title">How to install the GNU MCU Eclipse plug-ins?</h1>
+<h1 class="page-title">How to install the Eclipse Embedded CDT plug-ins</h1>
 
 
 <div id="toc-container">
@@ -197,31 +197,46 @@
 </div>
 <h2 id="quicklinks">Quicklinks</h2>
 
-<p>If you know what this is all about, you can do the following:</p>
+<p>If you know what this is all about, you can do one of the following:</p>
 
 <ul>
-  <li>use the <strong>GNU MCU Eclipse IDE for C/C++ Developers</strong> packages, which packs Eclipse with the plug-ins; for this go to <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/">GitHub Releases</a> and download the binary for your platform;</li>
-  <li>go to the <em>Eclipse</em> menu → <strong>Help</strong> → <strong>Eclipse Marketplace…</strong>, find <strong>GNU MCU Eclipse</strong> and install</li>
+  <li>use the <strong>Eclipse IDE for Embedded C/C++ Developers</strong> packages, which
+packs Eclipse with the plug-ins; for this go to
+<a href="https://projects.eclipse.org/projects/iot.embed-cdt/downloads/">Eclipse</a>
+and download the binary for your platform;</li>
+  <li>go to the <em>Eclipse</em> menu → <strong>Help</strong> → <strong>Eclipse Marketplace…</strong>,
+find <em>Embedded CDT</em> and install</li>
 </ul>
 
-<p>If, for any reason, this does not work and you have to do it manually, you only need the update site details:</p>
+<p>If, for any reason, this does not work and you have to do it manually,
+you only need the update site details:</p>
 
 <ul>
-  <li>name: <strong>GNU MCU Eclipse Plug-ins</strong>
+  <li>name: <strong>Eclipse Embedded CDT Plug-ins</strong>
 </li>
-  <li>URL: <code class="highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates/</code>
+  <li>URL: <code class="highlighter-rouge">https://download.eclipse.org/embed-cdt/updates/neon/</code>
 </li>
 </ul>
 
-<p>Note: as the name implies, this URL is only valid for Eclipse <strong>Neon</strong> or later; the old URL <code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates/</code> is now deprecated, and its content will point to v3.x, that can be used to install the older versions of the plug-ins on older Eclipses.</p>
+<p>Note: as the name implies, this URL is only valid for Eclipse <strong>Neon</strong> or
+later; the old URL <code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates/</code> is now
+deprecated, and its content will point to v3.x, that can be used to install
+the older versions of the plug-ins on older Eclipses.</p>
 
-<p>It is recommended that you install the plug-ins after installing the <a href="/toolchain/arm/install">ARM toolchain</a> and/or the <a href="/toolchain/riscv/install">RISC-V toolchain</a>, the <a href="/windows-build-tools/install/">build tools</a> (on Windows), and the <a href="/debug/install/">debugging binaries</a>.</p>
+<p>It is recommended that you install the plug-ins after installing the
+<a href="/toolchain/arm/install">ARM toolchain</a> and/or the
+<a href="/toolchain/riscv/install">RISC-V toolchain</a>, the
+<a href="/windows-build-tools/install/">build tools</a> (on Windows),
+and the <a href="/debug/install/">debugging binaries</a>.</p>
 
 <blockquote>
   <p>Important notes:</p>
   <ul>
-    <li>if you use the Oracle JDK, starting with mid January 2017, attempts to install from SourceForge <a href="/blog/2017/01/29/plugins-install-issue/">fail with handshake_error</a>;</li>
-    <li>if you are behind a firewall, older Java virtual machines <a href="/blog/2016/12/02/plugins-install-issue/">fail to connect to SourceForge</a>.</li>
+    <li>if you use the Oracle JDK, starting with mid January 2017, attempts
+to install from SourceForge
+<a href="/blog/2017/01/29/plugins-install-issue/">fail with handshake_error</a>;</li>
+    <li>if you are behind a firewall, older Java virtual machines
+<a href="/blog/2016/12/02/plugins-install-issue/">fail to connect to SourceForge</a>.</li>
   </ul>
 </blockquote>
 
@@ -231,17 +246,31 @@
 
 <h3 id="win-xp---a-word-of-caution">Win XP - a word of caution</h3>
 
-<p>For the old-timers, a word of caution about Windows XP: recent Java distributions (from 7 up) are <a href="http://www.oracle.com/technetwork/java/javase/config-417990.html">no longer certified for XP</a>, so, even if they might seem to work, you are on thin ice. If possible, avoid using XP at all; otherwise use only the 32-bit version, with 32-bit Java and Eclipse.</p>
+<p>For the old-timers, a word of caution about Windows XP: recent Java
+distributions (from 7 up) are
+<a href="http://www.oracle.com/technetwork/java/javase/config-417990.html">no longer certified for XP</a>,
+so, even if they might seem to work, you are on thin ice. If possible,
+avoid using XP at all; otherwise use only the 32-bit version, with 32-bit
+Java and Eclipse.</p>
 
 <h3 id="win-xp-64">Win XP 64</h3>
 
-<p>The warning is even more important for Win XP 64, which, in certain configurations, has difficulties to start 32-bit applications (like the JLink GDB Server or OpenOCD). Although generally Win XP 64 is not recommended at all, if you really need to use it, preferably experiment with a 32-bit Java and a 32-bit Eclipse.</p>
+<p>The warning is even more important for Win XP 64, which, in certain
+configurations, has difficulties to start 32-bit applications (like
+the JLink GDB Server or OpenOCD). Although generally Win XP 64 is not
+recommended at all, if you really need to use it, preferably experiment
+with a 32-bit Java and a 32-bit Eclipse.</p>
 
-<p>However please note that no support requests referring to Win XP 64 will be processed.</p>
+<p>However please note that no support requests referring to Win XP 64
+will be processed.</p>
 
 <h3 id="java">Java</h3>
 
-<p>The recommended package is the latest version from the official <a href="https://openjdk.java.net">Oracle <strong>OpenJDK</strong> page</a>. The <strong>OpenJDK Java</strong> used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8 (the Java Runtime Environment), but, as said before, better use the latest JDK (currently 1.8.151). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.</p>
+<p>The recommended package is the latest version from the official
+<a href="https://openjdk.java.net">Oracle <strong>OpenJDK</strong> page</a>. The <strong>OpenJDK Java</strong>
+used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8
+(the Java Runtime Environment), but, as said before, better use the
+latest JDK (currently 1.8.151). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.</p>
 
 <blockquote>
   <p>Important note: Java may be distributed in separate 32/64-bit packages. Unless you have older applications requiring 32-bit Java, on 64-bit systems it is recommended to install the 64-bit JDK. Anyway, Oracle JDK 9 might not even be available for 32-bit.</p>
@@ -286,7 +315,7 @@ OpenJDK 64-bit Server VM (build 24.85-b03, mixed mode)
 
 <h4 id="the-package-way">The package way</h4>
 
-<p>The simple way is to download <strong>GNU MCU Eclipse IDE for C/C++ Developers</strong> from <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases/">GitHub Releases</a> and you get at once both Eclipse CDT and the MCU plug-ins.</p>
+<p>The simple way is to download <strong>Eclipse IDE for Embedded C/C++ Developers</strong> from <a href="https://projects.eclipse.org/projects/iot.embed-cdt/downloads/">Eclipse</a> and you get at once both Eclipse CDT and the Embedded CDT plug-ins.</p>
 
 <p>
 <img src="/assets/images/2017/epp-releases.png" alt="Eclipse EPP">
@@ -296,12 +325,12 @@ OpenJDK 64-bit Server VM (build 24.85-b03, mixed mode)
   <p>Important note: there are different binaries for 32-bit (<code class="highlighter-rouge">_x86</code>) and 64-bit (<code class="highlighter-rouge">x86-64</code>). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure <code class="highlighter-rouge">Java was started but returned exit code=13</code> message is issued.</p>
 </blockquote>
 
-<p>On macOS, after un-archiving, remove the <code class="highlighter-rouge">com.apple.quarantine</code> extended attribute, otherwise the application will run from a randomised path and you won’t be able to store persistent changes.</p>
+<p>On macOS, after un-archiving, remove the <code class="highlighter-rouge">com.apple.quarantine</code> extended attribute, otherwise the application will fail to start.</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xattr <span class="nt">-d</span> com.apple.quarantine Eclipse.app
+<code><span class="gp">$</span> xattr <span class="nt">-dr</span> com.apple.quarantine Eclipse.app
 </code></pre>
 </div>
 </div>
@@ -360,8 +389,8 @@ OpenJDK 64-bit Server VM (build 24.85-b03, mixed mode)
 <p>Similarly:</p>
 
 <ul>
-  <li>starting with 3.1.x, compatibility with Eclipses previous than 4.4 Luna was no longer possible. If, for any reason, you need a solution for Eclipse Kepler, you can try the GNU MCU Eclipse Plug-in version 2.12, but please keep in mind that this version is no longer maintained.</li>
-  <li>starting with 1.1.x, compatibility with Eclipses previous than 4.3 Kepler was no longer possible. If, for any reasons, you need a solution for older Eclipse versions, you can try the GNU MCU Eclipse Plug-in version 0.5.5, but please keep in mind that this old version is no longer maintained.</li>
+  <li>starting with 3.1.x, compatibility with Eclipses previous than 4.4 Luna was no longer possible. If, for any reason, you need a solution for Eclipse Kepler, you can try the GNU ARM Eclipse Plug-in version 2.12, but please keep in mind that this version is no longer maintained.</li>
+  <li>starting with 1.1.x, compatibility with Eclipses previous than 4.3 Kepler was no longer possible. If, for any reasons, you need a solution for older Eclipse versions, you can try the GNU ARM Eclipse Plug-in version 0.5.5, but please keep in mind that this old version is no longer maintained.</li>
 </ul>
 
 <h2 id="plug-ins-installupdate">Plug-ins install/update</h2>
@@ -377,24 +406,24 @@ OpenJDK 64-bit Server VM (build 24.85-b03, mixed mode)
 <ul>
   <li>go to the <em>Eclipse</em> menu → <strong>Help</strong> → <strong>Eclipse Marketplace…</strong>
 </li>
-  <li>in the Find field, enter <strong>GNU MCU Eclipse</strong>
+  <li>in the Find field, enter <strong>Eclipse Embedded CDT</strong>
 </li>
   <li>click the <strong>Go</strong> button</li>
 </ul>
 
-<p>This should identify GNU MCU Eclipse and offer to Install/Update/Uninstall 
+<p>This should identify Eclipse Embedded CDT and offer to Install/Update/Uninstall 
 assets
 <img src="/assets/images/2017/eclipse-marketplace-search.png" alt="Eclipse Marketplace Search"></p>
 
 <h3 id="the-eclipse-update-site-way">The Eclipse update site way</h3>
 
-<p>The classical way to install the GNU MCU Eclipse plug-ins is to use the Eclipse standard install/update mechanism: In the <em>Eclipse</em> menu → <strong>Help</strong> → <strong>Install New Software…</strong></p>
+<p>The classical way to install the Eclipse Embedded CDT plug-ins is to use the Eclipse standard install/update mechanism: In the <em>Eclipse</em> menu → <strong>Help</strong> → <strong>Install New Software…</strong></p>
 
 <ul>
   <li>in the <em>Install</em> window, click the <strong>Add…</strong> button (on future updates, select the URL in the <strong>Work with:</strong> combo)</li>
-  <li>fill in <em>Name:</em> with <strong>GNU MCU Eclipse Plug-ins</strong>
+  <li>fill in <em>Name:</em> with <strong>Eclipse Embedded CDT Plug-ins</strong>
 </li>
-  <li>fill in <em>Location:</em> with <strong>http://gnu-mcu-eclipse.netlify.com/v4-neon-updates</strong>
+  <li>fill in <em>Location:</em> with <strong>https://download.eclipse.org/embed-cdt/updates/neon/</strong>
 </li>
   <li>click the <strong>OK</strong> button</li>
 </ul>
@@ -418,7 +447,7 @@ assets
 
 <h3 id="the-local-archive-way">The local archive way</h3>
 
-<p>If, for any reason, you need to install a specific version of the plug-in, the solution is to download the archive from <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a>, or, for older releases, from <a href="http://sourceforge.net/projects/gnuarmeclipse/files/Current%20Releases/">SourceForge Files</a> and to point the Eclipse update mechanism to the local archive: In the* Eclipse* menu → <strong>Help</strong> → <strong>Install New Software…</strong></p>
+<p>If, for any reason, you need to install a specific version of the plug-in, the solution is to download the archive from <a href="https://projects.eclipse.org/projects/iot.embed-cdt/governance/">Eclipse servers</a>; for releases pre v5.1.1 use <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a>, or, for even older releases, from <a href="http://sourceforge.net/projects/gnuarmeclipse/files/Current%20Releases/">SourceForge Files</a> and to point the Eclipse update mechanism to the local archive: In the* Eclipse* menu → <strong>Help</strong> → <strong>Install New Software…</strong></p>
 
 <ul>
   <li>in the <em>Install</em> window, click the <strong>Add…</strong> button</li>
@@ -435,13 +464,13 @@ assets
 
 <h2 id="off-line-install">Off-line install</h2>
 
-<p>If, for any reasons, you need to install the GNU MCU Eclipse plug-ins on a system without permanent Internet connection, and decide for the alternate way presented above, please be aware that the debug plug-ins require the presence of the <strong>C/C++ GDB Hardware Debugging</strong> plug-in. Usually this plug-in is not included in the standard package, but is present in the <strong>CDT Optional Features</strong> category, packed with the CDT archives available from the <a href="https://www.eclipse.org/cdt/downloads.php">CDT download site</a>. Download the desired archive, add it to your update sites, select the <strong>C/C++ GDB Hardware Debugging</strong> plug-in, restart as usual, and then install the GNU MCU Eclipse plug-ins from the local archive, as above.</p>
+<p>If, for any reasons, you need to install the Eclipse Embedded CDT plug-ins on a system without permanent Internet connection, and decide for the alternate way presented above, please be aware that the debug plug-ins require the presence of the <strong>C/C++ GDB Hardware Debugging</strong> plug-in. Usually this plug-in is not included in the standard package, but is present in the <strong>CDT Optional Features</strong> category, packed with the CDT archives available from the <a href="https://www.eclipse.org/cdt/downloads.php">CDT download site</a>. Download the desired archive, add it to your update sites, select the <strong>C/C++ GDB Hardware Debugging</strong> plug-in, restart as usual, and then install the Eclipse Embedded CDT plug-ins from the local archive, as above.</p>
 
 <p>
 <img src="/assets/images/2013/10/GDB_Hardware_Install.png" alt="Install the GDB Hardware">
 </p>
 
-<p>Note: Attempts to install the GNU MCU Eclipse plug-ins off-line without having the <strong>C/C++ GDB Hardware Debugging</strong> installed fails with an error related to installing the <code class="highlighter-rouge">ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.group</code> and other debugging features.</p>
+<p>Note: Attempts to install the Eclipse Embedded CDT plug-ins off-line without having the <strong>C/C++ GDB Hardware Debugging</strong> installed fails with an error related to installing the <code class="highlighter-rouge">ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.group</code> and other debugging features.</p>
 
 <p>On-line install do not have this problem since the Eclipse automatically downloads the C/C++ GDB Hardware Debugging plug-in from the CDT update site.</p>
 
@@ -484,7 +513,7 @@ assets
 
 <p>If this happens, Eclipse remains in a confused state and rarely can recover itself.</p>
 
-<p>The workaround is to remove the GNU MCU Eclipse update site from the available sites, restart Eclipse and add it again.</p>
+<p>The workaround is to remove the Eclipse Embedded CDT update site from the available sites, restart Eclipse and add it again.</p>
 
 <p>For this go to <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Install/Update</strong> → <strong>Available Software Sites</strong>:</p>
 
@@ -570,7 +599,7 @@ documentation does not mention it.</p>
 
 <h2 id="plug-ins-versions">Plug-ins versions</h2>
 
-<p>One of the confusing details of the GNU MCU Eclipse plug-ins versioning system is matching the version from the release announcement (for example <strong>Version 2.6.1-201502281154 released</strong>) with existing plug-ins/features.</p>
+<p>One of the confusing details of the Eclipse Embedded CDT plug-ins versioning system is matching the version from the release announcement (for example <strong>Version 2.6.1-201502281154 released</strong>) with existing plug-ins/features.</p>
 
 <p>The short answer is that the announced version refers to the update site, also packed as an archive, and available from SourceForge. The same version is also used for the <code class="highlighter-rouge">ilg.gnuarmeclipse.core</code> plug-in:</p>
 
@@ -622,7 +651,7 @@ documentation does not mention it.</p>
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Fri Dec 27 09:26:49 2019 UTC.</p>
+<p class="page-footer">Last modified on Mon Aug  3 12:52:31 2020 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/install/" data-layout="button"></div></li>
@@ -834,7 +863,7 @@ documentation does not mention it.</p>
 <div class="site-footer">
   <div class="site-footer-links left">
     <ul>
-  <li>© 2019 Liviu Ionescu</li>
+  <li>© 2020 Liviu Ionescu</li>
   <li><a href="/feed.xml"><img src="/assets/images/feed-20.png" alt="RSS"></a></li>
   <li>
 <a href="http://twitter.com/gnu_mcu_eclipse" class="twitter-follow-button" data-show-count="false">Follow @gnu_mcu_eclipse</a><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
