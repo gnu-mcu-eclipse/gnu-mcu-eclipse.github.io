@@ -11,7 +11,7 @@
   <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
 
   <title>How to install the Eclipse Embedded CDT plug-ins</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
 
   <meta property="og:title" content="How to install the Eclipse Embedded CDT plug-ins">
   <meta property="og:site_name" content="Eclipse Embedded CDT">
@@ -75,9 +75,9 @@
 <header>
   <div class="inner">
     <h1><a href="/">Eclipse Embedded CDT</a></h1>
-    <h2>A family of Eclipse CDT extensions and tools for GNU ARM &amp; RISC-V development</h2>
+    <h2>A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development</h2>
     <div id="buttons">
-      <a href="http://github.com/gnu-mcu-eclipse" class="button"><small>Follow me on</small> GitHub</a>
+      <a href="http://github.com/eclipse-embed-cdt" class="button"><small>Follow me on</small> GitHub</a>
     </div>
   </div>
 </header>
@@ -268,42 +268,49 @@ will be processed.</p>
 
 <p>The recommended package is the latest version from the official
 <a href="https://openjdk.java.net">Oracle <strong>OpenJDK</strong> page</a>. The <strong>OpenJDK Java</strong>
-used in Ubuntu is also fine. The minimum is JDK 1.8, or even JRE 1.8
+used in Ubuntu is also fine. Starting with 2020, the minimum is JDK 11,
+or even JRE 11
 (the Java Runtime Environment), but, as said before, better use the
-latest JDK (currently 1.8.151). On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.</p>
+latest JDK. On macOS the last Apple Java implementation is 1.6, so it is required to use the Oracle version.</p>
 
 <blockquote>
   <p>Important note: Java may be distributed in separate 32/64-bit packages. Unless you have older applications requiring 32-bit Java, on 64-bit systems it is recommended to install the 64-bit JDK. Anyway, Oracle JDK 9 might not even be available for 32-bit.</p>
 </blockquote>
 
-<p>On some distributions, for example on Ubuntu 16.04 LTS, Java seems to be already installed in the standard distribution:</p>
+<p>On some distributions, for example on Ubuntu 18.04 LTS, Java seems to be already installed in the standard distribution:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code><span class="gp">$</span> java <span class="nt">-version</span>
-<span class="go">openjdk version "1.8.0_121"
-OpenJDK Runtime Environment (build 1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13)
-OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode)
+<span class="go">openjdk version "11.0.7" 2020-04-14
+OpenJDK Runtime Environment (build 11.0.7+10-post-Ubuntu-2ubuntu218.04)
+OpenJDK 64-Bit Server VM (build 11.0.7+10-post-Ubuntu-2ubuntu218.04, mixed mode, sharing)
 </span></code></pre>
 </div>
 </div>
 
-<p>On other distributions, for example on Ubuntu 14.04 LTS, you can install the OpenJDK run-time and test if it was properly installed with the following commands:</p>
+<p>On other distributions, you can install the OpenJDK run-time and test if it was properly installed with the following commands:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>default-jdk
+<code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>openjdk-11-jdk
 <span class="gp">$</span> java <span class="nt">-version</span>
-<span class="go">java version "1.7.0_85"
-OpenJDK Runtime Environment (IcedTea 2.6.1) (7u85-2.6.1-5ubuntu0.14.04.1)
-OpenJDK 64-bit Server VM (build 24.85-b03, mixed mode)
+<span class="go">openjdk version "11.0.7" 2020-04-14
+OpenJDK Runtime Environment (build 11.0.7+10-post-Ubuntu-2ubuntu218.04)
+OpenJDK 64-Bit Server VM (build 11.0.7+10-post-Ubuntu-2ubuntu218.04, mixed mode, sharing)
 </span></code></pre>
 </div>
 </div>
 
-<p>If you are behind a firewall, older Java virtual machines <a href="/blog/2016/12/02/plugins-install-issue/">fail to connect to SourceForge</a>. Update your Java JDK to <strong>8u101 or later</strong> and retry to install the plug-ins.</p>
+<blockquote>
+  <p>Java 11 notice: Starting with 2020, Eclipse requires Java 11; trying to
+update the plug-ins while using Java 8 is unsuccessful, sometimes
+without any message or warning.</p>
+</blockquote>
+
+<p>If you are behind a firewall, older Java virtual machines <a href="/blog/2016/12/02/plugins-install-issue/">fail to connect to SourceForge</a>. Update your Java JDK to <strong>11 or later</strong> and retry to install the plug-ins.</p>
 
 <h3 id="java-cryptography-extension-jce">Java Cryptography Extension (JCE)</h3>
 
@@ -398,6 +405,12 @@ OpenJDK 64-bit Server VM (build 24.85-b03, mixed mode)
 <p>The following samples are from a slightly older Eclipse 4.3 Kepler on macOS. Other platforms may behave slightly different, but the idea is the same.</p>
 
 <p><strong>Warning:</strong> Be sure your Eclipse is 4.6 Neon.3 or later, otherwise the plug-ins will refuse to install, claiming <strong>Missing requirements</strong> and <strong>Cannot satisfy dependency</strong>.</p>
+
+<blockquote>
+  <p>Java 11 notice: Starting with 2020, Eclipse requires Java 11; trying to
+update the plug-ins while using Java 8 is unsuccessful, sometimes
+without any message or warning.</p>
+</blockquote>
 
 <h3 id="the-eclipse-marketplace-way">The Eclipse Marketplace way</h3>
 
@@ -651,7 +664,7 @@ documentation does not mention it.</p>
 
 
 <hr class="page-footer">
-<p class="page-footer">Last modified on Mon Aug  3 12:54:26 2020 UTC.</p>
+<p class="page-footer">Last modified on Sun Aug 16 18:16:11 2020 UTC.</p>
 <ul class="share-buttons">
   <li><div class="tw-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div></li>
   <li><div class="fb-share-button" data-href="http://gnu-mcu-eclipse.github.io/plugins/install/" data-layout="button"></div></li>
@@ -698,7 +711,7 @@ documentation does not mention it.</p>
 
 <ul>
   <li><a href="/install/">Overview</a></li>
-  <li><a href="/toolchain/arm/install/">ARM Toolchain(s) install</a></li>
+  <li><a href="/toolchain/arm/install/">Arm Toolchain(s) install</a></li>
   <li><a href="/toolchain/riscv/install/">RISC-V Toolchain(s) install</a></li>
   <li><a href="/windows-build-tools/install/">Windows build tools (make &amp; rm) install</a></li>
   <li>
@@ -725,8 +738,8 @@ documentation does not mention it.</p>
 <h4 id="tutorials">Tutorials</h4>
 
 <ul>
-  <li><a href="/tutorials/blinky-arm/">Create a Blinky ARM test project</a></li>
-  <li><a href="/tutorials/hello-arm/">Create a Hello ARM test project</a></li>
+  <li><a href="/tutorials/blinky-arm/">Create a Blinky Arm test project</a></li>
+  <li><a href="/tutorials/hello-arm/">Create a Hello Arm test project</a></li>
 </ul>
 
 <h4 id="how-to-use">How to use</h4>
@@ -872,7 +885,7 @@ documentation does not mention it.</p>
 
 
   </div>
-  <a href="http://github.com/gnu-mcu-eclipse" aria-label="Homepage">
+  <a href="http://github.com/eclipse-embed-cdt" aria-label="Homepage">
       <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
   </a>
   <div class="site-footer-links right">
