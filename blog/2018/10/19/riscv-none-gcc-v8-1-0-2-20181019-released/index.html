@@ -2,35 +2,34 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released</title>
   <meta name="description" content="Version v8.1.0-2-20181019 is a maintenance release of GNU MCU Eclipse RISC-V Embedded GCC.">
 
-  <meta property="og:title" content="GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="GNU MCU Eclipse RISC-V Embedded GCC v8.1.0-2-20181019 released" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2018-10-19">
 
 
-  <meta property="article:section" content="releases">
-  <meta property="article:section" content="riscv">
-  <meta property="article:section" content="riscv-none-gcc">
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="riscv" />
+  <meta property="article:section" content="riscv-none-gcc" />
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -38,7 +37,7 @@
   <link rel="canonical" href="/blog/2018/10/19/riscv-none-gcc-v8-1-0-2-20181019-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -162,11 +161,11 @@ SiFive specific CLIC interrupts, which was not included.</p>
 
 <ul>
   <li>the <a href="https://github.com/riscv/riscv-gcc">riscv/riscv-gcc</a> project, 
-branch <code class="highlighter-rouge">riscv-gcc-8.1.0</code>, commit
+branch <code class="language-plaintext highlighter-rouge">riscv-gcc-8.1.0</code>, commit
 <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/commit/3c148a7e6ea1379e3a8e8b5350ec03a72e5d4137">3c148a7e6ea</a>
 from from July 3rd, 2018</li>
   <li>the <a href="https://github.com/riscv/riscv-binutils-gdb">riscv/riscv-binutils-gdb</a> 
-project, branch <code class="highlighter-rouge">riscv-binutils-2.30</code>, commit 
+project, branch <code class="language-plaintext highlighter-rouge">riscv-binutils-2.30</code>, commit 
 <a href="https://github.com/gnu-mcu-eclipse/riscv-binutils-gdb/commit/0d2fb1b7ff9b94e40352306f1f8857b863c6f787">0d2fb1b7ff</a>
 from Aug 11th, 2018</li>
   <li>the <a href="https://github.com/riscv/riscv-newlib">riscv/riscv-newlib</a> project,
@@ -176,19 +175,19 @@ from July 12th, 2018</li>
 
 <p>GDB is a bit special, since it is only partly upstreamed and the RISC-V repos 
 are no longer updated, so the current build uses 
-<code class="highlighter-rouge">git://sourceware.org/git/binutils-gdb.git</code>, the <code class="highlighter-rouge">7dd36a6f1c</code> commit from 
+<code class="language-plaintext highlighter-rouge">git://sourceware.org/git/binutils-gdb.git</code>, the <code class="language-plaintext highlighter-rouge">7dd36a6f1c</code> commit from 
 Aug 23rd, 2018 (same as the SiFive release).</p>
 
 <h2 id="improvements">Improvements</h2>
 
-<p>All architectures, ABIs and libraries supported by the <code class="highlighter-rouge">riscv64-unknown-elf</code> 
+<p>All architectures, ABIs and libraries supported by the <code class="language-plaintext highlighter-rouge">riscv64-unknown-elf</code> 
 toolchain are also supported, with the following improvements:</p>
 
 <ul>
-  <li>a newer <code class="highlighter-rouge">newlib</code> was included, which supports the ‘underscore’ syscall functions</li>
-  <li>the mandatory reference to <code class="highlighter-rouge">libgloss</code> in the linker configuration was removed</li>
-  <li>the <code class="highlighter-rouge">march=rv32imaf/mabi=ilp32f</code> library was added to the list of multilibs</li>
-  <li>support for <code class="highlighter-rouge">newlib-nano</code> was added</li>
+  <li>a newer <code class="language-plaintext highlighter-rouge">newlib</code> was included, which supports the ‘underscore’ syscall functions</li>
+  <li>the mandatory reference to <code class="language-plaintext highlighter-rouge">libgloss</code> in the linker configuration was removed</li>
+  <li>the <code class="language-plaintext highlighter-rouge">march=rv32imaf/mabi=ilp32f</code> library was added to the list of multilibs</li>
+  <li>support for <code class="language-plaintext highlighter-rouge">newlib-nano</code> was added</li>
   <li>the standard documentation, in PDF and HTML, was added</li>
 </ul>
 
@@ -209,12 +208,12 @@ page.</p>
 <p>The toolchain is also available as an 
 <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc">xPack</a> 
 and can be conveniently installed with 
-<a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+<a href="https://www.npmjs.com/package/xpm"><code class="language-plaintext highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
+<code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
 </code></pre>
 </div>
 </div>
@@ -390,7 +389,7 @@ Last modified on Tue Apr 23 17:13:15 2019 UTC.
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

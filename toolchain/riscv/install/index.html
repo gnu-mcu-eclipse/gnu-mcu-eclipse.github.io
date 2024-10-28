@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
-  <title>DEPRECATED &gt; How to install the RISC-V toolchain?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <title>DEPRECATED > How to install the RISC-V toolchain?</title>
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="DEPRECATED &gt; How to install the RISC-V toolchain?">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="DEPRECATED > How to install the RISC-V toolchain?" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -23,12 +22,12 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
   <meta http-equiv="refresh" content="1; url=https://xpack.github.io/riscv-none-embed-gcc/install/">
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -36,7 +35,7 @@
   <link rel="canonical" href="/toolchain/riscv/install/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -164,7 +163,7 @@ project to the xPack project. The new install page is:</p>
   <li><a href="https://xpack.github.io/riscv-none-embed-gcc/install/">https://xpack.github.io/riscv-none-embed-gcc/install/</a></li>
 </ul>
 
-<p>All previous releases are still available in the <code class="highlighter-rouge">@gnu-mcu-eclipse</code> scope,
+<p>All previous releases are still available in the <code class="language-plaintext highlighter-rouge">@gnu-mcu-eclipse</code> scope,
 but were deprecated and are not recommended for new projects.</p>
 
 <hr>
@@ -176,7 +175,7 @@ but were deprecated and are not recommended for new projects.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
+<code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
 </code></pre>
 </div>
 </div>
@@ -202,7 +201,7 @@ but were deprecated and are not recommended for new projects.</p>
 
 <h2 id="riscv64-unknown-elf-gcc">riscv64-unknown-elf-gcc</h2>
 
-<p>After installing the toolchain, you’ll end up with lots of programs prefixed by <code class="highlighter-rouge">riscv-none-embed-</code>. For those used to the RISC-V original toolchains, there is no <code class="highlighter-rouge">riscv64-</code> or <code class="highlighter-rouge">riscv32-</code> prefix since it is actually not needed, the toolchain produces both 32/64-bit binaries, based on <code class="highlighter-rouge">-march</code> and <code class="highlighter-rouge">-mabi</code>.</p>
+<p>After installing the toolchain, you’ll end up with lots of programs prefixed by <code class="language-plaintext highlighter-rouge">riscv-none-embed-</code>. For those used to the RISC-V original toolchains, there is no <code class="language-plaintext highlighter-rouge">riscv64-</code> or <code class="language-plaintext highlighter-rouge">riscv32-</code> prefix since it is actually not needed, the toolchain produces both 32/64-bit binaries, based on <code class="language-plaintext highlighter-rouge">-march</code> and <code class="language-plaintext highlighter-rouge">-mabi</code>.</p>
 
 <p>Be sure you <strong>do</strong> select carefully the proper release file to  match the 32/64-bit platform you are using.</p>
 
@@ -214,7 +213,7 @@ the <strong>xPack Package Manager</strong>, and can be used on Windows, macOS an
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
+<code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
 </code></pre>
 </div>
 </div>
@@ -223,10 +222,10 @@ the <strong>xPack Package Manager</strong>, and can be used on Windows, macOS an
 xPacks repository, which is a platform dependent folder:</p>
 
 <ul>
-  <li>Windows: <code class="highlighter-rouge">%APPDATA%\xPacks</code> (or <code class="highlighter-rouge">%userprofile%\AppData\Roaming\xPacks</code>, <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks</code>)</li>
-  <li>macOS: <code class="highlighter-rouge">${HOME}/Library/xPacks</code>
+  <li>Windows: <code class="language-plaintext highlighter-rouge">%APPDATA%\xPacks</code> (or <code class="language-plaintext highlighter-rouge">%userprofile%\AppData\Roaming\xPacks</code>, <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks</code>)</li>
+  <li>macOS: <code class="language-plaintext highlighter-rouge">${HOME}/Library/xPacks</code>
 </li>
-  <li>GNU/Linux: <code class="highlighter-rouge">${HOME}/opt/xPacks</code>
+  <li>GNU/Linux: <code class="language-plaintext highlighter-rouge">${HOME}/opt/xPacks</code>
 </li>
 </ul>
 
@@ -234,11 +233,11 @@ xPacks repository, which is a platform dependent folder:</p>
 the installed toolchains.</p>
 
 <p>Note: This location is configurable using the environment variable 
-<code class="highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the 
+<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the 
 <a href="https://xpack.github.io/xpm/files/folders/">xpm folders</a> page.</p>
 
 <p>The actual binaries are extracted from the distribution archive in a 
-folder named <code class="highlighter-rouge">.content</code>, located in the versioned xPack folder. On some
+folder named <code class="language-plaintext highlighter-rouge">.content</code>, located in the versioned xPack folder. On some
 platforms, dotted files are hidden by default, so the file explorer might
 require additional settings to make them visible.</p>
 
@@ -267,13 +266,13 @@ the xPack install folder.</p>
 <p>The Windows versions of <strong>RISC-V Embedded GCC</strong> are packed as .zip files. Download the latest version named like:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-win64.zip</code></li>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-win32.zip</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-win64.zip</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-win32.zip</code></li>
 </ul>
 
-<p>Select the <code class="highlighter-rouge">-win64</code> file for Windows x64 machines and the <code class="highlighter-rouge">-win32</code> file for Windows x32 machines.</p>
+<p>Select the <code class="language-plaintext highlighter-rouge">-win64</code> file for Windows x64 machines and the <code class="language-plaintext highlighter-rouge">-win32</code> file for Windows x32 machines.</p>
 
-<p>Unpack the archive and copy it into the <code class="highlighter-rouge">%userprofile%\AppData\Roaming\GNU MCU Eclipse</code> (for example <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse</code>) folder; according to Microsoft, this is the recommended location for installing user specific packages;</p>
+<p>Unpack the archive and copy it into the <code class="language-plaintext highlighter-rouge">%userprofile%\AppData\Roaming\GNU MCU Eclipse</code> (for example <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse</code>) folder; according to Microsoft, this is the recommended location for installing user specific packages;</p>
 
 <blockquote>
   <p>Note: although perfectly possible to install the toolchain in any folder, it is highly recommended to use this path, since the GNU MCU Eclipse plug-ins can automatically identify the toolchain if installed in this location.</p>
@@ -286,19 +285,19 @@ the xPack install folder.</p>
 <p>The macOS version of <strong>RISC-V Embedded GCC</strong> is packed as a .tgz archive. Download the latest version named like:</p>
 
 <ul>
-  <li> <code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-osx.tgz</code>
+  <li> <code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-osx.tgz</code>
 </li>
 </ul>
 
-<p>To install the toolchain, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/</code>:</p>
+<p>To install the toolchain, unpack the archive and copy it to  <code class="language-plaintext highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/</code>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-osx.tgz
-<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-osx.tgz
+<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230
 </code></pre>
 </div>
 </div>
@@ -312,7 +311,7 @@ the xPack install folder.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230/bin/riscv-none-embed-gcc <span class="nt">--version</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230/bin/riscv-none-embed-gcc <span class="nt">--version</span>
 <span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit)
 </span></code></pre>
 </div>
@@ -323,21 +322,21 @@ the xPack install folder.</p>
 <p>The GNU/Linux versions of <strong>RISC-V Embedded GCC</strong> are packed as .tgz archives. Download the latest version named like:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-centos64.tgz</code></li>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-centos32.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-centos64.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-centos32.tgz</code></li>
 </ul>
 
-<p>As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-centos64</code> file for 64-bit machines and the <code class="highlighter-rouge">-centos32</code> file for 32-bit machines.</p>
+<p>As the name implies, the binaries were created on CentOS, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="language-plaintext highlighter-rouge">-centos64</code> file for 64-bit machines and the <code class="language-plaintext highlighter-rouge">-centos32</code> file for 32-bit machines.</p>
 
-<p>To install the toolchain, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/</code>:</p>
+<p>To install the toolchain, unpack the archive and copy it to  <code class="language-plaintext highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/riscv-none-gcc/</code>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-debian64.tgz
-<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xf ~/Downloads/gnu-mcu-eclipse-riscv-none-gcc-7.2.0-2-20180111-2230-debian64.tgz
+<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230
 </code></pre>
 </div>
 </div>
@@ -351,7 +350,7 @@ the xPack install folder.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230/bin/riscv-none-embed-gcc <span class="nt">--version</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/riscv-none-gcc/7.2.0-2-20180111-2230/bin/riscv-none-embed-gcc <span class="nt">--version</span>
 <span class="go">riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit)
 </span></code></pre>
 </div>
@@ -379,18 +378,18 @@ the xPack install folder.</p>
 
 <p>Should you ever need to remove the toolchain, only remove the xPack folder, there are no other components stored in any system folders.</p>
 
-<p>If installed manually, remove the <code class="highlighter-rouge">riscv-none-gcc/7.2.0-2-20180111-2230</code> folder.</p>
+<p>If installed manually, remove the <code class="language-plaintext highlighter-rouge">riscv-none-gcc/7.2.0-2-20180111-2230</code> folder.</p>
 
 <h2 id="documentation">Documentation</h2>
 
 <p>The GNU MCU Eclipse RISC-V Embedded GCC distribution includes the standard documentation, in info, man and pdf format.</p>
 
-<p>The documentation is located in the <code class="highlighter-rouge">share/doc</code> folder, for example the pdf files are:</p>
+<p>The documentation is located in the <code class="language-plaintext highlighter-rouge">share/doc</code> folder, for example the pdf files are:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> tree share/doc/pdf
+<code><span class="gp">$</span><span class="w"> </span>tree share/doc/pdf
 <span class="go">share/doc/pdf
 ├── annotate.pdf
 ├── as.pdf
@@ -544,7 +543,7 @@ the xPack install folder.</p>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

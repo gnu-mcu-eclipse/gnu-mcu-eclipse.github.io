@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>FAQ</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="FAQ">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="FAQ" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -23,12 +22,12 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
   <meta http-equiv="refresh" content="1; url=https://eclipse-embed-cdt.github.io/support/faq/">
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -36,7 +35,7 @@
   <link rel="canonical" href="/support/faq/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -247,7 +246,7 @@
 <h2 id="why-the-xpack-button-is-not-enabled">Why the <strong>xPack…</strong> button is not enabled?</h2>
 
 <blockquote>
-  <p>I correctly installed the <code class="highlighter-rouge">@gnu-mcu-eclipse/arm-none-eabi-gcc</code> xPack,
+  <p>I correctly installed the <code class="language-plaintext highlighter-rouge">@gnu-mcu-eclipse/arm-none-eabi-gcc</code> xPack,
   but the <strong>xPack…</strong> button is still disabled and I cannot select the
   desired version.</p>
 </blockquote>
@@ -266,7 +265,7 @@ preventing the packages to be installed.</p>
 
 <p>Errors may look like:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>Downloading https://github.com/gnu-mcu-eclipse/qemu/releases/download/v2.8.0-4-20190211/gnu-mcu-eclipse-qemu-2.8.0-4-20190211-0633-win64.zip...
@@ -278,15 +277,15 @@ error: Cannot read property 'path' of null
 </div>
 </div>
 
-<p>The solution is to configure the antivirus to be less aggressive, at least for files in the <code class="highlighter-rouge">AppData\Roaming\xPacks</code> and <code class="highlighter-rouge">AppData\Local\Caches\xPacks</code> folders.</p>
+<p>The solution is to configure the antivirus to be less aggressive, at least for files in the <code class="language-plaintext highlighter-rouge">AppData\Roaming\xPacks</code> and <code class="language-plaintext highlighter-rouge">AppData\Local\Caches\xPacks</code> folders.</p>
 
 <p>If this is not possible, temporarily disable the antivirus; if this is also not possible, install the packs manually (if you can!).</p>
 
 <h2 id="cannot-find-the-bin-folder-on-macos">Cannot find the bin folder on macOS</h2>
 
-<p>When installing binary packages as xPacks, the install location is a folder that ends in <code class="highlighter-rouge">.content/bin</code>, like</p>
+<p>When installing binary packages as xPacks, the install location is a folder that ends in <code class="language-plaintext highlighter-rouge">.content/bin</code>, like</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>/Users/ilg/Library/xPacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/7.2.1-1.1.3/.content/bin
@@ -294,7 +293,7 @@ error: Cannot read property 'path' of null
 </div>
 </div>
 
-<p>Unfortunately, due to a weird decision of the Eclipse macOS developers, the file system browser does not show file/folders starting with a dot; thus, on macOS, the <code class="highlighter-rouge">.content/bin</code> final part of the path must be entered manually.</p>
+<p>Unfortunately, due to a weird decision of the Eclipse macOS developers, the file system browser does not show file/folders starting with a dot; thus, on macOS, the <code class="language-plaintext highlighter-rouge">.content/bin</code> final part of the path must be entered manually.</p>
 
 <p>This is one more reason to use the <strong>xPack…</strong> button, and select the xPack version in the drop down box.</p>
 
@@ -326,7 +325,7 @@ error: Cannot read property 'path' of null
 
 <h2 id="initial-gdb-712-fails-on-macos">Initial GDB 7.12 fails on macOS</h2>
 
-<p>When using <code class="highlighter-rouge">arm-none-eabi-gdb</code> 7.12 from the initial <code class="highlighter-rouge">6_2-2016q4-20161216</code>, the debug session fails to start on macOS; the reason is a bug in <code class="highlighter-rouge">arm-none-eabi-gdb</code> affecting the MI2 interface; the solution is to use a more recent version, <code class="highlighter-rouge">6-2017-q1-update</code> or later.</p>
+<p>When using <code class="language-plaintext highlighter-rouge">arm-none-eabi-gdb</code> 7.12 from the initial <code class="language-plaintext highlighter-rouge">6_2-2016q4-20161216</code>, the debug session fails to start on macOS; the reason is a bug in <code class="language-plaintext highlighter-rouge">arm-none-eabi-gdb</code> affecting the MI2 interface; the solution is to use a more recent version, <code class="language-plaintext highlighter-rouge">6-2017-q1-update</code> or later.</p>
 
 <h2 id="gdb-712-is-not-compatible-with-neon2">GDB 7.12 is not compatible with Neon.2</h2>
 
@@ -371,16 +370,16 @@ Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 (ilg.
 
 <p>Instead, go to the <a href="http://www.eclipse.org/downloads/">Eclipse download site</a> and get the proper <strong>Eclipse IDE for C/C++ Developers</strong>, preferably the 64-bit version.</p>
 
-<h2 id="openocd-fails-to-start-with--c-echo-started-by-gnu-arm-eclipse">OpenOCD fails to start with <code class="highlighter-rouge">-c echo "Started by GNU ARM Eclipse"</code>
+<h2 id="openocd-fails-to-start-with--c-echo-started-by-gnu-arm-eclipse">OpenOCD fails to start with <code class="language-plaintext highlighter-rouge">-c echo "Started by GNU ARM Eclipse"</code>
 </h2>
 
 <blockquote>
-  <p>I’m trying to start OpenOCD in a terminal and it fails to execute the <code class="highlighter-rouge">echo</code> command…</p>
+  <p>I’m trying to start OpenOCD in a terminal and it fails to execute the <code class="language-plaintext highlighter-rouge">echo</code> command…</p>
 </blockquote>
 
-<p>The syntax required by the OpenOCD <code class="highlighter-rouge">echo</code> command is a single string, in other words both echo and the message must be in the same string. To achieve this in a shell, the string must be quoted:</p>
+<p>The syntax required by the OpenOCD <code class="language-plaintext highlighter-rouge">echo</code> command is a single string, in other words both echo and the message must be in the same string. To achieve this in a shell, the string must be quoted:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>-c 'echo "Started by GNU ARM Eclipse"'
@@ -393,7 +392,7 @@ Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 (ilg.
 <h2 id="how-to-compile-files-excluded-from-build">How to compile files excluded from build?</h2>
 
 <blockquote>
-  <p>Why the default state for <code class="highlighter-rouge">system/src/.../xxx.c</code> is not enabled?</p>
+  <p>Why the default state for <code class="language-plaintext highlighter-rouge">system/src/.../xxx.c</code> is not enabled?</p>
 </blockquote>
 
 <p>Because during project creation the wizard was configured with <strong>Exclude unused</strong>.</p>
@@ -565,9 +564,9 @@ Software being installed: GNU ARM C/C++ Cross Compiler 1.15.2.201511061603 (ilg.
 
 <p>If the compiler complains something like this, then it might be possible that projects created with versions pre-1.1.3 need an update. First check the list of include folders, for each compiler tool, if the list is there, you’re done; otherwise, adding the folders again usually fixes the problem.</p>
 
-<p>If you have lots of folders and re-entereing them is tedious, you can try to manually edit the <code class="highlighter-rouge">.cproject</code> file. For this, first close Eclipse, and edit <code class="highlighter-rouge">.cproject</code> with a separate editor. Search for the lines with “.include.files”; if below them you see the list of folders, you don’t have to re-enter them again; check if the <code class="highlighter-rouge">&lt;option&gt;</code> element has an <code class="highlighter-rouge">name=</code> attribute; if not, add it before the superClass attribute, with the following content:</p>
+<p>If you have lots of folders and re-entereing them is tedious, you can try to manually edit the <code class="language-plaintext highlighter-rouge">.cproject</code> file. For this, first close Eclipse, and edit <code class="language-plaintext highlighter-rouge">.cproject</code> with a separate editor. Search for the lines with “.include.files”; if below them you see the list of folders, you don’t have to re-enter them again; check if the <code class="language-plaintext highlighter-rouge">&lt;option&gt;</code> element has an <code class="language-plaintext highlighter-rouge">name=</code> attribute; if not, add it before the superClass attribute, with the following content:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>&lt;option id="...include.paths.NNN" name="Include paths (-I)" superClass="..."&gt;
@@ -756,7 +755,7 @@ Invoking: Cross ARM C++ Linker
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

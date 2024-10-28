@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>Programmer</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="Programmer">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="Programmer" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2017-07-17">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/arch/riscv/programmer/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -295,7 +294,7 @@
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32i <span class="nt">-mabi</span><span class="o">=</span>ilp32 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
+<code><span class="gp">$</span><span class="w"> </span>./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32i <span class="nt">-mabi</span><span class="o">=</span>ilp32 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define __GXX_ABI_VERSION 1011
 <span class="gp">#</span>define __STDC_VERSION__ 201112L
 <span class="gp">#</span>define __VERSION__ <span class="s2">"7.1.1 20170509"</span>
@@ -304,7 +303,7 @@
 <span class="gp">#</span>define __riscv_float_abi_soft 1
 <span class="gp">#</span>define __riscv_xlen 32
 <span class="go">
-</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32imac <span class="nt">-mabi</span><span class="o">=</span>ilp32 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
+</span><span class="gp">$</span><span class="w"> </span>./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32imac <span class="nt">-mabi</span><span class="o">=</span>ilp32 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define __GXX_ABI_VERSION 1011
 <span class="gp">#</span>define __STDC_VERSION__ 201112L
 <span class="gp">#</span>define __VERSION__ <span class="s2">"7.1.1 20170509"</span>
@@ -318,7 +317,7 @@
 <span class="gp">#</span>define __riscv_muldiv 1
 <span class="gp">#</span>define __riscv_xlen 32
 <span class="go">
-</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32imafdc <span class="nt">-mabi</span><span class="o">=</span>ilp32d <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
+</span><span class="gp">$</span><span class="w"> </span>./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv32imafdc <span class="nt">-mabi</span><span class="o">=</span>ilp32d <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define __FP_FAST_FMA 1
 <span class="gp">#</span>define __FP_FAST_FMAF 1
 <span class="gp">#</span>define __GXX_ABI_VERSION 1011
@@ -345,7 +344,7 @@
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64i <span class="nt">-mabi</span><span class="o">=</span>lp64 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
+<code><span class="gp">$</span><span class="w"> </span>./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64i <span class="nt">-mabi</span><span class="o">=</span>lp64 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define _LP64 1
 <span class="gp">#</span>define __GXX_ABI_VERSION 1011
 <span class="gp">#</span>define __LP64__ 1
@@ -356,7 +355,7 @@
 <span class="gp">#</span>define __riscv_float_abi_soft 1
 <span class="gp">#</span>define __riscv_xlen 64
 <span class="go">
-</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64imac <span class="nt">-mabi</span><span class="o">=</span>lp64 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
+</span><span class="gp">$</span><span class="w"> </span>./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64imac <span class="nt">-mabi</span><span class="o">=</span>lp64 <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define _LP64 1
 <span class="gp">#</span>define __GXX_ABI_VERSION 1011
 <span class="gp">#</span>define __LP64__ 1
@@ -372,7 +371,7 @@
 <span class="gp">#</span>define __riscv_muldiv 1
 <span class="gp">#</span>define __riscv_xlen 64
 <span class="go">
-</span><span class="gp">$</span> ./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64imafdc <span class="nt">-mabi</span><span class="o">=</span>lp64d <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
+</span><span class="gp">$</span><span class="w"> </span>./riscv-none-embed-gcc <span class="nt">-march</span><span class="o">=</span>rv64imafdc <span class="nt">-mabi</span><span class="o">=</span>lp64d <span class="nt">-E</span> <span class="nt">-dM</span> - &lt; /dev/null | egrep <span class="nt">-i</span> <span class="s1">'risc|fp[^-]|version|abi|lp'</span> | <span class="nb">sort</span>
 <span class="gp">#</span>define _LP64 1
 <span class="gp">#</span>define __FP_FAST_FMA 1
 <span class="gp">#</span>define __FP_FAST_FMAF 1
@@ -432,37 +431,37 @@
 </div>
 </div>
 
-<h2 id="the-gp-global-pointer-register">The <code class="highlighter-rouge">gp</code> (Global Pointer) register</h2>
+<h2 id="the-gp-global-pointer-register">The <code class="language-plaintext highlighter-rouge">gp</code> (Global Pointer) register</h2>
 
-<p>The <code class="highlighter-rouge">gp</code> (Global Pointer) register is a solution to further optimise memory accesses within a single 4KB region.</p>
+<p>The <code class="language-plaintext highlighter-rouge">gp</code> (Global Pointer) register is a solution to further optimise memory accesses within a single 4KB region.</p>
 
-<p>The linker uses the <code class="highlighter-rouge">__global_pointer$</code> symbol definition to compare the memory addresses and, if within range, it replaces absolute/pc-relative addressing with gp-relative addressing, which makes the code more efficient. This process is also called <em>relaxing</em>, and can be disabled by <code class="highlighter-rouge">-Wl,--no-relax</code>.</p>
+<p>The linker uses the <code class="language-plaintext highlighter-rouge">__global_pointer$</code> symbol definition to compare the memory addresses and, if within range, it replaces absolute/pc-relative addressing with gp-relative addressing, which makes the code more efficient. This process is also called <em>relaxing</em>, and can be disabled by <code class="language-plaintext highlighter-rouge">-Wl,--no-relax</code>.</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">cat </span>main.c 
-<span class="gp">int i;</span>
-<span class="go">int main()
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">cat </span>main.c 
+<span class="gp">int i;</span><span class="w">
+</span><span class="go">int main()
 {
-</span><span class="gp">  return i;</span>
-<span class="go">}
+</span><span class="gp">  return i;</span><span class="w">
+</span><span class="go">}
 
-</span><span class="gp">$</span> riscv-none-embed-gcc  main.c <span class="nt">--save-temps</span>
-<span class="gp">$</span> <span class="nb">cat </span>main.s
+</span><span class="gp">$</span><span class="w"> </span>riscv-none-embed-gcc  main.c <span class="nt">--save-temps</span>
+<span class="gp">$</span><span class="w"> </span><span class="nb">cat </span>main.s
 <span class="c">...
 </span><span class="go">	lui	a5,%hi(i)
 	lw	a5,%lo(i)(a5)
 </span><span class="c">...
-</span><span class="gp">$</span> riscv-none-embed-objdump <span class="nt">-d</span> a.out
+</span><span class="gp">$</span><span class="w"> </span>riscv-none-embed-objdump <span class="nt">-d</span> a.out
 <span class="c">...
-</span><span class="gp">   101b4:       8341a783                lw      a5,-1996(gp) #</span> 11fdc &lt;i&gt;
+</span><span class="gp">   101b4:       8341a783                lw      a5,-1996(gp) #</span><span class="w"> </span>11fdc &lt;i&gt;
 <span class="c">...
 </span></code></pre>
 </div>
 </div>
 
-<p>The <code class="highlighter-rouge">gp</code> register should be loaded during startup with the address of the <code class="highlighter-rouge">__global_pointer$</code> symbol and should not be changed later.</p>
+<p>The <code class="language-plaintext highlighter-rouge">gp</code> register should be loaded during startup with the address of the <code class="language-plaintext highlighter-rouge">__global_pointer$</code> symbol and should not be changed later.</p>
 
 <div class="language-c highlighter-rouge">
 <div class="highlight">
@@ -485,9 +484,9 @@
 </div>
 </div>
 
-<p>The 4K region can be anywhere in the addressed memory, but, for the optimisation to be effective, it should preferably cover the most intensely used RAM area. For standard newlib applications, this is the area where the <code class="highlighter-rouge">.sdata</code> section is allocated, since it includes variables like <code class="highlighter-rouge">_impure_ptr</code>, <code class="highlighter-rouge">__malloc_sbrk_base</code>, etc. Thus, the definition should be placed right before the <code class="highlighter-rouge">.sdata</code> section. For example:</p>
+<p>The 4K region can be anywhere in the addressed memory, but, for the optimisation to be effective, it should preferably cover the most intensely used RAM area. For standard newlib applications, this is the area where the <code class="language-plaintext highlighter-rouge">.sdata</code> section is allocated, since it includes variables like <code class="language-plaintext highlighter-rouge">_impure_ptr</code>, <code class="language-plaintext highlighter-rouge">__malloc_sbrk_base</code>, etc. Thus, the definition should be placed right before the <code class="language-plaintext highlighter-rouge">.sdata</code> section. For example:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>PROVIDE( __global_pointer$ = . + (4K / 2) );
@@ -496,7 +495,7 @@
 </div>
 </div>
 
-<p>The region size is 4K because RISC-V immediate values are 12-bit signed values, which are +/- 2048 in decimal or +/- 0x800 in hex; since the values are signed, the <code class="highlighter-rouge">__global_pointer$</code> must point to the middle of the region.</p>
+<p>The region size is 4K because RISC-V immediate values are 12-bit signed values, which are +/- 2048 in decimal or +/- 0x800 in hex; since the values are signed, the <code class="language-plaintext highlighter-rouge">__global_pointer$</code> must point to the middle of the region.</p>
 
 
 <hr class="page-footer">
@@ -624,7 +623,7 @@
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

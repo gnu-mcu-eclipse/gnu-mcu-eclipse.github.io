@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>How to re-flash the Arty board?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="How to re-flash the Arty board?">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="How to re-flash the Arty board?" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2017-07-07">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/arch/riscv/arty-reflash/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -111,29 +110,29 @@
 
 <h4 id="gnulinux">GNU/Linux</h4>
 
-<p>On GNU/Linux, building <code class="highlighter-rouge">xc3sprog</code> requires <code class="highlighter-rouge">svn</code>, <code class="highlighter-rouge">cmake</code>, <code class="highlighter-rouge">libftdi</code> and <code class="highlighter-rouge">libusb</code>.</p>
+<p>On GNU/Linux, building <code class="language-plaintext highlighter-rouge">xc3sprog</code> requires <code class="language-plaintext highlighter-rouge">svn</code>, <code class="language-plaintext highlighter-rouge">cmake</code>, <code class="language-plaintext highlighter-rouge">libftdi</code> and <code class="language-plaintext highlighter-rouge">libusb</code>.</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> svn http://xc3sprog.svn.sourceforge.net/svnroot/xc3sprog/trunk xc3sprog.svn
-<span class="gp">$</span> <span class="nb">mkdir </span>build
-<span class="gp">$</span> <span class="nb">cd </span>build
-<span class="gp">$</span> cmake ../xc3sprog.svn
-<span class="gp">$</span> make
-<span class="gp">$</span> make <span class="nb">install</span>
+<code><span class="gp">$</span><span class="w"> </span>svn http://xc3sprog.svn.sourceforge.net/svnroot/xc3sprog/trunk xc3sprog.svn
+<span class="gp">$</span><span class="w"> </span><span class="nb">mkdir </span>build
+<span class="gp">$</span><span class="w"> </span><span class="nb">cd </span>build
+<span class="gp">$</span><span class="w"> </span>cmake ../xc3sprog.svn
+<span class="gp">$</span><span class="w"> </span>make
+<span class="gp">$</span><span class="w"> </span>make <span class="nb">install</span>
 </code></pre>
 </div>
 </div>
 
 <h4 id="macos">macOS</h4>
 
-<p>On macOS, the following Homebrew packages are required to build <code class="highlighter-rouge">xc3sprog</code>:</p>
+<p>On macOS, the following Homebrew packages are required to build <code class="language-plaintext highlighter-rouge">xc3sprog</code>:</p>
 <ul>
-  <li><code class="highlighter-rouge">cmake</code></li>
-  <li><code class="highlighter-rouge">libftdi</code></li>
-  <li><code class="highlighter-rouge">libusb</code></li>
-  <li><code class="highlighter-rouge">pkg-config</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cmake</code></li>
+  <li><code class="language-plaintext highlighter-rouge">libftdi</code></li>
+  <li><code class="language-plaintext highlighter-rouge">libusb</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pkg-config</code></li>
 </ul>
 
 <p>You can then build using the steps described for GNU/Linux.</p>
@@ -145,20 +144,20 @@
 <p>Given this configuration, the Arty re-flashing is done in two steps:</p>
 
 <ul>
-  <li>the first step uses <code class="highlighter-rouge">xc3sprog</code> to program Xlinx to obtain access to the SPI flash</li>
-  <li>the second step uses <code class="highlighter-rouge">openocd</code> to program the main <code class="highlighter-rouge">.mcs</code> image into the SPI flash</li>
+  <li>the first step uses <code class="language-plaintext highlighter-rouge">xc3sprog</code> to program Xlinx to obtain access to the SPI flash</li>
+  <li>the second step uses <code class="language-plaintext highlighter-rouge">openocd</code> to program the main <code class="language-plaintext highlighter-rouge">.mcs</code> image into the SPI flash</li>
 </ul>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xc3sprog <span class="nt">-c</span> nexys4 E31_ArtyTop.bit
-<span class="gp">$</span> <span class="nb">cd </span>freedom-e-sdk
-<span class="gp">$</span> openocd <span class="nt">-f</span> bsp/env/coreplexip-e31-arty/openocd.cfg <span class="se">\</span>
-    <span class="nt">-c</span> <span class="s2">"flash protect 0 0 last off"</span> <span class="se">\</span>
-    <span class="nt">-c</span> <span class="s2">"program coreplexip_e31_arty/arty.E31FPGAEvaluationConfig.mcs verify 0x40000000"</span> <span class="se">\</span>
-    <span class="nt">-c</span> <span class="s2">"exit"</span>
-</code></pre>
+<code><span class="gp">$</span><span class="w"> </span>xc3sprog <span class="nt">-c</span> nexys4 E31_ArtyTop.bit
+<span class="gp">$</span><span class="w"> </span><span class="nb">cd </span>freedom-e-sdk
+<span class="gp">$</span><span class="w"> </span>openocd <span class="nt">-f</span> bsp/env/coreplexip-e31-arty/openocd.cfg <span class="se">\</span>
+<span class="go">    -c "flash protect 0 0 last off" \
+    -c "program coreplexip_e31_arty/arty.E31FPGAEvaluationConfig.mcs verify 0x40000000" \
+    -c "exit"
+</span></code></pre>
 </div>
 </div>
 
@@ -290,7 +289,7 @@
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

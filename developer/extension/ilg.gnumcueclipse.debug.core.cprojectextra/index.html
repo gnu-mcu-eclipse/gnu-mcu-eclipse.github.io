@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>The ilg.gnumcueclipse.debug.core.cprojectExtra extension point</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="The ilg.gnumcueclipse.debug.core.cprojectExtra extension point">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="The ilg.gnumcueclipse.debug.core.cprojectExtra extension point" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-10">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/developer/extension/ilg.gnumcueclipse.debug.core.cprojectextra/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -144,7 +143,7 @@
 <div class="language-java highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="nf">getExtraProperties</span><span class="o">(</span><span class="n">IConfiguration</span> <span class="n">config</span><span class="o">);</span>
+<code><span class="kd">public</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="nf">getExtraProperties</span><span class="o">(</span><span class="nc">IConfiguration</span> <span class="n">config</span><span class="o">);</span>
 </code></pre>
 </div>
 </div>
@@ -153,26 +152,26 @@
 
 <p>The <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/blob/develop/bundles/ilg.gnumcueclipse.debug.gdbjtag/src/ilg/gnumcueclipse/debug/gdbjtag/data/CProjectExtraDataManagerProxy.java">ilg.gnumcueclipse.debug.gdbjtag.data/CProjectExtraDataManagerProxy.java</a> class enumerates all <strong>cprojectExtra</strong> extension points and returns the first one that can provide data for the requested configuration.</p>
 
-<p>This <code class="highlighter-rouge">CProjectExtraDataManagerProxy.getExtraProperties(config)</code> is called from <code class="highlighter-rouge">PeripheralsService.etPeripherals(IContainerDMContext containerDMContext, DataRequestMonitor&lt;IPeripheralDMContext[]&gt; drm)</code>:</p>
+<p>This <code class="language-plaintext highlighter-rouge">CProjectExtraDataManagerProxy.getExtraProperties(config)</code> is called from <code class="language-plaintext highlighter-rouge">PeripheralsService.etPeripherals(IContainerDMContext containerDMContext, DataRequestMonitor&lt;IPeripheralDMContext[]&gt; drm)</code>:</p>
 
 <div class="language-java highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="n">String</span> <span class="n">vendorId</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-<span class="n">String</span> <span class="n">deviceName</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<code><span class="nc">String</span> <span class="n">vendorId</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">deviceName</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 
-<span class="n">CProjectExtraDataManagerProxy</span> <span class="n">dataManager</span> <span class="o">=</span> <span class="n">CProjectExtraDataManagerProxy</span>
+<span class="nc">CProjectExtraDataManagerProxy</span> <span class="n">dataManager</span> <span class="o">=</span> <span class="nc">CProjectExtraDataManagerProxy</span>
         <span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
-<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">propertiesMap</span> <span class="o">=</span> <span class="n">dataManager</span><span class="o">.</span><span class="na">getExtraProperties</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
+<span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">propertiesMap</span> <span class="o">=</span> <span class="n">dataManager</span><span class="o">.</span><span class="na">getExtraProperties</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
 <span class="k">if</span> <span class="o">(</span><span class="n">propertiesMap</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">vendorId</span> <span class="o">=</span> <span class="n">propertiesMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">CProjectPacksStorage</span><span class="o">.</span><span class="na">DEVICE_VENDOR_ID</span><span class="o">);</span>
-    <span class="n">deviceName</span> <span class="o">=</span> <span class="n">propertiesMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">CProjectPacksStorage</span><span class="o">.</span><span class="na">DEVICE_NAME</span><span class="o">);</span>
+    <span class="n">vendorId</span> <span class="o">=</span> <span class="n">propertiesMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">CProjectPacksStorage</span><span class="o">.</span><span class="na">DEVICE_VENDOR_ID</span><span class="o">);</span>
+    <span class="n">deviceName</span> <span class="o">=</span> <span class="n">propertiesMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">CProjectPacksStorage</span><span class="o">.</span><span class="na">DEVICE_NAME</span><span class="o">);</span>
 <span class="o">}</span>
 
 <span class="k">if</span> <span class="o">(</span><span class="n">vendorId</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">deviceName</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
 
-    <span class="n">Leaf</span> <span class="n">tree</span> <span class="o">=</span> <span class="n">SvdUtils</span><span class="o">.</span><span class="na">getTree</span><span class="o">(</span><span class="n">vendorId</span><span class="o">,</span> <span class="n">deviceName</span><span class="o">);</span>
-    <span class="n">List</span><span class="o">&lt;</span><span class="n">Leaf</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">SvdUtils</span><span class="o">.</span><span class="na">getPeripherals</span><span class="o">(</span><span class="n">tree</span><span class="o">);</span>
+    <span class="nc">Leaf</span> <span class="n">tree</span> <span class="o">=</span> <span class="nc">SvdUtils</span><span class="o">.</span><span class="na">getTree</span><span class="o">(</span><span class="n">vendorId</span><span class="o">,</span> <span class="n">deviceName</span><span class="o">);</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Leaf</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="nc">SvdUtils</span><span class="o">.</span><span class="na">getPeripherals</span><span class="o">(</span><span class="n">tree</span><span class="o">);</span>
 
     <span class="n">fPeripheralsDMContexts</span> <span class="o">=</span> <span class="n">createPeripheralsContexts</span><span class="o">(</span><span class="n">containerDMContext</span><span class="o">,</span> <span class="n">list</span><span class="o">);</span>
 
@@ -182,9 +181,9 @@
 
 <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
 
-    <span class="n">drm</span><span class="o">.</span><span class="na">setStatus</span><span class="o">(</span><span class="k">new</span> <span class="n">Status</span><span class="o">(</span>
-        <span class="n">Status</span><span class="o">.</span><span class="na">ERROR</span><span class="o">,</span>
-        <span class="n">Activator</span><span class="o">.</span><span class="na">PLUGIN_ID</span><span class="o">,</span>
+    <span class="n">drm</span><span class="o">.</span><span class="na">setStatus</span><span class="o">(</span><span class="k">new</span> <span class="nc">Status</span><span class="o">(</span>
+        <span class="nc">Status</span><span class="o">.</span><span class="na">ERROR</span><span class="o">,</span>
+        <span class="nc">Activator</span><span class="o">.</span><span class="na">PLUGIN_ID</span><span class="o">,</span>
         <span class="s">"There are no peripheral descriptions available, assign a device to the project."</span><span class="o">));</span>
     <span class="n">drm</span><span class="o">.</span><span class="na">done</span><span class="o">();</span>
     <span class="k">return</span><span class="o">;</span>
@@ -369,7 +368,7 @@
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

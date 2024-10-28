@@ -2,35 +2,34 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-4-20180606 released</title>
   <meta name="description" content="Version v7.2.0-4-20180606 is a maintenance release of GNU MCU Eclipse RISC-V Embedded GCC; it builds the libraries with -mcmodel=medany.">
 
-  <meta property="og:title" content="GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-4-20180606 released">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-4-20180606 released" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2018-06-06">
 
 
-  <meta property="article:section" content="releases">
-  <meta property="article:section" content="riscv">
-  <meta property="article:section" content="riscv-none-gcc">
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="riscv" />
+  <meta property="article:section" content="riscv-none-gcc" />
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -38,7 +37,7 @@
   <link rel="canonical" href="/blog/2018/06/06/riscv-none-gcc-v7-2-0-4-20180606-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -143,7 +142,7 @@ Posted on June 6, 2018 by Liviu Ionescu.
 </table>
 </div>
 <p>Version v7.2.0-4-20180606 is a maintenance release of <strong>GNU MCU Eclipse 
-RISC-V Embedded GCC</strong>; it builds the libraries with <code class="highlighter-rouge">-mcmodel=medany</code>.</p>
+RISC-V Embedded GCC</strong>; it builds the libraries with <code class="language-plaintext highlighter-rouge">-mcmodel=medany</code>.</p>
 
 <p>
 <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.2.0-4-20180606/">Binary files »</a>
@@ -155,17 +154,17 @@ RISC-V Embedded GCC</strong>; it builds the libraries with <code class="highligh
 official <a href="https://github.com/riscv/riscv-gcc">RISC-V source files</a> 
 maintained by <a href="https://www.sifive.com">SiFive</a>.</p>
 
-<p>By the date of this release, the <code class="highlighter-rouge">riscv-gcc-7.3.0</code> branch is not yet 
+<p>By the date of this release, the <code class="language-plaintext highlighter-rouge">riscv-gcc-7.3.0</code> branch is not yet 
 stable, thus the current version is still based on GCC 7.2, using the 
 following commits:</p>
 
 <ul>
   <li>the <a href="https://github.com/riscv/riscv-gcc">riscv/riscv-gcc</a> project, 
-branch <code class="highlighter-rouge">riscv-gcc-7.2.0</code>, commit
+branch <code class="language-plaintext highlighter-rouge">riscv-gcc-7.2.0</code>, commit
 <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/commit/36e932c683490ddfa5225ad8d842b002a8a74ed4">36e932c</a>
 from from Jan 16th, 2018</li>
   <li>the <a href="https://github.com/riscv/riscv-binutils-gdb">riscv/riscv-binutils-gdb</a> 
-project, branch <code class="highlighter-rouge">riscv-binutils-2.29</code>, commit 
+project, branch <code class="language-plaintext highlighter-rouge">riscv-binutils-2.29</code>, commit 
 <a href="https://github.com/gnu-mcu-eclipse/riscv-binutils-gdb/commit/f60a065a25cc54169a34ed351931097a44703a5c">f60a065</a>
 from May 3rd, 2018</li>
   <li>the <a href="https://github.com/riscv/riscv-newlib">riscv/riscv-newlib</a> project,
@@ -175,14 +174,14 @@ from Feb 27th, 2018</li>
 
 <h2 id="improvements">Improvements</h2>
 
-<p>All architectures, ABIs and libraries supported by the <code class="highlighter-rouge">riscv64-unknown-elf</code> 
+<p>All architectures, ABIs and libraries supported by the <code class="language-plaintext highlighter-rouge">riscv64-unknown-elf</code> 
 toolchain are also supported, with the following improvements:</p>
 
 <ul>
-  <li>a newer <code class="highlighter-rouge">newlib</code> was included, which supports the ‘underscore’ syscall functions</li>
-  <li>the mandatory reference to <code class="highlighter-rouge">libgloss</code> in the linker configuration was removed</li>
-  <li>the <code class="highlighter-rouge">march=rv32imaf/mabi=ilp32f</code> library was added to the list of multilibs</li>
-  <li>support for <code class="highlighter-rouge">newlib-nano</code> was added</li>
+  <li>a newer <code class="language-plaintext highlighter-rouge">newlib</code> was included, which supports the ‘underscore’ syscall functions</li>
+  <li>the mandatory reference to <code class="language-plaintext highlighter-rouge">libgloss</code> in the linker configuration was removed</li>
+  <li>the <code class="language-plaintext highlighter-rouge">march=rv32imaf/mabi=ilp32f</code> library was added to the list of multilibs</li>
+  <li>support for <code class="language-plaintext highlighter-rouge">newlib-nano</code> was added</li>
   <li>the standard documentation, in PDF and HTML, was added</li>
 </ul>
 
@@ -203,12 +202,12 @@ page.</p>
 <p>The toolchain is also available as an 
 <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/riscv-none-gcc">xPack</a> 
 and can be conveniently installed with 
-<a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+<a href="https://www.npmjs.com/package/xpm"><code class="language-plaintext highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
+<code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/riscv-none-gcc
 </code></pre>
 </div>
 </div>
@@ -223,7 +222,7 @@ project.</p>
 <h2 id="known-problems">Known problems</h2>
 
 <ul>
-  <li>the <code class="highlighter-rouge">libnosys</code> library does not export the correct underscore symbols.</li>
+  <li>the <code class="language-plaintext highlighter-rouge">libnosys</code> library does not export the correct underscore symbols.</li>
 </ul>
 
 <h2 id="checksums">Checksums</h2>
@@ -384,7 +383,7 @@ Last modified on Tue Apr 23 17:13:15 2019 UTC.
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

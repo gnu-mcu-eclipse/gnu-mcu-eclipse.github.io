@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
-  <title>DEPRECATED &gt; How to publish the RISC-V Embedded GCC binaries?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <title>DEPRECATED > How to publish the RISC-V Embedded GCC binaries?</title>
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="DEPRECATED &gt; How to publish the RISC-V Embedded GCC binaries?">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="DEPRECATED > How to publish the RISC-V Embedded GCC binaries?" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2017-07-07">
@@ -23,12 +22,12 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
   <meta http-equiv="refresh" content="1; url=https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/blob/xpack/README-PUBLISH.md">
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -36,7 +35,7 @@
   <link rel="canonical" href="/toolchain/riscv/publish-procedure/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -153,7 +152,7 @@ project to the xPack project. The new page is:</p>
   <li><a href="https://xpack.github.io/riscv-none-embed-gcc/">https://xpack.github.io/riscv-none-embed-gcc/</a></li>
 </ul>
 
-<p>All previous releases are still available in the <code class="highlighter-rouge">@gnu-mcu-eclipse</code> scope,
+<p>All previous releases are still available in the <code class="language-plaintext highlighter-rouge">@gnu-mcu-eclipse</code> scope,
 but were deprecated and are not recommended for new projects.</p>
 
 <hr>
@@ -165,31 +164,31 @@ but were deprecated and are not recommended for new projects.</p>
 <p>Commit all</p>
 
 <ul>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse/riscv-binutils-gdb.git</code></li>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc.git</code></li>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse/riscv-newlib.git</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse/riscv-binutils-gdb.git</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc.git</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse/riscv-newlib.git</code></li>
 </ul>
 
 <h2 id="edit-the-build-script">Edit the build script</h2>
 
-<p>Edit the <code class="highlighter-rouge">VERSION</code> variable to point to the actual release.</p>
+<p>Edit the <code class="language-plaintext highlighter-rouge">VERSION</code> variable to point to the actual release.</p>
 
 <h2 id="push-the-build-script-git">Push the build script git</h2>
 
-<p>Push <code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> to GitHub.</p>
+<p>Push <code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> to GitHub.</p>
 
 <p>Possibly push the helper project too.</p>
 
 <h2 id="checkclonepull-build-scripts">Check/clone/pull build scripts</h2>
 
-<p>Be sure the scripts in <code class="highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> are up to date.</p>
+<p>Be sure the scripts in <code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse/riscv-none-gcc-build.git</code> are up to date.</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git <span class="se">\</span>
-  ~/Downloads/openocd-build.git
-</code></pre>
+<code><span class="gp">$</span><span class="w"> </span>git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/riscv-none-gcc-build.git <span class="se">\</span>
+<span class="go">  ~/Downloads/openocd-build.git
+</span></code></pre>
 </div>
 </div>
 
@@ -198,8 +197,8 @@ but were deprecated and are not recommended for new projects.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh cleanall
-<span class="gp">$</span> caffeinate bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--all</span>
+<code><span class="gp">$</span><span class="w"> </span>bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh cleanall
+<span class="gp">$</span><span class="w"> </span>caffeinate bash ~/Downloads/riscv-none-gcc-build.git/scripts/build.sh <span class="nt">--all</span>
 </code></pre>
 </div>
 </div>
@@ -212,14 +211,14 @@ but were deprecated and are not recommended for new projects.</p>
 <p>In the web git:</p>
 
 <ul>
-  <li>add a new file to <code class="highlighter-rouge">_posts/riscv-none-gcc/releases</code>
+  <li>add a new file to <code class="language-plaintext highlighter-rouge">_posts/riscv-none-gcc/releases</code>
 </li>
-  <li>name the file like <code class="highlighter-rouge">2016-01-11-riscv-none-gcc-v7-1-1-2-20160110-released.md</code>
+  <li>name the file like <code class="language-plaintext highlighter-rouge">2016-01-11-riscv-none-gcc-v7-1-1-2-20160110-released.md</code>
 </li>
   <li>name the post like: <strong>GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702 released</strong>.</li>
-  <li>as <code class="highlighter-rouge">download_url</code> use the generic <code class="highlighter-rouge">https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/</code>
+  <li>as <code class="language-plaintext highlighter-rouge">download_url</code> use the generic <code class="language-plaintext highlighter-rouge">https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/</code>
 </li>
-  <li>update the <code class="highlighter-rouge">date:</code> field with the current date</li>
+  <li>update the <code class="language-plaintext highlighter-rouge">date:</code> field with the current date</li>
 </ul>
 
 <p>Close <a href="https://github.com/gnu-mcu-eclipse/riscv-none-gcc/issues">issues</a> on 
@@ -251,7 +250,7 @@ gnu-mcu-eclipse-riscv-none-gcc-7.1.1-1-20170702-0625-debian32.tgz
 <h2 id="update-the-web">Update the Web</h2>
 
 <ul>
-  <li>commit the <code class="highlighter-rouge">gnu-mcu-eclipse.github.io-source</code> project; use a message 
+  <li>commit the <code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse.github.io-source</code> project; use a message 
 like <strong>RISC-V Embedded GCC v7.1.1-1-20170702-0625 released</strong>
 </li>
   <li>wait for the Travis build to complete; occasionally links to not work, 
@@ -261,7 +260,7 @@ and might need to restart the build.</li>
 
 <p>Note: initially the link to binaries points to the parent releases folder, 
 otherwise Travis will complain and do not publish the site to 
-<code class="highlighter-rouge">gnu-mcu-eclipse.github.io</code>.</p>
+<code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse.github.io</code>.</p>
 
 <h2 id="create-a-new-github-release">Create a new GitHub release</h2>
 
@@ -270,16 +269,16 @@ otherwise Travis will complain and do not publish the site to
   <li>click <strong>Draft a new release</strong>
 </li>
   <li>name the tag like <strong>v7.1.1-1-20170702</strong> (mind the dashes in the middle!)</li>
-  <li>select the corresponding <code class="highlighter-rouge">-gme</code> branch</li>
+  <li>select the corresponding <code class="language-plaintext highlighter-rouge">-gme</code> branch</li>
   <li>name the release like <strong>GNU MCU Eclipse RISC-V Embedded GCC v7.2.0-1-20171109</strong>
 </li>
   <li>as description
     <ul>
-      <li>add a downloads badge like <code class="highlighter-rouge">[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/riscv-none-gcc/v7.1.1-1-20170702/total.svg)]()</code>; use empty URL for now</li>
+      <li>add a downloads badge like <code class="language-plaintext highlighter-rouge">[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/riscv-none-gcc/v7.1.1-1-20170702/total.svg)]()</code>; use empty URL for now</li>
       <li>copy the first paragraph from the Web release page</li>
     </ul>
   </li>
-  <li>add a link to the Web page <code class="highlighter-rouge">[Continue reading »]()</code>; use an empty URL for now</li>
+  <li>add a link to the Web page <code class="language-plaintext highlighter-rouge">[Continue reading »]()</code>; use an empty URL for now</li>
   <li>get URL from web and update the above links</li>
   <li>
 <strong>attach binaries</strong> and SHA (drag and drop from the archives folder will do it)</li>
@@ -294,8 +293,8 @@ watching this project.</p>
 <p>In the web git:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">download_url: https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702</code></li>
-  <li>use something like <code class="highlighter-rouge">v7.1.1-1-20170702 update link</code> as message</li>
+  <li><code class="language-plaintext highlighter-rouge">download_url: https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases/tag/v7.1.1-1-20170702</code></li>
+  <li>use something like <code class="language-plaintext highlighter-rouge">v7.1.1-1-20170702 update link</code> as message</li>
 </ul>
 
 
@@ -425,7 +424,7 @@ watching this project.</p>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

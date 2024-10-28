@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>Prerequisites for building binaries</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="Prerequisites for building binaries">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="Prerequisites for building binaries" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2017-07-06">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/developer/build-binaries-prerequisites/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -109,14 +108,14 @@
 
 <p>It is also possible to install the Command Line Tools via a command line:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> xcode-select <span class="nt">--install</span>
-<span class="gp">$</span> xcode-select <span class="nt">-p</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>xcode-select <span class="nt">--install</span>
+<span class="gp">$</span><span class="w"> </span>xcode-select <span class="nt">-p</span>
 <span class="go">/Library/Developer/CommandLineTools
 </span></code></pre></div></div>
 
 <p>To test if the compiler is available, use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> gcc <span class="nt">--version</span>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>gcc <span class="nt">--version</span>
 <span class="go">Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 8.1.0 (clang-802.0.42)
 Target: x86_64-apple-darwin16.7.0
@@ -126,20 +125,20 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 
 <h4 id="install-a-custom-instance-of-homebrew">Install a custom instance of Homebrew</h4>
 
-<p>The build process is quite complex, and requires tools not available in the standard Apple macOS distribution. These tools can be installed with Homebrew. To keep these tools separate, a custom instance of Homebrew is installed in <code class="highlighter-rouge">${HOME}/opt/homebrew/gme</code>.</p>
+<p>The build process is quite complex, and requires tools not available in the standard Apple macOS distribution. These tools can be installed with Homebrew. To keep these tools separate, a custom instance of Homebrew is installed in <code class="language-plaintext highlighter-rouge">${HOME}/opt/homebrew/gme</code>.</p>
 
-<p>In a separate run, the <strong><a href="http://www.tug.org/mactex/">MacTex</a></strong> tools are also installed in <code class="highlighter-rouge">${HOME}/opt/texlive</code>. Alternatively you can install MacTex in <code class="highlighter-rouge">/usr/local</code> using the official distribution, but this will add lots of programs to the system path, and this is a bad thing.</p>
+<p>In a separate run, the <strong><a href="http://www.tug.org/mactex/">MacTex</a></strong> tools are also installed in <code class="language-plaintext highlighter-rouge">${HOME}/opt/texlive</code>. Alternatively you can install MacTex in <code class="language-plaintext highlighter-rouge">/usr/local</code> using the official distribution, but this will add lots of programs to the system path, and this is a bad thing.</p>
 
 <p>The entire process can be automated with two scripts, available from GitHub:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir -p ${HOME}/opt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir -p ${HOME}/opt
 $ git clone https://github.com/ilg-ul/opt-install-scripts \
     ${HOME}/opt/install-scripts.git
 $ bash ${HOME}/opt/install-scripts.git/install-homebrew-gme.sh
 $ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
 </code></pre></div></div>
 
-<p>The scripts run with user credentials, no <code class="highlighter-rouge">sudo</code> access is required. Please be aware that the TeX install takes quite some time.</p>
+<p>The scripts run with user credentials, no <code class="language-plaintext highlighter-rouge">sudo</code> access is required. Please be aware that the TeX install takes quite some time.</p>
 
 <h4 id="install-docker">Install Docker</h4>
 
@@ -149,7 +148,7 @@ $ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
 
 <p>For better results, dedicate 2 cores and at least 2 GB of RAM to the Docker.</p>
 
-<p>Warning: The current Docker version (17.x) has a memory leak in <code class="highlighter-rouge">com.docker.osxfs</code>, which makes its use questionable for long builds. As a workaround, install an Ubuntu 16.04 LTS virtual machine and use the GNU/Linux Docker.</p>
+<p>Warning: The current Docker version (17.x) has a memory leak in <code class="language-plaintext highlighter-rouge">com.docker.osxfs</code>, which makes its use questionable for long builds. As a workaround, install an Ubuntu 16.04 LTS virtual machine and use the GNU/Linux Docker.</p>
 
 <h3 id="gnulinux">GNU/Linux</h3>
 
@@ -161,21 +160,21 @@ $ bash ${HOME}/opt/install-scripts.git/install-texlive.sh
 
 <p>The steps are basically:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get update
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get update
 <span class="go">
-</span><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nb">install </span>apt-transport-https ca-certificates  curl software-properties-common
+</span><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>apt-transport-https ca-certificates  curl software-properties-common
 <span class="go">
-</span><span class="gp">$</span> curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
+</span><span class="gp">$</span><span class="w"> </span>curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
 <span class="go">
-</span><span class="gp">$</span> <span class="nb">sudo </span>add-apt-repository  <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu  </span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span><span class="s2">  stable"</span>
+</span><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>add-apt-repository  <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu  </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2">  stable"</span>
 <span class="go">
-</span><span class="gp">$</span> <span class="nb">sudo </span>apt-get update
-<span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>docker-ce
+</span><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get update
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>docker-ce
 </code></pre></div></div>
 
-<p>To check if the install is functional, run the <em>Hello World</em> image, for the moment as <code class="highlighter-rouge">sudo</code>:</p>
+<p>To check if the install is functional, run the <em>Hello World</em> image, for the moment as <code class="language-plaintext highlighter-rouge">sudo</code>:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>docker run hello-world
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>docker run hello-world
 <span class="go">Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
 b04784fba78d: Pull complete 
@@ -188,23 +187,23 @@ Hello from Docker!
 
 <h4 id="configure-docker-to-run-as-a-regular-user">Configure Docker to run as a regular user</h4>
 
-<p>To allow Docker to run as a regular user, you need to be a member of the <code class="highlighter-rouge">docker</code> group.</p>
+<p>To allow Docker to run as a regular user, you need to be a member of the <code class="language-plaintext highlighter-rouge">docker</code> group.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>groupadd docker
-<span class="gp">$</span> <span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
-<span class="gp">$</span> <span class="nb">sudo </span>service docker restart
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>groupadd docker
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>service docker restart
 </code></pre></div></div>
 
 <p>The above spets are for Ubuntu and the Debian family. For other distributions, the last line may differ, for example for Arch Linux use:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> systemctl restart docker
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>systemctl restart docker
 </code></pre></div></div>
 
 <p>To make these changes effective, logout and login.</p>
 
 <p>To check if the configuration change is functional, run the same <em>Hello World</em> image without sudo:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> docker run hello-world
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>docker run hello-world
 <span class="go">
 Hello from Docker!
 </span><span class="c">...
@@ -216,7 +215,7 @@ Hello from Docker!
 
 <p>However, a very few of them might need to be installed explicitly. On Ubuntu the command is:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>curl git automake libtool patch <span class="nb">tar </span>unzip
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>curl git automake libtool patch <span class="nb">tar </span>unzip
 </code></pre></div></div>
 
 <p>The script checks for them; if the script fails, install them and re-run.</p>
@@ -227,9 +226,9 @@ Hello from Docker!
 
 <p>If not already loaded, Docker will load the images at first usage. The images are relatively large, around 3 GB.</p>
 
-<p>It is possible to separately load the Docker images, using the script <code class="highlighter-rouge">preload-images</code> command of each script.</p>
+<p>It is possible to separately load the Docker images, using the script <code class="language-plaintext highlighter-rouge">preload-images</code> command of each script.</p>
 
-<p>If the download speed is limited, probably it is faster to rebuild the images locally. For this see the <code class="highlighter-rouge">build-images</code> command of each script.</p>
+<p>If the download speed is limited, probably it is faster to rebuild the images locally. For this see the <code class="language-plaintext highlighter-rouge">build-images</code> command of each script.</p>
 
 <p>More details in each script documentation page.</p>
 
@@ -359,7 +358,7 @@ Hello from Docker!
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

@@ -2,38 +2,37 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>GNU ARM Eclipse plug-ins v3.3.1-201702251311 released</title>
   <meta name="description" content="Version 3.3.1-201702251311 is a new release; the main change is adding support for GCC 6.x, including new Cortex-M23/M33.">
 
-  <meta property="og:title" content="GNU ARM Eclipse plug-ins v3.3.1-201702251311 released">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="GNU ARM Eclipse plug-ins v3.3.1-201702251311 released" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2017-02-25">
 
 
-  <meta property="article:section" content="releases">
-  <meta property="article:section" content="plugins">
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="plugins" />
 
-  <meta property="article:tag" content="gnu">
-  <meta property="article:tag" content="arm">
-  <meta property="article:tag" content="eclipse">
-  <meta property="article:tag" content="neon">
-
-
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta property="article:tag" content="gnu" />
+  <meta property="article:tag" content="arm" />
+  <meta property="article:tag" content="eclipse" />
+  <meta property="article:tag" content="neon" />
 
 
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -41,7 +40,7 @@
   <link rel="canonical" href="/blog/2017/02/25/plugins-v3.3.1-201702251311-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -156,14 +155,14 @@ Posted on February 25, 2017 by Liviu Ionescu.
 <ul>
   <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/180">Issue:#180</a>] support the latest architectures and devices:
     <ul>
-      <li>the <code class="highlighter-rouge">-march=</code> option was extended to include <code class="highlighter-rouge">armv8.1-a</code>, <code class="highlighter-rouge">armv8.1-a+crc</code> (from GCC 6.2)</li>
-      <li>the <code class="highlighter-rouge">-mcpu=</code> option was extended to include <code class="highlighter-rouge">cortex-m23</code>, <code class="highlighter-rouge">cortex-m33</code>, <code class="highlighter-rouge">cortex-a17</code>, <code class="highlighter-rouge">cortex-a32</code>, <code class="highlighter-rouge">cortex-a35</code>, <code class="highlighter-rouge">cortex-a72</code>, <code class="highlighter-rouge">qdf24xx</code> (from GCC 6.2)</li>
+      <li>the <code class="language-plaintext highlighter-rouge">-march=</code> option was extended to include <code class="language-plaintext highlighter-rouge">armv8.1-a</code>, <code class="language-plaintext highlighter-rouge">armv8.1-a+crc</code> (from GCC 6.2)</li>
+      <li>the <code class="language-plaintext highlighter-rouge">-mcpu=</code> option was extended to include <code class="language-plaintext highlighter-rouge">cortex-m23</code>, <code class="language-plaintext highlighter-rouge">cortex-m33</code>, <code class="language-plaintext highlighter-rouge">cortex-a17</code>, <code class="language-plaintext highlighter-rouge">cortex-a32</code>, <code class="language-plaintext highlighter-rouge">cortex-a35</code>, <code class="language-plaintext highlighter-rouge">cortex-a72</code>, <code class="language-plaintext highlighter-rouge">qdf24xx</code> (from GCC 6.2)</li>
     </ul>
   </li>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/179">Issue:#179</a>] on macOS and Linux, the search path for the toolchain/OpenOCD/QEMU executables was extended with <code class="highlighter-rouge">${user.home}/opt</code>; this is the new recommended location for installing optional tools;</li>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/182">Issue:#182</a>] the initial logic to compute the default toolchain was based on the lexicographic order of folder names; due to changes in the naming conventions, this logic failed to identify the latest ARM GCC 6 release; the logic was changed and now it uses the date of the <code class="highlighter-rouge">arm-none-eabi-gcc</code> file;</li>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/177">Issue:#177</a>] the J-Link debugging plug-in was extended to accept IP tunneling configurations (the IP field was extended to accept the <code class="highlighter-rouge">:</code> character);</li>
-  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/174">Issue:#174</a>] to help identify problems when launching external executables (like the J-Link/OpenOCD/QEMU GDB servers and the GDB client), the entire command line is logged to the <code class="highlighter-rouge">${workspace}/.metadata/.log</code> file.</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/179">Issue:#179</a>] on macOS and Linux, the search path for the toolchain/OpenOCD/QEMU executables was extended with <code class="language-plaintext highlighter-rouge">${user.home}/opt</code>; this is the new recommended location for installing optional tools;</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/182">Issue:#182</a>] the initial logic to compute the default toolchain was based on the lexicographic order of folder names; due to changes in the naming conventions, this logic failed to identify the latest ARM GCC 6 release; the logic was changed and now it uses the date of the <code class="language-plaintext highlighter-rouge">arm-none-eabi-gcc</code> file;</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/177">Issue:#177</a>] the J-Link debugging plug-in was extended to accept IP tunneling configurations (the IP field was extended to accept the <code class="language-plaintext highlighter-rouge">:</code> character);</li>
+  <li>[<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/174">Issue:#174</a>] to help identify problems when launching external executables (like the J-Link/OpenOCD/QEMU GDB servers and the GDB client), the entire command line is logged to the <code class="language-plaintext highlighter-rouge">${workspace}/.metadata/.log</code> file.</li>
 </ul>
 
 <h2 id="addressed-bugs">Addressed bugs</h2>
@@ -328,7 +327,7 @@ Last modified on Sat Jul  1 21:06:50 2017 UTC.
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

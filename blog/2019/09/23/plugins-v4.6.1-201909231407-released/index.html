@@ -2,39 +2,38 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>GNU MCU Eclipse plug-ins v4.6.1-201909231407 released</title>
   <meta name="description" content="Version 4.6.1-201909231407 is a new release; the main changes are theaddition of support forthe new xPack Dev Tools and performancefixes for the CMSIS Packs ...">
 
-  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.6.1-201909231407 released">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.6.1-201909231407 released" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2019-09-23">
 
 
-  <meta property="article:section" content="releases">
-  <meta property="article:section" content="plugins">
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="plugins" />
 
-  <meta property="article:tag" content="gnu">
-  <meta property="article:tag" content="arm">
-  <meta property="article:tag" content="risc-v">
-  <meta property="article:tag" content="mcu">
-  <meta property="article:tag" content="eclipse">
-
-
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta property="article:tag" content="gnu" />
+  <meta property="article:tag" content="arm" />
+  <meta property="article:tag" content="risc-v" />
+  <meta property="article:tag" content="mcu" />
+  <meta property="article:tag" content="eclipse" />
 
 
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -42,7 +41,7 @@
   <link rel="canonical" href="/blog/2019/09/23/plugins-v4.6.1-201909231407-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -164,15 +163,15 @@ fixes for the <strong>CMSIS Packs</strong> manager.</p>
 <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/tag/v4.6.1-201909231407/">Binary files »</a>
 </p>
 
-<h2 id="the-xpack-dev-tools-scope">The <code class="highlighter-rouge">@xpack-dev-tools</code> scope</h2>
+<h2 id="the-xpack-dev-tools-scope">The <code class="language-plaintext highlighter-rouge">@xpack-dev-tools</code> scope</h2>
 
 <ul>
   <li>c424f652 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/351">#351</a>]
 in the initial implementation, the binary tools were grouped in the
-<code class="highlighter-rouge">@gnu-mcu-eclipse</code> scope; since most of them were not related to Eclipse, they
-were moved to a separate <code class="highlighter-rouge">@xpack-dev-tools</code> scope; the Eclipse plug-ins were
+<code class="language-plaintext highlighter-rouge">@gnu-mcu-eclipse</code> scope; since most of them were not related to Eclipse, they
+were moved to a separate <code class="language-plaintext highlighter-rouge">@xpack-dev-tools</code> scope; the Eclipse plug-ins were
 updated to support multiple xPack names and add the new names in the
-<code class="highlighter-rouge">@xpack-dev-tools</code> scope were added to each plug-in.</li>
+<code class="language-plaintext highlighter-rouge">@xpack-dev-tools</code> scope were added to each plug-in.</li>
 </ul>
 
 <p>The commands to install the new xPack are:</p>
@@ -180,10 +179,10 @@ updated to support multiple xPack names and add the new names in the
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest
-<span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/openocd@latest
-<span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest
-<span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/riscv-none-embed-gcc@latest
+<code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/arm-none-eabi-gcc@latest
+<span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/openocd@latest
+<span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/qemu-arm@latest
+<span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @xpack-dev-tools/riscv-none-embed-gcc@latest
 </code></pre>
 </div>
 </div>
@@ -192,7 +191,7 @@ updated to support multiple xPack names and add the new names in the
 
 <ul>
   <li>60359ef5 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/362">#362</a>] Show version date in Packs View</li>
-  <li>69ec486e - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/359">#359</a>] Add support for TrustZone (<code class="highlighter-rouge">--mcmse</code>)</li>
+  <li>69ec486e - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/359">#359</a>] Add support for TrustZone (<code class="language-plaintext highlighter-rouge">--mcmse</code>)</li>
 </ul>
 
 <h2 id="addressed-bugs">Addressed bugs</h2>
@@ -201,7 +200,7 @@ updated to support multiple xPack names and add the new names in the
   <li>a90aeb0f - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/335">#335</a>] Retrieving the <strong>package size</strong> for some CMSIS packages (like Silicon Labs) failed due to the server sending the file in chunks and requiring a more complex processing; fixed.</li>
   <li>7342e6d4 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/336">#336</a>] In certain conditions, computing the cluster address in the <strong>Peripheral registers</strong> view failed since the increment was not identified properly fixed.</li>
   <li>e6de2688 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/347">#347</a>] Due to a problem in CDT, using <strong>libraries with spaces in names</strong> failed the build; fixed, and the issue was reported to Eclipse maintainers (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=551089">551089</a>)</li>
-  <li>142eee35 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/341">#341</a>] When initialising the CMSIS Packages plugin, if the location was changed from the default, the <code class="highlighter-rouge">Packages</code> folder was still created in the default location; fixed.</li>
+  <li>142eee35 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/341">#341</a>] When initialising the CMSIS Packages plugin, if the location was changed from the default, the <code class="language-plaintext highlighter-rouge">Packages</code> folder was still created in the default location; fixed.</li>
   <li>22bd0c77 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/346">#346</a>] The size reserved for the xPack version was too small on GNU/Linux; fixed.</li>
   <li>8410a731 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/343">#343</a>] Due to a typo in SvdUtils, the ‘t’ prefix (for tera) was not recognised; fixed.</li>
   <li>0eff481e - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/340">#340</a>] In order to accept more legal content in the IP address field of the J-Link Debug plug-in, the validator was removed and any characters are now allowed.</li>
@@ -221,30 +220,30 @@ from the current workspace folder to a unique folder in the user folder.</li>
 <p>The new location is platform dependent:</p>
 
 <ul>
-  <li>macOS: <code class="highlighter-rouge">${HOME}/Library/CMSIS-Packs</code>
+  <li>macOS: <code class="language-plaintext highlighter-rouge">${HOME}/Library/CMSIS-Packs</code>
 </li>
-  <li>Linux: <code class="highlighter-rouge">${HOME}/opt/cmsis-packs</code>
+  <li>Linux: <code class="language-plaintext highlighter-rouge">${HOME}/opt/cmsis-packs</code>
 </li>
-  <li>Windows: <code class="highlighter-rouge">%APPDATA%\CMSIS-Packs</code>
+  <li>Windows: <code class="language-plaintext highlighter-rouge">%APPDATA%\CMSIS-Packs</code>
 </li>
 </ul>
 
-<p>It is also possible to change these defaults by using the <code class="highlighter-rouge">CMSIS_PACKS_FOLDER</code>
+<p>It is also possible to change these defaults by using the <code class="language-plaintext highlighter-rouge">CMSIS_PACKS_FOLDER</code>
 environment variable.</p>
 
 <p>The new default applies when installing new Eclipse environments; for
 compatibility reasons, if an
-existing environment contains a <code class="highlighter-rouge">Packages</code> folder in the same location as
+existing environment contains a <code class="language-plaintext highlighter-rouge">Packages</code> folder in the same location as
 the workspace, then it will be used as before.</p>
 
 <h2 id="other-changes">Other changes</h2>
 
 <ul>
-  <li>2b053de3 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/338">#338</a>] the list of accepted devices/architectures was (<code class="highlighter-rouge">-mcpu</code> &amp; <code class="highlighter-rouge">-march</code>) was updated for GCC 8.x;</li>
-  <li>94409173 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/358">#358</a>] the list of accepted compiler standards (<code class="highlighter-rouge">-std=</code>) was updated for GCC 9;</li>
+  <li>2b053de3 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/338">#338</a>] the list of accepted devices/architectures was (<code class="language-plaintext highlighter-rouge">-mcpu</code> &amp; <code class="language-plaintext highlighter-rouge">-march</code>) was updated for GCC 8.x;</li>
+  <li>94409173 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/358">#358</a>] the list of accepted compiler standards (<code class="language-plaintext highlighter-rouge">-std=</code>) was updated for GCC 9;</li>
   <li>7ee535e6 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/360">#360</a>] the <strong>Refresh All</strong> action in the Packs view was optimised and the pack size is retrieved only for the latest version;</li>
   <li>903b4537 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/361">#361</a>] the CMSIS Packs manager now accepts to install recent packages up to CMSIS Packs v1.6.0 specs;</li>
-  <li>69090d90 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/355">#355</a>] given the change in processing ABI warnings in GCC, the project templates no longer pass <code class="highlighter-rouge">-Wabi</code> to the created projects.</li>
+  <li>69090d90 - [Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/355">#355</a>] given the change in processing ABI warnings in GCC, the project templates no longer pass <code class="language-plaintext highlighter-rouge">-Wabi</code> to the created projects.</li>
 </ul>
 
 <h2 id="template-changes">Template changes</h2>
@@ -411,7 +410,7 @@ Last modified on Tue Sep 24 14:15:38 2019 UTC.
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

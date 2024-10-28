@@ -2,39 +2,38 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>GNU MCU Eclipse plug-ins v4.3.3-201804191501 released</title>
   <meta name="description" content="Version 4.3.3-201804191501 is a maintenance release; the main changes are bug fixes and enhancements.">
 
-  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.3.3-201804191501 released">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.3.3-201804191501 released" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2018-04-19">
 
 
-  <meta property="article:section" content="releases">
-  <meta property="article:section" content="plugins">
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="plugins" />
 
-  <meta property="article:tag" content="gnu">
-  <meta property="article:tag" content="arm">
-  <meta property="article:tag" content="risc-v">
-  <meta property="article:tag" content="mcu">
-  <meta property="article:tag" content="eclipse">
-
-
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta property="article:tag" content="gnu" />
+  <meta property="article:tag" content="arm" />
+  <meta property="article:tag" content="risc-v" />
+  <meta property="article:tag" content="mcu" />
+  <meta property="article:tag" content="eclipse" />
 
 
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -42,7 +41,7 @@
   <link rel="canonical" href="/blog/2018/04/19/plugins-v4.3.3-201804191501-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -155,14 +154,14 @@ Posted on April 19, 2018 by Liviu Ionescu.
 <h2 id="new-features">New features</h2>
 
 <ul>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/289">#289</a>] The initial approach to identify the toolchain was to store the full name in <code class="highlighter-rouge">.cproject</code>, and from it to compute the numeric ID; this does not allow to rename the toolchain in the future; to overcome this, the numeric toolchain ID is now stored in <code class="highlighter-rouge">.cproject</code> and future versions will prefer it to the full name;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/289">#289</a>] The initial approach to identify the toolchain was to store the full name in <code class="language-plaintext highlighter-rouge">.cproject</code>, and from it to compute the numeric ID; this does not allow to rename the toolchain in the future; to overcome this, the numeric toolchain ID is now stored in <code class="language-plaintext highlighter-rouge">.cproject</code> and future versions will prefer it to the full name;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/288">#288</a>] Support for the new <a href="https://github.com/gnu-mcu-eclipse/arm-none-eabi-gcc">GNU MCU Eclipse ARM Embedded GCC</a> toolchain was added, including the logic to select the path based on the xPack version;</li>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/270">#270</a>] Modern GCC versions allows to define the path of additional system folders, via the <code class="highlighter-rouge">-isystem</code> command line option; the managed build <strong>Settings</strong> pages were extended with an widget to define the list of system folders;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/270">#270</a>] Modern GCC versions allows to define the path of additional system folders, via the <code class="language-plaintext highlighter-rouge">-isystem</code> command line option; the managed build <strong>Settings</strong> pages were extended with an widget to define the list of system folders;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/280">#280</a>] The debug plug-ins validation logic prevent the debug configuration to be saved if mandatory fields are missing, by disabling the <strong>Apply</strong> button, but they did not display any reason why the button is disabled; to help the user understand which fields are field, an error message was added;</li>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/281">#281</a>] The RISC-V <strong>Settings</strong> page was updated; the <code class="highlighter-rouge">-mstrict-align</code> was added as a combo, the <code class="highlighter-rouge">-mtune=generic</code> was deprecated, and <code class="highlighter-rouge">-mtune=size</code> was added;</li>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/283">#283</a>] Recent macOS and GNU/Linux versions of SEGGER J-Link were extended with GUI versions for the JLinkGDBServer, and the command line binaries were renamed <code class="highlighter-rouge">JLinkGDBServerCL</code>; the default in the J-Link debug plug-in was changed to reflect this new program name;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/281">#281</a>] The RISC-V <strong>Settings</strong> page was updated; the <code class="language-plaintext highlighter-rouge">-mstrict-align</code> was added as a combo, the <code class="language-plaintext highlighter-rouge">-mtune=generic</code> was deprecated, and <code class="language-plaintext highlighter-rouge">-mtune=size</code> was added;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/283">#283</a>] Recent macOS and GNU/Linux versions of SEGGER J-Link were extended with GUI versions for the JLinkGDBServer, and the command line binaries were renamed <code class="language-plaintext highlighter-rouge">JLinkGDBServerCL</code>; the default in the J-Link debug plug-in was changed to reflect this new program name;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/285">#285</a>] Due to sever availability, sometimes the CMSIS packs update process fails, and a message box is displayed allowing the user to retry or ignore; to improve user experience, an <strong>Ignore All</strong> button was added;</li>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/275">#275</a>] The RISC-V Settings page was improved; <code class="highlighter-rouge">ilp32e</code>  was added to the list of accepted ABIs.</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/275">#275</a>] The RISC-V Settings page was improved; <code class="language-plaintext highlighter-rouge">ilp32e</code>  was added to the list of accepted ABIs.</li>
 </ul>
 
 <h2 id="addressed-bugs">Addressed bugs</h2>
@@ -170,7 +169,7 @@ Posted on April 19, 2018 by Liviu Ionescu.
 <ul>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/291">#291</a>] Non managed projects still displayed the <strong>Toolchain</strong> tabs in the <strong>Settings</strong> page, although the definitions are not relevant for them; the <strong>Toolchain</strong> tab is now shown only for managed projects;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/290">#290</a>] The <strong>Devices</strong> tab was displayed in the <strong>Settings</strong> page even for projects not using ARM devices; the <strong>Devices</strong> tab is now shown only for ARM managed projects;</li>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/287">#287</a>] In certain conditions, checking for the <code class="highlighter-rouge">package.json</code> file while processing the peripheral definitions triggered an exception; fixed;</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/287">#287</a>] In certain conditions, checking for the <code class="language-plaintext highlighter-rouge">package.json</code> file while processing the peripheral definitions triggered an exception; fixed;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/286">#286</a>] In certain conditions, the new logic used to identify SVD vs XSVD files failed when the SVD file used Unicode BOM, and the Peripherals View was empty; fixed;</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/278">#278</a>] In certain conditions, the logic behind the peripheral view triggered some NLS warnings in console; fixed;</li>
 </ul>
@@ -326,7 +325,7 @@ Last modified on Thu Apr 19 18:04:31 2018 UTC.
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

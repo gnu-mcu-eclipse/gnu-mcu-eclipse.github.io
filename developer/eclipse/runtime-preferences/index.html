@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>How Eclipse runtime preferences and defaults work</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="How Eclipse runtime preferences and defaults work">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="How Eclipse runtime preferences and defaults work" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-10">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/developer/eclipse/runtime-preferences/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -230,7 +229,7 @@
 
 <p>It is recommended that reading preferences be done generically, to access multiple scopes:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>IProject project;
@@ -270,7 +269,7 @@ if (value != null) {
 
 <p>For writing preferences, it is recommended to access directly the specific scope:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>Preferences preferences = new ProjectScope(project).getNode(Activator.PLUGIN_ID);
@@ -292,7 +291,7 @@ preferences.flush();
 
 <p>Defaults can also be accessed directly:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>Preferences preferences = DefaultScope.INSTANCE.getNode(Activator.PLUGIN_ID);
@@ -309,7 +308,7 @@ String value = preferences.get(id, defaultValue);
 
 <p>The plug-in preferences store by default points to the InstanceScope:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>IPreferenceStore store = Activator.getInstance().getPreferenceStore();
@@ -321,7 +320,7 @@ String s = store.getString("...");
 
 <p>This translates loosely to a <a href="http://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fapi%2Forg%2Feclipse%2Fui%2Fpreferences%2FScopedPreferenceStore.html">ScopedPreferenceStore</a> with an InstanceScope with a node that matches the plug-in bundle.id.</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>IPreferenceStore store = new ScopedPreferenceStore(InstanceScope.INSTANCE, Activator.PLUGIN_ID);
@@ -331,7 +330,7 @@ String s = store.getString("...");
 
 <p>For the Eclipse scope, use:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>IPreferenceStore store = new ScopedPreferenceStore(ConfigurationScope.INSTANCE, Activator.PLUGIN_ID);
@@ -341,7 +340,7 @@ String s = store.getString("...");
 
 <p>For the project scope, use:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>IPreferenceStore store = new ScopedPreferenceStore(new ProjectScope(project), Activator.PLUGIN_ID);
@@ -363,7 +362,7 @@ String s = store.getString("...");
 
 <p>The file format is similar to that used for Java properties:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>eclipse.preferences.version=1
@@ -375,7 +374,7 @@ pluginId/key=value
 
 <p>When using the IPreferencesService, multiple intermediate nodes can be inserted:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>eclipse.preferences.version=1
@@ -389,7 +388,7 @@ pluginId/nodeId/key=value
 
 <p>The project preferences are stored in a file below the project .settings folder:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code> project/.settings/&lt;pluginId&gt;.prefs
@@ -401,7 +400,7 @@ pluginId/nodeId/key=value
 
 <p>The workspace preferences are stored is in a separate file named after the plug-in ID:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/&lt;pluginId&gt;.prefs
@@ -413,7 +412,7 @@ pluginId/nodeId/key=value
 
 <p>The Eclipse preferences are stored is in a separate file named after the plug-in ID:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>eclipse/configuration/.settings/&lt;pluginId&gt;.prefs
@@ -455,7 +454,7 @@ pluginId/nodeId/key=value
 
 <p>The properties will refer to values from multiple plug-ins; this requires that each line must mention the plug-in, a ‘/’ separator and the key/value:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>org.eclipse.cdt.debug.core/org.eclipse.cdt.debug.corecDebug.default_expression_format=4
@@ -467,7 +466,7 @@ pluginId/nodeId/key=value
 
 <p>Any defaults, for any plug-in, can be defined in the product related file, like:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>&lt;property name="preferenceCustomization" value="plugin_customization.ini" /&gt;
@@ -483,7 +482,7 @@ pluginId/nodeId/key=value
 
 <p>The scope of these properties is the current plug-in; the syntax of this file requires only the key/value, no plug-in id.</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>flashDeviceName=STM32F407VG
@@ -495,7 +494,7 @@ pluginId/nodeId/key=value
 
 <p>To set the default values for preferences use the extension point <strong>org.eclipse.core.runtime.preferences</strong>.</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>public class MyInitializer extends AbstractPreferenceInitializer {
@@ -519,7 +518,7 @@ pluginId/nodeId/key=value
 
 <p>For example, to lookup an integer preference value for your plug-in, use:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>Platform.getPreferencesService().getInt(Activator.PLUGIN_ID, preferenceKey, defaultValue, null);
@@ -529,7 +528,7 @@ pluginId/nodeId/key=value
 
 <p>Direct access to defaults is also possible via the DefaultScope.</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>Preferences preferences = DefaultScope.INSTANCE.getNode(Activator.PLUGIN_ID);
@@ -542,7 +541,7 @@ String value = preferences.get(preferenceKey, defaultValue);
 
 <p>A word of cautions on Windows: the path may be defined either in the portable way, with forward slashes, or, if you prefer (the brain damaged MS-DOS syntax with) backslashes, they must be escaped by a second backslash (for Java, C and other portable environments, the backslash is used to define special characters, like \n, or to escape the next character). For example, the following definitions are equivalent:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>default.path.1287942917=${eclipse_home}/../gcc/bin
@@ -688,7 +687,7 @@ default.path.1287942917=${eclipse_home}\\..\\gcc\\bin
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

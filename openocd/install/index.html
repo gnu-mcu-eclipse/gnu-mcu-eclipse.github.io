@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
-  <title>DEPRECATED &gt; How to install the OpenOCD binaries?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <title>DEPRECATED > How to install the OpenOCD binaries?</title>
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="DEPRECATED &gt; How to install the OpenOCD binaries?">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="DEPRECATED > How to install the OpenOCD binaries?" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-09">
@@ -23,12 +22,12 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
   <meta http-equiv="refresh" content="1; url=https://xpack.github.io/openocd/install/">
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -36,7 +35,7 @@
   <link rel="canonical" href="/openocd/install/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -158,7 +157,7 @@ project to the xPack project. The new install page is:</p>
   <li><a href="https://xpack.github.io/openocd/install/">https://xpack.github.io/openocd/install/</a></li>
 </ul>
 
-<p>All previous releases are still available in the <code class="highlighter-rouge">@gnu-mcu-eclipse</code> scope,
+<p>All previous releases are still available in the <code class="language-plaintext highlighter-rouge">@gnu-mcu-eclipse</code> scope,
 but were deprecated and are not recommended for new projects.</p>
 
 <hr>
@@ -185,7 +184,7 @@ the <strong>xPack Package Manager</strong>, and can be used on Windows, macOS an
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/openocd
+<code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/openocd
 </code></pre>
 </div>
 </div>
@@ -194,19 +193,19 @@ the <strong>xPack Package Manager</strong>, and can be used on Windows, macOS an
 xPacks repository, which is a platform dependent folder:</p>
 
 <ul>
-  <li>Windows: <code class="highlighter-rouge">%APPDATA%\xPacks</code> (like <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks</code>)</li>
-  <li>macOS: <code class="highlighter-rouge">${HOME}/Library/xPacks</code>
+  <li>Windows: <code class="language-plaintext highlighter-rouge">%APPDATA%\xPacks</code> (like <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks</code>)</li>
+  <li>macOS: <code class="language-plaintext highlighter-rouge">${HOME}/Library/xPacks</code>
 </li>
-  <li>GNU/Linux: <code class="highlighter-rouge">${HOME}/opt/xPacks</code>
+  <li>GNU/Linux: <code class="language-plaintext highlighter-rouge">${HOME}/opt/xPacks</code>
 </li>
 </ul>
 
 <p>Note: This location is configurable using the environment variable 
-<code class="highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the 
+<code class="language-plaintext highlighter-rouge">XPACKS_REPO_FOLDER</code>; for more details please check the 
 <a href="https://xpack.github.io/xpm/files/folders/">xpm folders</a> page.</p>
 
 <p>The actual binaries are extracted from the distribution archive in a 
-folder named <code class="highlighter-rouge">.content</code>, located in the versioned xPack folder. On some
+folder named <code class="language-plaintext highlighter-rouge">.content</code>, located in the versioned xPack folder. On some
 platforms, dotted files are hidden by default, so the file explorer might
 require additional settings to make them visible.</p>
 
@@ -231,13 +230,13 @@ the xPack install folder.</p>
 <p>The Windows versions of <strong>GNU MCU Eclipse OpenOCD</strong> are packed as ZIP files. Download the latest version named like:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win64.zip</code></li>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win32.zip</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win64.zip</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-win32.zip</code></li>
 </ul>
 
-<p>Select the <code class="highlighter-rouge">-win64</code> file for Windows x64 machines and the <code class="highlighter-rouge">-win32</code> file for Windows x32 machines.</p>
+<p>Select the <code class="language-plaintext highlighter-rouge">-win64</code> file for Windows x64 machines and the <code class="language-plaintext highlighter-rouge">-win32</code> file for Windows x32 machines.</p>
 
-<p>Unpack the archive and copy it into the <code class="highlighter-rouge">%userprofile%\AppData\Roaming\GNU MCU Eclipse</code> (for example <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse</code>) folder; according to Microsoft, this is the recommended location for installing user specific packages;</p>
+<p>Unpack the archive and copy it into the <code class="language-plaintext highlighter-rouge">%userprofile%\AppData\Roaming\GNU MCU Eclipse</code> (for example <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\GNU MCU Eclipse</code>) folder; according to Microsoft, this is the recommended location for installing user specific packages;</p>
 
 <blockquote>
   <p>Note: although perfectly possible to install OpenOCD in any folder, it is highly recommended to use this path, since by default the plug-in searches for the executable in this location.</p>
@@ -262,11 +261,11 @@ the xPack install folder.</p>
 
 <h4 id="drivers">Drivers</h4>
 
-<p>As usual on Windows, mastering drivers is a challenge and OpenOCD is no exceptions, so don’t be surprised to encounter many incompatible drivers for various JTAG probes. The OpenOCD distribution includes some libusb drivers, and recommends to run the <code class="highlighter-rouge">zadig.exe</code> tool to activate them. Although this manoeuvre will make OpenOCD happy, it will most probably ruin other USB drivers you might have installed. Our strong recommendation is to <strong>NOT</strong> do this, and instead use the manufacturer drivers, when compatible with OpenOCD.</p>
+<p>As usual on Windows, mastering drivers is a challenge and OpenOCD is no exceptions, so don’t be surprised to encounter many incompatible drivers for various JTAG probes. The OpenOCD distribution includes some libusb drivers, and recommends to run the <code class="language-plaintext highlighter-rouge">zadig.exe</code> tool to activate them. Although this manoeuvre will make OpenOCD happy, it will most probably ruin other USB drivers you might have installed. Our strong recommendation is to <strong>NOT</strong> do this, and instead use the manufacturer drivers, when compatible with OpenOCD.</p>
 
 <h5 id="st-linkv2">ST-LINK/V2</h5>
 
-<p>One example of compatible drivers are the ST-LINK/V2 USB drivers, from ST, available as part number <a href="http://www.st.com/web/en/catalog/tools/FM147/SC1887/PF260219">STSW-LINK009</a>. Download the <code class="highlighter-rouge">stsw-link009.zip</code> archive, extract its content to a separate folder, and run the <code class="highlighter-rouge">dpinst_amd64.exe</code> (or <code class="highlighter-rouge">dpinst_x86.exe</code>) with administrative privileges.</p>
+<p>One example of compatible drivers are the ST-LINK/V2 USB drivers, from ST, available as part number <a href="http://www.st.com/web/en/catalog/tools/FM147/SC1887/PF260219">STSW-LINK009</a>. Download the <code class="language-plaintext highlighter-rouge">stsw-link009.zip</code> archive, extract its content to a separate folder, and run the <code class="language-plaintext highlighter-rouge">dpinst_amd64.exe</code> (or <code class="language-plaintext highlighter-rouge">dpinst_x86.exe</code>) with administrative privileges.</p>
 
 <p>As for most Windows drivers, to complete the installation, a restart usually helps.</p>
 
@@ -291,19 +290,19 @@ the xPack install folder.</p>
 <p>The macOS version of <strong>GNU MCU Eclipse OpenOCD</strong> is packed as a TGZ archive. Download the latest version named like:</p>
 
 <ul>
-  <li> <code class="highlighter-rouge">gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-osx.tgz</code>
+  <li> <code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-osx.tgz</code>
 </li>
 </ul>
 
-<p>To install OpenOCD, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/openocd/</code>:</p>
+<p>To install OpenOCD, unpack the archive and copy it to  <code class="language-plaintext highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/openocd/</code>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-osx.tgz
-<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-osx.tgz
+<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
 </code></pre>
 </div>
 </div>
@@ -317,7 +316,7 @@ the xPack install folder.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd <span class="nt">--version</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd <span class="nt">--version</span>
 <span class="go">GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
 </span></code></pre>
 </div>
@@ -328,21 +327,21 @@ the xPack install folder.</p>
 <p>The GNU/Linux versions of <strong>GNU MCU Eclipse OpenOCD</strong> are packed as TGZ archives. Download the latest version named like:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos64.tgz</code></li>
-  <li><code class="highlighter-rouge">gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos32.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos64.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse-openocd-0.10.0-6-20180112-1448-centos32.tgz</code></li>
 </ul>
 
-<p>As the name implies, these are CentOS <code class="highlighter-rouge">tar.gz</code> archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="highlighter-rouge">-centos64</code> file for 64-bit machines and the <code class="highlighter-rouge">-centos32</code> file for 32-bit machines.</p>
+<p>As the name implies, these are CentOS <code class="language-plaintext highlighter-rouge">tar.gz</code> archives, but can be executed on most recent GNU/Linux distributions (they were tested on Debian, Ubuntu, Manjaro, SuSE and Fedora). Select the <code class="language-plaintext highlighter-rouge">-centos64</code> file for 64-bit machines and the <code class="language-plaintext highlighter-rouge">-centos32</code> file for 32-bit machines.</p>
 
-<p>To install OpenOCD, unpack the archive and copy it to  <code class="highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/openocd/${version}</code>:</p>
+<p>To install OpenOCD, unpack the archive and copy it to  <code class="language-plaintext highlighter-rouge">/${HOME}/opt/gnu-mcu-eclipse/openocd/${version}</code>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
-<span class="gp">$</span> <span class="nb">tar </span>xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian64.tgz
-<span class="gp">$</span> <span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt
+<span class="gp">$</span><span class="w"> </span><span class="nb">tar </span>xvf ~/Downloads/gnu-mcu-eclipse-openocd-0.10.0-5-20171110-1117-debian64.tgz
+<span class="gp">$</span><span class="w"> </span><span class="nb">chmod</span> <span class="nt">-R</span> <span class="nt">-w</span> gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117
 </code></pre>
 </div>
 </div>
@@ -356,7 +355,7 @@ the xPack install folder.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd <span class="nt">--version</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/bin/openocd <span class="nt">--version</span>
 <span class="go">GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.10.0+dev-00254-g2ec04e4e (2017-11-10-13:20)
 </span></code></pre>
 </div>
@@ -364,14 +363,14 @@ the xPack install folder.</p>
 
 <h4 id="udev">UDEV</h4>
 
-<p>For the JTAG probes implemented as USB devices (actually most of them), the last installation step on GNU/Linux is to configure the <strong>UDEV</strong> subsystem. OpenOCD provides an UDEV rules file defining all the supported IDs; to install it, just copy the file to <code class="highlighter-rouge">/etc/udev/rules.d</code> and eventually notify the daemon:</p>
+<p>For the JTAG probes implemented as USB devices (actually most of them), the last installation step on GNU/Linux is to configure the <strong>UDEV</strong> subsystem. OpenOCD provides an UDEV rules file defining all the supported IDs; to install it, just copy the file to <code class="language-plaintext highlighter-rouge">/etc/udev/rules.d</code> and eventually notify the daemon:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">sudo cp</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/contrib/99-openocd.rules <span class="se">\</span>
-  /etc/udev/rules.d/
-<span class="gp">$</span> <span class="nb">sudo </span>udevadm control <span class="nt">--reload-rules</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo cp</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.10.0-5-20171110-1117/contrib/99-openocd.rules <span class="se">\</span>
+<span class="go">  /etc/udev/rules.d/
+</span><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>udevadm control <span class="nt">--reload-rules</span>
 </code></pre>
 </div>
 </div>
@@ -402,7 +401,7 @@ for regular work you also need to grant your user permission to use the USB.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">sudo </span>usermod <span class="nt">-aG</span> plugdev <span class="nv">$USER</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>usermod <span class="nt">-aG</span> plugdev <span class="nv">$USER</span>
 </code></pre>
 </div>
 </div>
@@ -419,9 +418,9 @@ when you have a functional solution post it on the project forum.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.8.0-201501181257/bin/openocd <span class="se">\</span>
-  <span class="nt">-f</span> board/stm32f4discovery.cfg
-<span class="go">GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
+<code><span class="gp">$</span><span class="w"> </span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/gnu-mcu-eclipse/openocd/0.8.0-201501181257/bin/openocd <span class="se">\</span>
+<span class="go">  -f board/stm32f4discovery.cfg
+GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.8.0-00036-gb7535dd (2015-01-18-12:57)
 Licensed under GNU GPL v2
 For bug reports, read
 
@@ -598,7 +597,7 @@ Info : stm32f4x.cpu: hardware has 6 	breakpoints, 4 watchpoints
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

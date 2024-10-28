@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>FTDI JTAG drivers</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="FTDI JTAG drivers">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="FTDI JTAG drivers" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2017-07-07">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/arch/riscv/ftdi-jtag-drivers/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -155,12 +154,12 @@
 
 <p>When dealing with USB drivers, Apple is even stricter; if the USB device has any of the FTDI VID:PID pairs, macOS assumes it should be associated with a virtual UART device, and there is no simple way to reconfigure this.</p>
 
-<p>To view the attached USB devices on macOS, use <code class="highlighter-rouge">system_profiler</code>. For example, the HiFive1 board is seen as Dual RS232-HS, PID:VID 6010:0403:</p>
+<p>To view the attached USB devices on macOS, use <code class="language-plaintext highlighter-rouge">system_profiler</code>. For example, the HiFive1 board is seen as Dual RS232-HS, PID:VID 6010:0403:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> system_profiler SPUSBDataType
+<code><span class="gp">$</span><span class="w"> </span>system_profiler SPUSBDataType
 <span class="c">...
 </span><span class="go">    Dual RS232-HS:
 
@@ -179,12 +178,12 @@
 
 <p>If you already use FTDI based USB/UART adapters, remember the Product ID, since you need to manually enable it in a later step.</p>
 
-<p>By default, macOS identifies the board as a <strong>Dual RS232-HS</strong> device, and offers to configure it as a network interface. Since the HiFive1 board does not have an EEPROM to store an unique ID, the devices are named using a string containing the address in the HUB hierarchy, so the <code class="highlighter-rouge">a13</code> letters in the name are different when connecting the board to a different USB port.</p>
+<p>By default, macOS identifies the board as a <strong>Dual RS232-HS</strong> device, and offers to configure it as a network interface. Since the HiFive1 board does not have an EEPROM to store an unique ID, the devices are named using a string containing the address in the HUB hierarchy, so the <code class="language-plaintext highlighter-rouge">a13</code> letters in the name are different when connecting the board to a different USB port.</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">ls</span> <span class="nt">-l</span> /dev/tty.usbserial<span class="k">*</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">ls</span> <span class="nt">-l</span> /dev/tty.usbserial<span class="k">*</span>
 <span class="go">crw-rw-rw-  1 root  wheel   19,  28 Jul 10 12:09 /dev/tty.usbserial-fa13A
 crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 </span></code></pre>
@@ -196,7 +195,7 @@ crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> screen /dev/tty.usbserial-fa13B 115200
+<code><span class="gp">$</span><span class="w"> </span>screen /dev/tty.usbserial-fa13B 115200
 <span class="go">                SIFIVE, INC.
 
          5555555555555555555555555
@@ -227,14 +226,14 @@ crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 </div>
 </div>
 
-<p>Use <code class="highlighter-rouge">Ctrl-A Ctrl-K</code> to kill the session, or <code class="highlighter-rouge">Ctrl-A Ctrl-D</code> to detach and <code class="highlighter-rouge">screen -r</code> to reconnect.</p>
+<p>Use <code class="language-plaintext highlighter-rouge">Ctrl-A Ctrl-K</code> to kill the session, or <code class="language-plaintext highlighter-rouge">Ctrl-A Ctrl-D</code> to detach and <code class="language-plaintext highlighter-rouge">screen -r</code> to reconnect.</p>
 
 <p>Attempts to open the HiFive1 board with OpenOCD fail with:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> openocd <span class="nt">-f</span> board/sifive-freedom-e300-hifive1.cfg 
+<code><span class="gp">$</span><span class="w"> </span>openocd <span class="nt">-f</span> board/sifive-freedom-e300-hifive1.cfg 
 <span class="go">GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
 Licensed under GNU GPL v2
 For bug reports, read
@@ -252,19 +251,19 @@ Error: unable to open ftdi device with vid 0403, pid 6010, description 'Dual RS2
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">sudo </span>kextunload <span class="nt">-verbose</span> <span class="nt">-bundle-id</span> com.apple.driver.AppleUSBFTDI <span class="nt">-personalities-only</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>kextunload <span class="nt">-verbose</span> <span class="nt">-bundle-id</span> com.apple.driver.AppleUSBFTDI <span class="nt">-personalities-only</span>
 </code></pre>
 </div>
 </div>
 
-<p>This command will remove the UART associations for all FTDI based devices. All devices will be available for user space drivers, like <code class="highlighter-rouge">libusb</code>.</p>
+<p>This command will remove the UART associations for all FTDI based devices. All devices will be available for user space drivers, like <code class="language-plaintext highlighter-rouge">libusb</code>.</p>
 
 <p>In the HiFive1 case, the first interface should no longer be available as a tty device, but as JTAG, and OpenOCD should be able to connect to the JTAG interface:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> openocd <span class="nt">-f</span> board/sifive-freedom-e300-hifive1.cfg 
+<code><span class="gp">$</span><span class="w"> </span>openocd <span class="nt">-f</span> board/sifive-freedom-e300-hifive1.cfg 
 <span class="go">GNU MCU Eclipse 64-bit Open On-Chip Debugger 0.10.0+dev-00135-g80299198 (2017-06-22-18:37)
 Licensed under GNU GPL v2
 For bug reports, read
@@ -276,7 +275,7 @@ Info : clock speed 10000 kHz
 Info : JTAG tap: riscv.cpu tap/device found: 0x10e31913 (mfg: 0x489 (SiFive, Inc.), part: 0x0e31, ver: 0x1)
 Info : dtmcontrol_idle=5, dbus_busy_delay=1, interrupt_high_delay=0
 Info : dtmcontrol_idle=5, dbus_busy_delay=1, interrupt_high_delay=1
-</span><span class="gp">Info : Examined RISCV core;</span> <span class="nv">XLEN</span><span class="o">=</span>32, <span class="nv">misa</span><span class="o">=</span>0x40001105
+</span><span class="gp">Info : Examined RISCV core;</span><span class="w"> </span><span class="nv">XLEN</span><span class="o">=</span>32, <span class="nv">misa</span><span class="o">=</span>0x40001105
 <span class="go">Info : dtmcontrol_idle=5, dbus_busy_delay=1, interrupt_high_delay=2
 </span><span class="c">...
 </span><span class="go">Info : dtmcontrol_idle=5, dbus_busy_delay=2, interrupt_high_delay=36
@@ -287,28 +286,28 @@ cleared protection for sectors 64 through 255 on flash bank 0
 </div>
 </div>
 
-<p>This next command will redo the UART association only for the given personality, in this case the second interface of PID 0x6010 (<code class="highlighter-rouge">AppleUSBEFTDI-6010-1</code>).</p>
+<p>This next command will redo the UART association only for the given personality, in this case the second interface of PID 0x6010 (<code class="language-plaintext highlighter-rouge">AppleUSBEFTDI-6010-1</code>).</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">sudo </span>kextutil <span class="nt">-verbose</span> <span class="nt">-bundle-id</span> com.apple.driver.AppleUSBFTDI <span class="nt">-personality</span> AppleUSBEFTDI-6010-1
-<span class="gp">$</span> <span class="nb">ls</span> <span class="nt">-l</span> /dev/tty.usbserial<span class="k">*</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>kextutil <span class="nt">-verbose</span> <span class="nt">-bundle-id</span> com.apple.driver.AppleUSBFTDI <span class="nt">-personality</span> AppleUSBEFTDI-6010-1
+<span class="gp">$</span><span class="w"> </span><span class="nb">ls</span> <span class="nt">-l</span> /dev/tty.usbserial<span class="k">*</span>
 <span class="go">crw-rw-rw-  1 root  wheel   19,  30 Jul 10 12:09 /dev/tty.usbserial-fa13B
 </span></code></pre>
 </div>
 </div>
 
-<p>The second interface should be available again to <code class="highlighter-rouge">screen</code>, as before.</p>
+<p>The second interface should be available again to <code class="language-plaintext highlighter-rouge">screen</code>, as before.</p>
 
 <p>If you have other FTDI devices that you need to remain associated to UART, issue similar commands, for each one.</p>
 
-<p>The AppleUSBFTDI module has many <em>personalities</em>; to bring them back, start <code class="highlighter-rouge">kextutil</code> in interractive mode, or reboot:</p>
+<p>The AppleUSBFTDI module has many <em>personalities</em>; to bring them back, start <code class="language-plaintext highlighter-rouge">kextutil</code> in interractive mode, or reboot:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">sudo </span>kextutil <span class="nt">-verbose</span> <span class="nt">-bundle-id</span> com.apple.driver.AppleUSBFTDI <span class="nt">-interactive</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>kextutil <span class="nt">-verbose</span> <span class="nt">-bundle-id</span> com.apple.driver.AppleUSBFTDI <span class="nt">-interactive</span>
 <span class="go">Defaulting to kernel file '/System/Library/Kernels/kernel'
 /System/Library/Extensions/AppleUSBFTDI.kext appears to be loadable (not including linkage for on-disk libraries).
 Load /System/Library/Extensions/AppleUSBFTDI.kext and its dependencies into the kernel [Y/n]? 
@@ -345,11 +344,11 @@ Send personality AppleUSBEFTDI-6014 [Y/n/a]?
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">#</span> Disable all FTDI devices
+<code><span class="gp">#</span><span class="w"> </span>Disable all FTDI devices
 <span class="go">kextunload -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personalities-only
-</span><span class="gp">#</span> Enable the second interface on the HiFive1 board
+</span><span class="gp">#</span><span class="w"> </span>Enable the second interface on the HiFive1 board
 <span class="go">kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6010-1
-</span><span class="gp">#</span> Enable the DIGITUS USB/UART DB-9 adapters
+</span><span class="gp">#</span><span class="w"> </span>Enable the DIGITUS USB/UART DB-9 adapters
 <span class="go">kextutil -verbose -bundle-id com.apple.driver.AppleUSBFTDI -personality AppleUSBEFTDI-6001
 </span></code></pre>
 </div>
@@ -360,7 +359,7 @@ Send personality AppleUSBEFTDI-6014 [Y/n/a]?
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">sudo </span>bash <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/scripts/ftdi.sh
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>bash <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/opt/scripts/ftdi.sh
 </code></pre>
 </div>
 </div>
@@ -372,7 +371,7 @@ Send personality AppleUSBEFTDI-6014 [Y/n/a]?
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> lsusb
+<code><span class="gp">$</span><span class="w"> </span>lsusb
 <span class="c">...
 </span><span class="go">Bus XXX Device XXX: ID 0403:6010 Future Technology Devices
 International, Ltd FT2232C Dual USB-UART/FIFO IC
@@ -509,7 +508,7 @@ International, Ltd FT2232C Dual USB-UART/FIFO IC
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

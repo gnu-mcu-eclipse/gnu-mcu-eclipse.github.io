@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>The OpenOCD debugging Eclipse plug-in</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="The OpenOCD debugging Eclipse plug-in">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="The OpenOCD debugging Eclipse plug-in" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -23,12 +22,12 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
   <meta http-equiv="refresh" content="1; url=https://eclipse-embed-cdt.github.io/debug/openocd/">
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -36,7 +35,7 @@
   <link rel="canonical" href="/debug/openocd/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -227,11 +226,11 @@
   <li>click the <strong>Restore Defaults</strong> button</li>
   <li>the plug-in will suggest the default values computed when Eclipse started; if a new version of OpenOCD was installed while Eclipse was active, restart Eclipse and click again the Restore Defaults button</li>
   <li>check the <strong>Executable</strong> field; it must define the name of the command line OpenOCD executable; in most cases it should be set correctly; if not, edit it to match the correct name;</li>
-  <li>check the <strong>Folder</strong> field; it must point to the actual folder where the OpenOCD tools were installed on your platform, for example <code class="highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks\OpenOCD\&lt;version&gt;\bin</code> on Windows, <code class="highlighter-rouge">/Users/ilg/opt/xPacks/openocd/&lt;version&gt;/bin</code> on macOS and GNU/Linux</li>
+  <li>check the <strong>Folder</strong> field; it must point to the actual folder where the OpenOCD tools were installed on your platform, for example <code class="language-plaintext highlighter-rouge">C:\Users\ilg\AppData\Roaming\xPacks\OpenOCD\&lt;version&gt;\bin</code> on Windows, <code class="language-plaintext highlighter-rouge">/Users/ilg/opt/xPacks/openocd/&lt;version&gt;/bin</code> on macOS and GNU/Linux</li>
   <li>click the <strong>OK</strong> button</li>
 </ul>
 
-<p>By default, the GDB server is defined as <code class="highlighter-rouge">${openocd_path}/${openocd_executable}</code>; these two macros are automatically set by the above preference page; for portability reasons, it is recommended to define the path to the OpenOCD relative to this variable in all your debug configurations, to have a single place to update the path when you want to use another version of the OpenOCD tools installed in a different location.</p>
+<p>By default, the GDB server is defined as <code class="language-plaintext highlighter-rouge">${openocd_path}/${openocd_executable}</code>; these two macros are automatically set by the above preference page; for portability reasons, it is recommended to define the path to the OpenOCD relative to this variable in all your debug configurations, to have a single place to update the path when you want to use another version of the OpenOCD tools installed in a different location.</p>
 
 <h3 id="create-the-debugger-configuration">Create the debugger configuration</h3>
 
@@ -249,7 +248,7 @@
   </li>
   <li>a multi-tab page will be displayed</li>
   <li>
-    <p>if you started this procedure with the executable file selected, the first tab, named <strong>Main</strong>, should be already filled in with the project name (for example blink1) and the application file name and location (for example <code class="highlighter-rouge">Debug/blink1.elf</code>).</p>
+    <p>if you started this procedure with the executable file selected, the first tab, named <strong>Main</strong>, should be already filled in with the project name (for example blink1) and the application file name and location (for example <code class="language-plaintext highlighter-rouge">Debug/blink1.elf</code>).</p>
 
     <p><img src="/assets/images/2013/12/OpenOCDMainTab.png" alt="The OpenOCD Main tab"></p>
   </li>
@@ -258,7 +257,7 @@
 
     <p><img src="/assets/images/2018/openocd-debugger-tab.png" alt="OpenOCD Debugger tab"></p>
   </li>
-  <li>the only field that usually requires attention is the OpenOCD Setup <strong>Other options:</strong>, where you should add one or more configuration scripts; for example, for the STM32F4DISCOVERY board, the field should read <code class="highlighter-rouge">-f board/stm32f4discovery.cfg</code>
+  <li>the only field that usually requires attention is the OpenOCD Setup <strong>Other options:</strong>, where you should add one or more configuration scripts; for example, for the STM32F4DISCOVERY board, the field should read <code class="language-plaintext highlighter-rouge">-f board/stm32f4discovery.cfg</code>
 </li>
 </ul>
 
@@ -277,7 +276,7 @@
   <li>
     <p>the order of sections/fields reflect the order commands are sent to GDB; for example the above generates:</p>
 
-    <div class="highlighter-rouge">
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code>monitor reset init
 monitor halt
 ...
@@ -343,11 +342,11 @@ continue
 <img src="/assets/images/2013/12/OpenOCDConsoles.png" alt="The new debug session, with two consoles">
 </p>
 
-<p>Since the first breakpoint was set in the <strong>Debugger</strong> tab to <strong>main</strong>, the execution stopped right at the beginning of the <code class="highlighter-rouge">main()</code> function, which in this case is a tracing <code class="highlighter-rouge">printf()</code>.</p>
+<p>Since the first breakpoint was set in the <strong>Debugger</strong> tab to <strong>main</strong>, the execution stopped right at the beginning of the <code class="language-plaintext highlighter-rouge">main()</code> function, which in this case is a tracing <code class="language-plaintext highlighter-rouge">printf()</code>.</p>
 
 <h2 id="debug-operations">Debug operations</h2>
 
-<p>Once the debug session started and execution stopped in the first breakpoint (by default set at the beginning of the <code class="highlighter-rouge">main()</code> function), you can perform any debug operation you need.</p>
+<p>Once the debug session started and execution stopped in the first breakpoint (by default set at the beginning of the <code class="language-plaintext highlighter-rouge">main()</code> function), you can perform any debug operation you need.</p>
 
 <p>The most common operations are:</p>
 
@@ -430,11 +429,11 @@ continue
 
 <p>If you still fail to configure the plug-in to start OpenOCD automatically, proceed as when using a remote GDB server, i.e. go to the Debugger tab and disable the <strong>Start OpenOCD locally</strong>, then start it manually in a separate terminal. Tweak the command line options until you get the right behaviour, and then retry the same options with the plug-in.</p>
 
-<h3 id="quote-the-entire-echo-command">Quote the entire <code class="highlighter-rouge">echo</code> command</h3>
+<h3 id="quote-the-entire-echo-command">Quote the entire <code class="language-plaintext highlighter-rouge">echo</code> command</h3>
 
-<p>The syntax required by the OpenOCD <code class="highlighter-rouge">echo</code> command is a single string, in other words both echo and the message must be in the same string. To achieve this in a shell, the string must be quoted:</p>
+<p>The syntax required by the OpenOCD <code class="language-plaintext highlighter-rouge">echo</code> command is a single string, in other words both echo and the message must be in the same string. To achieve this in a shell, the string must be quoted:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>-c 'echo "Started by GNU MCU Eclipse"'
@@ -458,15 +457,15 @@ continue
 
 <h2 id="no-gdb-initialisation-files-loaded">No GDB initialisation files loaded</h2>
 
-<p>For having a total control of the debugging session, the debugging plug-ins start the GDB client process with the <code class="highlighter-rouge">--nx</code> option, which prevents the execution of the commands found in any initialization file; none of the standard files (<code class="highlighter-rouge">system.gdbinit</code>, <code class="highlighter-rouge">~/.gdbinit</code>, <code class="highlighter-rouge">./.gdbinit</code>) are loaded.</p>
+<p>For having a total control of the debugging session, the debugging plug-ins start the GDB client process with the <code class="language-plaintext highlighter-rouge">--nx</code> option, which prevents the execution of the commands found in any initialization file; none of the standard files (<code class="language-plaintext highlighter-rouge">system.gdbinit</code>, <code class="language-plaintext highlighter-rouge">~/.gdbinit</code>, <code class="language-plaintext highlighter-rouge">./.gdbinit</code>) are loaded.</p>
 
 <p>To add more commands to the GDB initialisation sequence, use the <em>Commands:</em> field in the <em>GDB Client Setup</em> section.</p>
 
-<p>All commands listed here are passed to the GDB client. By convention, commands prefixed with <code class="highlighter-rouge">mon</code> will be further passed from the GDB client to the GDB server, in this case the OpenOCD server.</p>
+<p>All commands listed here are passed to the GDB client. By convention, commands prefixed with <code class="language-plaintext highlighter-rouge">mon</code> will be further passed from the GDB client to the GDB server, in this case the OpenOCD server.</p>
 
 <h2 id="semihosting-writes-are-very-slow">Semihosting writes are very slow</h2>
 
-<p>Yes, unfortunately this is an OpenOCD limitation. Avoid writing to <code class="highlighter-rouge">stderr</code>, which is excruciatingly slow.</p>
+<p>Yes, unfortunately this is an OpenOCD limitation. Avoid writing to <code class="language-plaintext highlighter-rouge">stderr</code>, which is excruciatingly slow.</p>
 
 <h2 id="more-details">More details</h2>
 
@@ -598,7 +597,7 @@ continue
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
-  <title>DEPRECATED &gt; The QEMU Change Log</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <title>DEPRECATED > The QEMU Change Log</title>
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="DEPRECATED &gt; The QEMU Change Log">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="DEPRECATED > The QEMU Change Log" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-04">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/qemu/change-log/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -438,7 +437,7 @@ project to the xPack project. The new home page is:</p>
   <li><a href="https://xpack.github.io/qemu-arm/">https://xpack.github.io/qemu-arm/</a></li>
 </ul>
 
-<p>All previous releases are still available in the <code class="highlighter-rouge">@gnu-mcu-eclipse</code> scope,
+<p>All previous releases are still available in the <code class="language-plaintext highlighter-rouge">@gnu-mcu-eclipse</code> scope,
 but were deprecated and are not recommended for new projects.
 ___</p>
 
@@ -521,10 +520,10 @@ ___</p>
 <h3 id="2016-12-18">2016-12-18</h3>
 
 <ul>
-  <li>stm32: rearrange the <code class="highlighter-rouge">realize()</code> logic</li>
-  <li>add <code class="highlighter-rouge">peripheral_create_memory_region()</code>
+  <li>stm32: rearrange the <code class="language-plaintext highlighter-rouge">realize()</code> logic</li>
+  <li>add <code class="language-plaintext highlighter-rouge">peripheral_create_memory_region()</code>
 </li>
-  <li>add <code class="highlighter-rouge">peripheral_prepare_registers()</code>
+  <li>add <code class="language-plaintext highlighter-rouge">peripheral_prepare_registers()</code>
 </li>
 </ul>
 
@@ -560,7 +559,7 @@ ___</p>
 <h3 id="2016-12-10">2016-12-10</h3>
 
 <ul>
-  <li>parent <code class="highlighter-rouge">realize()</code> on all objects</li>
+  <li>parent <code class="language-plaintext highlighter-rouge">realize()</code> on all objects</li>
   <li>add SVD support for F40x</li>
   <li>F051R8 redefined using SVD</li>
   <li>F103RB redefined with SVD</li>
@@ -583,21 +582,21 @@ ___</p>
 
 <ul>
   <li>exti: acknowledge interrupts</li>
-  <li>remove <code class="highlighter-rouge">armv7m_nvic.o</code> from the build</li>
-  <li>refer to <code class="highlighter-rouge">cortexm_nvic_*</code> in <code class="highlighter-rouge">helper.c</code>
+  <li>remove <code class="language-plaintext highlighter-rouge">armv7m_nvic.o</code> from the build</li>
+  <li>refer to <code class="language-plaintext highlighter-rouge">cortexm_nvic_*</code> in <code class="language-plaintext highlighter-rouge">helper.c</code>
 </li>
 </ul>
 
 <h3 id="2016-11-26">2016-11-26</h3>
 
 <ul>
-  <li>rename <code class="highlighter-rouge">LOG_FUNC</code>, <code class="highlighter-rouge">LOG_MR</code>
+  <li>rename <code class="language-plaintext highlighter-rouge">LOG_FUNC</code>, <code class="language-plaintext highlighter-rouge">LOG_MR</code>
 </li>
   <li>gnuarmeclipse/docs: explain irq usage</li>
-  <li>rename peripheral <code class="highlighter-rouge">_add_properties_and_children</code>
+  <li>rename peripheral <code class="language-plaintext highlighter-rouge">_add_properties_and_children</code>
 </li>
   <li>change doxygen comments to normal C comments</li>
-  <li>peripheral: add <code class="highlighter-rouge">default_access_flags</code>
+  <li>peripheral: add <code class="language-plaintext highlighter-rouge">default_access_flags</code>
 </li>
   <li>use it in all peripherals</li>
   <li>graphic: move int i to begin</li>
@@ -612,7 +611,7 @@ ___</p>
   <li>peripheral-register: add pre-write</li>
   <li>peripheral: add alias property ‘name’</li>
   <li>stm32/capabilities: add IRQn defs</li>
-  <li>add <code class="highlighter-rouge">DEVICE_PATH_xxx</code>
+  <li>add <code class="language-plaintext highlighter-rouge">DEVICE_PATH_xxx</code>
 </li>
 </ul>
 
@@ -629,9 +628,9 @@ ___</p>
 
 <ul>
   <li>button-reset: actions functional</li>
-  <li>vl.c add <code class="highlighter-rouge">qemu_reset_halt_request()</code>
+  <li>vl.c add <code class="language-plaintext highlighter-rouge">qemu_reset_halt_request()</code>
 </li>
-  <li>vl.c add <code class="highlighter-rouge">qemu_resume_request()</code>
+  <li>vl.c add <code class="language-plaintext highlighter-rouge">qemu_resume_request()</code>
 </li>
   <li>cortexm: more detailed tracing in peripheral &amp; reg</li>
   <li>cortexm/graphic.c: more detailed tracing</li>
@@ -642,7 +641,7 @@ ___</p>
 <ul>
   <li>cortexm/helper: add int properties</li>
   <li>cortexm: add graphic buttons, reset &amp; user; not linked to actions (yet)</li>
-  <li>rename <code class="highlighter-rouge">cortexm_graphic_enqueue_event()</code>
+  <li>rename <code class="language-plaintext highlighter-rouge">cortexm_graphic_enqueue_event()</code>
 </li>
 </ul>
 
@@ -651,11 +650,11 @@ ___</p>
 <ul>
   <li>graphic: move start at initial place; use poll even on posix</li>
   <li>arm-semi.c: conditional pragma clang</li>
-  <li>cortexm/headers: remove redundant <code class="highlighter-rouge">cortexm-</code> prefix</li>
-  <li>cortexm: rename <code class="highlighter-rouge">.c</code> without the <code class="highlighter-rouge">cortexm-</code> prefix</li>
+  <li>cortexm/headers: remove redundant <code class="language-plaintext highlighter-rouge">cortexm-</code> prefix</li>
+  <li>cortexm: rename <code class="language-plaintext highlighter-rouge">.c</code> without the <code class="language-plaintext highlighter-rouge">cortexm-</code> prefix</li>
   <li>move gpio-led.h to cortexm</li>
   <li>gpio-led.c: move to cortexm folder</li>
-  <li>cortexm headers: use <code class="highlighter-rouge">&lt;...&gt;</code> instead <code class="highlighter-rouge">"..."</code>
+  <li>cortexm headers: use <code class="language-plaintext highlighter-rouge">&lt;...&gt;</code> instead <code class="language-plaintext highlighter-rouge">"..."</code>
 </li>
 </ul>
 
@@ -663,11 +662,11 @@ ___</p>
 
 <ul>
   <li>graphic: thread safe event loop</li>
-  <li>cortexm: remove <code class="highlighter-rouge">cm_object_get_machine()</code>,  replace with <code class="highlighter-rouge">cortexm_board_get()</code>
+  <li>cortexm: remove <code class="language-plaintext highlighter-rouge">cm_object_get_machine()</code>,  replace with <code class="language-plaintext highlighter-rouge">cortexm_board_get()</code>
 </li>
-  <li>qemu-thread-posix: <code class="highlighter-rouge">PTHREAD_MUTEX_ERRORCHECK</code>
+  <li>qemu-thread-posix: <code class="language-plaintext highlighter-rouge">PTHREAD_MUTEX_ERRORCHECK</code>
 </li>
-  <li>monitor.c: remove extra NL in <code class="highlighter-rouge">"Execute 'mon %s'.\n"</code> message</li>
+  <li>monitor.c: remove extra NL in <code class="language-plaintext highlighter-rouge">"Execute 'mon %s'.\n"</code> message</li>
 </ul>
 
 <h3 id="2016-11-02">2016-11-02</h3>
@@ -685,8 +684,8 @@ ___</p>
 <h3 id="2016-10-26">2016-10-26</h3>
 
 <ul>
-  <li>avoid <code class="highlighter-rouge">clock_gettime()</code> on Apple</li>
-  <li>fix <code class="highlighter-rouge">fix cm_cpu_generic_create()</code> bug</li>
+  <li>avoid <code class="language-plaintext highlighter-rouge">clock_gettime()</code> on Apple</li>
+  <li>fix <code class="language-plaintext highlighter-rouge">fix cm_cpu_generic_create()</code> bug</li>
 </ul>
 
 <h3 id="2016-10-24">2016-10-24</h3>
@@ -706,7 +705,7 @@ ___</p>
 
 <ul>
   <li>version 2.6.0-20160728 released on GitHub</li>
-  <li>fix half word writes (<code class="highlighter-rouge">register_post_write_callback_t</code>)</li>
+  <li>fix half word writes (<code class="language-plaintext highlighter-rouge">register_post_write_callback_t</code>)</li>
   <li>implement (minimally) the DHCSR register, for C_DEBUGEN</li>
   <li>make BKPT interrupt the CPU while in DEBUG</li>
   <li>consider BASEPRI for disabling interrupts</li>
@@ -1488,7 +1487,7 @@ ___</p>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

@@ -2,37 +2,36 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.1 20190102 released</title>
   <meta name="description" content="Version v8.2.1-1.1 20190102 is a new release of GNU MCU Eclipse ARM Embedded GCC.">
 
-  <meta property="og:title" content="GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.1 20190102 released">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="GNU MCU Eclipse ARM Embedded GCC v8.2.1-1.1 20190102 released" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2019-01-03">
 
 
-  <meta property="article:section" content="releases">
-  <meta property="article:section" content="arm">
-  <meta property="article:section" content="arm-none-eabi-gcc">
-  <meta property="article:section" content="gcc">
-  <meta property="article:section" content="binaries">
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="arm" />
+  <meta property="article:section" content="arm-none-eabi-gcc" />
+  <meta property="article:section" content="gcc" />
+  <meta property="article:section" content="binaries" />
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -40,7 +39,7 @@
   <link rel="canonical" href="/blog/2019/01/03/arm-none-eabi-gcc-v8-2-1-1-1-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -159,7 +158,7 @@ Posted on January 3, 2019 by Liviu Ionescu.
 <p>This release follows the official 
 <a href="https://developer.arm.com/open-source/gnu-toolchain/gnu-rm">GNU Arm Embedded Toolchain</a> 
 <strong>8-2018-q4-major</strong> release from December 20, 2018 and it is based on the 
-<code class="highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2</code> source invariant.</p>
+<code class="language-plaintext highlighter-rouge">gcc-arm-none-eabi-8-2018-q4-major-src.tar.bz2</code> source invariant.</p>
 
 <h2 id="binaries">Binaries</h2>
 
@@ -181,12 +180,12 @@ page.</p>
 <p>The toolchain is also available as an 
 <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/arm-none-eabi-gcc">xPack</a> 
 and can be conveniently installed with 
-<a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+<a href="https://www.npmjs.com/package/xpm"><code class="language-plaintext highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
+<code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/arm-none-eabi-gcc
 </code></pre>
 </div>
 </div>
@@ -200,10 +199,10 @@ project.</p>
 
 <h2 id="known-problems">Known problems</h2>
 
-<p>The latest Binutils, also used in Arm Embedded GCC, have a problem when running on 32-bit machines, and <code class="highlighter-rouge">objdump</code> fails to generate .hex files. The bug affects both Windows and GNU/Linux machines. 64-bit builds are not affected. The bug is documented as <a href="https://bugs.launchpad.net/gcc-arm-embedded/+bug/1810274">1810274</a>.</p>
+<p>The latest Binutils, also used in Arm Embedded GCC, have a problem when running on 32-bit machines, and <code class="language-plaintext highlighter-rouge">objdump</code> fails to generate .hex files. The bug affects both Windows and GNU/Linux machines. 64-bit builds are not affected. The bug is documented as <a href="https://bugs.launchpad.net/gcc-arm-embedded/+bug/1810274">1810274</a>.</p>
 
 <p>The current solution is to upgrade to 8.2.1-1.2; the workaround is to 
-override <code class="highlighter-rouge">arm-none-eabi-objdump</code> with an older binary.</p>
+override <code class="language-plaintext highlighter-rouge">arm-none-eabi-objdump</code> with an older binary.</p>
 
 <h2 id="checksums">Checksums</h2>
 
@@ -363,7 +362,7 @@ Last modified on Mon May 13 06:17:51 2019 UTC.
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

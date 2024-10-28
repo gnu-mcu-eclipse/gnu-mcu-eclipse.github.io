@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>ilg.gnuarmeclipse.debug.gdbjtag.openocd - persistent values</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="ilg.gnuarmeclipse.debug.gdbjtag.openocd - persistent values">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="ilg.gnuarmeclipse.debug.gdbjtag.openocd - persistent values" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-10">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/developer/preferences/ilg.gnuarmeclipse.debug.gdbjtag.openocd/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -134,7 +133,7 @@
 
 <p>The OpenOCD settings are persistent for each workspace and the storage is located at:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>.../workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/ilg.gnuarmeclipse.debug.gdbjtag.openocd.prefs
@@ -146,7 +145,7 @@
 
 <p>The persistent properties are:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>gdb.client.commands=set mem inaccessible-by-default off
@@ -170,7 +169,7 @@ gdb.server.other=-f board/stm32f4discovery.cfg
 
 <p>The following defaults are available to configure the OpenOCD debug launcher:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>ilg.gnuarmeclipse.debug.gdbjtag.openocd/gdb.server.executable=${openocd_path}/${openocd_executable}
@@ -183,7 +182,7 @@ ilg.gnuarmeclipse.debug.gdbjtag.openocd/gdb.server.other=-f board/stm32f4discove
 
 <p>Defining these properties will provide the desired default values to the <strong>Debugging</strong> or <strong>Startup</strong> tabs.</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>ilg.gnuarmeclipse.debug.gdbjtag.openocd/tab.main.checkProgram=false
@@ -201,7 +200,7 @@ ilg.gnuarmeclipse.debug.gdbjtag.openocd/gdb.server.other=-f board/stm32f4discove
 
 <p>The plug-in will use this definition as default for <strong>${openocd_executable}</strong>.</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>ilg.gnuarmeclipse.debug.gdbjtag.openocd/executable.name=openocd
@@ -213,7 +212,7 @@ ilg.gnuarmeclipse.debug.gdbjtag.openocd/gdb.server.other=-f board/stm32f4discove
 
 <p>The plug-in will take a best effort approach to find a location to be used as default for <strong>${openocd_path}</strong>.</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>ilg.gnuarmeclipse.debug.gdbjtag.openocd/install.folder=/Applications/GNU MCU Eclipse/OpenOCD/bin
@@ -227,7 +226,7 @@ ilg.gnuarmeclipse.debug.gdbjtag.openocd/gdb.server.other=-f board/stm32f4discove
 
 <p>Otherwise the plug-in will try a folder search.</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>search.path=\
@@ -373,7 +372,7 @@ ${user.home}/local/gnuarmeclipse/OpenOCD:\
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

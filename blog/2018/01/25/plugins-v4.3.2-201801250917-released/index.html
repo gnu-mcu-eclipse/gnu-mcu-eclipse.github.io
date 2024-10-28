@@ -2,39 +2,38 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>GNU MCU Eclipse plug-ins v4.3.2-201801250917 released</title>
   <meta name="description" content="Version 4.3.2-201801250917 is a maintenance release; the main addition is support for semihosting in the SiFive RISC-V project template.">
 
-  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.3.2-201801250917 released">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="GNU MCU Eclipse plug-ins v4.3.2-201801250917 released" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2018-01-25">
 
 
-  <meta property="article:section" content="releases">
-  <meta property="article:section" content="plugins">
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="plugins" />
 
-  <meta property="article:tag" content="gnu">
-  <meta property="article:tag" content="arm">
-  <meta property="article:tag" content="risc-v">
-  <meta property="article:tag" content="mcu">
-  <meta property="article:tag" content="eclipse">
-
-
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta property="article:tag" content="gnu" />
+  <meta property="article:tag" content="arm" />
+  <meta property="article:tag" content="risc-v" />
+  <meta property="article:tag" content="mcu" />
+  <meta property="article:tag" content="eclipse" />
 
 
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -42,7 +41,7 @@
   <link rel="canonical" href="/blog/2018/01/25/plugins-v4.3.2-201801250917-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -160,7 +159,7 @@ Posted on January 25, 2018 by Liviu Ionescu.
 <p>The SiFive RISC-V project template was extended to support semihositing for two purposes:</p>
 
 <ul>
-  <li>as a destination for the <code class="highlighter-rouge">trace::printf()</code> infrastructure</li>
+  <li>as a destination for the <code class="language-plaintext highlighter-rouge">trace::printf()</code> infrastructure</li>
   <li>for fully semihosted projects, intended for running unit tests on RISC-V hardware.</li>
 </ul>
 
@@ -168,7 +167,7 @@ Posted on January 25, 2018 by Liviu Ionescu.
 
 <p>To activate semihosting in OpenOCD, use:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>arm semihosting enable
@@ -180,7 +179,7 @@ Posted on January 25, 2018 by Liviu Ionescu.
 
 <p>To pass command line options to the target application:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>arm semihosting_cmdline argv0 argv1 argv2 argv3 ...
@@ -188,7 +187,7 @@ Posted on January 25, 2018 by Liviu Ionescu.
 </div>
 </div>
 
-<p>In the Eclipse OpenOCD debug plug-in, add the command prefixed with <code class="highlighter-rouge">monitor</code>:</p>
+<p>In the Eclipse OpenOCD debug plug-in, add the command prefixed with <code class="language-plaintext highlighter-rouge">monitor</code>:</p>
 
 <p>
 <img src="/assets/images/2018/openocd-riscv-semihosting.png" alt="Semihosting">
@@ -209,9 +208,9 @@ Posted on January 25, 2018 by Liviu Ionescu.
 <h2 id="template-changes">Template changes</h2>
 
 <ul>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/269">#269</a>] The STM32F7 template did not generate code to set the <code class="highlighter-rouge">PLLR</code> register for larger devices, which resulted in an assertion error during runtime; code to initialise <code class="highlighter-rouge">PLLR</code> was conditionally added to the initialisation routine.</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/269">#269</a>] The STM32F7 template did not generate code to set the <code class="language-plaintext highlighter-rouge">PLLR</code> register for larger devices, which resulted in an assertion error during runtime; code to initialise <code class="language-plaintext highlighter-rouge">PLLR</code> was conditionally added to the initialisation routine.</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/268">#268</a>] Support for semihosting trace was added to the SiFive template</li>
-  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/272">#272</a>] For SiFive projects that use semihosing, the <code class="highlighter-rouge">arm semihosting</code> option is automatically enabled in the OpenOCD launcher</li>
+  <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/272">#272</a>] For SiFive projects that use semihosing, the <code class="language-plaintext highlighter-rouge">arm semihosting</code> option is automatically enabled in the OpenOCD launcher</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/273">#273</a>] Support for full semihosting was added to the SiFive template</li>
   <li>[Issue:<a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues/274">#274</a>] To slightly optimise the build time, unused device files in the SiFive template are excluded from build</li>
   <li>a J-Link launcher was added to the SiFive template for the projects running on the Arty board; at the time of this release, support for E31ARTY is already available from SEGGER, with support for E51ARTY planned</li>
@@ -363,7 +362,7 @@ Last modified on Tue Jan 30 15:23:56 2018 UTC.
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

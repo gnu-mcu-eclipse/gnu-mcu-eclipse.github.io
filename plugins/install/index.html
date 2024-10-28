@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>How to install the Eclipse Embedded CDT plug-ins</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="How to install the Eclipse Embedded CDT plug-ins">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="How to install the Eclipse Embedded CDT plug-ins" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -23,12 +22,12 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
   <meta http-equiv="refresh" content="1; url=https://eclipse-embed-cdt.github.io/plugins/install/">
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -36,7 +35,7 @@
   <link rel="canonical" href="/plugins/install/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -217,12 +216,12 @@ you only need the update site details:</p>
 <ul>
   <li>name: <strong>Eclipse Embedded CDT Plug-ins</strong>
 </li>
-  <li>URL: <code class="highlighter-rouge">https://download.eclipse.org/embed-cdt/updates/neon/</code>
+  <li>URL: <code class="language-plaintext highlighter-rouge">https://download.eclipse.org/embed-cdt/updates/neon/</code>
 </li>
 </ul>
 
 <p>Note: as the name implies, this URL is only valid for Eclipse <strong>Neon</strong> or
-later; the old URL <code class="highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates/</code> is now
+later; the old URL <code class="language-plaintext highlighter-rouge">http://gnuarmeclipse.sourceforge.net/updates/</code> is now
 deprecated, and its content will point to v3.x, that can be used to install
 the older versions of the plug-ins on older Eclipses.</p>
 
@@ -285,7 +284,7 @@ latest JDK. On macOS the last Apple Java implementation is 1.6, so it is require
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> java <span class="nt">-version</span>
+<code><span class="gp">$</span><span class="w"> </span>java <span class="nt">-version</span>
 <span class="go">openjdk version "11.0.7" 2020-04-14
 OpenJDK Runtime Environment (build 11.0.7+10-post-Ubuntu-2ubuntu218.04)
 OpenJDK 64-Bit Server VM (build 11.0.7+10-post-Ubuntu-2ubuntu218.04, mixed mode, sharing)
@@ -298,8 +297,8 @@ OpenJDK 64-Bit Server VM (build 11.0.7+10-post-Ubuntu-2ubuntu218.04, mixed mode,
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>openjdk-11-jdk
-<span class="gp">$</span> java <span class="nt">-version</span>
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get <span class="nt">-y</span> <span class="nb">install </span>openjdk-11-jdk
+<span class="gp">$</span><span class="w"> </span>java <span class="nt">-version</span>
 <span class="go">openjdk version "11.0.7" 2020-04-14
 OpenJDK Runtime Environment (build 11.0.7+10-post-Ubuntu-2ubuntu218.04)
 OpenJDK 64-Bit Server VM (build 11.0.7+10-post-Ubuntu-2ubuntu218.04, mixed mode, sharing)
@@ -332,15 +331,15 @@ without any message or warning.</p>
 </p>
 
 <blockquote>
-  <p>Important note: there are different binaries for 32-bit (<code class="highlighter-rouge">_x86</code>) and 64-bit (<code class="highlighter-rouge">x86-64</code>). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure <code class="highlighter-rouge">Java was started but returned exit code=13</code> message is issued.</p>
+  <p>Important note: there are different binaries for 32-bit (<code class="language-plaintext highlighter-rouge">_x86</code>) and 64-bit (<code class="language-plaintext highlighter-rouge">x86-64</code>). Be sure the Eclipse binary word size matches the Java word size, otherwise the obscure <code class="language-plaintext highlighter-rouge">Java was started but returned exit code=13</code> message is issued.</p>
 </blockquote>
 
-<p>On macOS, after un-archiving, remove the <code class="highlighter-rouge">com.apple.quarantine</code> extended attribute, otherwise the application will fail to start.</p>
+<p>On macOS, after un-archiving, remove the <code class="language-plaintext highlighter-rouge">com.apple.quarantine</code> extended attribute, otherwise the application will fail to start.</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xattr <span class="nt">-dr</span> com.apple.quarantine Eclipse.app
+<code><span class="gp">$</span><span class="w"> </span>xattr <span class="nt">-dr</span> com.apple.quarantine Eclipse.app
 </code></pre>
 </div>
 </div>
@@ -486,7 +485,7 @@ assets
 <img src="/assets/images/2013/10/GDB_Hardware_Install.png" alt="Install the GDB Hardware">
 </p>
 
-<p>Note: Attempts to install the Eclipse Embedded CDT plug-ins off-line without having the <strong>C/C++ GDB Hardware Debugging</strong> installed fails with an error related to installing the <code class="highlighter-rouge">ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.group</code> and other debugging features.</p>
+<p>Note: Attempts to install the Eclipse Embedded CDT plug-ins off-line without having the <strong>C/C++ GDB Hardware Debugging</strong> installed fails with an error related to installing the <code class="language-plaintext highlighter-rouge">ilg.gnumcueclipse.debug.gdbjtag.jlink.feature.group</code> and other debugging features.</p>
 
 <p>On-line install do not have this problem since the Eclipse automatically downloads the C/C++ GDB Hardware Debugging plug-in from the CDT update site.</p>
 
@@ -502,7 +501,7 @@ assets
 
 <p>If needed, you can define different paths per workspace (<strong>Workspace Tools Paths</strong>) or even per project (<strong>Tools Paths</strong> in the project properties).</p>
 
-<p>To check if the paths definitions are effective, go to the project properties page and identify the <code class="highlighter-rouge">PATH</code> variable. Be sure the <strong>Origin</strong> column reads <code class="highlighter-rouge">BUILD SYSTEM</code>; if you manually edit it, the Origin will change and will read <code class="highlighter-rouge">USER</code>, but this is totally not recommended, since manually editing the path disables further automated updates of the path.</p>
+<p>To check if the paths definitions are effective, go to the project properties page and identify the <code class="language-plaintext highlighter-rouge">PATH</code> variable. Be sure the <strong>Origin</strong> column reads <code class="language-plaintext highlighter-rouge">BUILD SYSTEM</code>; if you manually edit it, the Origin will change and will read <code class="language-plaintext highlighter-rouge">USER</code>, but this is totally not recommended, since manually editing the path disables further automated updates of the path.</p>
 
 <p>
 <img src="/assets/images/2015/win-properties-c-environment.png" alt="Environment PATH">
@@ -570,14 +569,14 @@ assets
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">export </span><span class="nv">SWT_GTK3</span><span class="o">=</span>0
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">export </span><span class="nv">SWT_GTK3</span><span class="o">=</span>0
 </code></pre>
 </div>
 </div>
 
-<p>If, for any reason, a global setting is not possible, the GTK version can be set in <code class="highlighter-rouge">eclipse.ini</code>:</p>
+<p>If, for any reason, a global setting is not possible, the GTK version can be set in <code class="language-plaintext highlighter-rouge">eclipse.ini</code>:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>--launcher.GTK_version
@@ -588,7 +587,7 @@ assets
 
 <p>You might need to place this definition before:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>--launcher.appendVmargs
@@ -601,14 +600,14 @@ documentation does not mention it.</p>
 
 <h3 id="macos-comapplequarantine">macOS com.apple.quarantine</h3>
 
-<p>On macOS Sierra and later, unsigned applications are marked as <em>quarantined</em> and subject to a path randomization, which prevents Eclipse to maintain persistent preferences (for more details see <a href="https://ilgthegeek.wordpress.com/2017/07/13/macos-com-apple-quarantine/">blog post</a>). To disable this, remove the <code class="highlighter-rouge">com.apple.quarantine</code> extended attribute from <code class="highlighter-rouge">Eclipse.app</code>:</p>
+<p>On macOS Sierra and later, unsigned applications are marked as <em>quarantined</em> and subject to a path randomization, which prevents Eclipse to maintain persistent preferences (for more details see <a href="https://ilgthegeek.wordpress.com/2017/07/13/macos-com-apple-quarantine/">blog post</a>). To disable this, remove the <code class="language-plaintext highlighter-rouge">com.apple.quarantine</code> extended attribute from <code class="language-plaintext highlighter-rouge">Eclipse.app</code>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xattr Eclipse.app
+<code><span class="gp">$</span><span class="w"> </span>xattr Eclipse.app
 <span class="go">com.apple.quarantine
-</span><span class="gp">$</span> xattr <span class="nt">-d</span> com.apple.quarantine Eclipse.app
+</span><span class="gp">$</span><span class="w"> </span>xattr <span class="nt">-d</span> com.apple.quarantine Eclipse.app
 </code></pre>
 </div>
 </div>
@@ -617,7 +616,7 @@ documentation does not mention it.</p>
 
 <p>One of the confusing details of the Eclipse Embedded CDT plug-ins versioning system is matching the version from the release announcement (for example <strong>Version 2.6.1-201502281154 released</strong>) with existing plug-ins/features.</p>
 
-<p>The short answer is that the announced version refers to the update site, also packed as an archive, and available from SourceForge. The same version is also used for the <code class="highlighter-rouge">ilg.gnuarmeclipse.core</code> plug-in:</p>
+<p>The short answer is that the announced version refers to the update site, also packed as an archive, and available from SourceForge. The same version is also used for the <code class="language-plaintext highlighter-rouge">ilg.gnuarmeclipse.core</code> plug-in:</p>
 
 <p>
 <img src="/assets/images/2017/plugins-versions.png" alt="Installed plug-ins">
@@ -791,7 +790,7 @@ documentation does not mention it.</p>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

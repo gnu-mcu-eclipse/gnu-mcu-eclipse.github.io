@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>How to publish the plug-ins?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="How to publish the plug-ins?">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="How to publish the plug-ins?" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-10">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/developer/publish-procedure/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -199,7 +198,7 @@
 <h2 id="fix-issues">Fix issues</h2>
 
 <ul>
-  <li>scan the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues">plug-ins issues</a> list, and fix them. The commit message should be prefixed with the issue number, like <code class="highlighter-rouge">[#122]</code>;</li>
+  <li>scan the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/issues">plug-ins issues</a> list, and fix them. The commit message should be prefixed with the issue number, like <code class="language-plaintext highlighter-rouge">[#122]</code>;</li>
   <li>mark all fixed issues as part of the new milestone;</li>
   <li>add a message like <em>fixed on 2018-01-10</em>;</li>
   <li>do not close the issues</li>
@@ -213,22 +212,22 @@
 
 <p>After each new build, to allow testing on various platforms, the plug-ins should be published on the experimental site.</p>
 
-<p>For this, run the <code class="highlighter-rouge">scripts/publish-v4-neon-updates-experimental.command</code> (this is a script that can be executed directly in the macOS Finder).</p>
+<p>For this, run the <code class="language-plaintext highlighter-rouge">scripts/publish-v4-neon-updates-experimental.command</code> (this is a script that can be executed directly in the macOS Finder).</p>
 
-<p>Install from <code class="highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-experimental</code>.</p>
+<p>Install from <code class="language-plaintext highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-experimental</code>.</p>
 
 <h2 id="publish-pre-release-on-the-bintray-test-site">Publish pre-release on the Bintray test site</h2>
 
 <p>If the new release has no problems, publish it on the test site, and allow some time for testers to use it.</p>
 
-<p>For this, run the <code class="highlighter-rouge">scripts/publish-v4-neon-updates-test.command</code> (this is a script that can be executed directly in the macOS Finder).</p>
+<p>For this, run the <code class="language-plaintext highlighter-rouge">scripts/publish-v4-neon-updates-test.command</code> (this is a script that can be executed directly in the macOS Finder).</p>
 
 <p>A typical session looks like:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> /Users/ilg/My<span class="se">\ </span>Files/MacBookPro<span class="se">\ </span>Projects/GNU<span class="se">\ </span>ARM<span class="se">\ </span>Eclipse/plug-ins.git/scripts/publish-v4-neon-updates-test.command <span class="p">;</span> <span class="nb">exit</span><span class="p">;</span>
+<code><span class="gp">$</span><span class="w"> </span>/Users/ilg/My<span class="se">\ </span>Files/MacBookPro<span class="se">\ </span>Projects/GNU<span class="se">\ </span>ARM<span class="se">\ </span>Eclipse/plug-ins.git/scripts/publish-v4-neon-updates-test.command <span class="p">;</span> <span class="nb">exit</span><span class="p">;</span>
 <span class="go">
 User: ilg-ul
 API key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -261,7 +260,7 @@ logout
 <h2 id="install-on-a-separate-eclipse">Install on a separate Eclipse</h2>
 
 <p>Test if the new build can be used as an update site, by installing from 
-<code class="highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test</code> on a separate 
+<code class="language-plaintext highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test</code> on a separate 
 Eclipse (not the one used for development).</p>
 
 <h2 id="build-a-test-version-of-the-eclipse-packages">Build a test version of the Eclipse packages</h2>
@@ -269,23 +268,23 @@ Eclipse (not the one used for development).</p>
 <p>The Eclipse Packaging Project allows to create complete Eclipse packages for all relevant platforms.</p>
 
 <ul>
-  <li>clone the <code class="highlighter-rouge">gnu-mcu-eclipse/org.eclipse.epp.packages</code> project</li>
-  <li>select the <code class="highlighter-rouge">master</code> branch</li>
+  <li>clone the <code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse/org.eclipse.epp.packages</code> project</li>
+  <li>select the <code class="language-plaintext highlighter-rouge">master</code> branch</li>
   <li>merge from upstream</li>
-  <li>merge into the local GME branch (like <code class="highlighter-rouge">master-gme</code>)</li>
-  <li>edit <code class="highlighter-rouge">org.eclipse.epp.packages.git/releng/org.eclipse.epp.config/parent/pom.xml</code>
+  <li>merge into the local GME branch (like <code class="language-plaintext highlighter-rouge">master-gme</code>)</li>
+  <li>edit <code class="language-plaintext highlighter-rouge">org.eclipse.epp.packages.git/releng/org.eclipse.epp.config/parent/pom.xml</code>
     <ul>
-      <li>update the latest version <code class="highlighter-rouge">&lt;gnumcueclipse.version&gt;4.3.1&lt;/gnumcueclipse.version&gt;</code>
+      <li>update the latest version <code class="language-plaintext highlighter-rouge">&lt;gnumcueclipse.version&gt;4.3.1&lt;/gnumcueclipse.version&gt;</code>
 </li>
-      <li>temporarily update the site URL to the test site <code class="highlighter-rouge">&lt;gnumcueclipse.repository&gt;http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test&lt;/gnumcueclipse.repository&gt;</code>
+      <li>temporarily update the site URL to the test site <code class="language-plaintext highlighter-rouge">&lt;gnumcueclipse.repository&gt;http://gnu-mcu-eclipse.netlify.com/v4-neon-updates-test&lt;/gnumcueclipse.repository&gt;</code>
 </li>
     </ul>
   </li>
   <li>
-<strong>remove</strong> the <code class="highlighter-rouge">archive</code> folder</li>
-  <li>run the <code class="highlighter-rouge">org.eclipse.epp.packages.git/scripts/build.mac.command</code> script</li>
+<strong>remove</strong> the <code class="language-plaintext highlighter-rouge">archive</code> folder</li>
+  <li>run the <code class="language-plaintext highlighter-rouge">org.eclipse.epp.packages.git/scripts/build.mac.command</code> script</li>
   <li>check if the retrieved plug-ins versions match the expected versions; if not, check if the update site was published correctly and the URL is right;</li>
-  <li>the result should be in the <code class="highlighter-rouge">archive</code> folder, including the computed <code class="highlighter-rouge">.sha</code> values.</li>
+  <li>the result should be in the <code class="language-plaintext highlighter-rouge">archive</code> folder, including the computed <code class="language-plaintext highlighter-rouge">.sha</code> values.</li>
 </ul>
 
 <h2 id="test-the-resulted-packages">Test the resulted packages</h2>
@@ -303,7 +302,7 @@ Eclipse (not the one used for development).</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> git log <span class="nt">--pretty</span><span class="o">=</span><span class="s1">'%cd * %h - %s'</span> <span class="nt">--date</span><span class="o">=</span>short
+<code><span class="gp">$</span><span class="w"> </span>git log <span class="nt">--pretty</span><span class="o">=</span><span class="s1">'%cd * %h - %s'</span> <span class="nt">--date</span><span class="o">=</span>short
 </code></pre>
 </div>
 </div>
@@ -366,17 +365,17 @@ ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
 
 <h2 id="prepare-a-new-blog-post-to-announce-the-release">Prepare a new blog post to announce the release</h2>
 
-<p>Add a new file to the <code class="highlighter-rouge">_drafts</code> and later moved to <code class="highlighter-rouge">_posts/plugins/releases</code>.</p>
+<p>Add a new file to the <code class="language-plaintext highlighter-rouge">_drafts</code> and later moved to <code class="language-plaintext highlighter-rouge">_posts/plugins/releases</code>.</p>
 
 <p>Name the post like: <em>2017-11-10-plugins-v4.2.1-201711101735-released.md</em>, title: <em>GNU MCU Eclipse plug-ins v4.2.1-201711101735 released</em>.</p>
 
 <p>The structure of the post should contain:</p>
 
 <ul>
-  <li>the initial <code class="highlighter-rouge">download_url</code> pointing to the releases generic page, not a specific release, since it does not exist, and the htmlproofer will fail.</li>
+  <li>the initial <code class="language-plaintext highlighter-rouge">download_url</code> pointing to the releases generic page, not a specific release, since it does not exist, and the htmlproofer will fail.</li>
 </ul>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>download_url: https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases/
@@ -386,12 +385,12 @@ ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
 
 <ul>
   <li>one intro paragraph with the summary of the changes</li>
-  <li>a link to <code class="highlighter-rouge">[Binary files »]()</code>
+  <li>a link to <code class="language-plaintext highlighter-rouge">[Binary files »]()</code>
 </li>
   <li>headers like:</li>
 </ul>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>## New features
@@ -416,12 +415,12 @@ ilg.gnumcueclipse.templates.stm_2.6.3.201711101735.jar
 
 <h2 id="publish-on-the-main-bintray-updates-site">Publish on the main Bintray updates site</h2>
 
-<p>When all ready, run the <code class="highlighter-rouge">scripts/publish-v4-neon-updates.command</code>:</p>
+<p>When all ready, run the <code class="language-plaintext highlighter-rouge">scripts/publish-v4-neon-updates.command</code>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> /Users/ilg/My<span class="se">\ </span>Files/MacBookPro<span class="se">\ </span>Projects/GNU<span class="se">\ </span>ARM<span class="se">\ </span>Eclipse/plug-ins.git/scripts/publish-v4-neon-updates.command <span class="p">;</span> <span class="nb">exit</span><span class="p">;</span>
+<code><span class="gp">$</span><span class="w"> </span>/Users/ilg/My<span class="se">\ </span>Files/MacBookPro<span class="se">\ </span>Projects/GNU<span class="se">\ </span>ARM<span class="se">\ </span>Eclipse/plug-ins.git/scripts/publish-v4-neon-updates.command <span class="p">;</span> <span class="nb">exit</span><span class="p">;</span>
 <span class="go">Do you really want to publish? (Yes)? Yes
 
 User: ilg-ul
@@ -450,7 +449,7 @@ logout
 <h2 id="test-the-update-site">Test the update site</h2>
 
 <p>Using a test Eclipse, install the plug-ins from the update site
-<code class="highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates</code>.</p>
+<code class="language-plaintext highlighter-rouge">http://gnu-mcu-eclipse.netlify.com/v4-neon-updates</code>.</p>
 
 <h2 id="clean-the-mess-in-the-local-archive-folder">Clean the mess in the local archive folder</h2>
 
@@ -479,9 +478,9 @@ logout
 <h2 id="publish-the-web">Publish the Web</h2>
 
 <ul>
-  <li>move the post from <code class="highlighter-rouge">_drafts</code> to <code class="highlighter-rouge">_posts/plugins/releases</code>
+  <li>move the post from <code class="language-plaintext highlighter-rouge">_drafts</code> to <code class="language-plaintext highlighter-rouge">_posts/plugins/releases</code>
 </li>
-  <li>Git Push &amp; Sync the <strong>gnu-mcu-eclipse.github.io-source</strong> project; use something like <code class="highlighter-rouge">v4.2.1-201711101735 released</code> as message</li>
+  <li>Git Push &amp; Sync the <strong>gnu-mcu-eclipse.github.io-source</strong> project; use something like <code class="language-plaintext highlighter-rouge">v4.2.1-201711101735 released</code> as message</li>
   <li>wait for the Travis build to complete; occasionally links to not work, and might need to restart the build</li>
 </ul>
 
@@ -492,13 +491,13 @@ logout
   <li>go to the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a> page</li>
   <li>click <strong>Draft a new release</strong>
 </li>
-  <li>name the tag like <strong>v4.2.1-201711101735</strong> (mind the <code class="highlighter-rouge">-</code> in the middle!)</li>
+  <li>name the tag like <strong>v4.2.1-201711101735</strong> (mind the <code class="language-plaintext highlighter-rouge">-</code> in the middle!)</li>
   <li>select the <strong>develop</strong> branch</li>
-  <li>name the release like <strong>GNU MCU Eclipse plug-ins v4.2.1-201711101735</strong>  (mind the <code class="highlighter-rouge">-</code> in the middle!)</li>
+  <li>name the release like <strong>GNU MCU Eclipse plug-ins v4.2.1-201711101735</strong>  (mind the <code class="language-plaintext highlighter-rouge">-</code> in the middle!)</li>
   <li>as first line of the description, copy the download badge</li>
 </ul>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/plug-ins/v4.1.1-201707111115/total.svg)](/blog/2017/07/11/plugins-v4.1.1-201707111115-released/)
@@ -508,7 +507,7 @@ logout
 <ul>
   <li>update the tag (v4.1.1-201707111115)</li>
   <li>also in the description, copy the first paragraph from the Web release page</li>
-  <li>add a link to the Web page <code class="highlighter-rouge">[Continue reading »]()</code>
+  <li>add a link to the Web page <code class="language-plaintext highlighter-rouge">[Continue reading »]()</code>
 </li>
   <li>get the URL from the web <a href="http://gnu-mcu-eclipse.github.io/developer/releases/">Releases</a> page and update the above link and the badge</li>
   <li>
@@ -523,7 +522,7 @@ logout
 <p>From the <a href="https://github.com/gnu-mcu-eclipse/eclipse-plugins/releases">GitHub Releases</a> page, get the URL.</p>
 
 <ul>
-  <li>update <code class="highlighter-rouge">download_url</code> to the actual release URL.</li>
+  <li>update <code class="language-plaintext highlighter-rouge">download_url</code> to the actual release URL.</li>
 </ul>
 
 <h2 id="eclipse-packaging">Eclipse Packaging</h2>
@@ -533,34 +532,34 @@ logout
 <h3 id="build-1">Build</h3>
 
 <ul>
-  <li>in the <code class="highlighter-rouge">gnu-mcu-eclipse/org.eclipse.epp.packages</code> project</li>
-  <li>edit <code class="highlighter-rouge">org.eclipse.epp.packages.git/releng/org.eclipse.epp.config/parent/pom.xml</code>
+  <li>in the <code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse/org.eclipse.epp.packages</code> project</li>
+  <li>edit <code class="language-plaintext highlighter-rouge">org.eclipse.epp.packages.git/releng/org.eclipse.epp.config/parent/pom.xml</code>
     <ul>
-      <li>update the site URL to the release site <code class="highlighter-rouge">&lt;gnumcueclipse.repository&gt;http://gnu-mcu-eclipse.netlify.com/v4-neon-updates&lt;/gnumcueclipse.repository&gt;</code>
+      <li>update the site URL to the release site <code class="language-plaintext highlighter-rouge">&lt;gnumcueclipse.repository&gt;http://gnu-mcu-eclipse.netlify.com/v4-neon-updates&lt;/gnumcueclipse.repository&gt;</code>
 </li>
     </ul>
   </li>
   <li>
-<strong>remove</strong> the <code class="highlighter-rouge">archive</code> folder</li>
-  <li>run the <code class="highlighter-rouge">org.eclipse.epp.packages.git/scripts/build.mac.command</code> script</li>
+<strong>remove</strong> the <code class="language-plaintext highlighter-rouge">archive</code> folder</li>
+  <li>run the <code class="language-plaintext highlighter-rouge">org.eclipse.epp.packages.git/scripts/build.mac.command</code> script</li>
   <li>check if the retrieved plug-ins versions match the expected versions; if not, check if the update site was published correctly and the URL is right</li>
-  <li>the result should be in the <code class="highlighter-rouge">archive</code> folder, including the computed <code class="highlighter-rouge">.sha</code> values</li>
-  <li>push the <code class="highlighter-rouge">gnu-mcu-eclipse/org.eclipse.epp.packages</code> project.</li>
+  <li>the result should be in the <code class="language-plaintext highlighter-rouge">archive</code> folder, including the computed <code class="language-plaintext highlighter-rouge">.sha</code> values</li>
+  <li>push the <code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse/org.eclipse.epp.packages</code> project.</li>
 </ul>
 
 <h3 id="create-the-epp-github-release">Create the EPP GitHub release</h3>
 
 <ul>
-  <li>be sure the <code class="highlighter-rouge">org.eclipse.epp.packages.git</code> is up to date and pushed</li>
+  <li>be sure the <code class="language-plaintext highlighter-rouge">org.eclipse.epp.packages.git</code> is up to date and pushed</li>
   <li>go to the <a href="https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages/releases">GitHub Releases</a> page</li>
   <li>click <strong>Draft a new release</strong>
 </li>
-  <li>name the tag like <strong>v4.4.2-20180930-2018-09</strong>; mind the <code class="highlighter-rouge">-</code> in the middle, the short date and the 2018-09 which is the official Eclipse release name</li>
+  <li>name the tag like <strong>v4.4.2-20180930-2018-09</strong>; mind the <code class="language-plaintext highlighter-rouge">-</code> in the middle, the short date and the 2018-09 which is the official Eclipse release name</li>
   <li>select the corresponding GME branch, like <strong>master-gme</strong>
 </li>
   <li>name the release like <strong>GNU MCU Eclipse IDE for C/C++ Developers 2018-09 20180930</strong>; mind the short date</li>
   <li>as first line of the description, copy the download badge
-    <div class="highlighter-rouge">
+    <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code>[![Github Releases (by Release)](https://img.shields.io/github/downloads/gnu-mcu-eclipse/org.eclipse.epp.packages/v4.3.1-20180110-o2/total.svg)](/blog/2018/01/10/plugins-v4.3.1-201801092051-released/)
 </code></pre></div>    </div>
   </li>
@@ -599,7 +598,7 @@ logout
   <li>DO NOT click the Tweet button here, it’ll not use the right account</li>
   <li>in a separate browser windows, open <a href="https://tweetdeck.twitter.com/">TweetDeck</a>
 </li>
-  <li>using the <code class="highlighter-rouge">@gnu_mcu_eclipse</code> account, paste the content</li>
+  <li>using the <code class="language-plaintext highlighter-rouge">@gnu_mcu_eclipse</code> account, paste the content</li>
   <li>click the Tweet button</li>
 </ul>
 
@@ -730,7 +729,7 @@ logout
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

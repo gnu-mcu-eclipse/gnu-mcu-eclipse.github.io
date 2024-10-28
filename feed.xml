@@ -5,15 +5,14 @@
     <description>A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development</description>
     <link>http://gnu-mcu-eclipse.github.io/</link>
     <atom:link href="http://gnu-mcu-eclipse.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Jan 2021 10:24:24 +0000</pubDate>
-    <lastBuildDate>Sun, 10 Jan 2021 10:24:24 +0000</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>Mon, 28 Oct 2024 07:28:29 +0000</pubDate>
+    <lastBuildDate>Mon, 28 Oct 2024 07:28:29 +0000</lastBuildDate>
+    <generator>Jekyll v4.3.4</generator>
     
       <item>
         <title>Eclipse Embedded CDT plug-ins v5.1.1-202007271621 released</title>
         <description>&lt;p&gt;Version &lt;a href=&quot;https://projects.eclipse.org/projects/iot.embed-cdt/releases/5.1.1&quot;&gt;5.1.1&lt;/a&gt;
 is the first release after the project migration to the Eclipse Foundation.&lt;/p&gt;
-
 </description>
         <pubDate>Tue, 28 Jul 2020 13:52:00 +0000</pubDate>
         <link>http://gnu-mcu-eclipse.github.io/blog/2020/07/28/plugins-v5.1.1-202007271621-released/</link>
@@ -40,7 +39,6 @@ is the first release after the project migration to the Eclipse Foundation.&lt;/
         <title>GNU MCU Eclipse plug-ins v4.7.2-202001271244 released</title>
         <description>&lt;p&gt;Version 4.7.2-202001271244 is a maintenance release to fix the issue related
 to the change introduced by the update to https for the CMSIS Pack index.&lt;/p&gt;
-
 </description>
         <pubDate>Mon, 27 Jan 2020 11:07:00 +0000</pubDate>
         <link>http://gnu-mcu-eclipse.github.io/blog/2020/01/27/plugins-v4.7.2-202001271244-released/</link>
@@ -67,7 +65,6 @@ to the change introduced by the update to https for the CMSIS Pack index.&lt;/p&
         <title>GNU MCU Eclipse plug-ins v4.7.1-201911052135 released</title>
         <description>&lt;p&gt;Version 4.7.1-201911052135 is a maintenance release; the main change is an
 enhancement in the logic to update the list of CMSIS Packs.&lt;/p&gt;
-
 </description>
         <pubDate>Wed, 06 Nov 2019 08:36:00 +0000</pubDate>
         <link>http://gnu-mcu-eclipse.github.io/blog/2019/11/06/plugins-v4.7.1-201911052135-released/</link>
@@ -96,7 +93,6 @@ enhancement in the logic to update the list of CMSIS Packs.&lt;/p&gt;
 &lt;a href=&quot;https://www.element14.com/community/groups/gnu-arm-eclipse&quot;&gt;Element14&lt;/a&gt; site
 to a dedicated section in the
 &lt;a href=&quot;https://www.tapatalk.com/groups/xpack/&quot;&gt;xPack forum&lt;/a&gt;.&lt;/p&gt;
-
 </description>
         <pubDate>Wed, 25 Sep 2019 20:08:00 +0000</pubDate>
         <link>http://gnu-mcu-eclipse.github.io/blog/2019/09/25/new-forums/</link>
@@ -123,7 +119,6 @@ to a dedicated section in the
 addition of support for
 the new &lt;a href=&quot;https://xpack.github.io&quot;&gt;xPack Dev Tools&lt;/a&gt; and performance
 fixes for the &lt;strong&gt;CMSIS Packs&lt;/strong&gt; manager.&lt;/p&gt;
-
 </description>
         <pubDate>Mon, 23 Sep 2019 15:20:00 +0000</pubDate>
         <link>http://gnu-mcu-eclipse.github.io/blog/2019/09/23/plugins-v4.6.1-201909231407-released/</link>
@@ -151,7 +146,6 @@ fixes for the &lt;strong&gt;CMSIS Packs&lt;/strong&gt; manager.&lt;/p&gt;
         <description>&lt;p&gt;Version v8.2.1-1.7 20190524 is a maintenance release of 
 &lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt; that that removes the illegal links 
 present in the previous releases.&lt;/p&gt;
-
 </description>
         <pubDate>Fri, 24 May 2019 16:14:00 +0000</pubDate>
         <link>http://gnu-mcu-eclipse.github.io/blog/2019/05/24/arm-none-eabi-gcc-v8-2-1-1-7-released/</link>
@@ -176,7 +170,6 @@ present in the previous releases.&lt;/p&gt;
         <title>GNU MCU Eclipse RISC-V Embedded GCC v8.2.0-2.2 20190521 released</title>
         <description>&lt;p&gt;Version v8.2.0-2.2-20190521 is a maintenance release of &lt;strong&gt;GNU MCU Eclipse 
 RISC-V Embedded GCC&lt;/strong&gt;, that fixes the previous bug affecting GDB on macOS.&lt;/p&gt;
-
 </description>
         <pubDate>Tue, 21 May 2019 12:55:00 +0000</pubDate>
         <link>http://gnu-mcu-eclipse.github.io/blog/2019/05/21/riscv-none-gcc-v8-2-0-2-2-20190521-released/</link>
@@ -195,7 +188,6 @@ RISC-V Embedded GCC&lt;/strong&gt;, that fixes the previous bug affecting GDB on
         <title>GNU MCU Eclipse QEMU v2.8.0-6 20190517 released</title>
         <description>&lt;p&gt;Version 2.8.0-6 20190517 is a maintenance release, to fix the bug 
 affecting the graphical mode in GNU/Linux, introduced in the previous release.&lt;/p&gt;
-
 </description>
         <pubDate>Fri, 17 May 2019 12:50:00 +0000</pubDate>
         <link>http://gnu-mcu-eclipse.github.io/blog/2019/05/17/qemu-v2-8-0-6-20190517-released/</link>
@@ -221,7 +213,6 @@ affecting the graphical mode in GNU/Linux, introduced in the previous release.&l
         <description>&lt;p&gt;Version v8.2.1-1.6 20190510 is a maintenance release of 
 &lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt; that (finally) fixes the bugs 
 affecting Windows LTO builds, present in the previous release.&lt;/p&gt;
-
 </description>
         <pubDate>Fri, 10 May 2019 03:05:00 +0000</pubDate>
         <link>http://gnu-mcu-eclipse.github.io/blog/2019/05/10/arm-none-eabi-gcc-v8-2-1-1-6-released/</link>
@@ -247,7 +238,6 @@ affecting Windows LTO builds, present in the previous release.&lt;/p&gt;
         <description>&lt;p&gt;Version v8.2.1-1.5 20190426 is a maintenance release of 
 &lt;strong&gt;GNU MCU Eclipse ARM Embedded GCC&lt;/strong&gt; that fixes the bugs affecting Windows 
 LTO builds, present in the previous release.&lt;/p&gt;
-
 </description>
         <pubDate>Fri, 26 Apr 2019 20:43:00 +0000</pubDate>
         <link>http://gnu-mcu-eclipse.github.io/blog/2019/04/26/arm-none-eabi-gcc-v8-2-1-1-5-released/</link>

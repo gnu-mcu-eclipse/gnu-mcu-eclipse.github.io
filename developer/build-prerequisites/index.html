@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>Build prerequisites</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="Build prerequisites">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="Build prerequisites" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-10">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/developer/build-prerequisites/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -167,11 +166,11 @@
 
 <h3 id="install-git-for-windows">Install Git for Windows</h3>
 
-<p>On Windows, the <code class="highlighter-rouge">git</code> command is available in the 
+<p>On Windows, the <code class="language-plaintext highlighter-rouge">git</code> command is available in the 
 <a href="https://git-scm.com/download/win">Git for Windows</a> package.</p>
 
 <p>It also comes with a minimal POSIX environment. To access it, start
-the <code class="highlighter-rouge">bash.exe</code> program.</p>
+the <code class="language-plaintext highlighter-rouge">bash.exe</code> program.</p>
 
 <h3 id="install-sourcetree">Install SourceTree</h3>
 
@@ -191,9 +190,9 @@ and the old Maven builds fail.</p>
 <h3 id="prepare-folders">Prepare folders</h3>
 
 <ul>
-  <li>in a place of you choice, create a folder <code class="highlighter-rouge">gnu-mcu-eclipse.github</code>
+  <li>in a place of you choice, create a folder <code class="language-plaintext highlighter-rouge">gnu-mcu-eclipse.github</code>
 </li>
-  <li>inside it create a folder <code class="highlighter-rouge">develop</code>.</li>
+  <li>inside it create a folder <code class="language-plaintext highlighter-rouge">develop</code>.</li>
 </ul>
 
 <h3 id="install-eclipse-ide-for-eclipse-committers">Install Eclipse IDE for Eclipse Committers</h3>
@@ -206,23 +205,23 @@ version known to work is 2018-12.</p>
 and follow the
 <a href="https://www.eclipse.org/downloads/eclipse-packages/">download packages</a> link</li>
   <li>download <strong>Eclipse IDE for Eclipse Committers</strong>, preferably the 64-bit version
-(for example <code class="highlighter-rouge">eclipse-committers-2018-12-R-macosx-cocoa-x86_64</code>)</li>
+(for example <code class="language-plaintext highlighter-rouge">eclipse-committers-2018-12-R-macosx-cocoa-x86_64</code>)</li>
   <li>unpack the archive</li>
-  <li>on macOS, remove the <code class="highlighter-rouge">com.apple.quarantine</code> attribute:</li>
+  <li>on macOS, remove the <code class="language-plaintext highlighter-rouge">com.apple.quarantine</code> attribute:</li>
 </ul>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xattr <span class="nt">-dr</span> com.apple.quarantine Eclipse.app
+<code><span class="gp">$</span><span class="w"> </span>xattr <span class="nt">-dr</span> com.apple.quarantine Eclipse.app
 </code></pre>
 </div>
 </div>
 
 <ul>
-  <li>move it to <code class="highlighter-rouge">.../gnu-mcu-eclipse.github/develop</code>
+  <li>move it to <code class="language-plaintext highlighter-rouge">.../gnu-mcu-eclipse.github/develop</code>
 </li>
-  <li>rename <code class="highlighter-rouge">Eclipse.app</code> to <code class="highlighter-rouge">Eclipse-committers-2018-12.app</code> (similarly for
+  <li>rename <code class="language-plaintext highlighter-rouge">Eclipse.app</code> to <code class="language-plaintext highlighter-rouge">Eclipse-committers-2018-12.app</code> (similarly for
 other platforms)</li>
 </ul>
 
@@ -230,7 +229,7 @@ other platforms)</li>
 
 <ul>
   <li>Oxygen 3a fails on JDK 10 or higher with missing
-<code class="highlighter-rouge">javax/annotation/PostConstruct</code>
+<code class="language-plaintext highlighter-rouge">javax/annotation/PostConstruct</code>
 (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=533390">533390</a>)</li>
   <li>Photon fails to build 2018-12 (4.10) with OpenJDK 12</li>
 </ul>
@@ -238,8 +237,8 @@ other platforms)</li>
 <h3 id="start-the-new-eclipse">Start the new Eclipse</h3>
 
 <ul>
-  <li>in the <code class="highlighter-rouge">.../gnu-mcu-eclipse.github/develop</code> folder create a new workspace
-named <code class="highlighter-rouge">eclipse-committers-2018-12-workspace</code>
+  <li>in the <code class="language-plaintext highlighter-rouge">.../gnu-mcu-eclipse.github/develop</code> folder create a new workspace
+named <code class="language-plaintext highlighter-rouge">eclipse-committers-2018-12-workspace</code>
 (note: be sure you create the workspace where you need it to be, since
 moving later is generally not supported by Eclipse; if you need this,
 preferably create a new workspace)</li>
@@ -258,7 +257,7 @@ should read <strong>Eclipse IDE for Eclipse Committers</strong>
     <ul>
       <li>Add → Standard VM
         <ul>
-          <li>JRE Home: select the <code class="highlighter-rouge">/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home</code> folder</li>
+          <li>JRE Home: select the <code class="language-plaintext highlighter-rouge">/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home</code> folder</li>
           <li>JRE name: jdk 1.8 221</li>
         </ul>
       </li>
@@ -279,7 +278,7 @@ should read <strong>Eclipse IDE for Eclipse Committers</strong>
   <li>
 <strong>Help</strong> → <strong>Install New Software</strong>
     <ul>
-      <li>Work with: <code class="highlighter-rouge">2018-12 - http://download.eclipse.org/releases/2018-12</code>
+      <li>Work with: <code class="language-plaintext highlighter-rouge">2018-12 - http://download.eclipse.org/releases/2018-12</code>
         <ul>
           <li>In <strong>Application Development Framework</strong>
             <ul>
@@ -331,10 +330,10 @@ extensions will not be possible, and only ‘Generic’ elements will be offered
 <h3 id="install-base-api">Install base API</h3>
 
 <ul>
-  <li>go to <a href="http://www.eclipse.org/cdt/downloads.php">http://www.eclipse.org/cdt/downloads.php</a>, and download <code class="highlighter-rouge">cdt-9.2.1.zip</code>
+  <li>go to <a href="http://www.eclipse.org/cdt/downloads.php">http://www.eclipse.org/cdt/downloads.php</a>, and download <code class="language-plaintext highlighter-rouge">cdt-9.2.1.zip</code>
 (for compatibility with Eclipse 4.6 Neon.3)</li>
   <li>unpack the archive</li>
-  <li>move the new folder to in the <code class="highlighter-rouge">develop</code> folder</li>
+  <li>move the new folder to in the <code class="language-plaintext highlighter-rouge">develop</code> folder</li>
   <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>Plug-in Development</strong>
 → <strong>Target Platform</strong>
     <ul>
@@ -343,11 +342,11 @@ extensions will not be possible, and only ‘Generic’ elements will be offered
 </li>
       <li>Next
         <ul>
-          <li>Enter name: <code class="highlighter-rouge">9.2.1 Neon</code>
+          <li>Enter name: <code class="language-plaintext highlighter-rouge">9.2.1 Neon</code>
 </li>
           <li>click <strong>Add…</strong> → <strong>Directory</strong> → <strong>Next &gt;</strong>
 </li>
-          <li>click <strong>Browse…</strong> → <code class="highlighter-rouge">cdt-9.2.1</code>
+          <li>click <strong>Browse…</strong> → <code class="language-plaintext highlighter-rouge">cdt-9.2.1</code>
 </li>
           <li>click the <strong>Finish</strong> button</li>
         </ul>
@@ -372,9 +371,9 @@ Debug, without it the core plug-ins will not be available.</p>
       <li>click the <strong>Add Baseline…</strong> button</li>
       <li>select <strong>A target platform</strong>
         <ul>
-          <li>Enter name: <code class="highlighter-rouge">9.2.1 Neon</code>
+          <li>Enter name: <code class="language-plaintext highlighter-rouge">9.2.1 Neon</code>
 </li>
-          <li>enable <code class="highlighter-rouge">9.2.1 Neon</code>
+          <li>enable <code class="language-plaintext highlighter-rouge">9.2.1 Neon</code>
 </li>
           <li>click the <strong>Refresh</strong> button</li>
           <li>click the <strong>Finish</strong> button</li>
@@ -482,23 +481,23 @@ install <strong>Eclipse IDE for C/C++ Developers</strong>.</p>
 
 <ul>
   <li>download <strong>Eclipse IDE for C/C++ Developers</strong>
-(<code class="highlighter-rouge">eclipse-cpp-2019-06-R-macosx-cocoa-x86_64.dmg</code>)</li>
-  <li>unpack the archive into the <code class="highlighter-rouge">develop</code> folder</li>
-  <li>on macOS, remove the <code class="highlighter-rouge">com.apple.quarantine</code> attribute:</li>
+(<code class="language-plaintext highlighter-rouge">eclipse-cpp-2019-06-R-macosx-cocoa-x86_64.dmg</code>)</li>
+  <li>unpack the archive into the <code class="language-plaintext highlighter-rouge">develop</code> folder</li>
+  <li>on macOS, remove the <code class="language-plaintext highlighter-rouge">com.apple.quarantine</code> attribute:</li>
 </ul>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xattr <span class="nt">-dr</span> com.apple.quarantine Eclipse.app
+<code><span class="gp">$</span><span class="w"> </span>xattr <span class="nt">-dr</span> com.apple.quarantine Eclipse.app
 </code></pre>
 </div>
 </div>
 
 <ul>
-  <li>rename <code class="highlighter-rouge">Eclipse.app</code> to <code class="highlighter-rouge">Eclipse-cdt-2019-06.app</code>
+  <li>rename <code class="language-plaintext highlighter-rouge">Eclipse.app</code> to <code class="language-plaintext highlighter-rouge">Eclipse-cdt-2019-06.app</code>
 </li>
-  <li>start Eclipse, use an workspace named <code class="highlighter-rouge">eclipse-committers-photon-workspace</code>
+  <li>start Eclipse, use an workspace named <code class="language-plaintext highlighter-rouge">eclipse-committers-photon-workspace</code>
 </li>
   <li>enable Use this as the default</li>
   <li>in the <em>Eclipse</em> menu → <strong>(Window →) Preferences</strong> → <strong>C/C++</strong> →
@@ -513,7 +512,7 @@ install <strong>Eclipse IDE for C/C++ Developers</strong>.</p>
   <li>in Project Explorer, click the down pointing triangle →
 <strong>Filters and Customizations…</strong>
     <ul>
-      <li>disable <code class="highlighter-rouge">.*</code> resources</li>
+      <li>disable <code class="language-plaintext highlighter-rouge">.*</code> resources</li>
       <li>click the OK button</li>
     </ul>
   </li>
@@ -526,14 +525,14 @@ install <strong>Eclipse IDE for C/C++ Developers</strong>.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">cd</span> .../gnu-mcu-eclipse.github
-<span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/eclipse-plugins.git eclipse-plugins.git
-<span class="gp">$</span> git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> .../gnu-mcu-eclipse.github
+<span class="gp">$</span><span class="w"> </span>git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/eclipse-plugins.git eclipse-plugins.git
+<span class="gp">$</span><span class="w"> </span>git clone <span class="nt">--recurse-submodules</span> https://github.com/gnu-mcu-eclipse/org.eclipse.epp.packages.git org.eclipse.epp.packages.git
 </code></pre>
 </div>
 </div>
 
-<p>On Windows, the <code class="highlighter-rouge">git</code> command is available in the
+<p>On Windows, the <code class="language-plaintext highlighter-rouge">git</code> command is available in the
 <a href="https://git-scm.com/download/win">Git for Windows</a> package, it should
 have been installed from the first step.</p>
 
@@ -562,7 +561,7 @@ have been installed from the first step.</p>
   </li>
   <li>Import Projects
     <ul>
-      <li>Root Directory: <code class="highlighter-rouge">.../gnu-mcu-eclipse.github/eclipse-plugins.git</code>
+      <li>Root Directory: <code class="language-plaintext highlighter-rouge">.../gnu-mcu-eclipse.github/eclipse-plugins.git</code>
 </li>
       <li>enable <strong>Search for nested projects</strong>
 </li>
@@ -576,7 +575,7 @@ have been installed from the first step.</p>
   </li>
   <li>Import Projects
     <ul>
-      <li>Root Directory: <code class="highlighter-rouge">.../gnu-mcu-eclipse.github/org.eclipse.epp.packages.git</code>
+      <li>Root Directory: <code class="language-plaintext highlighter-rouge">.../gnu-mcu-eclipse.github/org.eclipse.epp.packages.git</code>
 </li>
       <li>enable <strong>Search for nested projects</strong>
 </li>
@@ -602,14 +601,14 @@ have been installed from the first step.</p>
   <li>down arrow → <strong>Select Working Sets…</strong> → <strong>New…</strong>)
     <ul>
       <li>
-<strong>GNU MCU Eclipse plugins root</strong> (with the <code class="highlighter-rouge">gnumcueclipse-plugins</code> project)</li>
+<strong>GNU MCU Eclipse plugins root</strong> (with the <code class="language-plaintext highlighter-rouge">gnumcueclipse-plugins</code> project)</li>
       <li>
-<strong>GNU MCU Eclipse repositories</strong> (with the <code class="highlighter-rouge">ilg.gnumcueclipse.repository</code>
+<strong>GNU MCU Eclipse repositories</strong> (with the <code class="language-plaintext highlighter-rouge">ilg.gnumcueclipse.repository</code>
 project)</li>
       <li>
-<strong>GNU MCU Eclipse EPP packages root</strong> (with the <code class="highlighter-rouge">org.eclipse.epp*</code> projects)</li>
+<strong>GNU MCU Eclipse EPP packages root</strong> (with the <code class="language-plaintext highlighter-rouge">org.eclipse.epp*</code> projects)</li>
       <li>
-<strong>GNU MCU Eclipse features</strong> (with all <code class="highlighter-rouge">*.feature</code> projects)</li>
+<strong>GNU MCU Eclipse features</strong> (with all <code class="language-plaintext highlighter-rouge">*.feature</code> projects)</li>
       <li>
 <strong>GNU MCU Eclipse bundles</strong> (empty for now)</li>
       <li>click the <strong>OK</strong> button</li>
@@ -622,24 +621,24 @@ project)</li>
 <p>To start the plug-ins Maven build from Eclipse</p>
 
 <ul>
-  <li>in the <code class="highlighter-rouge">GNU MCU Eclipse plugins root</code> set, select the <code class="highlighter-rouge">gnumcueclipse-plugins</code>
+  <li>in the <code class="language-plaintext highlighter-rouge">GNU MCU Eclipse plugins root</code> set, select the <code class="language-plaintext highlighter-rouge">gnumcueclipse-plugins</code>
 project</li>
   <li>
 <em>Eclipse</em> menu → <strong>Run</strong> → <strong>Run Configurations…</strong>
 </li>
   <li>double click the <strong>Maven Build</strong> entry</li>
   <li>
-<strong>Name:</strong> <code class="highlighter-rouge">GME clean verify</code>
+<strong>Name:</strong> <code class="language-plaintext highlighter-rouge">GME clean verify</code>
 </li>
   <li>in the Main tab
     <ul>
       <li>Base directory: click the Workspace… button and select the
-<code class="highlighter-rouge">gnumcueclipse-plugins</code>
+<code class="language-plaintext highlighter-rouge">gnumcueclipse-plugins</code>
 </li>
-      <li>Goals: <code class="highlighter-rouge">clean verify</code>
+      <li>Goals: <code class="language-plaintext highlighter-rouge">clean verify</code>
 </li>
       <li>optionally, if warnings are issued, add a new parameter, name
-<code class="highlighter-rouge">tycho.localArtifacts</code>, value <code class="highlighter-rouge">ignore</code>
+<code class="language-plaintext highlighter-rouge">tycho.localArtifacts</code>, value <code class="language-plaintext highlighter-rouge">ignore</code>
 </li>
     </ul>
   </li>
@@ -656,23 +655,23 @@ with older environments)</li>
 <p>To start the EPP Maven build from Eclipse</p>
 
 <ul>
-  <li>in the <code class="highlighter-rouge">GNU MCU Eclipse EPP packages root</code> set, select the
-<code class="highlighter-rouge">org.eclipse.simrel</code> project</li>
+  <li>in the <code class="language-plaintext highlighter-rouge">GNU MCU Eclipse EPP packages root</code> set, select the
+<code class="language-plaintext highlighter-rouge">org.eclipse.simrel</code> project</li>
   <li>
 <em>Eclipse</em> menu → <strong>Run</strong> → <strong>Run Configurations…</strong>
 </li>
   <li>double click the <strong>Maven Build</strong> entry</li>
   <li>
-<strong>Name:</strong> <code class="highlighter-rouge">GME EPP clean verify -Pcpp</code>
+<strong>Name:</strong> <code class="language-plaintext highlighter-rouge">GME EPP clean verify -Pcpp</code>
 </li>
   <li>in the Main tab
     <ul>
       <li>Base directory: click the Workspace… button and select
-the <code class="highlighter-rouge">org.eclipse.simrel</code>
+the <code class="language-plaintext highlighter-rouge">org.eclipse.simrel</code>
 </li>
-      <li>Goals: <code class="highlighter-rouge">clean verify</code>
+      <li>Goals: <code class="language-plaintext highlighter-rouge">clean verify</code>
 </li>
-      <li>Profiles: <code class="highlighter-rouge">epp.package.cpp</code>
+      <li>Profiles: <code class="language-plaintext highlighter-rouge">epp.package.cpp</code>
 </li>
     </ul>
   </li>
@@ -686,8 +685,8 @@ the <code class="highlighter-rouge">org.eclipse.simrel</code>
   <li>click the <strong>Apply</strong> button</li>
 </ul>
 
-<p>The project <code class="highlighter-rouge">org.eclipse.epp.packages.git</code> is a fork of
-<code class="highlighter-rouge">https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git</code>.</p>
+<p>The project <code class="language-plaintext highlighter-rouge">org.eclipse.epp.packages.git</code> is a fork of
+<code class="language-plaintext highlighter-rouge">https://git.eclipse.org/gitroot/epp/org.eclipse.epp.packages.git</code>.</p>
 
 <h2 id="cdt-wiki">CDT Wiki</h2>
 
@@ -819,7 +818,7 @@ the <code class="highlighter-rouge">org.eclipse.simrel</code>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

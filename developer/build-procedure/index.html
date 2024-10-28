@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>How to build the plug-ins?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="How to build the plug-ins?">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="How to build the plug-ins?" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-10">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/developer/build-procedure/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -207,7 +206,7 @@
 <p>The result is a p2 repository:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">repositories/ilg.gnumcueclipse.repository/target/repository</code></li>
+  <li><code class="language-plaintext highlighter-rouge">repositories/ilg.gnumcueclipse.repository/target/repository</code></li>
 </ul>
 
 <h2 id="build-the-packages">Build the packages</h2>
@@ -225,14 +224,14 @@
       <li>double-click <strong>Eclipse Application</strong>
 </li>
       <li>
-<strong>Name:</strong> <code class="highlighter-rouge">GME Plug-ins</code>
+<strong>Name:</strong> <code class="language-plaintext highlighter-rouge">GME Plug-ins</code>
 </li>
-      <li>Location: <code class="highlighter-rouge">${workspace_loc}/../runtime-GMEPlug-ins-2018-12</code>
+      <li>Location: <code class="language-plaintext highlighter-rouge">${workspace_loc}/../runtime-GMEPlug-ins-2018-12</code>
 </li>
       <li>Tab: <strong>Plug-ins</strong>
         <ul>
           <li>Launch with: <strong>plug-ins selected below</strong>; the Workspace list should
-include all <code class="highlighter-rouge">ilg.gnumcueclipse.*</code> plug-ins, not the EPP ones; the
+include all <code class="language-plaintext highlighter-rouge">ilg.gnumcueclipse.*</code> plug-ins, not the EPP ones; the
 Target Platform list should include all Eclipse, not only CDT,
 plug-ins; if the Eclipse plug-ins are not in the list, then the
 Preferences → Plug-in Development → Target Platform is not Running
@@ -249,19 +248,19 @@ plug-ins; validate again and repeat until success.</li>
         <ul>
           <li>Program arguments:
             <ul>
-              <li><code class="highlighter-rouge">-consoleLog</code></li>
+              <li><code class="language-plaintext highlighter-rouge">-consoleLog</code></li>
               <li>
-<code class="highlighter-rouge">-debug "${workspace_loc}/../../eclipse-plugins.git/debug.options"</code> (<code class="highlighter-rouge">-debug "${workspace_loc}\..\..\eclipse-plugins.git\debug.options"</code> on Windows)</li>
+<code class="language-plaintext highlighter-rouge">-debug "${workspace_loc}/../../eclipse-plugins.git/debug.options"</code> (<code class="language-plaintext highlighter-rouge">-debug "${workspace_loc}\..\..\eclipse-plugins.git\debug.options"</code> on Windows)</li>
             </ul>
           </li>
           <li>VM arguments:
             <ul>
               <li>
-<code class="highlighter-rouge">-ea</code> (to enable assertions)</li>
+<code class="language-plaintext highlighter-rouge">-ea</code> (to enable assertions)</li>
               <li>
-<code class="highlighter-rouge">-Dorg.eclipse.swt.internal.carbon.smallFonts</code> (only on macOS)</li>
+<code class="language-plaintext highlighter-rouge">-Dorg.eclipse.swt.internal.carbon.smallFonts</code> (only on macOS)</li>
               <li>
-<code class="highlighter-rouge">-Xdock:icon=../Resources/Eclipse.icns</code> (only on macOS)</li>
+<code class="language-plaintext highlighter-rouge">-Xdock:icon=../Resources/Eclipse.icns</code> (only on macOS)</li>
             </ul>
           </li>
           <li>enable <strong>Use the -XstartOnFirstThread argument when launching with SWT</strong>
@@ -282,14 +281,14 @@ the debug session fails.</p>
 <h2 id="debug-options">Debug options</h2>
 
 <p>As seen before, the debug options are grouped in a file and passed to
-Eclipse using the <code class="highlighter-rouge">-debug &lt;file&gt;</code> option.</p>
+Eclipse using the <code class="language-plaintext highlighter-rouge">-debug &lt;file&gt;</code> option.</p>
 
 <h2 id="plug-ins-cache">Plug-ins cache</h2>
 
 <p>When starting debug sessions from within Eclipse, a copy of the run-time
 is kept under</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Eclipse GNU MCU Plug-ins
@@ -315,23 +314,23 @@ to debug issues inside CDT.</p>
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">cd</span> .../gnu-mcu-eclipse.github
-<span class="gp">$</span> <span class="nb">mkdir</span> <span class="nt">-p</span> originals
-<span class="gp">$</span> git clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git originals/org.eclipse.cdt.git
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">cd</span> .../gnu-mcu-eclipse.github
+<span class="gp">$</span><span class="w"> </span><span class="nb">mkdir</span> <span class="nt">-p</span> originals
+<span class="gp">$</span><span class="w"> </span>git clone git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git originals/org.eclipse.cdt.git
 </code></pre>
 </div>
 </div>
 
-<p>For regular tests, select the <code class="highlighter-rouge">CDT_9_2_1</code> tag.</p>
+<p>For regular tests, select the <code class="language-plaintext highlighter-rouge">CDT_9_2_1</code> tag.</p>
 
-<p>Create a new working set named <code class="highlighter-rouge">CDT</code>.</p>
+<p>Create a new working set named <code class="language-plaintext highlighter-rouge">CDT</code>.</p>
 
 <ul>
   <li>in the Package Explorer view, click the down pointing triangle,</li>
   <li>select <strong>Configure Working Sets…</strong>
     <ul>
       <li>click the <strong>New…</strong> button</li>
-      <li>fill in the <strong>Working set name:</strong> with <code class="highlighter-rouge">CDT</code>
+      <li>fill in the <strong>Working set name:</strong> with <code class="language-plaintext highlighter-rouge">CDT</code>
 </li>
       <li>click the <strong>Finish</strong> button</li>
       <li>click the <strong>OK</strong> button</li>
@@ -345,7 +344,7 @@ to debug issues inside CDT.</p>
   <li>in the <em>Eclipse</em> menu → <strong>File</strong> → <strong>Import…</strong> → <strong>General</strong> → <strong>Existing Projects into Workspace</strong>
 </li>
   <li>click the <strong>Next &gt;</strong> button</li>
-  <li>browse for the <code class="highlighter-rouge">org.eclipse.cdt.git</code> folder</li>
+  <li>browse for the <code class="language-plaintext highlighter-rouge">org.eclipse.cdt.git</code> folder</li>
   <li>deselect some projects selected</li>
   <li>enable <strong>Add projects(s) to working set</strong> and enter CDT</li>
   <li>click the <strong>Finish</strong> button</li>
@@ -356,11 +355,11 @@ to debug issues inside CDT.</p>
 <ul>
   <li>in the <em>Eclipse</em> menu → <strong>Run</strong> → <strong>Debug Configurations…</strong>
 </li>
-  <li>duplicate <code class="highlighter-rouge">GME Plug-ins</code> into <code class="highlighter-rouge">GME Plug-ins with CDT</code>
+  <li>duplicate <code class="language-plaintext highlighter-rouge">GME Plug-ins</code> into <code class="language-plaintext highlighter-rouge">GME Plug-ins with CDT</code>
 </li>
   <li>in teh <strong>Plug-ins</strong> tab, click the <strong>Add Working Sets..</strong> button
     <ul>
-      <li>select the <code class="highlighter-rouge">CDT</code> set</li>
+      <li>select the <code class="language-plaintext highlighter-rouge">CDT</code> set</li>
       <li>click the <strong>OK</strong> button</li>
     </ul>
   </li>
@@ -495,7 +494,7 @@ to debug issues inside CDT.</p>
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

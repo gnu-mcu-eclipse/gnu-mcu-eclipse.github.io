@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>Eclipse debugging options</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="Eclipse debugging options">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="Eclipse debugging options" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-10">
@@ -23,11 +22,11 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -35,7 +34,7 @@
   <link rel="canonical" href="/developer/eclipse/debugging-options/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -97,9 +96,9 @@
 
 <h2 id="start-eclipse-in-debugging-mode">Start Eclipse in debugging mode</h2>
 
-<p>To start Eclipse with all tracing messages enabled, add <code class="highlighter-rouge">-debug &lt;file&gt;</code> to the command line:</p>
+<p>To start Eclipse with all tracing messages enabled, add <code class="language-plaintext highlighter-rouge">-debug &lt;file&gt;</code> to the command line:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>.../Eclipse.app/Contents/MacOS/eclipse -debug https://github.com/gnu-mcu-eclipse/eclipse-plugins/raw/develop/debug.options
@@ -109,7 +108,7 @@
 
 <p>Alternatively, you can copy the file locally, edit it and point Eclipse to it:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>.../Eclipse.app/Contents/MacOS/eclipse -debug ${HOME}/tmp/debug.options
@@ -117,9 +116,9 @@
 </div>
 </div>
 
-<p>For convenience, you can also copy into the file as <code class="highlighter-rouge">.options</code> Eclipse folder (for example as <code class="highlighter-rouge">Eclipse.app/Contents/MacOS/.options</code>) and start Eclipse without the file name:</p>
+<p>For convenience, you can also copy into the file as <code class="language-plaintext highlighter-rouge">.options</code> Eclipse folder (for example as <code class="language-plaintext highlighter-rouge">Eclipse.app/Contents/MacOS/.options</code>) and start Eclipse without the file name:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>.../Eclipse.app/Contents/MacOS/eclipse -debug
@@ -133,9 +132,9 @@
 
 <h3 id="default-debug-values">Default debug values</h3>
 
-<p>The properties not defined in the file given to <code class="highlighter-rouge">-debug</code> (or in Eclipse <code class="highlighter-rouge">.options</code>) default to the values defined in <strong>.options</strong> files located in each plug-in folder (generally set to <code class="highlighter-rouge">false</code>).</p>
+<p>The properties not defined in the file given to <code class="language-plaintext highlighter-rouge">-debug</code> (or in Eclipse <code class="language-plaintext highlighter-rouge">.options</code>) default to the values defined in <strong>.options</strong> files located in each plug-in folder (generally set to <code class="language-plaintext highlighter-rouge">false</code>).</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>org.eclipse.cdt.core/debug=false
@@ -153,7 +152,7 @@ org.eclipse.cdt.core/debug/ASTCache=false
 <div class="language-java highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="n">String</span> <span class="n">Platform</span><span class="o">.</span><span class="na">getDebugOption</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">);</span>
+<code><span class="nc">String</span> <span class="nc">Platform</span><span class="o">.</span><span class="na">getDebugOption</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
 </code></pre>
 </div>
 </div>
@@ -163,18 +162,18 @@ org.eclipse.cdt.core/debug/ASTCache=false
 <div class="language-java highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">DEBUG</span> <span class="o">=</span> <span class="s">"true"</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="n">Platform</span><span class="o">.</span><span class="na">getDebugOption</span><span class="o">(</span><span class="s">"org.eclipse.cdt.core/debug/ASTCache"</span><span class="o">));</span>
+<code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="no">DEBUG</span> <span class="o">=</span> <span class="s">"true"</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="nc">Platform</span><span class="o">.</span><span class="na">getDebugOption</span><span class="o">(</span><span class="s">"org.eclipse.cdt.core/debug/ASTCache"</span><span class="o">));</span>
 <span class="o">...</span>
-<span class="k">if</span> <span class="o">(</span><span class="n">DEBUG</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"message"</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="no">DEBUG</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"message"</span><span class="o">);</span>
 <span class="o">}</span>
 </code></pre>
 </div>
 </div>
 
-<p>A more elaborated solution is to derive the <code class="highlighter-rouge">Activator</code> class from <code class="highlighter-rouge">ilg.gnumcueclipse.core.AbstractUIActivator</code> and use the <code class="highlighter-rouge">isDebugging()</code> method:</p>
+<p>A more elaborated solution is to derive the <code class="language-plaintext highlighter-rouge">Activator</code> class from <code class="language-plaintext highlighter-rouge">ilg.gnumcueclipse.core.AbstractUIActivator</code> and use the <code class="language-plaintext highlighter-rouge">isDebugging()</code> method:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>if (Activator.getInstance().isDebugging()) {
@@ -310,7 +309,7 @@ org.eclipse.cdt.core/debug/ASTCache=false
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

@@ -2,34 +2,33 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released</title>
   <meta name="description" content="Version v7.1.1-1-20170702-0625 is the first GNU MCU Eclipse RISC-V Embedded GCC release. It includes binaries for Windows, macOS and GNU/Linux.">
 
-  <meta property="og:title" content="GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="GNU MCU Eclipse RISC-V Embedded GCC v7.1.1-1-20170702-* released" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2017-07-02">
 
 
-  <meta property="article:section" content="releases">
-  <meta property="article:section" content="riscv-none-gcc">
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="riscv-none-gcc" />
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -37,7 +36,7 @@
   <link rel="canonical" href="/blog/2017/07/02/riscv-none-gcc-v7-1-1-1-20170702-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -165,7 +164,7 @@ Posted on July 2, 2017 by Liviu Ionescu.
   <li>the <a href="https://github.com/riscv/riscv-newlib">riscv/riscv-newlib</a> project, commit <a href="https://github.com/riscv/riscv-newlib/commit/ccd8a0a4ffbbc00400892334eaf64a1616302b35">ccd8a0a</a> from May 2nd, 2017</li>
 </ul>
 
-<p>The supported architectures (<code class="highlighter-rouge">-march=</code>) are:</p>
+<p>The supported architectures (<code class="language-plaintext highlighter-rouge">-march=</code>) are:</p>
 
 <ul>
   <li>rv32i[m][a][f[d]][c]</li>
@@ -174,7 +173,7 @@ Posted on July 2, 2017 by Liviu Ionescu.
   <li>rv64g[c]</li>
 </ul>
 
-<p>The supported ABIs (<code class="highlighter-rouge">-mabi=</code>) are:</p>
+<p>The supported ABIs (<code class="language-plaintext highlighter-rouge">-mabi=</code>) are:</p>
 
 <ul>
   <li>ilp32 (32-bit, soft-float)</li>
@@ -187,7 +186,7 @@ Posted on July 2, 2017 by Liviu Ionescu.
 
 <p>The supported libraries are:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>march=rv32i/mabi=ilp32
@@ -209,11 +208,11 @@ march=rv64imafdc/mabi=lp64d
 
 <h2 id="newlib-nano">newlib-nano</h2>
 
-<p>The only notable addition is support for <strong>newlib-nano</strong>, using the <code class="highlighter-rouge">--specs=nano.specs</code> option. For better results, this option must be added to both compile and link time (the next release of the GNU MCU Eclipse plug-ins will add support for this).</p>
+<p>The only notable addition is support for <strong>newlib-nano</strong>, using the <code class="language-plaintext highlighter-rouge">--specs=nano.specs</code> option. For better results, this option must be added to both compile and link time (the next release of the GNU MCU Eclipse plug-ins will add support for this).</p>
 
-<p>If no syscalls are needed, <code class="highlighter-rouge">--specs=nosys.specs</code> can be used at link time to provide empty implementations for the POSIX system calls.</p>
+<p>If no syscalls are needed, <code class="language-plaintext highlighter-rouge">--specs=nosys.specs</code> can be used at link time to provide empty implementations for the POSIX system calls.</p>
 
-<p>The <em>nano</em> versions of the libraries are compiled with <code class="highlighter-rouge">-Os -mcmodel=medlow</code>, while the regular versions are compiled with <code class="highlighter-rouge">-O2 -mcmodel=medany</code>.</p>
+<p>The <em>nano</em> versions of the libraries are compiled with <code class="language-plaintext highlighter-rouge">-Os -mcmodel=medlow</code>, while the regular versions are compiled with <code class="language-plaintext highlighter-rouge">-O2 -mcmodel=medany</code>.</p>
 
 <h2 id="documentation">Documentation</h2>
 
@@ -232,9 +231,9 @@ march=rv64imafdc/mabi=lp64d
 <p>[2017-09-14 update] Soon after this release was used in real projects, it was discovered that the general configuration of the toolchain was intended more to applications that include a kernel-like environment, and less to bare-metal environments. The main problems are:</p>
 
 <ul>
-  <li>the <code class="highlighter-rouge">newlib</code> configuration does not use the <code class="highlighter-rouge">underscore</code> syscall function, but the direct names (like <code class="highlighter-rouge">write()</code> instead of <code class="highlighter-rouge">_write()</code>), calls that are always forwarded to <code class="highlighter-rouge">libgloss</code>
+  <li>the <code class="language-plaintext highlighter-rouge">newlib</code> configuration does not use the <code class="language-plaintext highlighter-rouge">underscore</code> syscall function, but the direct names (like <code class="language-plaintext highlighter-rouge">write()</code> instead of <code class="language-plaintext highlighter-rouge">_write()</code>), calls that are always forwarded to <code class="language-plaintext highlighter-rouge">libgloss</code>
 </li>
-  <li>the compiler configuration always links <code class="highlighter-rouge">libgloss</code> to the application; <code class="highlighter-rouge">libgloss</code> implements all system calls via traps to a unix like kernel.</li>
+  <li>the compiler configuration always links <code class="language-plaintext highlighter-rouge">libgloss</code> to the application; <code class="language-plaintext highlighter-rouge">libgloss</code> implements all system calls via traps to a unix like kernel.</li>
 </ul>
 
 <p>Both problems were fixed in the <a href="/blog/2017/09/13/riscv-none-gcc-v7-1-1-2-20170912-released/">v7.1.1-2-20170912</a> release.</p>
@@ -406,7 +405,7 @@ Last modified on Tue Apr 23 17:13:15 2019 UTC.
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

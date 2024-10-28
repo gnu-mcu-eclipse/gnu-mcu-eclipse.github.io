@@ -2,35 +2,34 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released</title>
   <meta name="description" content="Version v0.10.0-7-20180123 is a maintenance release; the main change was to add semihosting support for RISC-V targets.">
 
-  <meta property="og:title" content="GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="GNU MCU Eclipse OpenOCD v0.10.0-7-20180123 released" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2018-01-23">
 
 
-  <meta property="article:section" content="releases">
-  <meta property="article:section" content="openocd">
-  <meta property="article:section" content="semihosting">
+  <meta property="article:section" content="releases" />
+  <meta property="article:section" content="openocd" />
+  <meta property="article:section" content="semihosting" />
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -38,7 +37,7 @@
   <link rel="canonical" href="/blog/2018/01/23/openocd-v0-10-0-7-20180123-released/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -171,7 +170,7 @@ Posted on January 23, 2018 by Liviu Ionescu.
 
 <p>To activate semihosting, use:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>arm semihosting enable
@@ -183,7 +182,7 @@ Posted on January 23, 2018 by Liviu Ionescu.
 
 <p>To pass command line options to the target application:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>arm semihosting_cmdline argv0 argv1 argv2 argv3 ...
@@ -191,7 +190,7 @@ Posted on January 23, 2018 by Liviu Ionescu.
 </div>
 </div>
 
-<p>In the Eclipse OpenOCD debug plug-in, add the command prefixed with <code class="highlighter-rouge">monitor</code>:</p>
+<p>In the Eclipse OpenOCD debug plug-in, add the command prefixed with <code class="language-plaintext highlighter-rouge">monitor</code>:</p>
 
 <p>
 <img src="/assets/images/2018/openocd-riscv-semihosting.png" alt="Semihosting">
@@ -200,7 +199,7 @@ Posted on January 23, 2018 by Liviu Ionescu.
 <h2 id="differences-from-risc-v-releases">Differences from RISC-V releases</h2>
 
 <ul>
-  <li>some of the <code class="highlighter-rouge">remote_bitbang.c</code> patches were reversed</li>
+  <li>some of the <code class="language-plaintext highlighter-rouge">remote_bitbang.c</code> patches were reversed</li>
   <li>some of the additional GDB error processing were reversed, since they affect not RISC-V targets.</li>
 </ul>
 
@@ -220,12 +219,12 @@ Posted on January 23, 2018 by Liviu Ionescu.
 
 <h3 id="easy-install">Easy install</h3>
 
-<p>OpenOCD is also available as an <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/openocd">xPack</a> and can be conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="highlighter-rouge">xpm</code></a>:</p>
+<p>OpenOCD is also available as an <a href="https://www.npmjs.com/package/@gnu-mcu-eclipse/openocd">xPack</a> and can be conveniently installed with <a href="https://www.npmjs.com/package/xpm"><code class="language-plaintext highlighter-rouge">xpm</code></a>:</p>
 
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/openocd@0.10.0-7.1
+<code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/openocd@0.10.0-7.1
 </code></pre>
 </div>
 </div>
@@ -235,7 +234,7 @@ Posted on January 23, 2018 by Liviu Ionescu.
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/openocd
+<code><span class="gp">$</span><span class="w"> </span>xpm <span class="nb">install</span> <span class="nt">--global</span> @gnu-mcu-eclipse/openocd
 </code></pre>
 </div>
 </div>
@@ -244,7 +243,7 @@ Posted on January 23, 2018 by Liviu Ionescu.
 
 <p>The SHA-256 hashes for the files are:</p>
 
-<div class="highlighter-rouge">
+<div class="language-plaintext highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
 <code>c90f2d64d6ee7a32ccad1afc47c9f3376745e3de1fb933adef528be84da48ff0 ?
@@ -396,7 +395,7 @@ Last modified on Wed Jul 25 10:39:24 2018 UTC.
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>

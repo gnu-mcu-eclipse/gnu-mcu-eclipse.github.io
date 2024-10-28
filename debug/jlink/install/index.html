@@ -2,19 +2,18 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta charset="utf-8">
+  <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Eclipse Embedded CDT" href="/feed.xml" />
 
   <title>How to install the SEGGER J-Link?</title>
-  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm &amp; RISC-V development">
+  <meta name="description" content="A family of Eclipse CDT extensions and tools for GNU Arm & RISC-V development">
 
-  <meta property="og:title" content="How to install the SEGGER J-Link?">
-  <meta property="og:site_name" content="Eclipse Embedded CDT">
+  <meta property="og:title" content="How to install the SEGGER J-Link?" />
+  <meta property="og:site_name" content="Eclipse Embedded CDT" />
 
 
   <meta property="article:published_time" content="2015-09-11">
@@ -23,12 +22,12 @@
 
 
 
-  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c">
+  <meta name="google-site-verification" content="NT_y3tqI_8mrd8gYA_FDWHT2-tkJExOC6KBkSnyZx6c" />
 
 
   <meta http-equiv="refresh" content="1; url=https://eclipse-embed-cdt.github.io/debug/jlink/install/">
 
-  <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css?201901210928" media="screen">
   <link rel="stylesheet" type="text/css" href="/stylesheets/print.css?201901210928" media="print">
@@ -36,7 +35,7 @@
   <link rel="canonical" href="/debug/jlink/install/">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -183,13 +182,13 @@
 
 <h2 id="windows">Windows</h2>
 
-<p>The Windows file is a ZIP archive, named like <code class="highlighter-rouge">Setup_JLinkARM_V480.zip</code>. After unpacking it, a Windows executable file is obtained, named like <code class="highlighter-rouge">Setup_JLinkARM_V480.exe</code>.</p>
+<p>The Windows file is a ZIP archive, named like <code class="language-plaintext highlighter-rouge">Setup_JLinkARM_V480.zip</code>. After unpacking it, a Windows executable file is obtained, named like <code class="language-plaintext highlighter-rouge">Setup_JLinkARM_V480.exe</code>.</p>
 
 <ul>
   <li>double click it to start the installation process</li>
   <li>enter the administrative password</li>
   <li>accept the license</li>
-  <li>accept the destination folder (<code class="highlighter-rouge">C:\Program Files\SEGGER\JLinkARM_V480</code>)</li>
+  <li>accept the destination folder (<code class="language-plaintext highlighter-rouge">C:\Program Files\SEGGER\JLinkARM_V480</code>)</li>
   <li>accept the default USB driver</li>
 </ul>
 
@@ -199,19 +198,19 @@
 <img src="/assets/images/2014/01/Segger-win.png" alt="SEGGER Windows distribution">
 </p>
 
-<p>Please note that on Windows, SEGGER provides both graphical interface and <strong>command line versions</strong> (having the names suffixed with <code class="highlighter-rouge">CL</code>) for most of their tools. For the J-Link plug-in it is recommended to use only the command line version of the  J-Link GDB server (<code class="highlighter-rouge">JLinkGDBServerCL.exe</code>).</p>
+<p>Please note that on Windows, SEGGER provides both graphical interface and <strong>command line versions</strong> (having the names suffixed with <code class="language-plaintext highlighter-rouge">CL</code>) for most of their tools. For the J-Link plug-in it is recommended to use only the command line version of the  J-Link GDB server (<code class="language-plaintext highlighter-rouge">JLinkGDBServerCL.exe</code>).</p>
 
 <h2 id="macos">macOS</h2>
 
-<p>The macOS download is an macOS package installer, like <code class="highlighter-rouge">JLink_MacOSX_V480.pkg</code>.</p>
+<p>The macOS download is an macOS package installer, like <code class="language-plaintext highlighter-rouge">JLink_MacOSX_V480.pkg</code>.</p>
 
 <ul>
   <li>double click it to start the installation process</li>
   <li>accept the license</li>
-  <li>enter the administrative password, required to write in the global <code class="highlighter-rouge">/Applications</code> folder</li>
+  <li>enter the administrative password, required to write in the global <code class="language-plaintext highlighter-rouge">/Applications</code> folder</li>
 </ul>
 
-<p>The result of the install is a folder like <code class="highlighter-rouge">/Applications/SEGGER/JLink_V641b/</code> (a different folder for each version) where all executables and libraries are stored; please note that, as for many macOS applications, no other driver files are installed in the system folders, but some symbolic links are created in the <code class="highlighter-rouge">/usr/local/bin</code> folder.</p>
+<p>The result of the install is a folder like <code class="language-plaintext highlighter-rouge">/Applications/SEGGER/JLink_V641b/</code> (a different folder for each version) where all executables and libraries are stored; please note that, as for many macOS applications, no other driver files are installed in the system folders, but some symbolic links are created in the <code class="language-plaintext highlighter-rouge">/usr/local/bin</code> folder.</p>
 
 <p>Be sure to update the path in Eclipse preferences page to point to the latest SEGGER J-Link software.</p>
 
@@ -230,12 +229,12 @@
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> <span class="nb">sudo </span>dpkg <span class="nt">-i</span> ~/Downloads/jlink_5.2.7_x86_64.deb
+<code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>dpkg <span class="nt">-i</span> ~/Downloads/jlink_5.2.7_x86_64.deb
 </code></pre>
 </div>
 </div>
 
-<p>The J-Link executables are installed in <code class="highlighter-rouge">/usr/bin</code>.</p>
+<p>The J-Link executables are installed in <code class="language-plaintext highlighter-rouge">/usr/bin</code>.</p>
 
 <p>In case you have a 64-bit machine and install the 32-bit SEGGER package, you might need several 32-bit libraries, depending on distribution.</p>
 
@@ -250,7 +249,7 @@
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> /Applications/SEGGER/JLink/JLinkGDBServer <span class="nt">-if</span> JTAG <span class="nt">-device</span> STM32F103RB
+<code><span class="gp">$</span><span class="w"> </span>/Applications/SEGGER/JLink/JLinkGDBServer <span class="nt">-if</span> JTAG <span class="nt">-device</span> STM32F103RB
 <span class="go">SEGGER J-Link GDB Server V4.80 Command Line Version
 
 JLinkARM.dll V4.80 (DLL compiled Dec 20 2013 19:44:31)
@@ -307,7 +306,7 @@ Waiting for GDB connection...
 <div class="language-console highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code><span class="gp">$</span> /usr/bin/JLinkGDBServer
+<code><span class="gp">$</span><span class="w"> </span>/usr/bin/JLinkGDBServer
 </code></pre>
 </div>
 </div>
@@ -445,7 +444,7 @@ Waiting for GDB connection...
   <li><a href="/windows-build-tools/publish-procedure/">How to publish</a></li>
   <li><a href="/windows-build-tools/releases/">Releases</a></li>
   <li>
-<a href="https://github.com/gnu-mcu-eclipse/windows-build-tools/issues/1/">Support</a> (report issue)</li>
+<a href="https://github.com/xpack-dev-tools/windows-build-tools-xpack/discussions">Support</a> (discuss)</li>
 </ul>
 
 <h4 id="the-risc-v-corner"><a href="/arch/riscv/">The RISC-V corner</a></h4>
